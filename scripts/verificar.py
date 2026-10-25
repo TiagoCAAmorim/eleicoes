@@ -131,7 +131,8 @@ def checar_log(rel, log):
         return
     with open(log, encoding="utf-8", errors="replace") as f:
         linhas = f.read().splitlines()[-60:]
-    erros = [x for x in linhas if "erro" in x.lower() or "falh" in x.lower() or "Traceback" in x]
+    erros = [x for x in linhas if ("erro" in x.lower() or "falh" in x.lower() or "Traceback" in x)
+             and "falhas em []" not in x]
     (rel.alerta if erros else rel.ok)("log do loop", " | ".join(erros[-5:]) if erros else "sem erros nas últimas linhas")
 
 

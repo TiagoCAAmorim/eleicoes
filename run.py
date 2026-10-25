@@ -93,6 +93,8 @@ def gerar_saidas(res, saida):
     hist = pd.read_csv(hist_path) if os.path.exists(hist_path) else pd.DataFrame()
     if len(hist) and hist["hora"].iloc[-1] == linha["hora"]:
         hist = hist.iloc[:-1]
+    if len(hist) and linha["pct_secoes"] == 0:
+        hist = hist[hist["pct_secoes"] > 0]  # só um ponto de antes da apuração (o mais recente)
     hist = pd.concat([hist, pd.DataFrame([linha])], ignore_index=True)
     os.makedirs(saida, exist_ok=True)
     hist.to_csv(hist_path, index=False)
@@ -156,6 +158,10 @@ def rodada(args):
     nomes = [br["nomes"].get("13", "Lula").title(), br["nomes"].get("22", "Flávio Bolsonaro").title()]
     res = prever(df, nomes)
     hora = _hora_tse(br)
+    if br["st"] == 0:
+        # antes da apuração o arquivo do TSE traz a data da carga (dia anterior): a estimativa inicial
+        # vale para o fechamento das urnas
+        hora = dt.datetime.now(FUSO).replace(hour=16, minute=59, second=0, microsecond=0)
     res["hora"] = hora.isoformat()
     res["hora_txt"] = hora.strftime("%d/%m %H:%M")
     res["pct_secoes"] = 100 * br["st"] / max(br["ts"], 1)

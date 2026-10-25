@@ -11,3 +11,12 @@ resultado). Pedidos novos entram no fim.
    normal aparecer 0% de seções; o importante é a verificação rodar sem erro de Python.
 3. Abra o site no navegador e confirme: aparece o seletor Lula/Flávio, os botões Intervalos/Treemap/Mapa funcionam,
    o hover mostra informações e os três links de CSV baixam arquivos. Anote qualquer problema.
+
+## P2 — ponto inicial às 16:59 e reinício do loop (agora)
+
+O ponto de antes da apuração passa a ser marcado como 25/10 16:59 (antes usava a data do arquivo do TSE, 24/10 19:19),
+e o histórico guarda só um ponto pré-apuração. A verificação deixou de acusar "falhas em []" no log.
+
+1. `git pull --rebase` e reinicie o loop (o código de `run.py` mudou).
+2. Depois da primeira rodada, confirme que `saida/2026/historico.csv` tem uma única linha com hora 2026-10-25T16:59
+   e que o site mostra "Atualizado 25/10 16:59". Registre em `respostas.md`.
