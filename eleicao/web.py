@@ -65,6 +65,26 @@ window.__DADOS = {dados};
   const run = () => cbs.forEach((f) => {{ try {{ f(); }} catch (e) {{ console.error(e); }} }});
   document.addEventListener('DOMContentLoaded', run);
   let t; window.addEventListener('resize', () => {{ clearTimeout(t); t = setTimeout(run, 150); }});
+  // atualização automática: a cada 10 min busca a página publicada, extrai os dados embutidos e redesenha sem
+  // recarregar (mantém as abas escolhidas e não conta acesso novo); só redesenha se a rodada mudou
+  const chave = (d) => JSON.stringify(((d.previsao || []).find((r) => r.nivel === 'Brasil') || {{}}).hora_txt || '');
+  let ultima = Date.now();
+  async function atualizar() {{
+    ultima = Date.now();
+    try {{
+      const r = await fetch(location.pathname + '?t=' + Date.now(), {{ cache: 'no-store' }});
+      if (!r.ok) return;
+      const html = await r.text();
+      const i = html.indexOf('window.__DADOS = '), j = html.lastIndexOf(';', html.indexOf('(function ()', i));
+      if (i < 0 || j < 0) return;
+      const novo = JSON.parse(html.slice(i + 'window.__DADOS = '.length, j));
+      if (chave(novo) !== chave(window.__DADOS)) {{ window.__DADOS = novo; run(); }}
+    }} catch (e) {{ console.warn('atualização automática falhou', e); }}
+  }}
+  if (location.protocol.startsWith('http')) {{
+    setInterval(() => {{ if (!document.hidden) atualizar(); }}, 10 * 60 * 1000);
+    document.addEventListener('visibilitychange', () => {{ if (!document.hidden && Date.now() - ultima > 10 * 60 * 1000) atualizar(); }});
+  }}
 }})();
 </script>
 </head><body><div id="dash-root">

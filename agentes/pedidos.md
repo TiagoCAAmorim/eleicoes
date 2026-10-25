@@ -105,3 +105,9 @@ acusa "previsão longe do apurado" com mais de 20% apurado no grupo (antes acusa
    print({u: (s, int(m[m.uf == u].st.sum())) for u, s in ufs.items() if s})
    ```
 3. Se a soma das UFs continuar muito abaixo do Brasil por mais de 30 min, avise (pode faltar alguma UF ou o exterior).
+
+## P12 — página se atualiza sozinha
+
+A cada 10 min a página busca o `index.html` publicado e redesenha com os dados novos, sem recarregar. Mudou
+`eleicao/web.py`. Pode ir junto com o reinício do P11. Depois da publicação, abra o site no Playwright, espere uma
+rodada nova (ou use `page.clock` para avançar 10 min) e confirme que o "Atualizado ..." muda sem recarregar e sem erros de JS.
