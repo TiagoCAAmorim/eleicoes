@@ -91,6 +91,24 @@ def gerar_saidas(res, saida):
     painel.dados_web(res, hist, os.path.join(saida, "web"))
 
 
+def publicar_git(args):
+    """Commita e envia as saídas para o branch do projeto (para o painel na web)."""
+    import subprocess
+    raiz = subprocess.run(["git", "rev-parse", "--show-toplevel"], cwd=AQUI, capture_output=True, text=True).stdout.strip()
+    if not raiz:
+        print("git: pasta não é um repositório; nada enviado")
+        return
+    rel = os.path.relpath(args.saida, raiz)
+    cmds = [["git", "add", "-A", rel, os.path.relpath(os.path.join(AQUI, "data/2026"), raiz)],
+            ["git", "commit", "-q", "-m", f"eleicao: painel {dt.datetime.now(FUSO):%H:%M} [skip ci]"],
+            ["git", "pull", "-q", "--rebase", "-X", "theirs"], ["git", "push", "-q"]]
+    for c in cmds:
+        r = subprocess.run(c, cwd=raiz, capture_output=True, text=True)
+        if r.returncode and c[1] != "commit":
+            print("git falhou:", " ".join(c), r.stderr.strip()[:300])
+            return
+
+
 def rodada(args):
     t0 = time.time()
     munis = _munis()
@@ -125,24 +143,42 @@ def rodada(args):
 
 
 def demo_2022(args):
+    """Simula a apuração de 2022 (ordem parecida com a real) e gera saídas e site de teste,
+    com o resultado real de cada grupo para comparação."""
     import backtest
+    from eleicao import modelo, web
+    from eleicao.previsao import NIVEIS
     base, sec = backtest.carregar()
     rng = np.random.default_rng(0)
-    hist = []
-    t = backtest.ordem(sec, base, "2022", rng)
+    t = backtest.ordem(sec, base, args.demo_ordem, rng)
+    # resultado real por grupo
+    cols = ["uf", "mun", "nome", "capital", "E1", "A1", "B1", "O1", "W1", "E2", "Ea", "A2", "B2", "W2", "C2"]
+    tudo, _, _ = modelo.preparar(backtest.snapshot(base, sec, np.ones(len(sec), bool))[cols])
+    real = {}
+    for rotulo, col in NIVEIS:
+        g = tudo.groupby(col)[["A2", "B2"]].sum()
+        real[rotulo] = (100 * g["A2"] / (g["A2"] + g["B2"])).to_dict()
+    if os.path.exists(os.path.join(args.saida, "historico.csv")):
+        os.remove(os.path.join(args.saida, "historico.csv"))
     inicio = dt.datetime(2022, 10, 30, 17, 0, tzinfo=FUSO)
-    pts = [p for p in [1, 5, 10, 20, 35, 50, 65, 80, 95] if p <= args.demo_2022] or [args.demo_2022]
+    pts = [p for p in [0.5, 1, 2, 3, 5, 7.5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 95, 99, 100]
+           if p <= args.demo_2022]
     for i, p in enumerate(pts):
         ap = t <= np.percentile(t, p)
-        df = backtest.snapshot(base, sec, ap)
-        df = df[["uf", "mun", "nome", "capital", "E1", "A1", "B1", "O1", "W1", "E2", "Ea", "A2", "B2", "W2", "C2"]]
-        res = prever(df, ["Lula", "Bolsonaro"])
+        df = backtest.snapshot(base, sec, ap)[cols]
+        res = prever(df, ["Lula", "Bolsonaro"], modelo.Config())  # sem priori de 2022 (seria usar o gabarito)
+        for rotulo, grupos in res["grupos"].items():
+            for nome, g in grupos.items():
+                g["real"] = float(real[rotulo].get(nome, float("nan")))
+        res["real_A"] = real["Brasil"]["Brasil"]
         hora = inicio + dt.timedelta(minutes=10 * (i + 1))
         res.update(hora=hora.isoformat(), hora_txt=hora.strftime("%d/%m/%Y %H:%M") + " (simulação 2022)",
                    pct_secoes=100 * ap.mean())
         gerar_saidas(res, args.saida)
-        hist.append(res)
-        print(p, res["grupos"]["Brasil"]["Brasil"]["A_media"], flush=True)
+        print(f"{p:5.1f}% {res['grupos']['Brasil']['Brasil']['A_media']:.2f}", flush=True)
+        if args.site:
+            web.gerar_site(args.saida, os.path.join(args.site, f"{i:02d}_{p:g}pct"),
+                           titulo="Teste: apuração simulada de 2022", artefato=args.artefato)
 
 
 def main():
@@ -153,7 +189,12 @@ def main():
     ap.add_argument("--t1", default=tse.ELEICAO_T1)
     ap.add_argument("--t2", default=tse.ELEICAO_T2)
     ap.add_argument("--prazo", type=float, default=420, help="segundos máximos para baixar os municípios")
-    ap.add_argument("--demo-2022", type=float, default=0)
+    ap.add_argument("--git-push", action="store_true", help="commita e envia as saídas ao fim de cada rodada")
+    ap.add_argument("--publicar", default="", help="pasta do clone do repositório do site (GitHub Pages)")
+    ap.add_argument("--demo-2022", type=float, default=0, help="simula 2022 até este % apurado")
+    ap.add_argument("--demo-ordem", default="2022", help="ordem da simulação: 2022, aleatoria ou adversa")
+    ap.add_argument("--site", default="", help="(teste) pasta onde gerar o site a cada ponto")
+    ap.add_argument("--artefato", action="store_true", help=argparse.SUPPRESS)
     args = ap.parse_args()
     if args.demo_2022:
         demo_2022(args)
@@ -161,6 +202,12 @@ def main():
     while True:
         try:
             rodada(args)
+            if args.git_push:
+                publicar_git(args)
+            if args.publicar:
+                from eleicao import web
+                if web.publicar(args.saida, args.publicar):
+                    print("site publicado", flush=True)
         except Exception as ex:  # noqa: BLE001
             print("erro na rodada:", repr(ex), flush=True)
             if not args.loop:

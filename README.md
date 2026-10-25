@@ -37,9 +37,15 @@ então um grupo com poucos municípios apurados usa a informação dos vizinhos 
 próximos que já têm dados. Municípios parcialmente apurados combinam o próprio
 resultado parcial com a previsão do modelo para as seções que faltam.
 
+Ponto de partida (priori): as transferências estimadas na apuração completa de 2022 (`data/priori_2022.json`,
+gerado por `scripts/priori_2022.py`), por Brasil, região, UF e porte. A linha "Outros" usa as pesquisas de 2º
+turno de 2026 (Quaest, 17–20/out: eleitores de Cury, Caiado, Renan Santos e demais, ponderados pelos votos de
+cada um), porque os candidatos de fora do 2º turno são outros. Conforme as seções são apuradas, os dados de 2026
+passam a dominar a estimativa de forma gradual (atualização bayesiana).
+
 A incerteza é obtida por simulação de Monte Carlo (1000 cenários) que combina:
 incerteza dos parâmetros (aproximação de Laplace), choque comum por UF e variação
-entre municípios. A chance de vitória é a fração dos cenários em que o candidato
+entre municípios, com a escala calibrada no backtest de 2022 (cobertura de ~90% nos estados). A chance de vitória é a fração dos cenários em que o candidato
 passa de 50% dos votos válidos.
 
 Os resultados saem por Brasil, região, UF e porte da cidade (capitais, grandes
@@ -53,17 +59,43 @@ Nordeste e capitais depois) e adversa (seções mais pró-Bolsonaro primeiro). O
 por seção vêm dos dados abertos do TSE (`scripts/prep_2022.py`, já processados em
 `data/2022/`). Resultados em `saida/backtest/`.
 
-## Como rodar
+## Como rodar no seu computador
 
 ```bash
+git clone -b claude/project-thread-0md8n6 https://github.com/TiagoCAAmorim/misc.git
+cd misc/eleicao-presidencial
+python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-python run.py               # uma rodada
-python run.py --loop 600    # a cada 10 minutos, no seu computador
-python run.py --demo-2022 35  # painel de teste com 2022 simulado até 35% apurado
+python run.py                                    # uma rodada (teste)
+python run.py --loop 600 --publicar ../../eleicao-2026 --git-push
 ```
 
-No GitHub Actions o workflow `.github/workflows/eleicao-apuracao.yml` roda o loop e
-salva o painel no branch do projeto.
+- `--loop 600`: roda a cada 10 minutos até você interromper (Ctrl+C). Uma rodada leva ~2 min (baixa os
+  5.757 municípios do TSE, pulando os já 100% apurados e os estados sem novidade).
+- `--publicar <pasta>`: gera o site interativo (index.html + painel.png + estados.png) dentro do clone do
+  repositório público do GitHub Pages e faz `git push`. O site fica em `https://<usuario>.github.io/<repo>/`.
+- `--git-push`: também salva as saídas (`saida/2026`) neste branch.
+- As imagens para o WhatsApp ficam em `saida/2026/painel.png` e `saida/2026/estados.png`.
+
+### Site no GitHub Pages (uma vez)
+
+1. Crie um repositório **público** vazio (ex.: `eleicao-2026`) e clone-o ao lado do `misc`.
+2. Em Settings → Pages: "Deploy from a branch", branch `main`, pasta `/ (root)`.
+3. Rode com `--publicar ../../eleicao-2026` (caminho relativo à pasta `eleicao-presidencial`).
+
+### Teste com 2022
+
+```bash
+python run.py --demo-2022 100 --saida saida/teste2022 --site saida/teste2022/site
+```
+
+Simula a apuração de 2022 (ordem parecida com a real) e gera o site em cada momento, com o resultado real
+de cada grupo para comparação. `--demo-ordem aleatoria|adversa` muda a ordem de apuração.
+
+### Alternativa: GitHub Actions
+
+Editar `eleicao-presidencial/ligar.txt` neste branch liga um loop de ~5h40 no Actions
+(`.github/workflows/eleicao-apuracao.yml`). Não use junto com o loop local.
 
 ## Fontes
 

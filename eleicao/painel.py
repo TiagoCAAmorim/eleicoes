@@ -19,6 +19,13 @@ TINTA2 = "#52514e"
 GRADE = "#e4e3df"
 FUNDO = "#fcfcfb"
 
+AVISO_CURTO = ("Projeto pessoal, sem filiação partidária. Estimativa estatística, não é resultado oficial; "
+               "o autor não se responsabiliza por erros ou imprecisões.")
+AVISO = ("Este é um projeto pessoal de estudo, sem filiação a partido, candidato, instituição de pesquisa ou ao TSE. "
+         "Os números são estimativas estatísticas feitas a partir dos resultados parciais divulgados pelo TSE e podem "
+         "estar errados. Não é resultado oficial: o resultado oficial é o divulgado pelo TSE. O autor não se "
+         "responsabiliza por erros, imprecisões ou decisões tomadas com base nestas informações.")
+
 plt.rcParams.update({
     "font.family": "DejaVu Sans", "axes.edgecolor": GRADE, "axes.labelcolor": TINTA2, "xtick.color": TINTA2,
     "ytick.color": TINTA2, "axes.spines.top": False, "axes.spines.right": False, "figure.facecolor": FUNDO,
@@ -36,10 +43,6 @@ def _linha_tempo(ax, hist, nomes):
     a, b = nomes
     ax.fill_between(h["t"], h["A_p05"], h["A_p95"], color=COR_A, alpha=0.18, lw=0)
     ax.fill_between(h["t"], 100 - h["A_p95"], 100 - h["A_p05"], color=COR_B, alpha=0.18, lw=0)
-    ax.errorbar(h["t"], h["A_media"], yerr=[h["A_media"] - h["A_p05"], h["A_p95"] - h["A_media"]], fmt="none",
-                ecolor=COR_A, elinewidth=1, capsize=3, alpha=0.7)
-    ax.errorbar(h["t"], 100 - h["A_media"], yerr=[h["A_p95"] - h["A_media"], h["A_media"] - h["A_p05"]], fmt="none",
-                ecolor=COR_B, elinewidth=1, capsize=3, alpha=0.7)
     ax.plot(h["t"], h["A_media"], color=COR_A, lw=2, marker="o", ms=4, label=f"{a} (previsão)")
     ax.plot(h["t"], 100 - h["A_media"], color=COR_B, lw=2, marker="o", ms=4, label=f"{b} (previsão)")
     ax.plot(h["t"], h["parcial_A"], color=COR_A, lw=1, ls=":", label=f"{a} (apurado)")
@@ -111,8 +114,9 @@ def imagem_principal(res, hist, caminho):
                 _pct(100 * g["prob_A"], 0)]
         for xx, v in zip(xs, vals):
             fig.text(xx, y, v, fontsize=9, color=TINTA)
-    fig.text(0.05, 0.012, "Modelo: transferência de votos do 1º para o 2º turno estimada nos municípios já apurados "
-                          "(UF/porte → UF → região → Brasil). Não é resultado oficial.", fontsize=7, color=TINTA2)
+    fig.text(0.05, 0.026, "Modelo: transferência de votos do 1º para o 2º turno estimada nos municípios já apurados "
+                          "(UF/porte → UF → região → Brasil). Dados: TSE.", fontsize=7, color=TINTA2)
+    fig.text(0.05, 0.010, AVISO_CURTO, fontsize=7, color=TINTA2)
     os.makedirs(os.path.dirname(caminho), exist_ok=True)
     fig.savefig(caminho)
     plt.close(fig)
@@ -139,6 +143,7 @@ def imagem_estados(res, caminho):
     fig.text(0.05, 0.955, f"Previsão por estado · {a} x {b}", fontsize=16, weight="bold", color=TINTA)
     fig.text(0.05, 0.93, f"Atualizado {res['hora_txt']} · {_pct(res['pct_secoes'], 2)} das seções apuradas",
              fontsize=10, color=TINTA2)
+    fig.text(0.05, 0.012, AVISO_CURTO, fontsize=7, color=TINTA2)
     fig.savefig(caminho)
     plt.close(fig)
 
@@ -191,7 +196,8 @@ small,.nota{{color:var(--fg2)}}
 </style></head><body>
 <h1>2º turno presidencial · previsão da apuração</h1>
 <p class="nota">Atualizado {res['hora_txt']} · {_pct(res['pct_secoes'], 2)} das seções apuradas.
-Página gerada automaticamente a cada 10 minutos. Não é resultado oficial.</p>
+Página gerada automaticamente a cada 10 minutos.</p>
+<p class="nota"><b>Aviso.</b> {html.escape(AVISO)}</p>
 <img alt="Resumo da previsão" src="data:image/png;base64,{_b64(img_principal)}">
 <h2>Brasil</h2>{_tabela(res['grupos']['Brasil'], a)}
 {blocos}
@@ -242,6 +248,9 @@ def dados_web(res, hist, pasta):
     num = lambda x: None if x is None or x != x else round(float(x), 3)  # noqa: E731
     h = [{"hora": r["hora"], **{k: num(r[k]) for k in ["pct_secoes", "parcial_A", "A_media", "A_p05", "A_p95",
                                                          "prob_A"]}} for _, r in hist.iterrows()]
+    if res.get("real_A") is not None:
+        for r in h:
+            r["real_A"] = num(res["real_A"])
     prev = []
     for nivel, grupos in res["grupos"].items():
         for nome, g in grupos.items():
@@ -250,7 +259,8 @@ def dados_web(res, hist, pasta):
             prev.append({"nivel": nivel, "nome": nome.upper() if nivel == "UF" else nome,
                          **{k: num(g[k]) for k in ["pct_apurado", "parcial", "A_media", "A_p05", "A_p95", "prob_A",
                                                    "comparecimento"]},
-                         "nome_A": a, "nome_B": b, "hora_txt": res["hora_txt"], "pct_secoes": num(res["pct_secoes"])})
+                         "nome_A": a, "nome_B": b, "hora_txt": res["hora_txt"], "pct_secoes": num(res["pct_secoes"]),
+                         **({"real": num(g["real"])} if "real" in g else {})})
     transf = [{"grupo": g, "transferencia": t, "media": num(v[0]), "p05": num(v[1]), "p95": num(v[2])}
               for g, d in res.get("transferencias", {}).items() for t, v in d.items()]
     for nome, linhas in [("historico", h), ("previsao", prev), ("transferencias", transf)]:

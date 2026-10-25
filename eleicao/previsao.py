@@ -27,7 +27,7 @@ def _transferencias(aj, cfg, nomes):
 
 
 def prever(df, nomes, cfg=None):
-    cfg = cfg or modelo.Config()
+    cfg = cfg or modelo.config_2026()
     df, X, Y = modelo.preparar(df)
     aj = modelo.ajustar(df, X, Y, cfg)
     final = modelo.simular(df, X, Y, aj, cfg)

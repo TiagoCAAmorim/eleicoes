@@ -81,13 +81,18 @@ class Config:
     sd_priori_brasil: float = 1.5     # desvio da priori (escala logit) no nível Brasil
     tau: float = 0.5                  # quanto cada nível pode se afastar do nível de cima
     s0_inicial: float = 0.03          # ruído entre municípios (fração do eleitorado)
-    choque_uf: float = 0.01           # choque comum por UF na margem A-B das unidades restantes
-    escala_cov: float = 2.0           # inflação da covariância de Laplace (dependência espacial)
+    choque_uf: float = 0.02           # choque comum por UF na margem A-B das unidades restantes
+    escala_cov: float = 1.0           # inflação da covariância de Laplace (dependência espacial)
     rho_nacional: float = 0.5         # correlação entre grupos no sorteio dos parâmetros
-    k_parcial: float = 0.10           # peso do resultado parcial do próprio município: f/(f+k)
+    k_parcial: float = 0.30           # peso do resultado parcial do próprio município: f/(f+k)
     n_sims: int = 1000
     seed: int = 42
     niveis: list = field(default_factory=lambda: ["regiao", "uf", "uf_porte"])
+    # priori informativa (ex.: transferências estimadas em 2022): {"nivel|nome": theta}. O nível Brasil vira o
+    # ponto de partida e cada grupo herda o desvio que tinha em relação ao grupo de cima naquela eleição.
+    priori: dict = None
+    sd_priori_informativa: float = 0.7
+    theta_outros: tuple = None         # logits (oA, oB, oW) vs oN para substituir a linha "Outros" da priori
 
 
 def preparar(df):
@@ -146,21 +151,41 @@ def ajustar(df, X, Y, cfg: Config):
     # ponderação pela fração apurada: municípios parcialmente apurados contam menos
     Ew = Ea * np.clip(df["f"].values, 0.05, 1)
     s0 = cfg.s0_inicial
-    sd0 = np.full(NPAR, cfg.sd_priori_brasil)
+    theta0, sd0 = THETA0.copy(), np.full(NPAR, cfg.sd_priori_brasil)
+    # parâmetros da priori presos em zero na eleição de referência (problema de identificação ecológica)
+    # são limitados a ~1% para não travar a estimativa
+    pri = {k: np.maximum(np.array(v, float), [-3.4, -3.4, -3.4, -9, -9, -9, -3.4, -3.4])
+           for k, v in (cfg.priori or {}).items()}
+    if "brasil|Brasil" in pri:
+        theta0, sd0 = pri["brasil|Brasil"].copy(), np.full(NPAR, cfg.sd_priori_informativa)
+    if cfg.theta_outros is not None:
+        theta0[3:6] = cfg.theta_outros
+        sd0[3:6] = cfg.sd_priori_informativa
+
+    def desvio(nivel, nome, pai_nivel, pai_nome):
+        """Desvio do grupo em relação ao de cima na eleição de referência (0 sem priori; linha Outros = 0)."""
+        a, b = pri.get(f"{nivel}|{nome}"), pri.get(f"{pai_nivel}|{pai_nome}")
+        if a is None or b is None:
+            return np.zeros(NPAR)
+        d = a - b
+        d[3:6] = 0.0
+        return d
+
     grupos = {}
-    mu, cov = _ajustar(X[ok], Y[ok], Ew[ok], s0, THETA0, sd0)
+    mu, cov = _ajustar(X[ok], Y[ok], Ew[ok], s0, theta0, sd0)
     if ok.sum() > 30:
         res = Y[ok] - X[ok] @ matriz(mu)
         p = np.clip(X[ok] @ matriz(mu), 1e-4, 1)
         excesso = (res ** 2 - p * (1 - p) / np.maximum(Ew[ok], 1)[:, None]).mean()
         s0 = float(np.sqrt(max(excesso, 0.005 ** 2)))
-        mu, cov = _ajustar(X[ok], Y[ok], Ew[ok], s0, THETA0, sd0)
+        mu, cov = _ajustar(X[ok], Y[ok], Ew[ok], s0, theta0, sd0)
     grupos[("brasil", "Brasil")] = (mu, cov * cfg.escala_cov)
     pais = {"regiao": "brasil", "uf": "regiao", "uf_porte": "uf"}
     for nivel in cfg.niveis:
         for nome, idx in df.groupby(nivel).indices.items():
             pai_nome = df[pais[nivel]].iloc[idx[0]]
             pmu, pcov = grupos[(pais[nivel], pai_nome)]
+            pmu = pmu + desvio(nivel, nome, pais[nivel], pai_nome)
             psd = np.sqrt(cfg.tau ** 2 + np.diag(pcov))
             sel = idx[ok[idx]]
             m, c = _ajustar(X[sel], Y[sel], Ew[sel], s0, pmu, psd)
@@ -235,3 +260,17 @@ def resumo_grupo(sims4, obs4=None):
         "brancos_nulos": float((100 * sims4[:, 2] / np.maximum(sims4[:, :3].sum(1), 1)).mean()),
     }
     return d
+
+
+# Pesquisas de 2º turno de 2026 (Quaest 17-20/out, ponderada pelos votos de cada candidato no 1º turno:
+# Cury, Renan Santos, Caiado, Zema e demais): Outros -> Lula ~32%, Flávio ~46%, branco/nulo/abstenção ~21%.
+OUTROS_PESQUISA_2026 = (float(np.log(0.32 / 0.10)), float(np.log(0.46 / 0.10)), float(np.log(0.12 / 0.10)))
+
+
+def config_2026():
+    """Configuração usada ao vivo: priori de 2022 + linha Outros das pesquisas de 2026."""
+    import json
+    import os
+    caminho = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data/priori_2022.json")
+    pri = json.load(open(caminho)) if os.path.exists(caminho) else None
+    return Config(priori=pri, theta_outros=OUTROS_PESQUISA_2026 if pri else None)
