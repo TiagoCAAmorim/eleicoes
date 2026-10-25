@@ -142,6 +142,11 @@ def gerar_site(saida, pasta_site, titulo="Previsão do 2º turno presidencial 20
         if os.path.exists(os.path.join(saida, img)):
             shutil.copy(os.path.join(saida, img), os.path.join(pasta_site, img))
     shutil.copy(os.path.join(AQUI, "analises.html"), os.path.join(pasta_site, "analises.html"))  # lê dados_municipios.csv
+    shutil.copy(os.path.join(AQUI, "indicadores.html"), os.path.join(pasta_site, "indicadores.html"))
+    imp = os.path.join(os.path.dirname(saida.rstrip("/")), "importancia")  # gerado à parte por scripts/importancia.py
+    for nome in ["importancia.json", "indicadores_mun.json"]:
+        if os.path.exists(os.path.join(imp, nome)):
+            shutil.copy(os.path.join(imp, nome), os.path.join(pasta_site, nome))
     open(os.path.join(pasta_site, ".nojekyll"), "w").close()
 
 

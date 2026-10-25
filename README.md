@@ -15,6 +15,7 @@ Ficam em `saida/2026/` (atualizadas no branch do projeto a cada rodada):
 | `mapa_municipios.png` | Mapa por município: apurado e previsto, em polígonos e em círculos proporcionais aos votos |
 | `index.html` | Página única com tudo, inclusive as transferências estimadas |
 | `analises.html` (no site) | Detalhe por município (busca) e curiosidades; lê `dados_municipios.csv` publicado a cada rodada |
+| `indicadores.html` (no site) | Indicadores do IBGE (`data/ibge/`) e o voto: Gradient Boosting validado por estado, SHAP, permutação e Spearman. Gerado à parte por `scripts/importancia.py` em `saida/importancia/` |
 | `historico.csv` | Uma linha por rodada (base da linha do tempo) |
 | `resultado.json` | Todos os números da última rodada |
 

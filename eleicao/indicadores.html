@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Indicadores do IBGE e o voto</title>
+<meta name="description" content="Quanto o perfil dos municípios (indicadores do IBGE) explica o voto no 1º e no 2º turno presidencial de 2026: Gradient Boosting com validação por estado, SHAP e correlação de Spearman. Projeto pessoal, sem filiação partidária.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Source+Sans+3:wght@400;500;600&display=swap">
+<style>
+:root {
+  --font-sans: "Source Sans 3", system-ui, sans-serif; --font-serif: "Source Serif 4", Georgia, serif;
+  --fg: #1b1a18; --muted: #5f5c55; --bg: #fbfaf7; --panel: #ffffff; --line: #e4e1da; --border: #d9d5cc;
+  --grid: #ebe8e1; --axis: #8f8b82; --warn: #b26a00; --pop: #ffffff; --bar: #8f8b82; --barfaint: #d9d5cc;
+  --shadow: 0 4px 16px rgba(0,0,0,.12); --a: #e34948; --b: #2a78d6; --r: 10px;
+  --r1: #2e8b57; --r2: #c77c02; --r3: #7b5ea7; --r4: #1b9aaa; --r5: #8c564b; color-scheme: light;
+}
+@media (prefers-color-scheme: dark) { :root {
+  --fg: #efede8; --muted: #b3afa6; --bg: #191816; --panel: #22211e; --line: #36342f; --border: #45423c;
+  --grid: #312f2b; --axis: #8a867d; --pop: #2a2925; --bar: #a7a297; --barfaint: #45423c;
+  --r1: #4cbf82; --r2: #e3a234; --r3: #a58bd1; --r4: #3cc2d1; --r5: #c08a7e; color-scheme: dark;
+} }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); font-size: 15px; margin: 0;
+  padding: 24px max(16px, env(safe-area-inset-right, 0px)) 40px max(16px, env(safe-area-inset-left, 0px)); }
+.lx { display: grid; gap: 28px; max-width: 1100px; margin-inline: auto; }
+.lx a { color: inherit; }
+h1 { font-family: var(--font-serif); font-weight: 400; font-size: 30px; margin: 0; text-wrap: balance; }
+h2 { font-size: 17px; font-weight: 600; margin: 0; }
+h3 { font-size: 13px; font-weight: 600; margin: 0 0 6px; }
+.sub { color: var(--muted); margin: 4px 0 0; line-height: 1.45; }
+.meta { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+.note { color: var(--muted); font-size: 13px; margin: 4px 0 16px; line-height: 1.45; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); padding: 20px; min-width: 0; }
+.aviso { border-left: 3px solid var(--warn); padding-left: 8px; }
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); gap: 16px; }
+.grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: 16px; }
+.opts { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin-bottom: 12px; }
+.tabs { display: flex; flex-wrap: wrap; gap: 4px; }
+.tabs button, select { font: inherit; font-size: 13px; padding: 4px 8px; border: 1px solid var(--line); border-radius: var(--r);
+  background: var(--bg); color: var(--fg); cursor: pointer; max-width: 100%; }
+.tabs button[aria-pressed="true"] { background: var(--fg); color: var(--bg); }
+button:focus-visible, select:focus-visible { outline: 2px solid var(--b); outline-offset: 2px; }
+label.meta { display: inline-flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.big { font-family: var(--font-serif); font-size: 40px; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.tile { border-left: 4px solid var(--bar); padding-left: 12px; display: grid; gap: 2px; }
+.chart { position: relative; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart text { font-family: var(--font-sans); }
+.tip { position: absolute; pointer-events: none; background: var(--pop); border: 1px solid var(--border); border-radius: var(--r);
+  box-shadow: var(--shadow); padding: 4px 8px; font-size: 13px; font-variant-numeric: tabular-nums; max-width: 18rem; z-index: 5; }
+.tip .t { color: var(--muted); }
+.tabela { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 13px; font-variant-numeric: tabular-nums; }
+th, td { padding: 6px 8px; border-bottom: 1px solid var(--line); text-align: right; white-space: nowrap; }
+th:first-child, td:first-child { text-align: left; white-space: normal; min-width: 11rem; }
+th { color: var(--muted); font-weight: 500; }
+td .gr { display: block; color: var(--muted); font-size: 12px; }
+.hb { display: inline-block; height: 8px; border-radius: 2px; background: var(--bar); vertical-align: middle; margin-left: 6px; }
+.rank { list-style: none; margin: 0; padding: 0; font-size: 13px; font-variant-numeric: tabular-nums; }
+.rank li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; padding: 6px 0; border-top: 1px solid var(--line); }
+.rank li:first-child { border-top: 0; }
+.rank .uf { font-size: 11px; font-weight: 600; padding: 0 4px; border: 1px solid var(--border); border-radius: 4px; color: var(--muted); margin-left: 4px; white-space: nowrap; }
+.rank .nm { overflow-wrap: anywhere; }
+.rank .v { text-align: right; } .rank .v small { display: block; color: var(--muted); }
+.rk { border-top: 3px solid var(--c); padding-top: 10px; min-width: 0; }
+.leg { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 13px; color: var(--muted); margin-top: 6px; }
+.sw { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
+.sobre { line-height: 1.55; }
+.sobre h3 { font-size: 15px; margin: 16px 0 4px; }
+.sobre ul { padding-left: 20px; margin: 4px 0; }
+.sobre li { margin-bottom: 4px; }
+@media (max-width: 520px) { th, td { padding: 6px 4px; } .big { font-size: 32px; } }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+</head><body>
+<div class="lx">
+  <header>
+    <p class="meta"><a href="./">← Previsão do 2º turno</a> · <a href="analises.html">Detalhe por município</a></p>
+    <h1>Indicadores do IBGE e o voto</h1>
+    <p class="sub">Quanto o perfil de cada município (renda, educação, cor ou raça, religião, economia e demografia, pelo Censo 2022 e pelo PIB dos Municípios) explica o voto, e quais indicadores mais pesam na previsão.</p>
+    <p class="meta aviso" style="margin-top:10px">Correlação não é causa, e o município não é o eleitor: estes resultados descrevem padrões entre municípios, não por que as pessoas votam como votam. <a href="#metodologia">Metodologia e limitações.</a></p>
+    <p class="meta" id="gerado"></p>
+  </header>
+
+  <div class="opts" id="sel-alvo-box">
+    <span class="meta">Analisar</span>
+    <div class="tabs" role="group" aria-label="O que analisar" id="sel-alvo"></div>
+  </div>
+
+  <section class="card" id="resumo">
+    <h2>Quanto o perfil explica</h2>
+    <p class="note" id="nota-resumo"></p>
+    <div class="grid3" id="tiles"></div>
+    <h3 style="margin-top:20px">Comparação com outras formas de prever (R², validação por estado)</h3>
+    <div class="chart" id="ch-metricas"></div>
+  </section>
+
+  <section class="card" id="grupos">
+    <h2>Importância por grupo de indicadores</h2>
+    <p class="note">Indicadores do mesmo tema andam juntos (renda, escolaridade e cor, por exemplo), e o modelo usa um ou outro quase por acaso. Por isso a importância é somada por grupo. As três medidas olham a mesma pergunta de jeitos diferentes; o traço mostra a faixa entre os estados (10% a 90%).</p>
+    <div class="grid3" id="ch-grupos"></div>
+  </section>
+
+  <section class="card" id="indicadores">
+    <h2>Por indicador</h2>
+    <p class="note">SHAP: quanto, em média, o indicador desloca a previsão de cada município (em pontos percentuais). Permutação: quanto o erro aumenta quando o indicador é embaralhado. Spearman: correlação simples com o % de <span class="cA"></span> (de −1 a +1). Posição: mediana da posição do indicador entre os estados testados (faixa de 10% a 90%). Entre indicadores do mesmo grupo, a divisão da importância é instável.</p>
+    <div class="tabela" id="tab-ind"></div>
+  </section>
+
+  <section class="card" id="dependencia">
+    <h2>Como cada indicador age na previsão</h2>
+    <p class="note" id="nota-dep"></p>
+    <div class="opts"><label class="meta">Indicador <select id="sel-dep"></select></label></div>
+    <div class="chart" id="ch-dep"></div>
+  </section>
+
+  <section class="card" id="dispersao">
+    <h2>Indicador × voto</h2>
+    <p class="note">Cada círculo é um município, com área proporcional ao eleitorado e cor pela região. A correlação de Spearman (ρ) mede se, quando o indicador sobe, o % do candidato tende a subir (ρ &gt; 0) ou cair (ρ &lt; 0), sem supor uma reta.</p>
+    <div class="opts">
+      <label class="meta">Indicador <select id="sel-disp"></select></label>
+      <label class="meta"><input type="checkbox" id="disp-log"> Escala logarítmica</label>
+    </div>
+    <div class="chart" id="ch-disp"><p class="meta">Carregando…</p></div>
+    <div class="leg" id="leg-reg"></div>
+  </section>
+
+  <section class="card" id="correlacoes">
+    <h2>Como os indicadores se relacionam entre si</h2>
+    <p class="note">Correlação de Spearman entre os indicadores, agrupados por tema. Blocos fortes mostram por que a importância se espalha entre indicadores parecidos. <span style="color:#7b3294">Roxo</span>: os dois sobem juntos; <span style="color:#d95f02">laranja</span>: um sobe quando o outro desce.</p>
+    <div class="chart" id="ch-corr" style="overflow-x:auto"></div>
+  </section>
+
+  <section class="card" id="erros">
+    <h2>Onde o perfil não basta</h2>
+    <p class="note">Diferença entre o resultado real e o previsto pelo perfil, com o modelo treinado sem o estado do município. Barras para a direita: o estado votou mais em <span class="cA"></span> do que o perfil dos seus municípios indicaria.</p>
+    <div class="chart" id="ch-uf"></div>
+    <h3 style="margin-top:20px">Municípios que mais fogem do perfil (com 5 mil eleitores ou mais)</h3>
+    <div class="grid2" id="residuos"></div>
+  </section>
+
+  <section class="card sobre" id="metodologia">
+    <h2>Metodologia</h2>
+    <p>O alvo é o % de <span class="cA"></span> entre os votos dos dois candidatos do 2º turno, em cada município (o de <span class="cB"></span> é o complemento, então um modelo serve para os dois). Os 31 indicadores do IBGE entram num modelo de Gradient Boosting (LightGBM), que combina centenas de árvores de decisão e captura relações não lineares e interações.</p>
+    <h3>Validação por estado</h3>
+    <p>Municípios vizinhos se parecem muito. Se o modelo fosse testado em municípios sorteados, ele "colaria" dos vizinhos que viu no treino e pareceria melhor do que é. Por isso cada rodada deixa um estado inteiro de fora, treina com os outros 26 e prevê o estado que ficou de fora. Todos os números desta página (R², erro, SHAP, permutação) vêm dessas previsões fora da amostra.</p>
+    <h3>As medidas de importância</h3>
+    <ul>
+      <li><b>SHAP</b> divide a previsão de cada município em contribuições de cada indicador, que somadas dão a previsão. A importância é a média do tamanho dessas contribuições. Somar dentro do grupo é válido porque as contribuições são aditivas.</li>
+      <li><b>Permutação</b>: os valores de um indicador (ou de todo um grupo) são trocados por valores sorteados de outros municípios, e mede-se quanto o erro sobe. Com um indicador sozinho, o modelo recorre aos parecidos, e a importância fica subestimada; por isso a versão por grupo.</li>
+      <li><b>Retirada</b>: o modelo é treinado de novo sem o grupo, e mede-se quanto o erro sobe. Responde "quanto se perde sem essa informação", contando que outros grupos podem compensar.</li>
+    </ul>
+    <h3>Limitações</h3>
+    <ul>
+      <li><b>Correlação não é causa.</b> Um indicador importante pode estar só acompanhando algo que não foi medido, como a história política local, programas sociais ou lideranças regionais.</li>
+      <li><b>Município não é eleitor.</b> "Municípios com mais evangélicos votam mais em X" não quer dizer que os evangélicos votam em X (falácia ecológica).</li>
+      <li><b>Indicadores correlacionados.</b> A importância se divide entre eles de forma quase arbitrária. Leia o ranking de indicadores isolados com cuidado e prefira os grupos.</li>
+      <li><b>SHAP explica o modelo, não o mundo.</b> Mostra no que o modelo se apoia, não o efeito de mudar um indicador.</li>
+      <li><b>Datas diferentes.</b> Censo de 2022, PIB de 2023 dividido pela população de 2022, participação dos setores na economia de 2021, eleição de 2026.</li>
+      <li><b>Substitutos.</b> O Censo 2022 não publica desocupação por município; no lugar entra o nível de ocupação (ocupados sobre pessoas de 10 anos ou mais). "Filhos por mulher" é a média de filhos tidos por mulher de 12 anos ou mais, não a taxa de fecundidade. Mortalidade infantil ficou de fora.</li>
+      <li><b>Vizinhança.</b> A validação por estado reduz, mas não elimina, a semelhança entre vizinhos: estados vizinhos também se parecem.</li>
+      <li><b>Cobertura.</b> Ficam de fora os votos do exterior e Boa Esperança do Norte (MT), criado depois do Censo. Municípios pequenos têm % mais instável. No 2º turno, enquanto a apuração não termina, só entram os municípios 100% apurados, que não são uma amostra aleatória.</li>
+    </ul>
+    <h3>Fontes</h3>
+    <ul id="fontes">
+      <li>Votos: TSE, resultados de 2026 por município (1º turno e apuração do 2º turno), os mesmos da <a href="./">página principal</a>.</li>
+    </ul>
+    <p class="meta">Dados em <a href="importancia.json" download>importancia.json</a> e <a href="indicadores_mun.json" download>indicadores_mun.json</a>.</p>
+  </section>
+
+  <p class="meta">Projeto pessoal, sem filiação partidária. Análise estatística, não é resultado oficial.</p>
+</div>
+
+<script>
+(() => {
+  const $ = (s) => document.querySelector(s);
+  const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const f = (x, d = 1) => x === null || x === undefined || !Number.isFinite(x) ? '—' : x.toFixed(d).replace('.', ',').replace('-', '−');
+  const pct = (x, d = 1) => f(x, d) + '%';
+  const sinal = (x, d = 0) => { const t = f(x, d); return (/^[0,]+$/.test(t) || t.startsWith('−') ? '' : '+') + t; };  // sem +0 nem +−
+  const int = (x) => Math.round(x).toLocaleString('pt-BR');
+  const UFN = { ac: 'Acre', al: 'Alagoas', ap: 'Amapá', am: 'Amazonas', ba: 'Bahia', ce: 'Ceará', df: 'Distrito Federal', es: 'Espírito Santo',
+    go: 'Goiás', ma: 'Maranhão', mt: 'Mato Grosso', ms: 'Mato Grosso do Sul', mg: 'Minas Gerais', pa: 'Pará', pb: 'Paraíba', pr: 'Paraná',
+    pe: 'Pernambuco', pi: 'Piauí', rj: 'Rio de Janeiro', rn: 'Rio Grande do Norte', rs: 'Rio Grande do Sul', ro: 'Rondônia', rr: 'Roraima',
+    sc: 'Santa Catarina', sp: 'São Paulo', se: 'Sergipe', to: 'Tocantins' };
+  const REG = { 'Norte': 'var(--r1)', 'Nordeste': 'var(--r2)', 'Centro-Oeste': 'var(--r3)', 'Sudeste': 'var(--r4)', 'Sul': 'var(--r5)' };
+  const MIN = new Set(['de', 'da', 'do', 'das', 'dos', 'e']);
+  const titulo = (s) => s.toLowerCase().split(/(\s+|-)/).map((w, i) => /^d'/.test(w) ? "d'" + w.charAt(2).toUpperCase() + w.slice(3)
+    : i > 0 && MIN.has(w) ? w : w.charAt(0).toUpperCase() + w.slice(1)).join('');
+  const ax = (g) => { g.select('.domain').remove(); g.selectAll('line').attr('stroke', 'var(--grid)'); g.selectAll('text').attr('fill', 'var(--muted)').style('font-size', '12px'); };
+
+  let D = null, MUN = null, alvo = 'alvo_t1', A = 'A', B = 'B';
+  const tip = document.createElement('div'); tip.className = 'tip'; tip.hidden = true;
+  function dica(box, ev, html) {
+    if (tip.parentNode !== box) box.appendChild(tip);
+    const [px, py] = d3.pointer(ev, box);
+    tip.innerHTML = html; tip.hidden = false;
+    tip.style.left = Math.min(box.clientWidth - tip.offsetWidth, Math.max(0, px + 12)) + 'px'; tip.style.top = (py + 14) + 'px';
+  }
+  const semDica = () => { tip.hidden = true; };
+  const largura = (el) => Math.max(280, el.clientWidth);
+
+  // ---------- resumo ----------
+  function resumo(R) {
+    const m = R.metricas;
+    $('#nota-resumo').innerHTML = `${R.nome}: ${int(R.n)} municípios, ${R.n_ufs} estados. O modelo é testado sempre num estado que ele não viu no treino.`
+      + (R.parcial ? ' <b>Parcial:</b> só os municípios já 100% apurados.' : '');
+    const media = R.media;
+    $('#tiles').innerHTML = `
+      <div class="tile"><span class="meta">Variação explicada (R²)</span><span class="big">${pct(100 * m.modelo.r2, 0)}</span>
+        <span class="meta">da diferença entre municípios; ${pct(100 * m.modelo.r2_pond, 0)} pesando pelo eleitorado</span></div>
+      <div class="tile"><span class="meta">Erro médio por município</span><span class="big">${f(m.modelo.mae)} p.p.</span>
+        <span class="meta">${alvo === 'alvo_mud' ? 'na mudança entre turnos' : `no % de ${esc(A)} (média ${pct(media)})`}</span></div>
+      <div class="tile"><span class="meta">Só com a média da região</span><span class="big">${pct(100 * Math.max(0, m.media_regiao.r2), 0)}</span>
+        <span class="meta">erro médio de ${f(m.media_regiao.mae)} p.p.: o que o perfil acrescenta à geografia</span></div>`;
+    const linhas = [
+      ['Gradient Boosting, só IBGE', m.modelo, 'var(--fg)'],
+      ['Gradient Boosting + região', m.modelo_regiao, 'var(--bar)'],
+      ['Regressão linear (ridge), só IBGE', m.ridge, 'var(--bar)'],
+      ['Média da região', m.media_regiao, 'var(--bar)'],
+      ['Gradient Boosting, validação aleatória*', m.aleatoria, 'var(--barfaint)'],
+    ];
+    const box = $('#ch-metricas'); box.innerHTML = '';
+    const W = largura(box), estreito = W < 560, lw = estreito ? 0 : 250, dy = estreito ? 44 : 30, H = linhas.length * dy + 26;
+    const x = d3.scaleLinear([0, 1], [lw, W - 100]);
+    const svg = d3.select(box).append('svg').attr('viewBox', `0 0 ${W} ${H}`);
+    // no celular o nome vai em cima da barra
+    const g = svg.selectAll('g').data(linhas).join('g').attr('transform', (d, i) => `translate(0,${i * dy + (estreito ? 16 : 0)})`);
+    g.append('text').attr('x', estreito ? 0 : lw - 8).attr('y', estreito ? 0 : 15).attr('text-anchor', estreito ? 'start' : 'end').attr('fill', 'var(--fg)').style('font-size', '13px').text((d) => d[0]);
+    g.append('rect').attr('x', x(0)).attr('y', 5).attr('height', 14).attr('rx', 2).attr('width', (d) => x(Math.max(0, d[1].r2)) - x(0)).attr('fill', (d) => d[2]);
+    g.append('text').attr('x', (d) => x(Math.max(0, d[1].r2)) + 6).attr('y', 16).attr('fill', 'var(--muted)').style('font-size', '12px')
+      .text((d) => `${pct(100 * d[1].r2, 0)} · ${f(d[1].mae)} p.p.`);
+    svg.append('text').attr('x', 0).attr('y', H - 4).attr('fill', 'var(--muted)').style('font-size', '12px')
+      .text(estreito ? '* municípios sorteados: parece melhor do que é.' : '* municípios sorteados: o modelo vê os vizinhos no treino e parece melhor do que é.');
+  }
+
+  // ---------- grupos ----------
+  function grupos(R) {
+    const G = R.grupos.slice().sort((a, b) => b.shap - a.shap);
+    const medidas = [
+      ['SHAP médio do grupo', 'p.p. de deslocamento da previsão', (g) => g.shap, null, (v) => f(v) + ' p.p.'],
+      ['Permutação do grupo', 'aumento do erro quadrático', (g) => 100 * g.perm.media / R.mse, (g) => [100 * g.perm.p10 / R.mse, 100 * g.perm.p90 / R.mse], (v) => sinal(v) + '%'],
+      ['Retirada do grupo', 'aumento do erro quadrático ao treinar sem ele', (g) => 100 * g.retirada.media / R.mse, (g) => [100 * g.retirada.p10 / R.mse, 100 * g.retirada.p90 / R.mse], (v) => sinal(v) + '%'],
+    ];
+    const box = $('#ch-grupos');
+    box.innerHTML = medidas.map(([tit, sub]) => `<div class="chart"><h3>${tit}</h3><p class="meta" style="margin:0 0 6px">${sub}</p></div>`).join('');
+    const divs = box.querySelectorAll('.chart');  // todos no lugar antes de medir a largura
+    medidas.forEach(([tit, sub, val, faixa, fmt], k) => {
+      const div = divs[k];
+      const W = Math.max(240, div.clientWidth), lw = 92, H = G.length * 28 + 4;
+      const vmax = d3.max(G, (g) => faixa ? Math.max(val(g), faixa(g)[1]) : val(g)) || 1;
+      const vmin = Math.min(0, d3.min(G, (g) => faixa ? faixa(g)[0] : val(g)));
+      const x = d3.scaleLinear([vmin, vmax], [lw, W - 56]).nice();
+      const svg = d3.select(div).append('svg').attr('viewBox', `0 0 ${W} ${H}`);
+      const g = svg.selectAll('g').data(G).join('g').attr('transform', (d, i) => `translate(0,${i * 28})`);
+      g.append('text').attr('x', lw - 8).attr('y', 16).attr('text-anchor', 'end').attr('fill', 'var(--fg)').style('font-size', '13px').text((d) => d.grupo);
+      g.append('rect').attr('x', (d) => x(Math.min(0, val(d)))).attr('y', 7).attr('height', 12).attr('rx', 2)
+        .attr('width', (d) => Math.abs(x(val(d)) - x(0))).attr('fill', 'var(--bar)');
+      if (faixa) g.append('line').attr('x1', (d) => x(faixa(d)[0])).attr('x2', (d) => x(faixa(d)[1])).attr('y1', 13).attr('y2', 13)
+        .attr('stroke', 'var(--fg)').attr('stroke-width', 1.2);
+      g.append('text').attr('x', (d) => Math.max(x(val(d)), faixa ? x(faixa(d)[1]) : 0) + 6).attr('y', 17).attr('fill', 'var(--muted)').style('font-size', '12px').text((d) => fmt(val(d)));
+      if (vmin < 0) svg.append('line').attr('x1', x(0)).attr('x2', x(0)).attr('y1', 0).attr('y2', H).attr('stroke', 'var(--axis)');
+      g.append('title').text((d) => `${d.grupo}: ${d.n_ind} indicadores`);
+    });
+  }
+
+  // ---------- tabela por indicador ----------
+  function tabela(R) {
+    const I = R.indicadores.slice().sort((a, b) => b.shap - a.shap);
+    const smax = d3.max(I, (i) => i.shap);
+    const corRho = (r) => r > 0 ? 'var(--a)' : 'var(--b)';
+    $('#tab-ind').innerHTML = `<table><thead><tr><th>Indicador</th><th>SHAP médio</th><th>Permutação</th><th>Spearman ρ</th><th>Posição</th></tr></thead><tbody>${
+      I.map((i) => `<tr><td>${esc(D.rotulos[i.col])}<span class="gr">${esc(i.grupo)}</span></td>
+        <td>${f(i.shap, 2)} p.p.<span class="hb" style="width:${60 * i.shap / smax}px"></span></td>
+        <td>${sinal(100 * i.perm.media / R.mse)}%</td>
+        <td style="color:${corRho(i.rho)}">${f(i.rho, 2)}</td>
+        <td>${f(i.rank_med, 0)}º <small class="meta">(${f(i.rank_p10, 0)}º–${f(i.rank_p90, 0)}º)</small></td></tr>`).join('')}</tbody></table>`;
+  }
+
+  // ---------- dependência SHAP ----------
+  function dependencia(R) {
+    const sel = $('#sel-dep'); const cols = Object.keys(R.dependencia);
+    const atual = cols.includes(sel.value) ? sel.value : cols[0];
+    sel.innerHTML = cols.map((c) => `<option value="${c}" ${c === atual ? 'selected' : ''}>${esc(D.rotulos[c])}</option>`).join('');
+    $('#nota-dep').innerHTML = `Cada ponto é um município (amostra). Eixo horizontal: valor do indicador. Eixo vertical: quanto esse indicador desloca a previsão daquele município, em p.p. Acima de zero puxa para <span style="color:var(--a)">${esc(A)}</span>; abaixo, para <span style="color:var(--b)">${esc(B)}</span>. A dispersão vertical num mesmo valor vem das interações com os outros indicadores.`;
+    const c = sel.value, dd = R.dependencia[c];
+    const pts = dd.x.map((x, i) => ({ x, s: dd.s[i], uf: dd.uf[i] }));
+    const box = $('#ch-dep'); box.innerHTML = '';
+    const W = largura(box), H = Math.min(380, Math.max(240, W * 0.5)), mg = { t: 10, r: 12, b: 36, l: 48 };
+    const pos = pts.every((p) => p.x > 0), ratio = d3.max(pts, (p) => p.x) / Math.max(1e-9, d3.min(pts, (p) => p.x));
+    const x = (pos && ratio > 50 ? d3.scaleLog() : d3.scaleLinear()).domain(d3.extent(pts, (p) => p.x)).range([mg.l, W - mg.r]).nice();
+    const ym = d3.max(pts, (p) => Math.abs(p.s)) || 1;
+    const y = d3.scaleLinear([-ym, ym], [H - mg.b, mg.t]).nice();
+    const svg = d3.select(box).append('svg').attr('viewBox', `0 0 ${W} ${H}`);
+    svg.append('g').attr('transform', `translate(0,${H - mg.b})`).call(d3.axisBottom(x).ticks(6, '~s').tickSize(-(H - mg.t - mg.b))).call(ax);
+    svg.append('g').attr('transform', `translate(${mg.l},0)`).call(d3.axisLeft(y).ticks(6).tickSize(-(W - mg.l - mg.r)).tickFormat((v) => (v > 0 ? '+' : '') + f(v, 0))).call(ax);
+    svg.append('line').attr('x1', mg.l).attr('x2', W - mg.r).attr('y1', y(0)).attr('y2', y(0)).attr('stroke', 'var(--axis)');
+    svg.append('g').selectAll('circle').data(pts).join('circle').attr('cx', (p) => x(p.x)).attr('cy', (p) => y(p.s)).attr('r', 2.4)
+      .attr('fill', (p) => p.s >= 0 ? 'var(--a)' : 'var(--b)').attr('fill-opacity', .45);
+    svg.append('text').attr('x', W - mg.r).attr('y', H - 4).attr('text-anchor', 'end').attr('fill', 'var(--muted)').style('font-size', '12px').text(D.rotulos[c]);
+    svg.append('text').attr('x', mg.l + 4).attr('y', mg.t + 12).attr('fill', 'var(--muted)').style('font-size', '12px').text('efeito na previsão (p.p.)');
+  }
+
+  // ---------- dispersão ----------
+  function dispersao() {
+    const box = $('#ch-disp');
+    if (!MUN) { box.innerHTML = '<p class="meta">Carregando…</p>'; return; }
+    const R = D.alvos[alvo], sel = $('#sel-disp');
+    if (!sel.options.length) {
+      const I = R.indicadores.slice().sort((a, b) => Math.abs(b.rho) - Math.abs(a.rho));
+      sel.innerHTML = I.map((i) => `<option value="${i.col}">${esc(D.rotulos[i.col])}</option>`).join('');
+    }
+    const c = sel.value, ind = R.indicadores.find((i) => i.col === c);
+    const yv = MUN[alvo];
+    const pts = MUN.id.map((id, k) => ({ id, nome: MUN.nome[k], uf: MUN.uf[k], reg: MUN.regiao[k], e: MUN.eleitores[k], x: MUN.ind[c][k], y: yv[k] }))
+      .filter((p) => p.x !== null && p.y !== null && (!$('#disp-log').checked || p.x > 0)).sort((a, b) => b.e - a.e);
+    box.innerHTML = '';
+    const W = largura(box), H = Math.min(440, Math.max(260, W * 0.58)), mg = { t: 24, r: 12, b: 36, l: 44 };
+    const x = ($('#disp-log').checked ? d3.scaleLog() : d3.scaleLinear()).domain(d3.extent(pts, (p) => p.x)).range([mg.l, W - mg.r]).nice();
+    const y = d3.scaleLinear(alvo === 'alvo_mud' ? d3.extent(pts, (p) => p.y) : [0, 100], [H - mg.b, mg.t]).nice();
+    const r = d3.scaleSqrt([0, d3.max(pts, (p) => p.e)], [1.2, W < 500 ? 14 : 22]);
+    const svg = d3.select(box).append('svg').attr('viewBox', `0 0 ${W} ${H}`)
+      .attr('role', 'img').attr('aria-label', `${D.rotulos[c]} contra ${R.nome}, Spearman ${f(ind.rho, 2)}`);
+    svg.append('g').attr('transform', `translate(0,${H - mg.b})`).call(d3.axisBottom(x).ticks(6, '~s').tickSize(-(H - mg.t - mg.b))).call(ax);
+    svg.append('g').attr('transform', `translate(${mg.l},0)`).call(d3.axisLeft(y).ticks(6).tickSize(-(W - mg.l - mg.r)).tickFormat((v) => alvo === 'alvo_mud' ? f(v, 0) : v + '%')).call(ax);
+    if (alvo !== 'alvo_mud') svg.append('line').attr('x1', mg.l).attr('x2', W - mg.r).attr('y1', y(50)).attr('y2', y(50)).attr('stroke', 'var(--axis)').attr('stroke-dasharray', '4 4');
+    svg.append('g').selectAll('circle').data(pts).join('circle').attr('cx', (p) => x(p.x)).attr('cy', (p) => y(p.y)).attr('r', (p) => r(p.e))
+      .attr('fill', (p) => REG[p.reg] || 'var(--bar)').attr('fill-opacity', .5).attr('stroke', 'var(--panel)').attr('stroke-width', .4)
+      .on('pointermove', (ev, p) => dica(box, ev, `<b>${esc(titulo(p.nome))}</b> <span class="t">${p.uf.toUpperCase()}</span><br><span class="t">${esc(D.rotulos[c])}:</span> ${f(p.x, p.x >= 100 ? 0 : 1)}<br><span class="t">${esc(R.nome)}:</span> ${alvo === 'alvo_mud' ? f(p.y) + ' p.p.' : pct(p.y)} de ${esc(A)}`))
+      .on('pointerleave', semDica);
+    svg.append('text').attr('x', W - mg.r).attr('y', H - 4).attr('text-anchor', 'end').attr('fill', 'var(--muted)').style('font-size', '12px').text(D.rotulos[c]);
+    svg.append('text').attr('x', mg.l).attr('y', 12).attr('fill', 'var(--muted)').style('font-size', '12px')
+      .text(`${alvo === 'alvo_mud' ? 'mudança (p.p.) de ' : '% de '}${A} · ρ de Spearman = ${f(ind.rho, 2)}`);
+    $('#leg-reg').innerHTML = Object.entries(REG).map(([k, v]) => `<span><span class="sw" style="background:${v}"></span>${k}</span>`).join('');
+  }
+
+  // ---------- correlações ----------
+  function correlacoes() {
+    const C = D.corr, ordem = Object.keys(D.rotulos).sort((a, b) => (D.grupo_de[a] + a).localeCompare(D.grupo_de[b] + b));
+    const idx = Object.fromEntries(C.cols.map((c, i) => [c, i]));
+    const box = $('#ch-corr'); box.innerHTML = '';
+    const W = largura(box), n = ordem.length, lw = 210, cel = Math.max(12, Math.min(20, (W - lw - 4) / n));  // no celular rola para o lado
+    const H = lw * 0 + n * cel + 8;
+    const cor = d3.scaleDiverging([-1, 0, 1], (t) => d3.interpolatePuOr(1 - t));  // sem vermelho/azul, que são dos candidatos
+    const svg = d3.select(box).append('svg').attr('viewBox', `0 0 ${lw + n * cel + 4} ${H}`).style('width', `${lw + n * cel + 4}px`).style('max-width', 'none');
+    ordem.forEach((a, i) => {
+      svg.append('text').attr('x', lw - 6).attr('y', i * cel + cel * 0.75).attr('text-anchor', 'end').attr('fill', 'var(--fg)')
+        .style('font-size', Math.min(12, cel * 0.8) + 'px').text(D.rotulos[a].length > 34 ? D.rotulos[a].slice(0, 33) + '…' : D.rotulos[a]);
+      ordem.forEach((b, j) => {
+        const v = C.m[idx[a]][idx[b]];
+        svg.append('rect').attr('x', lw + j * cel).attr('y', i * cel).attr('width', cel - 1).attr('height', cel - 1)
+          .attr('fill', v === null ? 'var(--grid)' : cor(v))
+          .on('pointermove', (ev) => dica(box, ev, `${esc(D.rotulos[a])}<br>× ${esc(D.rotulos[b])}<br><b>ρ = ${f(v, 2)}</b>`)).on('pointerleave', semDica);
+      });
+    });
+    // separadores entre grupos
+    ordem.forEach((a, i) => { if (i && D.grupo_de[a] !== D.grupo_de[ordem[i - 1]]) {
+      svg.append('line').attr('x1', lw - 4).attr('x2', lw + n * cel).attr('y1', i * cel - .5).attr('y2', i * cel - .5).attr('stroke', 'var(--fg)').attr('stroke-width', 1);
+      svg.append('line').attr('y1', 0).attr('y2', n * cel).attr('x1', lw + i * cel - .5).attr('x2', lw + i * cel - .5).attr('stroke', 'var(--fg)').attr('stroke-width', 1);
+    } });
+  }
+
+  // ---------- erros ----------
+  function erros(R) {
+    const U = R.por_uf.slice().sort((a, b) => b.vies - a.vies);
+    const box = $('#ch-uf'); box.innerHTML = '';
+    const W = largura(box), lw = 120, H = U.length * 20 + 24;
+    const m = d3.max(U, (u) => Math.abs(u.vies)) || 1;
+    const x = d3.scaleLinear([-m, m], [lw, W - 50]).nice();
+    const svg = d3.select(box).append('svg').attr('viewBox', `0 0 ${W} ${H}`);
+    svg.append('g').attr('transform', `translate(0,${H - 20})`).call(d3.axisBottom(x).ticks(6).tickFormat((v) => (v > 0 ? '+' : '') + f(v, 0)).tickSize(-(H - 24))).call(ax);
+    const g = svg.selectAll('g.u').data(U).join('g').attr('class', 'u').attr('transform', (d, i) => `translate(0,${i * 20})`);
+    g.append('text').attr('x', lw - 8).attr('y', 13).attr('text-anchor', 'end').attr('fill', 'var(--fg)').style('font-size', '12px').text((u) => UFN[u.uf] || u.uf);
+    g.append('rect').attr('x', (u) => x(Math.min(0, u.vies))).attr('y', 4).attr('height', 12).attr('rx', 2).attr('width', (u) => Math.abs(x(u.vies) - x(0)))
+      .attr('fill', (u) => u.vies >= 0 ? 'var(--a)' : 'var(--b)').attr('fill-opacity', .8);
+    g.append('text').attr('x', (u) => u.vies >= 0 ? x(u.vies) + 4 : x(u.vies) - 4).attr('y', 14).attr('text-anchor', (u) => u.vies >= 0 ? 'start' : 'end')
+      .attr('fill', 'var(--muted)').style('font-size', '11px').text((u) => (u.vies > 0 ? '+' : '') + f(u.vies) + ' p.p.');
+    svg.append('line').attr('x1', x(0)).attr('x2', x(0)).attr('y1', 0).attr('y2', H - 20).attr('stroke', 'var(--fg)');
+    const lista = (L, nome, c) => `<div class="rk" style="--c:var(${c})"><h3>Mais ${esc(nome)} do que o perfil prevê</h3><ol class="rank">${
+      L.filter((m) => m.eleitores >= 5000).slice(0, 10).map((m) => `<li><span class="nm">${esc(titulo(m.nome))}<span class="uf">${m.uf.toUpperCase()}</span></span>
+        <span class="v">${f(Math.abs(m.real - m.prev))} p.p.<small>real ${alvo === 'alvo_mud' ? f(m.real) : pct(m.real)}, previsto ${alvo === 'alvo_mud' ? f(m.prev) : pct(m.prev)} de ${esc(A)}</small></span></li>`).join('')}</ol></div>`;
+    $('#residuos').innerHTML = lista(R.residuos.a, A, '--a') + lista(R.residuos.b, B, '--b');
+  }
+
+  function fontes() {
+    const F = D.fontes; if (!F) return;
+    const tabs = Object.entries(F.tabelas || {}).map(([t, v]) => `<a href="https://sidra.ibge.gov.br/tabela/${encodeURIComponent(t)}">tabela ${esc(t)}</a> (${esc(v.nome)}, ${esc(String(v.periodo))})`);
+    $('#fontes').insertAdjacentHTML('afterbegin', `<li>Indicadores: IBGE, ${esc(F.pesquisa || 'Censo Demográfico 2022')}, pela API SIDRA (baixados em ${esc(F.baixado_em || '')}):<ul>${tabs.map((t) => `<li>${t}</li>`).join('')}</ul></li>`);
+  }
+
+  function tudo() {
+    const R = D.alvos[alvo];
+    document.querySelectorAll('.cA').forEach((e) => { e.textContent = A; e.style.color = 'var(--a)'; });
+    document.querySelectorAll('.cB').forEach((e) => { e.textContent = B; e.style.color = 'var(--b)'; });
+    for (const fn of [resumo, grupos, tabela, dependencia, erros]) { try { fn(R); } catch (e) { console.error(e); } }
+    try { dispersao(); } catch (e) { console.error(e); }
+  }
+
+  fetch('importancia.json?v=' + Date.now(), { cache: 'no-store' }).then((r) => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }).then((d) => {
+    D = d; [A, B] = d.candidatos;
+    const alvos = Object.keys(d.alvos);
+    alvo = alvos.includes(alvo) ? alvo : alvos[0];
+    $('#sel-alvo').innerHTML = alvos.map((k) => `<button type="button" data-a="${k}" aria-pressed="${k === alvo}">${esc(d.alvos[k].nome)}</button>`).join('');
+    $('#sel-alvo-box').hidden = alvos.length < 2;
+    $('#sel-alvo').addEventListener('click', (e) => { const b = e.target.closest('button[data-a]'); if (!b) return;
+      alvo = b.dataset.a; document.querySelectorAll('#sel-alvo button').forEach((x) => x.setAttribute('aria-pressed', x === b)); $('#sel-disp').innerHTML = ''; tudo(); });
+    const g = new Date(d.gerado.replace('Z', ':00Z'));
+    $('#gerado').textContent = 'Análise gerada em ' + g.toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' })
+      + (alvos.length < 2 ? '. Por enquanto só o 1º turno: o 2º turno e a mudança entre os turnos entram quando a apuração terminar.' : '.');
+    fontes(); correlacoes(); tudo();
+    $('#sel-dep').addEventListener('change', () => dependencia(D.alvos[alvo]));
+    $('#sel-disp').addEventListener('change', dispersao); $('#disp-log').addEventListener('change', dispersao);
+    let rt; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { correlacoes(); tudo(); }, 150); });
+    return fetch('indicadores_mun.json?v=' + Date.now(), { cache: 'no-store' }).then((r) => r.json()).then((m) => { MUN = m; dispersao(); });
+  }).catch((e) => {
+    $('#gerado').innerHTML = `<span class="aviso">Não foi possível carregar a análise (${esc(e.message)}). Tente recarregar a página.</span>`;
+  });
+})();
+</script>
+</body></html>

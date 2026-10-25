@@ -111,3 +111,14 @@ acusa "previsão longe do apurado" com mais de 20% apurado no grupo (antes acusa
 A cada 10 min a página busca o `index.html` publicado e redesenha com os dados novos, sem recarregar. Mudou
 `eleicao/web.py`. Pode ir junto com o reinício do P11. Depois da publicação, abra o site no Playwright, espere uma
 rodada nova (ou use `page.clock` para avançar 10 min) e confirme que o "Atualizado ..." muda sem recarregar e sem erros de JS.
+
+## P13 — página "Indicadores do IBGE e o voto"
+
+Nova página `indicadores.html` em "Análises adicionais", com os resultados já calculados em `saida/importancia/`
+(o remoto gerou com a base do P8, agora em `data/ibge/`). `web.gerar_site` copia a página e os dois JSON.
+Nada muda no modelo nem na coleta.
+
+1. `git pull --rebase` e reinicie o loop entre duas rodadas.
+2. Depois da próxima publicação, confirme que `<site>/indicadores.html`, `<site>/importancia.json` e
+   `<site>/indicadores_mun.json` respondem HTTP 200 e que, no Playwright, a página mostra o R² (seção "Quanto o perfil
+   explica") sem erros de JS. Registre em `respostas.md`.

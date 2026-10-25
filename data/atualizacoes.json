@@ -14,5 +14,9 @@
  {
   "quando": "25/10/2026 17:25",
   "texto": "Correção: o TSE publica os arquivos dos municípios com atraso em relação ao total nacional, e a coleta podia ficar presa a dados municipais defasados. Agora os municípios são baixados de novo até alcançarem o total do estado, e o \"apurado\" do Brasil mostrado é o total oficial do TSE."
+ },
+ {
+  "quando": "25/10/2026 17:40",
+  "texto": "Nova análise em \"Análises adicionais\": indicadores do IBGE (Censo 2022 e PIB dos Municípios) e o voto no 1º turno, com a importância de cada grupo de indicadores e a metodologia. O 2º turno entra quando a apuração terminar."
  }
 ]
