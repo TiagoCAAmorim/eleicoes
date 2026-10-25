@@ -134,3 +134,17 @@ Mudou `eleicao/modelo.py` (novo `Config.s_parcial`: variância extra para munic�
    reinício, e confirme que a tabela "Previsão por grupo" (nível UF) mostra o % apurado com uma casa decimal e o
    cabeçalho "comparecimento previsto".
 3. Rode o snippet do P11 e registre a soma das seções das UFs e dos municípios em relação ao arquivo Brasil.
+
+## P15 — TSE "parado" em 17:06: confirmar se é o TSE ou cache (urgente, responda logo)
+
+O status diz que o arquivo Brasil está em 17:06 (0,25%) há mais de 30 min. Numa apuração real isso é improvável;
+pode ser cache (CDN) servindo uma versão velha para a nossa URL. Investigue e registre em `respostas.md`:
+
+1. `U=https://resultados.tse.jus.br/oficial/ele2026/6258/dados/br/br-c0001-e006258-u.json`
+   - `curl -sI "$U"` (anote `Last-Modified`, `Age`, `Cache-Control`, `ETag`);
+   - `curl -s "$U" | python -c "import json,sys; d=json.load(sys.stdin); print(d.get('dg'), d.get('hg'), d.get('st'), d.get('pst'))"`;
+   - o mesmo com `"$U?nc=$(date +%s)"` (quebra de cache).
+2. Abra https://resultados.tse.jus.br/oficial/app/index.html no Playwright (2º turno, presidente, Brasil) e anote o
+   % de seções e a hora que a página oficial mostra.
+3. Se a página oficial ou a URL com `?nc=` estiver à frente do que o loop lê, diga em `respostas.md` e no `status.md`
+   (o remoto muda `tse._get` para quebrar o cache). Se tudo mostrar 17:06, o TSE de fato está parado: só registre.
