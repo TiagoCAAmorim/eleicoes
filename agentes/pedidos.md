@@ -122,3 +122,15 @@ Nada muda no modelo nem na coleta.
 2. Depois da próxima publicação, confirme que `<site>/indicadores.html`, `<site>/importancia.json` e
    `<site>/indicadores_mun.json` respondem HTTP 200 e que, no Playwright, a página mostra o R² (seção "Quanto o perfil
    explica") sem erros de JS. Registre em `respostas.md`.
+
+## P14 — modelo menos sensível a municípios parcialmente apurados (prioridade)
+
+Mudou `eleicao/modelo.py` (novo `Config.s_parcial`: variância extra para municípios com poucas seções apuradas),
+`eleicao/painel_web.html` e `eleicao/painel.py` (% apurado com uma casa decimal; "comparecimento previsto") e
+`data/atualizacoes.json`.
+
+1. `git pull --rebase` e reinicie o loop **já**, entre duas rodadas.
+2. Depois da próxima publicação, registre em `respostas.md`: previsão Brasil e chance de Lula antes e depois do
+   reinício, e confirme que a tabela "Previsão por grupo" (nível UF) mostra o % apurado com uma casa decimal e o
+   cabeçalho "comparecimento previsto".
+3. Rode o snippet do P11 e registre a soma das seções das UFs e dos municípios em relação ao arquivo Brasil.

@@ -18,5 +18,9 @@
  {
   "quando": "25/10/2026 17:40",
   "texto": "Nova análise em \"Análises adicionais\": indicadores do IBGE (Censo 2022 e PIB dos Municípios) e o voto no 1º turno, com a importância de cada grupo de indicadores e a metodologia. O 2º turno entra quando a apuração terminar."
+ },
+ {
+  "quando": "25/10/2026 17:45",
+  "texto": "Modelo menos sensível às primeiras seções: municípios com apuração parcial (poucas seções, que podem não representar o município) passam a pesar menos no ajuste até avançarem. Com os dados das 17:06, a previsão de Lula passaria de 48,4% para 49,0% (antes ia a 49,5%). O teste com a apuração de 2022 manteve o erro e a cobertura dos intervalos. Também: o % apurado por grupo agora tem uma casa decimal, e a coluna de comparecimento passou a se chamar \"comparecimento previsto\", deixando claro que é estimativa do modelo."
  }
 ]

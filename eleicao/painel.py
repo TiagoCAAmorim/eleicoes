@@ -38,6 +38,10 @@ def curto(nome):
     return nome.split()[0] if nome else nome
 
 
+def _pct_ap(x):
+    return "<0,1%" if 0 < x < 0.05 else _pct(x, 1)
+
+
 def _pct(x, casas=1):
     return f"{x:.{casas}f}%".replace(".", ",")
 
@@ -114,7 +118,7 @@ def imagem_principal(res, hist, caminho):
         fig.text(xx, y, c, fontsize=8.5, color=TINTA2)
     for nome, g in linhas:
         y -= 0.024
-        vals = [nome, _pct(g["pct_apurado"], 0), _pct(g["A_media"]), f"{_pct(g['A_p05'])} – {_pct(g['A_p95'])}",
+        vals = [nome, _pct_ap(g["pct_apurado"]), _pct(g["A_media"]), f"{_pct(g['A_p05'])} – {_pct(g['A_p95'])}",
                 _pct(100 * g["prob_A"], 0)]
         for xx, v in zip(xs, vals):
             fig.text(xx, y, v, fontsize=9, color=TINTA)
@@ -134,7 +138,7 @@ def _intervalos(ax, itens, rotulo):
         ax.plot([g["A_p05"], g["A_p95"]], [y, y], color=cor, lw=3, alpha=0.35, solid_capstyle="round")
         ax.plot(g["A_media"], y, "o", color=cor, ms=8)
         ax.plot(g["parcial"], y, "|", color=TINTA2, ms=10)
-        ax.annotate(f"{_pct(g['A_media'])}  ({_pct(g['pct_apurado'], 0)} apurado)", (max(g["A_p95"], g["parcial"] if g["parcial"] == g["parcial"] else 0, 50) + 1, y),
+        ax.annotate(f"{_pct(g['A_media'])}  ({_pct_ap(g['pct_apurado'])} apurado)", (max(g["A_p95"], g["parcial"] if g["parcial"] == g["parcial"] else 0, 50) + 1, y),
                     xytext=(6, 0), textcoords="offset points", va="center", fontsize=8, color=TINTA2)
     ax.set_yticks(list(ys), [rotulo(n) for n, _ in itens])
     ax.set_ylim(-0.7, len(itens) - 0.3)
@@ -172,12 +176,12 @@ def _b64(caminho):
 
 def _tabela(grupos, a):
     linhas = "".join(
-        f"<tr><td>{html.escape(n)}</td><td>{_pct(g['pct_apurado'], 1)}</td><td>{_pct(g['parcial'])}</td>"
+        f"<tr><td>{html.escape(n)}</td><td>{_pct_ap(g['pct_apurado'])}</td><td>{_pct(g['parcial'])}</td>"
         f"<td><b>{_pct(g['A_media'])}</b></td><td>{_pct(g['A_p05'])} – {_pct(g['A_p95'])}</td>"
         f"<td>{_pct(100 * g['prob_A'], 0)}</td><td>{_pct(g['comparecimento'])}</td></tr>"
         for n, g in grupos.items())
     return (f"<table><thead><tr><th></th><th>apurado</th><th>{a} apurado</th><th>{a} previsto</th>"
-            f"<th>intervalo 90%</th><th>chance {a}</th><th>comparecimento</th></tr></thead><tbody>{linhas}</tbody>"
+            f"<th>intervalo 90%</th><th>chance {a}</th><th>comparecimento previsto</th></tr></thead><tbody>{linhas}</tbody>"
             "</table>")
 
 

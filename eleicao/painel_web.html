@@ -90,7 +90,7 @@
 
   <section class="lx-card" id="grupos">
     <h2>Previsão por grupo</h2>
-    <p class="lx-note" id="nota-grupos">% dos votos válidos do primeiro candidato. Chance = fração das simulações em que ele passa de 50%.</p>
+    <p class="lx-note" id="nota-grupos">% dos votos válidos do primeiro candidato. Chance = fração das simulações em que ele passa de 50%. Comparecimento previsto = estimativa do modelo para o comparecimento final (% do eleitorado), não o apurado.</p>
     <div class="lx-bar">
       <div class="lx-tabs" role="group" aria-label="Candidato em foco">
         <button type="button" id="cand-a" data-cand="A" aria-pressed="true">Candidato A</button>
@@ -141,7 +141,7 @@
           <th data-field="A_p05">mín. 90%</th>
           <th data-field="A_p95">máx. 90%</th>
           <th data-field="prob_A">chance</th>
-          <th data-field="comparecimento">comparecimento</th>
+          <th data-field="comparecimento">comparecimento previsto</th>
         </tr></thead>
         <tbody></tbody>
       </table>
@@ -241,6 +241,7 @@ dash.calc('placar', {
 
 <script>
 window.lx = window.lx || {};
+lx.pctAp = (x) => (+x > 0 && +x < 0.05) ? '<0,1%' : lx.pct(x, 1);
 lx.pct = (x, d = 1) => (x === null || x === undefined || Number.isNaN(+x)) ? '—' : (+x).toFixed(d).replace('.', ',') + '%';
 lx.hora = new Intl.DateTimeFormat('pt-BR', { timeZone: 'America/Sao_Paulo', hour: '2-digit', minute: '2-digit' });
 lx.nivel = 'Região';
@@ -449,7 +450,7 @@ lx.intervalos = (box, rows) => {
     .attr('d', (r) => `M${x(r.real)},${cy(r) - 6}l5,6l-5,6l-5,-6z`).attr('fill', 'none').attr('stroke', 'var(--color-fg)').attr('stroke-width', 1.2);
   const tip = lx.dica(box);
   svg.append('g').selectAll('rect').data(asc).join('rect').attr('x', m.l).attr('width', W - m.l - m.r).attr('y', (r) => y(r.nome) - 2).attr('height', y.bandwidth() + 4).attr('fill', 'transparent')
-    .on('pointermove', (ev, r) => tip.show(ev, [`${r.nome} · ${lx.pct(r.pct_apurado, 0)} apurado`,
+    .on('pointermove', (ev, r) => tip.show(ev, [`${r.nome} · ${lx.pctAp(r.pct_apurado)} apurado`,
       `${r.nome_A}: ${lx.pct(r.A_media)} (${lx.pct(r.A_p05)} a ${lx.pct(r.A_p95)})`, `chance de ${r.nome_A}: ${lx.pct(100 * r.prob_A, 0)}`]))
     .on('pointerleave', () => tip.hide());
 };
@@ -593,7 +594,7 @@ lx.mapa = (box, rows) => {
   }
   function dica(ev, r) {
       if (!r) return;
-      tip.show(ev, [`${r.nome} · ${lx.pct(r.pct_apurado, 0)} apurado · ${lx.pct(r.pct_eleitorado)} do eleitorado`,
+      tip.show(ev, [`${r.nome} · ${lx.pctAp(r.pct_apurado)} apurado · ${lx.pct(r.pct_eleitorado)} do eleitorado`,
         `${r.nome_A} previsto: ${lx.pct(r.A_media)} (${lx.pct(r.A_p05)} a ${lx.pct(r.A_p95)})`,
         `${r.nome_A} apurado: ${r.pct_apurado > 0 ? lx.pct(r.parcial) : '—'}`]);
   }
@@ -626,14 +627,14 @@ lx.desenhaGrupos = () => {
   sec.style.setProperty('--lx-a', inv ? '#2a78d6' : '');
   sec.style.setProperty('--lx-b', inv ? '#e34948' : '');
   if (!inv) { sec.style.removeProperty('--lx-a'); sec.style.removeProperty('--lx-b'); }
-  if (rows[0]) document.getElementById('nota-grupos').textContent = `% dos votos válidos de ${rows[0].nome_A}. Chance = fração das simulações em que ${rows[0].nome_A} passa de 50%.`;
+  if (rows[0]) document.getElementById('nota-grupos').textContent = `% dos votos válidos de ${rows[0].nome_A}. Chance = fração das simulações em que ${rows[0].nome_A} passa de 50%. Comparecimento previsto = estimativa do modelo para o comparecimento final (% do eleitorado), não o apurado.`;
   const ord = nivel === 'UF' ? [...rows].sort((a, b) => b.A_media - a.A_media) : rows;
   const temReal = rows.some((r) => r.real !== undefined && r.real !== null);
   const head = document.querySelector('#tabela-grupos thead tr');
   if (temReal && !head.querySelector('.lx-real')) { const th = document.createElement('th'); th.className = 'lx-real'; th.textContent = 'resultado real'; head.appendChild(th); }
   ord.forEach((r) => {
     const tr = document.createElement('tr');
-    [r.nome, lx.pct(r.pct_eleitorado), lx.pct(r.pct_apurado, 0), r.pct_apurado > 0 ? lx.pct(r.parcial) : '—', lx.pct(r.A_media), lx.pct(r.A_p05), lx.pct(r.A_p95),
+    [r.nome, lx.pct(r.pct_eleitorado), lx.pctAp(r.pct_apurado), r.pct_apurado > 0 ? lx.pct(r.parcial) : '—', lx.pct(r.A_media), lx.pct(r.A_p05), lx.pct(r.A_p95),
       lx.pct(100 * r.prob_A, 0), lx.pct(r.comparecimento), ...(temReal ? [lx.pct(r.real)] : [])].forEach((v) => { const td = document.createElement('td'); td.textContent = v; tr.appendChild(td); });
     tbody.appendChild(tr);
   });

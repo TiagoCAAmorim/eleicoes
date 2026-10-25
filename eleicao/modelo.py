@@ -81,6 +81,8 @@ class Config:
     sd_priori_brasil: float = 1.5     # desvio da priori (escala logit) no nível Brasil
     tau: float = 0.5                  # quanto cada nível pode se afastar do nível de cima
     s0_inicial: float = 0.03          # ruído entre municípios (fração do eleitorado)
+    s_parcial: float = 0.08           # desvio extra de um município parcialmente apurado: as seções que chegam
+                                      # primeiro vêm agrupadas (mesma zona/bairro), não são amostra aleatória
     choque_uf: float = 0.02           # choque comum por UF na margem A-B das unidades restantes
     escala_cov: float = 1.0           # inflação da covariância de Laplace (dependência espacial)
     rho_nacional: float = 0.5         # correlação entre grupos no sorteio dos parâmetros
@@ -171,14 +173,17 @@ def ajustar(df, X, Y, cfg: Config):
         d[3:6] = 0.0
         return d
 
+    # variância extra das parciais: proporcional ao que falta apurar no município (zero quando completo)
+    extra = (cfg.s_parcial ** 2 * np.clip(1 - df["f"].values, 0, 1))[:, None]
+    sx = lambda s, sel: np.sqrt(s ** 2 + extra[sel])  # noqa: E731
     grupos = {}
-    mu, cov = _ajustar(X[ok], Y[ok], Ew[ok], s0, theta0, sd0)
+    mu, cov = _ajustar(X[ok], Y[ok], Ew[ok], sx(s0, ok), theta0, sd0)
     if ok.sum() > 30:
         res = Y[ok] - X[ok] @ matriz(mu)
         p = np.clip(X[ok] @ matriz(mu), 1e-4, 1)
-        excesso = (res ** 2 - p * (1 - p) / np.maximum(Ew[ok], 1)[:, None]).mean()
+        excesso = (res ** 2 - p * (1 - p) / np.maximum(Ew[ok], 1)[:, None] - extra[ok]).mean()
         s0 = float(np.sqrt(max(excesso, 0.005 ** 2)))
-        mu, cov = _ajustar(X[ok], Y[ok], Ew[ok], s0, theta0, sd0)
+        mu, cov = _ajustar(X[ok], Y[ok], Ew[ok], sx(s0, ok), theta0, sd0)
     grupos[("brasil", "Brasil")] = (mu, cov * cfg.escala_cov)
     pais = {"regiao": "brasil", "uf": "regiao", "uf_porte": "uf"}
     for nivel in cfg.niveis:
@@ -188,7 +193,7 @@ def ajustar(df, X, Y, cfg: Config):
             pmu = pmu + desvio(nivel, nome, pais[nivel], pai_nome)
             psd = np.sqrt(cfg.tau ** 2 + np.diag(pcov))
             sel = idx[ok[idx]]
-            m, c = _ajustar(X[sel], Y[sel], Ew[sel], s0, pmu, psd)
+            m, c = _ajustar(X[sel], Y[sel], Ew[sel], sx(s0, sel), pmu, psd)
             grupos[(nivel, nome)] = (m, c * (cfg.escala_cov if len(sel) else 1.0))
     ultimo = cfg.niveis[-1] if cfg.niveis else "brasil"
     folhas = sorted(df[ultimo].unique())
