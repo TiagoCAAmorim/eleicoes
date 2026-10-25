@@ -28,3 +28,8 @@ A página ganhou um contador de acessos (imagem de hits.sh no canto inferior dir
 1. `git pull --rebase` e reinicie o loop (`eleicao/web.py` mudou e só é lido quando o loop começa).
 2. Depois da próxima publicação, confirme que `curl -sI "https://hits.sh/tiagocaamorim.github.io/eleicoes_2026.svg"`
    responde 200 e que o `index.html` do site contém `lx-contador`. Registre em `respostas.md`.
+
+## P4 — acento em "Flávio" (antes das 17:00 se possível)
+
+O TSE publica o nome sem acento; `run.py` agora corrige para "Flávio". `git pull --rebase`, reinicie o loop e confirme
+no site que aparece "Flávio" no placar e no seletor.

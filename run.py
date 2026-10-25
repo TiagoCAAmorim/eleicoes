@@ -156,6 +156,7 @@ def rodada(args):
         json.dump({uf: st for uf, st in ufs_agora.items() if uf in completos}, f)
     df = montar(munis, t1, t2)
     nomes = [br["nomes"].get("13", "Lula").title(), br["nomes"].get("22", "Flávio Bolsonaro").title()]
+    nomes = [n.replace("Flavio", "Flávio") for n in nomes]  # o TSE publica o nome de urna sem acento
     res = prever(df, nomes)
     hora = _hora_tse(br)
     if br["st"] == 0:
