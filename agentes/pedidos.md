@@ -71,3 +71,8 @@ dicionario.md, baixar_ibge.py) no computador dele. O remoto precisa dela para a 
 2. No worktree das respostas (`../../eleicao-respostas`, branch `eleicao-agente-local`), copie a pasta inteira para
    `ibge/` e faça commit `agente-local: P8 base IBGE` + push. Não precisa reiniciar o loop.
 3. Registre em `respostas.md` o caminho de origem e o número de linhas do CSV.
+
+## P8 — barra de seções apuradas no topo
+
+O cabeçalho ganhou uma barra de progresso com o % de seções apuradas. `git pull --rebase`, reinicie o loop entre duas
+rodadas e confirme que o `index.html` publicado contém `id="progresso"`. Registre em `respostas.md`.

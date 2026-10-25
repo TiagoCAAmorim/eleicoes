@@ -36,6 +36,11 @@
 .lx-grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); gap: var(--cds-gap-md); }
 .lx-sub-h { font-size: var(--cds-font-size-body); font-weight: var(--cds-font-weight-medium); margin: var(--cds-gap-md) 0 0; }
 .lx-imgs { margin: 0; padding-left: 1.1em; line-height: 1.7; }
+.lx-prog { max-width: 640px; margin: var(--cds-gap-sm) 0 var(--cds-gap-xs); }
+.lx-prog-rot { display: flex; justify-content: space-between; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); margin-bottom: 4px; }
+.lx-prog-rot b { color: var(--color-fg); font-weight: var(--cds-font-weight-medium); font-variant-numeric: tabular-nums; }
+.lx-prog-trilho { height: 10px; border-radius: 5px; background: var(--cds-chart-grid, #e4e3df); overflow: hidden; }
+.lx-prog-feito { height: 100%; width: 0; background: var(--color-fg); border-radius: 5px; transition: width var(--cds-dur-slow, .4s); }
 .lx-att { padding-left: 1.1em; margin: 0; }
 .lx-att li { margin-bottom: var(--cds-gap-xs); }
 .lx-att b { font-weight: var(--cds-font-weight-medium); font-variant-numeric: tabular-nums; }
@@ -54,6 +59,10 @@
   <header class="lx-head" id="topo">
     <h1>Previsão do 2º turno presidencial 2026</h1>
     <p class="lx-sub" id="resumo" data-source="previsao">—</p>
+    <div class="lx-prog" id="progresso" data-source="previsao">
+      <div class="lx-prog-rot"><span>Seções apuradas</span><b id="prog-pct">—</b></div>
+      <div class="lx-prog-trilho" role="progressbar" aria-label="Seções apuradas" aria-valuemin="0" aria-valuemax="100" id="prog-barra"><div class="lx-prog-feito" id="prog-feito"></div></div>
+    </div>
     <p class="lx-meta">Projeto pessoal, sem filiação partidária. Estimativa estatística, não é resultado oficial. <a href="#sobre">Veja o aviso e a metodologia.</a></p>
     <p class="lx-meta" id="ultima-att" hidden></p>
   </header>
@@ -277,6 +286,10 @@ dash.onData(() => {
   if (prev.status !== 'ok') { resumo.textContent = '—'; return; }
   const br = prev.data.find((x) => x.nivel === 'Brasil');
   if (!br) { resumo.textContent = '—'; return; }
+  const pct = Math.max(0, Math.min(100, +br.pct_secoes || 0));
+  document.getElementById('prog-pct').textContent = lx.pct(pct, pct < 10 ? 2 : 1);
+  document.getElementById('prog-feito').style.width = pct + '%';
+  document.getElementById('prog-barra').setAttribute('aria-valuenow', pct.toFixed(2));
   if (!(br.pct_secoes > 0)) {
     resumo.textContent = `Apuração ainda não começou.` + (br.proxima_txt ? ` Primeira atualização com votos prevista para ${br.proxima_txt} (horário de Brasília).` : '');
     return;
