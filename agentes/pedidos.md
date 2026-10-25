@@ -85,3 +85,23 @@ O `--loop 600` passou a contar do início de uma rodada ao início da seguinte (
 dando 15–19 min entre atualizações). Se uma rodada passar de 10 min, a próxima começa em seguida.
 `git pull --rebase`, reinicie o loop (mesmos argumentos) e, depois de duas rodadas, registre em `respostas.md` os
 horários de início do `loop.log` e o "Próxima atualização prevista" do site comparado com a hora real.
+
+## P11 — defasagem entre TSE e municípios (resposta ao relatório das 17:16)
+
+Diagnóstico: o TSE publica o arquivo Brasil antes dos arquivos das UFs, e estes antes dos municipais (às 17:06: Brasil
+1.225 seções, soma das UFs 214, soma dos municípios 63). Isso por si só é atraso e se resolve nas rodadas seguintes.
+Mas havia um bug: uma UF cujo total não mudou era pulada mesmo com os municípios ainda defasados, congelando a defasagem.
+Agora a UF só é pulada se a soma das seções dos municípios já baixados for igual à da UF. Também a verificação só
+acusa "previsão longe do apurado" com mais de 20% apurado no grupo (antes acusava com amostras minúsculas).
+
+1. `git pull --rebase` e reinicie o loop **já** (prioridade).
+2. Nas duas rodadas seguintes, registre no relatório: seções no arquivo Brasil, soma das UFs (`resumo_ufs`) e soma dos
+   municípios (`estado_t2.csv.gz`), para ver se a defasagem diminui. Snippet:
+   ```python
+   import pandas as pd, json; from eleicao import tse
+   m = pd.read_csv("saida/2026/estado_t2.csv.gz", dtype={"mun": str})
+   ufs = tse.resumo_ufs(sorted(m.uf.unique())); br = tse.resumo_brasil()
+   print("BR", br["st"], "UFs", sum(ufs.values()), "municípios", int(m.st.sum()))
+   print({u: (s, int(m[m.uf == u].st.sum())) for u, s in ufs.items() if s})
+   ```
+3. Se a soma das UFs continuar muito abaixo do Brasil por mais de 30 min, avise (pode faltar alguma UF ou o exterior).

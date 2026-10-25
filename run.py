@@ -147,7 +147,10 @@ def rodada(args):
     ufs_path = os.path.join(args.saida, "estado_ufs.json")
     ufs_antes = json.load(open(ufs_path)) if os.path.exists(ufs_path) and cache is not None else {}
     ufs_agora = tse.resumo_ufs(sorted(munis["uf"].unique()), args.t2, args.ciclo)
-    pular = [uf for uf, st in ufs_agora.items() if ufs_antes.get(uf) == st]
+    # ...mas só se os arquivos dos municípios já alcançaram o total da UF: o TSE publica o arquivo da UF antes
+    # dos municipais, e pular uma UF com municípios defasados congelaria a defasagem
+    st_mun = cache.groupby("uf")["st"].sum().to_dict() if cache is not None and len(cache) else {}
+    pular = [uf for uf, st in ufs_agora.items() if ufs_antes.get(uf) == st and st_mun.get(uf) == st]
     t2 = tse.baixar_municipios(args.t2, munis, cache=cache, ciclo=args.ciclo, pular_ufs=pular,
                                prazo=time.time() + args.prazo)
     falhas = t2.attrs.get("ufs_falha", [])
@@ -160,6 +163,10 @@ def rodada(args):
     nomes = [br["nomes"].get("13", "Lula").title(), br["nomes"].get("22", "Flávio Bolsonaro").title()]
     nomes = [n.replace("Flavio", "Flávio") for n in nomes]  # o TSE publica o nome de urna sem acento
     res = prever(df, nomes)
+    if br["A"] + br["B"] > 0:
+        # "apurado" do Brasil igual ao do TSE (os arquivos municipais saem com atraso em relação ao total nacional)
+        res["parcial_A"] = 100 * br["A"] / (br["A"] + br["B"])
+        res["grupos"]["Brasil"]["Brasil"]["parcial"] = res["parcial_A"]
     hora = _hora_tse(br)
     if br["st"] == 0:
         # antes da apuração o arquivo do TSE traz a data da carga (dia anterior): a estimativa inicial

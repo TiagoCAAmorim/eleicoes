@@ -93,7 +93,8 @@ def checar_previsao(rel, saida):
                     probs.append(f"{rot}: votos previstos de {c} menores que os apurados")
             if g["pct_apurado"] >= 99.9 and g["parcial"] == g["parcial"] and abs(g["A_media"] - g["parcial"]) > 0.15:
                 probs.append(f"{rot}: 100% apurado mas previsão {g['A_media']:.2f} ≠ apurado {g['parcial']:.2f}")
-            if g["pct_apurado"] > 0 and g["parcial"] == g["parcial"] and abs(g["A_media"] - g["parcial"]) > 15:
+            # com pouco apurado a diferença pode ser grande (seções que chegam primeiro não são representativas)
+            if g["pct_apurado"] > 20 and g["parcial"] == g["parcial"] and abs(g["A_media"] - g["parcial"]) > 10:
                 probs.append(f"{rot}: previsão {g['A_media']:.1f} muito longe do apurado {g['parcial']:.1f}")
     br = res["grupos"]["Brasil"]["Brasil"]
     soma_uf = sum(g["eleitores"] for g in res["grupos"]["UF"].values())
