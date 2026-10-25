@@ -33,6 +33,11 @@ plt.rcParams.update({
 })
 
 
+def curto(nome):
+    """Nome curto para tabelas e gráficos ("Flávio Bolsonaro" -> "Flávio"); títulos usam o nome completo."""
+    return nome.split()[0] if nome else nome
+
+
 def _pct(x, casas=1):
     return f"{x:.{casas}f}%".replace(".", ",")
 
@@ -40,7 +45,7 @@ def _pct(x, casas=1):
 def _linha_tempo(ax, hist, nomes):
     h = hist.copy()
     h["t"] = pd.to_datetime(h["hora"], utc=True).dt.tz_convert("America/Sao_Paulo").dt.tz_localize(None)
-    a, b = nomes
+    a, b = curto(nomes[0]), curto(nomes[1])
     ax.fill_between(h["t"], h["A_p05"], h["A_p95"], color=COR_A, alpha=0.18, lw=0)
     ax.fill_between(h["t"], 100 - h["A_p95"], 100 - h["A_p05"], color=COR_B, alpha=0.18, lw=0)
     ax.plot(h["t"], h["A_media"], color=COR_A, lw=2, marker="o", ms=4, label=f"{a} (previsão)")
@@ -99,11 +104,11 @@ def imagem_principal(res, hist, caminho):
             if not (nivel == "Porte" and nome == "Exterior"):  # mesma linha da região Exterior
                 linhas.append((nome, g))
     y = 0.39
-    fig.text(0.05, y, f"Previsão por região e porte da cidade (% válidos de {a})", fontsize=11, color=TINTA,
+    fig.text(0.05, y, f"Previsão por região e porte da cidade (% válidos de {curto(a)})", fontsize=11, color=TINTA,
              weight="bold")
     y -= 0.03
     fig.text(0.05, y, "", fontsize=9)
-    cab = ["", "apurado", f"{a} previsto", "intervalo 90%", f"chance {a}"]
+    cab = ["", "apurado", f"{curto(a)} previsto", "intervalo 90%", f"chance {curto(a)}"]
     xs = [0.05, 0.40, 0.53, 0.68, 0.86]
     for xx, c in zip(xs, cab):
         fig.text(xx, y, c, fontsize=8.5, color=TINTA2)
@@ -151,7 +156,7 @@ def imagem_estados(res, caminho):
     for ax, (titulo, itens, rot) in zip(axs, blocos):
         _intervalos(ax, itens, rot)
         ax.set_title(titulo, loc="left", fontsize=11, color=TINTA, weight="bold")
-    axs[-1].set_xlabel(f"% dos votos válidos para {a} (ponto = previsão, barra = intervalo 90%, | = apurado)")
+    axs[-1].set_xlabel(f"% dos votos válidos para {curto(a)} (ponto = previsão, barra = intervalo 90%, | = apurado)")
     fig.text(0.05, 0.965, f"Previsão por região, porte e estado · {a} x {b}", fontsize=16, weight="bold", color=TINTA)
     fig.text(0.05, 0.945, f"Atualizado {res['hora_txt']} · {_pct(res['pct_secoes'], 2)} das seções apuradas",
              fontsize=10, color=TINTA2)
@@ -190,7 +195,7 @@ def _tabela_transf(transf):
 def pagina_html(res, img_principal, img_estados, caminho):
     a, b = res["nomes"]
     blocos = "".join(f"<h2>Por {html.escape(nivel.lower())}</h2>"
-                     f"{_tabela(g, a)}"
+                     f"{_tabela(g, curto(a))}"
                      for nivel, g in res["grupos"].items() if nivel != "Brasil")
     doc = f"""<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -271,7 +276,7 @@ def dados_web(res, hist, pasta):
                                                        "comparecimento", "pct_eleitorado"]},
                          **{k: round(g[k]) for k in ["eleitores", "votos_A_apurado", "votos_B_apurado",
                                                       "votos_A_previsto", "votos_B_previsto"] if k in g},
-                         "nome_A": a, "nome_B": b, "hora_txt": res["hora_txt"], "proxima_txt": res.get("proxima_txt", ""), "pct_secoes": num(res["pct_secoes"]),
+                         "nome_A": curto(a), "nome_B": curto(b), "nome_A_completo": a, "nome_B_completo": b, "hora_txt": res["hora_txt"], "proxima_txt": res.get("proxima_txt", ""), "pct_secoes": num(res["pct_secoes"]),
                          **({"real": num(g["real"])} if "real" in g else {})})
     transf = [{"grupo": g, "transferencia": t, "media": num(v[0]), "p05": num(v[1]), "p95": num(v[2])}
               for g, d in res.get("transferencias", {}).items() for t, v in d.items()]

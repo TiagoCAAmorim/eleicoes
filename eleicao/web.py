@@ -94,7 +94,7 @@ def gerar_site(saida, pasta_site, titulo="Previsão do 2º turno presidencial 20
     og = "Previsão estatística da apuração do 2º turno a partir dos parciais do TSE."
     if br:
         n = lambda x: f"{x:.1f}".replace(".", ",")  # noqa: E731
-        og = (f"{br['nome_A']} {n(br['A_media'])}% x {br['nome_B']} {n(100 - br['A_media'])}% com "
+        og = (f"{br.get('nome_A_completo', br['nome_A'])} {n(br['A_media'])}% x {br.get('nome_B_completo', br['nome_B'])} {n(100 - br['A_media'])}% com "
               f"{n(br['pct_secoes'])}% apurado ({br['hora_txt']}). Estimativa, não é resultado oficial.")
     with open(os.path.join(AQUI, "painel_web.html"), encoding="utf-8") as f:
         corpo = f.read().replace("Previsão do 2º turno presidencial 2026", titulo)

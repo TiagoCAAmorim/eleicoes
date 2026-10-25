@@ -57,7 +57,7 @@ def prever(df, nomes, cfg=None):
         "nomes": list(nomes),
         "grupos": grupos,
         "parcial_A": float(100 * va / max(va + vb, 1)) if va + vb else 50.0,
-        "transferencias": _transferencias(aj, cfg, nomes),
+        "transferencias": _transferencias(aj, cfg, [n.split()[0] for n in nomes]),  # nomes curtos nas tabelas
         "s0": aj.s0,
         "_municipios": mapa_mun.tabela(df, final),  # não vai para o JSON
     }

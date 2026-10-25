@@ -205,8 +205,8 @@ dash.calc('placar', {
     if (!r) return [];
     const apurado = r.pct_secoes > 0 ? r.parcial : null;
     return [
-      { lado: 'A', candidato: r.nome_A, media: r.A_media, p05: r.A_p05, p95: r.A_p95, chance: r.prob_A, apurado },
-      { lado: 'B', candidato: r.nome_B, media: 100 - r.A_media, p05: 100 - r.A_p95, p95: 100 - r.A_p05, chance: 1 - r.prob_A,
+      { lado: 'A', candidato: r.nome_A_completo || r.nome_A, media: r.A_media, p05: r.A_p05, p95: r.A_p95, chance: r.prob_A, apurado },
+      { lado: 'B', candidato: r.nome_B_completo || r.nome_B, media: 100 - r.A_media, p05: 100 - r.A_p95, p95: 100 - r.A_p05, chance: 1 - r.prob_A,
         apurado: apurado === null ? null : 100 - apurado },
     ];
   },
@@ -265,7 +265,7 @@ dash.onData(() => {
     resumo.textContent = `Apuração ainda não começou.` + (br.proxima_txt ? ` Primeira atualização com votos prevista para ${br.proxima_txt} (horário de Brasília).` : '');
     return;
   }
-  const lider = br.A_media >= 50 ? br.nome_A : br.nome_B;
+  const lider = br.A_media >= 50 ? (br.nome_A_completo || br.nome_A) : (br.nome_B_completo || br.nome_B);
   const chance = Math.max(br.prob_A, 1 - br.prob_A);
   resumo.textContent = `${lider} tem ${lx.pct(100 * chance, 0)} de chance de vencer, com ${lx.pct(br.pct_secoes, 2)} das seções apuradas. Atualizado ${br.hora_txt} (horário de Brasília).` +
     (br.proxima_txt ? ` Próxima atualização prevista: ${br.proxima_txt}.` : '');
