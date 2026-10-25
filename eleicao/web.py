@@ -74,6 +74,15 @@ RODAPE = """
 </div></body></html>
 """
 
+# contador de acessos (hits.sh, sem cadastro nem cookies): imagem discreta no canto inferior direito
+CONTADOR = """
+<a class="lx-contador" href="https://hits.sh/" title="Contador de acessos (hits.sh)" target="_blank" rel="noopener">
+<img src="https://hits.sh/tiagocaamorim.github.io/eleicoes_2026.svg?style=flat-square&amp;label=acessos&amp;color=8a8985&amp;labelColor=5f5e5a"
+ alt="contador de acessos" height="16" loading="lazy"></a>
+<style>.lx-contador{position:fixed;right:8px;bottom:8px;opacity:.55;line-height:0;z-index:5}
+.lx-contador:hover{opacity:1}@media print{.lx-contador{display:none}}</style>
+"""
+
 
 def gerar_site(saida, pasta_site, titulo="Previsão do 2º turno presidencial 2026", artefato=False):
     """Monta index.html + imagens em `pasta_site` a partir de saida/<ano>."""
@@ -101,7 +110,8 @@ def gerar_site(saida, pasta_site, titulo="Previsão do 2º turno presidencial 20
     js = json.dumps(dados, ensure_ascii=False).replace("</", "<\\/")
     os.makedirs(pasta_site, exist_ok=True)
     with open(os.path.join(pasta_site, "index.html"), "w", encoding="utf-8") as f:
-        doc = CABECALHO.format(dados=js, og=og.replace('"', "'"), titulo=titulo) + corpo + RODAPE
+        doc = (CABECALHO.format(dados=js, og=og.replace('"', "'"), titulo=titulo) + corpo
+               + ("" if artefato else CONTADOR) + RODAPE)  # o teste não conta acessos do site
         if artefato:  # página sem <html>/<head>/<body> próprios (a plataforma adiciona)
             for tag in ['<html lang="pt-BR"><head>', "</head><body>", "</body></html>"]:
                 doc = doc.replace(tag, "")

@@ -20,3 +20,11 @@ e o histórico guarda só um ponto pré-apuração. A verificação deixou de ac
 1. `git pull --rebase` e reinicie o loop (o código de `run.py` mudou).
 2. Depois da primeira rodada, confirme que `saida/2026/historico.csv` tem uma única linha com hora 2026-10-25T16:59
    e que o site mostra "Atualizado 25/10 16:59". Registre em `respostas.md`.
+
+## P3 — contador de acessos
+
+A página ganhou um contador de acessos (imagem de hits.sh no canto inferior direito).
+
+1. `git pull --rebase` e reinicie o loop (`eleicao/web.py` mudou e só é lido quando o loop começa).
+2. Depois da próxima publicação, confirme que `curl -sI "https://hits.sh/tiagocaamorim.github.io/eleicoes_2026.svg"`
+   responde 200 e que o `index.html` do site contém `lx-contador`. Registre em `respostas.md`.
