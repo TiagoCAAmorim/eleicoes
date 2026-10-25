@@ -43,3 +43,12 @@ No navegador do Tiago aparece só o link, sem a imagem. Investigue e responda lo
 2. No Playwright, abra o site e verifique se a imagem `.lx-contador img` carrega (`naturalWidth > 0`); registre erros
    de rede do console.
 3. `git pull --rebase` e reinicie o loop: agora, se a imagem falhar, o link some (em vez de aparecer vazio).
+
+## P6 — página de análises por município
+
+Nova página `analises.html` no site (busca de município e curiosidades), que lê o `dados_municipios.csv` publicado.
+Mudou `eleicao/web.py` (copia a página) e o cabeçalho do painel ganhou um link.
+
+1. `git pull --rebase` e reinicie o loop entre duas rodadas.
+2. Depois da próxima publicação, confirme que `<site>/analises.html` abre (HTTP 200), que no Playwright a busca encontra
+   um município (ex.: digite "campinas") e mostra o detalhe, e que não há erros de JS. Registre em `respostas.md`.
