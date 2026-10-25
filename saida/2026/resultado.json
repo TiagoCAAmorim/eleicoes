@@ -15,7 +15,13 @@
     "comparecimento": 77.55660610382459,
     "brancos_nulos": 5.893997776870026,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 158745502.0,
+    "pct_eleitorado": 100.0,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 56111120.60440187,
+    "votos_B_previsto": 59750739.77814217
    }
   },
   "Região": {
@@ -29,7 +35,13 @@
     "comparecimento": 78.54061714262626,
     "brancos_nulos": 4.352695956864044,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 13100856.0,
+    "pct_eleitorado": 8.25274154854479,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 4612019.883031798,
+    "votos_B_previsto": 5229691.83948769
    },
    "Nordeste": {
     "A_media": 65.82088817935613,
@@ -41,7 +53,13 @@
     "comparecimento": 79.86169290988514,
     "brancos_nulos": 5.863405572204014,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 43510858.0,
+    "pct_eleitorado": 27.409191096324733,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 21530318.094659623,
+    "votos_B_previsto": 11180936.580683365
    },
    "Centro-Oeste": {
     "A_media": 37.03430031443866,
@@ -53,7 +71,13 @@
     "comparecimento": 77.2871894385606,
     "brancos_nulos": 4.925496197751821,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 12001696.0,
+    "pct_eleitorado": 7.560337678103156,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 3265283.33256266,
+    "votos_B_previsto": 5553707.385484613
    },
    "Sudeste": {
     "A_media": 43.682329921443525,
@@ -65,7 +89,13 @@
     "comparecimento": 76.13312278991567,
     "brancos_nulos": 6.730338766091911,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 66344776.0,
+    "pct_eleitorado": 41.79316904361801,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 20577383.89579219,
+    "votos_B_previsto": 26533935.203623477
    },
    "Sul": {
     "A_media": 34.93939874509073,
@@ -77,7 +107,13 @@
     "comparecimento": 78.46769803668765,
     "brancos_nulos": 5.015202105296972,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 22870633.0,
+    "pct_eleitorado": 14.407106161659938,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 5955213.3688450605,
+    "votos_B_previsto": 11090960.052910715
    },
    "Exterior": {
     "A_media": 51.42293402671239,
@@ -89,7 +125,13 @@
     "comparecimento": 37.90189196355567,
     "brancos_nulos": 4.3364716482333785,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 916683.0,
+    "pct_eleitorado": 0.577454471749379,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 170902.0295105374,
+    "votos_B_previsto": 161508.71595230795
    }
   },
   "Porte": {
@@ -103,7 +145,13 @@
     "comparecimento": 77.66019162113837,
     "brancos_nulos": 6.324002612522654,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 36126138.0,
+    "pct_eleitorado": 22.75726716338709,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 12856278.608923916,
+    "votos_B_previsto": 13425333.095987815
    },
    "Grandes (>200 mil eleitores)": {
     "A_media": 43.672196814156095,
@@ -115,7 +163,13 @@
     "comparecimento": 77.71011202813327,
     "brancos_nulos": 6.577059727561382,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 26011082.0,
+    "pct_eleitorado": 16.38539780484615,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 8246083.72129006,
+    "votos_B_previsto": 10638050.26186381
    },
    "Médias (50-200 mil)": {
     "A_media": 44.26368382212703,
@@ -127,7 +181,13 @@
     "comparecimento": 78.19337971089529,
     "brancos_nulos": 5.825695484812907,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 35875933.0,
+    "pct_eleitorado": 22.59965324875788,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 11692783.137817558,
+    "votos_B_previsto": 14725785.663471252
    },
    "Pequenas (<50 mil)": {
     "A_media": 52.67173326406159,
@@ -139,7 +199,13 @@
     "comparecimento": 77.65308509610672,
     "brancos_nulos": 5.390454970237042,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 59815666.0,
+    "pct_eleitorado": 37.6802273112595,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 23145073.1068598,
+    "votos_B_previsto": 20800062.040866982
    },
    "Exterior": {
     "A_media": 51.42293402671239,
@@ -151,7 +217,13 @@
     "comparecimento": 37.90189196355567,
     "brancos_nulos": 4.3364716482333785,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 916683.0,
+    "pct_eleitorado": 0.577454471749379,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 170902.0295105374,
+    "votos_B_previsto": 161508.71595230795
    }
   },
   "UF": {
@@ -165,7 +237,13 @@
     "comparecimento": 75.13527191851993,
     "brancos_nulos": 4.954941742704826,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 613715.0,
+    "pct_eleitorado": 0.38660307994112486,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 138923.6752572495,
+    "votos_B_previsto": 299363.0759560381
    },
    "al": {
     "A_media": 56.59068007648285,
@@ -177,7 +255,13 @@
     "comparecimento": 76.98950650472223,
     "brancos_nulos": 6.856677718756738,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 2442081.0,
+    "pct_eleitorado": 1.5383623278976433,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 990963.7253101252,
+    "votos_B_previsto": 760280.2138345767
    },
    "am": {
     "A_media": 50.417882229286334,
@@ -189,7 +273,13 @@
     "comparecimento": 77.486577274153,
     "brancos_nulos": 3.863254717330343,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 2798661.0,
+    "pct_eleitorado": 1.7629860151880083,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 1051078.323435898,
+    "votos_B_previsto": 1033791.8939630811
    },
    "ap": {
     "A_media": 48.36601346619075,
@@ -201,7 +291,13 @@
     "comparecimento": 74.22671557314784,
     "brancos_nulos": 3.7930652659500788,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 576910.0,
+    "pct_eleitorado": 0.3634181710546986,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 199299.40798260306,
+    "votos_B_previsto": 212720.10325895686
    },
    "ba": {
     "A_media": 68.00935441616629,
@@ -213,7 +309,13 @@
     "comparecimento": 78.53743319821844,
     "brancos_nulos": 6.198577581449155,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 11312891.0,
+    "pct_eleitorado": 7.126432470508676,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 5667918.937016394,
+    "votos_B_previsto": 2666273.9389393544
    },
    "ce": {
     "A_media": 65.51468945695385,
@@ -225,7 +327,13 @@
     "comparecimento": 82.76549509940016,
     "brancos_nulos": 5.7434910355080175,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 6996521.0,
+    "pct_eleitorado": 4.40738220097726,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 3575679.7353844005,
+    "votos_B_previsto": 1882469.873666532
    },
    "df": {
     "A_media": 42.37955269737603,
@@ -237,7 +345,13 @@
     "comparecimento": 79.57510642346347,
     "brancos_nulos": 4.764695429858744,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 2258995.0,
+    "pct_eleitorado": 1.4230292962883446,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 725370.3970943966,
+    "votos_B_previsto": 986655.5405921168
    },
    "es": {
     "A_media": 41.364891383224936,
@@ -249,7 +363,13 @@
     "comparecimento": 76.89598526262512,
     "brancos_nulos": 5.416437857288331,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 2991515.0,
+    "pct_eleitorado": 1.8844722920086265,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 899973.2831454872,
+    "votos_B_previsto": 1275819.8482892595
    },
    "go": {
     "A_media": 37.418102537537905,
@@ -261,7 +381,13 @@
     "comparecimento": 76.74337510234726,
     "brancos_nulos": 5.9139801805078305,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 5080385.0,
+    "pct_eleitorado": 3.200333197472266,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 1372203.163891849,
+    "votos_B_previsto": 2296198.466944527
    },
    "ma": {
     "A_media": 65.81823228057637,
@@ -273,7 +399,13 @@
     "comparecimento": 78.14852835684563,
     "brancos_nulos": 4.380444343423415,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 5183049.0,
+    "pct_eleitorado": 3.265005266101965,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 2549162.3658462726,
+    "votos_B_previsto": 1323928.4167061802
    },
    "mg": {
     "A_media": 47.5205458420089,
@@ -285,7 +417,13 @@
     "comparecimento": 76.58376740962471,
     "brancos_nulos": 6.379474167513936,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 16372144.0,
+    "pct_eleitorado": 10.313453794741221,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 5578273.589333974,
+    "votos_B_previsto": 6160424.050312129
    },
    "ms": {
     "A_media": 37.52706748653941,
@@ -297,7 +435,13 @@
     "comparecimento": 75.23956265088695,
     "brancos_nulos": 4.303874565610353,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 2024437.0,
+    "pct_eleitorado": 1.2752720388890137,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 546940.1362911998,
+    "votos_B_previsto": 910702.4445072724
    },
    "mt": {
     "A_media": 31.345526870819295,
@@ -309,7 +453,13 @@
     "comparecimento": 77.9466907309015,
     "brancos_nulos": 3.6587989699894288,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 2637879.0,
+    "pct_eleitorado": 1.6617031454535323,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 620769.6352852144,
+    "votos_B_previsto": 1360150.9334406962
    },
    "pa": {
     "A_media": 51.8074951076498,
@@ -321,7 +471,13 @@
     "comparecimento": 79.66006260501457,
     "brancos_nulos": 4.8172919206076426,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 6262063.0,
+    "pct_eleitorado": 3.9447183832648056,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 2459650.647304249,
+    "votos_B_previsto": 2288437.1902329363
    },
    "pb": {
     "A_media": 63.57680635036663,
@@ -333,7 +489,13 @@
     "comparecimento": 80.82496935533761,
     "brancos_nulos": 7.145107595691093,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 3248434.0,
+    "pct_eleitorado": 2.0463156178119615,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 1549972.0210397078,
+    "votos_B_previsto": 887992.78832587
    },
    "pe": {
     "A_media": 65.8191778867694,
@@ -345,7 +507,13 @@
     "comparecimento": 80.52455140550552,
     "brancos_nulos": 6.0280930905070615,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 7223227.0,
+    "pct_eleitorado": 4.550193176497057,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 3597634.518340545,
+    "votos_B_previsto": 1868289.9667197613
    },
    "pi": {
     "A_media": 72.51676329711135,
@@ -357,7 +525,13 @@
     "comparecimento": 80.50193630532054,
     "brancos_nulos": 4.977430965634777,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 2704695.0,
+    "pct_eleitorado": 1.7037931569235896,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 1500358.174415693,
+    "votos_B_previsto": 568611.0587536101
    },
    "pr": {
     "A_media": 34.97841303063944,
@@ -369,7 +543,13 @@
     "comparecimento": 78.36400400720395,
     "brancos_nulos": 5.015134582796651,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 8613628.0,
+    "pct_eleitorado": 5.426061142822176,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 2242277.5079973927,
+    "votos_B_previsto": 4169266.7440557596
    },
    "rj": {
     "A_media": 42.899757700211424,
@@ -381,7 +561,13 @@
     "comparecimento": 75.1307484125987,
     "brancos_nulos": 6.0684948239314895,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 12857526.0,
+    "pct_eleitorado": 8.099458465286153,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 3892665.885651482,
+    "votos_B_previsto": 5181211.504169861
    },
    "rn": {
     "A_media": 61.8466255552025,
@@ -393,7 +579,13 @@
     "comparecimento": 79.68338400839747,
     "brancos_nulos": 5.401776887049641,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 2659867.0,
+    "pct_eleitorado": 1.6755542465700854,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 1240002.7380128766,
+    "votos_B_previsto": 765008.289075939
    },
    "ro": {
     "A_media": 28.660618791179623,
@@ -405,7 +597,13 @@
     "comparecimento": 78.36585957448135,
     "brancos_nulos": 3.2765320847436468,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 1265926.0,
+    "pct_eleitorado": 0.7974562958010615,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 274979.9775579977,
+    "votos_B_previsto": 684581.813164172
    },
    "rr": {
     "A_media": 25.697694264354826,
@@ -417,7 +615,13 @@
     "comparecimento": 77.6241946559051,
     "brancos_nulos": 3.128693685817035,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 401540.0,
+    "pct_eleitorado": 0.2529457496061841,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 77609.66808275001,
+    "votos_B_previsto": 224342.9387758566
    },
    "rs": {
     "A_media": 39.33035991155135,
@@ -429,7 +633,13 @@
     "comparecimento": 77.41511453108242,
     "brancos_nulos": 5.472148938423008,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 8522318.0,
+    "pct_eleitorado": 5.368541402829795,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 2452648.8971287194,
+    "votos_B_previsto": 3783896.6365669034
    },
    "sc": {
     "A_media": 28.65912064068315,
@@ -441,7 +651,13 @@
     "comparecimento": 80.18769306796344,
     "brancos_nulos": 4.359939272575877,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 5734687.0,
+    "pct_eleitorado": 3.612503616007967,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 1260286.963718948,
+    "votos_B_previsto": 3137796.6722880537
    },
    "se": {
     "A_media": 65.21316188853817,
@@ -453,7 +669,13 @@
     "comparecimento": 80.65689060674721,
     "brancos_nulos": 6.185253326738941,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 1740093.0,
+    "pct_eleitorado": 1.096152633036494,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 858625.8792936094,
+    "votos_B_previsto": 458082.03466154117
    },
    "sp": {
     "A_media": 42.31866920463159,
@@ -465,7 +687,13 @@
     "comparecimento": 76.22771780186918,
     "brancos_nulos": 7.2628158289843485,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 34123591.0,
+    "pct_eleitorado": 21.495784491582004,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 10206471.137661248,
+    "votos_B_previsto": 13916479.800852228
    },
    "to": {
     "A_media": 45.76121393321767,
@@ -477,7 +705,13 @@
     "comparecimento": 79.47773954255835,
     "brancos_nulos": 4.527635619070837,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 1182041.0,
+    "pct_eleitorado": 0.7446138536889064,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 410478.183411051,
+    "votos_B_previsto": 486454.82413664856
    },
    "zz": {
     "A_media": 51.42293402671239,
@@ -489,7 +723,13 @@
     "comparecimento": 37.90189196355567,
     "brancos_nulos": 4.3364716482333785,
     "pct_apurado": 0.0,
-    "parcial": NaN
+    "parcial": NaN,
+    "eleitores": 916683.0,
+    "pct_eleitorado": 0.577454471749379,
+    "votos_A_apurado": 0.0,
+    "votos_B_apurado": 0.0,
+    "votos_A_previsto": 170902.0295105374,
+    "votos_B_previsto": 161508.71595230795
    }
   }
  },
@@ -828,5 +1068,6 @@
  "s0": 0.03,
  "hora": "2026-10-24T19:19:13-03:00",
  "hora_txt": "24/10 19:19",
- "pct_secoes": 0.0
+ "pct_secoes": 0.0,
+ "proxima_txt": "~17:15"
 }
