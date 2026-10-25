@@ -34,7 +34,18 @@ def base_t1(munis, args):
     if os.path.exists(caminho):
         return pd.read_csv(caminho, dtype={"mun": str})
     print("baixando 1º turno por município (só na primeira vez)...", flush=True)
-    t1 = tse.baixar_municipios(args.t1, munis, ciclo=args.ciclo)
+    t1 = None
+    for tentativa in range(6):
+        t1 = tse.baixar_municipios(args.t1, munis, cache=t1, ciclo=args.ciclo, workers=6)
+        falta = len(munis) - len(t1)
+        print(f"1º turno: {len(t1)} municípios, faltam {falta}", flush=True)
+        if falta == 0:
+            break
+        # força novo download só do que faltou: o cache marca os já baixados como prontos
+        t1 = t1.assign(ts=t1["ts"].clip(lower=1), st=t1["ts"].clip(lower=1))
+        time.sleep(30)
+    if len(munis) - len(t1) > 0.005 * len(munis):
+        raise RuntimeError("1º turno incompleto; tente de novo")
     tse.salvar(t1, caminho)
     return t1
 
@@ -86,8 +97,19 @@ def rodada(args):
     estado = os.path.join(args.saida, "estado_t2.csv.gz")
     cache = pd.read_csv(estado, dtype={"mun": str}) if os.path.exists(estado) else None
     br = tse.resumo_brasil(args.t2, args.ciclo)
-    t2 = tse.baixar_municipios(args.t2, munis, cache=cache, ciclo=args.ciclo)
+    # UFs sem seções novas desde a última rodada não precisam ser baixadas de novo
+    ufs_path = os.path.join(args.saida, "estado_ufs.json")
+    ufs_antes = json.load(open(ufs_path)) if os.path.exists(ufs_path) and cache is not None else {}
+    ufs_agora = tse.resumo_ufs(sorted(munis["uf"].unique()), args.t2, args.ciclo)
+    pular = [uf for uf, st in ufs_agora.items() if ufs_antes.get(uf) == st]
+    t2 = tse.baixar_municipios(args.t2, munis, cache=cache, ciclo=args.ciclo, pular_ufs=pular,
+                               prazo=time.time() + args.prazo)
+    falhas = t2.attrs.get("ufs_falha", [])
     tse.salvar(t2, estado)
+    t2.attrs["ufs_falha"] = falhas
+    completos = (set(t2["uf"]) if len(t2) else set()) - set(t2.attrs.get("ufs_falha", []))
+    with open(ufs_path, "w") as f:
+        json.dump({uf: st for uf, st in ufs_agora.items() if uf in completos}, f)
     df = montar(munis, t1, t2)
     nomes = [br["nomes"].get("13", "Lula").title(), br["nomes"].get("22", "Flávio Bolsonaro").title()]
     res = prever(df, nomes)
@@ -129,6 +151,7 @@ def main():
     ap.add_argument("--ciclo", default=tse.CICLO)
     ap.add_argument("--t1", default=tse.ELEICAO_T1)
     ap.add_argument("--t2", default=tse.ELEICAO_T2)
+    ap.add_argument("--prazo", type=float, default=420, help="segundos máximos para baixar os municípios")
     ap.add_argument("--demo-2022", type=float, default=0)
     args = ap.parse_args()
     if args.demo_2022:

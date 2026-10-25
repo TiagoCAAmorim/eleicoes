@@ -1,0 +1,17 @@
+[
+ {
+  "ordem": "2022",
+  "erro_medio_abs": 0.1550167017544,
+  "cobertura90": 1.0
+ },
+ {
+  "ordem": "adversa",
+  "erro_medio_abs": 2.757903452856082,
+  "cobertura90": 0.027777777777777776
+ },
+ {
+  "ordem": "aleatoria",
+  "erro_medio_abs": 0.11520620773345848,
+  "cobertura90": 1.0
+ }
+]
