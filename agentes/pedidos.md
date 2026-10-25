@@ -61,3 +61,13 @@ O link para `analises.html` saiu do cabeçalho e virou uma seção própria, "An
 1. `git pull --rebase` e reinicie o loop entre duas rodadas (mudou `eleicao/painel_web.html` e `data/atualizacoes.json`).
 2. Depois da próxima publicação, confirme que o `index.html` publicado tem a seção (`grep -c 'id="analises"'`) e que
    o link `analises.html` responde HTTP 200. Registre em `respostas.md`.
+
+## P8 — subir a base do IBGE para o GitHub
+
+O Tiago montou com outro agente a base `indicadores-ibge/` (ibge_municipios.csv, README.md, fontes.json,
+dicionario.md, baixar_ibge.py) no computador dele. O remoto precisa dela para a página de importância dos indicadores.
+
+1. Ache a pasta (`find ~ -type d -name indicadores-ibge 2>/dev/null`; pergunte ao Tiago se houver mais de uma).
+2. No worktree das respostas (`../../eleicao-respostas`, branch `eleicao-agente-local`), copie a pasta inteira para
+   `ibge/` e faça commit `agente-local: P8 base IBGE` + push. Não precisa reiniciar o loop.
+3. Registre em `respostas.md` o caminho de origem e o número de linhas do CSV.
