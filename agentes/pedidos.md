@@ -168,3 +168,16 @@ horário as rodadas começam a cada 20 min (a última antes das 19:00 encurta pa
 1. `git pull --rebase` e reinicie o loop entre duas rodadas.
 2. Registre em `respostas.md` os horários de início das rodadas no `loop.log` antes e depois das 19:00 e o
    "Próxima atualização prevista" do site.
+
+## P18 — vigiar o TSE a cada 2 min e rodar só quando houver dado novo (pedido do Tiago, prioridade)
+
+Mudou `run.py`: novo `--vigiar` (padrão 120 s). Com `--loop`, o loop agora consulta **só o arquivo Brasil** a cada
+2 min (1 requisição) e roda o modelo e publica quando a hora do arquivo muda. Se os municípios ainda estiverem atrás
+do total nacional, repete a rodada completa a cada `--loop` s (600) mesmo sem mudança, para alcançar o TSE.
+O esquema de 20/10 min do P17 deixa de valer (`--vigiar 0` volta a ele). A página passou a buscar dados a cada 2 min
+(`eleicao/web.py`) e diz "A página atualiza assim que o TSE publicar dados novos". Também `data/atualizacoes.json`.
+
+1. `git pull --rebase` e reinicie o loop **já**, com os mesmos argumentos.
+2. Confirme no `loop.log` que entre as rodadas não há outras linhas (as consultas de 2 min são silenciosas) e que,
+   quando o TSE publicar, aparece "TSE <hora>: dado novo, rodando" seguido da rodada e de "site publicado".
+3. Se aparecer HTTP 429 do TSE, avise no `status.md` (dá para aumentar `--vigiar`).

@@ -26,5 +26,9 @@
  {
   "quando": "25/10/2026 18:05",
   "texto": "Transição gradual dos parâmetros: as transferências de votos usadas para prever os locais ainda não apurados passam das estimativas iniciais (2022 e pesquisas) para as estimadas com a apuração conforme o % do eleitorado apurado no país, devagar no começo e mais rápido perto de 25%, quando passam a ser só as estimadas. Assim, poucas seções pouco representativas não mudam a previsão do país inteiro. O resultado já apurado de cada município continua sendo usado nele mesmo."
+ },
+ {
+  "quando": "25/10/2026 19:20",
+  "texto": "Atualização mais rápida: o arquivo do TSE passa a ser consultado a cada 2 minutos, e a previsão é refeita e publicada assim que há dados novos (antes, a cada 10 ou 20 minutos). A página também busca os números novos a cada 2 minutos."
  }
 ]

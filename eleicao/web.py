@@ -65,7 +65,7 @@ window.__DADOS = {dados};
   const run = () => cbs.forEach((f) => {{ try {{ f(); }} catch (e) {{ console.error(e); }} }});
   document.addEventListener('DOMContentLoaded', run);
   let t; window.addEventListener('resize', () => {{ clearTimeout(t); t = setTimeout(run, 150); }});
-  // atualização automática: a cada 10 min busca a página publicada, extrai os dados embutidos e redesenha sem
+  // atualização automática: a cada 2 min busca a página publicada, extrai os dados embutidos e redesenha sem
   // recarregar (mantém as abas escolhidas e não conta acesso novo); só redesenha se a rodada mudou
   const chave = (d) => JSON.stringify(((d.previsao || []).find((r) => r.nivel === 'Brasil') || {{}}).hora_txt || '');
   let ultima = Date.now();
@@ -82,8 +82,8 @@ window.__DADOS = {dados};
     }} catch (e) {{ console.warn('atualização automática falhou', e); }}
   }}
   if (location.protocol.startsWith('http')) {{
-    setInterval(() => {{ if (!document.hidden) atualizar(); }}, 10 * 60 * 1000);
-    document.addEventListener('visibilitychange', () => {{ if (!document.hidden && Date.now() - ultima > 10 * 60 * 1000) atualizar(); }});
+    setInterval(() => {{ if (!document.hidden) atualizar(); }}, 2 * 60 * 1000);
+    document.addEventListener('visibilitychange', () => {{ if (!document.hidden && Date.now() - ultima > 2 * 60 * 1000) atualizar(); }});
   }}
 }})();
 </script>

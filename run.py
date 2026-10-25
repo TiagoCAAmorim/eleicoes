@@ -188,11 +188,17 @@ def rodada(args):
     res["hora"] = hora.isoformat()
     res["hora_txt"] = hora.strftime("%d/%m %H:%M")
     res["pct_secoes"] = 100 * br["st"] / max(br["ts"], 1)
-    res["proxima_txt"] = _proxima(res["pct_secoes"], _intervalo(args, t0), t0)
+    if args.vigiar and br["st"] > 0:
+        res["proxima_txt"] = (f"atualiza assim que o TSE publicar dados novos "
+                              f"(verificação a cada {max(1, round(args.vigiar / 60))} min)")
+    else:
+        res["proxima_txt"] = _proxima(res["pct_secoes"], _intervalo(args, t0), t0)
     gerar_saidas(res, args.saida)
     b = res["grupos"]["Brasil"]["Brasil"]
     print(f"{res['hora_txt']} {res['pct_secoes']:.2f}% seções | {nomes[0]} {b['A_media']:.2f}% "
           f"[{b['A_p05']:.2f}, {b['A_p95']:.2f}] P={b['prob_A']:.3f} | {time.time() - t0:.0f}s", flush=True)
+    # (hora do arquivo Brasil, municípios ainda atrás do total nacional?)
+    return f"{br['dg']} {br['hg']}", int(t2["st"].sum()) < br["st"] if len(t2) else br["st"] > 0
 
 
 def demo_2022(args):
@@ -235,9 +241,50 @@ def demo_2022(args):
                            titulo="Teste: apuração simulada de 2022", artefato=args.artefato)
 
 
+def rodada_completa(args):
+    """Rodada + publicação. Devolve o que `rodada` devolve, ou None se falhou."""
+    try:
+        out = rodada(args)
+        if args.git_push:
+            publicar_git(args)
+        if args.publicar:
+            from eleicao import web
+            if web.publicar(args.saida, args.publicar):
+                print("site publicado", flush=True)
+        return out
+    except Exception as ex:  # noqa: BLE001
+        print("erro na rodada:", repr(ex), flush=True)
+        return None
+
+
+def vigiar(args):
+    """Consulta só o arquivo Brasil do TSE a cada `--vigiar` s; roda o modelo e publica quando ele muda.
+    Enquanto os arquivos municipais estiverem atrás do total nacional, repete a rodada a cada `--loop` s
+    mesmo sem mudança no Brasil (o TSE publica os municipais com atraso)."""
+    out = rodada_completa(args)
+    ultima, atrasado, quando = (out or (None, True)) + (time.time(),)
+    while True:
+        time.sleep(args.vigiar)
+        try:
+            br = tse.resumo_brasil(args.t2, args.ciclo)
+        except Exception as ex:  # noqa: BLE001
+            print("erro ao consultar o TSE:", repr(ex), flush=True)
+            continue
+        hora = f"{br['dg']} {br['hg']}"
+        if hora != ultima or (atrasado and time.time() - quando >= args.loop):
+            print(f"TSE {hora}: {'dado novo' if hora != ultima else 'municípios atrasados'}, rodando", flush=True)
+            out = rodada_completa(args)
+            quando = time.time()
+            if out:
+                ultima, atrasado = out
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--loop", type=int, default=0, help="segundos entre rodadas (0 = uma rodada)")
+    ap.add_argument("--vigiar", type=int, default=120,
+                    help="segundos entre consultas ao arquivo Brasil do TSE; a rodada completa só roda quando ele "
+                         "muda (ou a cada --loop enquanto os municípios estiverem atrás do total). 0 = usa --loop")
     ap.add_argument("--lento", type=int, default=1200, help="segundos entre rodadas até --lento-ate (0 = desliga)")
     ap.add_argument("--lento-ate", default="19:00", help="horário de Brasília em que volta ao intervalo de --loop")
     ap.add_argument("--saida", default=os.path.join(AQUI, "saida/2026"))
@@ -254,6 +301,9 @@ def main():
     args = ap.parse_args()
     if args.demo_2022:
         demo_2022(args)
+        return
+    if args.loop and args.vigiar:
+        vigiar(args)
         return
     while True:
         inicio = time.time()  # o intervalo conta do início de uma rodada ao início da seguinte

@@ -217,7 +217,7 @@
       <li>No início da apuração há poucos municípios completos e a incerteza é maior.</li>
       <li>Votos do exterior e de municípios sem dados parciais dependem só da estimativa regional.</li>
     </ul>
-    <p class="lx-meta">Dados: TSE, resultados.tse.jus.br. Atualizado a cada 10 minutos durante a apuração; a página busca os números novos sozinha, sem precisar recarregar. O contador de acessos no canto da página usa o serviço hits.sh, que não usa cookies.</p>
+    <p class="lx-meta">Dados: TSE, resultados.tse.jus.br. Durante a apuração, o arquivo do TSE é consultado a cada 2 minutos e a previsão é refeita quando há dados novos; a página busca os números novos sozinha, sem precisar recarregar. O contador de acessos no canto da página usa o serviço hits.sh, que não usa cookies.</p>
   </section>
 </div>
 
@@ -299,7 +299,7 @@ dash.onData(() => {
   const lider = br.A_media >= 50 ? (br.nome_A_completo || br.nome_A) : (br.nome_B_completo || br.nome_B);
   const chance = Math.max(br.prob_A, 1 - br.prob_A);
   resumo.textContent = `${lider} tem ${lx.pct(100 * chance, 0)} de chance de vencer, com ${lx.pct(br.pct_secoes, 2)} das seções apuradas. Atualizado ${br.hora_txt} (horário de Brasília).` +
-    (br.proxima_txt ? ` Próxima atualização prevista: ${br.proxima_txt}.` : '');
+    (br.proxima_txt ? (br.proxima_txt.startsWith('~') ? ` Próxima atualização prevista: ${br.proxima_txt}.` : ` A página ${br.proxima_txt}.`) : '');
 });
 </script>
 
