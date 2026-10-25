@@ -30,5 +30,9 @@
  {
   "quando": "25/10/2026 19:20",
   "texto": "Atualização mais rápida: o arquivo do TSE passa a ser consultado a cada 2 minutos, e a previsão é refeita e publicada assim que há dados novos (antes, a cada 10 ou 20 minutos). A página também busca os números novos a cada 2 minutos."
+ },
+ {
+  "quando": "25/10/2026 19:45",
+  "texto": "Botão de atualizar (ícone no canto superior direito): busca na hora os números mais recentes, sem recarregar a página."
  }
 ]

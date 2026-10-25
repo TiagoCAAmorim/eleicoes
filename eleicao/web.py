@@ -78,9 +78,12 @@ window.__DADOS = {dados};
       const i = html.indexOf('window.__DADOS = '), j = html.lastIndexOf(';', html.indexOf('(function ()', i));
       if (i < 0 || j < 0) return;
       const novo = JSON.parse(html.slice(i + 'window.__DADOS = '.length, j));
-      if (chave(novo) !== chave(window.__DADOS)) {{ window.__DADOS = novo; run(); }}
+      if (chave(novo) !== chave(window.__DADOS)) {{ window.__DADOS = novo; run(); return 'novo'; }}
+      return 'igual';
     }} catch (e) {{ console.warn('atualização automática falhou', e); }}
+    return 'erro';
   }}
+  window.lxAtualizar = atualizar;
   if (location.protocol.startsWith('http')) {{
     setInterval(() => {{ if (!document.hidden) atualizar(); }}, 2 * 60 * 1000);
     document.addEventListener('visibilitychange', () => {{ if (!document.hidden && Date.now() - ultima > 2 * 60 * 1000) atualizar(); }});
@@ -92,6 +95,32 @@ window.__DADOS = {dados};
 
 RODAPE = """
 </div></body></html>
+"""
+
+# botão de atualizar no canto superior direito: busca os dados novos como a atualização automática (sem recarregar,
+# então não soma acesso no contador)
+ATUALIZAR = """
+<button type="button" class="lx-refresh" title="Buscar dados novos" aria-label="Buscar dados novos">
+<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+ stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 1 0-2.34 5.66"/><path d="M20 4v7h-7"/></svg></button>
+<style>.lx-refresh{position:fixed;top:10px;right:10px;z-index:6;width:34px;height:34px;display:grid;place-items:center;
+padding:0;border-radius:50%;border:1px solid var(--cds-border);background:var(--cds-surface-popover);color:var(--color-fg-muted);
+cursor:pointer;opacity:.85;box-shadow:var(--cds-shadow-popover)}.lx-refresh:hover{opacity:1;color:var(--color-fg)}
+.lx-refresh:focus-visible{outline:2px solid var(--lx-b);outline-offset:2px}
+.lx-refresh.girando svg{animation:lx-gira .8s linear infinite}@keyframes lx-gira{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion: reduce){.lx-refresh.girando svg{animation:none}}@media print{.lx-refresh{display:none}}</style>
+<script>(function () {
+  const b = document.querySelector('.lx-refresh');
+  const dica = {novo: 'Dados novos carregados', igual: 'Sem dados novos do TSE ainda', erro: 'Não foi possível buscar agora'};
+  b.addEventListener('click', async () => {
+    if (b.classList.contains('girando') || !window.lxAtualizar) return;
+    b.classList.add('girando');
+    const r = await window.lxAtualizar();
+    b.classList.remove('girando');
+    b.title = dica[r] || 'Buscar dados novos';
+    setTimeout(() => { b.title = 'Buscar dados novos'; }, 4000);
+  });
+})();</script>
 """
 
 # contador de acessos (hits.sh, sem cadastro nem cookies): imagem discreta no canto inferior direito
@@ -131,7 +160,7 @@ def gerar_site(saida, pasta_site, titulo="Previsão do 2º turno presidencial 20
     os.makedirs(pasta_site, exist_ok=True)
     with open(os.path.join(pasta_site, "index.html"), "w", encoding="utf-8") as f:
         doc = (CABECALHO.format(dados=js, og=og.replace('"', "'"), titulo=titulo) + corpo
-               + ("" if artefato else CONTADOR) + RODAPE)  # o teste não conta acessos do site
+               + ("" if artefato else ATUALIZAR + CONTADOR) + RODAPE)  # o teste não conta acessos do site
         if artefato:  # página sem <html>/<head>/<body> próprios (a plataforma adiciona)
             for tag in ['<html lang="pt-BR"><head>', "</head><body>", "</body></html>"]:
                 doc = doc.replace(tag, "")

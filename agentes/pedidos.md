@@ -189,3 +189,10 @@ apuradas nos arquivos municipais (≈277 votos por seção, plausível) contra u
 AC é o contrário (municípios atrás da UF). É assincronia dos arquivos do TSE, não erro de coleta: o modelo usa os
 municipais, e o "apurado" do Brasil mostrado é o oficial. Nada a fazer; só volte a avisar se uma UF continuar
 divergindo mais de 5% por mais de 30 min. Faça o P18 se ainda não fez.
+
+## P20 — botão de atualizar no topo da página
+
+Mudou `eleicao/web.py` (botão com ícone no canto superior direito que busca os dados novos sem recarregar) e
+`data/atualizacoes.json`. `git pull --rebase` e reinicie o loop entre duas rodadas. Depois da próxima publicação,
+confirme no Playwright que `.lx-refresh` existe, que o clique faz uma requisição a `index.html?t=...` e que não há
+erros de JS. Registre em `respostas.md`.
