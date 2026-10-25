@@ -10,5 +10,9 @@
  {
   "quando": "25/10/2026 17:10",
   "texto": "Nova seção \"Análises adicionais\" com a página de detalhe por município e curiosidades (municípios que mais mudaram entre os turnos e que mais votaram em cada candidato)."
+ },
+ {
+  "quando": "25/10/2026 17:25",
+  "texto": "Correção: o TSE publica os arquivos dos municípios com atraso em relação ao total nacional, e a coleta podia ficar presa a dados municipais defasados. Agora os municípios são baixados de novo até alcançarem o total do estado, e o \"apurado\" do Brasil mostrado é o total oficial do TSE."
  }
 ]
