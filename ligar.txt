@@ -1,0 +1,1 @@
+Edite este arquivo (qualquer mudança) para ligar o loop de 10 em 10 minutos no GitHub Actions por ~5h40.
