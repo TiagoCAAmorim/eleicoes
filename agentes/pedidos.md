@@ -211,3 +211,11 @@ O Tiago viu discrepâncias entre a página e o site do TSE. Mudanças:
 3. Para cada diferença acima do limite, diga a causa provável: arquivo da UF atrasado em relação aos municípios
    (soma dos municípios > UF), municípios atrasados (soma < UF), ou outra coisa. Se não for assincronia (por ex.
    municípios com mais seções que o total do município, ou a diferença não diminui em 30 min), coloque no `status.md`.
+
+## P22 — o P21 ainda não está valendo no loop: reinicie
+
+O relatório das 20:12 já tem a tabela "Página x TSE" (o `verificar.py` novo), mas o `resultado.json` das 20:13 ainda
+mostra o "% apurado" do Brasil = 36,03 contra 35,52% das seções, ou seja, o loop roda o código antigo de `run.py` e
+`eleicao/previsao.py`. Reinicie o loop entre duas rodadas, confirme que o "% apurado" do Brasil no `resultado.json`
+fica igual a `pct_secoes`, e responda P21 e P22 em `respostas.md`. As diferenças da tabela de 20:12 são atraso de ~2 min
+e assincronia (RR, AM), como você descreveu; está ok.
