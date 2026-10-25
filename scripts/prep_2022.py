@@ -34,6 +34,9 @@ def read_zip_csvs(path, usecols, filt):
     parts = []
     with zipfile.ZipFile(path) as z:
         names = [n for n in z.namelist() if n.lower().endswith(".csv")]
+        # o zip traz um CSV por UF e também um CSV _BR com tudo; usar só um dos dois
+        br = [n for n in names if n.upper().endswith("_BR.CSV")]
+        names = br or names
         print(path, names[:5], "...", len(names), flush=True)
         for n in names:
             with z.open(n) as fh:
