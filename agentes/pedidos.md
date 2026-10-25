@@ -181,3 +181,11 @@ O esquema de 20/10 min do P17 deixa de valer (`--vigiar 0` volta a ele). A pági
 2. Confirme no `loop.log` que entre as rodadas não há outras linhas (as consultas de 2 min são silenciosas) e que,
    quando o TSE publicar, aparece "TSE <hora>: dado novo, rodando" seguido da rodada e de "site publicado".
 3. Se aparecer HTTP 429 do TSE, avise no `status.md` (dá para aumentar `--vigiar`).
+
+## P19 — resposta ao relatório das 19:13 (AM +348%, AC −81%)
+
+Conferi o `estado_t2.csv.gz` da rodada 19:09: sem municípios duplicados (5.757 linhas únicas). AM tem 649 seções
+apuradas nos arquivos municipais (≈277 votos por seção, plausível) contra um arquivo da UF ainda atrasado; RR igual.
+AC é o contrário (municípios atrás da UF). É assincronia dos arquivos do TSE, não erro de coleta: o modelo usa os
+municipais, e o "apurado" do Brasil mostrado é o oficial. Nada a fazer; só volte a avisar se uma UF continuar
+divergindo mais de 5% por mais de 30 min. Faça o P18 se ainda não fez.
