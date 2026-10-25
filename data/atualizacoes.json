@@ -22,5 +22,9 @@
  {
   "quando": "25/10/2026 17:45",
   "texto": "Modelo menos sensível às primeiras seções: municípios com apuração parcial (poucas seções, que podem não representar o município) passam a pesar menos no ajuste até avançarem. Com os dados das 17:06, a previsão de Lula passaria de 48,4% para 49,0% (antes ia a 49,5%). O teste com a apuração de 2022 manteve o erro e a cobertura dos intervalos. Também: o % apurado por grupo agora tem uma casa decimal, e a coluna de comparecimento passou a se chamar \"comparecimento previsto\", deixando claro que é estimativa do modelo."
+ },
+ {
+  "quando": "25/10/2026 18:05",
+  "texto": "Transição gradual dos parâmetros: as transferências de votos usadas para prever os locais ainda não apurados passam das estimativas iniciais (2022 e pesquisas) para as estimadas com a apuração conforme o % do eleitorado apurado no país, devagar no começo e mais rápido perto de 25%, quando passam a ser só as estimadas. Assim, poucas seções pouco representativas não mudam a previsão do país inteiro. O resultado já apurado de cada município continua sendo usado nele mesmo."
  }
 ]

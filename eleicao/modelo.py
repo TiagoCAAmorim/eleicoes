@@ -87,6 +87,10 @@ class Config:
     escala_cov: float = 1.0           # inflação da covariância de Laplace (dependência espacial)
     rho_nacional: float = 0.5         # correlação entre grupos no sorteio dos parâmetros
     k_parcial: float = 0.30           # peso do resultado parcial do próprio município: f/(f+k)
+    # transição da priori para os parâmetros estimados conforme o % do eleitorado apurado no país: 1ª metade de
+    # uma sigmoide (sobe devagar e acelera até o centro, onde passa a usar só os estimados). None = sem transição.
+    transicao_centro: float = 25.0
+    transicao_largura: float = 8.0
     n_sims: int = 1000
     seed: int = 42
     niveis: list = field(default_factory=lambda: ["regiao", "uf", "uf_porte"])
@@ -145,6 +149,15 @@ class Ajuste:
     s0: float
     folha: np.ndarray     # índice do grupo folha de cada unidade
     folhas: list          # lista de (nivel, nome) das folhas
+    peso: float = 1.0     # peso dos parâmetros estimados na transição a partir da priori
+
+
+def peso_transicao(pct, cfg: Config):
+    """Peso (0 a 1) dos parâmetros estimados com a apuração, em função do % do eleitorado apurado no país."""
+    if cfg.transicao_centro is None or pct >= cfg.transicao_centro:
+        return 1.0
+    sig = lambda x: 1 / (1 + np.exp(-(x - cfg.transicao_centro) / cfg.transicao_largura))  # noqa: E731
+    return float(max(sig(pct) - sig(0), 0) / (0.5 - sig(0)))
 
 
 def ajustar(df, X, Y, cfg: Config):
@@ -176,7 +189,6 @@ def ajustar(df, X, Y, cfg: Config):
     # variância extra das parciais: proporcional ao que falta apurar no município (zero quando completo)
     extra = (cfg.s_parcial ** 2 * np.clip(1 - df["f"].values, 0, 1))[:, None]
     sx = lambda s, sel: np.sqrt(s ** 2 + extra[sel])  # noqa: E731
-    grupos = {}
     mu, cov = _ajustar(X[ok], Y[ok], Ew[ok], sx(s0, ok), theta0, sd0)
     if ok.sum() > 30:
         res = Y[ok] - X[ok] @ matriz(mu)
@@ -184,22 +196,37 @@ def ajustar(df, X, Y, cfg: Config):
         excesso = (res ** 2 - p * (1 - p) / np.maximum(Ew[ok], 1)[:, None] - extra[ok]).mean()
         s0 = float(np.sqrt(max(excesso, 0.005 ** 2)))
         mu, cov = _ajustar(X[ok], Y[ok], Ew[ok], sx(s0, ok), theta0, sd0)
-    grupos[("brasil", "Brasil")] = (mu, cov * cfg.escala_cov)
     pais = {"regiao": "brasil", "uf": "regiao", "uf_porte": "uf"}
-    for nivel in cfg.niveis:
-        for nome, idx in df.groupby(nivel).indices.items():
-            pai_nome = df[pais[nivel]].iloc[idx[0]]
-            pmu, pcov = grupos[(pais[nivel], pai_nome)]
-            pmu = pmu + desvio(nivel, nome, pais[nivel], pai_nome)
-            psd = np.sqrt(cfg.tau ** 2 + np.diag(pcov))
-            sel = idx[ok[idx]]
-            m, c = _ajustar(X[sel], Y[sel], Ew[sel], sx(s0, sel), pmu, psd)
-            grupos[(nivel, nome)] = (m, c * (cfg.escala_cov if len(sel) else 1.0))
+    indices = {nivel: df.groupby(nivel).indices for nivel in cfg.niveis}
+
+    def hierarquia(ok, mu, cov):
+        grupos = {("brasil", "Brasil"): (mu, cov * cfg.escala_cov)}
+        for nivel in cfg.niveis:
+            for nome, idx in indices[nivel].items():
+                pai_nome = df[pais[nivel]].iloc[idx[0]]
+                pmu, pcov = grupos[(pais[nivel], pai_nome)]
+                pmu = pmu + desvio(nivel, nome, pais[nivel], pai_nome)
+                psd = np.sqrt(cfg.tau ** 2 + np.diag(pcov))
+                sel = idx[ok[idx]]
+                m, c = _ajustar(X[sel], Y[sel], Ew[sel], sx(s0, sel), pmu, psd)
+                grupos[(nivel, nome)] = (m, c * (cfg.escala_cov if len(sel) else 1.0))
+        return grupos
+
+    grupos = hierarquia(ok, mu, cov)
+    w = peso_transicao(100 * Ea[ok].sum() / max(df["E2"].sum(), 1), cfg)
+    if w < 1:
+        # mistura (por momentos) entre a previsão só com a priori e a estimada com a apuração parcial
+        sem = np.zeros_like(ok)
+        priori = hierarquia(sem, *_ajustar(X[sem], Y[sem], Ew[sem], sx(s0, sem), theta0, sd0))
+        for k, (m1, c1) in grupos.items():
+            m0, c0 = priori[k]
+            d = (m1 - m0)[:, None]
+            grupos[k] = (m0 + w * (m1 - m0), w * c1 + (1 - w) * c0 + w * (1 - w) * (d @ d.T))
     ultimo = cfg.niveis[-1] if cfg.niveis else "brasil"
     folhas = sorted(df[ultimo].unique())
     pos = {n: i for i, n in enumerate(folhas)}
     folha = df[ultimo].map(pos).values
-    return Ajuste(grupos, s0, folha, [(ultimo, n) for n in folhas])
+    return Ajuste(grupos, s0, folha, [(ultimo, n) for n in folhas], w)
 
 
 def _amostrar_theta(aj: Ajuste, chaves, cfg, rng):

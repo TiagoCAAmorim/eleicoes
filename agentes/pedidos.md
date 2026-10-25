@@ -148,3 +148,13 @@ pode ser cache (CDN) servindo uma versão velha para a nossa URL. Investigue e r
    % de seções e a hora que a página oficial mostra.
 3. Se a página oficial ou a URL com `?nc=` estiver à frente do que o loop lê, diga em `respostas.md` e no `status.md`
    (o remoto muda `tse._get` para quebrar o cache). Se tudo mostrar 17:06, o TSE de fato está parado: só registre.
+
+## P16 — transição gradual da priori para os parâmetros estimados
+
+Mudou `eleicao/modelo.py`: os parâmetros usados nos locais não apurados são uma mistura entre a priori e os estimados,
+com peso = 1ª metade de uma sigmoide do % do eleitorado apurado no país (≈0,07 em 5%, 0,2 em 10%, 0,67 em 20%, 1 a
+partir de 25%). Também `data/atualizacoes.json`.
+
+1. `git pull --rebase` e reinicie o loop entre duas rodadas (se o P14 ainda não foi feito, faça os dois juntos).
+2. Na próxima rodada com dado novo do TSE, registre em `respostas.md` a previsão Brasil e a chance de Lula, e o
+   tempo da rodada no `loop.log` (o ajuste agora roda a hierarquia duas vezes enquanto o apurado está abaixo de 25%).
