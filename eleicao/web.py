@@ -71,8 +71,6 @@ window.__DADOS = {dados};
 """
 
 RODAPE = """
-<p class="lx lx-baixar" style="margin-top:16px;display:block">Imagens para compartilhar:
-<a href="painel.png">resumo</a> · <a href="estados.png">estados</a></p>
 </div></body></html>
 """
 
@@ -84,6 +82,14 @@ def gerar_site(saida, pasta_site, titulo="Previsão do 2º turno presidencial 20
     for nome in ["historico", "previsao", "transferencias"]:
         with open(os.path.join(web, f"{nome}.json")) as f:
             dados[nome] = json.load(f)
+    geo = os.path.join(os.path.dirname(AQUI), "data/estados_br.geojson")
+    if os.path.exists(geo):
+        with open(geo) as f:
+            dados["geo"] = [json.load(f)]
+    att = os.path.join(os.path.dirname(AQUI), "data/atualizacoes.json")
+    if os.path.exists(att):
+        with open(att) as f:
+            dados["atualizacoes"] = json.load(f)
     br = next((r for r in dados["previsao"] if r["nivel"] == "Brasil"), None)
     og = "Previsão estatística da apuração do 2º turno a partir dos parciais do TSE."
     if br:
@@ -101,8 +107,9 @@ def gerar_site(saida, pasta_site, titulo="Previsão do 2º turno presidencial 20
                 doc = doc.replace(tag, "")
             doc = doc.replace("body {", "body.lx-site, body {")
         f.write(doc)
-    for img in ["painel.png", "estados.png"]:
-        shutil.copy(os.path.join(saida, img), os.path.join(pasta_site, img))
+    for img in ["painel.png", "estados.png", "mapa_municipios.png"]:
+        if os.path.exists(os.path.join(saida, img)):
+            shutil.copy(os.path.join(saida, img), os.path.join(pasta_site, img))
     open(os.path.join(pasta_site, ".nojekyll"), "w").close()
 
 

@@ -1,7 +1,7 @@
 """Roda o modelo sobre um retrato da apuração e monta os resumos por grupo."""
 import numpy as np
 
-from . import modelo
+from . import mapa_mun, modelo
 from .geo import PORTES
 
 NIVEIS = [("Brasil", "brasil"), ("Região", "regiao"), ("Porte", "porte"), ("UF", "uf")]
@@ -45,6 +45,11 @@ def prever(df, nomes, cfg=None):
             va, vb = df.loc[sel, "A2"].sum(), df.loc[sel, "B2"].sum()
             r["pct_apurado"] = float(100 * ea / max(e2, 1))
             r["parcial"] = float(100 * va / max(va + vb, 1)) if va + vb > 0 else float("nan")
+            r["eleitores"] = float(e2)
+            r["pct_eleitorado"] = float(100 * e2 / max(df["E2"].sum(), 1))
+            r["votos_A_apurado"], r["votos_B_apurado"] = float(va), float(vb)
+            r["votos_A_previsto"] = float(sims[nome][:, 0].mean())
+            r["votos_B_previsto"] = float(sims[nome][:, 1].mean())
             g[nome] = r
         grupos[rotulo] = g
     va, vb = df["A2"].sum(), df["B2"].sum()
@@ -54,4 +59,5 @@ def prever(df, nomes, cfg=None):
         "parcial_A": float(100 * va / max(va + vb, 1)) if va + vb else 50.0,
         "transferencias": _transferencias(aj, cfg, nomes),
         "s0": aj.s0,
+        "_municipios": mapa_mun.tabela(df, final),  # não vai para o JSON
     }

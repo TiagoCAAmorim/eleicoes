@@ -13,7 +13,7 @@ import time
 import numpy as np
 import pandas as pd
 
-from eleicao import painel, tse
+from eleicao import mapa_mun, painel, tse
 from eleicao.previsao import prever
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
@@ -71,7 +71,20 @@ def _hora_tse(br):
         return dt.datetime.now(FUSO)
 
 
+def _proxima(pct_secoes, loop):
+    """Horário previsto da próxima atualização do painel (texto, horário de Brasília)."""
+    agora = dt.datetime.now(FUSO)
+    if not loop:
+        return ""
+    prox = agora + dt.timedelta(seconds=loop + 120)  # intervalo + tempo de uma rodada
+    if pct_secoes <= 0:
+        # urnas fecham às 17h (Brasília); os primeiros resultados saem em seguida
+        prox = max(prox, agora.replace(hour=17, minute=15, second=0, microsecond=0))
+    return f"~{prox:%H:%M}"
+
+
 def gerar_saidas(res, saida):
+    mun = res.pop("_municipios", None)
     hist_path = os.path.join(saida, "historico.csv")
     br = res["grupos"]["Brasil"]["Brasil"]
     linha = {"hora": res["hora"], "pct_secoes": res["pct_secoes"], "parcial_A": res["parcial_A"],
@@ -86,6 +99,11 @@ def gerar_saidas(res, saida):
     painel.imagem_principal(res, hist, p1)
     painel.imagem_estados(res, p2)
     painel.pagina_html(res, p1, p2, os.path.join(saida, "index.html"))
+    if mun is not None:
+        try:
+            mapa_mun.imagem(res, mun, _munis(), os.path.join(saida, "mapa_municipios.png"))
+        except Exception as ex:  # noqa: BLE001
+            print("mapa por município falhou:", repr(ex), flush=True)
     with open(os.path.join(saida, "resultado.json"), "w") as f:
         json.dump(res, f, ensure_ascii=False, indent=1)
     painel.dados_web(res, hist, os.path.join(saida, "web"))
@@ -136,6 +154,7 @@ def rodada(args):
     res["hora"] = hora.isoformat()
     res["hora_txt"] = hora.strftime("%d/%m %H:%M")
     res["pct_secoes"] = 100 * br["st"] / max(br["ts"], 1)
+    res["proxima_txt"] = _proxima(res["pct_secoes"], args.loop)
     gerar_saidas(res, args.saida)
     b = res["grupos"]["Brasil"]["Brasil"]
     print(f"{res['hora_txt']} {res['pct_secoes']:.2f}% seções | {nomes[0]} {b['A_media']:.2f}% "
@@ -173,7 +192,8 @@ def demo_2022(args):
         res["real_A"] = real["Brasil"]["Brasil"]
         hora = inicio + dt.timedelta(minutes=10 * (i + 1))
         res.update(hora=hora.isoformat(), hora_txt=hora.strftime("%d/%m/%Y %H:%M") + " (simulação 2022)",
-                   pct_secoes=100 * ap.mean())
+                   pct_secoes=100 * ap.mean(),
+                   proxima_txt=f"~{hora + dt.timedelta(minutes=10):%H:%M}" if p < 100 else "")
         gerar_saidas(res, args.saida)
         print(f"{p:5.1f}% {res['grupos']['Brasil']['Brasil']['A_media']:.2f}", flush=True)
         if args.site:

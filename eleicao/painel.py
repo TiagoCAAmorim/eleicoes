@@ -96,9 +96,8 @@ def imagem_principal(res, hist, caminho):
     linhas = []
     for nivel in ["Região", "Porte"]:
         for nome, g in res["grupos"][nivel].items():
-            if nivel == "Porte" and nome == "Exterior":
-                continue
-            linhas.append((nome, g))
+            if not (nivel == "Porte" and nome == "Exterior"):  # mesma linha da região Exterior
+                linhas.append((nome, g))
     y = 0.39
     fig.text(0.05, y, f"Previsão por região e porte da cidade (% válidos de {a})", fontsize=11, color=TINTA,
              weight="bold")
@@ -122,28 +121,41 @@ def imagem_principal(res, hist, caminho):
     plt.close(fig)
 
 
-def imagem_estados(res, caminho):
-    a, b = res["nomes"]
-    est = sorted(res["grupos"]["UF"].items(), key=lambda kv: kv[1]["A_media"])
-    fig, ax = plt.subplots(figsize=(9, 11.25), dpi=120)
-    fig.subplots_adjust(left=0.1, right=0.95, top=0.9, bottom=0.06)
-    ys = range(len(est))
-    for y, (uf, g) in zip(ys, est):
+def _intervalos(ax, itens, rotulo):
+    """Ponto = previsão, barra = intervalo de 90%, | = apurado, um grupo por linha."""
+    ys = range(len(itens))
+    for y, (nome, g) in zip(ys, itens):
         cor = COR_A if g["A_media"] >= 50 else COR_B
         ax.plot([g["A_p05"], g["A_p95"]], [y, y], color=cor, lw=3, alpha=0.35, solid_capstyle="round")
         ax.plot(g["A_media"], y, "o", color=cor, ms=8)
         ax.plot(g["parcial"], y, "|", color=TINTA2, ms=10)
         ax.annotate(f"{_pct(g['A_media'])}  ({_pct(g['pct_apurado'], 0)} apurado)", (max(g["A_p95"], g["parcial"] if g["parcial"] == g["parcial"] else 0, 50) + 1, y),
                     xytext=(6, 0), textcoords="offset points", va="center", fontsize=8, color=TINTA2)
-    ax.set_yticks(list(ys), [uf.upper() for uf, _ in est])
+    ax.set_yticks(list(ys), [rotulo(n) for n, _ in itens])
+    ax.set_ylim(-0.7, len(itens) - 0.3)
     ax.axvline(50, color=TINTA2, lw=0.8, ls="--")
     ax.grid(axis="x", color=GRADE, lw=0.6)
-    ax.set_xlabel(f"% dos votos válidos para {a} (ponto = previsão, barra = intervalo 90%, | = apurado)")
     ax.set_xlim(0, 100)
-    fig.text(0.05, 0.955, f"Previsão por estado · {a} x {b}", fontsize=16, weight="bold", color=TINTA)
-    fig.text(0.05, 0.93, f"Atualizado {res['hora_txt']} · {_pct(res['pct_secoes'], 2)} das seções apuradas",
+
+
+def imagem_estados(res, caminho):
+    a, b = res["nomes"]
+    grupos = res["grupos"]
+    blocos = [("Região", list(grupos["Região"].items())[::-1], str),
+              ("Porte da cidade", list(grupos["Porte"].items())[::-1], str),
+              ("Estado", sorted(grupos["UF"].items(), key=lambda kv: kv[1]["A_media"]),
+               lambda n: "Exterior" if n == "zz" else n.upper())]
+    fig, axs = plt.subplots(3, 1, figsize=(9, 15), dpi=120, sharex=True,
+                            gridspec_kw={"height_ratios": [len(x[1]) + 1.5 for x in blocos]})
+    fig.subplots_adjust(left=0.25, right=0.95, top=0.92, bottom=0.05, hspace=0.12)
+    for ax, (titulo, itens, rot) in zip(axs, blocos):
+        _intervalos(ax, itens, rot)
+        ax.set_title(titulo, loc="left", fontsize=11, color=TINTA, weight="bold")
+    axs[-1].set_xlabel(f"% dos votos válidos para {a} (ponto = previsão, barra = intervalo 90%, | = apurado)")
+    fig.text(0.05, 0.965, f"Previsão por região, porte e estado · {a} x {b}", fontsize=16, weight="bold", color=TINTA)
+    fig.text(0.05, 0.945, f"Atualizado {res['hora_txt']} · {_pct(res['pct_secoes'], 2)} das seções apuradas",
              fontsize=10, color=TINTA2)
-    fig.text(0.05, 0.012, AVISO_CURTO, fontsize=7, color=TINTA2)
+    fig.text(0.05, 0.01, AVISO_CURTO, fontsize=7, color=TINTA2)
     fig.savefig(caminho)
     plt.close(fig)
 
@@ -178,7 +190,7 @@ def _tabela_transf(transf):
 def pagina_html(res, img_principal, img_estados, caminho):
     a, b = res["nomes"]
     blocos = "".join(f"<h2>Por {html.escape(nivel.lower())}</h2>"
-                     f"{_tabela({n: v for n, v in g.items() if not (nivel == 'Porte' and n == 'Exterior')}, a)}"
+                     f"{_tabela(g, a)}"
                      for nivel, g in res["grupos"].items() if nivel != "Brasil")
     doc = f"""<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -254,12 +266,12 @@ def dados_web(res, hist, pasta):
     prev = []
     for nivel, grupos in res["grupos"].items():
         for nome, g in grupos.items():
-            if nivel == "Porte" and nome == "Exterior":
-                continue
-            prev.append({"nivel": nivel, "nome": nome.upper() if nivel == "UF" else nome,
-                         **{k: num(g[k]) for k in ["pct_apurado", "parcial", "A_media", "A_p05", "A_p95", "prob_A",
-                                                   "comparecimento"]},
-                         "nome_A": a, "nome_B": b, "hora_txt": res["hora_txt"], "pct_secoes": num(res["pct_secoes"]),
+            prev.append({"nivel": nivel, "nome": ("Exterior" if nome == "zz" else nome.upper()) if nivel == "UF" else nome,
+                         **{k: num(g.get(k)) for k in ["pct_apurado", "parcial", "A_media", "A_p05", "A_p95", "prob_A",
+                                                       "comparecimento", "pct_eleitorado"]},
+                         **{k: round(g[k]) for k in ["eleitores", "votos_A_apurado", "votos_B_apurado",
+                                                      "votos_A_previsto", "votos_B_previsto"] if k in g},
+                         "nome_A": a, "nome_B": b, "hora_txt": res["hora_txt"], "proxima_txt": res.get("proxima_txt", ""), "pct_secoes": num(res["pct_secoes"]),
                          **({"real": num(g["real"])} if "real" in g else {})})
     transf = [{"grupo": g, "transferencia": t, "media": num(v[0]), "p05": num(v[1]), "p95": num(v[2])}
               for g, d in res.get("transferencias", {}).items() for t, v in d.items()]

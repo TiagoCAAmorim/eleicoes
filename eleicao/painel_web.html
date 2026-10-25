@@ -20,12 +20,24 @@
 .lx-tabs button, .lx-sel { font: inherit; font-size: var(--cds-font-size-caption); padding: var(--cds-pad-xs) var(--cds-pad-sm); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: var(--color-bg); color: var(--color-fg); cursor: pointer; }
 .lx-tabs button[aria-pressed="true"] { background: var(--color-fg); color: var(--color-bg); }
 .lx-tabs button:focus-visible, .lx-sel:focus-visible { outline: 2px solid var(--lx-b); outline-offset: 2px; }
+.lx-bar { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--cds-gap-sm); }
+.lx-opts { display: flex; flex-wrap: wrap; align-items: center; gap: var(--cds-gap-sm) var(--cds-gap-md); margin-bottom: var(--cds-gap-sm); }
+.lx-opts .lx-tabs { margin-bottom: 0; }
+.lx-check { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
+.lx-vis { margin-bottom: var(--cds-gap-md); }
+.lx-tm { position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: var(--cds-gap-md); align-items: start; }
+.lx-tm h3 { font-size: var(--cds-font-size-caption); font-weight: var(--cds-font-weight-medium); margin: 0 0 4px; }
+.lx-map { position: relative; max-width: 640px; margin-inline: auto; }
 .lx-tablewrap { overflow-x: auto; max-height: 32rem; overflow-y: auto; }
 .lx table { border-collapse: collapse; width: 100%; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
 .lx th, .lx td { padding: 6px 8px; border-bottom: 1px solid var(--color-border-line); text-align: right; white-space: nowrap; }
 .lx th:first-child, .lx td:first-child { text-align: left; }
 .lx th { color: var(--color-fg-muted); font-weight: 500; position: sticky; top: 0; background: var(--color-panel); }
 .lx-grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); gap: var(--cds-gap-md); }
+.lx-imgs { margin: 0; padding-left: 1.1em; line-height: 1.7; }
+.lx-att { padding-left: 1.1em; margin: 0; }
+.lx-att li { margin-bottom: var(--cds-gap-xs); }
+.lx-att b { font-weight: var(--cds-font-weight-medium); font-variant-numeric: tabular-nums; }
 .lx-sobre { line-height: 1.55; font-size: var(--cds-font-size-body); }
 .lx-sobre p, .lx-sobre ul { max-width: 72ch; }
 .lx-sobre h3 { font-size: var(--cds-font-size-body); font-weight: var(--cds-font-weight-medium); margin: var(--cds-gap-md) 0 var(--cds-gap-xs); }
@@ -42,6 +54,7 @@
     <h1>Previsão do 2º turno presidencial 2026</h1>
     <p class="lx-sub" id="resumo" data-source="previsao">—</p>
     <p class="lx-meta">Projeto pessoal, sem filiação partidária. Estimativa estatística, não é resultado oficial. <a href="#sobre">Veja o aviso e a metodologia.</a></p>
+    <p class="lx-meta" id="ultima-att" hidden></p>
   </header>
 
   <section class="lx-tiles" id="placar">
@@ -68,16 +81,50 @@
   <section class="lx-card" id="grupos">
     <h2>Previsão por grupo</h2>
     <p class="lx-note" id="nota-grupos">% dos votos válidos do primeiro candidato. Chance = fração das simulações em que ele passa de 50%.</p>
-    <div class="lx-tabs" role="group" aria-label="Agrupar por">
-      <button type="button" id="tab-regiao" data-nivel="Região" aria-pressed="true">Região</button>
-      <button type="button" id="tab-porte" data-nivel="Porte" aria-pressed="false">Porte da cidade</button>
-      <button type="button" id="tab-uf" data-nivel="UF" aria-pressed="false">Estado</button>
+    <div class="lx-bar">
+      <div class="lx-tabs" role="group" aria-label="Candidato em foco">
+        <button type="button" id="cand-a" data-cand="A" aria-pressed="true">Candidato A</button>
+        <button type="button" id="cand-b" data-cand="B" aria-pressed="false">Candidato B</button>
+      </div>
+      <div class="lx-tabs" role="group" aria-label="Agrupar por">
+        <button type="button" id="tab-regiao" data-nivel="Região" aria-pressed="true">Região</button>
+        <button type="button" id="tab-porte" data-nivel="Porte" aria-pressed="false">Porte da cidade</button>
+        <button type="button" id="tab-uf" data-nivel="UF" aria-pressed="false">Estado</button>
+      </div>
+      <div class="lx-tabs" role="group" aria-label="Visualização">
+        <button type="button" id="ver-intervalos" data-vis="intervalos" aria-pressed="true">Intervalos</button>
+        <button type="button" id="ver-treemap" data-vis="treemap" aria-pressed="false">Treemap</button>
+        <button type="button" id="ver-mapa" data-vis="mapa" aria-pressed="false">Mapa</button>
+      </div>
     </div>
-    <div class="lx-ufchart dash-skeleton" id="chart-uf" data-source="previsao" hidden></div>
+    <div class="lx-vis" id="vis-intervalos"><div class="lx-ufchart" id="chart-uf" data-source="previsao"></div></div>
+    <div class="lx-vis" id="vis-treemap" hidden>
+      <div class="lx-opts">
+        <span class="lx-meta">Agrupar retângulos por</span>
+        <div class="lx-tabs" role="group" aria-label="Agrupar retângulos por">
+          <button type="button" id="tm-cand" data-tm="candidato" aria-pressed="true">Candidato</button>
+          <button type="button" id="tm-grupo" data-tm="grupo" aria-pressed="false">Grupo</button>
+        </div>
+        <label class="lx-meta lx-check"><input type="checkbox" id="tm-escala" checked> Mesma escala (área proporcional aos votos)</label>
+      </div>
+      <div class="lx-tm" id="chart-tree" data-source="previsao"></div>
+    </div>
+    <div class="lx-vis" id="vis-mapa" hidden>
+      <div class="lx-opts">
+        <div class="lx-tabs" role="group" aria-label="Valor do mapa">
+          <button type="button" id="mapa-prev" data-mv="previsto" aria-pressed="true">Previsto</button>
+          <button type="button" id="mapa-apur" data-mv="apurado" aria-pressed="false">Apurado</button>
+        </div>
+        <label class="lx-meta lx-check"><input type="checkbox" id="mapa-escala"> Tamanho pelo eleitorado</label>
+      </div>
+      <div class="lx-map" id="chart-mapa" data-source="previsao geo"></div>
+      <p class="lx-meta"><a href="mapa_municipios.png">Mapa por município</a> (imagem estática): apurado e previsto, em polígonos e em círculos proporcionais aos votos.</p>
+    </div>
     <div class="lx-tablewrap">
       <table id="tabela-grupos" data-source="previsao" data-row-key="nome">
         <thead><tr>
           <th data-field="nome">Grupo</th>
+          <th data-field="pct_eleitorado">% do eleitorado</th>
           <th data-field="pct_apurado">% apurado</th>
           <th data-field="parcial">apurado</th>
           <th data-field="A_media">previsto</th>
@@ -106,6 +153,22 @@
         <tbody></tbody>
       </table>
     </div>
+  </section>
+
+  <section class="lx-card lx-sobre" id="atualizacoes">
+    <h2>Atualizações</h2>
+    <p class="lx-note">Mudanças no modelo, nos dados ou na página durante a apuração, inclusive correções de erros.</p>
+    <ul class="lx-att" id="lista-att"><li>Nenhuma atualização registrada.</li></ul>
+  </section>
+
+  <section class="lx-card" id="imagens">
+    <h2>Imagens para compartilhar</h2>
+    <p class="lx-note">Versões estáticas, atualizadas a cada rodada, boas para mandar no WhatsApp.</p>
+    <ul class="lx-imgs">
+      <li><a href="painel.png">Resumo</a>: placar, chance de vitória, linha do tempo e tabela por região e porte.</li>
+      <li><a href="estados.png">Região, porte e estado</a>: previsão com intervalo de 90% para cada grupo.</li>
+      <li><a href="mapa_municipios.png">Mapa por município</a>: apurado e previsto, em polígonos e em círculos proporcionais aos votos.</li>
+    </ul>
   </section>
 
   <section class="lx-card lx-sobre" id="sobre">
@@ -160,6 +223,28 @@ lx.fail = (el) => { el.replaceChildren(); const d = document.createElement('div'
 </script>
 
 <script>
+// atualizações (changelog)
+dash.onData(() => {
+  const a = dash.data('atualizacoes');
+  const itens = a && a.status === 'ok' ? a.data.slice().reverse() : [];
+  if (!itens.length) return;
+  const ul = document.getElementById('lista-att');
+  ul.replaceChildren(...itens.map((x) => {
+    const li = document.createElement('li');
+    const b = document.createElement('b');
+    b.textContent = x.quando + ' ';
+    li.append(b, x.texto);
+    return li;
+  }));
+  const ult = document.getElementById('ultima-att');
+  ult.hidden = false;
+  ult.replaceChildren(`Última mudança na página: ${itens[0].quando}. `);
+  const l = document.createElement('a');
+  l.href = '#atualizacoes';
+  l.textContent = 'Ver atualizações.';
+  ult.append(l);
+});
+
 // cabeçalho e placar
 dash.onData(() => {
   const p = dash.data('placar');
@@ -176,9 +261,14 @@ dash.onData(() => {
   if (prev.status !== 'ok') { resumo.textContent = '—'; return; }
   const br = prev.data.find((x) => x.nivel === 'Brasil');
   if (!br) { resumo.textContent = '—'; return; }
+  if (!(br.pct_secoes > 0)) {
+    resumo.textContent = `Apuração ainda não começou.` + (br.proxima_txt ? ` Primeira atualização com votos prevista para ${br.proxima_txt} (horário de Brasília).` : '');
+    return;
+  }
   const lider = br.A_media >= 50 ? br.nome_A : br.nome_B;
   const chance = Math.max(br.prob_A, 1 - br.prob_A);
-  resumo.textContent = `${lider} tem ${lx.pct(100 * chance, 0)} de chance de vencer, com ${lx.pct(br.pct_secoes, 2)} das seções apuradas. Atualizado ${br.hora_txt} (horário de Brasília).`;
+  resumo.textContent = `${lider} tem ${lx.pct(100 * chance, 0)} de chance de vencer, com ${lx.pct(br.pct_secoes, 2)} das seções apuradas. Atualizado ${br.hora_txt} (horário de Brasília).` +
+    (br.proxima_txt ? ` Próxima atualização prevista: ${br.proxima_txt}.` : '');
 });
 </script>
 
@@ -265,67 +355,214 @@ dash.onData(() => {
 </script>
 
 <script>
-// grupos: tabela e gráfico por estado
-document.querySelectorAll('#grupos .lx-tabs button').forEach((b) => b.addEventListener('click', () => {
-  lx.nivel = b.dataset.nivel;
-  document.querySelectorAll('#grupos .lx-tabs button').forEach((o) => o.setAttribute('aria-pressed', String(o === b)));
-  dash.setLink(b.id);
-  lx.desenhaGrupos();
+// grupos: tabela, intervalos, treemap e mapa
+lx.vis = 'intervalos'; lx.tm = 'candidato'; lx.mv = 'previsto'; lx.cand = 'A';
+lx.num = new Intl.NumberFormat('pt-BR');
+lx.mi = (v) => v >= 1e6 ? (v / 1e6).toFixed(1).replace('.', ',') + ' mi' : v >= 1e3 ? Math.round(v / 1e3) + ' mil' : String(Math.round(v));
+lx.botoes = (sel, attr, set) => document.querySelectorAll(sel).forEach((b) => b.addEventListener('click', () => {
+  document.querySelectorAll(sel).forEach((o) => o.setAttribute('aria-pressed', String(o === b)));
+  set(b.dataset[attr]); dash.setLink(b.id); lx.desenhaGrupos();
 }));
-lx.desenhaGrupos = () => {
-  const prev = dash.data('previsao');
-  const tbody = document.querySelector('#tabela-grupos tbody');
-  const uf = document.getElementById('chart-uf');
-  uf.hidden = lx.nivel !== 'UF';
-  tbody.replaceChildren();
-  if (prev.status !== 'ok') { if (prev.status === 'error') lx.fail(uf); return; }
-  const rows = prev.data.filter((r) => r.nivel === lx.nivel);
-  if (rows[0]) document.getElementById('nota-grupos').textContent = `% dos votos válidos de ${rows[0].nome_A}. Chance = fração das simulações em que ${rows[0].nome_A} passa de 50%.`;
-  const ord = lx.nivel === 'UF' ? [...rows].sort((a, b) => b.A_media - a.A_media) : rows;
-  const temReal = rows.some((r) => r.real !== undefined && r.real !== null);
-  const head = document.querySelector('#tabela-grupos thead tr');
-  let thReal = head.querySelector('.lx-real');
-  if (temReal && !thReal) { thReal = document.createElement('th'); thReal.className = 'lx-real'; thReal.textContent = 'resultado real'; head.appendChild(thReal); }
-  ord.forEach((r) => {
-    const tr = document.createElement('tr');
-    [r.nome, lx.pct(r.pct_apurado, 0), r.pct_apurado > 0 ? lx.pct(r.parcial) : '—', lx.pct(r.A_media), lx.pct(r.A_p05), lx.pct(r.A_p95),
-      lx.pct(100 * r.prob_A, 0), lx.pct(r.comparecimento), ...(temReal ? [lx.pct(r.real)] : [])].forEach((v) => { const td = document.createElement('td'); td.textContent = v; tr.appendChild(td); });
-    tbody.appendChild(tr);
-  });
-  if (lx.nivel !== 'UF') return;
-  uf.classList.remove('dash-skeleton');
-  uf.replaceChildren();
+lx.botoes('#grupos [data-nivel]', 'nivel', (v) => { lx.nivel = v; });
+lx.botoes('#grupos [data-vis]', 'vis', (v) => { lx.vis = v; });
+lx.botoes('#grupos [data-tm]', 'tm', (v) => { lx.tm = v; });
+lx.botoes('#grupos [data-mv]', 'mv', (v) => { lx.mv = v; });
+lx.botoes('#grupos [data-cand]', 'cand', (v) => { lx.cand = v; });
+// visão do candidato B: troca os papéis de A e B em cada linha (as cores seguem o candidato)
+lx.inverte = (r) => {
+  const q = (x) => (x === null || x === undefined ? x : 100 - x);
+  return { ...r, nome_A: r.nome_B, nome_B: r.nome_A, A_media: q(r.A_media), A_p05: q(r.A_p95), A_p95: q(r.A_p05),
+    parcial: q(r.parcial), prob_A: r.prob_A === null || r.prob_A === undefined ? r.prob_A : 1 - r.prob_A, real: q(r.real),
+    votos_A_apurado: r.votos_B_apurado, votos_B_apurado: r.votos_A_apurado,
+    votos_A_previsto: r.votos_B_previsto, votos_B_previsto: r.votos_A_previsto };
+};
+['tm-escala', 'mapa-escala'].forEach((id) => document.getElementById(id).addEventListener('change', () => lx.desenhaGrupos()));
+lx.eixos = (gs) => gs.forEach((g) => { g.attr('font-size', null).attr('font-family', null); g.select('.domain').remove(); g.selectAll('text').attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)'); });
+lx.dica = (box) => {
+  const tip = d3.select(box).append('div').attr('class', 'lx-tip').style('display', 'none');
+  return {
+    show(ev, linhas) {
+      tip.style('display', null).replaceChildren();
+      linhas.forEach((l, i) => tip.append('div').attr('class', i ? null : 'lx-t').text(l));
+      const [px, py] = d3.pointer(ev, box);
+      tip.style('left', Math.max(0, Math.min(px + 12, box.clientWidth - tip.node().offsetWidth)) + 'px').style('top', (py + 12) + 'px');
+    },
+    hide() { tip.style('display', 'none'); },
+  };
+};
+
+lx.intervalos = (box, rows) => {
+  box.replaceChildren();
   const asc = [...rows].sort((a, b) => a.A_media - b.A_media);
-  const W = Math.max(280, uf.clientWidth), row = 22, m = { t: 8, r: 16, b: 26, l: 36 };
+  const W = Math.max(280, box.clientWidth), row = 24;
+  const lab = Math.min(230, Math.max(36, 8 * d3.max(asc, (r) => r.nome.length) + 6));
+  const m = { t: 8, r: 16, b: 26, l: lab };
   const H = m.t + m.b + row * asc.length;
+  box.style.minHeight = H + 'px';
   const x = d3.scaleLinear([0, 100], [m.l, W - m.r]);
   const y = d3.scaleBand(asc.map((r) => r.nome), [m.t, H - m.b]).padding(0.3);
-  const svg = d3.select(uf).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', 'Previsão por estado');
+  const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', 'Previsão com intervalo de 90% por grupo');
   svg.append('g').selectAll('line').data([0, 25, 50, 75, 100]).join('line').attr('x1', (d) => x(d)).attr('x2', (d) => x(d)).attr('y1', m.t).attr('y2', H - m.b)
     .attr('stroke', (d) => d === 50 ? 'var(--cds-chart-reference)' : 'var(--cds-chart-grid)').attr('stroke-dasharray', (d) => d === 50 ? '4 4' : null);
-  const ax = svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).tickValues([0, 25, 50, 75, 100]).tickSize(0).tickFormat((d) => d + '%'));
-  const ay = svg.append('g').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).tickSize(0));
-  [ax, ay].forEach((g) => { g.attr('font-size', null).attr('font-family', null); g.select('.domain').remove(); g.selectAll('text').attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)'); });
+  lx.eixos([svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).tickValues([0, 25, 50, 75, 100]).tickSize(0).tickFormat((d) => d + '%')),
+    svg.append('g').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).tickSize(0).tickPadding(6))]);
   const cor = (r) => r.A_media >= 50 ? 'var(--lx-a)' : 'var(--lx-b)';
   const cy = (r) => y(r.nome) + y.bandwidth() / 2;
   svg.append('g').selectAll('line').data(asc).join('line').attr('x1', (r) => x(r.A_p05)).attr('x2', (r) => x(r.A_p95)).attr('y1', cy).attr('y2', cy)
     .attr('stroke', cor).attr('stroke-opacity', 0.4).attr('stroke-width', 6).attr('stroke-linecap', 'round');
-  svg.append('g').selectAll('line').data(asc.filter((r) => r.pct_apurado > 0)).join('line').attr('x1', (r) => x(r.parcial)).attr('x2', (r) => x(r.parcial))
+  svg.append('g').selectAll('line').data(asc.filter((r) => r.pct_apurado > 0 && r.parcial !== null)).join('line').attr('x1', (r) => x(r.parcial)).attr('x2', (r) => x(r.parcial))
     .attr('y1', (r) => cy(r) - 7).attr('y2', (r) => cy(r) + 7).attr('stroke', 'var(--color-fg-muted)').attr('stroke-width', 1.5);
   svg.append('g').selectAll('circle').data(asc).join('circle').attr('cx', (r) => x(r.A_media)).attr('cy', cy).attr('r', 5).attr('fill', cor);
   svg.append('g').selectAll('path').data(asc.filter((r) => r.real !== undefined && r.real !== null)).join('path')
     .attr('d', (r) => `M${x(r.real)},${cy(r) - 6}l5,6l-5,6l-5,-6z`).attr('fill', 'none').attr('stroke', 'var(--color-fg)').attr('stroke-width', 1.2);
-  const tip = d3.select(uf).append('div').attr('class', 'lx-tip').style('display', 'none');
+  const tip = lx.dica(box);
   svg.append('g').selectAll('rect').data(asc).join('rect').attr('x', m.l).attr('width', W - m.l - m.r).attr('y', (r) => y(r.nome) - 2).attr('height', y.bandwidth() + 4).attr('fill', 'transparent')
-    .on('pointermove', (ev, r) => {
-      tip.style('display', null).replaceChildren();
-      tip.append('div').attr('class', 'lx-t').text(`${r.nome} · ${lx.pct(r.pct_apurado, 0)} apurado`);
-      tip.append('div').text(`${r.nome_A}: ${lx.pct(r.A_media)} (${lx.pct(r.A_p05)} a ${lx.pct(r.A_p95)})`);
-      tip.append('div').text(`chance de ${r.nome_A}: ${lx.pct(100 * r.prob_A, 0)}`);
-      const [px, py] = d3.pointer(ev, uf);
-      tip.style('left', Math.min(px + 12, uf.clientWidth - tip.node().offsetWidth) + 'px').style('top', (py + 12) + 'px');
+    .on('pointermove', (ev, r) => tip.show(ev, [`${r.nome} · ${lx.pct(r.pct_apurado, 0)} apurado`,
+      `${r.nome_A}: ${lx.pct(r.A_media)} (${lx.pct(r.A_p05)} a ${lx.pct(r.A_p95)})`, `chance de ${r.nome_A}: ${lx.pct(100 * r.prob_A, 0)}`]))
+    .on('pointerleave', () => tip.hide());
+};
+
+lx.treemap = (box, rows) => {
+  box.replaceChildren();
+  if (!rows.length || rows[0].votos_A_previsto === undefined) return;
+  const nA = rows[0].nome_A, nB = rows[0].nome_B;
+  const folhas = (tipo) => rows.flatMap((r) => [
+    { grupo: r.nome, cand: nA, lado: 'A', v: r[`votos_A_${tipo}`] || 0, tot: (r[`votos_A_${tipo}`] || 0) + (r[`votos_B_${tipo}`] || 0) },
+    { grupo: r.nome, cand: nB, lado: 'B', v: r[`votos_B_${tipo}`] || 0, tot: (r[`votos_A_${tipo}`] || 0) + (r[`votos_B_${tipo}`] || 0) }]);
+  const paineis = [['apurado', 'Votos apurados'], ['previsto', 'Votos estimados no final']];
+  const tot = Object.fromEntries(paineis.map(([t]) => [t, d3.sum(folhas(t), (f) => f.v)]));
+  const larg = Math.max(260, (box.clientWidth - 16) / (box.clientWidth > 720 ? 2 : 1));
+  const H0 = Math.round(larg * 0.75);
+  const igual = document.getElementById('tm-escala').checked;
+  const tip = lx.dica(box);
+  paineis.forEach(([tipo, titulo]) => {
+    const div = document.createElement('div');
+    box.appendChild(div);
+    const h3 = document.createElement('h3');
+    h3.textContent = `${titulo} · ${lx.mi(tot[tipo])} de votos válidos`;
+    div.appendChild(h3);
+    if (!tot[tipo]) { const p = document.createElement('p'); p.className = 'lx-meta'; p.textContent = 'Ainda sem votos apurados.'; div.appendChild(p); return; }
+    const f = igual ? Math.sqrt(tot[tipo] / Math.max(tot.apurado, tot.previsto)) : 1;
+    const W = Math.max(40, Math.round(larg * f)), H = Math.max(30, Math.round(H0 * f));
+    const filhos = lx.tm === 'candidato'
+      ? [['A', nA], ['B', nB]].map(([l, n]) => ({ nome: n, children: folhas(tipo).filter((x) => x.lado === l) }))
+      : rows.map((r) => ({ nome: r.nome, children: folhas(tipo).filter((x) => x.grupo === r.nome) }));
+    const raiz = d3.hierarchy({ children: filhos }).sum((d) => d.v || 0).sort((a, b) => (a.depth === 1 ? 0 : b.value - a.value)); // blocos na mesma ordem nos dois painéis
+    d3.treemap().size([W, H]).paddingInner(1).paddingOuter(lx.tm === 'grupo' ? 1.5 : 0).round(true)(raiz);
+    const svg = d3.select(div).append('svg').attr('width', W).attr('height', H).style('max-width', '100%').attr('viewBox', `0 0 ${W} ${H}`)
+      .attr('role', 'img').attr('aria-label', `Treemap: ${titulo}`);
+    const g = svg.selectAll('g').data(raiz.leaves()).join('g').attr('transform', (d) => `translate(${d.x0},${d.y0})`);
+    g.append('rect').attr('width', (d) => Math.max(0, d.x1 - d.x0)).attr('height', (d) => Math.max(0, d.y1 - d.y0))
+      .attr('fill', (d) => d.data.lado === 'A' ? 'var(--lx-a)' : 'var(--lx-b)').attr('fill-opacity', 0.85)
+      .on('pointermove', (ev, d) => tip.show(ev, [`${d.data.grupo} · ${titulo.toLowerCase()}`, `${d.data.cand}: ${lx.num.format(Math.round(d.data.v))} votos`,
+        `${lx.pct(100 * d.data.v / Math.max(d.data.tot, 1))} dos válidos do grupo · ${lx.pct(100 * d.data.v / tot[tipo])} do total`]))
+      .on('pointerleave', () => tip.hide());
+    g.filter((d) => d.x1 - d.x0 > 34 && d.y1 - d.y0 > 16).append('text').attr('x', 4).attr('y', 13)
+      .attr('fill', '#fff').style('font-size', '11px').style('pointer-events', 'none').text((d) => d.data.grupo);
+    g.filter((d) => d.x1 - d.x0 > 44 && d.y1 - d.y0 > 30).append('text').attr('x', 4).attr('y', 26)
+      .attr('fill', '#fff').attr('fill-opacity', 0.85).style('font-size', '10px').style('pointer-events', 'none')
+      .text((d) => lx.pct(100 * d.data.v / Math.max(d.data.tot, 1), 0));
+    if (lx.tm === 'grupo') {
+      svg.append('g').selectAll('rect').data(raiz.children).join('rect').attr('x', (d) => d.x0).attr('y', (d) => d.y0)
+        .attr('width', (d) => d.x1 - d.x0).attr('height', (d) => d.y1 - d.y0).attr('fill', 'none').attr('stroke', 'var(--color-panel)').attr('stroke-width', 2.5).style('pointer-events', 'none');
+    }
+  });
+};
+
+lx.mapa = (box, rows) => {
+  box.replaceChildren();
+  const geo = dash.data('geo');
+  if (geo.status !== 'ok' || !geo.data[0]) { const p = document.createElement('p'); p.className = 'lx-meta'; p.textContent = 'Mapa indisponível nesta versão da página.'; box.appendChild(p); return; }
+  const fc = geo.data[0];
+  const por = new Map(rows.map((r) => [r.nome, r]));
+  const W = Math.min(640, Math.max(280, box.clientWidth)), H = Math.round(W * 0.95);
+  const proj = d3.geoMercator().fitExtent([[4, 4], [W - 4, H - 40]], fc);
+  const path = d3.geoPath(proj);
+  const val = (r) => !r ? null : lx.mv === 'apurado' ? (r.pct_apurado > 0 ? r.parcial : null) : r.A_media;
+  const neutro = getComputedStyle(box).getPropertyValue('--lx-neutro').trim() || '#f2f0eb';
+  const [vermelho, azul] = ['#b51f1f', '#1c5fae'];
+  const ca = d3.interpolateRgb(neutro, lx.cand === 'B' ? azul : vermelho), cb = d3.interpolateRgb(neutro, lx.cand === 'B' ? vermelho : azul);
+  const cor = (v) => v === null || v === undefined ? 'var(--cds-chart-grid)' : v >= 50 ? ca(Math.min(1, (v - 50) / 25)) : cb(Math.min(1, (50 - v) / 25));
+  const escala = document.getElementById('mapa-escala').checked;
+  const dens = fc.features.map((f) => { const r = por.get(f.properties.uf); return r ? (r.eleitores || 0) / Math.max(path.area(f), 1) : 0; });
+  // referência: 2ª maior densidade (o DF, pequeno e muito denso, fica no tamanho original)
+  const dmax = d3.sort(dens, (a, b) => b - a)[1] || 1;
+  const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img')
+    .attr('aria-label', `Mapa por estado: % dos votos válidos ${lx.mv === 'apurado' ? 'apurados' : 'previstos'}`);
+  const tip = lx.dica(box);
+  svg.append('g').selectAll('path').data(fc.features).join('path').attr('d', path)
+    .attr('transform', (f, i) => {
+      if (!escala) return null;
+      const [cx, cy] = path.centroid(f), s = Math.min(1, Math.max(0.08, Math.sqrt(dens[i] / dmax)));
+      return `translate(${cx},${cy}) scale(${s}) translate(${-cx},${-cy})`;
     })
-    .on('pointerleave', () => tip.style('display', 'none'));
+    .attr('fill', (f) => cor(val(por.get(f.properties.uf)))).attr('stroke', 'var(--color-panel)').attr('stroke-width', escala ? 0.3 : 0.8).attr('vector-effect', 'non-scaling-stroke')
+    .on('pointermove', (ev, f) => dica(ev, por.get(f.properties.uf)))
+    .on('pointerleave', () => tip.hide());
+  // exterior: círculo no oceano, com a área que teria na densidade de referência
+  const ext = por.get('Exterior');
+  if (ext) {
+    const areaBR = d3.sum(fc.features, (f) => path.area(f));
+    const totBR = d3.sum(fc.features, (f) => (por.get(f.properties.uf) || {}).eleitores || 0);
+    const area = (ext.eleitores || 0) / (escala ? dmax : totBR / areaBR);
+    const r = Math.max(2, Math.sqrt(area / Math.PI));
+    const [bx1, by1] = path.bounds(fc)[1];
+    const cx = Math.min(W - r - 6, bx1 - 10), cy = Math.min(H - 60 - r, by1 - 40);
+    svg.append('circle').attr('cx', cx).attr('cy', cy).attr('r', r).attr('fill', cor(val(ext)))
+      .attr('stroke', 'var(--color-fg-muted)').attr('stroke-width', 0.6)
+      .on('pointermove', (ev) => dica(ev, ext)).on('pointerleave', () => tip.hide());
+    svg.append('text').attr('x', cx).attr('y', cy + r + 13).attr('text-anchor', 'middle').attr('fill', 'var(--color-fg-muted)')
+      .style('font-size', 'var(--cds-font-size-caption)').text('Exterior');
+  }
+  function dica(ev, r) {
+      if (!r) return;
+      tip.show(ev, [`${r.nome} · ${lx.pct(r.pct_apurado, 0)} apurado · ${lx.pct(r.pct_eleitorado)} do eleitorado`,
+        `${r.nome_A} previsto: ${lx.pct(r.A_media)} (${lx.pct(r.A_p05)} a ${lx.pct(r.A_p95)})`,
+        `${r.nome_A} apurado: ${r.pct_apurado > 0 ? lx.pct(r.parcial) : '—'}`]);
+  }
+  // legenda
+  const lw = Math.min(260, W - 40), lx0 = (W - lw) / 2, ly = H - 26;
+  const grad = svg.append('defs').append('linearGradient').attr('id', 'lx-grad');
+  d3.range(0, 1.0001, 0.1).forEach((t) => grad.append('stop').attr('offset', t).attr('stop-color', cor(25 + 50 * t)));
+  svg.append('rect').attr('x', lx0).attr('y', ly).attr('width', lw).attr('height', 8).attr('rx', 2).attr('fill', 'url(#lx-grad)');
+  const nA = rows[0] ? rows[0].nome_A : 'A', nB = rows[0] ? rows[0].nome_B : 'B';
+  [[0, `${nB} 75%`, 'start'], [0.5, 'empate', 'middle'], [1, `${nA} 75%`, 'end']].forEach(([t, txt, anc]) => svg.append('text')
+    .attr('x', lx0 + t * lw).attr('y', ly + 22).attr('text-anchor', anc).attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)').text(txt));
+};
+
+lx.desenhaGrupos = () => {
+  const prev = dash.data('previsao');
+  const tbody = document.querySelector('#tabela-grupos tbody');
+  ['intervalos', 'treemap', 'mapa'].forEach((v) => { document.getElementById('vis-' + v).hidden = v !== lx.vis; });
+  tbody.replaceChildren();
+  if (prev.status !== 'ok') { if (prev.status === 'error') lx.fail(document.getElementById('chart-uf')); return; }
+  const nivel = lx.vis === 'mapa' ? 'UF' : lx.nivel;
+  const brutos = prev.data.filter((r) => r.nivel === nivel);
+  const inv = lx.cand === 'B';
+  const rows = inv ? brutos.map(lx.inverte) : brutos;
+  if (brutos[0]) {
+    document.getElementById('cand-a').textContent = brutos[0].nome_A;
+    document.getElementById('cand-b').textContent = brutos[0].nome_B;
+  }
+  // cores presas ao candidato: na visão de B, "A" (foco) usa a cor de B
+  const sec = document.getElementById('grupos');
+  sec.style.setProperty('--lx-a', inv ? '#2a78d6' : '');
+  sec.style.setProperty('--lx-b', inv ? '#e34948' : '');
+  if (!inv) { sec.style.removeProperty('--lx-a'); sec.style.removeProperty('--lx-b'); }
+  if (rows[0]) document.getElementById('nota-grupos').textContent = `% dos votos válidos de ${rows[0].nome_A}. Chance = fração das simulações em que ${rows[0].nome_A} passa de 50%.`;
+  const ord = nivel === 'UF' ? [...rows].sort((a, b) => b.A_media - a.A_media) : rows;
+  const temReal = rows.some((r) => r.real !== undefined && r.real !== null);
+  const head = document.querySelector('#tabela-grupos thead tr');
+  if (temReal && !head.querySelector('.lx-real')) { const th = document.createElement('th'); th.className = 'lx-real'; th.textContent = 'resultado real'; head.appendChild(th); }
+  ord.forEach((r) => {
+    const tr = document.createElement('tr');
+    [r.nome, lx.pct(r.pct_eleitorado), lx.pct(r.pct_apurado, 0), r.pct_apurado > 0 ? lx.pct(r.parcial) : '—', lx.pct(r.A_media), lx.pct(r.A_p05), lx.pct(r.A_p95),
+      lx.pct(100 * r.prob_A, 0), lx.pct(r.comparecimento), ...(temReal ? [lx.pct(r.real)] : [])].forEach((v) => { const td = document.createElement('td'); td.textContent = v; tr.appendChild(td); });
+    tbody.appendChild(tr);
+  });
+  if (lx.vis === 'intervalos') lx.intervalos(document.getElementById('chart-uf'), rows);
+  if (lx.vis === 'treemap') lx.treemap(document.getElementById('chart-tree'), rows);
+  if (lx.vis === 'mapa') lx.mapa(document.getElementById('chart-mapa'), rows);
 };
 dash.onData(() => lx.desenhaGrupos());
 </script>

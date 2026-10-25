@@ -11,7 +11,8 @@ Ficam em `saida/2026/` (atualizadas no branch do projeto a cada rodada):
 | Arquivo | Conteúdo |
 |---|---|
 | `painel.png` | Resumo para compartilhar: % previsto, intervalo de 90%, chance de vitória, linha do tempo e tabela por região e porte |
-| `estados.png` | Previsão por estado com intervalo |
+| `estados.png` | Previsão por região, porte e estado com intervalo |
+| `mapa_municipios.png` | Mapa por município: apurado e previsto, em polígonos e em círculos proporcionais aos votos |
 | `index.html` | Página única com tudo, inclusive as transferências estimadas |
 | `historico.csv` | Uma linha por rodada (base da linha do tempo) |
 | `resultado.json` | Todos os números da última rodada |
@@ -83,6 +84,11 @@ python run.py --loop 600 --publicar ../../eleicao-2026 --git-push
 2. Em Settings → Pages: "Deploy from a branch", branch `main`, pasta `/ (root)`.
 3. Rode com `--publicar ../../eleicao-2026` (caminho relativo à pasta `eleicao-presidencial`).
 
+### Registro de atualizações
+
+`data/atualizacoes.json` alimenta a seção "Atualizações" da página. Ao corrigir algo durante a apuração,
+acrescente uma linha `{"quando": "dd/mm/aaaa hh:mm", "texto": "..."}`; a próxima rodada publica.
+
 ### Teste com 2022
 
 ```bash
@@ -98,6 +104,9 @@ Editar `eleicao-presidencial/ligar.txt` neste branch liga um loop de ~5h40 no Ac
 (`.github/workflows/eleicao-apuracao.yml`). Não use junto com o loop local.
 
 ## Fontes
+
+- Malhas: estados simplificados em `data/estados_br.geojson`; municípios (IBGE, via tbrugz/geodata-br)
+  simplificados em `data/municipios_br.geojson.gz`. Sete municípios criados depois da malha ficam sem polígono.
 
 - Divulgação de resultados: `https://resultados.tse.jus.br/oficial/ele2026/{6257,6258}/dados/<uf>/<uf><município>-c0001-e00<eleição>-u.json`
   (6257 = 1º turno, 6258 = 2º turno, cargo 0001 = presidente)
