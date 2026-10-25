@@ -1,6 +1,7 @@
 """Painel estático: imagens PNG (para WhatsApp) e página HTML autocontida."""
 import base64
 import html
+import json
 import io
 import os
 
@@ -171,7 +172,8 @@ def _tabela_transf(transf):
 
 def pagina_html(res, img_principal, img_estados, caminho):
     a, b = res["nomes"]
-    blocos = "".join(f"<h2>Por {html.escape(nivel.lower())}</h2>{_tabela(g, a)}"
+    blocos = "".join(f"<h2>Por {html.escape(nivel.lower())}</h2>"
+                     f"{_tabela({n: v for n, v in g.items() if not (nivel == 'Porte' and n == 'Exterior')}, a)}"
                      for nivel, g in res["grupos"].items() if nivel != "Brasil")
     doc = f"""<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -231,3 +233,26 @@ def grafico_backtest(res, caminho):
     fig.tight_layout()
     fig.savefig(caminho)
     plt.close(fig)
+
+
+def dados_web(res, hist, pasta):
+    """JSONs de linhas para o painel interativo na web."""
+    os.makedirs(pasta, exist_ok=True)
+    a, b = res["nomes"]
+    num = lambda x: None if x is None or x != x else round(float(x), 3)  # noqa: E731
+    h = [{"hora": r["hora"], **{k: num(r[k]) for k in ["pct_secoes", "parcial_A", "A_media", "A_p05", "A_p95",
+                                                         "prob_A"]}} for _, r in hist.iterrows()]
+    prev = []
+    for nivel, grupos in res["grupos"].items():
+        for nome, g in grupos.items():
+            if nivel == "Porte" and nome == "Exterior":
+                continue
+            prev.append({"nivel": nivel, "nome": nome.upper() if nivel == "UF" else nome,
+                         **{k: num(g[k]) for k in ["pct_apurado", "parcial", "A_media", "A_p05", "A_p95", "prob_A",
+                                                   "comparecimento"]},
+                         "nome_A": a, "nome_B": b, "hora_txt": res["hora_txt"], "pct_secoes": num(res["pct_secoes"])})
+    transf = [{"grupo": g, "transferencia": t, "media": num(v[0]), "p05": num(v[1]), "p95": num(v[2])}
+              for g, d in res.get("transferencias", {}).items() for t, v in d.items()]
+    for nome, linhas in [("historico", h), ("previsao", prev), ("transferencias", transf)]:
+        with open(os.path.join(pasta, f"{nome}.json"), "w") as f:
+            json.dump(linhas, f, ensure_ascii=False)

@@ -88,6 +88,7 @@ def gerar_saidas(res, saida):
     painel.pagina_html(res, p1, p2, os.path.join(saida, "index.html"))
     with open(os.path.join(saida, "resultado.json"), "w") as f:
         json.dump(res, f, ensure_ascii=False, indent=1)
+    painel.dados_web(res, hist, os.path.join(saida, "web"))
 
 
 def rodada(args):
