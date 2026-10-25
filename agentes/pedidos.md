@@ -52,3 +52,12 @@ Mudou `eleicao/web.py` (copia a página) e o cabeçalho do painel ganhou um link
 1. `git pull --rebase` e reinicie o loop entre duas rodadas.
 2. Depois da próxima publicação, confirme que `<site>/analises.html` abre (HTTP 200), que no Playwright a busca encontra
    um município (ex.: digite "campinas") e mostra o detalhe, e que não há erros de JS. Registre em `respostas.md`.
+
+## P7 — seção "Análises adicionais" no painel
+
+O link para `analises.html` saiu do cabeçalho e virou uma seção própria, "Análises adicionais", logo depois de
+"Imagens para compartilhar". Também entrou uma linha nova em Atualizações.
+
+1. `git pull --rebase` e reinicie o loop entre duas rodadas (mudou `eleicao/painel_web.html` e `data/atualizacoes.json`).
+2. Depois da próxima publicação, confirme que o `index.html` publicado tem a seção (`grep -c 'id="analises"'`) e que
+   o link `analises.html` responde HTTP 200. Registre em `respostas.md`.

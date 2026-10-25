@@ -6,5 +6,9 @@
  {
   "quando": "25/10/2026 11:05",
   "texto": "Seletor Lula/Flávio na previsão por grupo; mapa por estado com círculos proporcionais ao eleitorado; informações ao passar o mouse (ou tocar) nos gráficos, que não apareciam; mapa estático por município; dados em CSV na seção de metodologia."
+ },
+ {
+  "quando": "25/10/2026 17:10",
+  "texto": "Nova seção \"Análises adicionais\" com a página de detalhe por município e curiosidades (municípios que mais mudaram entre os turnos e que mais votaram em cada candidato)."
  }
 ]
