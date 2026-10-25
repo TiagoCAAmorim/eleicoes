@@ -71,6 +71,19 @@ def _hora_tse(br):
         return dt.datetime.now(FUSO)
 
 
+def _intervalo(args, inicio):
+    """Segundos entre o início desta rodada e o da próxima: `--lento` até `--lento-ate` (Brasília), depois `--loop`."""
+    if not args.loop or not args.lento or not args.lento_ate:
+        return args.loop
+    h, m = map(int, args.lento_ate.split(":"))
+    ini = dt.datetime.fromtimestamp(inicio, FUSO)
+    fim = ini.replace(hour=h, minute=m, second=0, microsecond=0).timestamp()
+    if inicio >= fim:
+        return args.loop
+    # ritmo lento, mas sem passar do horário de voltar ao normal
+    return min(args.lento, max(args.loop, fim - inicio))
+
+
 def _proxima(pct_secoes, loop, inicio):
     """Horário previsto da próxima atualização do painel (texto, horário de Brasília).
     As rodadas começam a cada `loop` segundos; a próxima publica ~uma duração de rodada depois de começar."""
@@ -175,7 +188,7 @@ def rodada(args):
     res["hora"] = hora.isoformat()
     res["hora_txt"] = hora.strftime("%d/%m %H:%M")
     res["pct_secoes"] = 100 * br["st"] / max(br["ts"], 1)
-    res["proxima_txt"] = _proxima(res["pct_secoes"], args.loop, t0)
+    res["proxima_txt"] = _proxima(res["pct_secoes"], _intervalo(args, t0), t0)
     gerar_saidas(res, args.saida)
     b = res["grupos"]["Brasil"]["Brasil"]
     print(f"{res['hora_txt']} {res['pct_secoes']:.2f}% seções | {nomes[0]} {b['A_media']:.2f}% "
@@ -225,6 +238,8 @@ def demo_2022(args):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--loop", type=int, default=0, help="segundos entre rodadas (0 = uma rodada)")
+    ap.add_argument("--lento", type=int, default=1200, help="segundos entre rodadas até --lento-ate (0 = desliga)")
+    ap.add_argument("--lento-ate", default="19:00", help="horário de Brasília em que volta ao intervalo de --loop")
     ap.add_argument("--saida", default=os.path.join(AQUI, "saida/2026"))
     ap.add_argument("--ciclo", default=tse.CICLO)
     ap.add_argument("--t1", default=tse.ELEICAO_T1)
@@ -256,7 +271,7 @@ def main():
                 raise
         if not args.loop:
             break
-        time.sleep(max(0, args.loop - (time.time() - inicio)))
+        time.sleep(max(0, _intervalo(args, inicio) - (time.time() - inicio)))
 
 
 if __name__ == "__main__":

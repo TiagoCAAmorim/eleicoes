@@ -158,3 +158,13 @@ partir de 25%). Também `data/atualizacoes.json`.
 1. `git pull --rebase` e reinicie o loop entre duas rodadas (se o P14 ainda não foi feito, faça os dois juntos).
 2. Na próxima rodada com dado novo do TSE, registre em `respostas.md` a previsão Brasil e a chance de Lula, e o
    tempo da rodada no `loop.log` (o ajuste agora roda a hierarquia duas vezes enquanto o apurado está abaixo de 25%).
+
+## P17 — rodadas a cada 20 min até 19:00, depois a cada 10 min (pedido do Tiago)
+
+Mudou `run.py`: novos argumentos `--lento` (padrão 1200 s) e `--lento-ate` (padrão "19:00", Brasília). Até esse
+horário as rodadas começam a cada 20 min (a última antes das 19:00 encurta para não passar das 19:00); depois volta ao
+`--loop 600`. O "Próxima atualização prevista" da página já usa o intervalo certo. Não precisa mudar os argumentos.
+
+1. `git pull --rebase` e reinicie o loop entre duas rodadas.
+2. Registre em `respostas.md` os horários de início das rodadas no `loop.log` antes e depois das 19:00 e o
+   "Próxima atualização prevista" do site.
