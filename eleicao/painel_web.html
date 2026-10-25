@@ -34,6 +34,7 @@
 .lx th:first-child, .lx td:first-child { text-align: left; }
 .lx th { color: var(--color-fg-muted); font-weight: 500; position: sticky; top: 0; background: var(--color-panel); }
 .lx-grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); gap: var(--cds-gap-md); }
+.lx-sub-h { font-size: var(--cds-font-size-body); font-weight: var(--cds-font-weight-medium); margin: var(--cds-gap-md) 0 0; }
 .lx-imgs { margin: 0; padding-left: 1.1em; line-height: 1.7; }
 .lx-att { padding-left: 1.1em; margin: 0; }
 .lx-att li { margin-bottom: var(--cds-gap-xs); }
@@ -115,7 +116,7 @@
           <button type="button" id="mapa-prev" data-mv="previsto" aria-pressed="true">Previsto</button>
           <button type="button" id="mapa-apur" data-mv="apurado" aria-pressed="false">Apurado</button>
         </div>
-        <label class="lx-meta lx-check"><input type="checkbox" id="mapa-escala"> Tamanho pelo eleitorado</label>
+        <label class="lx-meta lx-check"><input type="checkbox" id="mapa-escala"> Círculos proporcionais ao eleitorado</label>
       </div>
       <div class="lx-map" id="chart-mapa" data-source="previsao geo"></div>
       <p class="lx-meta"><a href="mapa_municipios.png">Mapa por município</a> (imagem estática): apurado e previsto, em polígonos e em círculos proporcionais aos votos.</p>
@@ -155,12 +156,6 @@
     </div>
   </section>
 
-  <section class="lx-card lx-sobre" id="atualizacoes">
-    <h2>Atualizações</h2>
-    <p class="lx-note">Mudanças no modelo, nos dados ou na página durante a apuração, inclusive correções de erros.</p>
-    <ul class="lx-att" id="lista-att"><li>Nenhuma atualização registrada.</li></ul>
-  </section>
-
   <section class="lx-card" id="imagens">
     <h2>Imagens para compartilhar</h2>
     <p class="lx-note">Versões estáticas, atualizadas a cada rodada, boas para mandar no WhatsApp.</p>
@@ -169,6 +164,12 @@
       <li><a href="estados.png">Região, porte e estado</a>: previsão com intervalo de 90% para cada grupo.</li>
       <li><a href="mapa_municipios.png">Mapa por município</a>: apurado e previsto, em polígonos e em círculos proporcionais aos votos.</li>
     </ul>
+  </section>
+
+  <section class="lx-card lx-sobre" id="atualizacoes">
+    <h2>Atualizações</h2>
+    <p class="lx-note">Mudanças no modelo, nos dados ou na página durante a apuração, inclusive correções de erros.</p>
+    <ul class="lx-att" id="lista-att"><li>Nenhuma atualização registrada.</li></ul>
   </section>
 
   <section class="lx-card lx-sobre" id="sobre">
@@ -185,6 +186,13 @@
     <p>São feitas 1000 simulações do resultado final, que combinam a incerteza na matriz de transferência, um choque comum a cada estado e a variação entre municípios. O intervalo de 90% contém 90% das simulações. A chance de vitória é a fração das simulações em que o candidato passa de 50% dos votos válidos.</p>
     <h3>Avaliação com a eleição de 2022</h3>
     <p>O modelo foi testado simulando a apuração do 2º turno de 2022 seção a seção, com o 1º turno de 2022 como base. Com uma ordem de apuração parecida com a real (Sul e Sudeste primeiro, Nordeste e capitais depois), a previsão ficou a menos de 1 ponto do resultado final (Lula 50,9%) já com 5% das seções apuradas, e o intervalo de 90% conteve o resultado em cerca de 9 de cada 10 pontos testados.</p>
+    <h3 id="dados">Dados para baixar (CSV)</h3>
+    <p>Separador ";" e vírgula decimal (abrem direto no Excel em português). Trazem a média e o intervalo de 90% das simulações, sem os cenários individuais.</p>
+    <ul class="lx-imgs">
+      <li><a href="dados_municipios.csv" download>Dados por município</a>: 1º turno, 2º turno apurado, coeficientes de transferência usados e resultado previsto.</li>
+      <li><a href="coeficientes_grupos.csv" download>Coeficientes por grupo</a>: transferências estimadas para Brasil, regiões, estados e estado × porte, com intervalo de 90%.</li>
+      <li><a href="resumo_grupos.csv" download>Resumo por grupo</a>: previsão, intervalo e chance de vitória por Brasil, região, porte e estado.</li>
+    </ul>
     <h3>Limitações</h3>
     <ul>
       <li>Se as seções apuradas primeiro dentro de cada município forem muito diferentes das que faltam, a previsão pode errar além do intervalo.</li>
@@ -339,7 +347,7 @@ dash.onData(() => {
       const [px] = d3.pointer(ev);
       const r = rows[near(rows, x.invert(px))];
       rule.style('display', null).attr('x1', x(r.t)).attr('x2', x(r.t));
-      tip.style('display', null).replaceChildren();
+      tip.style('display', null); tip.node().replaceChildren();
       tip.append('div').attr('class', 'lx-t').text(`${lx.hora.format(r.t)} · ${lx.pct(r.pct_secoes, 2)} apurado`);
       series.forEach((s) => {
         const d = tip.append('div');
@@ -368,6 +376,8 @@ lx.botoes('#grupos [data-vis]', 'vis', (v) => { lx.vis = v; });
 lx.botoes('#grupos [data-tm]', 'tm', (v) => { lx.tm = v; });
 lx.botoes('#grupos [data-mv]', 'mv', (v) => { lx.mv = v; });
 lx.botoes('#grupos [data-cand]', 'cand', (v) => { lx.cand = v; });
+// "Grandes (>200 mil eleitores)" -> ["Grandes", ">200 mil eleitores"]
+lx.partes = (nome) => { const m = /^(.*?) \((.*)\)$/.exec(nome); return m ? [m[1], m[2]] : [nome, '']; };
 // visão do candidato B: troca os papéis de A e B em cada linha (as cores seguem o candidato)
 lx.inverte = (r) => {
   const q = (x) => (x === null || x === undefined ? x : 100 - x);
@@ -382,7 +392,7 @@ lx.dica = (box) => {
   const tip = d3.select(box).append('div').attr('class', 'lx-tip').style('display', 'none');
   return {
     show(ev, linhas) {
-      tip.style('display', null).replaceChildren();
+      tip.style('display', null); tip.node().replaceChildren();
       linhas.forEach((l, i) => tip.append('div').attr('class', i ? null : 'lx-t').text(l));
       const [px, py] = d3.pointer(ev, box);
       tip.style('left', Math.max(0, Math.min(px + 12, box.clientWidth - tip.node().offsetWidth)) + 'px').style('top', (py + 12) + 'px');
@@ -454,14 +464,32 @@ lx.treemap = (box, rows) => {
     const g = svg.selectAll('g').data(raiz.leaves()).join('g').attr('transform', (d) => `translate(${d.x0},${d.y0})`);
     g.append('rect').attr('width', (d) => Math.max(0, d.x1 - d.x0)).attr('height', (d) => Math.max(0, d.y1 - d.y0))
       .attr('fill', (d) => d.data.lado === 'A' ? 'var(--lx-a)' : 'var(--lx-b)').attr('fill-opacity', 0.85)
-      .on('pointermove', (ev, d) => tip.show(ev, [`${d.data.grupo} · ${titulo.toLowerCase()}`, `${d.data.cand}: ${lx.num.format(Math.round(d.data.v))} votos`,
-        `${lx.pct(100 * d.data.v / Math.max(d.data.tot, 1))} dos válidos do grupo · ${lx.pct(100 * d.data.v / tot[tipo])} do total`]))
+      .on('pointermove', (ev, d) => dica(ev, d)).on('click', (ev, d) => dica(ev, d))
       .on('pointerleave', () => tip.hide());
-    g.filter((d) => d.x1 - d.x0 > 34 && d.y1 - d.y0 > 16).append('text').attr('x', 4).attr('y', 13)
-      .attr('fill', '#fff').style('font-size', '11px').style('pointer-events', 'none').text((d) => d.data.grupo);
-    g.filter((d) => d.x1 - d.x0 > 44 && d.y1 - d.y0 > 30).append('text').attr('x', 4).attr('y', 26)
-      .attr('fill', '#fff').attr('fill-opacity', 0.85).style('font-size', '10px').style('pointer-events', 'none')
-      .text((d) => lx.pct(100 * d.data.v / Math.max(d.data.tot, 1), 0));
+    // rótulo: nome do grupo, definição (porte) numa 2ª linha e % do candidato no grupo
+    const largR = (d) => d.x1 - d.x0, altR = (d) => d.y1 - d.y0;
+    g.each(function (d) {
+      const [nome, def] = lx.partes(d.data.grupo);
+      const linhas = [[nome, '11px', 1]];
+      if (def) linhas.push([def, '9.5px', 0.8]);
+      linhas.push([lx.pct(100 * d.data.v / Math.max(d.data.tot, 1), 0), '10px', 0.85]);
+      let y = 13;
+      linhas.forEach(([txt, fs, op]) => {
+        const cabe = altR(d) > y + 3 && largR(d) > Math.min(8 + txt.length * parseFloat(fs) * 0.55, 400);
+        if (!cabe) return;
+        d3.select(this).append('text').attr('x', 4).attr('y', y).attr('fill', '#fff').attr('fill-opacity', op)
+          .style('font-size', fs).style('pointer-events', 'none').text(txt);
+        y += parseFloat(fs) + 2;
+      });
+    });
+    function dica(ev, d) {
+      const r = rows.find((x) => x.nome === d.data.grupo);
+      const va = r ? r[`votos_A_${tipo}`] || 0 : 0, vb = r ? r[`votos_B_${tipo}`] || 0 : 0, t = Math.max(va + vb, 1);
+      tip.show(ev, [`${d.data.grupo} · ${titulo.toLowerCase()}`,
+        `${nA}: ${lx.num.format(Math.round(va))} votos (${lx.pct(100 * va / t)})`,
+        `${nB}: ${lx.num.format(Math.round(vb))} votos (${lx.pct(100 * vb / t)})`,
+        `${lx.pct(100 * (va + vb) / tot[tipo])} dos votos válidos do painel`]);
+    }
     if (lx.tm === 'grupo') {
       svg.append('g').selectAll('rect').data(raiz.children).join('rect').attr('x', (d) => d.x0).attr('y', (d) => d.y0)
         .attr('width', (d) => d.x1 - d.x0).attr('height', (d) => d.y1 - d.y0).attr('fill', 'none').attr('stroke', 'var(--color-panel)').attr('stroke-width', 2.5).style('pointer-events', 'none');
@@ -484,35 +512,62 @@ lx.mapa = (box, rows) => {
   const ca = d3.interpolateRgb(neutro, lx.cand === 'B' ? azul : vermelho), cb = d3.interpolateRgb(neutro, lx.cand === 'B' ? vermelho : azul);
   const cor = (v) => v === null || v === undefined ? 'var(--cds-chart-grid)' : v >= 50 ? ca(Math.min(1, (v - 50) / 25)) : cb(Math.min(1, (50 - v) / 25));
   const escala = document.getElementById('mapa-escala').checked;
-  const dens = fc.features.map((f) => { const r = por.get(f.properties.uf); return r ? (r.eleitores || 0) / Math.max(path.area(f), 1) : 0; });
-  // referência: 2ª maior densidade (o DF, pequeno e muito denso, fica no tamanho original)
-  const dmax = d3.sort(dens, (a, b) => b - a)[1] || 1;
   const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img')
-    .attr('aria-label', `Mapa por estado: % dos votos válidos ${lx.mv === 'apurado' ? 'apurados' : 'previstos'}`);
+    .attr('aria-label', `Mapa por estado: % dos votos válidos ${lx.mv === 'apurado' ? 'apurados' : 'previstos'}${escala ? ', círculos proporcionais ao eleitorado' : ''}`);
   const tip = lx.dica(box);
-  svg.append('g').selectAll('path').data(fc.features).join('path').attr('d', path)
-    .attr('transform', (f, i) => {
-      if (!escala) return null;
-      const [cx, cy] = path.centroid(f), s = Math.min(1, Math.max(0.08, Math.sqrt(dens[i] / dmax)));
-      return `translate(${cx},${cy}) scale(${s}) translate(${-cx},${-cy})`;
-    })
-    .attr('fill', (f) => cor(val(por.get(f.properties.uf)))).attr('stroke', 'var(--color-panel)').attr('stroke-width', escala ? 0.3 : 0.8).attr('vector-effect', 'non-scaling-stroke')
-    .on('pointermove', (ev, f) => dica(ev, por.get(f.properties.uf)))
-    .on('pointerleave', () => tip.hide());
-  // exterior: círculo no oceano, com a área que teria na densidade de referência
   const ext = por.get('Exterior');
-  if (ext) {
-    const areaBR = d3.sum(fc.features, (f) => path.area(f));
-    const totBR = d3.sum(fc.features, (f) => (por.get(f.properties.uf) || {}).eleitores || 0);
-    const area = (ext.eleitores || 0) / (escala ? dmax : totBR / areaBR);
-    const r = Math.max(2, Math.sqrt(area / Math.PI));
-    const [bx1, by1] = path.bounds(fc)[1];
-    const cx = Math.min(W - r - 6, bx1 - 10), cy = Math.min(H - 60 - r, by1 - 40);
-    svg.append('circle').attr('cx', cx).attr('cy', cy).attr('r', r).attr('fill', cor(val(ext)))
-      .attr('stroke', 'var(--color-fg-muted)').attr('stroke-width', 0.6)
-      .on('pointermove', (ev) => dica(ev, ext)).on('pointerleave', () => tip.hide());
-    svg.append('text').attr('x', cx).attr('y', cy + r + 13).attr('text-anchor', 'middle').attr('fill', 'var(--color-fg-muted)')
-      .style('font-size', 'var(--cds-font-size-caption)').text('Exterior');
+  const areaBR = d3.sum(fc.features, (f) => path.area(f));
+  const totBR = d3.sum(fc.features, (f) => (por.get(f.properties.uf) || {}).eleitores || 0);
+  const [[bx0, by0], [bx1, by1]] = path.bounds(fc);
+  if (!escala) {
+    svg.append('g').selectAll('path').data(fc.features).join('path').attr('d', path)
+      .attr('fill', (f) => cor(val(por.get(f.properties.uf)))).attr('stroke', 'var(--color-panel)').attr('stroke-width', 0.8)
+      .on('pointermove', (ev, f) => dica(ev, por.get(f.properties.uf))).on('click', (ev, f) => dica(ev, por.get(f.properties.uf)))
+      .on('pointerleave', () => tip.hide());
+    // exterior: círculo no oceano, com a área que teria na densidade média do país
+    if (ext) {
+      const r = Math.max(2, Math.sqrt((ext.eleitores || 0) / (totBR / areaBR) / Math.PI));
+      const cx = Math.min(W - r - 6, bx1 - 10), cy = Math.min(H - 60 - r, by1 - 40);
+      svg.append('circle').attr('cx', cx).attr('cy', cy).attr('r', r).attr('fill', cor(val(ext)))
+        .attr('stroke', 'var(--color-fg-muted)').attr('stroke-width', 0.6)
+        .on('pointermove', (ev) => dica(ev, ext)).on('click', (ev) => dica(ev, ext)).on('pointerleave', () => tip.hide());
+      svg.append('text').attr('x', cx).attr('y', cy + r + 13).attr('text-anchor', 'middle').attr('fill', 'var(--color-fg-muted)')
+        .style('font-size', 'var(--cds-font-size-caption)').text('Exterior');
+    }
+  } else {
+    // cartograma de Dorling: um círculo por estado com área proporcional ao eleitorado, perto da posição real,
+    // afastados até não se sobreporem (o exterior entra como mais um círculo, no Atlântico)
+    const k = 0.45 * areaBR / Math.max(totBR + (ext ? ext.eleitores || 0 : 0), 1);
+    const meio = [(bx0 + bx1) / 2, (by0 + by1) / 2];
+    const nos = fc.features.map((f) => { const r = por.get(f.properties.uf); const [x, y] = path.centroid(f); return { uf: f.properties.uf, r, x, y }; })
+      .filter((n) => n.r);
+    if (ext) nos.push({ uf: 'Exterior', r: ext, x: bx1 - 10, y: by1 - 60 });
+    nos.forEach((n) => {
+      n.raio = Math.max(2, Math.sqrt((n.r.eleitores || 0) * k / Math.PI));
+      n.tx = meio[0] + (n.x - meio[0]) * 0.6; n.ty = meio[1] + (n.y - meio[1]) * 0.6;
+      if (n.uf === 'Exterior') { n.tx = n.x; n.ty = n.y; }
+      n.x = n.tx; n.y = n.ty;
+    });
+    const sim = d3.forceSimulation(nos).stop()
+      .force('x', d3.forceX((n) => n.tx).strength(0.06)).force('y', d3.forceY((n) => n.ty).strength(0.06))
+      .force('colide', d3.forceCollide((n) => n.raio + 1.2).strength(1).iterations(4));
+    for (let t = 0; t < 400; t++) sim.tick();
+    // garante zero sobreposição (relaxação final só com colisão)
+    sim.force('x', null).force('y', null);
+    for (let t = 0; t < 80; t++) sim.tick();
+    // ajusta à área do desenho
+    const x0 = d3.min(nos, (n) => n.x - n.raio), x1 = d3.max(nos, (n) => n.x + n.raio);
+    const y0 = d3.min(nos, (n) => n.y - n.raio), y1 = d3.max(nos, (n) => n.y + n.raio);
+    const esc = Math.min((W - 12) / (x1 - x0), (H - 56) / (y1 - y0), 1.6);
+    const ox = (W - (x1 - x0) * esc) / 2 - x0 * esc, oy = 6 - y0 * esc;
+    const g = svg.append('g').selectAll('g').data(nos).join('g').attr('transform', (n) => `translate(${n.x * esc + ox},${n.y * esc + oy})`);
+    g.append('circle').attr('r', (n) => n.raio * esc).attr('fill', (n) => cor(val(n.r)))
+      .attr('stroke', (n) => n.uf === 'Exterior' ? 'var(--color-fg-muted)' : 'var(--color-panel)').attr('stroke-width', 0.8)
+      .on('pointermove', (ev, n) => dica(ev, n.r)).on('click', (ev, n) => dica(ev, n.r)).on('pointerleave', () => tip.hide());
+    const forte = (n) => { const v = val(n.r); return v !== null && v !== undefined && Math.abs(v - 50) > 13; };
+    g.filter((n) => n.raio * esc > 9).append('text').attr('text-anchor', 'middle').attr('dy', '0.35em')
+      .attr('fill', (n) => forte(n) ? '#fff' : '#222').style('font-size', (n) => n.raio * esc > 16 ? '11px' : '9px').style('pointer-events', 'none')
+      .text((n) => n.uf === 'Exterior' ? 'EXT' : n.uf);
   }
   function dica(ev, r) {
       if (!r) return;

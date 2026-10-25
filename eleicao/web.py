@@ -103,11 +103,12 @@ def gerar_site(saida, pasta_site, titulo="Previsão do 2º turno presidencial 20
     with open(os.path.join(pasta_site, "index.html"), "w", encoding="utf-8") as f:
         doc = CABECALHO.format(dados=js, og=og.replace('"', "'"), titulo=titulo) + corpo + RODAPE
         if artefato:  # página sem <html>/<head>/<body> próprios (a plataforma adiciona)
-            for tag in ["<!doctype html>\n", '<html lang="pt-BR"><head>', "</head><body>", "</body></html>"]:
+            for tag in ['<html lang="pt-BR"><head>', "</head><body>", "</body></html>"]:
                 doc = doc.replace(tag, "")
             doc = doc.replace("body {", "body.lx-site, body {")
         f.write(doc)
-    for img in ["painel.png", "estados.png", "mapa_municipios.png"]:
+    for img in ["painel.png", "estados.png", "mapa_municipios.png", "dados_municipios.csv", "coeficientes_grupos.csv",
+                "resumo_grupos.csv"]:
         if os.path.exists(os.path.join(saida, img)):
             shutil.copy(os.path.join(saida, img), os.path.join(pasta_site, img))
     open(os.path.join(pasta_site, ".nojekyll"), "w").close()

@@ -1,3 +1,10 @@
 [
- {"quando": "25/10/2026 10:30", "texto": "Página no ar com a previsão antes do início da apuração (transferências de 2022 e pesquisas de 2º turno como ponto de partida). Novos: coluna de % do eleitorado, treemaps de votos apurados e estimados, mapa por estado e horário previsto da próxima atualização."}
+ {
+  "quando": "25/10/2026 10:30",
+  "texto": "Página no ar com a previsão antes do início da apuração (transferências de 2022 e pesquisas de 2º turno como ponto de partida). Novos: coluna de % do eleitorado, treemaps de votos apurados e estimados, mapa por estado e horário previsto da próxima atualização."
+ },
+ {
+  "quando": "25/10/2026 11:05",
+  "texto": "Seletor Lula/Flávio na previsão por grupo; mapa por estado com círculos proporcionais ao eleitorado; informações ao passar o mouse (ou tocar) nos gráficos, que não apareciam; mapa estático por município; dados em CSV na seção de metodologia."
+ }
 ]

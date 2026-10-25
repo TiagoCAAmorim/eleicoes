@@ -1,7 +1,7 @@
 """Roda o modelo sobre um retrato da apuração e monta os resumos por grupo."""
 import numpy as np
 
-from . import mapa_mun, modelo
+from . import exportar, mapa_mun, modelo
 from .geo import PORTES
 
 NIVEIS = [("Brasil", "brasil"), ("Região", "regiao"), ("Porte", "porte"), ("UF", "uf")]
@@ -60,4 +60,6 @@ def prever(df, nomes, cfg=None):
         "transferencias": _transferencias(aj, cfg, [n.split()[0] for n in nomes]),  # nomes curtos nas tabelas
         "s0": aj.s0,
         "_municipios": mapa_mun.tabela(df, final),  # não vai para o JSON
+        "_csv": {"dados_municipios": exportar.municipios(df, aj, final, nomes),
+                 "coeficientes_grupos": exportar.coeficientes(aj, nomes)},  # idem
     }

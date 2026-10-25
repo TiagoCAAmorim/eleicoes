@@ -13,7 +13,7 @@ import time
 import numpy as np
 import pandas as pd
 
-from eleicao import mapa_mun, painel, tse
+from eleicao import exportar, mapa_mun, painel, tse
 from eleicao.previsao import prever
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
@@ -85,6 +85,7 @@ def _proxima(pct_secoes, loop):
 
 def gerar_saidas(res, saida):
     mun = res.pop("_municipios", None)
+    csvs = res.pop("_csv", {})
     hist_path = os.path.join(saida, "historico.csv")
     br = res["grupos"]["Brasil"]["Brasil"]
     linha = {"hora": res["hora"], "pct_secoes": res["pct_secoes"], "parcial_A": res["parcial_A"],
@@ -104,6 +105,10 @@ def gerar_saidas(res, saida):
             mapa_mun.imagem(res, mun, _munis(), os.path.join(saida, "mapa_municipios.png"))
         except Exception as ex:  # noqa: BLE001
             print("mapa por município falhou:", repr(ex), flush=True)
+    # dados para download (separador ";" e vírgula decimal, que o Excel em português abre direto)
+    csvs["resumo_grupos"] = exportar.resumo_grupos(res)
+    for nome, tab in csvs.items():
+        tab.to_csv(os.path.join(saida, f"{nome}.csv"), sep=";", decimal=",", index=False, encoding="utf-8-sig")
     with open(os.path.join(saida, "resultado.json"), "w") as f:
         json.dump(res, f, ensure_ascii=False, indent=1)
     painel.dados_web(res, hist, os.path.join(saida, "web"))
