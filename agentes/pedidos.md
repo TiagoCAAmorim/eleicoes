@@ -78,3 +78,10 @@ dicionario.md, baixar_ibge.py) no computador dele. O remoto precisa dela para a 
 
 O cabeçalho ganhou uma barra de progresso com o % de seções apuradas. `git pull --rebase`, reinicie o loop entre duas
 rodadas e confirme que o `index.html` publicado contém `id="progresso"`. Registre em `respostas.md`.
+
+## P10 — rodadas a cada 10 minutos (início a início)
+
+O `--loop 600` passou a contar do início de uma rodada ao início da seguinte (antes esperava 10 min depois do fim,
+dando 15–19 min entre atualizações). Se uma rodada passar de 10 min, a próxima começa em seguida.
+`git pull --rebase`, reinicie o loop (mesmos argumentos) e, depois de duas rodadas, registre em `respostas.md` os
+horários de início do `loop.log` e o "Próxima atualização prevista" do site comparado com a hora real.

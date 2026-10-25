@@ -71,12 +71,14 @@ def _hora_tse(br):
         return dt.datetime.now(FUSO)
 
 
-def _proxima(pct_secoes, loop):
-    """Horário previsto da próxima atualização do painel (texto, horário de Brasília)."""
+def _proxima(pct_secoes, loop, inicio):
+    """Horário previsto da próxima atualização do painel (texto, horário de Brasília).
+    As rodadas começam a cada `loop` segundos; a próxima publica ~uma duração de rodada depois de começar."""
     agora = dt.datetime.now(FUSO)
     if not loop:
         return ""
-    prox = agora + dt.timedelta(seconds=loop + 120)  # intervalo + tempo de uma rodada
+    dur = time.time() - inicio + 60  # download + modelo até aqui, + publicação
+    prox = dt.datetime.fromtimestamp(inicio + max(loop, dur) + dur, FUSO)
     if pct_secoes <= 0:
         # urnas fecham às 17h (Brasília); os primeiros resultados saem em seguida
         prox = max(prox, agora.replace(hour=17, minute=15, second=0, microsecond=0))
@@ -166,7 +168,7 @@ def rodada(args):
     res["hora"] = hora.isoformat()
     res["hora_txt"] = hora.strftime("%d/%m %H:%M")
     res["pct_secoes"] = 100 * br["st"] / max(br["ts"], 1)
-    res["proxima_txt"] = _proxima(res["pct_secoes"], args.loop)
+    res["proxima_txt"] = _proxima(res["pct_secoes"], args.loop, t0)
     gerar_saidas(res, args.saida)
     b = res["grupos"]["Brasil"]["Brasil"]
     print(f"{res['hora_txt']} {res['pct_secoes']:.2f}% seções | {nomes[0]} {b['A_media']:.2f}% "
@@ -232,6 +234,7 @@ def main():
         demo_2022(args)
         return
     while True:
+        inicio = time.time()  # o intervalo conta do início de uma rodada ao início da seguinte
         try:
             rodada(args)
             if args.git_push:
@@ -246,7 +249,7 @@ def main():
                 raise
         if not args.loop:
             break
-        time.sleep(args.loop)
+        time.sleep(max(0, args.loop - (time.time() - inicio)))
 
 
 if __name__ == "__main__":
