@@ -33,3 +33,13 @@ A página ganhou um contador de acessos (imagem de hits.sh no canto inferior dir
 
 O TSE publica o nome sem acento; `run.py` agora corrige para "Flávio". `git pull --rebase`, reinicie o loop e confirme
 no site que aparece "Flávio" no placar e no seletor.
+
+## P5 — contador de acessos não aparece para o Tiago
+
+No navegador do Tiago aparece só o link, sem a imagem. Investigue e responda logo (não espere o ciclo):
+
+1. `curl -s -o /tmp/hits.svg -w "%{http_code} %{content_type}\n" "https://hits.sh/tiagocaamorim.github.io/eleicoes_2026.svg?style=flat-square&label=acessos&color=8a8985&labelColor=5f5e5a"`
+   e `head -c 300 /tmp/hits.svg`.
+2. No Playwright, abra o site e verifique se a imagem `.lx-contador img` carrega (`naturalWidth > 0`); registre erros
+   de rede do console.
+3. `git pull --rebase` e reinicie o loop: agora, se a imagem falhar, o link some (em vez de aparecer vazio).

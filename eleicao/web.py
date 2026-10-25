@@ -78,7 +78,7 @@ RODAPE = """
 CONTADOR = """
 <a class="lx-contador" href="https://hits.sh/" title="Contador de acessos (hits.sh)" target="_blank" rel="noopener">
 <img src="https://hits.sh/tiagocaamorim.github.io/eleicoes_2026.svg?style=flat-square&amp;label=acessos&amp;color=8a8985&amp;labelColor=5f5e5a"
- alt="contador de acessos" height="16" loading="lazy"></a>
+ alt="" height="16" onerror="this.parentNode.style.display='none'"></a>
 <style>.lx-contador{position:fixed;right:8px;bottom:8px;opacity:.55;line-height:0;z-index:5}
 .lx-contador:hover{opacity:1}@media print{.lx-contador{display:none}}</style>
 """
