@@ -43,7 +43,11 @@ def prever(df, nomes, cfg=None):
             r = modelo.resumo_grupo(sims[nome])
             ea, e2 = df.loc[sel, "Ea"].sum(), df.loc[sel, "E2"].sum()
             va, vb = df.loc[sel, "A2"].sum(), df.loc[sel, "B2"].sum()
-            r["pct_apurado"] = float(100 * ea / max(e2, 1))
+            # % de seções totalizadas, como o TSE mostra (sem as colunas de seções, % do eleitorado apurado)
+            if "ts" in df and df.loc[sel, "ts"].sum() > 0:
+                r["pct_apurado"] = float(100 * df.loc[sel, "st"].sum() / df.loc[sel, "ts"].sum())
+            else:
+                r["pct_apurado"] = float(100 * ea / max(e2, 1))
             r["parcial"] = float(100 * va / max(va + vb, 1)) if va + vb > 0 else float("nan")
             r["eleitores"] = float(e2)
             r["pct_eleitorado"] = float(100 * e2 / max(df["E2"].sum(), 1))

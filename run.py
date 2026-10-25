@@ -59,7 +59,7 @@ def montar(munis, t1, t2):
         "uf": df["uf"], "mun": df["mun"], "nome": df["nome"], "capital": df["capital"].astype(bool),
         "E1": df["E_1"], "A1": df["A_1"], "B1": df["B_1"], "O1": df["O_1"], "W1": df["brancos_1"] + df["nulos_1"],
         "E2": np.where(df["E_2"] > 0, df["E_2"], df["E_1"]), "Ea": df["Ea_2"], "A2": df["A_2"], "B2": df["B_2"],
-        "W2": df["brancos_2"] + df["nulos_2"], "C2": df["C_2"],
+        "W2": df["brancos_2"] + df["nulos_2"], "C2": df["C_2"], "st": df["st_2"], "ts": df["ts_2"],
     })
     return out
 
@@ -188,6 +188,8 @@ def rodada(args):
     res["hora"] = hora.isoformat()
     res["hora_txt"] = hora.strftime("%d/%m %H:%M")
     res["pct_secoes"] = 100 * br["st"] / max(br["ts"], 1)
+    if br["st"] > 0:
+        res["grupos"]["Brasil"]["Brasil"]["pct_apurado"] = res["pct_secoes"]  # igual ao do TSE e ao do topo da página
     if args.vigiar and br["st"] > 0:
         res["proxima_txt"] = (f"atualiza assim que o TSE publicar dados novos "
                               f"(verificação a cada {max(1, round(args.vigiar / 60))} min)")

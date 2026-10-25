@@ -22,7 +22,7 @@ FUSO = dt.timezone(dt.timedelta(hours=-3))
 
 class Relatorio:
     def __init__(self):
-        self.linhas, self.alertas = [], 0
+        self.linhas, self.alertas, self.extra = [], 0, ""
 
     def ok(self, nome, detalhe=""):
         self.linhas.append(f"- OK · {nome}" + (f": {detalhe}" if detalhe else ""))
@@ -113,6 +113,33 @@ def checar_previsao(rel, saida):
     return res
 
 
+def comparar_tse(rel, res, t2, ciclo):
+    """Compara o que a página mostra (resultado.json) com os arquivos oficiais do TSE, Brasil e cada UF:
+    % de seções totalizadas e % de Lula nos votos válidos. Diferenças vêm da assincronia entre os arquivos
+    das UFs e dos municípios (a página usa os municipais) ou de erro de coleta."""
+    linhas, grandes = [], []
+    alvos = [("Brasil", "br", res["grupos"]["Brasil"]["Brasil"])] + [
+        ("Exterior" if u == "zz" else u.upper(), u, g) for u, g in res["grupos"]["UF"].items()]
+    for nome, uf, g in alvos:
+        try:
+            r = tse.parse_abr(tse._get(tse.url_abr(t2, uf, "", ciclo)))
+        except Exception as ex:  # noqa: BLE001
+            linhas.append(f"| {nome} | erro {ex!r} | | | |")
+            continue
+        pst = 100 * r["st"] / max(r["ts"], 1)
+        lula = 100 * r["A"] / (r["A"] + r["B"]) if r["A"] + r["B"] else float("nan")
+        d_st, d_lula = g["pct_apurado"] - pst, g["parcial"] - lula
+        linhas.append(f"| {nome} | {pst:.2f} / {g['pct_apurado']:.2f} | {lula:.2f} / {g['parcial']:.2f} | "
+                      f"{d_st:+.2f} | {d_lula:+.2f} |")
+        if abs(d_st) > 1 or (lula == lula and g["parcial"] == g["parcial"] and abs(d_lula) > 0.5):
+            grandes.append(f"{nome} (seções {d_st:+.1f} pt, Lula {d_lula:+.1f} pt)")
+    (rel.alerta if grandes else rel.ok)(
+        "página x TSE", ("diferenças acima de 1 pt nas seções ou 0,5 pt em Lula: " + "; ".join(grandes))
+        if grandes else "Brasil e UFs batem com os arquivos do TSE")
+    rel.extra = ("\n## Página x TSE (TSE / página)\n\n| | % seções | % Lula (válidos) | dif. seções | dif. Lula |\n"
+                 "|---|---|---|---|---|\n" + "\n".join(linhas) + "\n")
+
+
 def checar_site(rel, url, res):
     if not url:
         return
@@ -152,10 +179,12 @@ def main():
     if not args.sem_tse:
         checar_tse(rel, args.saida, args.t2, args.ciclo)
     res = checar_previsao(rel, args.saida)
+    if not args.sem_tse:
+        comparar_tse(rel, res, args.t2, args.ciclo)
     checar_site(rel, args.site_url, res)
     checar_log(rel, args.log)
     texto = (f"# Verificação {agora:%d/%m %H:%M} (Brasília)\n\n"
-             f"Resultado: {'tudo ok' if not rel.alertas else f'{rel.alertas} alerta(s)'}\n\n" + "\n".join(rel.linhas) + "\n")
+             f"Resultado: {'tudo ok' if not rel.alertas else f'{rel.alertas} alerta(s)'}\n\n" + "\n".join(rel.linhas) + "\n" + rel.extra)
     print(texto)
     if args.relatorio:
         with open(args.relatorio, "w", encoding="utf-8") as f:

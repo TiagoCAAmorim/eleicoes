@@ -196,3 +196,18 @@ Mudou `eleicao/web.py` (botão com ícone no canto superior direito que busca os
 `data/atualizacoes.json`. `git pull --rebase` e reinicie o loop entre duas rodadas. Depois da próxima publicação,
 confirme no Playwright que `.lx-refresh` existe, que o clique faz uma requisição a `index.html?t=...` e que não há
 erros de JS. Registre em `respostas.md`.
+
+## P21 — comparar a página com o TSE em todo ciclo (pedido do Tiago, prioridade)
+
+O Tiago viu discrepâncias entre a página e o site do TSE. Mudanças:
+- `eleicao/previsao.py` e `run.py`: o "% apurado" dos grupos agora é % de **seções totalizadas** (como o TSE), não %
+  do eleitorado apurado; o do Brasil é o do arquivo Brasil (igual ao topo da página).
+- `scripts/verificar.py`: nova verificação "página x TSE" que compara, para o Brasil e cada UF, o % de seções e o %
+  de Lula nos válidos do `resultado.json` com o arquivo oficial da UF, e anexa a tabela ao relatório.
+
+1. `git pull --rebase` e reinicie o loop entre duas rodadas (P20 pode ir junto).
+2. Em **todo** ciclo, inclua no relatório a tabela "Página x TSE". A cada ~30 min, confira também 3 UFs à sua escolha
+   na página oficial (https://resultados.tse.jus.br/oficial/app/index.html, Playwright) e anote se batem com a tabela.
+3. Para cada diferença acima do limite, diga a causa provável: arquivo da UF atrasado em relação aos municípios
+   (soma dos municípios > UF), municípios atrasados (soma < UF), ou outra coisa. Se não for assincronia (por ex.
+   municípios com mais seções que o total do município, ou a diferença não diminui em 30 min), coloque no `status.md`.

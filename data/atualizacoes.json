@@ -34,5 +34,9 @@
  {
   "quando": "25/10/2026 19:45",
   "texto": "Botão de atualizar (ícone no canto superior direito): busca na hora os números mais recentes, sem recarregar a página."
+ },
+ {
+  "quando": "25/10/2026 20:00",
+  "texto": "Correção: o \"% apurado\" das tabelas passou a ser o % de seções totalizadas, como no site do TSE (antes era o % do eleitorado das seções apuradas, um pouco diferente). O do Brasil agora é igual ao do topo da página. Diferenças pequenas por estado ainda podem aparecer porque o TSE publica o arquivo de cada estado e os dos municípios em momentos diferentes; a página usa os dos municípios."
  }
 ]
