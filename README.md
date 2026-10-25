@@ -14,6 +14,7 @@ Ficam em `saida/2026/` (atualizadas no branch do projeto a cada rodada):
 | `estados.png` | Previsão por região, porte e estado com intervalo |
 | `mapa_municipios.png` | Mapa por município: apurado e previsto, em polígonos e em círculos proporcionais aos votos |
 | `index.html` | Página única com tudo, inclusive as transferências estimadas |
+| `analises.html` (no site) | Detalhe por município (busca) e curiosidades; lê `dados_municipios.csv` publicado a cada rodada |
 | `historico.csv` | Uma linha por rodada (base da linha do tempo) |
 | `resultado.json` | Todos os números da última rodada |
 

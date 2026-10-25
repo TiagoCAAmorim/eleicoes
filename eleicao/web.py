@@ -121,6 +121,7 @@ def gerar_site(saida, pasta_site, titulo="Previsão do 2º turno presidencial 20
                 "resumo_grupos.csv"]:
         if os.path.exists(os.path.join(saida, img)):
             shutil.copy(os.path.join(saida, img), os.path.join(pasta_site, img))
+    shutil.copy(os.path.join(AQUI, "analises.html"), os.path.join(pasta_site, "analises.html"))  # lê dados_municipios.csv
     open(os.path.join(pasta_site, ".nojekyll"), "w").close()
 
 
