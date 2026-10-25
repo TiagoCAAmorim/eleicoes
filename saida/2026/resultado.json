@@ -15,7 +15,7 @@
     "comparecimento": 78.07696092187398,
     "brancos_nulos": 5.471331439354766,
     "pct_apurado": 0.011546153918742214,
-    "parcial": 68.68365946999783,
+    "parcial": 57.655409047992066,
     "eleitores": 158745502.0,
     "pct_eleitorado": 100.0,
     "votos_A_apurado": 9512.0,
@@ -733,7 +733,7 @@
    }
   }
  },
- "parcial_A": 68.68365946999783,
+ "parcial_A": 57.655409047992066,
  "transferencias": {
   "Brasil": {
    "Lula→Flávio": [
@@ -1069,5 +1069,5 @@
  "hora": "2026-10-25T17:06:31-03:00",
  "hora_txt": "25/10 17:06",
  "pct_secoes": 0.24536903502868315,
- "proxima_txt": "~17:33"
+ "proxima_txt": "~17:35"
 }
