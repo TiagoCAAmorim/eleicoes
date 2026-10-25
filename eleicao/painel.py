@@ -31,10 +31,14 @@ def _pct(x, casas=1):
 
 def _linha_tempo(ax, hist, nomes):
     h = hist.copy()
-    h["t"] = pd.to_datetime(h["hora"])
+    h["t"] = pd.to_datetime(h["hora"], utc=True).dt.tz_convert("America/Sao_Paulo").dt.tz_localize(None)
     a, b = nomes
     ax.fill_between(h["t"], h["A_p05"], h["A_p95"], color=COR_A, alpha=0.18, lw=0)
     ax.fill_between(h["t"], 100 - h["A_p95"], 100 - h["A_p05"], color=COR_B, alpha=0.18, lw=0)
+    ax.errorbar(h["t"], h["A_media"], yerr=[h["A_media"] - h["A_p05"], h["A_p95"] - h["A_media"]], fmt="none",
+                ecolor=COR_A, elinewidth=1, capsize=3, alpha=0.7)
+    ax.errorbar(h["t"], 100 - h["A_media"], yerr=[h["A_p95"] - h["A_media"], h["A_media"] - h["A_p05"]], fmt="none",
+                ecolor=COR_B, elinewidth=1, capsize=3, alpha=0.7)
     ax.plot(h["t"], h["A_media"], color=COR_A, lw=2, marker="o", ms=4, label=f"{a} (previsão)")
     ax.plot(h["t"], 100 - h["A_media"], color=COR_B, lw=2, marker="o", ms=4, label=f"{b} (previsão)")
     ax.plot(h["t"], h["parcial_A"], color=COR_A, lw=1, ls=":", label=f"{a} (apurado)")
@@ -47,6 +51,9 @@ def _linha_tempo(ax, hist, nomes):
     hi = 100 - lo
     ax.set_ylim(max(0, min(lo, 45) - 1), min(100, max(hi, 55) + 1))
     ax.legend(loc="upper left", fontsize=8, frameon=False, ncol=2)
+    if h["t"].nunique() == 1:
+        t0 = h["t"].iloc[0]
+        ax.set_xlim(t0 - pd.Timedelta(minutes=30), t0 + pd.Timedelta(minutes=30))
     if len(h) > 1:
         for _, r in h.iloc[[-1]].iterrows():
             ax.annotate(_pct(r["A_media"]), (r["t"], r["A_media"]), xytext=(4, 0), textcoords="offset points",
@@ -75,7 +82,8 @@ def imagem_principal(res, hist, caminho):
         fig.text(x + 0.025, 0.895, nome, fontsize=13, weight="bold", color=TINTA)
         fig.text(x + 0.025, 0.845, _pct(m), fontsize=30, weight="bold", color=TINTA)
         fig.text(x + 0.24, 0.868, f"chance de vencer\n{_pct(100 * p, 0)}", fontsize=11, color=TINTA, va="center")
-        fig.text(x + 0.025, 0.815, f"intervalo 90%: {_pct(lo)} a {_pct(hi)} · apurado: {_pct(parc)}", fontsize=8.5,
+        parc_txt = _pct(parc) if res["pct_secoes"] > 0 else "—"
+        fig.text(x + 0.025, 0.815, f"intervalo 90%: {_pct(lo)} a {_pct(hi)} · apurado: {parc_txt}", fontsize=8.5,
                  color=TINTA2)
     ax = fig.add_axes([0.09, 0.45, 0.86, 0.31])
     ax.set_title("Linha do tempo da previsão (faixa = intervalo de 90%)", fontsize=11, loc="left", color=TINTA)
