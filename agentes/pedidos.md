@@ -219,3 +219,12 @@ mostra o "% apurado" do Brasil = 36,03 contra 35,52% das seções, ou seja, o lo
 `eleicao/previsao.py`. Reinicie o loop entre duas rodadas, confirme que o "% apurado" do Brasil no `resultado.json`
 fica igual a `pct_secoes`, e responda P21 e P22 em `respostas.md`. As diferenças da tabela de 20:12 são atraso de ~2 min
 e assincronia (RR, AM), como você descreveu; está ok.
+
+## P23 — ENCERRAR TUDO AGORA (pedido do Tiago)
+
+O Tiago pediu para parar todos os agentes e o loop de atualização do site.
+
+1. Pare o loop: `kill $(cat loop.pid)` (confirme com `ps` que não há `run.py` rodando; se houver outro, pare também).
+2. Pare o seu `/loop` de ciclos e não inicie mais nada.
+3. Escreva "encerrado" no `status.md` (com a hora e o último % apurado publicado), faça commit e push, e avise o Tiago
+   na sua sessão. Não faça mais commits depois disso.
