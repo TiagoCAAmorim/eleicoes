@@ -1,5 +1,8 @@
 # Revisão do modelo do 2º turno (etapa 3, parte 1: incerteza)
 
+> Validado depois em 32 apurações sintéticas plausíveis ([estresse.md](estresse.md)): cobertura de 95% no intervalo
+> de 90% e 57% no de 50%, sem chamadas erradas. A ordem "adversa" deixou de ser usada como critério.
+
 Esta parte trata só da incerteza e da curva de transição, que podiam ser testadas com os dados que já temos
 (rejogo de 2026 e backtest de 2022). Matriz mais flexível, covariáveis (deputados, reeleição, coligações) e
 priori calibrada dependem da base histórica (etapa 2).
