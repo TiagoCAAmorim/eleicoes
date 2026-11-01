@@ -26,14 +26,19 @@ TOL = 0.1  # pontos: erros menores que isso não contam como falha de cobertura 
 FAIXAS = [(-0.01, 0.01, "antes de abrir"), (0.01, 5, "até 5%"), (5, 15, "5 a 15%"), (15, 30, "15 a 30%"),
           (30, 60, "30 a 60%"), (60, 99.5, "60 a 99,5%")]
 
-# cada variante = mudanças sobre a configuração usada ao vivo (config_2026)
+# cada variante = mudanças sobre config_2026(), que desde a etapa 3 usa o modelo revisado. AO_VIVO desfaz a revisão
+# e reproduz o modelo usado na noite (curva de transição até 25%, sem os choques novos).
+AO_VIVO = {"transicao_centro": 25.0, "choque_nacional": 0.0, "choque_parcial": 0.0, "choque_uf_inicio": 0.0}
 VARIANTES = {
-    "atual": {},
-    "sem_curva": {"transicao_centro": None},
-    "sem_curva_choque": {"transicao_centro": None, "choque_nacional": 0.02},
-    "sem_curva_choque_v2": {"transicao_centro": None, "choque_nacional": 0.02, "matriz_v2": True},
-    "sem_curva_choque_v2_priori": {"transicao_centro": None, "choque_nacional": 0.02, "matriz_v2": True,
+    "atual": AO_VIVO,
+    "sem_curva": {**AO_VIVO, "transicao_centro": None},
+    "sem_curva_choque": {**AO_VIVO, "transicao_centro": None, "choque_nacional": 0.02},
+    "sem_curva_choque_v2": {**AO_VIVO, "transicao_centro": None, "choque_nacional": 0.02, "matriz_v2": True},
+    "sem_curva_choque_v2_priori": {**AO_VIVO, "transicao_centro": None, "choque_nacional": 0.02, "matriz_v2": True,
                                    "sd_priori_informativa": 1.0},
+    # etapa 3
+    "revisado": {},
+    "revisado_uf_menor": {"choque_uf_inicio": 0.02},
 }
 DESCRICAO = {
     "atual": "Modelo usado ao vivo (curva de transição até 25%)",
@@ -41,6 +46,8 @@ DESCRICAO = {
     "sem_curva_choque": "Sem curva + choque nacional (2% do eleitorado restante na margem)",
     "sem_curva_choque_v2": "Sem curva + choque nacional + matriz v2 (branco/nulo → candidatos, falta separada)",
     "sem_curva_choque_v2_priori": "Igual à anterior, com priori mais larga (desvio 1,0 em vez de 0,7)",
+    "revisado": "Revisado (etapa 3): sem curva, choque nacional 1%, viés da evidência parcial 1,5%, UF no início 4%",
+    "revisado_uf_menor": "Revisado com choque por UF no início menor (2%)",
 }
 
 

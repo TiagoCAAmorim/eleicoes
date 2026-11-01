@@ -66,5 +66,6 @@ Para incluir uma eleição no site: coloque as saídas em `resultados/<id>/` e a
 
 - [docs/metodologia.md](docs/metodologia.md): o modelo do 2º turno e o backtest de 2022
 - [docs/rejogo-2026.md](docs/rejogo-2026.md): variantes do modelo na apuração real de 2026 e em 2022
+- [docs/revisao-t2.md](docs/revisao-t2.md): revisão da incerteza do modelo do 2º turno (sem curva de transição)
 - [docs/roteiro.md](docs/roteiro.md): etapas da revisão do modelo e da expansão para outros cargos
 - [docs/historico/](docs/historico/): protocolo dos agentes usados durante a apuração de 2026

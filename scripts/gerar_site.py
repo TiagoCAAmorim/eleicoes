@@ -21,6 +21,7 @@ from eleicoes.site import web
 FUSO = dt.timezone(dt.timedelta(hours=-3))
 PAGINAS = ["index.html", "modelos.html", "analises.html"]
 NOMES_ORDEM = {"2022": "Parecida com a real (Sul e Sudeste antes)", "aleatoria": "Aleatória por seção",
+               "zonas": "Parecida com a real, com zonas pró-Bolsonaro antes em cada município",
                "adversa": "Adversa (seções pró-Bolsonaro primeiro)"}
 
 

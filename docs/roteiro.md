@@ -8,7 +8,7 @@ Planejamento acordado em 01/11/2026, depois da apuração do 2º turno de 2026.
 | 0b | Painel: diagrama de Sankey das transferências de votos previstas (Brasil e regiões) | Feito |
 | 1 | Banco de testes: rejogar a apuração real de 2026 (46 retratos) e 2022; métricas por % apurado (erro, cobertura 50/90%, CRPS, momento da "chamada"). Resultados em [rejogo-2026.md](rejogo-2026.md) | Feito |
 | 2 | Base histórica do TSE 2006–2024 (presidente, governador, senador, prefeito, deputados), baixada pelo Actions | |
-| 3 | Revisão do modelo do 2º turno: matriz mais flexível, covariáveis (deputados, reeleição, coligações), priori calibrada, incerteza honesta | |
+| 3 | Revisão do modelo do 2º turno: matriz mais flexível, covariáveis (deputados, reeleição, coligações), priori calibrada, incerteza honesta | Incerteza e curva feitas ([revisao-t2.md](revisao-t2.md)); resto depende da etapa 2 |
 | 4 | Teste de estresse com várias marchas de apuração; critério: intervalo de 90% cobre ~90% em toda faixa de % apurado | |
 | 5 | Outros cargos majoritários: governador, senador, prefeito | |
 | 6 | Previsão do 1º turno: chance de vencer no 1º turno e de ir ao 2º | |

@@ -1,18 +1,28 @@
 {
  "atual": {
-  "mudancas": {},
+  "mudancas": {
+   "transicao_centro": 25.0,
+   "choque_nacional": 0.0,
+   "choque_parcial": 0.0,
+   "choque_uf_inicio": 0.0
+  },
   "descricao": "Modelo usado ao vivo (curva de transição até 25%)"
  },
  "sem_curva": {
   "mudancas": {
-   "transicao_centro": null
+   "transicao_centro": null,
+   "choque_nacional": 0.0,
+   "choque_parcial": 0.0,
+   "choque_uf_inicio": 0.0
   },
   "descricao": "Sem a curva de transição"
  },
  "sem_curva_choque": {
   "mudancas": {
    "transicao_centro": null,
-   "choque_nacional": 0.02
+   "choque_nacional": 0.02,
+   "choque_parcial": 0.0,
+   "choque_uf_inicio": 0.0
   },
   "descricao": "Sem curva + choque nacional (2% do eleitorado restante na margem)"
  },
@@ -20,6 +30,8 @@
   "mudancas": {
    "transicao_centro": null,
    "choque_nacional": 0.02,
+   "choque_parcial": 0.0,
+   "choque_uf_inicio": 0.0,
    "matriz_v2": true
   },
   "descricao": "Sem curva + choque nacional + matriz v2 (branco/nulo → candidatos, falta separada)"
@@ -28,9 +40,21 @@
   "mudancas": {
    "transicao_centro": null,
    "choque_nacional": 0.02,
+   "choque_parcial": 0.0,
+   "choque_uf_inicio": 0.0,
    "matriz_v2": true,
    "sd_priori_informativa": 1.0
   },
   "descricao": "Igual à anterior, com priori mais larga (desvio 1,0 em vez de 0,7)"
+ },
+ "revisado": {
+  "mudancas": {},
+  "descricao": "Revisado (etapa 3): sem curva, choque nacional 1%, viés da evidência parcial 1,5%, UF no início 4%"
+ },
+ "revisado_uf_menor": {
+  "mudancas": {
+   "choque_uf_inicio": 0.02
+  },
+  "descricao": "Revisado com choque por UF no início menor (2%)"
  }
 }
