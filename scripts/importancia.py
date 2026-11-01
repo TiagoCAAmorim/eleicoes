@@ -7,7 +7,7 @@ de grupos (treina de novo sem o grupo). Também calcula a correlação de Spearm
     pip install lightgbm scikit-learn   # só para este script; o loop não precisa
     python scripts/importancia.py
 
-Saídas em saida/importancia/: importancia.json (resultados) e indicadores_mun.json (valores por município,
+Saídas em resultados/importancia/: importancia.json (resultados) e indicadores_mun.json (valores por município,
 para o gráfico de dispersão). web.gerar_site copia os dois e a página para o site.
 """
 import argparse
@@ -32,7 +32,7 @@ warnings.filterwarnings("ignore", category=Warning, module="lightgbm")
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CHAVES = {"cdi", "cod_tse", "uf", "mun", "nome", "municipio", "cod_ibge"}
 
-# rótulo e grupo de cada indicador da base data/ibge (colunas novas caem nas regras por padrão do nome)
+# rótulo e grupo de cada indicador da base dados/ibge (colunas novas caem nas regras por padrão do nome)
 INDICADORES = {
     "pop_2022": ("População (2022)", "Demografia"), "area_km2": ("Área (km²)", "Demografia"),
     "densidade": ("Densidade (hab./km²)", "Demografia"), "pct_rural": ("% rural", "Demografia"),
@@ -232,9 +232,9 @@ def analisar(df, cols, grupos, alvo, rng):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--ibge", default=os.path.join(RAIZ, "data/ibge/ibge_municipios.csv"))
-    ap.add_argument("--votos", default=os.path.join(RAIZ, "saida/2026/dados_municipios.csv"))
-    ap.add_argument("--saida", default=os.path.join(RAIZ, "saida/importancia"))
+    ap.add_argument("--ibge", default=os.path.join(RAIZ, "dados/ibge/ibge_municipios.csv"))
+    ap.add_argument("--votos", default=os.path.join(RAIZ, "resultados/2026-presidente/dados_municipios.csv"))
+    ap.add_argument("--saida", default=os.path.join(RAIZ, "resultados/importancia"))
     ap.add_argument("--min-t2", type=int, default=1500, help="mínimo de municípios 100%% apurados para analisar o 2º turno")
     args = ap.parse_args()
     rng = np.random.default_rng(42)

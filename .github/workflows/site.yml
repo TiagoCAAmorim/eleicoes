@@ -1,0 +1,36 @@
+# Gera o site (scripts/gerar_site.py) e publica no GitHub Pages.
+# Ativar uma vez: Settings -> Pages -> Source: GitHub Actions.
+name: site
+on:
+  push:
+    branches: [main]
+    paths: [site/**, config/**, resultados/**, eleicoes/**, scripts/gerar_site.py, dados/comum/**,
+            dados/2026/**, .github/workflows/site.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  gerar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12", cache: pip}
+      - run: pip install -r requirements.txt
+      - run: python scripts/gerar_site.py --saida _site
+      - uses: actions/upload-pages-artifact@v3
+        with: {path: _site}
+  publicar:
+    needs: gerar
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

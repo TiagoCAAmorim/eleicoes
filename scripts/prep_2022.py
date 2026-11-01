@@ -1,7 +1,7 @@
 """Baixa os dados abertos de 2022 do TSE (por seção) e gera arquivos compactos para o backtest.
 
 Roda no GitHub Actions (o ambiente de desenvolvimento não acessa o TSE).
-Saídas em data/2022/:
+Saídas em dados/2022/presidente/:
   mun_t1.csv.gz     1º turno agregado por município (base do modelo, como ao vivo)
   secoes_t2.csv.gz  2º turno por seção (para simular a apuração parcial)
 """
@@ -14,7 +14,7 @@ import zipfile
 import pandas as pd
 
 CDN = "https://cdn.tse.jus.br/estatistica/sead/odsele"
-OUT = sys.argv[1] if len(sys.argv) > 1 else "data/2022"
+OUT = sys.argv[1] if len(sys.argv) > 1 else "dados/2022/presidente"
 TMP = os.environ.get("RUNNER_TEMP", "/tmp")
 os.makedirs(OUT, exist_ok=True)
 

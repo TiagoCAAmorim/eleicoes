@@ -1,1 +1,7 @@
-saida/teste2022/
+__pycache__/
+*.pyc
+.venv/
+_site/
+resultados/teste2022/
+dados/ibge/cache/
+dados/brutos/

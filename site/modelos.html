@@ -1,0 +1,33 @@
+<!-- página: modelos | titulo: Modelos | descricao: Como funciona o modelo de previsão da apuração do 2º turno, testes e limitações. -->
+<h1>Modelos</h1>
+<p class="lead">Como a previsão da apuração do 2º turno é calculada, como ela se saiu nos testes e o que sabemos que precisa melhorar.</p>
+
+<h2>Previsão da apuração do 2º turno</h2>
+<p>Em cada município, o 1º turno é descrito pela fração do eleitorado que votou em cada finalista (A e B), nos demais candidatos (Outros), em branco ou nulo, ou que se absteve. O 2º turno é previsto por uma matriz de transferência: que fração de cada grupo do 1º turno vai para A, para B, para branco/nulo ou para a abstenção.</p>
+<div class="tabela-rolagem">
+<table>
+  <thead><tr><th>Origem (1º turno)</th><th>→ A</th><th>→ B</th><th>→ branco/nulo</th><th>→ abstenção</th></tr></thead>
+  <tbody>
+    <tr><td>A</td><td>fica</td><td>troca A→B</td><td>0</td><td>falta</td></tr>
+    <tr><td>B</td><td>troca B→A</td><td>fica</td><td>0</td><td>falta</td></tr>
+    <tr><td>Outros</td><td>Outros→A</td><td>Outros→B</td><td>Outros→branco/nulo</td><td>Outros→abstenção</td></tr>
+    <tr><td>Branco/nulo</td><td>0</td><td>0</td><td>fica</td><td>falta</td></tr>
+    <tr><td>Abstenção</td><td>volta para A</td><td>volta para B</td><td>0</td><td>continua</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Os 8 parâmetros da matriz são estimados com os municípios já apurados, numa hierarquia Brasil → região → estado → estado × porte da cidade. Cada nível parte do nível de cima e só se afasta dele quando a apuração daquele grupo mostra diferença; um estado com pouco apurado herda quase tudo da região e do país.</p>
+<p>O ponto de partida, antes de qualquer voto apurado, são as transferências observadas em 2022, com a linha “Outros” tirada das pesquisas de 2º turno. A previsão do país é a soma das previsões de cada município, e a incerteza vem de 1.000 simulações que combinam a incerteza dos parâmetros, um choque comum por estado e a variação entre municípios. A chance de vitória é a fração das simulações em que o candidato passa de 50% dos votos válidos.</p>
+
+<h2>Teste com a apuração de 2022</h2>
+<p>O modelo foi testado simulando a apuração do 2º turno de 2022 seção a seção, em diferentes ordens, e comparando a previsão de cada momento com o resultado final.</p>
+{{backtest}}
+
+<h2>O que a apuração de 2026 mostrou</h2>
+<p>A previsão final ficou certa, mas o caminho até ela expôs três problemas, que são o foco da próxima versão do modelo:</p>
+<ul class="lista-simples">
+  <li><strong>Ponto de partida estreito demais.</strong> Antes da apuração, a previsão era Lula 48,4%, com intervalo de 90% de 45,9% a 51,1%. O resultado, 51,8%, ficou fora até cerca de 5% das seções apuradas.</li>
+  <li><strong>Transição lenta.</strong> A curva que limitava a influência das primeiras seções atrasou a convergência: com 21% apurado, os dados sozinhos já davam 51,4%, mas a previsão publicada era 50,7%.</li>
+  <li><strong>Transferências sem leitura confiável.</strong> A matriz não permitia que brancos e nulos fossem para um candidato nem que eleitores de um lado faltassem mais que os do outro. O ganho de Lula acabou atribuído aos eleitores de “Outros” (62%), quando uma comparação simples entre municípios indica uma divisão próxima à das pesquisas (cerca de 32%).</li>
+</ul>
+<p>A revisão vai testar uma matriz mais flexível, novas variáveis (votos para deputado, reeleição, coligações) e uma incerteza calibrada em eleições de presidente e governador de 2006 a 2024, com a meta de o intervalo de 90% conter o resultado em 90% dos casos em qualquer momento da apuração.</p>
