@@ -165,6 +165,12 @@ def gerar_site(saida, pasta_site, titulo="Previsão do 2º turno presidencial 20
         for r in dados["previsao"]:
             r["proxima_txt"] = ""
     br = next((r for r in dados["previsao"] if r["nivel"] == "Brasil"), None)
+    mun_csv = os.path.join(saida, "dados_municipios.csv")
+    if br and os.path.exists(mun_csv):  # fluxos de votos para o diagrama de Sankey
+        import pandas as pd
+        from .exportar import fluxos
+        mun = pd.read_csv(mun_csv, sep=";", decimal=",", encoding="utf-8-sig", dtype={"cod_tse": str})
+        dados["fluxos"] = fluxos(mun, br["nome_A"], br["nome_B"])
     og = "Previsão estatística da apuração do 2º turno a partir dos parciais do TSE."
     if br:
         n = lambda x: f"{x:.1f}".replace(".", ",")  # noqa: E731

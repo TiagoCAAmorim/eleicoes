@@ -5,6 +5,7 @@ Planejamento acordado em 01/11/2026, depois da apuração do 2º turno de 2026.
 | Etapa | O quê | Situação |
 |---|---|---|
 | 0 | Repositório dedicado, pacote reorganizado, site com página inicial, modelos, análises e eleições | Em andamento |
+| 0b | Painel: diagrama de Sankey das transferências de votos previstas (Brasil e regiões) | Feito |
 | 1 | Banco de testes: rejogar a apuração real de 2026 (49 retratos) e 2022; métricas por % apurado (erro, cobertura 50/90%, CRPS, Brier, momento da "chamada") | Próxima |
 | 2 | Base histórica do TSE 2006–2024 (presidente, governador, senador, prefeito, deputados), baixada pelo Actions | |
 | 3 | Revisão do modelo do 2º turno: matriz mais flexível, covariáveis (deputados, reeleição, coligações), priori calibrada, incerteza honesta | |

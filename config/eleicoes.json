@@ -11,7 +11,7 @@
     "situacao": "Apuração encerrada",
     "resumo": "Lula 51,8% x Flávio Bolsonaro 48,2% dos votos válidos. A página mostra a última previsão da noite, com 99,9% das seções apuradas.",
     "paginas": [
-      {"href": "", "nome": "Painel da apuração", "desc": "Previsão, intervalo de 90%, chance de vitória e mapas por estado"},
+      {"href": "", "nome": "Painel da apuração", "desc": "Previsão, intervalo de 90%, chance de vitória, mapas e fluxos de votos entre os turnos"},
       {"href": "analises.html", "nome": "Detalhe por município", "desc": "Busca por município e curiosidades da votação"},
       {"href": "indicadores.html", "nome": "Indicadores do IBGE e o voto", "desc": "Quanto renda, educação e outros indicadores explicam o voto"}
     ]

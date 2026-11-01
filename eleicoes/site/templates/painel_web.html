@@ -13,6 +13,13 @@
 .lx-chance { font-size: var(--cds-font-size-heading); font-variant-numeric: tabular-nums; }
 .lx-chart { position: relative; min-height: 340px; }
 .lx-ufchart { position: relative; min-height: 640px; }
+.lx-sankey { margin: var(--cds-gap-md) 0 var(--cds-gap-lg); }
+.lx-sk-tit { font-size: var(--cds-font-size-body); font-weight: var(--cds-font-weight-medium); margin: 0 0 var(--cds-gap-sm); }
+.lx-sk-box { position: relative; width: 100%; touch-action: manipulation; }
+.lx-sk-box svg { display: block; width: 100%; height: auto; overflow: visible; }
+.lx-sk-box .lx-sk-link { cursor: pointer; transition: fill-opacity .15s; }
+.lx-sk-box .lx-sk-node { cursor: pointer; }
+@media (prefers-reduced-motion: reduce) { .lx-sk-box .lx-sk-link { transition: none; } }
 .lx-tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); white-space: nowrap; font-variant-numeric: tabular-nums; }
 .lx-tip .lx-t { color: var(--cds-text-secondary); }
 .lx-sw { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
@@ -152,6 +159,12 @@
     <h2>Transferências estimadas do 1º para o 2º turno</h2>
     <p class="lx-note">Fração dos eleitores de cada origem no 1º turno que foi para cada destino no 2º turno. "Outros" soma os candidatos que não foram ao 2º turno.</p>
     <div class="lx-tabs"><label class="lx-meta" for="sel-grupo">Região&nbsp;</label><select class="lx-sel" id="sel-grupo" data-source="transferencias"></select></div>
+    <div id="sankey" class="lx-sankey" hidden>
+      <h3 class="lx-sk-tit">Para onde foram os votos do 1º turno</h3>
+      <div id="chart-sankey" class="lx-sk-box" role="img" aria-label="Diagrama de fluxos de votos do 1º para o 2º turno"></div>
+      <p class="lx-note" id="sankey-info" aria-live="polite">Toque ou passe o mouse sobre um fluxo ou um bloco para ver os números.</p>
+      <p class="lx-note">Fluxos líquidos estimados pelo modelo, em votos. Dados por município mostram só o saldo de cada lugar, não quem trocou com quem; por isso um fluxo pode estar somando movimentos diferentes (por exemplo, eleitores que faltaram num turno e votaram no outro).</p>
+    </div>
     <div class="lx-tablewrap">
       <table id="tabela-transf" data-source="transferencias" data-row-key="grupo,transferencia">
         <thead><tr>
@@ -648,7 +661,7 @@ dash.onData(() => lx.desenhaGrupos());
 <script>
 // transferências
 const lxSel = document.getElementById('sel-grupo');
-lxSel.addEventListener('change', () => { lx.grupoT = lxSel.value; lx.desenhaTransf(); });
+lxSel.addEventListener('change', () => { lx.grupoT = lxSel.value; lx.desenhaTransf(); if (lx.desenhaSankey) lx.desenhaSankey(); });
 lx.desenhaTransf = () => {
   const t = dash.data('transferencias');
   const tbody = document.querySelector('#tabela-transf tbody');
@@ -666,6 +679,82 @@ lx.desenhaTransf = () => {
   });
 };
 dash.onData(() => lx.desenhaTransf());
+// diagrama de Sankey: fluxos de votos do 1º para o 2º turno (dataset "fluxos", calculado na geração do site)
+lx.sankey = (box, rows) => {
+  box.replaceChildren();
+  if (!rows.length) return;
+  const W = Math.max(300, box.clientWidth), estreito = W < 560;
+  const labW = estreito ? 80 : 150, nodeW = estreito ? 10 : 14, pad = estreito ? 8 : 12;
+  const H = estreito ? 340 : 400, y0 = 6;
+  const nA = rows[0].origem, nB = rows.find((r) => r.origem !== nA).origem;
+  const tem = (k, n) => rows.some((r) => r[k] === n);
+  const ordemO = [nA, nB, 'Outros', 'Branco/nulo', 'Abstenção'].filter((n) => tem('origem', n));
+  const ordemD = [nA, nB, 'Branco/nulo', 'Abstenção'].filter((n) => tem('destino', n));
+  const cor = (n) => n === nA ? 'var(--lx-a)' : n === nB ? 'var(--lx-b)' : n === 'Outros' ? 'var(--color-fg-muted)' : 'var(--cds-chart-axis)';
+  const soma = (k, n) => d3.sum(rows.filter((r) => r[k] === n), (r) => r.votos);
+  const total = d3.sum(rows, (r) => r.votos);
+  const k = (H - pad * (Math.max(ordemO.length, ordemD.length) - 1)) / total;
+  const nos = (ordem, lado, x) => { let y = y0; return ordem.map((n) => { const v = soma(lado, n), h = Math.max(1, v * k); const no = { n, v, x, y, h, lado, ent: y, sai: y }; y += h + pad; return no; }); };
+  const L = nos(ordemO, 'origem', labW), R = nos(ordemD, 'destino', W - labW - nodeW);
+  const porO = new Map(L.map((d) => [d.n, d])), porD = new Map(R.map((d) => [d.n, d]));
+  const links = [];
+  ordemO.forEach((o) => ordemD.forEach((d) => {
+    const r = rows.find((q) => q.origem === o && q.destino === d); if (!r) return;
+    const s = porO.get(o), t = porD.get(d), h = r.votos * k;
+    links.push({ r, s, t, h, sy: s.sai, ty: 0 }); s.sai += h;
+  }));
+  ordemD.forEach((d) => links.filter((l) => l.t.n === d).sort((a, b) => ordemO.indexOf(a.s.n) - ordemO.indexOf(b.s.n))
+    .forEach((l) => { l.ty = l.t.ent; l.t.ent += l.h; }));
+  const altura = Math.max(L.at(-1).y + L.at(-1).h, R.at(-1).y + R.at(-1).h) + y0;
+  const svg = d3.select(box).append('svg').attr('viewBox', `0 0 ${W} ${altura}`).attr('font-family', 'var(--font-anthropic-sans)');
+  const x0 = labW + nodeW, x1 = W - labW - nodeW, xm = (x0 + x1) / 2;
+  const path = (l) => `M${x0},${l.sy}C${xm},${l.sy} ${xm},${l.ty} ${x1},${l.ty}L${x1},${l.ty + l.h}C${xm},${l.ty + l.h} ${xm},${l.sy + l.h} ${x0},${l.sy + l.h}Z`;
+  const info = document.getElementById('sankey-info'), dica = lx.dica(box);
+  const pctO = (l) => lx.pct(100 * l.r.votos / l.s.v, 0);
+  const texto = (l) => [`${l.s.n} → ${l.t.n}`, `${lx.mi(l.r.votos)} de votos`, `${pctO(l)} dos votos de ${l.s.n} no 1º turno`];
+  const lk = svg.append('g').selectAll('path').data(links).join('path').attr('class', 'lx-sk-link').attr('d', path)
+    .attr('fill', (l) => cor(l.s.n)).attr('fill-opacity', 0.35);
+  const destaca = (f) => lk.attr('fill-opacity', (l) => f(l) ? 0.75 : 0.1);
+  const limpa = () => { lk.attr('fill-opacity', 0.35); dica.hide(); };
+  lk.on('pointerenter pointermove', (ev, l) => { destaca((q) => q === l); if (ev.pointerType === 'mouse') dica.show(ev, texto(l)); info.textContent = texto(l).join(' · '); })
+    .on('pointerleave', limpa)
+    .on('click', (ev, l) => { ev.stopPropagation(); destaca((q) => q === l); info.textContent = texto(l).join(' · '); });
+  const desc = (d) => {
+    const ls = links.filter((l) => (d.lado === 'origem' ? l.s : l.t) === d).sort((a, b) => b.r.votos - a.r.votos);
+    const partes = ls.filter((l) => l.r.votos / d.v >= 0.005).map((l) => `${d.lado === 'origem' ? l.t.n : l.s.n} ${lx.mi(l.r.votos)}`);
+    return `${d.n} (${d.lado === 'origem' ? '1º' : '2º'} turno): ${lx.mi(d.v)}. ${d.lado === 'origem' ? 'Foram para' : 'Vieram de'}: ${partes.join(', ')}.`;
+  };
+  const gn = svg.append('g').selectAll('g').data([...L, ...R]).join('g').attr('class', 'lx-sk-node');
+  gn.append('rect').attr('x', (d) => d.x).attr('y', (d) => d.y).attr('width', nodeW).attr('height', (d) => d.h).attr('rx', 2)
+    .attr('fill', (d) => cor(d.n));
+  gn.on('click', (ev, d) => { ev.stopPropagation(); destaca((l) => l.s === d || l.t === d); info.textContent = desc(d); })
+    .on('pointerenter', (ev, d) => { destaca((l) => l.s === d || l.t === d); info.textContent = desc(d); })
+    .on('pointerleave', limpa);
+  // rótulos: nome + votos, afastados entre si para não sobrepor blocos pequenos
+  const rot = (lista, esq) => {
+    let ult = -Infinity;
+    lista.forEach((d) => { d.ly = Math.max(d.y + d.h / 2, ult + 30); ult = d.ly; });
+    const g = svg.append('g').attr('text-anchor', esq ? 'end' : 'start').attr('pointer-events', 'none');
+    lista.forEach((d) => {
+      const tx = esq ? d.x - 6 : d.x + nodeW + 6;
+      g.append('text').attr('x', tx).attr('y', d.ly - 2).attr('font-size', estreito ? 12 : 14).attr('font-weight', 600).attr('fill', 'var(--color-fg)').text(d.n);
+      g.append('text').attr('x', tx).attr('y', d.ly + 13).attr('font-size', estreito ? 11.5 : 12.5).attr('fill', 'var(--color-fg-muted)').text(lx.mi(d.v));
+    });
+    return ult + 18;
+  };
+  const fim = Math.max(rot(L, true), rot(R, false));
+  if (fim > altura) svg.attr('viewBox', `0 0 ${W} ${fim}`);
+  svg.on('click', limpa);
+};
+lx.desenhaSankey = () => {
+  const f = dash.data('fluxos'), sec = document.getElementById('sankey');
+  if (f.status !== 'ok' || !f.data.length) { sec.hidden = true; return; }
+  sec.hidden = false;
+  const rows = f.data.filter((r) => r.grupo === lx.grupoT);
+  lx.sankey(document.getElementById('chart-sankey'), rows.length ? rows : f.data.filter((r) => r.grupo === 'Brasil'));
+};
+dash.onData(() => lx.desenhaSankey());
+
 const lxNamed = document.getElementById(location.hash.slice(1));
 if (lxNamed && lxNamed.tagName === 'BUTTON') lxNamed.click();
 </script>

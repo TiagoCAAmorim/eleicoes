@@ -73,3 +73,41 @@ def resumo_grupos(res):
                 "branco_nulo_previsto_pct": round(g["brancos_nulos"], 3),
             })
     return pd.DataFrame(linhas)
+
+
+def fluxos(mun, nome_a, nome_b):
+    """Votos que a matriz de transferência leva de cada origem do 1º turno a cada destino do 2º turno, somados por
+    Brasil e região. `mun` é a tabela de `municipios()` (ou o dados_municipios.csv lido de volta). Os coeficientes
+    são os do grupo-folha de cada município; o 1º turno é reescalado para o eleitorado do 2º turno, como no modelo.
+    Devolve linhas {grupo, origem, destino, votos}."""
+    t1 = [c for c in mun.columns if c.endswith("_t1")]           # eleitores, A, B, outros, branco/nulo
+    coef = [c for c in mun.columns if c.startswith("coef ")]      # na ordem de modelo.PAR_NOMES
+    E1 = mun[t1[0]].clip(lower=1).to_numpy(float)
+    x = mun[t1[1:5]].to_numpy(float)
+    x = np.column_stack([x, np.clip(E1 - x.sum(1), 0, None)]) / E1[:, None]
+    x *= mun["eleitores_t2"].to_numpy(float)[:, None]
+    p = mun[coef].to_numpy(float) / 100
+    ab, ba, falta, oa, ob, ow, on, na, nb = p.T
+    z = np.zeros_like(ab)
+    M = np.stack([                                                # (U, origem, destino A B W N)
+        np.stack([1 - ab - falta, ab, z, falta], -1),
+        np.stack([ba, 1 - ba - falta, z, falta], -1),
+        np.stack([oa, ob, ow, on], -1),
+        np.stack([z, z, 1 - falta, falta], -1),
+        np.stack([na, nb, z, 1 - na - nb], -1),
+    ], 1)
+    F = x[:, :, None] * M                                         # (U, 5, 4) votos
+    origens = [nome_a, nome_b, "Outros", "Branco/nulo", "Abstenção"]
+    destinos = [nome_a, nome_b, "Branco/nulo", "Abstenção"]
+    out = []
+    grupos = [("Brasil", np.ones(len(mun), bool))] + [(g, (mun["regiao"] == g).to_numpy()) for g in
+                                                       ["Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul", "Exterior"]]
+    for g, sel in grupos:
+        if not sel.any():
+            continue
+        tot = F[sel].sum(0)
+        for i, o in enumerate(origens):
+            for j, d in enumerate(destinos):
+                if tot[i, j] >= 0.5:
+                    out.append({"grupo": g, "origem": o, "destino": d, "votos": int(round(tot[i, j]))})
+    return out
