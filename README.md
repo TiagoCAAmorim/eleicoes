@@ -19,7 +19,9 @@ eleicoes/                 pacote Python
   site/templates/         HTML do painel, do detalhe por município e dos indicadores
 scripts/                  linha de comando
   apuracao.py             coleta + previsão + painel (uma rodada ou em loop)
-  backtest.py             simula a apuração de 2022 e mede erro e cobertura
+  backtest.py             simula a apuração de 2022 e mede erro e cobertura (--variante para testar variantes)
+  rejogar_2026.py         rejoga a apuração real de 2026 com variantes do modelo
+  extrair_retratos_2026.py  extrai do histórico git os retratos da apuração de 2026
   gerar_site.py           gera o site completo em _site/
   prep_2022.py, priori_2022.py, baixar_ibge.py, importancia.py, verificar.py, probe_tse.py
 config/eleicoes.json      eleições publicadas no site (uma entrada por eleição e cargo)
@@ -63,5 +65,6 @@ Para incluir uma eleição no site: coloque as saídas em `resultados/<id>/` e a
 ## Documentação
 
 - [docs/metodologia.md](docs/metodologia.md): o modelo do 2º turno e o backtest de 2022
+- [docs/rejogo-2026.md](docs/rejogo-2026.md): variantes do modelo na apuração real de 2026 e em 2022
 - [docs/roteiro.md](docs/roteiro.md): etapas da revisão do modelo e da expansão para outros cargos
 - [docs/historico/](docs/historico/): protocolo dos agentes usados durante a apuração de 2026

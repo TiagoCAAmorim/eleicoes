@@ -53,11 +53,19 @@ def matriz(theta):
     na = 0.3 * _sig(theta[..., 6])
     nb = 0.3 * _sig(theta[..., 7])
     z = np.zeros_like(pab)
+    if theta.shape[-1] > NPAR:
+        # versão 2 (Config.matriz_v2): branco/nulo do 1º turno pode votar em A ou B, e a falta dos eleitores de B
+        # é separada da dos eleitores de A (permite que um lado falte mais que o outro)
+        wa, wb = 0.25 * _sig(theta[..., 8]), 0.25 * _sig(theta[..., 9])
+        prb = 0.5 * _sig(theta[..., 10])
+    else:
+        wa = wb = z
+        prb = pr
     M = np.stack([
         np.stack([1 - pab - pr, pab, z, pr], -1),
-        np.stack([pba, 1 - pba - pr, z, pr], -1),
+        np.stack([pba, 1 - pba - prb, z, prb], -1),
         o,
-        np.stack([z, z, 1 - pr, pr], -1),
+        np.stack([wa, wb, 1 - pr - wa - wb, pr], -1),
         np.stack([na, nb, z, 1 - na - nb], -1),
     ], -2)
     return M
@@ -84,6 +92,9 @@ class Config:
     s_parcial: float = 0.08           # desvio extra de um município parcialmente apurado: as seções que chegam
                                       # primeiro vêm agrupadas (mesma zona/bairro), não são amostra aleatória
     choque_uf: float = 0.02           # choque comum por UF na margem A-B das unidades restantes
+    choque_nacional: float = 0.0      # choque comum a todo o país na margem A-B das unidades restantes (erro
+                                      # sistemático: a parte que falta apurar pode diferir toda no mesmo sentido)
+    matriz_v2: bool = False           # parâmetros extras: branco/nulo -> A/B e falta separada para B
     escala_cov: float = 1.0           # inflação da covariância de Laplace (dependência espacial)
     rho_nacional: float = 0.5         # correlação entre grupos no sorteio dos parâmetros
     k_parcial: float = 0.30           # peso do resultado parcial do próprio município: f/(f+k)
@@ -176,13 +187,19 @@ def ajustar(df, X, Y, cfg: Config):
     if cfg.theta_outros is not None:
         theta0[3:6] = cfg.theta_outros
         sd0[3:6] = cfg.sd_priori_informativa
+    if cfg.matriz_v2:
+        # branco/nulo -> A e -> B começam em ~3% cada; a falta de B começa igual à de A
+        theta0 = np.concatenate([theta0, [_logit(0.03 / 0.25), _logit(0.03 / 0.25), theta0[2]]])
+        sd0 = np.concatenate([sd0, [1.5, 1.5, 1.0]])
+    npar = len(theta0)
 
     def desvio(nivel, nome, pai_nivel, pai_nome):
         """Desvio do grupo em relação ao de cima na eleição de referência (0 sem priori; linha Outros = 0)."""
         a, b = pri.get(f"{nivel}|{nome}"), pri.get(f"{pai_nivel}|{pai_nome}")
         if a is None or b is None:
-            return np.zeros(NPAR)
-        d = a - b
+            return np.zeros(npar)
+        d = np.zeros(npar)
+        d[:NPAR] = a - b
         d[3:6] = 0.0
         return d
 
@@ -231,12 +248,13 @@ def ajustar(df, X, Y, cfg: Config):
 
 def _amostrar_theta(aj: Ajuste, chaves, cfg, rng):
     """Amostra theta para cada grupo em `chaves` -> (n_sims, n_grupos, 8)."""
-    zn = rng.standard_normal((cfg.n_sims, NPAR))
-    out = np.empty((cfg.n_sims, len(chaves), NPAR))
+    npar = len(aj.grupos[chaves[0]][0])
+    zn = rng.standard_normal((cfg.n_sims, npar))
+    out = np.empty((cfg.n_sims, len(chaves), npar))
     for j, k in enumerate(chaves):
         mu, cov = aj.grupos[k]
-        L = np.linalg.cholesky(cov + 1e-9 * np.eye(NPAR))
-        z = np.sqrt(cfg.rho_nacional) * zn + np.sqrt(1 - cfg.rho_nacional) * rng.standard_normal((cfg.n_sims, NPAR))
+        L = np.linalg.cholesky(cov + 1e-9 * np.eye(npar))
+        z = np.sqrt(cfg.rho_nacional) * zn + np.sqrt(1 - cfg.rho_nacional) * rng.standard_normal((cfg.n_sims, npar))
         out[:, j] = mu + z @ L.T
     return out
 
@@ -255,6 +273,8 @@ def simular(df, X, Y, aj: Ajuste, cfg: Config):
     ruido = rng.standard_normal((S, U, 2), dtype=np.float32) * aj.s0
     ufs, uf_idx = np.unique(df["uf"].values, return_inverse=True)
     choque = rng.standard_normal((S, len(ufs)))[:, uf_idx] * cfg.choque_uf
+    if cfg.choque_nacional:
+        choque = choque + rng.standard_normal((S, 1)) * cfg.choque_nacional
     f = df["f"].values
     temY = np.isfinite(Y).all(1)
     rho = np.where(temY, f / (f + cfg.k_parcial), 0.0)
