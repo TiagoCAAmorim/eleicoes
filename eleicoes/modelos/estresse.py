@@ -65,7 +65,7 @@ class GeradorApuracao:
         reg = self.base["uf"].map(REGIAO)
         prt = porte(self.base["uf"].values, self.base["E1"].values, self.base["capital"].values)
         E1 = self.base["E1"].clip(lower=1).values
-        N1 = np.clip(E1 - self.base[["A1", "B1", "O1", "W1"]].sum(1).values, 0, None)
+        N1 = np.clip(E1 - self.base[["A1", "B1", "O1", "W1"]].sum(axis=1).values, 0, None)
         X = np.column_stack([self.base["A1"], self.base["B1"], self.base["O1"], self.base["W1"], N1]) / E1[:, None]
         chaves = [[f"uf_porte|{u}|{p}", f"uf|{u}", f"regiao|{r}", "brasil|Brasil"]
                   for u, p, r in zip(self.base["uf"], prt, reg)]
