@@ -1,0 +1,11 @@
+variante,ordem,erro_medio_abs,cobertura90,erro_abs_ate15,cobertura90_ate15,largura90_media
+atual,2022,0.4114,0.9444,0.8829,1.0,4.1851
+atual,adversa,1.1236,0.4444,0.9119,1.0,4.3248
+sem_curva,2022,0.1163,0.9444,0.2202,1.0,1.8689
+sem_curva,adversa,3.0711,0.0,5.2259,0.0,1.9755
+sem_curva_choque,2022,0.1485,1.0,0.2806,1.0,2.8641
+sem_curva_choque,adversa,3.1006,0.0,5.282,0.0,2.7079
+sem_curva_choque_v2,2022,0.1331,1.0,0.2544,1.0,2.6577
+sem_curva_choque_v2,adversa,3.0966,0.0,5.2777,0.0,2.6204
+sem_curva_choque_v2_priori,2022,0.1331,1.0,0.2544,1.0,2.6577
+sem_curva_choque_v2_priori,adversa,3.0966,0.0,5.2777,0.0,2.6204

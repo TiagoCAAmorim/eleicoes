@@ -1,0 +1,36 @@
+{
+ "atual": {
+  "mudancas": {},
+  "descricao": "Modelo usado ao vivo (curva de transição até 25%)"
+ },
+ "sem_curva": {
+  "mudancas": {
+   "transicao_centro": null
+  },
+  "descricao": "Sem a curva de transição"
+ },
+ "sem_curva_choque": {
+  "mudancas": {
+   "transicao_centro": null,
+   "choque_nacional": 0.02
+  },
+  "descricao": "Sem curva + choque nacional (2% do eleitorado restante na margem)"
+ },
+ "sem_curva_choque_v2": {
+  "mudancas": {
+   "transicao_centro": null,
+   "choque_nacional": 0.02,
+   "matriz_v2": true
+  },
+  "descricao": "Sem curva + choque nacional + matriz v2 (branco/nulo → candidatos, falta separada)"
+ },
+ "sem_curva_choque_v2_priori": {
+  "mudancas": {
+   "transicao_centro": null,
+   "choque_nacional": 0.02,
+   "matriz_v2": true,
+   "sd_priori_informativa": 1.0
+  },
+  "descricao": "Igual à anterior, com priori mais larga (desvio 1,0 em vez de 0,7)"
+ }
+}

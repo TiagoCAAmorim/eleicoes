@@ -103,8 +103,13 @@ def main():
     ap.add_argument("--ordens", nargs="+", default=["aleatoria", "2022", "adversa"])
     ap.add_argument("--rodadas", type=int, default=2)
     ap.add_argument("--saida", default=os.path.join(RESULTADOS, "backtest"))
+    ap.add_argument("--variante", default="", help="variante do modelo de scripts/rejogar_2026.py (padrão: Config())")
     a = ap.parse_args()
     cfg = modelo.Config()
+    if a.variante:
+        import dataclasses
+        from rejogar_2026 import VARIANTES
+        cfg = dataclasses.replace(cfg, **VARIANTES[a.variante])
     res = rodar(cfg, a.ordens, a.rodadas)
     os.makedirs(a.saida, exist_ok=True)
     res.to_csv(os.path.join(a.saida, "backtest_2022.csv"), index=False)
