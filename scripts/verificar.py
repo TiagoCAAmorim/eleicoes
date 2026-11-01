@@ -15,7 +15,7 @@ import pandas as pd
 
 AQUI = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, AQUI)
-from eleicao import tse  # noqa: E402
+from eleicoes.tse import aovivo as tse  # noqa: E402
 
 FUSO = dt.timezone(dt.timedelta(hours=-3))
 
@@ -166,7 +166,7 @@ def checar_log(rel, log):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--saida", default=os.path.join(AQUI, "saida/2026"))
+    ap.add_argument("--saida", default=os.path.join(AQUI, "resultados/2026-presidente"))
     ap.add_argument("--site-url", default="")
     ap.add_argument("--log", default="")
     ap.add_argument("--relatorio", default="")
