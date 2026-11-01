@@ -33,9 +33,24 @@ def test_gera_site(tmp_path):
     assert "{{" not in inicio and "2026/presidente/" in inicio
     painel = (saida / "2026/presidente/index.html").read_text(encoding="utf-8")
     assert 'class="lx-nav"' in painel and "lx-refresh" not in painel
+    assert '"fluxos"' in painel and 'id="chart-sankey"' in painel
 
 
 def test_catalogo_aponta_para_resultados():
     with open(os.path.join(RAIZ, "config", "eleicoes.json"), encoding="utf-8") as f:
         for e in json.load(f):
             assert os.path.isdir(os.path.join(RAIZ, "resultados", e["resultados"], "web")), e["id"]
+
+
+def test_fluxos_conservam_votos():
+    import pandas as pd
+    from eleicoes.site.exportar import fluxos
+    mun = pd.read_csv(os.path.join(RAIZ, "resultados/2026-presidente/dados_municipios.csv"), sep=";", decimal=",",
+                      encoding="utf-8-sig")
+    f = pd.DataFrame(fluxos(mun, "Lula", "Flávio"))
+    br = f[f.grupo == "Brasil"]
+    # cada origem distribui todo o seu eleitorado (reescalado para o 2º turno) entre os destinos
+    assert abs(br.votos.sum() - mun.eleitores_t2.sum()) / mun.eleitores_t2.sum() < 1e-4
+    assert set(br.destino) <= {"Lula", "Flávio", "Branco/nulo", "Abstenção"}
+    regioes = f[f.grupo != "Brasil"].groupby(["origem", "destino"]).votos.sum()
+    assert (abs(regioes - br.set_index(["origem", "destino"]).votos) <= 10).all()
