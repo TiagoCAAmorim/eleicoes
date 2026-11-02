@@ -123,9 +123,31 @@ que a realidade (dentro das cidades, a ordem das seções importa; ver [estresse
 
 **Teste de estresse** (16 apurações sintéticas com viés dentro das cidades, gerador de [estresse.md](estresse.md)):
 
-Pendente. Rodar `python scripts/estresse.py --rodadas 16 --variantes revisado calibrado --saida resultados/estresse-calibrado`
-(cerca de 1h30 em 4 núcleos). A variante `calibrado` usa a hierarquia e os choques calibrados com a priori de 2022, para
-isolar o efeito deles na apuração.
+Rodado com `python scripts/estresse.py --rodadas 16 --variantes revisado calibrado --saida resultados/estresse-calibrado`.
+O resumo está em `resultados/calibracao-priori/estresse_resumo.csv`. A variante `calibrado` usa a hierarquia e os
+choques calibrados, com a mesma priori de 2022 do `revisado`, para isolar o efeito deles na apuração.
+
+| % apurado | Cobertura 90%, revisado | Cobertura 90%, calibrado | Largura 90%, revisado | Largura 90%, calibrado | CRPS, revisado | CRPS, calibrado |
+|---|---|---|---|---|---|---|
+| 0 | 88% | 62% | 7,2 | 4,3 | 1,64 | 1,82 |
+| 1 | 94% | 88% | 6,2 | 4,7 | 0,80 | 0,85 |
+| 3 | 100% | 88% | 5,5 | 4,3 | 0,68 | 0,72 |
+| 5 | 94% | 94% | 5,0 | 4,0 | 0,64 | 0,67 |
+| 10 | 94% | 94% | 4,2 | 3,5 | 0,54 | 0,56 |
+| 20 | 94% | 94% | 3,2 | 2,8 | 0,42 | 0,43 |
+| 30 a 70 | 94% | 94% | 2,5 a 1,0 | 2,4 a 1,0 | 0,33 a 0,14 | 0,35 a 0,14 |
+| 90 | 81% | 81% | 0,3 | 0,3 | 0,06 | 0,06 |
+
+Nenhuma chamada errada em nenhuma das duas. Como ler:
+
+- **Antes de abrir (0%)**, a comparação não vale para a priori calibrada. O gerador sorteia um desvio nacional de
+  ~3 pontos em torno da priori, o tamanho do erro de uma priori **sem pesquisa**. Com a linha Outros pela pesquisa,
+  o erro histórico foi de 1,1 ponto (tabela acima), e é para isso que a faixa calibrada foi feita.
+- **De 5% em diante**, a cobertura é a mesma, e a faixa calibrada é um pouco mais estreita.
+- **De 1% a 3%**, a calibrada cobre 88% (2 falhas em 16), contra 94–100% do revisado. Com 16 rodadas, a diferença
+  ainda está dentro do ruído (1 falha a mais). Mas o mesmo padrão apareceu em 2026 (99% de chance já com 1,6%), então
+  este é o ponto a vigiar.
+- O intervalo de 50% cobre 50–69% na calibrada, contra 62–75% no revisado: mais perto do ideal (50%).
 
 ## Como usar
 
