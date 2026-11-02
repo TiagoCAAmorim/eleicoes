@@ -40,7 +40,7 @@ estável entre os anos.
 Cuidados:
 - **Senador em 2010 e 2018**: eram 2 vagas e cada eleitor votava duas vezes, então os válidos somam cerca do dobro do
   comparecimento.
-- **Exterior**: só vota para presidente, por isso o presidente tem cerca de 170 a 180 "municípios" a mais que os
+- **Exterior**: só vota para presidente, por isso o presidente tem de 77 (2006) a 181 (2010 e 2022) "municípios" a mais que os
   outros cargos.
 - O 2º turno de governador e prefeito só existe onde houve.
 
