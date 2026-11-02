@@ -85,11 +85,11 @@
    "cargo": "senador",
    "turno": 1,
    "municipios": 5570,
-   "aptos": 146750529,
-   "comparecimento": 117111572,
-   "brancos": 20922130,
-   "nulos": 42090147,
-   "validos": 170093885
+   "aptos": 149067631,
+   "comparecimento": 118839192,
+   "brancos": 21075115,
+   "nulos": 42233083,
+   "validos": 171525584
   },
   {
    "cargo": "deputado_federal",
