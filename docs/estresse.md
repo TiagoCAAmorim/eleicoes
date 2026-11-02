@@ -70,3 +70,64 @@ Por intensidade do viés dentro das cidades (cobertura de 90%, momentos com voto
    do tamanho do que aconteceu em 2026. Melhorar isso é trabalho da priori (etapas 2 e 3).
 
 Reproduzir: `python scripts/estresse.py --rodadas 32` (~1 h com 4 núcleos). `--beta` e `--gama` fixam os vieses.
+
+# Parte 2: o mesmo teste com 2010, 2014 e 2018
+
+O gerador agora aceita outras eleições (`--ano`). Para cada uma:
+
+- **Seções:** o 2º turno presidencial por seção, baixado do TSE pelo workflow **secoes** (`scripts/tse_secoes.py`,
+  arquivo `dados/historico/<ano>/secoes_presidente_t2.csv.gz`). Os totais batem com o resultado oficial. De 2006 a
+  2014, cerca de 10% das seções não casam com o arquivo de comparecimento do TSE; nelas, o comparecimento é a soma
+  dos votos e os aptos seguem a taxa da cidade.
+- **Priori:** `calibrado_cauteloso` usa a priori calibrada daquele ano, só com o que se sabia na véspera: a média
+  das matrizes das eleições anteriores e a linha Outros pela pesquisa ([calibracao-priori.md](calibracao-priori.md)).
+  `revisado` usa a matriz da eleição anterior, como o modelo fazia antes da calibração.
+- **Eleições sintéticas:** centradas na previsão da priori calibrada, com os mesmos desvios e vieses de ordem da
+  parte 1. Os desvios das cidades vêm do próprio ano. 2006 fica de fora porque não há eleição anterior na base
+  para montar a priori.
+
+Resultado com 16 apurações sintéticas por ano (`resultados/estresse-historico/<ano>/`):
+
+| % apurado | 2010: cobertura 90%, revisado / calibrado | 2014 | 2018 | Largura 90% (média dos 3 anos), revisado / calibrado |
+|---|---|---|---|---|
+| 0 | 0% / 81% | 100% / 94% | 94% / 94% | 15,1 / 8,1 |
+| 1 | 100% / 94% | 94% / 94% | 100% / 100% | 8,1 / 6,5 |
+| 3 | 100% / 94% | 94% / 94% | 100% / 100% | 6,9 / 5,8 |
+| 5 | 100% / 94% | 94% / 94% | 100% / 100% | 6,3 / 5,3 |
+| 10 | 100% / 94% | 94% / 88% | 100% / 100% | 5,1 / 4,5 |
+| 20 | 94% / 94% | 88% / 88% | 94% / 100% | 3,8 / 3,4 |
+| 30 | 94% / 94% | 88% / 81% | 94% / 94% | 3,0 / 2,7 |
+| 50 | 94% / 88% | 81% / 81% | 94% / 94% | 1,9 / 1,8 |
+| 70 | 81% / 81% | 81% / 81% | 94% / 94% | 1,1 / 1,0 |
+| 90 | 81% / 81% | 81% / 81% | 81% / 81% | 0,35 / 0,34 |
+
+| Ano | Variante | Cobertura 90% | Cobertura 50% | Largura média 90% | CRPS | Chamadas erradas |
+|---|---|---|---|---|---|---|
+| 2010 | revisado | 84% | 59% | 4,9 | 1,41 | 1 |
+| 2010 | **calibrado cauteloso** | **89%** | **56%** | **3,8** | **0,60** | 1 |
+| 2014 | revisado | 89% | 67% | 5,3 | 0,66 | 0 |
+| 2014 | **calibrado cauteloso** | **88%** | **56%** | **4,0** | **0,64** | 0 |
+| 2018 | revisado | 95% | 61% | 5,4 | 0,73 | 0 |
+| 2018 | **calibrado cauteloso** | **96%** | **64%** | **4,0** | **0,53** | 0 |
+
+Conclusões:
+
+1. **A variante adotada (calibrado cauteloso) continua calibrada em outras eleições:** cobre 88% a 96% (meta 90%) e
+   o intervalo de 50% cobre 56% a 64% (meta 50%), com faixa 25% mais estreita e CRPS menor que o revisado nos três
+   anos.
+2. **O ganho vem quase todo de antes da apuração e do começo.** Em 2010, a matriz de 2006 deixava o revisado
+   fora do alvo antes de abrir (0% de cobertura, CRPS 9,7). Com 1% apurado as duas variantes já se parecem.
+3. **A única chamada errada** (nas duas variantes) foi antes de abrir, numa rodada de 2010 em que o gerador
+   sorteou Dilma com 49,8%, 6 pontos abaixo da pesquisa. O gerador sorteia o desvio nacional com ~3 pontos de
+   desvio-padrão, o tamanho do erro de uma priori sem pesquisa. O erro histórico das pesquisas na véspera foi
+   de ~1 ponto, então esse cenário é mais extremo que o que se viu de 2010 a 2026.
+4. **Ponto fraco, igual em 2022: o fim da apuração.** Com 70% a 90% apurado, a cobertura cai para ~81% em todos os
+   anos e variantes. Nessa fase a faixa tem menos de 1 ponto. O que falha é o viés de ordem dentro das cidades
+   (gama), que no gerador demora mais a sumir do que sumiu em 2026. Fica como ponto a investigar: um choque
+   residual mínimo no fim, ou um gerador com o viés sumindo como em 2026.
+
+Reproduzir (cerca de 10 minutos por ano com 4 núcleos):
+
+```bash
+python scripts/estresse.py --ano 2018 --rodadas 16 --variantes revisado calibrado_cauteloso --saida resultados/estresse-historico/2018
+```
