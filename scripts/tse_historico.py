@@ -35,7 +35,7 @@ MAJORITARIOS = {"1", "3", "5", "11"}
 # nomes possíveis de cada coluna (o TSE mudou alguns nomes entre anos)
 SINONIMOS = {
     "turno": ["NR_TURNO"], "uf": ["SG_UF"], "ue": ["SG_UE"], "mun": ["CD_MUNICIPIO"], "mun_nome": ["NM_MUNICIPIO"],
-    "zona": ["NR_ZONA"], "cargo": ["CD_CARGO"], "tipo": ["CD_TIPO_ELEICAO", "NM_TIPO_ELEICAO"],
+    "zona": ["NR_ZONA"], "cargo": ["CD_CARGO"], "tipo": ["CD_TIPO_ELEICAO"], "tipo_nome": ["NM_TIPO_ELEICAO"],
     "numero": ["NR_CANDIDATO", "NR_VOTAVEL"], "nome": ["NM_URNA_CANDIDATO", "NM_VOTAVEL"],
     "partido": ["SG_PARTIDO"], "nr_partido": ["NR_PARTIDO"], "sq": ["SQ_CANDIDATO"],
     "votos": ["QT_VOTOS_NOMINAIS_VALIDOS", "QT_VOTOS_NOMINAIS", "QT_VOTOS"],
@@ -108,11 +108,16 @@ def ler_zip(caminho, campos, filtro=None, log=None):
 
 
 def ordinaria(df):
-    """Só eleição ordinária (CD_TIPO_ELEICAO 2, ou o nome contém "Ordin")."""
-    if "tipo" not in df:
+    """Só eleição ordinária: CD_TIPO_ELEICAO 2 ou NM_TIPO_ELEICAO com "Ordin" (em alguns arquivos só um dos dois
+    está preenchido; consulta_cand de 2006, por exemplo)."""
+    ok = pd.Series(False, index=df.index)
+    if "tipo" in df:
+        ok |= df["tipo"].astype(str) == "2"
+    if "tipo_nome" in df:
+        ok |= df["tipo_nome"].astype(str).str.contains("Ordin", case=False, na=False)
+    if "tipo" not in df and "tipo_nome" not in df:
         return df
-    t = df["tipo"].astype(str)
-    return df[(t == "2") | t.str.contains("Ordin", case=False, na=False)]
+    return df[ok]
 
 
 def _int(df, cols):
@@ -127,7 +132,7 @@ CHAVE = ["turno", "cargo", "uf", "mun", "mun_nome"]
 
 def votos_majoritarios(ano, pasta, log):
     url = f"{CDN}/votacao_candidato_munzona/votacao_candidato_munzona_{ano}.zip"
-    df = ler_zip(baixar(url, pasta), ["turno", "tipo", "uf", "ue", "mun", "mun_nome", "zona", "cargo", "numero", "nome",
+    df = ler_zip(baixar(url, pasta), ["turno", "tipo", "tipo_nome", "uf", "ue", "mun", "mun_nome", "zona", "cargo", "numero", "nome",
                                        "partido", "votos"],
                  lambda d: ordinaria(d[d["cargo"].isin(MAJORITARIOS)]), log)
     df = _int(df, ["votos"])
@@ -137,7 +142,7 @@ def votos_majoritarios(ano, pasta, log):
 
 def votos_proporcionais(ano, pasta, log):
     url = f"{CDN}/votacao_partido_munzona/votacao_partido_munzona_{ano}.zip"
-    df = ler_zip(baixar(url, pasta), ["turno", "tipo", "uf", "mun", "mun_nome", "zona", "cargo", "nr_partido", "partido",
+    df = ler_zip(baixar(url, pasta), ["turno", "tipo", "tipo_nome", "uf", "mun", "mun_nome", "zona", "cargo", "nr_partido", "partido",
                                        "votos_nominais", "votos_legenda"],
                  lambda d: ordinaria(d[d["cargo"].isin(set(CARGOS) - MAJORITARIOS)]), log)
     df = _int(df, ["votos_nominais", "votos_legenda"])
@@ -150,7 +155,7 @@ def votos_proporcionais(ano, pasta, log):
 def comparecimento(ano, pasta, log):
     url = f"{CDN}/detalhe_votacao_munzona/detalhe_votacao_munzona_{ano}.zip"
     cols = ["aptos", "comparecimento", "abstencoes", "brancos", "nulos", "votos_nominais", "votos_legenda"]
-    df = ler_zip(baixar(url, pasta), ["turno", "tipo", "uf", "mun", "mun_nome", "zona", "cargo"] + cols,
+    df = ler_zip(baixar(url, pasta), ["turno", "tipo", "tipo_nome", "uf", "mun", "mun_nome", "zona", "cargo"] + cols,
                  lambda d: ordinaria(d[d["cargo"].isin(set(CARGOS))]), log)
     df = _int(df, cols)
     out = df.groupby(CHAVE, as_index=False)[[c for c in cols if c in df]].sum()
@@ -161,10 +166,10 @@ def comparecimento(ano, pasta, log):
 
 def candidatos(ano, pasta, log):
     url = f"{CDN}/consulta_cand/consulta_cand_{ano}.zip"
-    df = ler_zip(baixar(url, pasta), ["turno", "tipo", "uf", "ue", "cargo", "sq", "numero", "nome", "partido",
+    df = ler_zip(baixar(url, pasta), ["turno", "tipo", "tipo_nome", "uf", "ue", "cargo", "sq", "numero", "nome", "partido",
                                        "coligacao", "composicao", "federacao", "composicao_federacao", "reeleicao", "situacao"],
                  lambda d: ordinaria(d[d["cargo"].isin(MAJORITARIOS)]), log)
-    df = df.drop(columns=["tipo"], errors="ignore").drop_duplicates()
+    df = df.drop(columns=["tipo", "tipo_nome"], errors="ignore").drop_duplicates()
     if "reeleicao" not in df:
         # a partir de 2014 o TSE passou "reeleição" (e outros campos) para o arquivo complementar
         try:
