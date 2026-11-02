@@ -1,0 +1,73 @@
+pct,camada,largura
+0,Parâmetros + municípios,10.4238
+0,+ choque por UF,11.4468
+0,+ choque nacional,11.4241
+0,+ viés da evidência parcial,11.4241
+1,Parâmetros + municípios,8.4988
+1,+ choque por UF,9.6042
+1,+ choque nacional,9.7037
+1,+ viés da evidência parcial,9.8747
+2,Parâmetros + municípios,7.2444
+2,+ choque por UF,8.5241
+2,+ choque nacional,8.6173
+2,+ viés da evidência parcial,8.8430
+3,Parâmetros + municípios,6.8288
+3,+ choque por UF,8.0865
+3,+ choque nacional,8.1708
+3,+ viés da evidência parcial,8.4865
+5,Parâmetros + municípios,6.4064
+5,+ choque por UF,7.6718
+5,+ choque nacional,7.6626
+5,+ viés da evidência parcial,7.8446
+7,Parâmetros + municípios,6.1224
+7,+ choque por UF,7.4066
+7,+ choque nacional,7.3512
+7,+ viés da evidência parcial,7.5003
+10,Parâmetros + municípios,5.8836
+10,+ choque por UF,7.0060
+10,+ choque nacional,7.0677
+10,+ viés da evidência parcial,7.1218
+15,Parâmetros + municípios,4.9443
+15,+ choque por UF,6.0379
+15,+ choque nacional,6.1209
+15,+ viés da evidência parcial,6.1824
+20,Parâmetros + municípios,4.2588
+20,+ choque por UF,5.1856
+20,+ choque nacional,5.3083
+20,+ viés da evidência parcial,5.4535
+30,Parâmetros + municípios,3.3674
+30,+ choque por UF,4.0146
+30,+ choque nacional,4.1484
+30,+ viés da evidência parcial,4.3459
+40,Parâmetros + municípios,2.6844
+40,+ choque por UF,3.1194
+40,+ choque nacional,3.1863
+40,+ viés da evidência parcial,3.4495
+50,Parâmetros + municípios,1.7409
+50,+ choque por UF,1.9789
+50,+ choque nacional,1.9970
+50,+ viés da evidência parcial,2.4438
+60,Parâmetros + municípios,1.1480
+60,+ choque por UF,1.3104
+60,+ choque nacional,1.2740
+60,+ viés da evidência parcial,1.7228
+70,Parâmetros + municípios,0.8016
+70,+ choque por UF,0.9499
+70,+ choque nacional,0.9428
+70,+ viés da evidência parcial,1.2721
+80,Parâmetros + municípios,0.5490
+80,+ choque por UF,0.6933
+80,+ choque nacional,0.6796
+80,+ viés da evidência parcial,0.8684
+90,Parâmetros + municípios,0.2117
+90,+ choque por UF,0.2369
+90,+ choque nacional,0.2425
+90,+ viés da evidência parcial,0.4174
+95,Parâmetros + municípios,0.1048
+95,+ choque por UF,0.1126
+95,+ choque nacional,0.1162
+95,+ viés da evidência parcial,0.1999
+99,Parâmetros + municípios,0.0127
+99,+ choque por UF,0.0134
+99,+ choque nacional,0.0138
+99,+ viés da evidência parcial,0.0362

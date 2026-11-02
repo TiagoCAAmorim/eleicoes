@@ -1,6 +1,6 @@
 # Metodologia: previsão da apuração do 2º turno
 
-Modelo usado ao vivo em 25/10/2026 (`eleicoes/modelos/transferencia.py`). Limitações conhecidas e a revisão planejada estão em [roteiro.md](roteiro.md).
+Modelo usado ao vivo em 25/10/2026 (`eleicoes/modelos/transferencia.py`). Limitações conhecidas e a revisão planejada estão em [roteiro.md](roteiro.md). Explicação detalhada do modelo revisado, com equações e um exemplo numérico: [metodo-detalhado.md](metodo-detalhado.md).
 
 
 Para cada município, o 1º turno é descrito pela fração do eleitorado que votou em A
