@@ -12,6 +12,7 @@
 .lx-meta { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
 .lx-chance { font-size: var(--cds-font-size-heading); font-variant-numeric: tabular-nums; }
 .lx-chart { position: relative; min-height: 340px; }
+.lx-chart.lx-curta { min-height: 170px; }
 .lx-ufchart { position: relative; min-height: 640px; }
 .lx-sankey { margin: var(--cds-gap-md) 0 var(--cds-gap-lg); }
 .lx-sk-tit { font-size: var(--cds-font-size-body); font-weight: var(--cds-font-weight-medium); margin: 0 0 var(--cds-gap-sm); }
@@ -23,6 +24,7 @@
 .lx-tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); white-space: nowrap; font-variant-numeric: tabular-nums; }
 .lx-tip .lx-t { color: var(--cds-text-secondary); }
 .lx-sw { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
+.lx-sub { font-size: var(--cds-font-size-body, 15px); font-weight: 600; margin: var(--cds-gap-md) 0 var(--cds-gap-xs); }
 .lx-tabs { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs); margin-bottom: var(--cds-gap-md); }
 .lx-tabs button, .lx-sel { font: inherit; font-size: var(--cds-font-size-caption); padding: var(--cds-pad-xs) var(--cds-pad-sm); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: var(--color-bg); color: var(--color-fg); cursor: pointer; }
 .lx-tabs button[aria-pressed="true"] { background: var(--color-fg); color: var(--color-bg); }
@@ -92,7 +94,14 @@
   <section class="lx-card" id="linha-do-tempo">
     <h2>Linha do tempo da previsão</h2>
     <p class="lx-note">% dos votos válidos previsto a cada atualização. A faixa é o intervalo de 90%; a linha pontilhada é o que já foi apurado.</p>
+    <div class="lx-tabs" role="group" aria-label="Eixo horizontal">
+      <button type="button" id="eixo-hora" data-eixo="hora" aria-pressed="true">Horário</button>
+      <button type="button" id="eixo-pct" data-eixo="pct" aria-pressed="false">% das seções apuradas</button>
+    </div>
     <div class="lx-chart dash-skeleton" id="chart-tempo" data-source="historico"></div>
+    <h3 class="lx-sub">Chance de vitória</h3>
+    <div class="lx-chart lx-curta" id="chart-chance"></div>
+    <p class="lx-note" id="nota-eixo" hidden>Eixo em escala de raiz quadrada, para abrir o começo da apuração, quando a previsão mais muda.</p>
   </section>
 
   <section class="lx-card" id="grupos">
@@ -317,25 +326,50 @@ dash.onData(() => {
 </script>
 
 <script>
-// linha do tempo
-dash.onData(() => {
+// linha do tempo: previsão (com intervalo de 90%) e chance de vitória, por horário ou por % apurado
+lx.eixoTempo = 'hora';
+document.querySelectorAll('#linha-do-tempo [data-eixo]').forEach((b) => b.addEventListener('click', () => {
+  document.querySelectorAll('#linha-do-tempo [data-eixo]').forEach((o) => o.setAttribute('aria-pressed', String(o === b)));
+  lx.eixoTempo = b.dataset.eixo; dash.setLink(b.id); lx.desenhaTempo();
+}));
+lx.desenhaTempo = () => {
+  const eixos = (gs) => gs.forEach((g) => { g.attr('font-size', null).attr('font-family', null); g.select('.domain').remove(); g.selectAll('text').attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)'); });
   const box = document.getElementById('chart-tempo');
+  const boxC = document.getElementById('chart-chance');
   const h = dash.data('historico');
   const prev = dash.data('previsao');
   if (h.status === 'error') { box.classList.remove('dash-skeleton'); lx.fail(box); return; }
   if (h.status !== 'ok') { box.replaceChildren(); box.classList.add('dash-skeleton'); return; }
   box.classList.remove('dash-skeleton');
-  box.replaceChildren();
+  box.replaceChildren(); boxC.replaceChildren();
   const nomes = prev.status === 'ok' && prev.data[0] ? [prev.data[0].nome_A, prev.data[0].nome_B] : ['A', 'B'];
-  const rows = h.data.map((r) => ({ ...r, t: new Date(r.hora) })).filter((r) => !Number.isNaN(+r.t)).sort((a, b) => a.t - b.t);
+  const porPct = lx.eixoTempo === 'pct';
+  document.getElementById('nota-eixo').hidden = !porPct;
+  let rows = h.data.map((r) => ({ ...r, t: new Date(r.hora) })).filter((r) => !Number.isNaN(+r.t)).sort((a, b) => a.t - b.t);
+  if (porPct) rows = rows.filter((r) => Number.isFinite(+r.pct_secoes)).sort((a, b) => a.pct_secoes - b.pct_secoes || a.t - b.t);
   if (!rows.length) return;
-  const W = Math.max(280, box.clientWidth), H = 340;
+  const W = Math.max(280, box.clientWidth), H = 340, HC = 170;
   const m = { t: 12, r: 64, b: 28, l: 40 };
+  // eixo horizontal comum aos dois gráficos
+  let x, xv, ticks, fmt;
+  if (porPct) {
+    const fim = Math.max(1, d3.max(rows, (r) => +r.pct_secoes));
+    x = d3.scaleSqrt([0, Math.min(100, Math.ceil(fim))], [m.l, W - m.r]);
+    xv = (r) => x(+r.pct_secoes);
+    ticks = (W < 520 ? [0, 10, 25, 50, 75] : [0, 1, 5, 10, 25, 50, 75, 100]).filter((t) => t <= Math.ceil(fim));
+    fmt = (d) => d + '%';
+  } else {
+    let tDom = d3.extent(rows, (r) => r.t);
+    if (+tDom[0] === +tDom[1]) tDom = [new Date(+tDom[0] - 30 * 60e3), new Date(+tDom[0] + 30 * 60e3)];
+    x = d3.scaleUtc(tDom, [m.l, W - m.r]);
+    xv = (r) => x(r.t);
+    ticks = x.ticks(Math.max(2, Math.floor(W / 110)));
+    fmt = (d) => lx.hora.format(d);
+  }
+  const eixoX = (svg, altura) => svg.append('g').attr('transform', `translate(0,${altura - m.b})`)
+    .call(d3.axisBottom(x).tickValues(ticks).tickSize(0).tickFormat(fmt));
   const lo = d3.min(rows, (r) => Math.min(r.A_p05, 100 - r.A_p95, r.parcial_A ?? 50, 100 - (r.parcial_A ?? 50)));
   const yDom = [Math.max(0, Math.min(lo, 45) - 1), Math.min(100, 100 - Math.max(0, Math.min(lo, 45) - 1))];
-  let tDom = d3.extent(rows, (r) => r.t);
-  if (+tDom[0] === +tDom[1]) tDom = [new Date(+tDom[0] - 30 * 60e3), new Date(+tDom[0] + 30 * 60e3)];
-  const x = d3.scaleUtc(tDom, [m.l, W - m.r]);
   const y = d3.scaleLinear(yDom, [H - m.b, m.t]);
   const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img')
     .attr('aria-label', 'Linha do tempo da previsão');
@@ -343,59 +377,82 @@ dash.onData(() => {
     .attr('y1', (d) => y(d)).attr('y2', (d) => y(d)).attr('stroke', 'var(--cds-chart-grid)');
   svg.append('line').attr('x1', m.l).attr('x2', W - m.r).attr('y1', y(50)).attr('y2', y(50))
     .attr('stroke', 'var(--cds-chart-reference)').attr('stroke-dasharray', '4 4');
-  const ay = svg.append('g').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(6).tickSize(0).tickFormat((d) => d + '%'));
-  const ax = svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(Math.max(2, Math.floor(W / 110))).tickSize(0).tickFormat((d) => lx.hora.format(d)));
-  [ay, ax].forEach((g) => { g.attr('font-size', null).attr('font-family', null); g.select('.domain').remove(); g.selectAll('text').attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)'); });
+  eixos([svg.append('g').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(6).tickSize(0).tickFormat((d) => d + '%')), eixoX(svg, H)]);
   const series = [
-    { nome: nomes[0], cor: 'var(--lx-a)', m: (r) => r.A_media, lo: (r) => r.A_p05, hi: (r) => r.A_p95, ap: (r) => r.parcial_A },
-    { nome: nomes[1], cor: 'var(--lx-b)', m: (r) => 100 - r.A_media, lo: (r) => 100 - r.A_p95, hi: (r) => 100 - r.A_p05, ap: (r) => r.parcial_A === null ? null : 100 - r.parcial_A },
+    { nome: nomes[0], cor: 'var(--lx-a)', m: (r) => r.A_media, lo: (r) => r.A_p05, hi: (r) => r.A_p95, ap: (r) => r.parcial_A, ch: (r) => 100 * r.prob_A },
+    { nome: nomes[1], cor: 'var(--lx-b)', m: (r) => 100 - r.A_media, lo: (r) => 100 - r.A_p95, hi: (r) => 100 - r.A_p05, ap: (r) => r.parcial_A === null ? null : 100 - r.parcial_A, ch: (r) => 100 - 100 * r.prob_A },
   ];
   const comApuracao = rows.filter((r) => r.pct_secoes > 0);
   series.forEach((s) => {
     svg.append('path').datum(rows).attr('fill', s.cor).attr('fill-opacity', 0.15)
-      .attr('d', d3.area().x((r) => x(r.t)).y0((r) => y(s.lo(r))).y1((r) => y(s.hi(r))));
-    svg.append('g').selectAll('line').data(rows).join('line').attr('x1', (r) => x(r.t)).attr('x2', (r) => x(r.t))
+      .attr('d', d3.area().x(xv).y0((r) => y(s.lo(r))).y1((r) => y(s.hi(r))));
+    svg.append('g').selectAll('line').data(rows).join('line').attr('x1', xv).attr('x2', xv)
       .attr('y1', (r) => y(s.lo(r))).attr('y2', (r) => y(s.hi(r))).attr('stroke', s.cor).attr('stroke-opacity', 0.6);
     if (comApuracao.length > 1) {
       svg.append('path').datum(comApuracao).attr('fill', 'none').attr('stroke', s.cor).attr('stroke-width', 1.5).attr('stroke-dasharray', '2 3')
-        .attr('d', d3.line().x((r) => x(r.t)).y((r) => y(s.ap(r))));
+        .attr('d', d3.line().x(xv).y((r) => y(s.ap(r))));
     }
     svg.append('path').datum(rows).attr('fill', 'none').attr('stroke', s.cor).attr('stroke-width', 2)
-      .attr('stroke-linecap', 'round').attr('stroke-linejoin', 'round').attr('d', d3.line().x((r) => x(r.t)).y((r) => y(s.m(r))));
-    svg.append('g').selectAll('circle').data(rows).join('circle').attr('cx', (r) => x(r.t)).attr('cy', (r) => y(s.m(r))).attr('r', 3).attr('fill', s.cor);
+      .attr('stroke-linecap', 'round').attr('stroke-linejoin', 'round').attr('d', d3.line().x(xv).y((r) => y(s.m(r))));
+    svg.append('g').selectAll('circle').data(rows).join('circle').attr('cx', xv).attr('cy', (r) => y(s.m(r))).attr('r', 3).attr('fill', s.cor);
   });
   if (rows[0].real_A !== undefined && rows[0].real_A !== null) {
     const rv = rows[0].real_A;
     svg.append('line').attr('x1', m.l).attr('x2', W - m.r).attr('y1', y(rv)).attr('y2', y(rv)).attr('stroke', 'var(--color-fg)').attr('stroke-dasharray', '6 3');
     svg.append('text').attr('x', m.l + 4).attr('y', y(rv) - 4).attr('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)').text(`resultado final ${nomes[0]}: ${lx.pct(rv)}`);
   }
+  const rotulosFim = (svg, yy, val) => {
+    const last = rows[rows.length - 1];
+    const ends = series.map((s) => ({ s, y: yy(val(s)(last)) })).sort((a, b) => a.y - b.y);
+    if (ends[1].y - ends[0].y < 14) { const mid = (ends[0].y + ends[1].y) / 2; ends[0].y = mid - 7; ends[1].y = mid + 7; }
+    ends.forEach((e) => svg.append('text').attr('x', xv(last) + 6).attr('y', e.y).attr('dy', '0.35em')
+      .attr('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)').text(lx.pct(val(e.s)(last))));
+  };
+  rotulosFim(svg, y, (s) => s.m);
+  // chance de vitória (mesmo eixo horizontal)
+  const yc = d3.scaleLinear([0, 100], [HC - m.b, m.t]);
+  const svgC = d3.select(boxC).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${HC}`).attr('role', 'img')
+    .attr('aria-label', 'Chance de vitória de cada candidato ao longo da apuração');
+  svgC.append('g').selectAll('line').data([0, 25, 50, 75, 100]).join('line').attr('x1', m.l).attr('x2', W - m.r)
+    .attr('y1', (d) => yc(d)).attr('y2', (d) => yc(d)).attr('stroke', (d) => d === 50 ? 'var(--cds-chart-reference)' : 'var(--cds-chart-grid)')
+    .attr('stroke-dasharray', (d) => d === 50 ? '4 4' : null);
+  eixos([svgC.append('g').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(yc).tickValues([0, 50, 100]).tickSize(0).tickFormat((d) => d + '%')), eixoX(svgC, HC)]);
+  series.forEach((s) => {
+    svgC.append('path').datum(rows).attr('fill', 'none').attr('stroke', s.cor).attr('stroke-width', 2)
+      .attr('stroke-linecap', 'round').attr('stroke-linejoin', 'round').attr('d', d3.line().x(xv).y((r) => yc(s.ch(r))));
+    svgC.append('g').selectAll('circle').data(rows).join('circle').attr('cx', xv).attr('cy', (r) => yc(s.ch(r))).attr('r', 2.5).attr('fill', s.cor);
+  });
   const last = rows[rows.length - 1];
-  const ends = series.map((s) => ({ s, y: y(s.m(last)) })).sort((a, b) => a.y - b.y);
-  if (ends[1].y - ends[0].y < 14) { const mid = (ends[0].y + ends[1].y) / 2; ends[0].y = mid - 7; ends[1].y = mid + 7; }
-  ends.forEach((e) => svg.append('text').attr('x', x(last.t) + 6).attr('y', e.y).attr('dy', '0.35em')
-    .attr('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)').text(lx.pct(e.s.m(last))));
-  // tooltip
+  const fimC = series.map((s) => ({ s, y: yc(s.ch(last)) })).sort((a, b) => a.y - b.y);
+  if (fimC[1].y - fimC[0].y < 14) { const mid = (fimC[0].y + fimC[1].y) / 2; fimC[0].y = mid - 7; fimC[1].y = mid + 7; }
+  fimC.forEach((e) => svgC.append('text').attr('x', xv(last) + 6).attr('y', e.y).attr('dy', '0.35em')
+    .attr('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)').text(lx.pct(e.s.ch(last), 0)));
+  // dica e linha vertical sincronizadas nos dois gráficos
   const tip = d3.select(box).append('div').attr('class', 'lx-tip').style('display', 'none');
   const rule = svg.append('line').attr('y1', m.t).attr('y2', H - m.b).attr('stroke', 'var(--cds-chart-axis)').style('display', 'none');
-  const near = d3.bisector((r) => r.t).center;
-  svg.append('rect').attr('x', m.l).attr('y', m.t).attr('width', W - m.l - m.r).attr('height', H - m.t - m.b).attr('fill', 'transparent')
-    .on('pointermove', (ev) => {
-      const [px] = d3.pointer(ev);
-      const r = rows[near(rows, x.invert(px))];
-      rule.style('display', null).attr('x1', x(r.t)).attr('x2', x(r.t));
-      tip.style('display', null); tip.node().replaceChildren();
-      tip.append('div').attr('class', 'lx-t').text(`${lx.hora.format(r.t)} · ${lx.pct(r.pct_secoes, 2)} apurado`);
-      series.forEach((s) => {
-        const d = tip.append('div');
-        d.append('span').attr('class', 'lx-sw').style('background', s.cor);
-        d.append('span').text(`${s.nome}: ${lx.pct(s.m(r))} (${lx.pct(s.lo(r))} a ${lx.pct(s.hi(r))})`);
-      });
-      const bw = box.clientWidth, sx = bw / W;
-      const left = Math.min(Math.max(0, x(r.t) * sx + 12), bw - tip.node().offsetWidth);
-      tip.style('left', left + 'px').style('top', '8px');
-    })
-    .on('pointerleave', () => { tip.style('display', 'none'); rule.style('display', 'none'); });
-});
+  const ruleC = svgC.append('line').attr('y1', m.t).attr('y2', HC - m.b).attr('stroke', 'var(--cds-chart-axis)').style('display', 'none');
+  const xs = rows.map(xv);
+  const perto = (px) => { let k = 0; xs.forEach((v, i) => { if (Math.abs(v - px) < Math.abs(xs[k] - px)) k = i; }); return rows[k]; };
+  const mostra = (ev) => {
+    const [px] = d3.pointer(ev);
+    const r = perto(px);
+    [rule, ruleC].forEach((l) => l.style('display', null).attr('x1', xv(r)).attr('x2', xv(r)));
+    tip.style('display', null); tip.node().replaceChildren();
+    tip.append('div').attr('class', 'lx-t').text(`${lx.hora.format(r.t)} · ${lx.pct(r.pct_secoes, 2)} apurado`);
+    series.forEach((s) => {
+      const d = tip.append('div');
+      d.append('span').attr('class', 'lx-sw').style('background', s.cor);
+      d.append('span').text(`${s.nome}: ${lx.pct(s.m(r))} (${lx.pct(s.lo(r))} a ${lx.pct(s.hi(r))}) · chance ${lx.pct(s.ch(r), 0)}`);
+    });
+    const bw = box.clientWidth, sx = bw / W;
+    const left = Math.min(Math.max(0, xv(r) * sx + 12), bw - tip.node().offsetWidth);
+    tip.style('left', left + 'px').style('top', '8px');
+  };
+  const esconde = () => { tip.style('display', 'none'); rule.style('display', 'none'); ruleC.style('display', 'none'); };
+  [[svg, H], [svgC, HC]].forEach(([sv, hh]) => sv.append('rect').attr('x', m.l).attr('y', m.t).attr('width', W - m.l - m.r)
+    .attr('height', hh - m.t - m.b).attr('fill', 'transparent').on('pointermove', mostra).on('pointerleave', esconde));
+};
+dash.onData(() => lx.desenhaTempo());
 </script>
 
 <script>
