@@ -1,6 +1,38 @@
 {
  "votacao_candidato_munzona_2020.zip": {
-  "arquivos": 27,
+  "lidos": [
+   "votacao_candidato_munzona_2020_BRASIL.csv"
+  ],
+  "todos": [
+   "votacao_candidato_munzona_2020_BRASIL.csv",
+   "votacao_candidato_munzona_2020_AC.csv",
+   "votacao_candidato_munzona_2020_TO.csv",
+   "votacao_candidato_munzona_2020_SP.csv",
+   "votacao_candidato_munzona_2020_PA.csv",
+   "votacao_candidato_munzona_2020_SC.csv",
+   "votacao_candidato_munzona_2020_SE.csv",
+   "votacao_candidato_munzona_2020_MT.csv",
+   "votacao_candidato_munzona_2020_MS.csv",
+   "votacao_candidato_munzona_2020_MG.csv",
+   "votacao_candidato_munzona_2020_MA.csv",
+   "votacao_candidato_munzona_2020_GO.csv",
+   "votacao_candidato_munzona_2020_ES.csv",
+   "votacao_candidato_munzona_2020_CE.csv",
+   "votacao_candidato_munzona_2020_BA.csv",
+   "votacao_candidato_munzona_2020_RN.csv",
+   "votacao_candidato_munzona_2020_PE.csv",
+   "votacao_candidato_munzona_2020_RS.csv",
+   "votacao_candidato_munzona_2020_PB.csv",
+   "votacao_candidato_munzona_2020_PR.csv",
+   "votacao_candidato_munzona_2020_PI.csv",
+   "votacao_candidato_munzona_2020_RJ.csv",
+   "votacao_candidato_munzona_2020_AM.csv",
+   "votacao_candidato_munzona_2020_AL.csv",
+   "votacao_candidato_munzona_2020_RR.csv",
+   "votacao_candidato_munzona_2020_AP.csv",
+   "votacao_candidato_munzona_2020_RO.csv",
+   "leiame.pdf"
+  ],
   "colunas": [
    "DT_GERACAO",
    "HH_GERACAO",
@@ -55,7 +87,39 @@
   ]
  },
  "votacao_partido_munzona_2020.zip": {
-  "arquivos": 27,
+  "lidos": [
+   "votacao_partido_munzona_2020_BRASIL.csv"
+  ],
+  "todos": [
+   "votacao_partido_munzona_2020_BRASIL.csv",
+   "votacao_partido_munzona_2020_TO.csv",
+   "votacao_partido_munzona_2020_SE.csv",
+   "votacao_partido_munzona_2020_SC.csv",
+   "votacao_partido_munzona_2020_RS.csv",
+   "votacao_partido_munzona_2020_SP.csv",
+   "votacao_partido_munzona_2020_RR.csv",
+   "votacao_partido_munzona_2020_RO.csv",
+   "votacao_partido_munzona_2020_RJ.csv",
+   "votacao_partido_munzona_2020_RN.csv",
+   "votacao_partido_munzona_2020_PR.csv",
+   "votacao_partido_munzona_2020_PI.csv",
+   "votacao_partido_munzona_2020_PA.csv",
+   "votacao_partido_munzona_2020_PE.csv",
+   "votacao_partido_munzona_2020_PB.csv",
+   "votacao_partido_munzona_2020_MG.csv",
+   "votacao_partido_munzona_2020_MT.csv",
+   "votacao_partido_munzona_2020_GO.csv",
+   "votacao_partido_munzona_2020_MS.csv",
+   "votacao_partido_munzona_2020_CE.csv",
+   "votacao_partido_munzona_2020_MA.csv",
+   "votacao_partido_munzona_2020_ES.csv",
+   "votacao_partido_munzona_2020_BA.csv",
+   "votacao_partido_munzona_2020_AM.csv",
+   "votacao_partido_munzona_2020_AP.csv",
+   "votacao_partido_munzona_2020_AL.csv",
+   "votacao_partido_munzona_2020_AC.csv",
+   "leiame.pdf"
+  ],
   "colunas": [
    "DT_GERACAO",
    "HH_GERACAO",
@@ -98,7 +162,39 @@
   ]
  },
  "detalhe_votacao_munzona_2020.zip": {
-  "arquivos": 27,
+  "lidos": [
+   "detalhe_votacao_munzona_2020_BRASIL.csv"
+  ],
+  "todos": [
+   "detalhe_votacao_munzona_2020_MA.csv",
+   "detalhe_votacao_munzona_2020_MG.csv",
+   "detalhe_votacao_munzona_2020_AM.csv",
+   "detalhe_votacao_munzona_2020_BA.csv",
+   "detalhe_votacao_munzona_2020_CE.csv",
+   "detalhe_votacao_munzona_2020_ES.csv",
+   "detalhe_votacao_munzona_2020_AL.csv",
+   "detalhe_votacao_munzona_2020_GO.csv",
+   "detalhe_votacao_munzona_2020_AC.csv",
+   "detalhe_votacao_munzona_2020_AP.csv",
+   "detalhe_votacao_munzona_2020_RS.csv",
+   "detalhe_votacao_munzona_2020_SC.csv",
+   "detalhe_votacao_munzona_2020_TO.csv",
+   "detalhe_votacao_munzona_2020_SE.csv",
+   "detalhe_votacao_munzona_2020_BRASIL.csv",
+   "detalhe_votacao_munzona_2020_MS.csv",
+   "detalhe_votacao_munzona_2020_PB.csv",
+   "detalhe_votacao_munzona_2020_SP.csv",
+   "detalhe_votacao_munzona_2020_MT.csv",
+   "detalhe_votacao_munzona_2020_PA.csv",
+   "detalhe_votacao_munzona_2020_RO.csv",
+   "detalhe_votacao_munzona_2020_RR.csv",
+   "detalhe_votacao_munzona_2020_RJ.csv",
+   "detalhe_votacao_munzona_2020_PI.csv",
+   "detalhe_votacao_munzona_2020_RN.csv",
+   "detalhe_votacao_munzona_2020_PE.csv",
+   "detalhe_votacao_munzona_2020_PR.csv",
+   "leiame.pdf"
+  ],
   "colunas": [
    "DT_GERACAO",
    "HH_GERACAO",
@@ -150,7 +246,39 @@
   ]
  },
  "consulta_cand_2020.zip": {
-  "arquivos": 27,
+  "lidos": [
+   "consulta_cand_2020_BRASIL.csv"
+  ],
+  "todos": [
+   "leiame.pdf",
+   "consulta_cand_2020_SP.csv",
+   "consulta_cand_2020_AC.csv",
+   "consulta_cand_2020_PB.csv",
+   "consulta_cand_2020_TO.csv",
+   "consulta_cand_2020_SE.csv",
+   "consulta_cand_2020_SC.csv",
+   "consulta_cand_2020_RR.csv",
+   "consulta_cand_2020_RN.csv",
+   "consulta_cand_2020_RS.csv",
+   "consulta_cand_2020_RO.csv",
+   "consulta_cand_2020_PI.csv",
+   "consulta_cand_2020_RJ.csv",
+   "consulta_cand_2020_BRASIL.csv",
+   "consulta_cand_2020_PA.csv",
+   "consulta_cand_2020_PE.csv",
+   "consulta_cand_2020_PR.csv",
+   "consulta_cand_2020_MT.csv",
+   "consulta_cand_2020_MS.csv",
+   "consulta_cand_2020_MG.csv",
+   "consulta_cand_2020_MA.csv",
+   "consulta_cand_2020_AM.csv",
+   "consulta_cand_2020_GO.csv",
+   "consulta_cand_2020_ES.csv",
+   "consulta_cand_2020_AL.csv",
+   "consulta_cand_2020_CE.csv",
+   "consulta_cand_2020_BA.csv",
+   "consulta_cand_2020_AP.csv"
+  ],
   "colunas": [
    "DT_GERACAO",
    "HH_GERACAO",
