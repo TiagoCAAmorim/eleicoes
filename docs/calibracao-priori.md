@@ -123,7 +123,9 @@ que a realidade (dentro das cidades, a ordem das seções importa; ver [estresse
 
 **Teste de estresse** (16 apurações sintéticas com viés dentro das cidades, gerador de [estresse.md](estresse.md)):
 
-ESTRESSE
+Pendente. Rodar `python scripts/estresse.py --rodadas 16 --variantes revisado calibrado --saida resultados/estresse-calibrado`
+(cerca de 1h30 em 4 núcleos). A variante `calibrado` usa a hierarquia e os choques calibrados com a priori de 2022, para
+isolar o efeito deles na apuração.
 
 ## Como usar
 
