@@ -175,5 +175,5 @@ python scripts/rejogar_2026.py --variantes revisado calibrado_hier calibrado cal
   quando a reportagem trouxer, daria a linha Outros direto, sem depender da matriz média.
 - **Só presidente.** Governador e senador (etapa 5) usam a mesma base. Lá a priori precisa de outro desenho, porque
   os partidos mudam de UF para UF.
-- **Matriz v2.** Testada com 2006–2026 em [matriz-v2.md](matriz-v2.md): ganha por pouco durante a apuração e
-  passou a ser o padrão da página revisada de 2026.
+- **Matriz v2.** Testada com 2006–2026 em [matriz-v2.md](matriz-v2.md): ganha por pouco nos rejogos, perde no teste de
+  estresse e não foi adotada.

@@ -89,21 +89,43 @@ Cobertura de 90% no Brasil igual nas duas (99%) e nenhuma chamada errada. A v2 t
 | CRPS UFs | 0,518 | 0,513 | 0,546 | 0,548 |
 | Chance > 99% a partir de | 41% | 48% | 48% | 48% |
 
+## Teste de estresse
+
+16 apurações sintéticas com viés de ordem entre e dentro das cidades (gerador de [estresse.md](estresse.md)), rodadas
+no PC do Tiago com `python scripts/estresse.py --rodadas 16 --variantes calibrado_cauteloso calibrado_cauteloso_v2
+--saida resultados/estresse-v2` (`resultados/estresse-v2/resumo.csv`):
+
+| % apurado | Cobertura 90% v1 / v2 | Cobertura 50% v1 / v2 | Erro abs. v1 / v2 | Largura 90% v1 / v2 | CRPS v1 / v2 |
+|---|---|---|---|---|---|
+| 0 | 62% / 56% | 25% / 25% | 2,32 / 2,52 | 4,3 / 4,3 | 1,82 / 2,01 |
+| 1 | 88% / 88% | 56% / 50% | 1,15 / 1,41 | 5,5 / 5,7 | 0,85 / 0,99 |
+| 3 | 94% / 94% | 56% / 56% | 1,00 / 1,18 | 4,9 / 5,2 | 0,73 / 0,82 |
+| 5 | 94% / 94% | 56% / 56% | 0,94 / 1,06 | 4,5 / 4,8 | 0,68 / 0,75 |
+| 10 | 94% / 94% | 62% / 50% | 0,80 / 0,87 | 3,8 / 4,1 | 0,57 / 0,61 |
+| 20 | 94% / 94% | 69% / 62% | 0,60 / 0,63 | 3,0 / 3,2 | 0,43 / 0,45 |
+| 30 a 90 | 81–94% (iguais) | 50–69% / 50–62% | iguais | iguais | iguais |
+| **todos** | **89% / 88%** | **58% / 53%** | **0,79 / 0,87** | **3,1 / 3,3** | **0,585 / 0,640** |
+
+Aqui a v2 **perde**: erra mais e tem faixa mais larga até ~20% apurado, com a mesma cobertura; de 30% em diante as
+duas empatam. Nenhuma chamada errada em nenhuma. A diferença vem do começo da apuração, quando o que pesa é a
+priori e as poucas cidades apuradas: com seções enviesadas dentro das cidades, os três parâmetros a mais dão ao
+modelo mais liberdade para "explicar" o viés com transferências, e ele erra mais na extrapolação. (O gerador sorteia
+as eleições de 2022 em torno da previsão da priori v1 mais os desvios reais das cidades; isso pode favorecer um
+pouco a v1 em 0%, mas não explica a diferença de 1% a 20%.)
+
 ## Conclusão
 
-A v2 ganha, mas por pouco: ajusta melhor os municípios em todos os anos e melhora um pouco a previsão durante a
-apuração (CRPS ~3% menor, erro do Brasil 0,02 ponto menor), sem perder cobertura. Antes da apuração, empata no
-Brasil e erra 0,2 ponto a mais nas UFs. **A página revisada de 2026 passa a usar a variante calibrado cauteloso v2**
-(`python scripts/rejogar_paginas_2026.py`, que agora é o padrão). As tabelas de transferências, o diagrama de Sankey e
-os CSVs mostram os três parâmetros novos.
+A v2 ajusta melhor os municípios e ganha por pouco nas apurações sem viés dentro das cidades (CRPS ~3% menor), mas
+perde mais do que isso no teste de estresse (CRPS ~9% maior, erro maior até 20% apurado). Como a meta é a faixa
+honesta nas apurações difíceis, **a página revisada de 2026 continua com a v1 (calibrado cauteloso)**. A v2 fica
+disponível (`matriz_v2=True`, `priori.config_calibrada(..., v2=True)`, variantes `*_v2` nos scripts), e as
+exportações, as tabelas e o Sankey já sabem mostrar os três parâmetros novos se ela for usada.
 
-O ganho é pequeno o bastante para o teste de estresse (apurações com viés dentro das cidades, ver
-[estresse.md](estresse.md)) ter a última palavra. Se a v2 cobrir menos que a v1 ali, a página volta para
-`calibrado_cauteloso`.
-
-O que a v2 **não** resolve: ler as transferências de 2026 como a pesquisa (Outros → Lula ~32%). Com dados só por
-município, o modelo atribui ao canal mais conveniente o crescimento de Lula onde houve mais nulo e mais abstenção.
-Para separar isso faltam covariáveis (próximo item da etapa 3) ou o cruzamento das pesquisas por voto no 1º turno.
+O que a v2 também **não** resolve: ler as transferências de 2026 como a pesquisa (Outros → Lula ~32%). Com dados só
+por município, o modelo atribui ao canal mais conveniente o crescimento de Lula onde houve mais nulo e mais
+abstenção. Para separar isso faltam covariáveis (próximo item da etapa 3) ou o cruzamento das pesquisas por voto no
+1º turno. Uma variação que talvez valha testar depois: só a falta separada para A e B, sem branco/nulo → candidatos,
+com priori mais apertada nos parâmetros novos (`sd_v2`).
 
 ## Como rodar
 
@@ -112,6 +134,6 @@ python scripts/calibrar_priori.py --variantes calibrado,calibrado_v2,calibrado_v
 python scripts/calibrar_priori.py --variantes "" --rejogo 2 --variante-rejogo calibrado,calibrado_v2   # ~40 min
 python scripts/rejogar_2026.py --variantes calibrado calibrado_v2 calibrado_cauteloso calibrado_cauteloso_v2 \
     --passo 2 --saida resultados/matriz-v2/rejogo-2026                                         # ~10 min
-# teste de estresse (~1h30 com 16 rodadas; melhor no PC):
+# teste de estresse (~1h30 com 16 rodadas; rodado no PC):
 python scripts/estresse.py --rodadas 16 --variantes calibrado_cauteloso calibrado_cauteloso_v2 --saida resultados/estresse-v2
 ```
