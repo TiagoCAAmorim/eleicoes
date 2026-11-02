@@ -5,11 +5,11 @@
    "cargo": "prefeito",
    "turno": 1,
    "municipios": 5568,
-   "aptos": 138544348,
-   "comparecimento": 115807514,
-   "brancos": 3805899,
-   "nulos": 8740770,
-   "validos": 103260845
+   "aptos": 140635355,
+   "comparecimento": 117455053,
+   "brancos": 3854173,
+   "nulos": 8894789,
+   "validos": 104706091
   },
   {
    "cargo": "prefeito",
