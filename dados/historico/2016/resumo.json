@@ -1,0 +1,35 @@
+{
+ "ano": 2016,
+ "cargos": [
+  {
+   "cargo": "prefeito",
+   "turno": 1,
+   "municipios": 5568,
+   "aptos": 288177824,
+   "comparecimento": 237515560,
+   "brancos": 8257364,
+   "nulos": 21357464,
+   "validos": 207044092
+  },
+  {
+   "cargo": "prefeito",
+   "turno": 2,
+   "municipios": 57,
+   "aptos": 65974216,
+   "comparecimento": 51754984,
+   "brancos": 1902458,
+   "nulos": 5495974,
+   "validos": 44356552
+  },
+  {
+   "cargo": "vereador",
+   "turno": 1,
+   "municipios": 5568,
+   "aptos": 288177824,
+   "comparecimento": 237515560,
+   "brancos": 9867066,
+   "nulos": 14451372,
+   "validos": 198293728
+  }
+ ]
+}
