@@ -12,7 +12,26 @@
    "Outros→Branco/nulo": 0.0,
    "Outros→Abstenção": 0.8,
    "Abstenção T1→A": 4.1,
-   "Abstenção T1→B": 0.0
+   "Abstenção T1→B": 0.0,
+   "Branco/nulo→A": 0.0,
+   "Branco/nulo→B": 0.0,
+   "Abstenção (votantes de B)": 3.6,
+   "s0": 3.299
+  },
+  "transferencias_v2": {
+   "A→B": 0.0,
+   "B→A": 9.3,
+   "Abstenção (votantes T1)": 2.9,
+   "Outros→A": 78.0,
+   "Outros→B": 14.3,
+   "Outros→Branco/nulo": 0.2,
+   "Outros→Abstenção": 7.4,
+   "Abstenção T1→A": 0.1,
+   "Abstenção T1→B": 0.0,
+   "Branco/nulo→A": 25.0,
+   "Branco/nulo→B": 3.7,
+   "Abstenção (votantes de B)": 3.0,
+   "s0": 2.771
   }
  },
  "2010": {
@@ -28,7 +47,26 @@
    "Outros→Branco/nulo": 0.0,
    "Outros→Abstenção": 2.4,
    "Abstenção T1→A": 0.2,
-   "Abstenção T1→B": 0.5
+   "Abstenção T1→B": 0.5,
+   "Branco/nulo→A": 0.0,
+   "Branco/nulo→B": 0.0,
+   "Abstenção (votantes de B)": 3.6,
+   "s0": 2.904
+  },
+  "transferencias_v2": {
+   "A→B": 0.0,
+   "B→A": 0.0,
+   "Abstenção (votantes T1)": 5.3,
+   "Outros→A": 38.7,
+   "Outros→B": 42.4,
+   "Outros→Branco/nulo": 9.3,
+   "Outros→Abstenção": 9.7,
+   "Abstenção T1→A": 0.0,
+   "Abstenção T1→B": 0.0,
+   "Branco/nulo→A": 24.9,
+   "Branco/nulo→B": 21.1,
+   "Abstenção (votantes de B)": 0.1,
+   "s0": 2.14
   }
  },
  "2014": {
@@ -44,7 +82,26 @@
    "Outros→Branco/nulo": 0.0,
    "Outros→Abstenção": 0.9,
    "Abstenção T1→A": 0.0,
-   "Abstenção T1→B": 1.4
+   "Abstenção T1→B": 1.4,
+   "Branco/nulo→A": 0.0,
+   "Branco/nulo→B": 0.0,
+   "Abstenção (votantes de B)": 2.3,
+   "s0": 2.762
+  },
+  "transferencias_v2": {
+   "A→B": 0.0,
+   "B→A": 0.0,
+   "Abstenção (votantes T1)": 3.6,
+   "Outros→A": 37.3,
+   "Outros→B": 55.4,
+   "Outros→Branco/nulo": 2.4,
+   "Outros→Abstenção": 4.9,
+   "Abstenção T1→A": 0.0,
+   "Abstenção T1→B": 0.1,
+   "Branco/nulo→A": 24.8,
+   "Branco/nulo→B": 18.7,
+   "Abstenção (votantes de B)": 0.0,
+   "s0": 2.198
   }
  },
  "2018": {
@@ -60,7 +117,26 @@
    "Outros→Branco/nulo": 1.6,
    "Outros→Abstenção": 9.5,
    "Abstenção T1→A": 0.0,
-   "Abstenção T1→B": 0.0
+   "Abstenção T1→B": 0.0,
+   "Branco/nulo→A": 0.0,
+   "Branco/nulo→B": 0.0,
+   "Abstenção (votantes de B)": 0.0,
+   "s0": 2.759
+  },
+  "transferencias_v2": {
+   "A→B": 0.0,
+   "B→A": 0.0,
+   "Abstenção (votantes T1)": 1.8,
+   "Outros→A": 58.1,
+   "Outros→B": 23.3,
+   "Outros→Branco/nulo": 12.4,
+   "Outros→Abstenção": 6.1,
+   "Abstenção T1→A": 0.0,
+   "Abstenção T1→B": 0.0,
+   "Branco/nulo→A": 7.1,
+   "Branco/nulo→B": 19.9,
+   "Abstenção (votantes de B)": 0.0,
+   "s0": 2.69
   }
  },
  "2022": {
@@ -76,7 +152,26 @@
    "Outros→Branco/nulo": 0.1,
    "Outros→Abstenção": 0.3,
    "Abstenção T1→A": 0.5,
-   "Abstenção T1→B": 0.0
+   "Abstenção T1→B": 0.0,
+   "Branco/nulo→A": 0.0,
+   "Branco/nulo→B": 0.0,
+   "Abstenção (votantes de B)": 0.0,
+   "s0": 1.384
+  },
+  "transferencias_v2": {
+   "A→B": 0.0,
+   "B→A": 0.0,
+   "Abstenção (votantes T1)": 1.2,
+   "Outros→A": 9.7,
+   "Outros→B": 76.1,
+   "Outros→Branco/nulo": 14.0,
+   "Outros→Abstenção": 0.2,
+   "Abstenção T1→A": 2.2,
+   "Abstenção T1→B": 0.2,
+   "Branco/nulo→A": 22.5,
+   "Branco/nulo→B": 0.2,
+   "Abstenção (votantes de B)": 0.0,
+   "s0": 1.31
   }
  },
  "2026": {
@@ -92,7 +187,26 @@
    "Outros→Branco/nulo": 0.0,
    "Outros→Abstenção": 0.3,
    "Abstenção T1→A": 8.4,
-   "Abstenção T1→B": 0.0
+   "Abstenção T1→B": 0.0,
+   "Branco/nulo→A": 0.0,
+   "Branco/nulo→B": 0.0,
+   "Abstenção (votantes de B)": 0.0,
+   "s0": 1.779
+  },
+  "transferencias_v2": {
+   "A→B": 0.0,
+   "B→A": 0.0,
+   "Abstenção (votantes T1)": 0.0,
+   "Outros→A": 58.7,
+   "Outros→B": 40.6,
+   "Outros→Branco/nulo": 0.1,
+   "Outros→Abstenção": 0.6,
+   "Abstenção T1→A": 7.1,
+   "Abstenção T1→B": 0.0,
+   "Branco/nulo→A": 24.9,
+   "Branco/nulo→B": 5.3,
+   "Abstenção (votantes de B)": 0.1,
+   "s0": 1.562
   }
  }
 }

@@ -36,14 +36,19 @@ VARIANTES = {
     "calibrado": {"tau": 0.15, "choque_uf_inicio": 0.02, "sd_outros": 0.3},   # hierarquia e choques de 2006–2022
     # o mesmo, mas com o choque inicial por UF de 4% depois que a apuração começa (2% só antes de abrir)
     "calibrado_cauteloso": {"tau": 0.15, "choque_uf_inicio": 0.04, "choque_uf_inicio_antes": 0.02, "sd_outros": 0.3},
+    # matriz v2 (docs/matriz-v2.md), com a priori v2 de 2022 (dados/priori/presidente_2022_v2.json)
+    "calibrado_v2": {"tau": 0.15, "choque_uf_inicio": 0.02, "sd_outros": 0.3, "matriz_v2": True},
+    "calibrado_cauteloso_v2": {"tau": 0.15, "choque_uf_inicio": 0.04, "choque_uf_inicio_antes": 0.02, "sd_outros": 0.3,
+                               "matriz_v2": True},
 }
 G = None
 
 
 def _init(par_json):
-    global G, PRI
+    global G, PRI, PRI_V2
     base, sec = carregar()
     PRI = json.load(open(os.path.join(PRIORI, "presidente_2022.json")))
+    PRI_V2 = json.load(open(os.path.join(PRIORI, "presidente_2022_v2.json")))
     G = es.GeradorApuracao(base, sec, PRI)
 
 
@@ -59,7 +64,8 @@ def uma_rodada(args):
         parcial = 100 * df["A2"].sum() / max(df["A2"].sum() + df["B2"].sum(), 1)
         d, X, Y = modelo.preparar(df)
         for v in variantes:
-            cfg = dataclasses.replace(modelo.Config(priori=PRI), **VARIANTES[v])
+            pri = PRI_V2 if VARIANTES[v].get("matriz_v2") else PRI
+            cfg = dataclasses.replace(modelo.Config(priori=pri), **VARIANTES[v])
             aj = modelo.ajustar(d, X, Y, cfg)
             sims = modelo.simular(d, X, Y, aj, cfg).sum(1)
             pa = 100 * sims[:, 0] / np.maximum(sims[:, 0] + sims[:, 1], 1)
