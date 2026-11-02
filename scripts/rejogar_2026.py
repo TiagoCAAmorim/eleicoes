@@ -20,7 +20,7 @@ import pandas as pd
 
 import _raiz  # noqa: F401
 from eleicoes.caminhos import COMUM, RESULTADOS, dados
-from eleicoes.modelos import transferencia as modelo
+from eleicoes.modelos import priori as priori_cal, transferencia as modelo
 
 TOL = 0.1  # pontos: erros menores que isso não contam como falha de cobertura (revisões do TSE, arredondamento)
 FAIXAS = [(-0.01, 0.01, "antes de abrir"), (0.01, 5, "até 5%"), (5, 15, "5 a 15%"), (15, 30, "15 a 30%"),
@@ -39,7 +39,11 @@ VARIANTES = {
     # etapa 3
     "revisado": {},
     "revisado_uf_menor": {"choque_uf_inicio": 0.02},
+    # calibração da priori com 2006–2022 (docs/calibracao-priori.md)
+    "calibrado_hier": dict(priori_cal.CALIBRACAO),
+    "calibrado": "priori média 2006–2022 + linha Outros pela pesquisa",
 }
+PESQUISA_2026 = 49.0   # Datafolha, 24/10/2026: Lula 49% dos válidos (dados/pesquisas/presidente_t2.csv)
 DESCRICAO = {
     "atual": "Modelo usado ao vivo (curva de transição até 25%)",
     "sem_curva": "Sem a curva de transição",
@@ -48,6 +52,8 @@ DESCRICAO = {
     "sem_curva_choque_v2_priori": "Igual à anterior, com priori mais larga (desvio 1,0 em vez de 0,7)",
     "revisado": "Revisado (etapa 3): sem curva, choque nacional 1%, viés da evidência parcial 1,5%, UF no início 4%",
     "revisado_uf_menor": "Revisado com choque por UF no início menor (2%)",
+    "calibrado_hier": "Revisado + hierarquia e choques calibrados em 2006–2022 (tau 0,15, UF no início 2%, Outros 0,3)",
+    "calibrado": "Calibrado: priori média de 2006–2022, linha Outros pela pesquisa Datafolha da véspera (49%)",
 }
 
 
@@ -121,7 +127,10 @@ def main():
     usar = horas[:-1][::a.passo]
     linhas = []
     for nome in a.variantes:
-        cfg = dataclasses.replace(modelo.config_2026(), **VARIANTES[nome])
+        if nome == "calibrado":
+            cfg = priori_cal.config_calibrada(ult, PESQUISA_2026)
+        else:
+            cfg = dataclasses.replace(modelo.config_2026(), **VARIANTES[nome])
         for h in usar:
             t0 = time.time()
             sims = rodar_uma(retrato(base, ret, h), cfg)
@@ -149,7 +158,7 @@ def finalizar(res, variantes, saida):
     resumo = resumir(res)
     resumo.round(4).to_csv(os.path.join(saida, "resumo.csv"), index=False)
     with open(os.path.join(saida, "variantes.json"), "w", encoding="utf-8") as f:
-        json.dump({k: {"mudancas": VARIANTES[k], "descricao": DESCRICAO[k]} for k in variantes}, f,
+        json.dump({k: {"mudancas": VARIANTES[k], "descricao": DESCRICAO[k]} for k in variantes if k in VARIANTES}, f,
                   ensure_ascii=False, indent=1)
     grafico(res, variantes, os.path.join(saida, "rejogo.png"))
     pd.set_option("display.width", 200)

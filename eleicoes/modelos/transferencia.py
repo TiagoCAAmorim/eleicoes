@@ -119,6 +119,7 @@ class Config:
     priori: dict = None
     sd_priori_informativa: float = 0.7
     theta_outros: tuple = None         # logits (oA, oB, oW) vs oN para substituir a linha "Outros" da priori
+    sd_outros: float = None            # desvio da priori na linha Outros (None = sd_priori_informativa)
 
 
 def preparar(df):
@@ -196,6 +197,8 @@ def ajustar(df, X, Y, cfg: Config):
     if cfg.theta_outros is not None:
         theta0[3:6] = cfg.theta_outros
         sd0[3:6] = cfg.sd_priori_informativa
+    if cfg.sd_outros is not None:
+        sd0[3:6] = cfg.sd_outros
     if cfg.matriz_v2:
         # branco/nulo -> A e -> B começam em ~3% cada; a falta de B começa igual à de A
         theta0 = np.concatenate([theta0, [_logit(0.03 / 0.25), _logit(0.03 / 0.25), theta0[2]]])

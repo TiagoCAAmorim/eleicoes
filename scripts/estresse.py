@@ -33,6 +33,7 @@ VARIANTES = {
     "so_nacional": {**AO_VIVO, "transicao_centro": None, "choque_nacional": 0.01},
     "parcial_leve": {"choque_parcial": 0.0075, "choque_uf_inicio": 0.02},
     "revisado": {},
+    "calibrado": {"tau": 0.15, "choque_uf_inicio": 0.02, "sd_outros": 0.3},   # hierarquia e choques de 2006–2022
 }
 G = None
 

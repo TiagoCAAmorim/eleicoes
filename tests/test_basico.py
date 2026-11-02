@@ -71,3 +71,23 @@ def test_gerador_estresse_conserva_validos():
     s, t, beta, gama = g.rodada(np.random.default_rng(0), es.ParamEstresse())
     assert ((s["v13"] + s["v22"]) == (sec["v13"] + sec["v22"])).all()
     assert len(t) == len(sec) and np.isfinite(t).all()
+
+
+def test_priori_linha_outros_bate_com_a_pesquisa():
+    """A linha Outros ajustada faz a previsão de antes da apuração bater com a pesquisa."""
+    import pandas as pd
+    from eleicoes.modelos import priori, transferencia as modelo
+    rng = np.random.default_rng(1)
+    n = 60
+    E = rng.integers(5_000, 50_000, n).astype(float)
+    base = pd.DataFrame({"uf": rng.choice(["sp", "ba", "rs"], n), "mun": [f"{i:05d}" for i in range(n)],
+                         "nome": "x", "capital": False, "E1": E, "A1": 0.35 * E, "B1": 0.3 * E, "O1": 0.12 * E,
+                         "W1": 0.03 * E, "E2": E, "Ea": 0.0, "A2": 0.0, "B2": 0.0, "W2": 0.0, "C2": 0.0})
+    pri = priori.media([{"brasil|Brasil": list(modelo.THETA0)}, {"brasil|Brasil": list(modelo.THETA0 + 0.2)}])
+    assert np.allclose(pri["brasil|Brasil"], modelo.THETA0 + 0.1)
+    th = priori.outros_pela_pesquisa(base, pri, 52.0)
+    t = np.array(pri["brasil|Brasil"])
+    t[3:6] = th
+    y = (base[["A1", "B1", "O1", "W1"]].sum() / E.sum()).tolist()
+    x = np.array(y + [1 - sum(y)]) @ modelo.matriz(t)
+    assert abs(100 * x[0] / (x[0] + x[1]) - 52.0) < 0.05
