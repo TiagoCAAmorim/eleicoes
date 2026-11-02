@@ -1,0 +1,5 @@
+variante,pct,erro_abs,cobre90,cobre50,largura90,crps,chamadas_erradas,n
+media,0,5.5429,0.913,0.4348,22.1512,3.8921,0,46
+media_outros_1,0,5.4201,0.9348,0.5435,24.7259,3.8342,0,46
+media_outros_1_uf6,0,5.4278,0.9565,0.6739,28.1645,3.8998,0,46
+sem_priori,0,5.0606,0.9348,0.7174,27.6778,3.7172,0,46
