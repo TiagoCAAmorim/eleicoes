@@ -65,3 +65,18 @@ def config_calibrada(base, pesquisa_a, anos=None, v2=False, **mudancas):
     pri = media([carregar(a, v2=v2) for a in (anos or ANOS_BASE)])
     th = outros_pela_pesquisa(base, pri, pesquisa_a, v2=v2)
     return modelo.Config(priori=pri, theta_outros=th, matriz_v2=v2, **{**CALIBRACAO, **mudancas})
+
+
+# 2º turno de governador (docs/governador.md): os candidatos mudam de UF para UF, então a priori é a média de todos
+# os 2º turnos de governador anteriores (A = o mais votado no 1º turno). Numa UF só, o viés das primeiras seções
+# não se dilui entre UFs: o choque da evidência parcial é o dobro do presidente.
+GOVERNADOR = {"tau": 0.15, "choque_nacional": 0.0, "sd_priori_informativa": 0.7, "choque_parcial": 0.03}
+
+
+def config_governador(ano, **mudancas):
+    """Config do 2º turno de governador de `ano`, com a média das matrizes dos 2º turnos de anos anteriores."""
+    with open(os.path.join(PRIORI, "governador.json")) as f:
+        todas = json.load(f)
+    ant = [th for k, th in todas.items() if int(k.split("|")[0]) < ano]
+    pri = {"brasil|Brasil": [float(x) for x in np.mean(ant, axis=0)]} if ant else None
+    return modelo.Config(priori=pri, **{**GOVERNADOR, **mudancas})

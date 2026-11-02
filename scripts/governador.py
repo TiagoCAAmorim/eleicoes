@@ -35,6 +35,13 @@ VARIANTES = {
     "media": {"sd_priori_informativa": 0.7},
     "media_outros_1": {"sd_priori_informativa": 0.7, "sd_outros": 1.0},
     "media_outros_1_uf6": {"sd_priori_informativa": 0.7, "sd_outros": 1.0, "choque_uf_inicio": 0.06},
+    # com o choque comum do que falta apurar (1%, como no presidente)
+    "media_outros_1_uf6_nac": {"sd_priori_informativa": 0.7, "sd_outros": 1.0, "choque_uf_inicio": 0.06,
+                               "choque_nacional": 0.01},
+    # viés da evidência parcial maior (3%): numa UF só, o viés das primeiras seções não se dilui entre UFs
+    "media_outros_1_uf6_p3": {"sd_priori_informativa": 0.7, "sd_outros": 1.0, "choque_uf_inicio": 0.06,
+                              "choque_parcial": 0.03},
+    "media_p3": {"sd_priori_informativa": 0.7, "choque_parcial": 0.03},
 }
 
 
