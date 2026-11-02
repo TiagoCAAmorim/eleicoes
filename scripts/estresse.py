@@ -34,6 +34,8 @@ VARIANTES = {
     "parcial_leve": {"choque_parcial": 0.0075, "choque_uf_inicio": 0.02},
     "revisado": {},
     "calibrado": {"tau": 0.15, "choque_uf_inicio": 0.02, "sd_outros": 0.3},   # hierarquia e choques de 2006–2022
+    # o mesmo, mas com o choque inicial por UF de 4% depois que a apuração começa (2% só antes de abrir)
+    "calibrado_cauteloso": {"tau": 0.15, "choque_uf_inicio": 0.04, "choque_uf_inicio_antes": 0.02, "sd_outros": 0.3},
 }
 G = None
 

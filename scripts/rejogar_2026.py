@@ -42,6 +42,7 @@ VARIANTES = {
     # calibração da priori com 2006–2022 (docs/calibracao-priori.md)
     "calibrado_hier": dict(priori_cal.CALIBRACAO),
     "calibrado": "priori média 2006–2022 + linha Outros pela pesquisa",
+    "calibrado_cauteloso": "igual a calibrado, com choque inicial por UF de 4% depois que a apuração começa",
 }
 PESQUISA_2026 = 49.0   # Datafolha, 24/10/2026: Lula 49% dos válidos (dados/pesquisas/presidente_t2.csv)
 DESCRICAO = {
@@ -54,6 +55,7 @@ DESCRICAO = {
     "revisado_uf_menor": "Revisado com choque por UF no início menor (2%)",
     "calibrado_hier": "Revisado + hierarquia e choques calibrados em 2006–2022 (tau 0,15, UF no início 2%, Outros 0,3)",
     "calibrado": "Calibrado: priori média de 2006–2022, linha Outros pela pesquisa Datafolha da véspera (49%)",
+    "calibrado_cauteloso": "Calibrado com choque inicial por UF de 4% depois que a apuração começa (2% antes)",
 }
 
 
@@ -129,6 +131,8 @@ def main():
     for nome in a.variantes:
         if nome == "calibrado":
             cfg = priori_cal.config_calibrada(ult, PESQUISA_2026)
+        elif nome == "calibrado_cauteloso":
+            cfg = priori_cal.config_calibrada(ult, PESQUISA_2026, choque_uf_inicio=0.04, choque_uf_inicio_antes=0.02)
         else:
             cfg = dataclasses.replace(modelo.config_2026(), **VARIANTES[nome])
         for h in usar:
