@@ -6,7 +6,7 @@ dados/historico/<ano>/secoes_presidente_t2.csv.gz, no mesmo formato de dados/202
   uf, mun, zona, secao, aptos, comp, A, B, brancos, nulos
 
 A é o candidato do PT (número 13), como em eleicoes/dados/historico.py; B é o outro candidato do 2º turno.
-Fontes: votacao_secao_<ano>_<UF>.zip (votos por votável) e detalhe_votacao_secao (aptos e comparecimento).
+Fontes: votacao_secao_<ano>_BR.zip (votos por votável; os zips por UF só têm os cargos estaduais) e detalhe_votacao_secao (aptos e comparecimento).
 
     python scripts/tse_secoes.py 2018 2014
 """
@@ -51,7 +51,8 @@ def diagnostico(z, log):
 
 def votos(ano, brutos, log):
     partes = []
-    for uf in UFS:
+    # os zips por UF só têm os cargos estaduais; presidente vem no zip _BR (todas as UFs e o exterior)
+    for uf in ["BR"]:
         url = f"{th.CDN}/votacao_secao/votacao_secao_{ano}_{uf}.zip"
         try:
             z = th.baixar(url, brutos)
