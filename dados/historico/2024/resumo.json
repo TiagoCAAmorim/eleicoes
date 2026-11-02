@@ -5,31 +5,31 @@
    "cargo": "prefeito",
    "turno": 1,
    "municipios": 5569,
-   "aptos": 311825360,
-   "comparecimento": 244231222,
-   "brancos": 6889304,
-   "nulos": 10375302,
-   "validos": 224332700
+   "aptos": 155912680,
+   "comparecimento": 122115611,
+   "brancos": 3444652,
+   "nulos": 5187651,
+   "validos": 112166350
   },
   {
    "cargo": "prefeito",
    "turno": 2,
    "municipios": 51,
-   "aptos": 67992954,
-   "comparecimento": 48098832,
-   "brancos": 1439652,
-   "nulos": 2422966,
-   "validos": 44062580
+   "aptos": 33996477,
+   "comparecimento": 24049416,
+   "brancos": 719826,
+   "nulos": 1211483,
+   "validos": 22031290
   },
   {
    "cargo": "vereador",
    "turno": 1,
    "municipios": 5569,
-   "aptos": 311825360,
-   "comparecimento": 244231222,
-   "brancos": 8500640,
-   "nulos": 8238702,
-   "validos": 215873054
+   "aptos": 155912680,
+   "comparecimento": 122115611,
+   "brancos": 4250320,
+   "nulos": 4119351,
+   "validos": 107936527
   }
  ]
 }
