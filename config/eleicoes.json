@@ -11,9 +11,40 @@
     "situacao": "Apuração encerrada",
     "resumo": "Lula 51,8% x Flávio Bolsonaro 48,2% dos votos válidos. A página mostra a última previsão da noite, com 99,9% das seções apuradas.",
     "paginas": [
-      {"href": "", "nome": "Painel da apuração", "desc": "Previsão, intervalo de 90%, chance de vitória, mapas e fluxos de votos entre os turnos"},
-      {"href": "analises.html", "nome": "Detalhe por município", "desc": "Busca por município e curiosidades da votação"},
-      {"href": "indicadores.html", "nome": "Indicadores do IBGE e o voto", "desc": "Quanto renda, educação e outros indicadores explicam o voto"}
+      {
+        "href": "",
+        "nome": "Painel da apuração",
+        "desc": "Previsão, intervalo de 90%, chance de vitória, mapas e fluxos de votos entre os turnos"
+      },
+      {
+        "href": "revisado/",
+        "nome": "Painel com o modelo revisado",
+        "desc": "A mesma noite rejogada com o modelo de novembro: previsão segue os votos desde o início, com faixa calibrada"
+      },
+      {
+        "href": "analises.html",
+        "nome": "Detalhe por município",
+        "desc": "Busca por município e curiosidades da votação"
+      },
+      {
+        "href": "indicadores.html",
+        "nome": "Indicadores do IBGE e o voto",
+        "desc": "Quanto renda, educação e outros indicadores explicam o voto"
+      }
+    ],
+    "versoes": [
+      {
+        "sub": "",
+        "resultados": "2026-presidente",
+        "rotulo": "Modelo do dia da eleição",
+        "nota": "Previsões exatamente como publicadas na noite de 25/10/2026."
+      },
+      {
+        "sub": "revisado/",
+        "resultados": "2026-presidente-revisado",
+        "rotulo": "Modelo revisado",
+        "nota": "A mesma noite rejogada com o modelo revisado em novembro de 2026: sem a curva de transição e com incerteza calibrada em apurações sintéticas."
+      }
     ]
   }
 ]

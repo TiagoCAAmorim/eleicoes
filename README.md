@@ -1,5 +1,9 @@
 # Eleições em dados
 
+**Site: [tiagocaamorim.github.io/eleicoes](https://tiagocaamorim.github.io/eleicoes/)** · painel de 2026:
+[modelo do dia da eleição](https://tiagocaamorim.github.io/eleicoes/2026/presidente/) e
+[modelo revisado](https://tiagocaamorim.github.io/eleicoes/2026/presidente/revisado/)
+
 Previsões da apuração em tempo real e análises de eleições brasileiras com dados abertos do TSE.
 Código, dados processados e o site ficam juntos neste repositório; o site é publicado pelo GitHub Pages.
 
@@ -22,6 +26,7 @@ scripts/                  linha de comando
   backtest.py             simula a apuração de 2022 e mede erro e cobertura (--variante para testar variantes)
   estresse.py             teste de estresse: muitas apurações sintéticas (--calibrar mede o viés de ordem de 2026)
   rejogar_2026.py         rejoga a apuração real de 2026 com variantes do modelo
+  rejogar_paginas_2026.py refaz as saídas da noite de 2026 com outro modelo (versão "revisado" do site)
   extrair_retratos_2026.py  extrai do histórico git os retratos da apuração de 2026
   gerar_site.py           gera o site completo em _site/
   prep_2022.py, priori_2022.py, baixar_ibge.py, importancia.py, verificar.py, probe_tse.py
