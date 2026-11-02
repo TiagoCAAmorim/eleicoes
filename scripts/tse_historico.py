@@ -79,14 +79,17 @@ def ler_zip(caminho, campos, filtro=None, log=None):
     partes = []
     with zipfile.ZipFile(caminho) as z:
         nomes = [n for n in z.namelist() if n.lower().endswith((".csv", ".txt"))]
-        br = [n for n in nomes if n.upper().rsplit(".", 1)[0].endswith("_BR")]
-        nomes = br or nomes
+        # _BRASIL tem tudo; sem ele, lê todos (UFs e _BR) e as linhas repetidas saem no drop_duplicates abaixo
+        brasil = [n for n in nomes if n.upper().rsplit(".", 1)[0].endswith("_BRASIL")]
+        nomes = brasil or nomes
+        if log is not None:
+            log[os.path.basename(caminho)] = {"lidos": nomes, "todos": z.namelist()}
         for n in nomes:
             with z.open(n) as fh:
                 cab = fh.readline().decode("latin1").strip().replace('"', "").split(";")
             mapa = _mapa(cab, campos)
             if log is not None:
-                log[os.path.basename(caminho)] = {"arquivos": len(nomes), "colunas": cab}
+                log[os.path.basename(caminho)]["colunas"] = cab
             if not mapa:
                 continue
             inv = {v: k for k, v in mapa.items()}
@@ -100,7 +103,8 @@ def ler_zip(caminho, campos, filtro=None, log=None):
                         partes.append(bloco)
     if not partes:
         return pd.DataFrame(columns=list(campos))
-    return pd.concat(partes, ignore_index=True)
+    # linhas são únicas por zona: uma repetida veio de dois arquivos com o mesmo recorte
+    return pd.concat(partes, ignore_index=True).drop_duplicates()
 
 
 def ordinaria(df):
