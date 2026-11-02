@@ -1,0 +1,86 @@
+{
+ "votacao_secao_2014_BR.zip": {
+  "lidos": [
+   "votacao_secao_2014_BR.csv"
+  ],
+  "colunas": [
+   "DT_GERACAO",
+   "HH_GERACAO",
+   "ANO_ELEICAO",
+   "CD_TIPO_ELEICAO",
+   "NM_TIPO_ELEICAO",
+   "NR_TURNO",
+   "CD_ELEICAO",
+   "DS_ELEICAO",
+   "DT_ELEICAO",
+   "TP_ABRANGENCIA",
+   "SG_UF",
+   "SG_UE",
+   "NM_UE",
+   "CD_MUNICIPIO",
+   "NM_MUNICIPIO",
+   "NR_ZONA",
+   "NR_SECAO",
+   "CD_CARGO",
+   "DS_CARGO",
+   "NR_VOTAVEL",
+   "NM_VOTAVEL",
+   "QT_VOTOS",
+   "NR_LOCAL_VOTACAO"
+  ]
+ },
+ "candidatos": {
+  "A": "13",
+  "B": "45",
+  "votos": {
+   "13": 54501118,
+   "45": 51041155
+  }
+ },
+ "detalhe_votacao_secao_2014.zip": {
+  "lidos": [
+   "detalhe_votacao_secao_2014_BRASIL.csv"
+  ],
+  "colunas": [
+   "DT_GERACAO",
+   "HH_GERACAO",
+   "ANO_ELEICAO",
+   "CD_TIPO_ELEICAO",
+   "NM_TIPO_ELEICAO",
+   "NR_TURNO",
+   "CD_ELEICAO",
+   "DS_ELEICAO",
+   "DT_ELEICAO",
+   "TP_ABRANGENCIA",
+   "SG_UF",
+   "SG_UE",
+   "NM_UE",
+   "CD_MUNICIPIO",
+   "NM_MUNICIPIO",
+   "NR_ZONA",
+   "NR_SECAO",
+   "CD_CARGO",
+   "DS_CARGO",
+   "QT_APTOS",
+   "QT_COMPARECIMENTO",
+   "QT_ABSTENCOES",
+   "QT_VOTOS_NOMINAIS",
+   "QT_VOTOS_BRANCOS",
+   "QT_VOTOS_NULOS",
+   "QT_VOTOS_LEGENDA",
+   "QT_VOTOS_ANULADOS_APU_SEP",
+   "NR_LOCAL_VOTACAO"
+  ]
+ },
+ "secoes_sem_detalhe": 45391,
+ "totais": {
+  "aptos": 128637880,
+  "comp": 102019378,
+  "A": 54501118,
+  "B": 51041155,
+  "brancos": 1921819,
+  "nulos": 5219787
+ },
+ "secoes": 428852,
+ "pct_A_validos": 51.64
+}
