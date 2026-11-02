@@ -1,0 +1,23 @@
+{
+ "calibrado": {
+  "mudancas": "priori média 2006–2022 + linha Outros pela pesquisa",
+  "descricao": "Calibrado: priori média de 2006–2022, linha Outros pela pesquisa Datafolha da véspera (49%)"
+ },
+ "calibrado_v2": {
+  "mudancas": "calibrado com matriz v2",
+  "descricao": "Calibrado com a matriz v2 (branco/nulo → candidatos, falta separada para A e B)"
+ },
+ "calibrado_cauteloso": {
+  "mudancas": {
+   "tau": 0.15,
+   "choque_uf_inicio": 0.04,
+   "sd_outros": 0.3,
+   "choque_uf_inicio_antes": 0.02
+  },
+  "descricao": "Calibrado com choque inicial por UF de 4% depois que a apuração começa (2% antes)"
+ },
+ "calibrado_cauteloso_v2": {
+  "mudancas": "calibrado cauteloso com matriz v2",
+  "descricao": "Calibrado cauteloso com a matriz v2"
+ }
+}

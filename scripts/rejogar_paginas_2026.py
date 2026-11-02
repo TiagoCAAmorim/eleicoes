@@ -25,7 +25,7 @@ NOMES = ["Lula", "Flávio Bolsonaro"]
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--variante", default="calibrado_cauteloso", choices=list(VARIANTES))
+    ap.add_argument("--variante", default="calibrado_cauteloso_v2", choices=list(VARIANTES))
     ap.add_argument("--saida", default="2026-presidente-revisado")
     a = ap.parse_args()
     saida = resultados(a.saida)
