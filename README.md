@@ -75,8 +75,9 @@ Para incluir uma eleição no site: coloque as saídas em `resultados/<id>/` e a
 - [docs/metodologia.md](docs/metodologia.md): o modelo do 2º turno e o backtest de 2022
 - [docs/rejogo-2026.md](docs/rejogo-2026.md): variantes do modelo na apuração real de 2026 e em 2022
 - [docs/revisao-t2.md](docs/revisao-t2.md): revisão da incerteza do modelo do 2º turno (sem curva de transição)
-- [docs/estresse.md](docs/estresse.md): teste de estresse com apurações sintéticas (gerador calibrado em 2026)
+- [docs/estresse.md](docs/estresse.md): teste de estresse com apurações sintéticas (gerador calibrado em 2026, repetido com 2010, 2014 e 2018)
 - [docs/calibracao-priori.md](docs/calibracao-priori.md): priori calibrada com os 2º turnos de 2006 a 2026 e as pesquisas da véspera
+- [docs/covariaveis.md](docs/covariaveis.md): covariáveis municipais (deputados, prefeitos, reeleição) testadas e não adotadas
 - [docs/base-historica.md](docs/base-historica.md): base de votos por município do TSE, 2006–2024 (`dados/historico/`)
 - [docs/roteiro.md](docs/roteiro.md): etapas da revisão do modelo e da expansão para outros cargos
 - [docs/historico/](docs/historico/): protocolo dos agentes usados durante a apuração de 2026

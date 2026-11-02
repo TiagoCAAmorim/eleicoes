@@ -1,0 +1,86 @@
+{
+ "votacao_secao_2006_BR.zip": {
+  "lidos": [
+   "votacao_secao_2006_BR.csv"
+  ],
+  "colunas": [
+   "DT_GERACAO",
+   "HH_GERACAO",
+   "ANO_ELEICAO",
+   "CD_TIPO_ELEICAO",
+   "NM_TIPO_ELEICAO",
+   "NR_TURNO",
+   "CD_ELEICAO",
+   "DS_ELEICAO",
+   "DT_ELEICAO",
+   "TP_ABRANGENCIA",
+   "SG_UF",
+   "SG_UE",
+   "NM_UE",
+   "CD_MUNICIPIO",
+   "NM_MUNICIPIO",
+   "NR_ZONA",
+   "NR_SECAO",
+   "CD_CARGO",
+   "DS_CARGO",
+   "NR_VOTAVEL",
+   "NM_VOTAVEL",
+   "QT_VOTOS",
+   "NR_LOCAL_VOTACAO"
+  ]
+ },
+ "candidatos": {
+  "A": "13",
+  "B": "45",
+  "votos": {
+   "13": 58295042,
+   "45": 37543178
+  }
+ },
+ "detalhe_votacao_secao_2006.zip": {
+  "lidos": [
+   "detalhe_votacao_secao_2006_BRASIL.csv"
+  ],
+  "colunas": [
+   "DT_GERACAO",
+   "HH_GERACAO",
+   "ANO_ELEICAO",
+   "CD_TIPO_ELEICAO",
+   "NM_TIPO_ELEICAO",
+   "NR_TURNO",
+   "CD_ELEICAO",
+   "DS_ELEICAO",
+   "DT_ELEICAO",
+   "TP_ABRANGENCIA",
+   "SG_UF",
+   "SG_UE",
+   "NM_UE",
+   "CD_MUNICIPIO",
+   "NM_MUNICIPIO",
+   "NR_ZONA",
+   "NR_SECAO",
+   "CD_CARGO",
+   "DS_CARGO",
+   "QT_APTOS",
+   "QT_COMPARECIMENTO",
+   "QT_ABSTENCOES",
+   "QT_VOTOS_NOMINAIS",
+   "QT_VOTOS_BRANCOS",
+   "QT_VOTOS_NULOS",
+   "QT_VOTOS_LEGENDA",
+   "QT_VOTOS_ANULADOS_APU_SEP",
+   "NR_LOCAL_VOTACAO"
+  ]
+ },
+ "secoes_sem_detalhe": 36096,
+ "totais": {
+  "aptos": 114149427,
+  "comp": 93071499,
+  "A": 58295042,
+  "B": 37543178,
+  "brancos": 1351448,
+  "nulos": 4808553
+ },
+ "secoes": 361406,
+ "pct_A_validos": 60.83
+}

@@ -23,8 +23,13 @@ import _raiz  # noqa: F401
 from eleicoes.caminhos import PRIORI, RESULTADOS
 from eleicoes.modelos import estresse as es
 from eleicoes.modelos import transferencia as modelo
+from eleicoes.modelos import priori as priori_cal
+from eleicoes.dados import historico as hist
+from eleicoes.caminhos import DADOS
 from backtest import carregar, snapshot
 from rejogar_2026 import AO_VIVO, crps
+
+PESQUISAS = pd.read_csv(os.path.join(DADOS, "pesquisas", "presidente_t2.csv"))
 
 PONTOS = [0, 1, 3, 5, 10, 20, 30, 50, 70, 90]
 VARIANTES = {
@@ -44,12 +49,59 @@ VARIANTES = {
 G = None
 
 
-def _init(par_json):
-    global G, PRI, PRI_V2
-    base, sec = carregar()
-    PRI = json.load(open(os.path.join(PRIORI, "presidente_2022.json")))
-    PRI_V2 = json.load(open(os.path.join(PRIORI, "presidente_2022_v2.json")))
-    G = es.GeradorApuracao(base, sec, PRI)
+def cenario(ano):
+    """(base, seções, priori do gerador, variante -> Config) de um ano.
+
+    2022: como sempre foi (seções de dados/2022, priori = matriz de 2022, para comparar com as rodadas antigas).
+    2010, 2014 e 2018: seções de dados/historico/<ano>/secoes_presidente_t2.csv.gz (scripts/tse_secoes.py). As
+    variantes `calibrado*` usam a priori calibrada daquele ano (média das eleições anteriores e linha Outros pela
+    pesquisa da véspera); as outras usam a matriz da eleição anterior, como o modelo revisado fazia. O gerador
+    centra as eleições sintéticas na previsão da priori calibrada."""
+    if ano == 2022:
+        base, sec = carregar()
+        pri = json.load(open(os.path.join(PRIORI, "presidente_2022.json")))
+        pri_v2 = json.load(open(os.path.join(PRIORI, "presidente_2022_v2.json")))
+
+        def cfg(v):
+            p = pri_v2 if VARIANTES[v].get("matriz_v2") else pri
+            return dataclasses.replace(modelo.Config(priori=p), **VARIANTES[v])
+        return base, sec, pri, cfg
+    b, _ = hist.segundo_turno_presidente(ano)
+    base = b[["uf", "mun", "nome", "capital", "E1", "A1", "B1", "O1", "W1"]].copy()
+    sec = pd.read_csv(os.path.join(hist.HIST, str(ano), "secoes_presidente_t2.csv.gz"), dtype={"mun": str})
+    sec = sec.rename(columns={"A": "v13", "B": "v22"})
+    sec["mun"] = sec["mun"].str.zfill(5)
+    sec = sec[sec["mun"].isin(set(base["mun"]))].reset_index(drop=True)
+    # de 2006 a 2014, ~10% das seções não casam com o detalhe do TSE (sem aptos e comparecimento): o comparecimento
+    # vira a soma dos votos e os aptos seguem a taxa de comparecimento das outras seções da cidade
+    sem = sec["aptos"] <= 0
+    if sem.any():
+        sec.loc[sem, "comp"] = sec.loc[sem, ["v13", "v22", "brancos", "nulos"]].sum(axis=1)
+        ok = sec[~sem].groupby("mun")[["comp", "aptos"]].sum()
+        taxa = (ok["comp"] / ok["aptos"].clip(lower=1)).reindex(sec.loc[sem, "mun"]).fillna(0.8).clip(0.3, 1).values
+        sec.loc[sem, "aptos"] = np.round(sec.loc[sem, "comp"].values / taxa).astype(int)
+    anteriores = [a for a in hist.ANOS_PRESIDENTE if a < ano]
+    pris = {a: priori_cal.carregar(a) for a in anteriores}
+    pri_cal = priori_cal.media(list(pris.values()))
+    alvo = PESQUISAS.loc[PESQUISAS["ano"] == ano, "a_validos"].mean()
+    th = priori_cal.outros_pela_pesquisa(b, pri_cal, alvo)
+    m = th[0] - pri_cal["brasil|Brasil"][3]          # o ajuste desloca a linha Outros igual em todos os grupos
+    pri_gen = {k: x[:3] + [x[3] + m, x[4] - m] + x[5:] for k, x in pri_cal.items()}
+
+    def cfg(v):
+        mud = VARIANTES[v]
+        if mud.get("matriz_v2"):
+            raise ValueError("matriz v2 só no estresse de 2022")
+        if v.startswith("calibrado"):
+            return dataclasses.replace(modelo.Config(priori=pri_cal, theta_outros=th), **mud)
+        return dataclasses.replace(modelo.Config(priori=pris[ano - 4]), **mud)
+    return base, sec, pri_gen, cfg
+
+
+def _init(ano):
+    global G, CFG
+    base, sec, pri, CFG = cenario(ano)
+    G = es.GeradorApuracao(base, sec, pri)
 
 
 def uma_rodada(args):
@@ -64,8 +116,7 @@ def uma_rodada(args):
         parcial = 100 * df["A2"].sum() / max(df["A2"].sum() + df["B2"].sum(), 1)
         d, X, Y = modelo.preparar(df)
         for v in variantes:
-            pri = PRI_V2 if VARIANTES[v].get("matriz_v2") else PRI
-            cfg = dataclasses.replace(modelo.Config(priori=pri), **VARIANTES[v])
+            cfg = CFG(v)
             aj = modelo.ajustar(d, X, Y, cfg)
             sims = modelo.simular(d, X, Y, aj, cfg).sum(1)
             pa = 100 * sims[:, 0] / np.maximum(sims[:, 0] + sims[:, 1], 1)
@@ -145,6 +196,9 @@ def main():
     ap.add_argument("--variantes", nargs="+", default=list(VARIANTES))
     ap.add_argument("--beta", type=float, default=None, help="fixa o viés de ordem entre cidades (padrão: sorteado)")
     ap.add_argument("--gama", type=float, default=None, help="fixa o viés de ordem dentro das cidades")
+    ap.add_argument("--ano", type=int, default=2022, help="eleição de base: 2022 (padrão), 2010, 2014 ou 2018")
+    ap.add_argument("--sd-nacional", type=float, default=None,
+                    help="desvio nacional do sorteio, em logit (padrão 0,12, ~3 pontos; o erro das pesquisas é ~0,05)")
     ap.add_argument("--processos", type=int, default=os.cpu_count())
     ap.add_argument("--saida", default=os.path.join(RESULTADOS, "estresse"))
     ap.add_argument("--so-resumo", action="store_true")
@@ -158,7 +212,9 @@ def main():
         res = pd.read_csv(os.path.join(a.saida, "previsoes.csv"))
     else:
         par = es.ParamEstresse(beta=a.beta, gama=a.gama)
-        with Pool(a.processos, initializer=_init, initargs=(None,)) as pool:
+        if a.sd_nacional is not None:
+            par.sd_nacional = a.sd_nacional
+        with Pool(a.processos, initializer=_init, initargs=(a.ano,)) as pool:
             partes = pool.map(uma_rodada, [(rd, a.variantes, par) for rd in range(a.rodadas)], chunksize=1)
         res = pd.DataFrame([lin for p in partes for lin in p])
         res.round(4).to_csv(os.path.join(a.saida, "previsoes.csv"), index=False)
