@@ -43,8 +43,8 @@ SINONIMOS = {
     "votos_legenda": ["QT_VOTOS_LEGENDA_VALIDOS", "QT_VOTOS_LEGENDA"],
     "aptos": ["QT_APTOS"], "comparecimento": ["QT_COMPARECIMENTO"], "abstencoes": ["QT_ABSTENCOES"],
     "brancos": ["QT_VOTOS_BRANCOS"], "nulos": ["QT_VOTOS_NULOS", "QT_TOTAL_VOTOS_NULOS"],
-    "situacao": ["DS_SIT_TOT_TURNO"], "coligacao": ["NM_COLIGACAO", "NM_FEDERACAO"],
-    "composicao": ["DS_COMPOSICAO_COLIGACAO", "DS_COMPOSICAO_FEDERACAO"], "reeleicao": ["ST_REELEICAO"],
+    "situacao": ["DS_SIT_TOT_TURNO"], "coligacao": ["NM_COLIGACAO"], "composicao": ["DS_COMPOSICAO_COLIGACAO"],
+    "federacao": ["NM_FEDERACAO"], "composicao_federacao": ["DS_COMPOSICAO_FEDERACAO"], "reeleicao": ["ST_REELEICAO"],
 }
 
 
@@ -162,9 +162,18 @@ def comparecimento(ano, pasta, log):
 def candidatos(ano, pasta, log):
     url = f"{CDN}/consulta_cand/consulta_cand_{ano}.zip"
     df = ler_zip(baixar(url, pasta), ["turno", "tipo", "uf", "ue", "cargo", "sq", "numero", "nome", "partido",
-                                       "coligacao", "composicao", "reeleicao", "situacao"],
+                                       "coligacao", "composicao", "federacao", "composicao_federacao", "reeleicao", "situacao"],
                  lambda d: ordinaria(d[d["cargo"].isin(MAJORITARIOS)]), log)
-    return df.drop(columns=["tipo"], errors="ignore").drop_duplicates()
+    df = df.drop(columns=["tipo"], errors="ignore").drop_duplicates()
+    if "reeleicao" not in df:
+        # a partir de 2014 o TSE passou "reeleição" (e outros campos) para o arquivo complementar
+        try:
+            url = f"{CDN}/consulta_cand_complementar/consulta_cand_complementar_{ano}.zip"
+            comp = ler_zip(baixar(url, pasta), ["sq", "reeleicao"], None, log).drop_duplicates("sq")
+            df = df.merge(comp, on="sq", how="left")
+        except Exception as e:  # noqa: BLE001
+            print("sem arquivo complementar de candidatos:", e, flush=True)
+    return df
 
 
 def resumo(votos, comp):
