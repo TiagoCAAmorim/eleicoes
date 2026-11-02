@@ -1,5 +1,8 @@
 # Rejogo da apuração de 2026 (etapa 1)
 
+> A etapa 3 usou este banco de testes para revisar a incerteza do modelo: ver [revisao-t2.md](revisao-t2.md).
+> As variantes abaixo continuam reproduzíveis (`atual` = modelo usado ao vivo).
+
 A noite de 25/10/2026 foi rejogada com 5 variantes do modelo, usando os 46 retratos publicados durante a
 apuração (`dados/2026/presidente/retratos_t2.csv.gz`, extraídos do histórico git por
 `scripts/extrair_retratos_2026.py`). Para não ajustar o modelo só a 2026, as mesmas variantes rodaram no

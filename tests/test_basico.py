@@ -54,3 +54,20 @@ def test_fluxos_conservam_votos():
     assert set(br.destino) <= {"Lula", "Flávio", "Branco/nulo", "Abstenção"}
     regioes = f[f.grupo != "Brasil"].groupby(["origem", "destino"]).votos.sum()
     assert (abs(regioes - br.set_index(["origem", "destino"]).votos) <= 10).all()
+
+
+def test_gerador_estresse_conserva_validos():
+    """A eleição sintética só redistribui os votos válidos de cada seção entre A e B."""
+    import pandas as pd
+    from eleicoes.modelos import estresse as es
+    base = pd.DataFrame({"uf": ["sp", "sp"], "mun": ["1", "2"], "nome": ["a", "b"], "capital": [False, False],
+                         "E1": [1000, 2000], "A1": [400, 900], "B1": [400, 700], "O1": [100, 200], "W1": [50, 100]})
+    sec = pd.DataFrame({"uf": ["sp"] * 4, "mun": ["1", "1", "2", "2"], "zona": [1, 1, 2, 2], "secao": [1, 2, 1, 2],
+                        "aptos": [500, 500, 1000, 1000], "comp": [400, 400, 800, 800], "v13": [200, 180, 400, 420],
+                        "v22": [180, 200, 350, 330], "brancos": [10, 10, 25, 25], "nulos": [10, 10, 25, 25],
+                        "outros": [0, 0, 0, 0]})
+    pri = {"brasil|Brasil": list(np.zeros(8))}
+    g = es.GeradorApuracao(base, sec, pri)
+    s, t, beta, gama = g.rodada(np.random.default_rng(0), es.ParamEstresse())
+    assert ((s["v13"] + s["v22"]) == (sec["v13"] + sec["v22"])).all()
+    assert len(t) == len(sec) and np.isfinite(t).all()

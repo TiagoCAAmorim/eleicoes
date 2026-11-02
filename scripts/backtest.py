@@ -53,6 +53,14 @@ def ordem(sec, base, tipo, rng):
         zona = sec.groupby(["uf", "zona"]).ngroup().values
         efeito_zona = rng.normal(0, 0.12, zona.max() + 1)[zona]
         return atraso + 0.15 * cap + efeito_zona + rng.normal(0, 0.15, n)
+    if tipo == "zonas":
+        # ordem parecida com a real, mas dentro de cada município as zonas mais pró-B apuram antes (ex.: centro
+        # x periferia): viés que o 1º turno por município não enxerga. Mais plausível que a "adversa".
+        pb = sec["v22"] / (sec["v13"] + sec["v22"]).clip(lower=1)
+        zona = sec.groupby(["uf", "zona"]).ngroup().values
+        pbz = pd.Series(pb.values).groupby(zona).transform("mean").values
+        pbm = pd.Series(pb.values).groupby(sec["mun"].values).transform("mean").values
+        return ordem(sec, base, "2022", rng) - 1.5 * (pbz - pbm)
     if tipo == "adversa":
         # ordem correlacionada com o voto: seções mais pró-B apuram antes (pior caso)
         pb = sec["v22"] / (sec["v13"] + sec["v22"]).clip(lower=1)
@@ -100,12 +108,12 @@ def rodar(cfg, ordens, rodadas, pontos=PONTOS, verbose=True):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--ordens", nargs="+", default=["aleatoria", "2022", "adversa"])
+    ap.add_argument("--ordens", nargs="+", default=["aleatoria", "2022", "zonas", "adversa"])
     ap.add_argument("--rodadas", type=int, default=2)
     ap.add_argument("--saida", default=os.path.join(RESULTADOS, "backtest"))
     ap.add_argument("--variante", default="", help="variante do modelo de scripts/rejogar_2026.py (padrão: Config())")
     a = ap.parse_args()
-    cfg = modelo.Config()
+    cfg = modelo.Config()   # modelo revisado (etapa 3); --variante atual = modelo usado ao vivo em 2026
     if a.variante:
         import dataclasses
         from rejogar_2026 import VARIANTES

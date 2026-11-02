@@ -92,15 +92,24 @@ class Config:
     s_parcial: float = 0.08           # desvio extra de um município parcialmente apurado: as seções que chegam
                                       # primeiro vêm agrupadas (mesma zona/bairro), não são amostra aleatória
     choque_uf: float = 0.02           # choque comum por UF na margem A-B das unidades restantes
-    choque_nacional: float = 0.0      # choque comum a todo o país na margem A-B das unidades restantes (erro
+    choque_nacional: float = 0.01     # choque comum a todo o país na margem A-B das unidades restantes (erro
                                       # sistemático: a parte que falta apurar pode diferir toda no mesmo sentido)
+    # choques que dependem de quão representativo é o que já foi apurado (substitutos da curva de transição):
+    # - choque_parcial: viés nacional comum na margem do que falta apurar. Nos municípios já começados vale cheio
+    #   (as seções que chegam primeiro podem não representar o resto, no mesmo sentido no país todo); nos não
+    #   começados vale x P = parte "parcial" da evidência (1 - f médio dos apurados, ponderado pelos votos).
+    # - choque_uf_inicio: desvio extra por UF x fração da UF ainda não apurada (UFs com pouco apurado erram mais).
+    choque_parcial: float = 0.015
+    choque_uf_inicio: float = 0.04
     matriz_v2: bool = False           # parâmetros extras: branco/nulo -> A/B e falta separada para B
     escala_cov: float = 1.0           # inflação da covariância de Laplace (dependência espacial)
     rho_nacional: float = 0.5         # correlação entre grupos no sorteio dos parâmetros
     k_parcial: float = 0.30           # peso do resultado parcial do próprio município: f/(f+k)
     # transição da priori para os parâmetros estimados conforme o % do eleitorado apurado no país: 1ª metade de
     # uma sigmoide (sobe devagar e acelera até o centro, onde passa a usar só os estimados). None = sem transição.
-    transicao_centro: float = 25.0
+    # Usada ao vivo em 2026 (centro 25); desligada na revisão da etapa 3, que a trocou pelos choques acima
+    # (ver docs/revisao-t2.md): a curva prendia a previsão à priori e custou ~1 ponto em 2026.
+    transicao_centro: float = None
     transicao_largura: float = 8.0
     n_sims: int = 1000
     seed: int = 42
@@ -259,6 +268,14 @@ def _amostrar_theta(aj: Ajuste, chaves, cfg, rng):
     return out
 
 
+def indice_parcial(df):
+    """Quão "parcial" é a evidência apurada (0 = só municípios completos ou nada apurado, perto de 1 = só começos)."""
+    Ea = df["Ea"].values.astype(float)
+    if Ea.sum() <= 0:
+        return 0.0  # antes de abrir não há evidência parcial (a incerteza vem da priori e do choque nacional)
+    return float(1 - (Ea * np.clip(df["f"].values, 0, 1)).sum() / Ea.sum())
+
+
 def simular(df, X, Y, aj: Ajuste, cfg: Config):
     """Simula o resultado final de cada unidade. Retorna dict com arrays (n_sims, n_unid) de votos A, B, W, N."""
     rng = np.random.default_rng(cfg.seed)
@@ -272,11 +289,23 @@ def simular(df, X, Y, aj: Ajuste, cfg: Config):
     # ruído de cada município (proporcional a s0) e choque comum por UF na margem A-B
     ruido = rng.standard_normal((S, U, 2), dtype=np.float32) * aj.s0
     ufs, uf_idx = np.unique(df["uf"].values, return_inverse=True)
-    choque = rng.standard_normal((S, len(ufs)))[:, uf_idx] * cfg.choque_uf
+    f = df["f"].values
+    sd_uf = np.full(len(ufs), cfg.choque_uf)
+    if cfg.choque_uf_inicio:
+        Ea_uf = np.bincount(uf_idx, df["Ea"].values.astype(float), len(ufs))
+        E_uf = np.bincount(uf_idx, df["E2"].values.astype(float), len(ufs))
+        sd_uf = sd_uf + cfg.choque_uf_inicio * np.clip(1 - Ea_uf / np.maximum(E_uf, 1), 0, 1)
+    choque = rng.standard_normal((S, len(ufs)))[:, uf_idx] * sd_uf[uf_idx]
     if cfg.choque_nacional:
         choque = choque + rng.standard_normal((S, 1)) * cfg.choque_nacional
-    f = df["f"].values
     temY = np.isfinite(Y).all(1)
+    # viés da evidência parcial, comum ao país: no que falta de um município já começado, as seções restantes podem
+    # diferir das apuradas (tamanho cheio, sem amortecer por rho, porque é o resultado parcial que pode estar
+    # enviesado); nos municípios não começados, o viés entra pelos parâmetros estimados e escala com P
+    vies = 0.0
+    if cfg.choque_parcial:
+        fator = np.where((f > 0) & (f < 1) & temY, 1.0, indice_parcial(df))
+        vies = rng.standard_normal((S, 1)) * cfg.choque_parcial * fator[None, :]
     rho = np.where(temY, f / (f + cfg.k_parcial), 0.0)
     escala = (1 - rho)
     pred[..., 0] += (ruido[..., 0] + choque / 2) * escala
@@ -285,6 +314,10 @@ def simular(df, X, Y, aj: Ajuste, cfg: Config):
     pred /= pred.sum(-1, keepdims=True)
     Yf = np.where(temY[:, None], Y, 0.0)
     pred = rho[None, :, None] * Yf[None] + (1 - rho)[None, :, None] * pred
+    if cfg.choque_parcial:
+        pred[..., 0] += vies / 2
+        pred[..., 1] -= vies / 2
+        pred = np.clip(pred, 0, None)
     Erest = np.clip(df["E2"].values - df["Ea"].values, 0, None).astype(float)
     obs = np.column_stack([df["A2"], df["B2"], df["W2"],
                            np.clip(df["Ea"].values - df["C2"].values, 0, None)]).astype(float)
