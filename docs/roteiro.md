@@ -13,6 +13,7 @@ Planejamento acordado em 01/11/2026, depois da apuração do 2º turno de 2026.
 | 5 | Outros cargos majoritários: governador, senador, prefeito | |
 | 6 | Previsão do 1º turno: chance de vencer no 1º turno e de ir ao 2º | |
 | 7 | Quociente eleitoral e alianças contrafactuais | |
+| 8 | Painéis que simulam a apuração de eleições passadas (2006–2022), mostrando como a previsão do modelo evolui ao longo da noite. Cada página deve deixar claro que é uma **simulação**: o TSE não guarda retratos parciais dessas apurações, então a ordem de chegada dos votos é sintética | |
 
 Decisões: intervalo de 90%; base a partir de 2006; meta é acertar a faixa ao longo da apuração, não chamar o
 resultado o mais cedo possível; pesquisas registradas a partir de reportagens e relatórios dos institutos.
