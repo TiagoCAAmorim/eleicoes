@@ -248,7 +248,9 @@ def ajustar(df, X, Y, cfg: Config):
         excesso = (res ** 2 - p * (1 - p) / np.maximum(Ew[ok], 1)[:, None] - extra[ok]).mean()
         s0 = float(np.sqrt(max(excesso, 0.005 ** 2)))
         mu, cov = _ajustar(X[ok], Y[ok], Ew[ok], sx(s0, ok), theta0, sd0)
+    # níveis fora da hierarquia regional (ex.: "zona", dentro de uma cidade) ficam logo abaixo do Brasil
     pais = {"regiao": "brasil", "uf": "regiao", "uf_porte": "uf"}
+    pais = {n: pais.get(n, "brasil") for n in cfg.niveis}
     indices = {nivel: df.groupby(nivel).indices for nivel in cfg.niveis}
 
     def hierarquia(ok, mu, cov):
