@@ -37,6 +37,18 @@ def _remover(caminho):
         pass
 
 
+def diagnostico(z, log):
+    """Nenhuma linha passou no filtro: mostra o cabeçalho e os valores de turno, cargo e tipo e para."""
+    import zipfile
+    with zipfile.ZipFile(z) as zz:
+        print("arquivos:", zz.namelist(), flush=True)
+    d = th.ler_zip(z, ["turno", "tipo", "tipo_nome", "cargo"], None, log)
+    print("colunas:", log[os.path.basename(z)].get("colunas"), flush=True)
+    for c in d.columns:
+        print(c, d[c].value_counts().head(8).to_dict(), flush=True)
+    raise SystemExit("nenhuma linha do 2º turno presidencial")
+
+
 def votos(ano, brutos, log):
     partes = []
     for uf in UFS:
@@ -48,6 +60,8 @@ def votos(ano, brutos, log):
             continue
         d = th.ler_zip(z, ["turno", "tipo", "tipo_nome", "uf", "mun", "zona", "secao", "cargo", "numero", "votos"],
                        _filtro, log)
+        if d.empty:
+            diagnostico(z, log)
         _remover(z)                      # os zips somam vários GB; o runner tem pouco disco
         d = th._int(d.drop(columns=["tipo", "tipo_nome"], errors="ignore"), ["votos"])
         print(ano, uf, len(d), "linhas", flush=True)
