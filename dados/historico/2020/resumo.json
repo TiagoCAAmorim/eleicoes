@@ -1,0 +1,35 @@
+{
+ "ano": 2020,
+ "cargos": [
+  {
+   "cargo": "prefeito",
+   "turno": 1,
+   "municipios": 5568,
+   "aptos": 147918483,
+   "comparecimento": 113675933,
+   "brancos": 3915103,
+   "nulos": 7054302,
+   "validos": 100954983
+  },
+  {
+   "cargo": "prefeito",
+   "turno": 2,
+   "municipios": 58,
+   "aptos": 38577128,
+   "comparecimento": 27184012,
+   "brancos": 1053960,
+   "nulos": 2382007,
+   "validos": 23676148
+  },
+  {
+   "cargo": "vereador",
+   "turno": 1,
+   "municipios": 5568,
+   "aptos": 147918483,
+   "comparecimento": 113675935,
+   "brancos": 4469963,
+   "nulos": 5668882,
+   "validos": 95247558
+  }
+ ]
+}

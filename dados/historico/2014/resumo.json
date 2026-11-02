@@ -1,0 +1,125 @@
+{
+ "ano": 2014,
+ "cargos": [
+  {
+   "cargo": "presidente",
+   "turno": 1,
+   "municipios": 5738,
+   "aptos": 142822046,
+   "comparecimento": 115122883,
+   "brancos": 4420489,
+   "nulos": 6678592,
+   "validos": 104023802,
+   "mais_votados": [
+    {
+     "numero": "13",
+     "nome": "DILMA",
+     "votos": 43267668,
+     "pct_validos": 41.59
+    },
+    {
+     "numero": "45",
+     "nome": "AÉCIO NEVES",
+     "votos": 34897211,
+     "pct_validos": 33.55
+    },
+    {
+     "numero": "40",
+     "nome": "MARINA SILVA",
+     "votos": 22176619,
+     "pct_validos": 21.32
+    },
+    {
+     "numero": "50",
+     "nome": "LUCIANA GENRO",
+     "votos": 1612186,
+     "pct_validos": 1.55
+    }
+   ]
+  },
+  {
+   "cargo": "presidente",
+   "turno": 2,
+   "municipios": 5738,
+   "aptos": 142822046,
+   "comparecimento": 112683879,
+   "brancos": 1921819,
+   "nulos": 5219787,
+   "validos": 105542273,
+   "mais_votados": [
+    {
+     "numero": "13",
+     "nome": "DILMA",
+     "votos": 54501118,
+     "pct_validos": 51.64
+    },
+    {
+     "numero": "45",
+     "nome": "AÉCIO NEVES",
+     "votos": 51041155,
+     "pct_validos": 48.36
+    }
+   ]
+  },
+  {
+   "cargo": "governador",
+   "turno": 1,
+   "municipios": 5570,
+   "aptos": 142384193,
+   "comparecimento": 114906582,
+   "brancos": 7314166,
+   "nulos": 10074804,
+   "validos": 97517612
+  },
+  {
+   "cargo": "governador",
+   "turno": 2,
+   "municipios": 1800,
+   "aptos": 49794239,
+   "comparecimento": 39364374,
+   "brancos": 1003299,
+   "nulos": 3224238,
+   "validos": 35136837
+  },
+  {
+   "cargo": "senador",
+   "turno": 1,
+   "municipios": 5570,
+   "aptos": 142384193,
+   "comparecimento": 114906582,
+   "brancos": 11401280,
+   "nulos": 14153698,
+   "validos": 89351604
+  },
+  {
+   "cargo": "deputado_federal",
+   "turno": 1,
+   "municipios": 5570,
+   "aptos": 142384193,
+   "comparecimento": 114906580,
+   "brancos": 10106586,
+   "nulos": 7444640,
+   "validos": 89147333
+  },
+  {
+   "cargo": "deputado_estadual",
+   "turno": 1,
+   "municipios": 5569,
+   "aptos": 140488496,
+   "comparecimento": 113232072,
+   "brancos": 8756668,
+   "nulos": 6952182,
+   "validos": 87315271
+  },
+  {
+   "cargo": "deputado_distrital",
+   "turno": 1,
+   "municipios": 1,
+   "aptos": 1895697,
+   "comparecimento": 1674508,
+   "brancos": 79680,
+   "nulos": 69563,
+   "validos": 1439955
+  }
+ ]
+}
