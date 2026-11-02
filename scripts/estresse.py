@@ -72,6 +72,14 @@ def cenario(ano):
     sec = sec.rename(columns={"A": "v13", "B": "v22"})
     sec["mun"] = sec["mun"].str.zfill(5)
     sec = sec[sec["mun"].isin(set(base["mun"]))].reset_index(drop=True)
+    # de 2006 a 2014, ~10% das seções não casam com o detalhe do TSE (sem aptos e comparecimento): o comparecimento
+    # vira a soma dos votos e os aptos seguem a taxa de comparecimento das outras seções da cidade
+    sem = sec["aptos"] <= 0
+    if sem.any():
+        sec.loc[sem, "comp"] = sec.loc[sem, ["v13", "v22", "brancos", "nulos"]].sum(axis=1)
+        ok = sec[~sem].groupby("mun")[["comp", "aptos"]].sum()
+        taxa = (ok["comp"] / ok["aptos"].clip(lower=1)).reindex(sec.loc[sem, "mun"]).fillna(0.8).clip(0.3, 1).values
+        sec.loc[sem, "aptos"] = np.round(sec.loc[sem, "comp"].values / taxa).astype(int)
     anteriores = [a for a in hist.ANOS_PRESIDENTE if a < ano]
     pris = {a: priori_cal.carregar(a) for a in anteriores}
     pri_cal = priori_cal.media(list(pris.values()))
