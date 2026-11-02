@@ -24,22 +24,24 @@ from eleicoes.caminhos import DADOS, PRIORI, RESULTADOS
 from eleicoes.dados import historico as hist
 from eleicoes.dados.geo import REGIAO
 from eleicoes.modelos import priori, transferencia as modelo
+from rejogar_2026 import crps
 
 OUT = os.path.join(RESULTADOS, "calibracao-priori")
 PONTOS = [1, 2, 3, 5, 7.5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 95]
 COLS = ["uf", "mun", "nome", "capital", "E1", "A1", "B1", "O1", "W1", "E2", "Ea", "A2", "B2", "W2", "C2"]
 
 
-def priori_do_ano(ano, base):
-    caminho = os.path.join(PRIORI, f"presidente_{ano}.json")
+def priori_do_ano(ano, base, v2=False):
+    """Matriz estimada com a apuração completa. v2: com a matriz v2 (salva em presidente_<ano>_v2.json)."""
+    caminho = os.path.join(PRIORI, f"presidente_{ano}{'_v2' if v2 else ''}.json")
     df, X, Y = modelo.preparar(base[COLS])
-    aj = modelo.ajustar(df, X, Y, modelo.Config())
+    aj = modelo.ajustar(df, X, Y, modelo.Config(matriz_v2=v2))
     pri = {f"{n}|{g}": [round(float(v), 4) for v in mu] for (n, g), (mu, _) in aj.grupos.items()}
     if not os.path.exists(caminho):
         with open(caminho, "w") as f:
             json.dump(pri, f, indent=0)
-    br = modelo.parametros_legiveis(aj.grupos[("brasil", "Brasil")][0]) * 100
-    return pri, dict(zip(modelo.PAR_NOMES, np.round(br, 1)))
+    br = modelo.parametros_legiveis_v2(aj.grupos[("brasil", "Brasil")][0]) * 100
+    return pri, {**dict(zip(modelo.PAR_NOMES_V2, np.round(br, 1).tolist())), "s0": round(100 * aj.s0, 3)}
 
 
 def vazio(base):
@@ -97,6 +99,12 @@ VARIANTES = {
     "mo_outros_0.1_sem_choques": ("media", "oraculo", {"sd_outros": 0.1, "choque_uf": 0, "choque_uf_inicio": 0,
                                                        "choque_nacional": 0}),
     "mo_outros_0.1_uf_inicio_0.02": ("media", "oraculo", {"sd_outros": 0.1, "choque_uf_inicio": 0.02}),
+    # matriz v2 (docs/matriz-v2.md): branco/nulo do 1º turno pode ir para A ou B, falta separada para eleitores de B
+    "calibrado": ("media", "pesquisa", dict(priori.CALIBRACAO)),
+    "calibrado_v2": ("media", "pesquisa", {**priori.CALIBRACAO, "matriz_v2": True}),
+    # v2 com a priori v1 e os 3 parâmetros novos genéricos (3% de branco/nulo para cada lado, falta de B = de A)
+    "calibrado_v2_generico": ("media", "pesquisa", {**priori.CALIBRACAO, "matriz_v2": True, "v2_generico": True}),
+    "media_oraculo_v2": ("media", "oraculo", {"matriz_v2": True}),
 }
 
 
@@ -114,15 +122,19 @@ def base_2026():
 PESQUISAS = pd.read_csv(os.path.join(DADOS, "pesquisas", "presidente_t2.csv"))
 
 
-def config(variante, ano, pris, base=None):
+def config(variante, ano, pris, base=None, pris_v2=None):
     fonte, outros, mud = VARIANTES[variante]
+    v2 = bool(mud.get("matriz_v2"))
+    if v2 and not mud.get("v2_generico"):
+        pris = pris_v2
+    mud = {k: v for k, v in mud.items() if k != "v2_generico"}
     anteriores = [a for a in hist.ANOS_PRESIDENTE if a < ano]   # 2026 não entra na média (só é alvo)
     pri = pris[ano - 4] if fonte == "anterior" else priori.media([pris[x] for x in anteriores])
     if outros == "oraculo":
         mud = {**mud, "theta_outros": tuple(np.array(pris[ano]["brasil|Brasil"])[3:6])}
     elif outros == "pesquisa":
         alvo = PESQUISAS.loc[PESQUISAS["ano"] == ano, "a_validos"].mean()
-        mud = {**mud, "theta_outros": priori.outros_pela_pesquisa(base, pri, alvo)}
+        mud = {**mud, "theta_outros": priori.outros_pela_pesquisa(base, pri, alvo, v2=v2)}
     return modelo.Config(priori=pri, **mud)
 
 
@@ -153,16 +165,19 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--rejogo", type=int, default=0, help="rodadas do rejogo por ano (0 = não roda)")
     ap.add_argument("--variantes", default=",".join(VARIANTES))
-    ap.add_argument("--variante-rejogo", default="media_oraculo")
+    ap.add_argument("--variante-rejogo", default="media_oraculo", help="uma ou mais, separadas por vírgula")
+    ap.add_argument("--anos-rejogo", default=None, help="anos do rejogo, separados por vírgula (padrão 2010–2026)")
     a = ap.parse_args()
     os.makedirs(OUT, exist_ok=True)
-    bases, pris, resumo = {}, {}, {}
+    bases, pris, pris_v2, resumo = {}, {}, {}, {}
     for ano in ANOS:
         base, nomes = base_2026() if ano == 2026 else hist.segundo_turno_presidente(ano)
         bases[ano] = base
         pris[ano], br = priori_do_ano(ano, base)
-        resumo[ano] = {"A": nomes["A"], "B": nomes["B"], "A_validos": round(pa(base), 2), "transferencias": br}
-        print(ano, nomes, round(pa(base), 2), br, flush=True)
+        pris_v2[ano], br2 = priori_do_ano(ano, base, v2=True)
+        resumo[ano] = {"A": nomes["A"], "B": nomes["B"], "A_validos": round(pa(base), 2), "transferencias": br,
+                       "transferencias_v2": br2}
+        print(ano, nomes, round(pa(base), 2), "\n  v1", br, "\n  v2", br2, flush=True)
     with open(os.path.join(OUT, "transferencias.json"), "w", encoding="utf-8") as f:
         json.dump(resumo, f, ensure_ascii=False, indent=1)
 
@@ -174,7 +189,7 @@ def main():
         real_br = pa(base)
         real_uf = {u: pa(g) for u, g in base.groupby("uf")}
         for nome in variantes:
-            cfg = config(nome, ano, pris, base)
+            cfg = config(nome, ano, pris, base, pris_v2)
             df, sims = prever(vazio(base), cfg)
             t = avaliar(df, sims, real_br, real_uf).assign(ano=ano, variante=nome)
             linhas.append(t)
@@ -197,11 +212,14 @@ def main():
 
     # 3. rejogo por município
     if a.rejogo:
+        vrs = [v for v in a.variante_rejogo.split(",") if v]
+        anos = [int(x) for x in a.anos_rejogo.split(",")] if a.anos_rejogo else ANOS[1:]
         linhas = []
-        for ano in ANOS[1:]:
+        for ano in anos:
             base = bases[ano]
             real_br = pa(base)
             real_uf = {u: pa(g) for u, g in base.groupby("uf")}
+            cfgs = {v: config(v, ano, pris, base, pris_v2) for v in vrs}
             for rd in range(a.rejogo):
                 rng = np.random.default_rng(100 * ano + rd)
                 inicio, duracao, vies = ordem_municipios(base, rng)
@@ -210,21 +228,25 @@ def main():
                                 for t in ts])
                 for p in PONTOS:
                     s = retrato(base, inicio, duracao, vies, ts[np.searchsorted(pct, p)])
-                    t0 = time.time()
-                    df, sims = prever(s, config(a.variante_rejogo, ano, pris, base))
-                    t = avaliar(df, sims, real_br, real_uf).assign(ano=ano, rodada=rd, vies=vies, pct=p,
-                                                                   parcial=pa(s))
-                    linhas.append(t)
-                    b = t.iloc[0]
-                    print(f"{ano} r{rd} {p:4.1f}%  parcial {pa(s):5.2f}  prev {b.A_media:5.2f} "
-                          f"[{b.A_p05:5.2f}, {b.A_p95:5.2f}] real {real_br:5.2f}  P(A) {b.prob_A:.2f}  "
-                          f"UF cob90 {100 * t.cobre90[1:].mean():3.0f}%  ({time.time() - t0:.0f}s)", flush=True)
+                    for v in vrs:
+                        t0 = time.time()
+                        df, sims = prever(s, cfgs[v])
+                        t = avaliar(df, sims, real_br, real_uf).assign(ano=ano, rodada=rd, vies=vies, pct=p,
+                                                                       parcial=pa(s), variante=v)
+                        t["crps"] = np.nan
+                        pa_br = 100 * sims.sum(1)[:, 0] / np.maximum(sims.sum(1)[:, :2].sum(1), 1)
+                        t.loc[0, "crps"] = crps(pa_br, real_br)
+                        linhas.append(t)
+                        b = t.iloc[0]
+                        print(f"{ano} r{rd} {p:4.1f}% {v:22s} parcial {pa(s):5.2f}  prev {b.A_media:5.2f} "
+                              f"[{b.A_p05:5.2f}, {b.A_p95:5.2f}] real {real_br:5.2f}  P(A) {b.prob_A:.2f}  "
+                              f"UF cob90 {100 * t.cobre90[1:].mean():3.0f}%  ({time.time() - t0:.0f}s)", flush=True)
         rej = pd.concat(linhas, ignore_index=True)
-        rej.to_csv(os.path.join(OUT, f"rejogo_{a.variante_rejogo}.csv"), index=False, float_format="%.4f")
-        r = rej.groupby(["nivel", "pct"]).agg(erro_abs=("erro", lambda x: x.abs().mean()), cobertura90=("cobre90", "mean"),
-                                              largura90=("largura90", "mean"))
+        rej.to_csv(os.path.join(OUT, f"rejogo_{'_'.join(vrs)}.csv"), index=False, float_format="%.4f")
+        r = rej.groupby(["variante", "nivel", "pct"]).agg(
+            erro_abs=("erro", lambda x: x.abs().mean()), cobertura90=("cobre90", "mean"),
+            largura90=("largura90", "mean"), crps=("crps", "mean"))
         print(r.round(3).to_string())
-
 
 if __name__ == "__main__":
     main()

@@ -91,3 +91,26 @@ def test_priori_linha_outros_bate_com_a_pesquisa():
     y = (base[["A1", "B1", "O1", "W1"]].sum() / E.sum()).tolist()
     x = np.array(y + [1 - sum(y)]) @ modelo.matriz(t)
     assert abs(100 * x[0] / (x[0] + x[1]) - 52.0) < 0.05
+
+
+def test_matriz_v2_usa_priori_v2():
+    """Com matriz_v2 e uma priori de 11 parâmetros, o ponto de partida dos 3 extras vem da priori; com a matriz
+    original, a mesma priori é cortada nos 8 primeiros."""
+    import pandas as pd
+    from eleicoes.modelos import transferencia as modelo
+    th = np.random.default_rng(2).normal(size=(20, modelo.NPAR + 3))
+    M = modelo.matriz(th)
+    assert np.allclose(M.sum(-1), 1) and (M >= 0).all()
+    extra = [modelo._logit(0.2 / 0.25), modelo._logit(0.01 / 0.25), modelo._logit(0.02 / 0.5)]
+    pri = {"brasil|Brasil": list(modelo.THETA0) + extra}
+    n = 10
+    E = np.full(n, 10_000.0)
+    df = pd.DataFrame({"uf": "sp", "mun": [f"{i:05d}" for i in range(n)], "nome": "x", "capital": False, "E1": E,
+                       "A1": 0.35 * E, "B1": 0.3 * E, "O1": 0.12 * E, "W1": 0.03 * E, "E2": E, "Ea": 0.0,
+                       "A2": 0.0, "B2": 0.0, "W2": 0.0, "C2": 0.0})
+    d, X, Y = modelo.preparar(df)
+    aj = modelo.ajustar(d, X, Y, modelo.Config(priori=pri, matriz_v2=True, niveis=[]))
+    mu = aj.grupos[("brasil", "Brasil")][0]
+    assert len(mu) == modelo.NPAR + 3 and np.allclose(mu[modelo.NPAR:], extra)
+    aj = modelo.ajustar(d, X, Y, modelo.Config(priori=pri, niveis=[]))
+    assert len(aj.grupos[("brasil", "Brasil")][0]) == modelo.NPAR

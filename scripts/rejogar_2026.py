@@ -43,6 +43,9 @@ VARIANTES = {
     "calibrado_hier": dict(priori_cal.CALIBRACAO),
     "calibrado": "priori média 2006–2022 + linha Outros pela pesquisa",
     "calibrado_cauteloso": {**priori_cal.CALIBRACAO, "choque_uf_inicio": 0.04, "choque_uf_inicio_antes": 0.02},
+    # matriz v2 com priori v2 média de 2006–2022 (docs/matriz-v2.md)
+    "calibrado_v2": "calibrado com matriz v2",
+    "calibrado_cauteloso_v2": "calibrado cauteloso com matriz v2",
 }
 PESQUISA_2026 = 49.0   # Datafolha, 24/10/2026: Lula 49% dos válidos (dados/pesquisas/presidente_t2.csv)
 DESCRICAO = {
@@ -56,6 +59,8 @@ DESCRICAO = {
     "calibrado_hier": "Revisado + hierarquia e choques calibrados em 2006–2022 (tau 0,15, UF no início 2%, Outros 0,3)",
     "calibrado": "Calibrado: priori média de 2006–2022, linha Outros pela pesquisa Datafolha da véspera (49%)",
     "calibrado_cauteloso": "Calibrado com choque inicial por UF de 4% depois que a apuração começa (2% antes)",
+    "calibrado_v2": "Calibrado com a matriz v2 (branco/nulo → candidatos, falta separada para A e B)",
+    "calibrado_cauteloso_v2": "Calibrado cauteloso com a matriz v2",
 }
 
 
@@ -76,10 +81,10 @@ def carregar():
 
 def config_variante(nome, base, ret):
     """Config de uma variante. As calibradas montam a priori com o eleitorado do 2º turno (último retrato)."""
-    if nome in ("calibrado", "calibrado_cauteloso"):
+    if nome.startswith("calibrado") and nome != "calibrado_hier":
         ult = retrato(base, ret, sorted(ret["hora"].unique())[-1])
-        extra = {"choque_uf_inicio": 0.04, "choque_uf_inicio_antes": 0.02} if nome == "calibrado_cauteloso" else {}
-        return priori_cal.config_calibrada(ult, PESQUISA_2026, **extra)
+        extra = {"choque_uf_inicio": 0.04, "choque_uf_inicio_antes": 0.02} if "cauteloso" in nome else {}
+        return priori_cal.config_calibrada(ult, PESQUISA_2026, v2=nome.endswith("_v2"), **extra)
     return dataclasses.replace(modelo.config_2026(), **VARIANTES[nome])
 
 

@@ -13,6 +13,10 @@ def _transferencias(aj, cfg, nomes):
     a, b = nomes
     rot = [f"{a}→{b}", f"{b}→{a}", "Votantes→abstenção", f"Outros→{a}", f"Outros→{b}", "Outros→branco/nulo",
            "Outros→abstenção", f"Abstenção→{a}", f"Abstenção→{b}"]
+    v2 = len(aj.grupos[("brasil", "Brasil")][0]) > modelo.NPAR
+    if v2:   # matriz v2: a 3ª linha passa a ser a falta dos eleitores de A
+        rot[2] = f"Votantes de {a}→abstenção"
+        rot += [f"Branco/nulo→{a}", f"Branco/nulo→{b}", f"Votantes de {b}→abstenção"]
     rng = np.random.default_rng(cfg.seed + 1)
     out = {}
     chaves = [("brasil", "Brasil")] + [("regiao", r) for r in ORDEM_REGIAO]
@@ -21,7 +25,7 @@ def _transferencias(aj, cfg, nomes):
             continue
         mu, cov = aj.grupos[(nivel, nome)]
         th = rng.multivariate_normal(mu, cov, size=1000, check_valid="ignore")
-        p = 100 * modelo.parametros_legiveis(th)
+        p = 100 * (modelo.parametros_legiveis_v2(th) if v2 else modelo.parametros_legiveis(th))
         out[nome] = {r: (float(p[:, i].mean()), float(np.percentile(p[:, i], 5)), float(np.percentile(p[:, i], 95)))
                      for i, r in enumerate(rot)}
     return out

@@ -175,5 +175,5 @@ python scripts/rejogar_2026.py --variantes revisado calibrado_hier calibrado cal
   quando a reportagem trouxer, daria a linha Outros direto, sem depender da matriz média.
 - **Só presidente.** Governador e senador (etapa 5) usam a mesma base. Lá a priori precisa de outro desenho, porque
   os partidos mudam de UF para UF.
-- **Matriz v2.** A abstenção indo para A em 2026 (8%) sugere separar a falta dos eleitores de A e de B, como na
-  `matriz_v2`. Testar com 2006–2022 é o próximo passo natural.
+- **Matriz v2.** Testada com 2006–2026 em [matriz-v2.md](matriz-v2.md): ganha por pouco nos rejogos, perde no teste de
+  estresse e não foi adotada.

@@ -78,6 +78,15 @@ def parametros_legiveis(theta):
                      M[..., 2, 3], M[..., 4, 0], M[..., 4, 1]], -1)
 
 
+PAR_NOMES_V2 = PAR_NOMES + ["Branco/nulo→A", "Branco/nulo→B", "Abstenção (votantes de B)"]
+
+
+def parametros_legiveis_v2(theta):
+    """Como parametros_legiveis, mais os 3 da matriz v2 (com theta de 8, Branco/nulo→A/B = 0 e falta de B = de A)."""
+    M = matriz(theta)
+    return np.concatenate([parametros_legiveis(theta), np.stack([M[..., 3, 0], M[..., 3, 1], M[..., 1, 3]], -1)], -1)
+
+
 # priori no nível Brasil: pouca troca entre A e B, ~5% dos votantes faltam,
 # Outros divididos entre A e B, pequena volta de quem se absteve.
 THETA0 = np.array([_logit(0.02 / 0.3), _logit(0.02 / 0.3), _logit(0.05 / 0.5),
@@ -103,6 +112,8 @@ class Config:
     choque_uf_inicio: float = 0.04
     choque_uf_inicio_antes: float = None   # valor antes de abrir as urnas (None = o mesmo de choque_uf_inicio)
     matriz_v2: bool = False           # parâmetros extras: branco/nulo -> A/B e falta separada para B
+    sd_v2: float = None               # desvio da priori nos 3 parâmetros extras, quando a priori é v2
+                                      # (None = sd_priori_informativa)
     escala_cov: float = 1.0           # inflação da covariância de Laplace (dependência espacial)
     rho_nacional: float = 0.5         # correlação entre grupos no sorteio dos parâmetros
     k_parcial: float = 0.30           # peso do resultado parcial do próprio município: f/(f+k)
@@ -191,20 +202,30 @@ def ajustar(df, X, Y, cfg: Config):
     theta0, sd0 = THETA0.copy(), np.full(NPAR, cfg.sd_priori_brasil)
     # parâmetros da priori presos em zero na eleição de referência (problema de identificação ecológica)
     # são limitados a ~1% para não travar a estimativa
-    pri = {k: np.maximum(np.array(v, float), [-3.4, -3.4, -3.4, -9, -9, -9, -3.4, -3.4])
+    # (a priori pode ter 8 parâmetros, da matriz original, ou 11, de uma priori estimada com a matriz v2; os 3 extras
+    # só são usados com cfg.matriz_v2)
+    npar = NPAR + 3 if cfg.matriz_v2 else NPAR
+    piso = np.array([-3.4, -3.4, -3.4, -9, -9, -9, -3.4, -3.4, -3.4, -3.4, -3.4])
+    pri = {k: np.maximum(np.array(v, float)[:npar], piso[:min(len(v), npar)])
            for k, v in (cfg.priori or {}).items()}
+    pri_v2 = bool(pri) and all(len(v) == npar for v in pri.values()) and cfg.matriz_v2
     if "brasil|Brasil" in pri:
-        theta0, sd0 = pri["brasil|Brasil"].copy(), np.full(NPAR, cfg.sd_priori_informativa)
+        theta0 = pri["brasil|Brasil"][:NPAR].copy()
+        sd0 = np.full(NPAR, cfg.sd_priori_informativa)
     if cfg.theta_outros is not None:
         theta0[3:6] = cfg.theta_outros
         sd0[3:6] = cfg.sd_priori_informativa
     if cfg.sd_outros is not None:
         sd0[3:6] = cfg.sd_outros
     if cfg.matriz_v2:
-        # branco/nulo -> A e -> B começam em ~3% cada; a falta de B começa igual à de A
-        theta0 = np.concatenate([theta0, [_logit(0.03 / 0.25), _logit(0.03 / 0.25), theta0[2]]])
-        sd0 = np.concatenate([sd0, [1.5, 1.5, 1.0]])
-    npar = len(theta0)
+        if pri_v2:
+            # priori estimada com a matriz v2 (ex.: média das eleições anteriores): usa os 3 parâmetros extras dela
+            theta0 = np.concatenate([theta0, pri["brasil|Brasil"][NPAR:]])
+            sd0 = np.concatenate([sd0, np.full(3, cfg.sd_priori_informativa if cfg.sd_v2 is None else cfg.sd_v2)])
+        else:
+            # branco/nulo -> A e -> B começam em ~3% cada; a falta de B começa igual à de A
+            theta0 = np.concatenate([theta0, [_logit(0.03 / 0.25), _logit(0.03 / 0.25), theta0[2]]])
+            sd0 = np.concatenate([sd0, [1.5, 1.5, 1.0]])
 
     def desvio(nivel, nome, pai_nivel, pai_nome):
         """Desvio do grupo em relação ao de cima na eleição de referência (0 sem priori; linha Outros = 0)."""
@@ -212,7 +233,8 @@ def ajustar(df, X, Y, cfg: Config):
         if a is None or b is None:
             return np.zeros(npar)
         d = np.zeros(npar)
-        d[:NPAR] = a - b
+        n = min(len(a), len(b), npar)
+        d[:n] = a[:n] - b[:n]
         d[3:6] = 0.0
         return d
 

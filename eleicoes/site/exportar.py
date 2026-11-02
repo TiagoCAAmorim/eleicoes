@@ -5,21 +5,29 @@ import pandas as pd
 from ..modelos import transferencia as modelo
 
 
-def _rotulos(nomes):
+def _rotulos(nomes, v2=False):
     a, b = [n.split()[0] for n in nomes]
-    return [f"{a}->{b}", f"{b}->{a}", "votantes->abstencao", f"outros->{a}", f"outros->{b}", "outros->branco_nulo",
-            "outros->abstencao", f"abstencao->{a}", f"abstencao->{b}"]
+    rot = [f"{a}->{b}", f"{b}->{a}", "votantes->abstencao", f"outros->{a}", f"outros->{b}", "outros->branco_nulo",
+           "outros->abstencao", f"abstencao->{a}", f"abstencao->{b}"]
+    # matriz v2: "votantes->abstencao" passa a ser a falta dos eleitores de A, e a dos de B vem à parte
+    return rot + [f"branco_nulo->{a}", f"branco_nulo->{b}", f"votantes_{b}->abstencao"] if v2 else rot
+
+
+def _legiveis(th):
+    """Parâmetros legíveis: 9 na matriz original, 12 na v2 (theta com mais de NPAR parâmetros)."""
+    th = np.asarray(th)
+    return modelo.parametros_legiveis_v2(th) if th.shape[-1] > modelo.NPAR else modelo.parametros_legiveis(th)
 
 
 def coeficientes(aj, nomes):
     """Uma linha por grupo da hierarquia: transferências estimadas (%), com intervalo de 90% (aproximação de Laplace)."""
-    rot = _rotulos(nomes)
+    rot = _rotulos(nomes, len(next(iter(aj.grupos.values()))[0]) > modelo.NPAR)
     rng = np.random.default_rng(123)
     linhas = []
     for (nivel, nome), (mu, cov) in aj.grupos.items():
         th = rng.multivariate_normal(mu, cov, size=400, check_valid="ignore")
-        p = 100 * modelo.parametros_legiveis(th)
-        m = 100 * modelo.parametros_legiveis(np.asarray(mu)[None])[0]
+        p = 100 * _legiveis(th)
+        m = 100 * _legiveis(np.asarray(mu)[None])[0]
         linha = {"nivel": nivel, "grupo": nome}
         for i, r in enumerate(rot):
             linha[f"{r} (%)"] = round(float(m[i]), 3)
@@ -33,9 +41,9 @@ def municipios(df, aj, final, nomes):
     """Entradas do modelo por município (1º turno, 2º turno apurado), o grupo-folha cujos coeficientes
     foram usados e o resultado previsto (média e intervalo de 90% das simulações, sem os cenários)."""
     a, b = [n.split()[0] for n in nomes]
-    rot = _rotulos(nomes)
     mu = np.array([aj.grupos[k][0] for k in aj.folhas])
-    leg = 100 * modelo.parametros_legiveis(mu)[aj.folha]
+    rot = _rotulos(nomes, mu.shape[-1] > modelo.NPAR)
+    leg = 100 * _legiveis(mu)[aj.folha]
     va, vb = final[:, :, 0], final[:, :, 1]
     pa = 100 * va / np.maximum(va + vb, 1)
     out = pd.DataFrame({
@@ -87,13 +95,15 @@ def fluxos(mun, nome_a, nome_b):
     x = np.column_stack([x, np.clip(E1 - x.sum(1), 0, None)]) / E1[:, None]
     x *= mun["eleitores_t2"].to_numpy(float)[:, None]
     p = mun[coef].to_numpy(float) / 100
-    ab, ba, falta, oa, ob, ow, on, na, nb = p.T
+    ab, ba, falta, oa, ob, ow, on, na, nb = p.T[:9]
     z = np.zeros_like(ab)
+    # matriz v2 (12 coeficientes): branco/nulo -> A e -> B, falta dos eleitores de B separada
+    wa, wb, faltab = p.T[9:12] if p.shape[1] >= 12 else (z, z, falta)
     M = np.stack([                                                # (U, origem, destino A B W N)
         np.stack([1 - ab - falta, ab, z, falta], -1),
-        np.stack([ba, 1 - ba - falta, z, falta], -1),
+        np.stack([ba, 1 - ba - faltab, z, faltab], -1),
         np.stack([oa, ob, ow, on], -1),
-        np.stack([z, z, 1 - falta, falta], -1),
+        np.stack([wa, wb, 1 - falta - wa - wb, falta], -1),
         np.stack([na, nb, z, 1 - na - nb], -1),
     ], 1)
     F = x[:, :, None] * M                                         # (U, 5, 4) votos

@@ -20,8 +20,9 @@ CALIBRACAO = {"tau": 0.15, "choque_uf_inicio": 0.02, "sd_outros": 0.3}
 COLS = ["uf", "mun", "nome", "capital", "E1", "A1", "B1", "O1", "W1", "E2", "Ea", "A2", "B2", "W2", "C2"]
 
 
-def carregar(ano, cargo="presidente"):
-    with open(os.path.join(PRIORI, f"{cargo}_{ano}.json")) as f:
+def carregar(ano, cargo="presidente", v2=False):
+    """Priori estimada com a apuração completa de uma eleição (v2: com a matriz v2, 11 parâmetros por grupo)."""
+    with open(os.path.join(PRIORI, f"{cargo}_{ano}{'_v2' if v2 else ''}.json")) as f:
         return json.load(f)
 
 
@@ -31,13 +32,13 @@ def media(prioris):
     return {k: [float(x) for x in np.mean([p[k] for p in prioris], axis=0)] for k in sorted(chaves)}
 
 
-def outros_pela_pesquisa(base, pri, alvo):
+def outros_pela_pesquisa(base, pri, alvo, v2=False):
     """Linha Outros (logits de oA, oB, oW contra oN) que faz a previsão de antes da apuração bater com `alvo`
     (% de A nos votos válidos). Parte da linha Outros da priori e desloca Outros→A e Outros→B em sentidos opostos."""
     s = base[COLS].copy()
     s[["Ea", "A2", "B2", "W2", "C2"]] = 0.0
     df, X, Y = modelo.preparar(s)
-    aj = modelo.ajustar(df, X, Y, modelo.Config(priori=pri))
+    aj = modelo.ajustar(df, X, Y, modelo.Config(priori=pri, matriz_v2=v2))
     th = np.array([aj.grupos[k][0] for k in aj.folhas])[aj.folha]
     w = df["E2"].values[:, None]
 
@@ -56,9 +57,11 @@ def outros_pela_pesquisa(base, pri, alvo):
     return (float(t0[3] + m), float(t0[4] - m), float(t0[5]))
 
 
-def config_calibrada(base, pesquisa_a, anos=None, **mudancas):
+def config_calibrada(base, pesquisa_a, anos=None, v2=False, **mudancas):
     """Config do modelo com a priori calibrada. `base`: municípios (1º turno e eleitorado do 2º);
-    `pesquisa_a`: % de A nos válidos na última pesquisa; `anos`: eleições usadas na média (padrão 2006–2022)."""
-    pri = media([carregar(a) for a in (anos or ANOS_BASE)])
-    th = outros_pela_pesquisa(base, pri, pesquisa_a)
-    return modelo.Config(priori=pri, theta_outros=th, **{**CALIBRACAO, **mudancas})
+    `pesquisa_a`: % de A nos válidos na última pesquisa; `anos`: eleições usadas na média (padrão 2006–2022);
+    `v2`: matriz v2 (branco/nulo pode ir para A ou B e a falta dos eleitores de B é separada da dos de A), com a
+    priori média das matrizes v2 de cada eleição (docs/matriz-v2.md)."""
+    pri = media([carregar(a, v2=v2) for a in (anos or ANOS_BASE)])
+    th = outros_pela_pesquisa(base, pri, pesquisa_a, v2=v2)
+    return modelo.Config(priori=pri, theta_outros=th, matriz_v2=v2, **{**CALIBRACAO, **mudancas})
