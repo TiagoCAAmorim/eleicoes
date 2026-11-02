@@ -1,0 +1,776 @@
+{
+ "cidades": {
+  "19810": {
+   "uf": "pb",
+   "A": "15",
+   "B": "45",
+   "secoes": 761,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 51.52
+  },
+  "2550": {
+   "uf": "am",
+   "A": "14",
+   "B": "40",
+   "secoes": 2676,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 57.13
+  },
+  "38490": {
+   "uf": "ba",
+   "A": "15",
+   "B": "13",
+   "secoes": 4209,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 58.46
+  },
+  "41238": {
+   "uf": "mg",
+   "A": "40",
+   "B": "15",
+   "secoes": 4059,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 59.12
+  },
+  "4278": {
+   "uf": "pa",
+   "A": "14",
+   "B": "15",
+   "secoes": 2246,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 59.6
+  },
+  "43710": {
+   "uf": "mg",
+   "A": "13",
+   "B": "45",
+   "secoes": 1137,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 56.88
+  },
+  "47333": {
+   "uf": "mg",
+   "A": "13",
+   "B": "45",
+   "secoes": 1061,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 48.18
+  },
+  "48658": {
+   "uf": "mg",
+   "A": "15",
+   "B": "23",
+   "secoes": 695,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 52.58
+  },
+  "57037": {
+   "uf": "es",
+   "A": "22",
+   "B": "15",
+   "secoes": 757,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 52.43
+  },
+  "58190": {
+   "uf": "rj",
+   "A": "15",
+   "B": "12",
+   "secoes": 913,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 54.47
+  },
+  "58777": {
+   "uf": "rj",
+   "A": "13",
+   "B": "40",
+   "secoes": 679,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 65.1
+  },
+  "60011": {
+   "uf": "rj",
+   "A": "15",
+   "B": "43",
+   "secoes": 10702,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 50.83
+  },
+  "6050": {
+   "uf": "ap",
+   "A": "40",
+   "B": "12",
+   "secoes": 580,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 48.34
+  },
+  "62197": {
+   "uf": "sp",
+   "A": "45",
+   "B": "15",
+   "secoes": 546,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 45.7
+  },
+  "64777": {
+   "uf": "sp",
+   "A": "13",
+   "B": "45",
+   "secoes": 1808,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 56.68
+  },
+  "66893": {
+   "uf": "sp",
+   "A": "13",
+   "B": "40",
+   "secoes": 658,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 55.68
+  },
+  "70572": {
+   "uf": "sp",
+   "A": "13",
+   "B": "14",
+   "secoes": 1342,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 44.97
+  },
+  "70750": {
+   "uf": "sp",
+   "A": "13",
+   "B": "45",
+   "secoes": 1273,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 58.19
+  },
+  "70971": {
+   "uf": "sp",
+   "A": "40",
+   "B": "13",
+   "secoes": 671,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 51.21
+  },
+  "71072": {
+   "uf": "sp",
+   "A": "25",
+   "B": "13",
+   "secoes": 20301,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 60.72
+  },
+  "76678": {
+   "uf": "pr",
+   "A": "11",
+   "B": "45",
+   "secoes": 971,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 51.73
+  },
+  "77771": {
+   "uf": "pr",
+   "A": "45",
+   "B": "23",
+   "secoes": 640,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 52.26
+  },
+  "81051": {
+   "uf": "sc",
+   "A": "15",
+   "B": "11",
+   "secoes": 791,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 57.68
+  },
+  "81795": {
+   "uf": "sc",
+   "A": "13",
+   "B": "25",
+   "secoes": 908,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 62.15
+  },
+  "85898": {
+   "uf": "rs",
+   "A": "13",
+   "B": "14",
+   "secoes": 659,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 52.63
+  },
+  "87912": {
+   "uf": "rs",
+   "A": "13",
+   "B": "11",
+   "secoes": 695,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 43.28
+  },
+  "88013": {
+   "uf": "rs",
+   "A": "15",
+   "B": "13",
+   "secoes": 2645,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 58.95
+  },
+  "90670": {
+   "uf": "mt",
+   "A": "45",
+   "B": "22",
+   "secoes": 989,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 60.47
+  },
+  "9210": {
+   "uf": "ma",
+   "A": "45",
+   "B": "65",
+   "secoes": 1747,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 55.84
+  },
+  "92215": {
+   "uf": "go",
+   "A": "13",
+   "B": "15",
+   "secoes": 621,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 75.63
+  }
+ },
+ "arquivos": {
+  "votacao_secao_2008_AM.zip": {
+   "lidos": [
+    "votacao_secao_2008_AM.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2008_AP.zip": {
+   "lidos": [
+    "votacao_secao_2008_AP.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2008_BA.zip": {
+   "lidos": [
+    "votacao_secao_2008_BA.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2008_ES.zip": {
+   "lidos": [
+    "votacao_secao_2008_ES.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2008_GO.zip": {
+   "lidos": [
+    "votacao_secao_2008_GO.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2008_MA.zip": {
+   "lidos": [
+    "votacao_secao_2008_MA.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2008_MG.zip": {
+   "lidos": [
+    "votacao_secao_2008_MG.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2008_MT.zip": {
+   "lidos": [
+    "votacao_secao_2008_MT.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2008_PA.zip": {
+   "lidos": [
+    "votacao_secao_2008_PA.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2008_PB.zip": {
+   "lidos": [
+    "votacao_secao_2008_PB.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2008_PR.zip": {
+   "lidos": [
+    "votacao_secao_2008_PR.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2008_RJ.zip": {
+   "lidos": [
+    "votacao_secao_2008_RJ.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2008_RS.zip": {
+   "lidos": [
+    "votacao_secao_2008_RS.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2008_SC.zip": {
+   "lidos": [
+    "votacao_secao_2008_SC.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2008_SP.zip": {
+   "lidos": [
+    "votacao_secao_2008_SP.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "detalhe_votacao_secao_2008.zip": {
+   "lidos": [
+    "detalhe_votacao_secao_2008_BRASIL.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "QT_APTOS",
+    "QT_COMPARECIMENTO",
+    "QT_ABSTENCOES",
+    "QT_VOTOS_NOMINAIS",
+    "QT_VOTOS_BRANCOS",
+    "QT_VOTOS_NULOS",
+    "QT_VOTOS_LEGENDA",
+    "QT_VOTOS_ANULADOS_APU_SEP",
+    "NR_LOCAL_VOTACAO"
+   ]
+  }
+ }
+}
