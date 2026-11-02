@@ -118,10 +118,16 @@ def main():
             f.write(pagina(nome, extras, gerado_em))
     shutil.copy(os.path.join(SITE, "estilo.css"), os.path.join(saida, "estilo.css"))
     for e in eleicoes:
-        destino = os.path.join(saida, e["caminho"])
-        inicio = "../" * e["caminho"].strip("/").count("/") + "../"
-        web.gerar_site(resultados(e["resultados"]), destino, titulo=e["titulo"],
-                       arquivo={"inicio": inicio, "rotulo": f'{e["ano"]} · {e["cargo"]} · {e["turno"]}'})
+        # uma eleição pode ter versões (ex.: modelo do dia e modelo revisado), cada uma numa subpasta
+        versoes = e.get("versoes") or [{"sub": "", "resultados": e["resultados"]}]
+        for v in versoes:
+            caminho = e["caminho"] + v["sub"]
+            destino = os.path.join(saida, caminho)
+            inicio = "../" * caminho.strip("/").count("/") + "../"
+            raiz_eleicao = "../" * v["sub"].strip("/").count("/") + ("../" if v["sub"] else "./")
+            web.gerar_site(resultados(v["resultados"]), destino, titulo=e["titulo"],
+                           arquivo={"inicio": inicio, "rotulo": f'{e["ano"]} · {e["cargo"]} · {e["turno"]}',
+                                    "versoes": web.nav_versoes(e.get("versoes"), v, raiz_eleicao)})
     open(os.path.join(saida, ".nojekyll"), "w").close()
     print(f"site gerado em {saida}: {len(PAGINAS)} páginas + {len(eleicoes)} eleição(ões)")
 

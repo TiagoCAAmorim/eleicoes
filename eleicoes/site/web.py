@@ -135,19 +135,39 @@ CONTADOR = """
 
 # barra de navegação das páginas arquivadas no site do projeto (volta à página inicial)
 NAV = """<nav class="lx-nav" aria-label="Navegação"><a href="{inicio}">Eleições</a><span aria-hidden="true">›</span>
-<span>{rotulo}</span></nav>
+<span>{rotulo}</span>{versoes}</nav>
 <style>.lx-nav{{display:flex;flex-wrap:wrap;gap:6px;align-items:center;max-width:1100px;margin:0 auto 12px;
 font:500 14px/1.4 "Source Sans 3",system-ui,sans-serif;color:var(--color-fg-muted,#5f5c55)}}
 .lx-nav a{{color:inherit;text-decoration:underline;text-underline-offset:3px}}.lx-nav a:hover{{color:var(--color-fg,#1b1a18)}}
+.lx-versoes{{display:flex;flex-wrap:wrap;gap:4px;align-items:center;margin-left:auto}}
+.lx-versoes a{{text-decoration:none;border:1px solid var(--color-border,#d9d5cc);border-radius:999px;padding:4px 12px;
+min-height:32px;display:inline-flex;align-items:center}}
+.lx-versoes a[aria-current]{{background:var(--color-fg,#1b1a18);color:var(--color-bg,#fff);border-color:transparent}}
+.lx-versao-nota{{flex-basis:100%;margin:2px 0 0;font-weight:400;font-size:13px}}
+@media (max-width:600px){{.lx-versoes{{margin-left:0;flex-basis:100%}}}}
 @media print{{.lx-nav{{display:none}}}}</style>
 """
+
+
+def nav_versoes(versoes, atual, raiz_eleicao):
+    """Seletor entre versões da mesma eleição (ex.: modelo do dia x revisado). `raiz_eleicao` = caminho relativo
+    desta versão até a pasta da eleição."""
+    if not versoes:
+        return ""
+    links = "".join(
+        f'<a href="{raiz_eleicao}{v["sub"]}"{' aria-current="page"' if v["sub"] == atual["sub"] else ""}>'
+        f'{v["rotulo"]}</a>' for v in versoes)
+    return (f'<span class="lx-versoes" role="group" aria-label="Versão do modelo">{links}</span>'
+            f'<p class="lx-versao-nota">{atual["nota"]}</p>')
 
 
 def gerar_site(saida, pasta_site, titulo="Previsão do 2º turno presidencial 2026", artefato=False, arquivo=None):
     """Monta index.html + imagens em `pasta_site` a partir de resultados/<ano>-<cargo>.
 
-    `arquivo` = {"inicio": "../../", "rotulo": "2026 · Presidente"}: versão encerrada para o site do projeto, com barra
-    de navegação, sem atualização automática, sem botão de atualizar e sem contador."""
+    `arquivo` = {"inicio": "../../", "rotulo": "2026 · Presidente", "versoes": "<html do seletor>"}: versão encerrada
+    para o site do projeto, com barra de navegação, sem atualização automática, sem botão de atualizar e sem contador."""
+    if arquivo:
+        arquivo = {"versoes": "", **arquivo}
     web = os.path.join(saida, "web")
     dados = {}
     for nome in ["historico", "previsao", "transferencias"]:
