@@ -42,7 +42,7 @@ VARIANTES = {
     # calibração da priori com 2006–2022 (docs/calibracao-priori.md)
     "calibrado_hier": dict(priori_cal.CALIBRACAO),
     "calibrado": "priori média 2006–2022 + linha Outros pela pesquisa",
-    "calibrado_cauteloso": "igual a calibrado, com choque inicial por UF de 4% depois que a apuração começa",
+    "calibrado_cauteloso": {**priori_cal.CALIBRACAO, "choque_uf_inicio": 0.04, "choque_uf_inicio_antes": 0.02},
 }
 PESQUISA_2026 = 49.0   # Datafolha, 24/10/2026: Lula 49% dos válidos (dados/pesquisas/presidente_t2.csv)
 DESCRICAO = {
@@ -72,6 +72,15 @@ def carregar():
                               "A_apurado_t2": "A2", "B_apurado_t2": "B2", "branco_nulo_apurado_t2": "W2",
                               "comparecimento_apurado_t2": "C2"})
     return base, ret
+
+
+def config_variante(nome, base, ret):
+    """Config de uma variante. As calibradas montam a priori com o eleitorado do 2º turno (último retrato)."""
+    if nome in ("calibrado", "calibrado_cauteloso"):
+        ult = retrato(base, ret, sorted(ret["hora"].unique())[-1])
+        extra = {"choque_uf_inicio": 0.04, "choque_uf_inicio_antes": 0.02} if nome == "calibrado_cauteloso" else {}
+        return priori_cal.config_calibrada(ult, PESQUISA_2026, **extra)
+    return dataclasses.replace(modelo.config_2026(), **VARIANTES[nome])
 
 
 def retrato(base, ret, hora):
@@ -129,12 +138,7 @@ def main():
     usar = horas[:-1][::a.passo]
     linhas = []
     for nome in a.variantes:
-        if nome == "calibrado":
-            cfg = priori_cal.config_calibrada(ult, PESQUISA_2026)
-        elif nome == "calibrado_cauteloso":
-            cfg = priori_cal.config_calibrada(ult, PESQUISA_2026, choque_uf_inicio=0.04, choque_uf_inicio_antes=0.02)
-        else:
-            cfg = dataclasses.replace(modelo.config_2026(), **VARIANTES[nome])
+        cfg = config_variante(nome, base, ret)
         for h in usar:
             t0 = time.time()
             sims = rodar_uma(retrato(base, ret, h), cfg)
