@@ -14,6 +14,10 @@ on:
       - .github/workflows/historico.yml
 permissions:
   contents: write
+# um push novo cancela a rodada anterior, para duas rodadas não gravarem o mesmo ano ao mesmo tempo
+concurrency:
+  group: historico-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   anos:
     runs-on: ubuntu-latest
@@ -52,5 +56,10 @@ jobs:
           git add -A dados/historico/${{ matrix.ano }}
           if git diff --cached --quiet; then echo "sem mudanças"; exit 0; fi
           git commit -q -m "historico: base TSE ${{ matrix.ano }} [skip ci]"
-          for i in 1 2 3 4 5 6; do git pull -q --rebase origin "$BRANCH" && git push -q origin "HEAD:$BRANCH" && exit 0; sleep $((RANDOM % 20 + 5)); done
+          # -X theirs: num conflito no mesmo arquivo, fica a versão deste job (a mais nova)
+          for i in 1 2 3 4 5 6; do
+            git pull -q --rebase -X theirs origin "$BRANCH" && git push -q origin "HEAD:$BRANCH" && exit 0
+            git rebase --abort 2>/dev/null || true
+            sleep $((RANDOM % 20 + 5))
+          done
           exit 1
