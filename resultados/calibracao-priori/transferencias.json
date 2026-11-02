@@ -1,0 +1,98 @@
+{
+ "2006": {
+  "A": "LULA",
+  "B": "GERALDO ALCKMIN",
+  "A_validos": 60.83,
+  "transferencias": {
+   "A→B": 0.0,
+   "B→A": 9.7,
+   "Abstenção (votantes T1)": 3.6,
+   "Outros→A": 86.7,
+   "Outros→B": 12.4,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.8,
+   "Abstenção T1→A": 4.1,
+   "Abstenção T1→B": 0.0
+  }
+ },
+ "2010": {
+  "A": "DILMA",
+  "B": "JOSÉ SERRA",
+  "A_validos": 56.05,
+  "transferencias": {
+   "A→B": 0.1,
+   "B→A": 0.0,
+   "Abstenção (votantes T1)": 3.6,
+   "Outros→A": 41.8,
+   "Outros→B": 55.9,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 2.4,
+   "Abstenção T1→A": 0.2,
+   "Abstenção T1→B": 0.5
+  }
+ },
+ "2014": {
+  "A": "DILMA",
+  "B": "AÉCIO NEVES",
+  "A_validos": 51.64,
+  "transferencias": {
+   "A→B": 0.0,
+   "B→A": 0.0,
+   "Abstenção (votantes T1)": 2.3,
+   "Outros→A": 39.6,
+   "Outros→B": 59.6,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.9,
+   "Abstenção T1→A": 0.0,
+   "Abstenção T1→B": 1.4
+  }
+ },
+ "2018": {
+  "A": "FERNANDO HADDAD",
+  "B": "JAIR BOLSONARO",
+  "A_validos": 44.87,
+  "transferencias": {
+   "A→B": 0.0,
+   "B→A": 0.0,
+   "Abstenção (votantes T1)": 0.0,
+   "Outros→A": 58.1,
+   "Outros→B": 30.9,
+   "Outros→Branco/nulo": 1.6,
+   "Outros→Abstenção": 9.5,
+   "Abstenção T1→A": 0.0,
+   "Abstenção T1→B": 0.0
+  }
+ },
+ "2022": {
+  "A": "LULA",
+  "B": "JAIR BOLSONARO",
+  "A_validos": 50.9,
+  "transferencias": {
+   "A→B": 0.0,
+   "B→A": 0.0,
+   "Abstenção (votantes T1)": 0.0,
+   "Outros→A": 22.1,
+   "Outros→B": 77.4,
+   "Outros→Branco/nulo": 0.1,
+   "Outros→Abstenção": 0.3,
+   "Abstenção T1→A": 0.5,
+   "Abstenção T1→B": 0.0
+  }
+ },
+ "2026": {
+  "A": "LULA",
+  "B": "FLÁVIO BOLSONARO",
+  "A_validos": 51.76,
+  "transferencias": {
+   "A→B": 0.0,
+   "B→A": 0.0,
+   "Abstenção (votantes T1)": 0.0,
+   "Outros→A": 62.5,
+   "Outros→B": 37.2,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.3,
+   "Abstenção T1→A": 8.4,
+   "Abstenção T1→B": 0.0
+  }
+ }
+}

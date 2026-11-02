@@ -101,6 +101,7 @@ class Config:
     # - choque_uf_inicio: desvio extra por UF x fração da UF ainda não apurada (UFs com pouco apurado erram mais).
     choque_parcial: float = 0.015
     choque_uf_inicio: float = 0.04
+    choque_uf_inicio_antes: float = None   # valor antes de abrir as urnas (None = o mesmo de choque_uf_inicio)
     matriz_v2: bool = False           # parâmetros extras: branco/nulo -> A/B e falta separada para B
     escala_cov: float = 1.0           # inflação da covariância de Laplace (dependência espacial)
     rho_nacional: float = 0.5         # correlação entre grupos no sorteio dos parâmetros
@@ -119,6 +120,7 @@ class Config:
     priori: dict = None
     sd_priori_informativa: float = 0.7
     theta_outros: tuple = None         # logits (oA, oB, oW) vs oN para substituir a linha "Outros" da priori
+    sd_outros: float = None            # desvio da priori na linha Outros (None = sd_priori_informativa)
 
 
 def preparar(df):
@@ -196,6 +198,8 @@ def ajustar(df, X, Y, cfg: Config):
     if cfg.theta_outros is not None:
         theta0[3:6] = cfg.theta_outros
         sd0[3:6] = cfg.sd_priori_informativa
+    if cfg.sd_outros is not None:
+        sd0[3:6] = cfg.sd_outros
     if cfg.matriz_v2:
         # branco/nulo -> A e -> B começam em ~3% cada; a falta de B começa igual à de A
         theta0 = np.concatenate([theta0, [_logit(0.03 / 0.25), _logit(0.03 / 0.25), theta0[2]]])
@@ -291,10 +295,13 @@ def simular(df, X, Y, aj: Ajuste, cfg: Config):
     ufs, uf_idx = np.unique(df["uf"].values, return_inverse=True)
     f = df["f"].values
     sd_uf = np.full(len(ufs), cfg.choque_uf)
-    if cfg.choque_uf_inicio:
+    uf_inicio = cfg.choque_uf_inicio
+    if cfg.choque_uf_inicio_antes is not None and df["Ea"].sum() <= 0:
+        uf_inicio = cfg.choque_uf_inicio_antes
+    if uf_inicio:
         Ea_uf = np.bincount(uf_idx, df["Ea"].values.astype(float), len(ufs))
         E_uf = np.bincount(uf_idx, df["E2"].values.astype(float), len(ufs))
-        sd_uf = sd_uf + cfg.choque_uf_inicio * np.clip(1 - Ea_uf / np.maximum(E_uf, 1), 0, 1)
+        sd_uf = sd_uf + uf_inicio * np.clip(1 - Ea_uf / np.maximum(E_uf, 1), 0, 1)
     choque = rng.standard_normal((S, len(ufs)))[:, uf_idx] * sd_uf[uf_idx]
     if cfg.choque_nacional:
         choque = choque + rng.standard_normal((S, 1)) * cfg.choque_nacional

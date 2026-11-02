@@ -3,11 +3,11 @@
 Roda o modelo em cada um dos 46 retratos gravados na apuração e grava em resultados/<saida>/ os mesmos arquivos
 que o loop ao vivo gerava, para montar uma segunda versão da página da eleição.
 
-    python scripts/rejogar_paginas_2026.py                         # modelo revisado -> 2026-presidente-revisado
+    python scripts/rejogar_paginas_2026.py                         # modelo revisado (priori calibrada, cautela no
+                                                                   # início) -> 2026-presidente-revisado
     python scripts/rejogar_paginas_2026.py --variante atual --saida 2026-presidente-teste   # modelo do dia
 """
 import argparse
-import dataclasses
 import datetime as dt
 import os
 import shutil
@@ -16,25 +16,24 @@ import pandas as pd
 
 import _raiz  # noqa: F401
 from eleicoes.caminhos import resultados
-from eleicoes.modelos import transferencia as modelo
 from eleicoes.modelos.previsao import prever
 from apuracao import gerar_saidas
-from rejogar_2026 import VARIANTES, carregar, retrato
+from rejogar_2026 import VARIANTES, carregar, config_variante, retrato
 
 NOMES = ["Lula", "Flávio Bolsonaro"]
 
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--variante", default="revisado", choices=list(VARIANTES))
+    ap.add_argument("--variante", default="calibrado_cauteloso", choices=list(VARIANTES))
     ap.add_argument("--saida", default="2026-presidente-revisado")
     a = ap.parse_args()
     saida = resultados(a.saida)
     if os.path.exists(saida):
         shutil.rmtree(saida)
     os.makedirs(saida)
-    cfg = dataclasses.replace(modelo.config_2026(), **VARIANTES[a.variante])
     base, ret = carregar()
+    cfg = config_variante(a.variante, base, ret)
     pct = ret.groupby("hora")["pct_secoes"].first()
     # mesmos momentos e mesmo "apurado" (linha pontilhada) da página do dia: ao vivo o parcial do Brasil vinha do
     # arquivo nacional do TSE, que sai antes dos municipais, e três retratos repetidos não entraram no histórico
