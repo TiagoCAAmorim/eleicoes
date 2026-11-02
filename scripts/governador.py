@@ -20,8 +20,9 @@ import numpy as np
 import pandas as pd
 
 import _raiz  # noqa: F401
-from eleicoes.caminhos import RESULTADOS
+from eleicoes.caminhos import DADOS, RESULTADOS
 from eleicoes.dados import historico as hist
+from eleicoes.modelos import priori as priori_cal
 from eleicoes.modelos import transferencia as modelo
 from calibrar_priori import COLS, ordem_municipios, retrato, vazio
 from rejogar_2026 import crps
@@ -42,7 +43,20 @@ VARIANTES = {
     "media_outros_1_uf6_p3": {"sd_priori_informativa": 0.7, "sd_outros": 1.0, "choque_uf_inicio": 0.06,
                               "choque_parcial": 0.03},
     "media_p3": {"sd_priori_informativa": 0.7, "choque_parcial": 0.03},
+    # linha Outros ajustada à pesquisa da véspera (dados/pesquisas/governador_t2.csv), como no presidente
+    "pesquisa_o3_p3": {"sd_priori_informativa": 0.7, "choque_parcial": 0.03, "sd_outros": 0.3},
+    "pesquisa_o5_p3": {"sd_priori_informativa": 0.7, "choque_parcial": 0.03, "sd_outros": 0.5},
+    "pesquisa_s4_p3": {"sd_priori_informativa": 0.4, "choque_parcial": 0.03, "sd_outros": 0.3},
+    "pesquisa_s3_p3": {"sd_priori_informativa": 0.3, "choque_parcial": 0.03, "sd_outros": 0.3},
+    "pesquisa_s3_p3_uf2": {"sd_priori_informativa": 0.3, "choque_parcial": 0.03, "sd_outros": 0.3,
+                           "choque_uf_inicio": 0.02},
+    # só a linha Outros pela pesquisa; o resto como media_p3, com choque por UF de 2% só antes de abrir
+    "pesquisa_o3_p3_antes2": {"sd_priori_informativa": 0.7, "choque_parcial": 0.03, "sd_outros": 0.3,
+                              "choque_uf_inicio_antes": 0.02},
+    "pesquisa_o7_p3_antes2": {"sd_priori_informativa": 0.7, "choque_parcial": 0.03,
+                              "choque_uf_inicio_antes": 0.02},
 }
+PESQUISAS = pd.read_csv(os.path.join(DADOS, "pesquisas", "governador_t2.csv"))
 
 
 def pa(x):
@@ -55,13 +69,20 @@ def ajustar_completo(base):
     return aj.grupos[("brasil", "Brasil")][0]
 
 
-def config(variante, matrizes, ano):
+def pesquisa(ano, uf):
+    x = PESQUISAS[(PESQUISAS["ano"] == ano) & (PESQUISAS["uf"] == uf)]
+    return float(x["a_validos"].mean()) if len(x) else None
+
+
+def config(variante, matrizes, ano, base=None, uf=None):
     anteriores = [th for (a, _), th in matrizes.items() if a < ano]
     mud = {**BASE_CFG, **VARIANTES[variante]}
     if variante == "sem_priori" or not anteriores:
         return modelo.Config(**mud)
-    media = np.mean(anteriores, axis=0)
-    return modelo.Config(priori={"brasil|Brasil": [float(x) for x in media]}, **mud)
+    pri = {"brasil|Brasil": [float(x) for x in np.mean(anteriores, axis=0)]}
+    if variante.startswith("pesquisa"):
+        mud["theta_outros"] = priori_cal.outros_pela_pesquisa(base, pri, pesquisa(ano, uf))
+    return modelo.Config(priori=pri, **mud)
 
 
 def prever(s, cfg):
@@ -99,7 +120,10 @@ def main():
         if ano == ANOS[0]:
             continue
         real = pa(base)
-        cfgs = {v: config(v, matrizes, ano) for v in a.variantes}
+        vs = [v for v in a.variantes if not v.startswith("pesquisa") or pesquisa(ano, uf) is not None]
+        if not vs:
+            continue
+        cfgs = {v: config(v, matrizes, ano, base, uf) for v in vs}
         ordens = [None] + [ordem_municipios(base, np.random.default_rng(1000 * ano + rd + 31 * ord(uf[0]) + ord(uf[1])))
                            for rd in range(a.rodadas)]
         for rd, ordem in enumerate(ordens):
@@ -111,7 +135,7 @@ def main():
                                 for t in ts])
             for p in pontos:
                 s = vazio(base) if p == 0 else retrato(base, inicio, duracao, vies, ts[min(np.searchsorted(pct, p), len(ts) - 1)])
-                for v in a.variantes:
+                for v in vs:
                     x = prever(s, cfgs[v])
                     q = np.percentile(x, [5, 25, 75, 95])
                     linhas.append({"ano": ano, "uf": uf, "rodada": rd, "pct": p, "variante": v, "media": x.mean(),
