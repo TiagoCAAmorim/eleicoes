@@ -65,11 +65,11 @@
    "cargo": "governador",
    "turno": 1,
    "municipios": 5570,
-   "aptos": 155942085,
-   "comparecimento": 123466129,
-   "brancos": 5782146,
-   "nulos": 8456070,
-   "validos": 108551194
+   "aptos": 155557503,
+   "comparecimento": 123195571,
+   "brancos": 5778732,
+   "nulos": 8451775,
+   "validos": 108448349
   },
   {
    "cargo": "governador",

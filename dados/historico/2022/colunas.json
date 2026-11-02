@@ -427,5 +427,11 @@
    "CD_COR_RACA_FEFC",
    "DS_COR_RACA_FEFC"
   ]
+ },
+ "tipos_de_eleicao": {
+  "2 | Eleição Ordinária": 577077,
+  "1 | Eleição Extraordinária": 64,
+  "2 | ELEIÇÃO ORDINÁRIA": 506,
+  "1 | ELEIÇÃO SUPLEMENTAR": 4
  }
 }
