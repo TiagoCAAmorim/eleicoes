@@ -111,18 +111,16 @@ TIPOS = {}   # (código, nome do tipo de eleição) -> linhas vistas, gravado em
 
 
 def ordinaria(df):
-    """Só eleição ordinária: CD_TIPO_ELEICAO 2. Quando o código não vem preenchido (consulta_cand de 2006, por
-    exemplo), usa o nome (NM_TIPO_ELEICAO com "Ordin"). O nome sozinho não basta: em 2024 há linhas com nome
-    "ordinária" e código diferente de 2 que somariam ~750 mil eleitores a mais."""
+    """Só eleição ordinária: CD_TIPO_ELEICAO 2 ou NM_TIPO_ELEICAO "ordinária". O consulta_cand de 2006 usa código 0
+    com nome "ORDINÁRIA"; "Eleição Extraordinária" (código 1) também contém "ordin" e fica fora."""
     if "tipo" not in df and "tipo_nome" not in df:
         return df
     cod = df["tipo"].astype(str).str.strip() if "tipo" in df else pd.Series("", index=df.index)
-    for (c, n), k in pd.DataFrame({"c": cod, "n": df.get("tipo_nome", "")}).value_counts().items():
+    nome_s = df["tipo_nome"].astype(str) if "tipo_nome" in df else pd.Series("", index=df.index)
+    for (c, n), k in pd.DataFrame({"c": cod, "n": nome_s}).value_counts().items():
         TIPOS[f"{c} | {n}"] = TIPOS.get(f"{c} | {n}", 0) + int(k)
-    tem_cod = cod.str.fullmatch(r"\d+")
-    nome = (df["tipo_nome"].astype(str).str.contains("Ordin", case=False, na=False) if "tipo_nome" in df
-            else pd.Series(False, index=df.index))
-    return df[(tem_cod & (cod == "2")) | (~tem_cod & nome)]
+    nome = nome_s.str.contains(r"(?<!extra)ordin", case=False, regex=True, na=False)
+    return df[(cod == "2") | nome]
 
 
 def _int(df, cols):
