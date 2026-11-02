@@ -1,0 +1,65 @@
+{
+ "ano": 2018,
+ "cargos": [
+  {
+   "cargo": "presidente",
+   "turno": 1,
+   "municipios": 5741,
+   "aptos": 147306295,
+   "comparecimento": 117364654,
+   "brancos": 3106937,
+   "nulos": 7206222,
+   "validos": 107050749,
+   "mais_votados": [
+    {
+     "numero": "17",
+     "nome": "JAIR BOLSONARO",
+     "votos": 49277010,
+     "pct_validos": 46.03
+    },
+    {
+     "numero": "13",
+     "nome": "FERNANDO HADDAD",
+     "votos": 31342051,
+     "pct_validos": 29.28
+    },
+    {
+     "numero": "12",
+     "nome": "CIRO GOMES",
+     "votos": 13344371,
+     "pct_validos": 12.47
+    },
+    {
+     "numero": "45",
+     "nome": "GERALDO ALCKMIN",
+     "votos": 5096350,
+     "pct_validos": 4.76
+    }
+   ]
+  },
+  {
+   "cargo": "presidente",
+   "turno": 2,
+   "municipios": 5741,
+   "aptos": 147306294,
+   "comparecimento": 115933451,
+   "brancos": 2486593,
+   "nulos": 8608105,
+   "validos": 104838753,
+   "mais_votados": [
+    {
+     "numero": "17",
+     "nome": "JAIR BOLSONARO",
+     "votos": 57797847,
+     "pct_validos": 55.13
+    },
+    {
+     "numero": "13",
+     "nome": "FERNANDO HADDAD",
+     "votos": 47040906,
+     "pct_validos": 44.87
+    }
+   ]
+  }
+ ]
+}
