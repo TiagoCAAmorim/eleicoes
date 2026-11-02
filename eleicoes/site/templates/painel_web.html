@@ -100,8 +100,8 @@
     <h2>Linha do tempo da previsão</h2>
     <p class="lx-note">% dos votos válidos previsto a cada atualização. A faixa é o intervalo de 90%; a linha pontilhada é o que já foi apurado.</p>
     <div class="lx-tabs" role="group" aria-label="Eixo horizontal">
-      <button type="button" id="eixo-hora" data-eixo="hora" aria-pressed="true">Horário</button>
-      <button type="button" id="eixo-pct" data-eixo="pct" aria-pressed="false">% das seções apuradas</button>
+      <button type="button" id="eixo-pct" data-eixo="pct" aria-pressed="true">% das seções apuradas</button>
+      <button type="button" id="eixo-hora" data-eixo="hora" aria-pressed="false">Horário</button>
       <button type="button" id="zoom-reset" class="lx-zoom-reset" hidden>Ver tudo</button>
     </div>
     <p class="lx-note lx-dica-zoom">Use a rolagem do mouse ou o movimento de pinça para dar zoom no eixo horizontal; arraste para os lados para mover.</p>
@@ -337,7 +337,7 @@ dash.onData(() => {
 // linha do tempo: previsão (com intervalo de 90%) e chance de vitória, por horário ou por % apurado.
 // Zoom só no eixo horizontal (rolagem do mouse, pinça no celular, arrastar para mover), igual nos dois gráficos;
 // o eixo vertical da previsão se ajusta aos pontos visíveis.
-lx.eixoTempo = 'hora';
+lx.eixoTempo = 'pct';  // padrão: % das seções apuradas
 lx.zoomT = d3.zoomIdentity;
 document.querySelectorAll('#linha-do-tempo [data-eixo]').forEach((b) => b.addEventListener('click', () => {
   document.querySelectorAll('#linha-do-tempo [data-eixo]').forEach((o) => o.setAttribute('aria-pressed', String(o === b)));
