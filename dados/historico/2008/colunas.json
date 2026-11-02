@@ -322,5 +322,12 @@
    "DS_SITUACAO_CANDIDATO_URNA",
    "ST_CANDIDATO_INSERIDO_URNA"
   ]
+ },
+ "tipos_de_eleicao": {
+  "2 | Eleição Ordinária": 112969,
+  "1 | Eleição Suplementar": 386,
+  "1 | Eleição Extraordinária": 162,
+  "2 | ELEIÇÃO ORDINÁRIA": 15677,
+  "1 | ELEIÇÃO SUPLEMENTAR": 309
  }
 }
