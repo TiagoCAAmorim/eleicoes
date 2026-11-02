@@ -1,0 +1,1570 @@
+{
+ "2006|go": {
+  "A": "ALCIDES RODRIGUES",
+  "B": "MAGUITO",
+  "partido_A": "PP",
+  "partido_B": "PMDB",
+  "A_validos": 57.14,
+  "theta": [
+   -3.6666,
+   -0.1235,
+   -2.1086,
+   2.6412,
+   2.9435,
+   -1.6174,
+   -3.7366,
+   -4.1982
+  ],
+  "legivel": {
+   "A→B": 0.7,
+   "B→A": 14.1,
+   "Abstenção (votantes T1)": 5.4,
+   "Outros→A": 41.0,
+   "Outros→B": 55.5,
+   "Outros→Branco/nulo": 0.6,
+   "Outros→Abstenção": 2.9,
+   "Abstenção T1→A": 0.7,
+   "Abstenção T1→B": 0.4
+  }
+ },
+ "2006|ma": {
+  "A": "ROSEANA SARNEY",
+  "B": "JACKSON LAGO",
+  "partido_A": "PFL",
+  "partido_B": "PDT",
+  "A_validos": 48.18,
+  "theta": [
+   -1.2401,
+   -2.5835,
+   -1.0656,
+   0.7224,
+   2.71,
+   -2.8341,
+   0.4645,
+   -0.944
+  ],
+  "legivel": {
+   "A→B": 6.7,
+   "B→A": 2.1,
+   "Abstenção (votantes T1)": 12.8,
+   "Outros→A": 11.3,
+   "Outros→B": 82.8,
+   "Outros→Branco/nulo": 0.3,
+   "Outros→Abstenção": 5.5,
+   "Abstenção T1→A": 18.4,
+   "Abstenção T1→B": 8.4
+  }
+ },
+ "2006|pa": {
+  "A": "ALMIR GABRIEL",
+  "B": "ANA JULIA",
+  "partido_A": "PSDB",
+  "partido_B": "PT",
+  "A_validos": 45.07,
+  "theta": [
+   -0.1635,
+   -2.0227,
+   -1.6812,
+   2.3657,
+   3.4142,
+   -2.293,
+   -3.9526,
+   -2.9116
+  ],
+  "legivel": {
+   "A→B": 13.8,
+   "B→A": 3.5,
+   "Abstenção (votantes T1)": 7.8,
+   "Outros→A": 25.3,
+   "Outros→B": 72.1,
+   "Outros→Branco/nulo": 0.2,
+   "Outros→Abstenção": 2.4,
+   "Abstenção T1→A": 0.6,
+   "Abstenção T1→B": 1.5
+  }
+ },
+ "2006|pb": {
+  "A": "CÁSSIO",
+  "B": "ZÉ MARANHÃO",
+  "partido_A": "PSDB",
+  "partido_B": "PMDB",
+  "A_validos": 51.35,
+  "theta": [
+   -4.2789,
+   -2.2056,
+   -2.4589,
+   0.3017,
+   3.08,
+   -1.1329,
+   0.1625,
+   -2.4192
+  ],
+  "legivel": {
+   "A→B": 0.4,
+   "B→A": 3.0,
+   "Abstenção (votantes T1)": 3.9,
+   "Outros→A": 5.5,
+   "Outros→B": 89.1,
+   "Outros→Branco/nulo": 1.3,
+   "Outros→Abstenção": 4.1,
+   "Abstenção T1→A": 16.2,
+   "Abstenção T1→B": 2.5
+  }
+ },
+ "2006|pe": {
+  "A": "MENDONÇA",
+  "B": "EDUARDO CAMPOS",
+  "partido_A": "PFL",
+  "partido_B": "PSB",
+  "A_validos": 34.64,
+  "theta": [
+   1.4758,
+   -1.1349,
+   -1.8015,
+   -0.5247,
+   3.7112,
+   -1.8417,
+   -3.731,
+   0.0313
+  ],
+  "legivel": {
+   "A→B": 24.4,
+   "B→A": 7.3,
+   "Abstenção (votantes T1)": 7.1,
+   "Outros→A": 1.4,
+   "Outros→B": 95.9,
+   "Outros→Branco/nulo": 0.4,
+   "Outros→Abstenção": 2.3,
+   "Abstenção T1→A": 0.7,
+   "Abstenção T1→B": 15.2
+  }
+ },
+ "2006|pr": {
+  "A": "ROBERTO REQUIÃO",
+  "B": "OSMAR DIAS",
+  "partido_A": "PMDB",
+  "partido_B": "PDT",
+  "A_validos": 50.1,
+  "theta": [
+   -0.6668,
+   -1.9023,
+   -3.2185,
+   2.8057,
+   2.3866,
+   0.3659,
+   -3.5582,
+   -4.3029
+  ],
+  "legivel": {
+   "A→B": 10.2,
+   "B→A": 3.9,
+   "Abstenção (votantes T1)": 1.9,
+   "Outros→A": 55.4,
+   "Outros→B": 36.4,
+   "Outros→Branco/nulo": 4.8,
+   "Outros→Abstenção": 3.3,
+   "Abstenção T1→A": 0.8,
+   "Abstenção T1→B": 0.4
+  }
+ },
+ "2006|rj": {
+  "A": "SERGIO CABRAL",
+  "B": "DENISE FROSSARD",
+  "partido_A": "PMDB",
+  "partido_B": "PPS",
+  "A_validos": 68.0,
+  "theta": [
+   -1.0764,
+   -3.3297,
+   -2.2374,
+   3.4865,
+   1.3081,
+   2.365,
+   -3.618,
+   -3.1453
+  ],
+  "legivel": {
+   "A→B": 7.6,
+   "B→A": 1.0,
+   "Abstenção (votantes T1)": 4.8,
+   "Outros→A": 68.0,
+   "Outros→B": 7.7,
+   "Outros→Branco/nulo": 22.2,
+   "Outros→Abstenção": 2.1,
+   "Abstenção T1→A": 0.8,
+   "Abstenção T1→B": 1.2
+  }
+ },
+ "2006|rn": {
+  "A": "VILMA",
+  "B": "GARIBALDI FILHO",
+  "partido_A": "PSB",
+  "partido_B": "PMDB",
+  "A_validos": 52.38,
+  "theta": [
+   -3.4562,
+   -1.1116,
+   -2.0832,
+   0.2572,
+   2.6456,
+   -0.9199,
+   0.8963,
+   -3.1322
+  ],
+  "legivel": {
+   "A→B": 0.9,
+   "B→A": 7.4,
+   "Abstenção (votantes T1)": 5.5,
+   "Outros→A": 7.7,
+   "Outros→B": 84.0,
+   "Outros→Branco/nulo": 2.4,
+   "Outros→Abstenção": 6.0,
+   "Abstenção T1→A": 21.3,
+   "Abstenção T1→B": 1.3
+  }
+ },
+ "2006|rs": {
+  "A": "YEDA CRUSIUS",
+  "B": "OLÍVIO DUTRA",
+  "partido_A": "PSDB",
+  "partido_B": "PT",
+  "A_validos": 53.94,
+  "theta": [
+   0.0773,
+   -5.3535,
+   -2.7149,
+   3.2304,
+   2.2327,
+   -4.272,
+   -4.8104,
+   -0.5898
+  ],
+  "legivel": {
+   "A→B": 15.6,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 3.1,
+   "Outros→A": 71.0,
+   "Outros→B": 26.2,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 2.8,
+   "Abstenção T1→A": 0.2,
+   "Abstenção T1→B": 10.7
+  }
+ },
+ "2006|sc": {
+  "A": "LUIZ HENRIQUE DA SILVEIRA",
+  "B": "ESPERIDIÃO AMIN",
+  "partido_A": "PMDB",
+  "partido_B": "PP",
+  "A_validos": 52.71,
+  "theta": [
+   -1.4775,
+   -3.1608,
+   -3.7416,
+   2.1343,
+   2.881,
+   0.5979,
+   -3.853,
+   -3.8469
+  ],
+  "legivel": {
+   "A→B": 5.6,
+   "B→A": 1.2,
+   "Abstenção (votantes T1)": 1.2,
+   "Outros→A": 29.0,
+   "Outros→B": 61.3,
+   "Outros→Branco/nulo": 6.2,
+   "Outros→Abstenção": 3.4,
+   "Abstenção T1→A": 0.6,
+   "Abstenção T1→B": 0.6
+  }
+ },
+ "2010|al": {
+  "A": "TEOTONIO VILELA",
+  "B": "RONALDO LESSA",
+  "partido_A": "PSDB",
+  "partido_B": "PDT",
+  "A_validos": 52.74,
+  "theta": [
+   -2.8072,
+   -2.4004,
+   -0.8801,
+   3.044,
+   3.5713,
+   -2.1806,
+   -0.3451,
+   -0.9727
+  ],
+  "legivel": {
+   "A→B": 1.7,
+   "B→A": 2.5,
+   "Abstenção (votantes T1)": 14.7,
+   "Outros→A": 36.4,
+   "Outros→B": 61.7,
+   "Outros→Branco/nulo": 0.2,
+   "Outros→Abstenção": 1.7,
+   "Abstenção T1→A": 12.4,
+   "Abstenção T1→B": 8.2
+  }
+ },
+ "2010|ap": {
+  "A": "LUCAS",
+  "B": "CAMILO CAPIBERIBE",
+  "partido_A": "PTB",
+  "partido_B": "PSB",
+  "A_validos": 46.23,
+  "theta": [
+   0.3313,
+   -2.6638,
+   -1.42,
+   1.4657,
+   1.6126,
+   -2.1294,
+   -3.1114,
+   -1.9302
+  ],
+  "legivel": {
+   "A→B": 17.5,
+   "B→A": 2.0,
+   "Abstenção (votantes T1)": 9.7,
+   "Outros→A": 41.4,
+   "Outros→B": 47.9,
+   "Outros→Branco/nulo": 1.1,
+   "Outros→Abstenção": 9.6,
+   "Abstenção T1→A": 1.3,
+   "Abstenção T1→B": 3.8
+  }
+ },
+ "2010|go": {
+  "A": "MARCONI PERILLO",
+  "B": "IRIS REZENDE",
+  "partido_A": "PSDB",
+  "partido_B": "PMDB",
+  "A_validos": 52.99,
+  "theta": [
+   -2.144,
+   -2.3416,
+   -2.2221,
+   1.9088,
+   2.2936,
+   -3.4239,
+   -4.3005,
+   -3.4915
+  ],
+  "legivel": {
+   "A→B": 3.1,
+   "B→A": 2.6,
+   "Abstenção (votantes T1)": 4.9,
+   "Outros→A": 38.1,
+   "Outros→B": 56.0,
+   "Outros→Branco/nulo": 0.2,
+   "Outros→Abstenção": 5.7,
+   "Abstenção T1→A": 0.4,
+   "Abstenção T1→B": 0.9
+  }
+ },
+ "2010|pa": {
+  "A": "SIMAO JATENE",
+  "B": "ANA JULIA",
+  "partido_A": "PSDB",
+  "partido_B": "PT",
+  "A_validos": 55.74,
+  "theta": [
+   -1.4882,
+   -3.7557,
+   -1.5023,
+   2.3247,
+   1.7714,
+   -2.9294,
+   -2.9628,
+   -4.2238
+  ],
+  "legivel": {
+   "A→B": 5.5,
+   "B→A": 0.7,
+   "Abstenção (votantes T1)": 9.1,
+   "Outros→A": 59.6,
+   "Outros→B": 34.3,
+   "Outros→Branco/nulo": 0.3,
+   "Outros→Abstenção": 5.8,
+   "Abstenção T1→A": 1.5,
+   "Abstenção T1→B": 0.4
+  }
+ },
+ "2010|pb": {
+  "A": "RICARDO COUTINHO",
+  "B": "ZE MARANHAO",
+  "partido_A": "PSB",
+  "partido_B": "PMDB",
+  "A_validos": 53.7,
+  "theta": [
+   -1.1983,
+   -0.1087,
+   -1.7577,
+   2.1775,
+   1.2232,
+   -1.0806,
+   1.1784,
+   -0.8369
+  ],
+  "legivel": {
+   "A→B": 7.0,
+   "B→A": 14.2,
+   "Abstenção (votantes T1)": 7.4,
+   "Outros→A": 65.1,
+   "Outros→B": 25.1,
+   "Outros→Branco/nulo": 2.5,
+   "Outros→Abstenção": 7.4,
+   "Abstenção T1→A": 22.9,
+   "Abstenção T1→B": 9.1
+  }
+ },
+ "2010|pi": {
+  "A": "WILSON MARTINS",
+  "B": "SILVIO MENDES",
+  "partido_A": "PSB",
+  "partido_B": "PSDB",
+  "A_validos": 58.93,
+  "theta": [
+   -1.2546,
+   -0.6749,
+   -1.1601,
+   2.5075,
+   1.3137,
+   -3.3169,
+   -0.5675,
+   -0.2184
+  ],
+  "legivel": {
+   "A→B": 6.7,
+   "B→A": 10.1,
+   "Abstenção (votantes T1)": 11.9,
+   "Outros→A": 72.1,
+   "Outros→B": 21.8,
+   "Outros→Branco/nulo": 0.2,
+   "Outros→Abstenção": 5.9,
+   "Abstenção T1→A": 10.9,
+   "Abstenção T1→B": 13.4
+  }
+ },
+ "2010|ro": {
+  "A": "CONFUCIO MOURA",
+  "B": "JOÃO CAHULLA",
+  "partido_A": "PMDB",
+  "partido_B": "PPS",
+  "A_validos": 58.68,
+  "theta": [
+   -2.7335,
+   -1.6424,
+   0.0777,
+   3.8445,
+   1.7341,
+   -1.5949,
+   2.6674,
+   2.5077
+  ],
+  "legivel": {
+   "A→B": 1.8,
+   "B→A": 4.9,
+   "Abstenção (votantes T1)": 26.0,
+   "Outros→A": 87.2,
+   "Outros→B": 10.6,
+   "Outros→Branco/nulo": 0.4,
+   "Outros→Abstenção": 1.9,
+   "Abstenção T1→A": 28.1,
+   "Abstenção T1→B": 27.7
+  }
+ },
+ "2010|rr": {
+  "A": "NEUDO CAMPOS",
+  "B": "ANCHIETA",
+  "partido_A": "PP",
+  "partido_B": "PSDB",
+  "A_validos": 49.59,
+  "theta": [
+   -2.9023,
+   -2.5468,
+   -1.718,
+   1.0979,
+   2.078,
+   -1.0671,
+   -1.9104,
+   -1.9257
+  ],
+  "legivel": {
+   "A→B": 1.6,
+   "B→A": 2.2,
+   "Abstenção (votantes T1)": 7.6,
+   "Outros→A": 24.3,
+   "Outros→B": 64.8,
+   "Outros→Branco/nulo": 2.8,
+   "Outros→Abstenção": 8.1,
+   "Abstenção T1→A": 3.9,
+   "Abstenção T1→B": 3.8
+  }
+ },
+ "2014|ac": {
+  "A": "TIÃO VIANA",
+  "B": "MÁRCIO BITTAR",
+  "partido_A": "PT",
+  "partido_B": "PSDB",
+  "A_validos": 51.29,
+  "theta": [
+   -1.266,
+   -2.2492,
+   -1.3826,
+   1.5044,
+   3.0691,
+   -1.9135,
+   -2.7966,
+   -3.0066
+  ],
+  "legivel": {
+   "A→B": 6.6,
+   "B→A": 2.9,
+   "Abstenção (votantes T1)": 10.0,
+   "Outros→A": 16.6,
+   "Outros→B": 79.2,
+   "Outros→Branco/nulo": 0.5,
+   "Outros→Abstenção": 3.7,
+   "Abstenção T1→A": 1.7,
+   "Abstenção T1→B": 1.4
+  }
+ },
+ "2014|am": {
+  "A": "EDUARDO BRAGA",
+  "B": "JOSÉ MELO",
+  "partido_A": "PMDB",
+  "partido_B": "PROS",
+  "A_validos": 44.46,
+  "theta": [
+   -1.0289,
+   -3.0516,
+   -1.8004,
+   0.8631,
+   1.5248,
+   -0.4273,
+   -1.3871,
+   -2.5762
+  ],
+  "legivel": {
+   "A→B": 7.9,
+   "B→A": 1.4,
+   "Abstenção (votantes T1)": 7.1,
+   "Outros→A": 27.5,
+   "Outros→B": 53.3,
+   "Outros→Branco/nulo": 7.6,
+   "Outros→Abstenção": 11.6,
+   "Abstenção T1→A": 6.0,
+   "Abstenção T1→B": 2.1
+  }
+ },
+ "2014|ap": {
+  "A": "WALDEZ",
+  "B": "CAMILO CAPIBERIBE",
+  "partido_A": "PDT",
+  "partido_B": "PSB",
+  "A_validos": 60.58,
+  "theta": [
+   -2.2583,
+   -3.3923,
+   -1.4268,
+   2.2846,
+   1.4264,
+   -1.3463,
+   -2.4009,
+   -2.6976
+  ],
+  "legivel": {
+   "A→B": 2.8,
+   "B→A": 1.0,
+   "Abstenção (votantes T1)": 9.7,
+   "Outros→A": 64.4,
+   "Outros→B": 27.3,
+   "Outros→Branco/nulo": 1.7,
+   "Outros→Abstenção": 6.6,
+   "Abstenção T1→A": 2.5,
+   "Abstenção T1→B": 1.9
+  }
+ },
+ "2014|ce": {
+  "A": "CAMILO",
+  "B": "EUNÍCIO",
+  "partido_A": "PT",
+  "partido_B": "PMDB",
+  "A_validos": 53.35,
+  "theta": [
+   -4.4248,
+   -1.3013,
+   -1.4917,
+   0.7073,
+   3.8242,
+   -1.3591,
+   1.2107,
+   -2.1643
+  ],
+  "legivel": {
+   "A→B": 0.4,
+   "B→A": 6.4,
+   "Abstenção (votantes T1)": 9.2,
+   "Outros→A": 4.1,
+   "Outros→B": 93.3,
+   "Outros→Branco/nulo": 0.5,
+   "Outros→Abstenção": 2.0,
+   "Abstenção T1→A": 23.1,
+   "Abstenção T1→B": 3.1
+  }
+ },
+ "2014|go": {
+  "A": "MARCONI PERILLO",
+  "B": "IRIS REZENDE",
+  "partido_A": "PSDB",
+  "partido_B": "PMDB",
+  "A_validos": 57.44,
+  "theta": [
+   -4.0001,
+   -3.4612,
+   -1.0273,
+   3.3598,
+   3.7474,
+   -1.9628,
+   0.4689,
+   -0.2472
+  ],
+  "legivel": {
+   "A→B": 0.5,
+   "B→A": 0.9,
+   "Abstenção (votantes T1)": 13.2,
+   "Outros→A": 39.8,
+   "Outros→B": 58.6,
+   "Outros→Branco/nulo": 0.2,
+   "Outros→Abstenção": 1.4,
+   "Abstenção T1→A": 18.5,
+   "Abstenção T1→B": 13.2
+  }
+ },
+ "2014|ms": {
+  "A": "DELCÍDIO",
+  "B": "REINALDO AZAMBUJA",
+  "partido_A": "PT",
+  "partido_B": "PSDB",
+  "A_validos": 44.66,
+  "theta": [
+   -1.6568,
+   -2.8339,
+   -1.7537,
+   1.5217,
+   3.4492,
+   -2.5532,
+   -1.5906,
+   -1.495
+  ],
+  "legivel": {
+   "A→B": 4.8,
+   "B→A": 1.7,
+   "Abstenção (votantes T1)": 7.4,
+   "Outros→A": 12.3,
+   "Outros→B": 84.8,
+   "Outros→Branco/nulo": 0.2,
+   "Outros→Abstenção": 2.7,
+   "Abstenção T1→A": 5.1,
+   "Abstenção T1→B": 5.5
+  }
+ },
+ "2014|pa": {
+  "A": "HELDER BARBALHO",
+  "B": "SIMÃO JATENE",
+  "partido_A": "PMDB",
+  "partido_B": "PSDB",
+  "A_validos": 48.08,
+  "theta": [
+   -2.6916,
+   -3.9682,
+   -1.7943,
+   0.1735,
+   4.0455,
+   -1.0427,
+   -2.2175,
+   -4.2181
+  ],
+  "legivel": {
+   "A→B": 1.9,
+   "B→A": 0.6,
+   "Abstenção (votantes T1)": 7.1,
+   "Outros→A": 2.0,
+   "Outros→B": 95.7,
+   "Outros→Branco/nulo": 0.6,
+   "Outros→Abstenção": 1.7,
+   "Abstenção T1→A": 2.9,
+   "Abstenção T1→B": 0.4
+  }
+ },
+ "2014|pb": {
+  "A": "CASSIO CUNHA LIMA",
+  "B": "RICARDO COUTINHO",
+  "partido_A": "PSDB",
+  "partido_B": "PSB",
+  "A_validos": 47.39,
+  "theta": [
+   -1.4422,
+   -2.6054,
+   -2.1506,
+   1.8155,
+   3.4886,
+   -2.1197,
+   -0.6478,
+   -0.5483
+  ],
+  "legivel": {
+   "A→B": 5.7,
+   "B→A": 2.1,
+   "Abstenção (votantes T1)": 5.2,
+   "Outros→A": 15.4,
+   "Outros→B": 81.8,
+   "Outros→Branco/nulo": 0.3,
+   "Outros→Abstenção": 2.5,
+   "Abstenção T1→A": 10.3,
+   "Abstenção T1→B": 11.0
+  }
+ },
+ "2014|rj": {
+  "A": "LUIZ FERNANDO PEZÃO",
+  "B": "MARCELO CRIVELLA",
+  "partido_A": "PMDB",
+  "partido_B": "PRB",
+  "A_validos": 55.78,
+  "theta": [
+   -4.5237,
+   -4.478,
+   -3.6661,
+   1.1904,
+   1.7126,
+   -1.5507,
+   -2.9695,
+   -3.3985
+  ],
+  "legivel": {
+   "A→B": 0.3,
+   "B→A": 0.3,
+   "Abstenção (votantes T1)": 1.2,
+   "Outros→A": 32.7,
+   "Outros→B": 55.2,
+   "Outros→Branco/nulo": 2.1,
+   "Outros→Abstenção": 10.0,
+   "Abstenção T1→A": 1.5,
+   "Abstenção T1→B": 1.0
+  }
+ },
+ "2014|rn": {
+  "A": "HENRIQUE ALVES",
+  "B": "ROBINSON FARIA",
+  "partido_A": "PMDB",
+  "partido_B": "PSD",
+  "A_validos": 45.58,
+  "theta": [
+   -0.2046,
+   -1.5159,
+   -1.296,
+   2.4451,
+   2.8123,
+   -1.6162,
+   0.2431,
+   1.625
+  ],
+  "legivel": {
+   "A→B": 13.5,
+   "B→A": 5.4,
+   "Abstenção (votantes T1)": 10.7,
+   "Outros→A": 39.3,
+   "Outros→B": 56.7,
+   "Outros→Branco/nulo": 0.7,
+   "Outros→Abstenção": 3.4,
+   "Abstenção T1→A": 16.8,
+   "Abstenção T1→B": 25.1
+  }
+ },
+ "2014|ro": {
+  "A": "CONFUCIO MOURA",
+  "B": "EXPEDITO JÚNIOR",
+  "partido_A": "PMDB",
+  "partido_B": "PSDB",
+  "A_validos": 53.43,
+  "theta": [
+   -3.8358,
+   -0.8114,
+   -2.374,
+   1.7145,
+   1.8191,
+   -2.4919,
+   -2.9492,
+   -3.3165
+  ],
+  "legivel": {
+   "A→B": 0.6,
+   "B→A": 9.2,
+   "Abstenção (votantes T1)": 4.3,
+   "Outros→A": 43.4,
+   "Outros→B": 48.2,
+   "Outros→Branco/nulo": 0.6,
+   "Outros→Abstenção": 7.8,
+   "Abstenção T1→A": 1.5,
+   "Abstenção T1→B": 1.1
+  }
+ },
+ "2014|rr": {
+  "A": "SUELY CAMPOS",
+  "B": "CHICO RODRIGUES",
+  "partido_A": "PP",
+  "partido_B": "PSB",
+  "A_validos": 54.85,
+  "theta": [
+   -3.2467,
+   -0.9583,
+   -1.5446,
+   2.2116,
+   2.1102,
+   -1.0577,
+   -2.0437,
+   -2.5318
+  ],
+  "legivel": {
+   "A→B": 1.1,
+   "B→A": 8.3,
+   "Abstenção (votantes T1)": 8.8,
+   "Outros→A": 48.8,
+   "Outros→B": 44.1,
+   "Outros→Branco/nulo": 1.9,
+   "Outros→Abstenção": 5.3,
+   "Abstenção T1→A": 3.4,
+   "Abstenção T1→B": 2.2
+  }
+ },
+ "2014|rs": {
+  "A": "JOSÉ IVO SARTORI",
+  "B": "TARSO GENRO",
+  "partido_A": "PMDB",
+  "partido_B": "PT",
+  "A_validos": 61.21,
+  "theta": [
+   -3.5619,
+   -1.18,
+   -2.7919,
+   4.7512,
+   3.2494,
+   -2.9101,
+   -4.4102,
+   -1.007
+  ],
+  "legivel": {
+   "A→B": 0.8,
+   "B→A": 7.1,
+   "Abstenção (votantes T1)": 2.9,
+   "Outros→A": 81.2,
+   "Outros→B": 18.1,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.7,
+   "Abstenção T1→A": 0.4,
+   "Abstenção T1→B": 8.0
+  }
+ },
+ "2018|am": {
+  "A": "WILSON LIMA",
+  "B": "AMAZONINO MENDES",
+  "partido_A": "PSC",
+  "partido_B": "PDT",
+  "A_validos": 58.5,
+  "theta": [
+   -3.0485,
+   -3.6054,
+   -1.2448,
+   2.7678,
+   1.6711,
+   -2.3359,
+   -0.7653,
+   -2.5569
+  ],
+  "legivel": {
+   "A→B": 1.4,
+   "B→A": 0.8,
+   "Abstenção (votantes T1)": 11.2,
+   "Outros→A": 71.3,
+   "Outros→B": 23.8,
+   "Outros→Branco/nulo": 0.4,
+   "Outros→Abstenção": 4.5,
+   "Abstenção T1→A": 9.5,
+   "Abstenção T1→B": 2.2
+  }
+ },
+ "2018|ap": {
+  "A": "WALDEZ",
+  "B": "CAPI 40",
+  "partido_A": "PDT",
+  "partido_B": "PSB",
+  "A_validos": 52.35,
+  "theta": [
+   -2.0954,
+   -1.3861,
+   -0.7329,
+   1.6344,
+   1.7405,
+   -1.5641,
+   -2.6784,
+   -2.2813
+  ],
+  "legivel": {
+   "A→B": 3.3,
+   "B→A": 6.0,
+   "Abstenção (votantes T1)": 16.2,
+   "Outros→A": 42.6,
+   "Outros→B": 47.4,
+   "Outros→Branco/nulo": 1.7,
+   "Outros→Abstenção": 8.3,
+   "Abstenção T1→A": 1.9,
+   "Abstenção T1→B": 2.8
+  }
+ },
+ "2018|mg": {
+  "A": "ROMEU ZEMA",
+  "B": "ANTONIO ANASTASIA",
+  "partido_A": "NOVO",
+  "partido_B": "PSDB",
+  "A_validos": 71.8,
+  "theta": [
+   -6.4721,
+   5.4356,
+   -2.636,
+   1.2573,
+   0.141,
+   -0.3871,
+   -0.1052,
+   -5.561
+  ],
+  "legivel": {
+   "A→B": 0.0,
+   "B→A": 29.9,
+   "Abstenção (votantes T1)": 3.3,
+   "Outros→A": 55.4,
+   "Outros→B": 18.1,
+   "Outros→Branco/nulo": 10.7,
+   "Outros→Abstenção": 15.8,
+   "Abstenção T1→A": 14.2,
+   "Abstenção T1→B": 0.1
+  }
+ },
+ "2018|ms": {
+  "A": "REINALDO AZAMBUJA",
+  "B": "JUIZ ODILON",
+  "partido_A": "PSDB",
+  "partido_B": "PDT",
+  "A_validos": 52.35,
+  "theta": [
+   -2.3984,
+   -3.3717,
+   -1.9509,
+   1.1357,
+   1.6809,
+   -2.7605,
+   -3.5337,
+   -0.6501
+  ],
+  "legivel": {
+   "A→B": 2.5,
+   "B→A": 1.0,
+   "Abstenção (votantes T1)": 6.2,
+   "Outros→A": 32.6,
+   "Outros→B": 56.3,
+   "Outros→Branco/nulo": 0.7,
+   "Outros→Abstenção": 10.5,
+   "Abstenção T1→A": 0.9,
+   "Abstenção T1→B": 10.3
+  }
+ },
+ "2018|pa": {
+  "A": "HELDER",
+  "B": "MARCIO MIRANDA",
+  "partido_A": "MDB",
+  "partido_B": "DEM",
+  "A_validos": 55.43,
+  "theta": [
+   -0.7251,
+   -3.5102,
+   -2.1019,
+   1.8417,
+   1.5771,
+   -2.3794,
+   -3.9958,
+   -3.69
+  ],
+  "legivel": {
+   "A→B": 9.8,
+   "B→A": 0.9,
+   "Abstenção (votantes T1)": 5.4,
+   "Outros→A": 51.5,
+   "Outros→B": 39.5,
+   "Outros→Branco/nulo": 0.8,
+   "Outros→Abstenção": 8.2,
+   "Abstenção T1→A": 0.5,
+   "Abstenção T1→B": 0.7
+  }
+ },
+ "2018|rj": {
+  "A": "WILSON WITZEL",
+  "B": "EDUARDO PAES",
+  "partido_A": "PSC",
+  "partido_B": "DEM",
+  "A_validos": 59.87,
+  "theta": [
+   -4.2148,
+   0.0709,
+   -1.7536,
+   2.7018,
+   2.48,
+   -2.0085,
+   -0.1948,
+   -3.6478
+  ],
+  "legivel": {
+   "A→B": 0.4,
+   "B→A": 15.5,
+   "Abstenção (votantes T1)": 7.4,
+   "Outros→A": 53.3,
+   "Outros→B": 42.7,
+   "Outros→Branco/nulo": 0.5,
+   "Outros→Abstenção": 3.6,
+   "Abstenção T1→A": 13.5,
+   "Abstenção T1→B": 0.8
+  }
+ },
+ "2018|rn": {
+  "A": "FATIMA BEZERRA",
+  "B": "CARLOS EDUARDO",
+  "partido_A": "PT",
+  "partido_B": "PDT",
+  "A_validos": 57.6,
+  "theta": [
+   -4.4154,
+   -0.0614,
+   -1.1468,
+   2.9023,
+   2.9474,
+   -2.547,
+   2.5973,
+   0.381
+  ],
+  "legivel": {
+   "A→B": 0.4,
+   "B→A": 14.5,
+   "Abstenção (votantes T1)": 12.1,
+   "Outros→A": 47.5,
+   "Outros→B": 49.7,
+   "Outros→Branco/nulo": 0.2,
+   "Outros→Abstenção": 2.6,
+   "Abstenção T1→A": 27.9,
+   "Abstenção T1→B": 17.8
+  }
+ },
+ "2018|ro": {
+  "A": "EXPEDITO JUNIOR",
+  "B": "CORONEL MARCOS ROCHA",
+  "partido_A": "PSDB",
+  "partido_B": "PSL",
+  "A_validos": 33.66,
+  "theta": [
+   1.1904,
+   -3.8156,
+   -0.6723,
+   2.5066,
+   3.4842,
+   -2.1998,
+   -1.3835,
+   1.0639
+  ],
+  "legivel": {
+   "A→B": 23.0,
+   "B→A": 0.6,
+   "Abstenção (votantes T1)": 16.9,
+   "Outros→A": 26.7,
+   "Outros→B": 70.9,
+   "Outros→Branco/nulo": 0.2,
+   "Outros→Abstenção": 2.2,
+   "Abstenção T1→A": 6.0,
+   "Abstenção T1→B": 22.3
+  }
+ },
+ "2018|rr": {
+  "A": "ANTONIO DENARIUM",
+  "B": "ANCHIETA",
+  "partido_A": "PSL",
+  "partido_B": "PSDB",
+  "A_validos": 53.34,
+  "theta": [
+   -3.9028,
+   0.1725,
+   -1.2536,
+   1.4691,
+   2.8304,
+   -1.3748,
+   -1.0453,
+   -2.694
+  ],
+  "legivel": {
+   "A→B": 0.6,
+   "B→A": 16.3,
+   "Abstenção (votantes T1)": 11.1,
+   "Outros→A": 19.3,
+   "Outros→B": 75.2,
+   "Outros→Branco/nulo": 1.1,
+   "Outros→Abstenção": 4.4,
+   "Abstenção T1→A": 7.8,
+   "Abstenção T1→B": 1.9
+  }
+ },
+ "2018|rs": {
+  "A": "EDUARDO LEITE",
+  "B": "JOSÉ IVO SARTORI",
+  "partido_A": "PSDB",
+  "partido_B": "MDB",
+  "A_validos": 53.62,
+  "theta": [
+   -0.3762,
+   -5.9668,
+   -5.645,
+   2.4262,
+   1.0657,
+   0.1457,
+   -3.6903,
+   -1.7472
+  ],
+  "legivel": {
+   "A→B": 12.2,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 0.2,
+   "Outros→A": 69.1,
+   "Outros→B": 17.7,
+   "Outros→Branco/nulo": 7.1,
+   "Outros→Abstenção": 6.1,
+   "Abstenção T1→A": 0.7,
+   "Abstenção T1→B": 4.5
+  }
+ },
+ "2018|sc": {
+  "A": "GELSON MERÍSIO",
+  "B": "COMANDANTE MOISÉS",
+  "partido_A": "PSD",
+  "partido_B": "PSL",
+  "A_validos": 28.91,
+  "theta": [
+   4.2972,
+   -5.5258,
+   -2.6885,
+   1.2645,
+   2.0569,
+   -3.0123,
+   -4.1406,
+   1.5052
+  ],
+  "legivel": {
+   "A→B": 29.6,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 3.2,
+   "Outros→A": 28.5,
+   "Outros→B": 63.0,
+   "Outros→Branco/nulo": 0.4,
+   "Outros→Abstenção": 8.1,
+   "Abstenção T1→A": 0.5,
+   "Abstenção T1→B": 24.6
+  }
+ },
+ "2018|se": {
+  "A": "BELIVALDO",
+  "B": "VALADARES FILHO",
+  "partido_A": "PSD",
+  "partido_B": "PSB",
+  "A_validos": 64.72,
+  "theta": [
+   -4.136,
+   -0.8783,
+   -0.782,
+   3.3383,
+   2.3519,
+   -2.2018,
+   2.4666,
+   0.2466
+  ],
+  "legivel": {
+   "A→B": 0.5,
+   "B→A": 8.8,
+   "Abstenção (votantes T1)": 15.7,
+   "Outros→A": 70.8,
+   "Outros→B": 26.4,
+   "Outros→Branco/nulo": 0.3,
+   "Outros→Abstenção": 2.5,
+   "Abstenção T1→A": 27.7,
+   "Abstenção T1→B": 16.8
+  }
+ },
+ "2018|sp": {
+  "A": "JOÃO DORIA",
+  "B": "MARCIO FRANÇA",
+  "partido_A": "PSDB",
+  "partido_B": "PSB",
+  "A_validos": 51.75,
+  "theta": [
+   -4.8589,
+   -3.9255,
+   -1.3194,
+   4.4022,
+   4.4734,
+   -2.3377,
+   -1.216,
+   0.2328
+  ],
+  "legivel": {
+   "A→B": 0.2,
+   "B→A": 0.6,
+   "Abstenção (votantes T1)": 10.5,
+   "Outros→A": 47.9,
+   "Outros→B": 51.4,
+   "Outros→Branco/nulo": 0.1,
+   "Outros→Abstenção": 0.6,
+   "Abstenção T1→A": 6.9,
+   "Abstenção T1→B": 16.7
+  }
+ },
+ "2022|al": {
+  "A": "PAULO DANTAS",
+  "B": "RODRIGO CUNHA",
+  "partido_A": "MDB",
+  "partido_B": "UNIÃO",
+  "A_validos": 52.33,
+  "theta": [
+   -2.6126,
+   -3.1078,
+   -0.7897,
+   1.6203,
+   1.8733,
+   -2.8014,
+   1.7868,
+   -0.2149
+  ],
+  "legivel": {
+   "A→B": 2.0,
+   "B→A": 1.3,
+   "Abstenção (votantes T1)": 15.6,
+   "Outros→A": 40.0,
+   "Outros→B": 51.6,
+   "Outros→Branco/nulo": 0.5,
+   "Outros→Abstenção": 7.9,
+   "Abstenção T1→A": 25.7,
+   "Abstenção T1→B": 13.4
+  }
+ },
+ "2022|am": {
+  "A": "WILSON LIMA",
+  "B": "EDUARDO BRAGA",
+  "partido_A": "UNIÃO",
+  "partido_B": "MDB",
+  "A_validos": 56.65,
+  "theta": [
+   0.1449,
+   -2.0455,
+   -1.8204,
+   1.6307,
+   1.5998,
+   -1.4472,
+   -1.2846,
+   -2.0558
+  ],
+  "legivel": {
+   "A→B": 16.1,
+   "B→A": 3.4,
+   "Abstenção (votantes T1)": 7.0,
+   "Outros→A": 45.2,
+   "Outros→B": 43.8,
+   "Outros→Branco/nulo": 2.1,
+   "Outros→Abstenção": 8.9,
+   "Abstenção T1→A": 6.5,
+   "Abstenção T1→B": 3.4
+  }
+ },
+ "2022|ba": {
+  "A": "JERÔNIMO",
+  "B": "ACM NETO",
+  "partido_A": "PT",
+  "partido_B": "UNIÃO",
+  "A_validos": 52.79,
+  "theta": [
+   -5.3533,
+   -0.2965,
+   -3.2128,
+   -0.418,
+   5.1993,
+   -1.8468,
+   -0.7511,
+   -4.3664
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 12.8,
+   "Abstenção (votantes T1)": 1.9,
+   "Outros→A": 0.4,
+   "Outros→B": 99.0,
+   "Outros→Branco/nulo": 0.1,
+   "Outros→Abstenção": 0.5,
+   "Abstenção T1→A": 9.6,
+   "Abstenção T1→B": 0.4
+  }
+ },
+ "2022|es": {
+  "A": "RENATO CASAGRANDE",
+  "B": "MANATO",
+  "partido_A": "PSB",
+  "partido_B": "PL",
+  "A_validos": 53.8,
+  "theta": [
+   -3.2031,
+   -2.5035,
+   -2.0105,
+   2.4511,
+   2.6351,
+   -2.5122,
+   -0.7655,
+   0.1688
+  ],
+  "legivel": {
+   "A→B": 1.2,
+   "B→A": 2.3,
+   "Abstenção (votantes T1)": 5.9,
+   "Outros→A": 43.6,
+   "Outros→B": 52.4,
+   "Outros→Branco/nulo": 0.3,
+   "Outros→Abstenção": 3.8,
+   "Abstenção T1→A": 9.5,
+   "Abstenção T1→B": 16.3
+  }
+ },
+ "2022|ms": {
+  "A": "CAPITÃO CONTAR",
+  "B": "EDUARDO RIEDEL",
+  "partido_A": "PRTB",
+  "partido_B": "PSDB",
+  "A_validos": 43.1,
+  "theta": [
+   -3.5187,
+   -1.8457,
+   -3.6191,
+   1.2792,
+   2.1308,
+   -1.1774,
+   -0.7467,
+   -3.6804
+  ],
+  "legivel": {
+   "A→B": 0.9,
+   "B→A": 4.1,
+   "Abstenção (votantes T1)": 1.3,
+   "Outros→A": 27.0,
+   "Outros→B": 63.2,
+   "Outros→Branco/nulo": 2.3,
+   "Outros→Abstenção": 7.5,
+   "Abstenção T1→A": 9.6,
+   "Abstenção T1→B": 0.7
+  }
+ },
+ "2022|pb": {
+  "A": "JOÃO",
+  "B": "PEDRO CUNHA LIMA",
+  "partido_A": "PSB",
+  "partido_B": "PSDB",
+  "A_validos": 52.51,
+  "theta": [
+   -4.8063,
+   -1.9881,
+   -1.4769,
+   2.8473,
+   3.5387,
+   -2.9327,
+   2.5815,
+   -0.7275
+  ],
+  "legivel": {
+   "A→B": 0.2,
+   "B→A": 3.6,
+   "Abstenção (votantes T1)": 9.3,
+   "Outros→A": 32.7,
+   "Outros→B": 65.3,
+   "Outros→Branco/nulo": 0.1,
+   "Outros→Abstenção": 1.9,
+   "Abstenção T1→A": 27.9,
+   "Abstenção T1→B": 9.8
+  }
+ },
+ "2022|pe": {
+  "A": "MARÍLIA ARRAES",
+  "B": "RAQUEL LYRA",
+  "partido_A": "SOLIDARIEDADE",
+  "partido_B": "PSDB",
+  "A_validos": 41.3,
+  "theta": [
+   0.0677,
+   -4.4272,
+   -1.4995,
+   3.4611,
+   3.8221,
+   -2.5804,
+   0.6541,
+   -0.9061
+  ],
+  "legivel": {
+   "A→B": 15.5,
+   "B→A": 0.4,
+   "Abstenção (votantes T1)": 9.1,
+   "Outros→A": 40.5,
+   "Outros→B": 58.1,
+   "Outros→Branco/nulo": 0.1,
+   "Outros→Abstenção": 1.3,
+   "Abstenção T1→A": 19.7,
+   "Abstenção T1→B": 8.6
+  }
+ },
+ "2022|ro": {
+  "A": "CORONEL MARCOS ROCHA",
+  "B": "MARCOS ROGERIO",
+  "partido_A": "UNIÃO",
+  "partido_B": "PL",
+  "A_validos": 52.47,
+  "theta": [
+   -3.254,
+   -2.8662,
+   -2.122,
+   2.3735,
+   2.3328,
+   -2.4034,
+   -1.0239,
+   -0.8224
+  ],
+  "legivel": {
+   "A→B": 1.1,
+   "B→A": 1.6,
+   "Abstenção (votantes T1)": 5.3,
+   "Outros→A": 48.5,
+   "Outros→B": 46.6,
+   "Outros→Branco/nulo": 0.4,
+   "Outros→Abstenção": 4.5,
+   "Abstenção T1→A": 7.9,
+   "Abstenção T1→B": 9.2
+  }
+ },
+ "2022|rs": {
+  "A": "ONYX LORENZONI",
+  "B": "EDUARDO LEITE",
+  "partido_A": "PL",
+  "partido_B": "PSDB",
+  "A_validos": 42.88,
+  "theta": [
+   -5.7034,
+   -4.0861,
+   -5.5678,
+   1.8558,
+   2.9293,
+   -3.0149,
+   -4.8219,
+   -0.3274
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 0.5,
+   "Abstenção (votantes T1)": 0.2,
+   "Outros→A": 24.5,
+   "Outros→B": 71.5,
+   "Outros→Branco/nulo": 0.2,
+   "Outros→Abstenção": 3.8,
+   "Abstenção T1→A": 0.2,
+   "Abstenção T1→B": 12.6
+  }
+ },
+ "2022|sc": {
+  "A": "JORGINHO MELLO",
+  "B": "DÉCIO LIMA",
+  "partido_A": "PL",
+  "partido_B": "PT",
+  "A_validos": 70.69,
+  "theta": [
+   -5.5612,
+   -5.1377,
+   -5.1692,
+   3.9203,
+   2.7108,
+   -3.4151,
+   -3.1406,
+   -0.4946
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 0.2,
+   "Abstenção (votantes T1)": 0.3,
+   "Outros→A": 75.8,
+   "Outros→B": 22.6,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 1.5,
+   "Abstenção T1→A": 1.2,
+   "Abstenção T1→B": 11.4
+  }
+ },
+ "2022|se": {
+  "A": "ROGÉRIO CARVALHO",
+  "B": "FÁBIO",
+  "partido_A": "PT",
+  "partido_B": "PSD",
+  "A_validos": 48.3,
+  "theta": [
+   -1.07,
+   0.8936,
+   -2.108,
+   0.3711,
+   3.4525,
+   -0.4273,
+   4.0201,
+   3.301
+  ],
+  "legivel": {
+   "A→B": 7.7,
+   "B→A": 21.3,
+   "Abstenção (votantes T1)": 5.4,
+   "Outros→A": 4.2,
+   "Outros→B": 91.1,
+   "Outros→Branco/nulo": 1.9,
+   "Outros→Abstenção": 2.9,
+   "Abstenção T1→A": 29.5,
+   "Abstenção T1→B": 28.9
+  }
+ },
+ "2022|sp": {
+  "A": "TARCÍSIO",
+  "B": "FERNANDO HADDAD",
+  "partido_A": "REPUBLICANOS",
+  "partido_B": "PT",
+  "A_validos": 55.27,
+  "theta": [
+   -6.1393,
+   -5.7531,
+   -1.9107,
+   3.2249,
+   2.9206,
+   -4.3944,
+   0.2846,
+   -1.1506
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 6.4,
+   "Outros→A": 56.2,
+   "Outros→B": 41.5,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 2.2,
+   "Abstenção T1→A": 17.1,
+   "Abstenção T1→B": 7.2
+  }
+ }
+}

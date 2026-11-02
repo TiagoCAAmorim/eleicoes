@@ -121,10 +121,19 @@ Conclusões:
    sorteou Dilma com 49,8%, 6 pontos abaixo da pesquisa. O gerador sorteia o desvio nacional com ~3 pontos de
    desvio-padrão, o tamanho do erro de uma priori sem pesquisa. O erro histórico das pesquisas na véspera foi
    de ~1 ponto, então esse cenário é mais extremo que o que se viu de 2010 a 2026.
-4. **Ponto fraco, igual em 2022: o fim da apuração.** Com 70% a 90% apurado, a cobertura cai para ~81% em todos os
-   anos e variantes. Nessa fase a faixa tem menos de 1 ponto. O que falha é o viés de ordem dentro das cidades
-   (gama), que no gerador demora mais a sumir do que sumiu em 2026. Fica como ponto a investigar: um choque
-   residual mínimo no fim, ou um gerador com o viés sumindo como em 2026.
+4. **O fim da apuração é quase todo sorte do sorteio.** Com 16 rodadas, a cobertura com 70% a 90% apurado foi
+   ~81% em todos os anos. Mas as falhas vieram sempre das mesmas 2 rodadas: a semente de cada rodada é a mesma em
+   todos os anos, e nelas o viés dentro das cidades (gama) saiu extremo (−0,12 e −0,09, mais de 1,7 desvio). Os
+   três anos não eram evidência independente. Rodei 2018 com 48 rodadas (`calibrado_cauteloso`):
+
+   | % apurado | 50 | 70 | 90 |
+   |---|---|---|---|
+   | Cobertura 90% | 98% | 98% | 85% |
+   | Largura 90% | 1,8 | 1,1 | 0,35 |
+
+   Todas as falhas depois de 70% vêm de rodadas com |gama| acima de 0,06; abaixo disso a cobertura é 100%. Só
+   com 90% apurado, quando a faixa tem 0,35 ponto, a cobertura fica um pouco abaixo da meta (85%). Na noite real
+   de 2026 a cobertura de 60% a 99,5% foi 100%. Não mudei o modelo por isso.
 
 Reproduzir (cerca de 10 minutos por ano com 4 núcleos):
 

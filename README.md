@@ -78,6 +78,7 @@ Para incluir uma eleição no site: coloque as saídas em `resultados/<id>/` e a
 - [docs/estresse.md](docs/estresse.md): teste de estresse com apurações sintéticas (gerador calibrado em 2026, repetido com 2010, 2014 e 2018)
 - [docs/calibracao-priori.md](docs/calibracao-priori.md): priori calibrada com os 2º turnos de 2006 a 2026 e as pesquisas da véspera
 - [docs/covariaveis.md](docs/covariaveis.md): covariáveis municipais (deputados, prefeitos, reeleição) testadas e não adotadas
+- [docs/governador.md](docs/governador.md): 2º turno de governador com o modelo de transferência (2006–2022)
 - [docs/base-historica.md](docs/base-historica.md): base de votos por município do TSE, 2006–2024 (`dados/historico/`)
 - [docs/roteiro.md](docs/roteiro.md): etapas da revisão do modelo e da expansão para outros cargos
 - [docs/historico/](docs/historico/): protocolo dos agentes usados durante a apuração de 2026
