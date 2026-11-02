@@ -107,17 +107,22 @@ def ler_zip(caminho, campos, filtro=None, log=None):
     return pd.concat(partes, ignore_index=True).drop_duplicates()
 
 
+TIPOS = {}   # (código, nome do tipo de eleição) -> linhas vistas, gravado em colunas.json para conferência
+
+
 def ordinaria(df):
-    """Só eleição ordinária: CD_TIPO_ELEICAO 2 ou NM_TIPO_ELEICAO com "Ordin" (em alguns arquivos só um dos dois
-    está preenchido; consulta_cand de 2006, por exemplo)."""
-    ok = pd.Series(False, index=df.index)
-    if "tipo" in df:
-        ok |= df["tipo"].astype(str) == "2"
-    if "tipo_nome" in df:
-        ok |= df["tipo_nome"].astype(str).str.contains("Ordin", case=False, na=False)
+    """Só eleição ordinária: CD_TIPO_ELEICAO 2. Quando o código não vem preenchido (consulta_cand de 2006, por
+    exemplo), usa o nome (NM_TIPO_ELEICAO com "Ordin"). O nome sozinho não basta: em 2024 há linhas com nome
+    "ordinária" e código diferente de 2 que somariam ~750 mil eleitores a mais."""
     if "tipo" not in df and "tipo_nome" not in df:
         return df
-    return df[ok]
+    cod = df["tipo"].astype(str).str.strip() if "tipo" in df else pd.Series("", index=df.index)
+    for (c, n), k in pd.DataFrame({"c": cod, "n": df.get("tipo_nome", "")}).value_counts().items():
+        TIPOS[f"{c} | {n}"] = TIPOS.get(f"{c} | {n}", 0) + int(k)
+    tem_cod = cod.str.fullmatch(r"\d+")
+    nome = (df["tipo_nome"].astype(str).str.contains("Ordin", case=False, na=False) if "tipo_nome" in df
+            else pd.Series(False, index=df.index))
+    return df[(tem_cod & (cod == "2")) | (~tem_cod & nome)]
 
 
 def _int(df, cols):
@@ -200,6 +205,7 @@ def processar(ano, saida, brutos):
     pasta = os.path.join(saida, str(ano))
     os.makedirs(pasta, exist_ok=True)
     log = {}
+    TIPOS.clear()
     maj = votos_majoritarios(ano, brutos, log)
     prop = votos_proporcionais(ano, brutos, log)
     votos = pd.concat([maj, prop], ignore_index=True)
@@ -217,6 +223,7 @@ def processar(ano, saida, brutos):
         os.path.join(pasta, "votos_mun.csv.gz"), index=False)
     comp.sort_values(["cargo", "turno", "uf", "mun"]).to_csv(os.path.join(pasta, "comparecimento_mun.csv.gz"), index=False)
     cand.to_csv(os.path.join(pasta, "candidatos.csv.gz"), index=False)
+    log["tipos_de_eleicao"] = dict(TIPOS)
     with open(os.path.join(pasta, "colunas.json"), "w", encoding="utf-8") as f:
         json.dump(log, f, ensure_ascii=False, indent=1)
     res = resumo(votos, comp)
