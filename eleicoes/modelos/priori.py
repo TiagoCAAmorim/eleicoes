@@ -73,10 +73,19 @@ def config_calibrada(base, pesquisa_a, anos=None, v2=False, **mudancas):
 GOVERNADOR = {"tau": 0.15, "choque_nacional": 0.0, "sd_priori_informativa": 0.7, "choque_parcial": 0.03}
 
 
-def config_governador(ano, **mudancas):
-    """Config do 2º turno de governador de `ano`, com a média das matrizes dos 2º turnos de anos anteriores."""
+# com a pesquisa da véspera: linha Outros ajustada a ela (desvio 0,3) e choque por UF de 2% só antes de abrir
+GOVERNADOR_PESQUISA = {"sd_outros": 0.3, "choque_uf_inicio_antes": 0.02}
+
+
+def config_governador(ano, base=None, pesquisa_a=None, **mudancas):
+    """Config do 2º turno de governador de `ano`, com a média das matrizes dos 2º turnos de anos anteriores.
+    Com `pesquisa_a` (% de A nos válidos na véspera; A = o mais votado no 1º turno) e a `base` da UF, a linha Outros
+    é ajustada à pesquisa."""
     with open(os.path.join(PRIORI, "governador.json")) as f:
         todas = json.load(f)
     ant = [th for k, th in todas.items() if int(k.split("|")[0]) < ano]
     pri = {"brasil|Brasil": [float(x) for x in np.mean(ant, axis=0)]} if ant else None
-    return modelo.Config(priori=pri, **{**GOVERNADOR, **mudancas})
+    extra = {}
+    if pesquisa_a is not None and pri is not None:
+        extra = {**GOVERNADOR_PESQUISA, "theta_outros": outros_pela_pesquisa(base, pri, pesquisa_a)}
+    return modelo.Config(priori=pri, **{**GOVERNADOR, **extra, **mudancas})

@@ -47,7 +47,36 @@ do presidente: o choque "por UF" já é comum à eleição inteira.
 Sem pesquisa, a previsão erra em média **5,5 pontos**, com um intervalo de 90% de **22 pontos**. Ele cobre 91% das
 46 eleições, então a faixa é honesta, mas larga demais para ser útil. O erro vem quase todo da linha Outros. No
 presidente, a pesquisa da véspera derrubou o erro de 4,4 para 1,1 ponto ([calibracao-priori.md](calibracao-priori.md)).
-O passo natural é fazer o mesmo aqui, registrando as pesquisas de governador da véspera (Datafolha, Ipec, Quaest).
+Por isso registrei as pesquisas de governador da véspera (ver a seção seguinte).
+
+## Com a pesquisa da véspera
+
+`dados/pesquisas/governador_t2.csv` traz a última pesquisa antes do 2º turno de 33 eleições: 2010 (Ibope), 2018
+(Ibope) e 2022 (Ipec, ou Atlas quando não houve Ipec), cada uma com o link da reportagem. Para 2014 não achei uma
+fonte com as pesquisas da véspera; fica para completar. Em RN 2018, a última pesquisa achada é de 17/10.
+
+**As pesquisas de governador erram mais que as de presidente:** 3,2 pontos em média (desvio 3,9), contra ~1 ponto
+no presidente. O maior erro foi SC 2018: o Ibope deu 59% a Comandante Moisés, que teve 71%.
+
+Como no presidente, a linha Outros da priori é ajustada para que a previsão de antes da apuração bata com a
+pesquisa (`priori.outros_pela_pesquisa`). Nas 33 eleições com pesquisa:
+
+| Antes da apuração | Sem pesquisa (`media_p3`) | Com pesquisa (adotada) |
+|---|---|---|
+| Erro médio | 6,0 | 3,2 |
+| Largura do intervalo de 90% | 23,1 | 14,8 |
+| Cobertura 90% / 50% | 88% / 45% | 97% / 48% |
+| CRPS | 4,25 | 2,20 |
+
+A variante adotada (`pesquisa_o3_p3_antes2`) usa desvio 0,3 na linha Outros e choque por UF de 2% antes de abrir
+(4% depois). Apertar também os outros parâmetros da matriz (desvio 0,3 em vez de 0,7) estreitava a faixa, mas
+piorava a apuração: cobertura de 85% com 30% apurado e uma chamada errada (SE 2022).
+
+**Durante a apuração a pesquisa não ajuda.** Nas mesmas 33 eleições, o CRPS com pesquisa fica 3% a 5% acima do sem
+pesquisa entre 1% e 30% apurado (1,66 contra 1,59 com 10%), e a cobertura é parecida (89% a 98% contra 91% a 98%).
+Quando os votos chegam, a linha Outros passa a ser estimada pelos dados, e a pesquisa deixa de pesar. A diferença
+está dentro do ruído de 66 rejogos. Por isso fica uma configuração só: com pesquisa quando houver, sem pesquisa
+quando não houver.
 
 ## Durante a apuração
 
@@ -84,7 +113,8 @@ Não há retratos parciais de apurações de governador para conferir esse taman
 from eleicoes.dados import historico as hist
 from eleicoes.modelos import priori
 base, nomes = hist.segundo_turno_governador(2022, "sp")
-cfg = priori.config_governador(2026)       # média dos 2º turnos de 2006–2022
+cfg = priori.config_governador(2026)                        # sem pesquisa: média dos 2º turnos de 2006–2022
+cfg = priori.config_governador(2026, base, pesquisa_a=52)   # com a pesquisa da véspera (% de A nos válidos)
 ```
 
 ```bash
