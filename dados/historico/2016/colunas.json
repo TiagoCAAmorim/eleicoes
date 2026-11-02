@@ -356,5 +356,11 @@
    "SQ_ORDEM_SUPLENCIA",
    "DT_ACEITE_CANDIDATURA"
   ]
+ },
+ "tipos_de_eleicao": {
+  "2 | Eleição Ordinária": 138177,
+  "1 | Eleição Extraordinária": 703,
+  "2 | ELEIÇÃO ORDINÁRIA": 16687,
+  "1 | ELEIÇÃO SUPLEMENTAR": 587
  }
 }
