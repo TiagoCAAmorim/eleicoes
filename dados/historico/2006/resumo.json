@@ -1,0 +1,65 @@
+{
+ "ano": 2006,
+ "cargos": [
+  {
+   "cargo": "presidente",
+   "turno": 1,
+   "municipios": 5642,
+   "aptos": 125913235,
+   "comparecimento": 104820459,
+   "brancos": 2866205,
+   "nulos": 5957521,
+   "validos": 95996733,
+   "mais_votados": [
+    {
+     "numero": "13",
+     "nome": "LULA",
+     "votos": 46662365,
+     "pct_validos": 48.61
+    },
+    {
+     "numero": "45",
+     "nome": "GERALDO ALCKMIN",
+     "votos": 39968369,
+     "pct_validos": 41.64
+    },
+    {
+     "numero": "50",
+     "nome": "HELOÍSA HELENA",
+     "votos": 6575393,
+     "pct_validos": 6.85
+    },
+    {
+     "numero": "12",
+     "nome": "CRISTOVAM BUARQUE",
+     "votos": 2538844,
+     "pct_validos": 2.64
+    }
+   ]
+  },
+  {
+   "cargo": "presidente",
+   "turno": 2,
+   "municipios": 5642,
+   "aptos": 125913235,
+   "comparecimento": 101998221,
+   "brancos": 1351448,
+   "nulos": 4808553,
+   "validos": 95838220,
+   "mais_votados": [
+    {
+     "numero": "13",
+     "nome": "LULA",
+     "votos": 58295042,
+     "pct_validos": 60.83
+    },
+    {
+     "numero": "45",
+     "nome": "GERALDO ALCKMIN",
+     "votos": 37543178,
+     "pct_validos": 39.17
+    }
+   ]
+  }
+ ]
+}
