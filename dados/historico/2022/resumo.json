@@ -1,0 +1,65 @@
+{
+ "ano": 2022,
+ "cargos": [
+  {
+   "cargo": "presidente",
+   "turno": 1,
+   "municipios": 5751,
+   "aptos": 156454011,
+   "comparecimento": 123682372,
+   "brancos": 1964779,
+   "nulos": 3487874,
+   "validos": 118229719,
+   "mais_votados": [
+    {
+     "numero": "13",
+     "nome": "LULA",
+     "votos": 57259504,
+     "pct_validos": 48.43
+    },
+    {
+     "numero": "22",
+     "nome": "JAIR BOLSONARO",
+     "votos": 51072345,
+     "pct_validos": 43.2
+    },
+    {
+     "numero": "15",
+     "nome": "SIMONE TEBET",
+     "votos": 4915423,
+     "pct_validos": 4.16
+    },
+    {
+     "numero": "12",
+     "nome": "CIRO GOMES",
+     "votos": 3599287,
+     "pct_validos": 3.04
+    }
+   ]
+  },
+  {
+   "cargo": "presidente",
+   "turno": 2,
+   "municipios": 5751,
+   "aptos": 156454011,
+   "comparecimento": 124252796,
+   "brancos": 1769678,
+   "nulos": 3930765,
+   "validos": 118552353,
+   "mais_votados": [
+    {
+     "numero": "13",
+     "nome": "LULA",
+     "votos": 60345999,
+     "pct_validos": 50.9
+    },
+    {
+     "numero": "22",
+     "nome": "JAIR BOLSONARO",
+     "votos": 58206354,
+     "pct_validos": 49.1
+    }
+   ]
+  }
+ ]
+}
