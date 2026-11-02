@@ -1,6 +1,38 @@
 {
  "votacao_candidato_munzona_2008.zip": {
-  "arquivos": 27,
+  "lidos": [
+   "votacao_candidato_munzona_2008_BRASIL.csv"
+  ],
+  "todos": [
+   "votacao_candidato_munzona_2008_GO.csv",
+   "votacao_candidato_munzona_2008_PE.csv",
+   "votacao_candidato_munzona_2008_RN.csv",
+   "votacao_candidato_munzona_2008_AL.csv",
+   "votacao_candidato_munzona_2008_SC.csv",
+   "votacao_candidato_munzona_2008_ES.csv",
+   "votacao_candidato_munzona_2008_RJ.csv",
+   "votacao_candidato_munzona_2008_PI.csv",
+   "votacao_candidato_munzona_2008_AM.csv",
+   "votacao_candidato_munzona_2008_AP.csv",
+   "votacao_candidato_munzona_2008_BRASIL.csv",
+   "votacao_candidato_munzona_2008_PB.csv",
+   "votacao_candidato_munzona_2008_TO.csv",
+   "votacao_candidato_munzona_2008_CE.csv",
+   "votacao_candidato_munzona_2008_SP.csv",
+   "votacao_candidato_munzona_2008_RO.csv",
+   "votacao_candidato_munzona_2008_RR.csv",
+   "votacao_candidato_munzona_2008_MA.csv",
+   "votacao_candidato_munzona_2008_BA.csv",
+   "votacao_candidato_munzona_2008_MT.csv",
+   "votacao_candidato_munzona_2008_RS.csv",
+   "votacao_candidato_munzona_2008_PR.csv",
+   "votacao_candidato_munzona_2008_PA.csv",
+   "votacao_candidato_munzona_2008_SE.csv",
+   "votacao_candidato_munzona_2008_AC.csv",
+   "votacao_candidato_munzona_2008_MG.csv",
+   "votacao_candidato_munzona_2008_MS.csv",
+   "leiame.pdf"
+  ],
   "colunas": [
    "DT_GERACAO",
    "HH_GERACAO",
@@ -43,7 +75,39 @@
   ]
  },
  "votacao_partido_munzona_2008.zip": {
-  "arquivos": 27,
+  "lidos": [
+   "votacao_partido_munzona_2008_BRASIL.csv"
+  ],
+  "todos": [
+   "votacao_partido_munzona_2008_AC.csv",
+   "votacao_partido_munzona_2008_RS.csv",
+   "votacao_partido_munzona_2008_RJ.csv",
+   "votacao_partido_munzona_2008_SC.csv",
+   "votacao_partido_munzona_2008_AM.csv",
+   "votacao_partido_munzona_2008_ES.csv",
+   "votacao_partido_munzona_2008_PE.csv",
+   "votacao_partido_munzona_2008_AP.csv",
+   "votacao_partido_munzona_2008_PI.csv",
+   "votacao_partido_munzona_2008_MG.csv",
+   "votacao_partido_munzona_2008_MS.csv",
+   "votacao_partido_munzona_2008_RN.csv",
+   "votacao_partido_munzona_2008_RO.csv",
+   "votacao_partido_munzona_2008_SE.csv",
+   "votacao_partido_munzona_2008_MA.csv",
+   "votacao_partido_munzona_2008_MT.csv",
+   "votacao_partido_munzona_2008_PR.csv",
+   "votacao_partido_munzona_2008_CE.csv",
+   "votacao_partido_munzona_2008_PB.csv",
+   "votacao_partido_munzona_2008_TO.csv",
+   "votacao_partido_munzona_2008_RR.csv",
+   "votacao_partido_munzona_2008_SP.csv",
+   "votacao_partido_munzona_2008_PA.csv",
+   "votacao_partido_munzona_2008_BRASIL.csv",
+   "votacao_partido_munzona_2008_GO.csv",
+   "votacao_partido_munzona_2008_BA.csv",
+   "votacao_partido_munzona_2008_AL.csv",
+   "leiame.pdf"
+  ],
   "colunas": [
    "DT_GERACAO",
    "HH_GERACAO",
@@ -76,7 +140,39 @@
   ]
  },
  "detalhe_votacao_munzona_2008.zip": {
-  "arquivos": 27,
+  "lidos": [
+   "detalhe_votacao_munzona_2008_BRASIL.csv"
+  ],
+  "todos": [
+   "detalhe_votacao_munzona_2008_AP.csv",
+   "detalhe_votacao_munzona_2008_MG.csv",
+   "detalhe_votacao_munzona_2008_GO.csv",
+   "detalhe_votacao_munzona_2008_AL.csv",
+   "detalhe_votacao_munzona_2008_CE.csv",
+   "detalhe_votacao_munzona_2008_MS.csv",
+   "detalhe_votacao_munzona_2008_MA.csv",
+   "detalhe_votacao_munzona_2008_BRASIL.csv",
+   "detalhe_votacao_munzona_2008_BA.csv",
+   "detalhe_votacao_munzona_2008_AM.csv",
+   "detalhe_votacao_munzona_2008_MT.csv",
+   "detalhe_votacao_munzona_2008_PB.csv",
+   "detalhe_votacao_munzona_2008_AC.csv",
+   "detalhe_votacao_munzona_2008_PE.csv",
+   "detalhe_votacao_munzona_2008_PI.csv",
+   "detalhe_votacao_munzona_2008_RJ.csv",
+   "detalhe_votacao_munzona_2008_PA.csv",
+   "detalhe_votacao_munzona_2008_ES.csv",
+   "detalhe_votacao_munzona_2008_RO.csv",
+   "detalhe_votacao_munzona_2008_RS.csv",
+   "detalhe_votacao_munzona_2008_RN.csv",
+   "detalhe_votacao_munzona_2008_PR.csv",
+   "detalhe_votacao_munzona_2008_SC.csv",
+   "detalhe_votacao_munzona_2008_RR.csv",
+   "detalhe_votacao_munzona_2008_TO.csv",
+   "detalhe_votacao_munzona_2008_SP.csv",
+   "detalhe_votacao_munzona_2008_SE.csv",
+   "leiame.pdf"
+  ],
   "colunas": [
    "DT_GERACAO",
    "HH_GERACAO",
@@ -128,7 +224,39 @@
   ]
  },
  "consulta_cand_2008.zip": {
-  "arquivos": 27,
+  "lidos": [
+   "consulta_cand_2008_BRASIL.csv"
+  ],
+  "todos": [
+   "consulta_cand_2008_MG.csv",
+   "consulta_cand_2008_MT.csv",
+   "consulta_cand_2008_AP.csv",
+   "consulta_cand_2008_AC.csv",
+   "consulta_cand_2008_BA.csv",
+   "consulta_cand_2008_PR.csv",
+   "consulta_cand_2008_RO.csv",
+   "consulta_cand_2008_RJ.csv",
+   "consulta_cand_2008_SP.csv",
+   "consulta_cand_2008_PA.csv",
+   "consulta_cand_2008_TO.csv",
+   "consulta_cand_2008_SC.csv",
+   "consulta_cand_2008_MS.csv",
+   "consulta_cand_2008_RR.csv",
+   "consulta_cand_2008_AM.csv",
+   "consulta_cand_2008_RN.csv",
+   "consulta_cand_2008_ES.csv",
+   "consulta_cand_2008_RS.csv",
+   "consulta_cand_2008_SE.csv",
+   "consulta_cand_2008_BRASIL.csv",
+   "consulta_cand_2008_MA.csv",
+   "consulta_cand_2008_PI.csv",
+   "consulta_cand_2008_PE.csv",
+   "consulta_cand_2008_AL.csv",
+   "consulta_cand_2008_GO.csv",
+   "consulta_cand_2008_PB.csv",
+   "consulta_cand_2008_CE.csv",
+   "leiame.pdf"
+  ],
   "colunas": [
    "DT_GERACAO",
    "HH_GERACAO",
