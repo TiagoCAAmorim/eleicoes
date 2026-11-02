@@ -65,21 +65,21 @@
    "cargo": "governador",
    "turno": 1,
    "municipios": 5570,
-   "aptos": 142384193,
-   "comparecimento": 114906582,
-   "brancos": 7314166,
-   "nulos": 10074804,
-   "validos": 97517612
+   "aptos": 145741408,
+   "comparecimento": 117387419,
+   "brancos": 7390652,
+   "nulos": 10414882,
+   "validos": 99581885
   },
   {
    "cargo": "governador",
    "turno": 2,
-   "municipios": 1800,
-   "aptos": 49794239,
-   "comparecimento": 39364374,
-   "brancos": 1003299,
-   "nulos": 3224238,
-   "validos": 35136837
+   "municipios": 1939,
+   "aptos": 53151454,
+   "comparecimento": 41762643,
+   "brancos": 1090949,
+   "nulos": 3722145,
+   "validos": 36949549
   },
   {
    "cargo": "senador",
