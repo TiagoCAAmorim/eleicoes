@@ -38,6 +38,12 @@ VARIANTES = {
     "media_uf6": {"sd_priori_informativa": 0.7, "choque_uf_inicio": 0.06},
     "media_uf8": {"sd_priori_informativa": 0.7, "choque_uf_inicio": 0.08},
     "media_uf12": {"sd_priori_informativa": 0.7, "choque_uf_inicio": 0.12},
+    # choque comum do que falta apurar que não encolhe com o % apurado: as seções que ficam por último podem ser
+    # todas de um mesmo lado da cidade (zonas inteiras chegam juntas)
+    "media_c4": {"sd_priori_informativa": 0.7, "choque_uf": 0.04},
+    "media_c6": {"sd_priori_informativa": 0.7, "choque_uf": 0.06},
+    "media_c8": {"sd_priori_informativa": 0.7, "choque_uf": 0.08},
+    "media_c6_uf8": {"sd_priori_informativa": 0.7, "choque_uf": 0.06, "choque_uf_inicio": 0.08},
 }
 
 
