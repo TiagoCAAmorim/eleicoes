@@ -1,6 +1,38 @@
 {
  "votacao_candidato_munzona_2012.zip": {
-  "arquivos": 27,
+  "lidos": [
+   "votacao_candidato_munzona_2012_BRASIL.csv"
+  ],
+  "todos": [
+   "votacao_candidato_munzona_2012_AC.csv",
+   "votacao_candidato_munzona_2012_AL.csv",
+   "votacao_candidato_munzona_2012_AM.csv",
+   "votacao_candidato_munzona_2012_AP.csv",
+   "votacao_candidato_munzona_2012_BA.csv",
+   "votacao_candidato_munzona_2012_CE.csv",
+   "votacao_candidato_munzona_2012_ES.csv",
+   "votacao_candidato_munzona_2012_GO.csv",
+   "votacao_candidato_munzona_2012_MA.csv",
+   "votacao_candidato_munzona_2012_MG.csv",
+   "votacao_candidato_munzona_2012_MS.csv",
+   "votacao_candidato_munzona_2012_MT.csv",
+   "votacao_candidato_munzona_2012_PA.csv",
+   "votacao_candidato_munzona_2012_PB.csv",
+   "votacao_candidato_munzona_2012_PE.csv",
+   "votacao_candidato_munzona_2012_PI.csv",
+   "votacao_candidato_munzona_2012_PR.csv",
+   "votacao_candidato_munzona_2012_RJ.csv",
+   "votacao_candidato_munzona_2012_RN.csv",
+   "votacao_candidato_munzona_2012_RO.csv",
+   "votacao_candidato_munzona_2012_RR.csv",
+   "votacao_candidato_munzona_2012_RS.csv",
+   "votacao_candidato_munzona_2012_SC.csv",
+   "votacao_candidato_munzona_2012_SE.csv",
+   "votacao_candidato_munzona_2012_SP.csv",
+   "votacao_candidato_munzona_2012_TO.csv",
+   "votacao_candidato_munzona_2012_BRASIL.csv",
+   "leiame.pdf"
+  ],
   "colunas": [
    "DT_GERACAO",
    "HH_GERACAO",
@@ -43,7 +75,39 @@
   ]
  },
  "votacao_partido_munzona_2012.zip": {
-  "arquivos": 27,
+  "lidos": [
+   "votacao_partido_munzona_2012_BRASIL.csv"
+  ],
+  "todos": [
+   "votacao_partido_munzona_2012_AC.csv",
+   "votacao_partido_munzona_2012_AL.csv",
+   "votacao_partido_munzona_2012_AM.csv",
+   "votacao_partido_munzona_2012_AP.csv",
+   "votacao_partido_munzona_2012_BA.csv",
+   "votacao_partido_munzona_2012_CE.csv",
+   "votacao_partido_munzona_2012_ES.csv",
+   "votacao_partido_munzona_2012_GO.csv",
+   "votacao_partido_munzona_2012_MA.csv",
+   "votacao_partido_munzona_2012_MG.csv",
+   "votacao_partido_munzona_2012_MS.csv",
+   "votacao_partido_munzona_2012_MT.csv",
+   "votacao_partido_munzona_2012_PA.csv",
+   "votacao_partido_munzona_2012_PB.csv",
+   "votacao_partido_munzona_2012_PE.csv",
+   "votacao_partido_munzona_2012_PI.csv",
+   "votacao_partido_munzona_2012_PR.csv",
+   "votacao_partido_munzona_2012_RJ.csv",
+   "votacao_partido_munzona_2012_RN.csv",
+   "votacao_partido_munzona_2012_RO.csv",
+   "votacao_partido_munzona_2012_RR.csv",
+   "votacao_partido_munzona_2012_RS.csv",
+   "votacao_partido_munzona_2012_SC.csv",
+   "votacao_partido_munzona_2012_SE.csv",
+   "votacao_partido_munzona_2012_SP.csv",
+   "votacao_partido_munzona_2012_TO.csv",
+   "votacao_partido_munzona_2012_BRASIL.csv",
+   "leiame.pdf"
+  ],
   "colunas": [
    "DT_GERACAO",
    "HH_GERACAO",
@@ -76,7 +140,39 @@
   ]
  },
  "detalhe_votacao_munzona_2012.zip": {
-  "arquivos": 27,
+  "lidos": [
+   "detalhe_votacao_munzona_2012_BRASIL.csv"
+  ],
+  "todos": [
+   "detalhe_votacao_munzona_2012_AP.csv",
+   "detalhe_votacao_munzona_2012_MT.csv",
+   "detalhe_votacao_munzona_2012_MS.csv",
+   "detalhe_votacao_munzona_2012_AC.csv",
+   "detalhe_votacao_munzona_2012_CE.csv",
+   "detalhe_votacao_munzona_2012_AL.csv",
+   "detalhe_votacao_munzona_2012_AM.csv",
+   "detalhe_votacao_munzona_2012_MG.csv",
+   "detalhe_votacao_munzona_2012_BRASIL.csv",
+   "detalhe_votacao_munzona_2012_BA.csv",
+   "detalhe_votacao_munzona_2012_ES.csv",
+   "detalhe_votacao_munzona_2012_PA.csv",
+   "detalhe_votacao_munzona_2012_GO.csv",
+   "detalhe_votacao_munzona_2012_PE.csv",
+   "detalhe_votacao_munzona_2012_RJ.csv",
+   "detalhe_votacao_munzona_2012_PR.csv",
+   "detalhe_votacao_munzona_2012_MA.csv",
+   "detalhe_votacao_munzona_2012_PB.csv",
+   "detalhe_votacao_munzona_2012_PI.csv",
+   "detalhe_votacao_munzona_2012_RN.csv",
+   "detalhe_votacao_munzona_2012_RO.csv",
+   "detalhe_votacao_munzona_2012_SE.csv",
+   "detalhe_votacao_munzona_2012_RS.csv",
+   "detalhe_votacao_munzona_2012_RR.csv",
+   "detalhe_votacao_munzona_2012_SC.csv",
+   "detalhe_votacao_munzona_2012_SP.csv",
+   "detalhe_votacao_munzona_2012_TO.csv",
+   "leiame.pdf"
+  ],
   "colunas": [
    "DT_GERACAO",
    "HH_GERACAO",
@@ -128,7 +224,39 @@
   ]
  },
  "consulta_cand_2012.zip": {
-  "arquivos": 27,
+  "lidos": [
+   "consulta_cand_2012_BRASIL.csv"
+  ],
+  "todos": [
+   "consulta_cand_2012_AC.csv",
+   "consulta_cand_2012_AL.csv",
+   "consulta_cand_2012_AM.csv",
+   "consulta_cand_2012_AP.csv",
+   "consulta_cand_2012_BA.csv",
+   "consulta_cand_2012_CE.csv",
+   "consulta_cand_2012_ES.csv",
+   "consulta_cand_2012_GO.csv",
+   "consulta_cand_2012_MA.csv",
+   "consulta_cand_2012_MG.csv",
+   "consulta_cand_2012_MS.csv",
+   "consulta_cand_2012_MT.csv",
+   "consulta_cand_2012_PA.csv",
+   "consulta_cand_2012_PB.csv",
+   "consulta_cand_2012_PE.csv",
+   "consulta_cand_2012_PI.csv",
+   "consulta_cand_2012_PR.csv",
+   "consulta_cand_2012_RJ.csv",
+   "consulta_cand_2012_RN.csv",
+   "consulta_cand_2012_RO.csv",
+   "consulta_cand_2012_RR.csv",
+   "consulta_cand_2012_RS.csv",
+   "consulta_cand_2012_SC.csv",
+   "consulta_cand_2012_SE.csv",
+   "consulta_cand_2012_SP.csv",
+   "consulta_cand_2012_TO.csv",
+   "consulta_cand_2012_BRASIL.csv",
+   "leiame.pdf"
+  ],
   "colunas": [
    "DT_GERACAO",
    "HH_GERACAO",
