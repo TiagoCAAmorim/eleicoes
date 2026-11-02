@@ -36,7 +36,10 @@ def main():
     cfg = dataclasses.replace(modelo.config_2026(), **VARIANTES[a.variante])
     base, ret = carregar()
     pct = ret.groupby("hora")["pct_secoes"].first()
-    horas = sorted(pct.index)
+    # mesmos momentos e mesmo "apurado" (linha pontilhada) da página do dia: ao vivo o parcial do Brasil vinha do
+    # arquivo nacional do TSE, que sai antes dos municipais, e três retratos repetidos não entraram no histórico
+    dia = pd.read_csv(os.path.join(resultados("2026-presidente"), "historico.csv")).set_index("hora")
+    horas = [h for h in sorted(pct.index) if h in dia.index]
     linhas = []
     for i, h in enumerate(horas):
         res = prever(retrato(base, ret, h), NOMES, cfg)
@@ -44,6 +47,8 @@ def main():
         res["hora"], res["hora_txt"] = hora.isoformat(), hora.strftime("%d/%m %H:%M")
         res["pct_secoes"] = float(pct[h])
         res["grupos"]["Brasil"]["Brasil"]["pct_apurado"] = res["pct_secoes"]
+        res["parcial_A"] = float(dia.loc[h, "parcial_A"])
+        res["grupos"]["Brasil"]["Brasil"]["parcial"] = res["parcial_A"]
         res["proxima_txt"] = ""
         br = res["grupos"]["Brasil"]["Brasil"]
         print(f"{res['hora_txt']} {res['pct_secoes']:6.2f}%  {br['A_media']:.2f} [{br['A_p05']:.2f}, {br['A_p95']:.2f}]"

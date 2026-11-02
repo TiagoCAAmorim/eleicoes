@@ -15,7 +15,7 @@
     "comparecimento": 80.7809224913732,
     "brancos_nulos": 3.2402211957527496,
     "pct_apurado": 99.86059032785307,
-    "parcial": 51.76298904809137,
+    "parcial": 51.76292064711991,
     "eleitores": 158745502.0,
     "pct_eleitorado": 100.0,
     "votos_A_apurado": 64135975.0,
@@ -733,7 +733,7 @@
    }
   }
  },
- "parcial_A": 51.76298904809137,
+ "parcial_A": 51.76292064711991,
  "transferencias": {
   "Brasil": {
    "Lula→Flávio": [
