@@ -413,5 +413,11 @@
    "CD_SITUACAO_DIPLOMA",
    "DS_SITUACAO_DIPLOMA"
   ]
+ },
+ "tipos_de_eleicao": {
+  "2 | Eleição Ordinária": 90606,
+  "1 | Eleição Extraordinária": 431,
+  "2 | ELEIÇÃO ORDINÁRIA": 19495,
+  "1 | ELEIÇÃO SUPLEMENTAR": 337
  }
 }
