@@ -60,6 +60,66 @@
      "pct_validos": 44.87
     }
    ]
+  },
+  {
+   "cargo": "governador",
+   "turno": 1,
+   "municipios": 5570,
+   "aptos": 146750529,
+   "comparecimento": 117111572,
+   "brancos": 6418783,
+   "nulos": 15330295,
+   "validos": 95361748
+  },
+  {
+   "cargo": "governador",
+   "turno": 2,
+   "municipios": 2993,
+   "aptos": 92401806,
+   "comparecimento": 72321542,
+   "brancos": 2626826,
+   "nulos": 8861148,
+   "validos": 60833568
+  },
+  {
+   "cargo": "senador",
+   "turno": 1,
+   "municipios": 5570,
+   "aptos": 146750529,
+   "comparecimento": 117111572,
+   "brancos": 20922130,
+   "nulos": 42090147,
+   "validos": 170093885
+  },
+  {
+   "cargo": "deputado_federal",
+   "turno": 1,
+   "municipios": 5570,
+   "aptos": 146750529,
+   "comparecimento": 117111570,
+   "brancos": 7499446,
+   "nulos": 11354236,
+   "validos": 91406378
+  },
+  {
+   "cargo": "deputado_estadual",
+   "turno": 1,
+   "municipios": 5569,
+   "aptos": 144669311,
+   "comparecimento": 115420178,
+   "brancos": 7190010,
+   "nulos": 11378654,
+   "validos": 88252309
+  },
+  {
+   "cargo": "deputado_distrital",
+   "turno": 1,
+   "municipios": 1,
+   "aptos": 2081218,
+   "comparecimento": 1691392,
+   "brancos": 87589,
+   "nulos": 106567,
+   "validos": 1416104
   }
  ]
 }
