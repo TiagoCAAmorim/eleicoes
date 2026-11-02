@@ -1,0 +1,65 @@
+{
+ "ano": 2010,
+ "cargos": [
+  {
+   "cargo": "presidente",
+   "turno": 1,
+   "municipios": 5748,
+   "aptos": 135804433,
+   "comparecimento": 111193747,
+   "brancos": 3479340,
+   "nulos": 6124254,
+   "validos": 101590153,
+   "mais_votados": [
+    {
+     "numero": "13",
+     "nome": "DILMA",
+     "votos": 47651434,
+     "pct_validos": 46.91
+    },
+    {
+     "numero": "45",
+     "nome": "JOSÉ SERRA",
+     "votos": 33132283,
+     "pct_validos": 32.61
+    },
+    {
+     "numero": "43",
+     "nome": "MARINA SILVA",
+     "votos": 19636359,
+     "pct_validos": 19.33
+    },
+    {
+     "numero": "50",
+     "nome": "PLÍNIO",
+     "votos": 886816,
+     "pct_validos": 0.87
+    }
+   ]
+  },
+  {
+   "cargo": "presidente",
+   "turno": 2,
+   "municipios": 5748,
+   "aptos": 135804433,
+   "comparecimento": 106606214,
+   "brancos": 2452597,
+   "nulos": 4689428,
+   "validos": 99463917,
+   "mais_votados": [
+    {
+     "numero": "13",
+     "nome": "DILMA",
+     "votos": 55752529,
+     "pct_validos": 56.05
+    },
+    {
+     "numero": "45",
+     "nome": "JOSÉ SERRA",
+     "votos": 43711388,
+     "pct_validos": 43.95
+    }
+   ]
+  }
+ ]
+}
