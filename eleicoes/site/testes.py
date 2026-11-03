@@ -216,8 +216,11 @@ def primeiro_turno_uf(cargo):
     info = _json_eleicoes(cargo)
     out = []
     for (ano, uf), g in d.groupby(["ano", "uf"]):
-        e = _eleicao_t1(f"{ano}-{uf}", f"{uf.upper()} {ano}", ano, g, info.get(f"{ano}|{uf}", {}),
-                        {"uf": uf.upper()})
+        if cargo == "presidente":  # uma eleição por ano, no Brasil inteiro (eleicoes.json usa a chave "<ano>|None")
+            e = _eleicao_t1(str(ano), f"Presidente {ano}", ano, g, info.get(f"{ano}|None", {}), {"uf": "BR"})
+        else:
+            e = _eleicao_t1(f"{ano}-{uf}", f"{uf.upper()} {ano}", ano, g, info.get(f"{ano}|{uf}", {}),
+                            {"uf": uf.upper()})
         e["vagas"] = 2 if cargo == "senador" and ano in (2010, 2018) else 1
         out.append(e)
     return out, d
@@ -372,6 +375,24 @@ def exportar(pasta_dados):
     out["gov_t2_n_pesquisa"] = str(sum(e["pesquisa"] for e in gov2))
     out["gov_t1_n"] = str(len(gov1))
     out["sen_n"] = str(len(sen1))
+
+    pres1, d_pres1 = primeiro_turno_uf("presidente")
+    with open(os.path.join(pasta_dados, "presidente.json"), "w", encoding="utf-8") as f:
+        json.dump({"pcts": PCTS, "t1": pres1}, f, ensure_ascii=False, separators=(",", ":"))
+    out["pres_t1_resumo"] = _resumo_t1(d_pres1)
+    out["pres_t1_indice"] = _indice(pres1, [("1º e 2º no 1º turno", _primeiros_t1)])
+    pesq = pd.read_csv(os.path.join(DADOS, "pesquisas", "presidente_t1.csv"))
+    linhas = []
+    for e in pres1:
+        p = pesq[pesq["ano"] == e["ano"]].sort_values("validos", ascending=False)
+        reais = {c["nome"].upper(): c["real"] for c in e["candidatos"]}
+        for r in p.head(2).itertuples():
+            real = next((v for k, v in reais.items() if _titulo_nome(r.candidato).upper() == k), None)
+            linhas.append([str(e["ano"]), html.escape(_titulo_nome(r.candidato)), _num(float(r.validos)),
+                           _num(real) if real is not None else "–",
+                           f'<a href="{html.escape(r.fonte)}" rel="noopener">{html.escape(r.instituto)}</a>'])
+    out["pres_t1_pesquisas"] = _tabela(["Ano", "Candidato", "Pesquisa (% válidos)", "Resultado", "Fonte"],
+                                       linhas, (2, 3))
 
     pref2, d_pref2 = prefeito_t2()
     pref1, d_pref1 = prefeito_t1()

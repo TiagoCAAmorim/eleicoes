@@ -4,7 +4,7 @@ Planejamento acordado em 01/11/2026, depois da apuração do 2º turno de 2026.
 
 | Etapa | O quê | Situação |
 |---|---|---|
-| 0 | Repositório dedicado, pacote reorganizado, site com página inicial, modelos, análises e eleições | Feito. Páginas de testes por cargo, com cada eleição rejogada num gráfico interativo: governador e senador (`governador.html`), prefeito (`prefeito.html`) e teste de estresse (`estresse.html`), geradas de `resultados/` por `eleicoes/site/testes.py` |
+| 0 | Repositório dedicado, pacote reorganizado, site com página inicial, modelos, análises e eleições | Feito. Páginas de testes por cargo, com cada eleição rejogada num gráfico interativo: 1º turno de presidente (`presidente.html`), governador e senador (`governador.html`), prefeito (`prefeito.html`) e teste de estresse (`estresse.html`), geradas de `resultados/` por `eleicoes/site/testes.py` |
 | 0b | Painel: diagrama de Sankey das transferências de votos previstas (Brasil e regiões) | Feito |
 | 1 | Banco de testes: rejogar a apuração real de 2026 (46 retratos) e 2022; métricas por % apurado (erro, cobertura 50/90%, CRPS, momento da "chamada"). Resultados em [rejogo-2026.md](rejogo-2026.md) | Feito |
 | 2 | Base histórica do TSE 2006–2024 (presidente, governador, senador, prefeito, deputados), baixada pelo Actions | Feito ([base-historica.md](base-historica.md)) |

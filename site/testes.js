@@ -192,7 +192,7 @@
     if (tipo === "estresse") {
       opcoes(selE, lista.map(function (a, k) { return { valor: k, texto: "2º turno presidencial " + a.ano }; }), lista.length - 1);
     } else {
-      opcoes(selE, lista.map(function (e) { return { valor: e.id, texto: e.rotulo, grupo: String(e.ano) }; }));
+      opcoes(selE, lista.map(function (e) { return { valor: e.id, texto: e.rotulo, grupo: lista.length > 12 ? String(e.ano) : null }; }));
     }
     if (selV) opcoes(selV, [{ valor: "moderado", texto: "moderado" }, { valor: "forte", texto: "forte (pessimista)" }]);
 

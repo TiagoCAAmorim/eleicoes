@@ -3,7 +3,8 @@
     python scripts/gerar_site.py               # gera em _site/
     python scripts/gerar_site.py --saida pasta
 
-Páginas fixas em site/ (início, modelos, análises, alianças e as de testes de governador, prefeito e estresse)
+Páginas fixas em site/ (início, modelos, análises, alianças e as de testes de presidente, governador, prefeito e
+estresse)
 recebem cabeçalho e rodapé comuns; cada eleição listada em config/eleicoes.json ganha sua pasta (ex.: _site/2026/presidente/) gerada a partir de resultados/<id>. Os dados das
 páginas de testes (_site/testes/*.json) saem dos rejogos em resultados/ (eleicoes/site/testes.py).
 """
@@ -25,8 +26,8 @@ FUSO = dt.timezone(dt.timedelta(hours=-3))
 CONTATO_LINKEDIN = "https://www.linkedin.com/in/tiago-amorim-eng/"
 # botão "Me pague um café" no topo das páginas fixas: copia esta chave Pix
 CHAVE_PIX = "bcd8d244-8aeb-4003-99ca-d8ba4f5f5952"
-PAGINAS = ["index.html", "modelos.html", "analises.html", "aliancas.html", "governador.html", "prefeito.html",
-           "estresse.html"]
+PAGINAS = ["index.html", "modelos.html", "analises.html", "aliancas.html", "presidente.html", "governador.html",
+           "prefeito.html", "estresse.html"]
 
 
 def _ler(nome):
