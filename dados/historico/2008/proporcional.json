@@ -76,13 +76,14 @@
   ]
  },
  "situacoes": {
-  "SUPLENTE": 45799,
-  "NÃO ELEITO": 11580,
-  "ELEITO": 7267,
-  "MÉDIA": 2456,
-  "#NULO": 90,
-  "INDEFERIDO COM RECURSO": 3,
-  "RENÚNCIA/FALECIMENTO/CASSAÇÃO ANTES DA ELEIÇÃO": 1
+  "SUPLENTE": 218217,
+  "NÃO ELEITO": 50999,
+  "ELEITO": 40206,
+  "MÉDIA": 11697,
+  "#NULO": 449,
+  "INDEFERIDO COM RECURSO": 12,
+  "RENÚNCIA/FALECIMENTO/CASSAÇÃO ANTES DA ELEIÇÃO": 5,
+  "REGISTRO NEGADO ANTES DA ELEIÇÃO": 3
  },
  "destinacoes": {},
  "cargos": {
@@ -91,8 +92,8 @@
    "votos": 101974774,
    "nominais": 90472401,
    "legenda": 11502373,
-   "candidatos": 67196,
-   "eleitos": 7267,
+   "candidatos": 321588,
+   "eleitos": 51903,
    "nominais_candidatos": 90472401
   }
  }
