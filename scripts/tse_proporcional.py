@@ -54,7 +54,10 @@ def candidatos(ano, brutos, log):
     info = [c for c in ["cargo", "uf", "ue", "sq", "numero", "nome", "partido", "nr_partido", "sit_cand",
                         "detalhe_cand", "destinacao", "situacao"] + GRUPO if c in d]
     soma = [c for c in ["v_brutos", "v_validos"] if c in d]
-    out = d.groupby("sq", as_index=False)[soma].sum().merge(d.drop_duplicates("sq")[info], on="sq")
+    # SQ_CANDIDATO se repete entre cargos e circunscrições nos arquivos antigos (até 2010): a chave inclui os dois
+    chave = ["cargo", "ue", "sq", "numero"]
+    out = d.groupby(chave, as_index=False)[soma].sum().merge(
+        d.drop_duplicates(chave)[[c for c in info if c not in chave] + chave], on=chave)
     if "v_validos" not in out:
         out["v_validos"] = pd.NA      # até 2014 o arquivo só tem os votos nominais brutos
     return out
@@ -97,7 +100,7 @@ def processar(ano, saida, brutos):
         os.path.join(pasta, "proporcional_candidatos.csv.gz"), index=False)
     part.sort_values(["cargo", "uf", "ue", "partido"]).to_csv(
         os.path.join(pasta, "proporcional_partidos.csv.gz"), index=False)
-    eleito = cand["situacao"].fillna("").str.upper().str.startswith("ELEITO")
+    eleito = cand["situacao"].fillna("").str.upper().str.strip().str.match(r"^(ELEITO|M[ÉE]DIA)")
     res = {"ano": ano, "tipos_de_eleicao": dict(th.TIPOS), "colunas": {k: v.get("colunas") for k, v in log.items()},
            "situacoes": cand["situacao"].value_counts().to_dict(),
            "destinacoes": cand["destinacao"].value_counts().to_dict() if "destinacao" in cand else {},
