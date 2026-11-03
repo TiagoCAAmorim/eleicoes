@@ -1,0 +1,32 @@
+<!-- página: modelos | titulo: Teste de estresse | descricao: Apurações sintéticas do 2º turno presidencial com seções fora de ordem: o intervalo de 90% do modelo contém o resultado em quantos casos? -->
+<p class="meta trilha"><a href="modelos.html">Modelos</a> · Teste de estresse</p>
+<h1>Teste de estresse</h1>
+<p class="lead">Apurações inventadas, feitas para enganar o modelo: um resultado sorteado para cada cidade e seções que chegam fora de ordem. O intervalo de 90% continua contendo o resultado em cerca de 90% dos casos?</p>
+<div class="selos"><span class="selo planejado">Simulação</span></div>
+<p>Só a noite de 2026 tem retratos reais da apuração. Para saber como o modelo se comporta em noites diferentes, cada rodada deste teste sorteia <strong>uma eleição e uma apuração</strong> a partir das seções reais do 2º turno presidencial de 2010, 2014, 2018 ou 2022:</p>
+<ol class="lista-simples">
+  <li><strong>O resultado de cada cidade</strong> é sorteado em torno da previsão de antes da apuração, com um desvio comum ao país (cerca de 3 pontos), desvios menores por região e estado e o desvio de cada cidade tirado dos desvios reais de cidades do mesmo porte. Cada seção mantém a diferença real que teve em relação à sua cidade.</li>
+  <li><strong>A ordem de chegada</strong> imita uma noite real (regiões e capitais com atraso, zonas em blocos) e tem dois vieses sorteados: <strong>entre cidades</strong> (beta), cidades de um lado apurando mais rápido, e <strong>dentro das cidades</strong> (gama), as seções mais favoráveis a um candidato chegando antes.</li>
+</ol>
+<p>O tamanho dos dois vieses foi medido na noite de 2026: com 1,6% apurado, as parciais das cidades estavam cerca de 1 ponto fora do resultado final de cada cidade. No gerador o viés some mais devagar que em 2026, então o teste é um pouco pessimista.</p>
+
+<section data-secao="estresse">
+<h2>Uma apuração de cada vez</h2>
+<p>A linha pontilhada é a conta simples do que já foi apurado; a faixa é o que o modelo dizia. Nas rodadas com viés forte dentro das cidades, a parcial fica longe do resultado por boa parte da noite. Em 2022 o gráfico compara o modelo do dia da eleição de 2026 com o modelo revisado; nos outros anos, o modelo adotado com a versão que usava a matriz da eleição anterior como ponto de partida.</p>
+<div class="explorador" data-dados="testes/estresse.json" data-tipo="estresse"><p class="meta">Carregando…</p></div>
+</section>
+
+<h2>Todas as rodadas juntas</h2>
+<figure>
+  <img src="img/modelos/estresse.png" alt="Cobertura e largura do intervalo de 90% ao longo de apurações sintéticas de 2010, 2014, 2018 e 2022, comparando o modelo do dia e o modelo adotado" loading="lazy">
+  <figcaption>16 a 32 apurações sintéticas por ano. Linhas cheias: modelo adotado.</figcaption>
+</figure>
+<p class="meta">Em que fração das rodadas o intervalo de 90% do modelo adotado continha o resultado sorteado (meta: 90%). 2010 a 2018: 16 rodadas por ano; 2022: 16 rodadas com o modelo adotado e 32 com o modelo do dia.</p>
+{{estresse_resumo}}
+<ul class="lista-simples">
+  <li><strong>O que derruba o modelo é o viés dentro das cidades.</strong> A ordem entre cidades é absorvida, porque o modelo já parte do 1º turno de cada município.</li>
+  <li><strong>O modelo do dia cobria 66%</strong> e errou o vencedor com mais de 99% de chance em 7 momentos. O adotado cobre 88% a 96%, sem nenhuma chamada errada depois de abertas as urnas.</li>
+  <li><strong>O fim da apuração é quase todo sorte do sorteio.</strong> A queda para 81% com 70% a 90% apurado vem sempre das mesmas 2 rodadas, que usam a mesma semente em todos os anos e sortearam um viés extremo dentro das cidades. Com 48 rodadas de 2018, a cobertura com 70% apurado foi de 98%.</li>
+</ul>
+<p class="meta">Detalhes: <a href="https://github.com/TiagoCAAmorim/eleicoes/blob/main/docs/estresse.md">docs/estresse.md</a>. Dados do gráfico: <a href="testes/estresse.json">estresse.json</a>.</p>
+<script src="testes.js"></script>

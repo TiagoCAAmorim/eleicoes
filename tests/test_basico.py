@@ -34,6 +34,14 @@ def test_gera_site(tmp_path):
     painel = (saida / "2026/presidente/index.html").read_text(encoding="utf-8")
     assert 'class="lx-nav"' in painel and "lx-refresh" not in painel
     assert '"fluxos"' in painel and 'id="chart-sankey"' in painel
+    for pag in ["governador.html", "prefeito.html", "estresse.html"]:
+        texto = (saida / pag).read_text(encoding="utf-8")
+        assert "{{" not in texto and 'class="botao-cafe"' in texto and 'class="selo' in texto, pag
+    for nome in ["governador", "prefeito", "estresse"]:
+        d = json.loads((saida / "testes" / f"{nome}.json").read_text(encoding="utf-8"))
+        assert d["pcts"][0] == 0
+    gov = json.loads((saida / "testes" / "governador.json").read_text(encoding="utf-8"))
+    assert len(gov["t2"]) == 46 and all(len(r["pontos"]) == len(gov["pcts"]) for e in gov["t2"] for r in e["rodadas"])
 
 
 def test_catalogo_aponta_para_resultados():

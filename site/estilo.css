@@ -74,3 +74,57 @@ figcaption { font-size: 14px; color: var(--fg-2); margin-top: 6px; }
 .rodape { border-top: 1px solid var(--line); padding-top: 20px; padding-bottom: 32px; font-size: 14px; color: var(--fg-2); }
 .rodape p { max-width: none; }
 @media (max-width: 560px) { body { font-size: 16px; } .lead { font-size: 17px; } h2 { margin-top: 36px; } }
+
+/* páginas de testes (governador, prefeito, estresse): explorador com gráfico da previsão ao longo da apuração */
+:root { --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100; --s5: #e87ba4; --neg: #b3261e; --pos: #1f7a3a; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181;
+    --neg: #f2867d; --pos: #6fcf8e; }
+}
+:root[data-theme="dark"] { --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181;
+  --neg: #f2867d; --pos: #6fcf8e; }
+.pos { color: var(--pos); } .neg { color: var(--neg); }
+.selos { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; }
+.trilha { margin-bottom: 8px; }
+.explorador { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px;
+  margin: 12px 0 20px; scroll-margin-top: 12px; }
+.explorador .linha-campos { display: flex; flex-wrap: wrap; gap: 12px 20px; margin-bottom: 12px; }
+.explorador .linha-campos label { display: flex; flex-direction: column; gap: 4px; font-size: 14px; color: var(--fg-2);
+  font-weight: 600; min-width: 0; max-width: 100%; }
+.explorador select { font: 16px var(--sans); padding: 6px 8px; border: 1px solid var(--line); border-radius: 8px;
+  background: var(--bg); color: var(--fg); max-width: 100%; }
+.explorador-titulo { font-size: 15px; color: var(--fg-2); margin-bottom: 6px; }
+.legenda { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 14px; color: var(--fg-2); margin-bottom: 4px; }
+.legenda span { display: inline-flex; align-items: center; gap: 6px; }
+.legenda i { display: inline-block; width: 16px; height: 3px; border-radius: 2px; }
+.legenda i.l-banda { height: 10px; opacity: .3; }
+.legenda i.l-real { height: 0; border-top: 2px dashed var(--fg); background: none; }
+.legenda i.l-parcial { height: 0; border-top: 2px dotted var(--fg-2); background: none; }
+.grafico-svg { display: block; width: 100%; height: auto; touch-action: pan-y; }
+.grafico-svg .eixo text { font: 12px var(--sans); fill: var(--fg-2); }
+.grafico-svg .grade { stroke: var(--line); stroke-width: 1; }
+.grafico-svg .ref50 { stroke: var(--fg-2); stroke-width: 1; opacity: .5; }
+.grafico-svg .banda90 { fill: currentColor; opacity: .14; }
+.grafico-svg .banda50 { fill: currentColor; opacity: .26; }
+.grafico-svg .linha { fill: none; stroke: currentColor; stroke-width: 2; stroke-linejoin: round; }
+.grafico-svg .real { stroke: currentColor; stroke-width: 1.5; stroke-dasharray: 5 4; }
+.grafico-svg .parcial { fill: none; stroke: var(--fg-2); stroke-width: 1.5; stroke-dasharray: 2 3; }
+.grafico-svg .cursor { stroke: var(--fg-2); stroke-width: 1; }
+.grafico-svg .ponto { stroke: var(--panel); stroke-width: 2; }
+.grafico-svg .toque { fill: transparent; cursor: crosshair; }
+.deslize { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--fg-2); font-weight: 600;
+  margin: 8px 0 4px; }
+.deslize input { flex: 1; min-width: 0; accent-color: var(--accent); }
+.quadro .quadro-momento { font-weight: 600; margin: 8px 0 4px; }
+.quadro table { min-width: 0; }
+.quadro th { font-weight: 500; color: var(--fg-2); }
+.quadro td, .quadro th { white-space: normal; padding: 6px 10px 6px 0; }
+.quadro td.num, .quadro tbody td:first-child { white-space: nowrap; }
+.quadro thead th { font-size: 13px; line-height: 1.25; vertical-align: bottom; }
+.quadro .pino { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: 0; }
+.quadro { overflow-x: auto; }
+table.indice td:first-child { white-space: nowrap; }
+details summary { cursor: pointer; color: var(--accent); margin: 8px 0; }
+details .tabela-rolagem { max-height: 520px; overflow-y: auto; }
+details thead th { position: sticky; top: 0; background: var(--bg); }
+.lista-paginas { list-style: none; padding: 0; display: grid; gap: 10px; max-width: 70ch; }

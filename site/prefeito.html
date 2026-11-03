@@ -1,0 +1,57 @@
+<!-- página: modelos | titulo: Prefeito: testes do modelo | descricao: Como o modelo de previsão da apuração se saiu nos 2º turnos de prefeito de 2012 a 2024 e no 1º turno de 2024, seção a seção. -->
+<p class="meta trilha"><a href="modelos.html">Modelos</a> · Prefeito, 2012–2024</p>
+<h1>Prefeito</h1>
+<p class="lead">Como o modelo de previsão da apuração se sairia nas eleições de prefeito das cidades grandes: todos os 2º turnos de 2012 a 2024 e o 1º turno de 2024. Escolha uma cidade e veja o que ele diria a cada momento da noite.</p>
+<p>Numa cidade não há municípios para comparar entre si, então <strong>a unidade do modelo é a seção eleitoral</strong>. As seções chegam inteiras e por zona eleitoral, e bairros inteiros podem chegar juntos. O TSE não guarda retratos parciais das apurações: cada eleição foi <strong>rejogada</strong> com os votos reais de cada seção, numa ordem sorteada. Um viés sorteado faz as seções mais favoráveis a um lado chegarem antes. Há dois tamanhos de viés:</p>
+<ul class="lista-simples">
+  <li><strong>moderado</strong>: as seções de um lado tendem a chegar antes;</li>
+  <li><strong>forte</strong>: as seções chegam quase em ordem do voto, um caso pessimista.</li>
+</ul>
+<p>Não sabemos qual dos dois se parece mais com uma noite real. Um retrato parcial gravado durante uma apuração de prefeito (por exemplo, em 2028) permitiria medir.</p>
+<ul class="lista-simples">
+  <li><a href="#segundo-turno">2º turno</a> ({{pref_t2_n}} eleições, 2012–2024)</li>
+  <li><a href="#primeiro-turno">1º turno</a> ({{pref_t1_n}} cidades com mais de 200 mil eleitores, 2024)</li>
+</ul>
+
+<section data-secao="t2">
+<h2 id="segundo-turno">2º turno</h2>
+<div class="selos"><span class="selo">Resultados reais</span><span class="selo planejado">Simulação da ordem</span><span class="selo planejado">Sem pesquisa</span></div>
+<p>A matriz leva o 1º turno de cada seção para o 2º. <strong>A</strong> é o mais votado no 1º turno entre os dois que foram ao 2º. A previsão de antes da apuração é só a média dos 2º turnos de prefeito dos anos anteriores, sem pesquisa, e por isso a faixa começa com mais de 30 pontos. Como as seções que faltam podem estar todas do mesmo lado da cidade, o modelo soma um choque comum de 6% na margem do que falta apurar, que não encolhe conforme a apuração avança.</p>
+<div class="explorador" data-dados="testes/prefeito.json" data-parte="t2" data-tipo="t2" data-vies data-inicial="2024-71072"><p class="meta">Carregando…</p></div>
+<h3>Todas as eleições juntas</h3>
+<p class="meta">Cobertura: em que fração das apurações sorteadas o intervalo continha o resultado (meta: 90% e 50%). Chamada errada: mais de 99% de chance para quem perdeu.</p>
+<h4>Viés moderado</h4>
+{{pref_t2_resumo_moderado}}
+<h4>Viés forte</h4>
+{{pref_t2_resumo_forte}}
+<details><summary>Ver as {{pref_t2_n}} eleições (viés moderado)</summary>
+<p class="meta">Erro antes de abrir: distância, em pontos, entre a previsão sem nenhum voto e o resultado. Cobertura: momentos com votos apurados. Clique numa eleição para abri-la no gráfico.</p>
+{{pref_t2_indice}}
+</details>
+</section>
+
+<section data-secao="t1">
+<h2 id="primeiro-turno">1º turno</h2>
+<div class="selos"><span class="selo">Resultados reais</span><span class="selo planejado">Simulação da ordem</span><span class="selo planejado">Pesquisa sintética</span></div>
+<p>No 1º turno a referência de cada seção é o <strong>2º turno presidencial de dois anos antes, na mesma seção</strong> (votos no PT, no adversário, brancos e nulos e abstenção). Ela separa bairros que votam diferente dentro da cidade. Sem essa referência, as primeiras seções enganavam o modelo e houve dezenas de chamadas erradas. Antes da apuração, o modelo parte de uma <strong>pesquisa sintética</strong> (o resultado real mais um erro sorteado de cerca de 3 pontos), porque as pesquisas de prefeito ainda não foram registradas.</p>
+<div class="explorador" data-dados="testes/prefeito.json" data-parte="t1" data-tipo="t1" data-vies data-inicial="2024-71072"><p class="meta">Carregando…</p></div>
+<h3>Todas as cidades juntas</h3>
+<p class="meta">Métricas da votação dos 3 primeiros colocados reais. Chamada errada: mais de 99% de chance para algo que não aconteceu (vencer no 1º turno, ir ao 2º turno, ser o 1º colocado), ou menos de 1% para algo que aconteceu.</p>
+<h4>Viés moderado</h4>
+{{pref_t1_resumo_moderado}}
+<h4>Viés forte</h4>
+{{pref_t1_resumo_forte}}
+<p>Com o viés forte a faixa fica estreita demais: cobre 71% a 88%. Um choque comum maior cobriria esse caso, mas deixaria a faixa larga demais no caso moderado. A escolha fica para quando houver um retrato parcial real.</p>
+<details><summary>Ver as {{pref_t1_n}} cidades (viés moderado)</summary>
+{{pref_t1_indice}}
+</details>
+</section>
+
+<h2>O que ainda falta</h2>
+<ul class="lista-simples">
+  <li><strong>Medir o viés de ordem</strong> numa apuração real de prefeito, para escolher o tamanho do choque comum.</li>
+  <li><strong>Pesquisas da véspera</strong>: devem cortar o erro de antes da apuração, como no governador.</li>
+  <li><strong>1º turno de outros anos</strong>: a base de 2008 a 2024 está pronta, mas 2016 e 2020 só foram rejogados com uma versão anterior do modelo (choque comum de 8%).</li>
+</ul>
+<p class="meta">Detalhes: <a href="https://github.com/TiagoCAAmorim/eleicoes/blob/main/docs/prefeito.md">docs/prefeito.md</a> e <a href="https://github.com/TiagoCAAmorim/eleicoes/blob/main/docs/primeiro-turno.md">docs/primeiro-turno.md</a>. Dados do gráfico: <a href="testes/prefeito.json">prefeito.json</a>.</p>
+<script src="testes.js"></script>
