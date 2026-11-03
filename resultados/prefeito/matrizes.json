@@ -2079,6 +2079,2996 @@
    "Abstenção T1→B": 3.2
   }
  },
+ "2016|35": {
+  "uf": "ro",
+  "secoes": 1028,
+  "A_validos": 65.15,
+  "theta": [
+   -5.4003,
+   1.8672,
+   -2.2151,
+   2.2581,
+   1.6043,
+   -4.7465,
+   -4.5852,
+   -4.9068
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 26.0,
+   "Abstenção (votantes T1)": 4.9,
+   "Outros→A": 61.5,
+   "Outros→B": 32.0,
+   "Outros→Branco/nulo": 0.1,
+   "Outros→Abstenção": 6.4,
+   "Abstenção T1→A": 0.3,
+   "Abstenção T1→B": 0.2
+  }
+ },
+ "2016|2550": {
+  "uf": "am",
+  "secoes": 3322,
+  "A_validos": 55.96,
+  "theta": [
+   -7.1368,
+   -5.7149,
+   -3.4897,
+   4.4631,
+   4.369,
+   -3.9862,
+   -4.8338,
+   -1.7389
+  ],
+  "legivel": {
+   "A→B": 0.0,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 1.5,
+   "Outros→A": 52.0,
+   "Outros→B": 47.4,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.6,
+   "Abstenção T1→A": 0.2,
+   "Abstenção T1→B": 4.5
+  }
+ },
+ "2016|4278": {
+  "uf": "pa",
+  "secoes": 2510,
+  "A_validos": 52.33,
+  "theta": [
+   -6.5835,
+   -6.8764,
+   -4.678,
+   1.3901,
+   1.3165,
+   -5.7996,
+   -1.1247,
+   -4.6242
+  ],
+  "legivel": {
+   "A→B": 0.0,
+   "B→A": 0.0,
+   "Abstenção (votantes T1)": 0.5,
+   "Outros→A": 45.9,
+   "Outros→B": 42.6,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 11.4,
+   "Abstenção T1→A": 7.4,
+   "Abstenção T1→B": 0.3
+  }
+ },
+ "2016|6050": {
+  "uf": "ap",
+  "secoes": 847,
+  "A_validos": 60.5,
+  "theta": [
+   -5.3915,
+   -4.3114,
+   -2.1485,
+   1.9198,
+   1.7476,
+   -4.9534,
+   -2.7461,
+   -3.6548
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 0.4,
+   "Abstenção (votantes T1)": 5.2,
+   "Outros→A": 50.3,
+   "Outros→B": 42.3,
+   "Outros→Branco/nulo": 0.1,
+   "Outros→Abstenção": 7.4,
+   "Abstenção T1→A": 1.8,
+   "Abstenção T1→B": 0.8
+  }
+ },
+ "2016|9210": {
+  "uf": "ma",
+  "secoes": 1968,
+  "A_validos": 53.94,
+  "theta": [
+   -5.808,
+   -0.3131,
+   -1.3126,
+   3.1578,
+   4.6195,
+   -4.3203,
+   0.7882,
+   -0.0408
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 12.7,
+   "Abstenção (votantes T1)": 10.6,
+   "Outros→A": 18.7,
+   "Outros→B": 80.5,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.8,
+   "Abstenção T1→A": 20.6,
+   "Abstenção T1→B": 14.7
+  }
+ },
+ "2016|13730": {
+  "uf": "ce",
+  "secoes": 601,
+  "A_validos": 54.23,
+  "theta": [
+   -0.7032,
+   -2.4046,
+   -1.5011,
+   1.9794,
+   1.7659,
+   -3.7762,
+   -0.8061,
+   -0.6297
+  ],
+  "legivel": {
+   "A→B": 9.9,
+   "B→A": 2.5,
+   "Abstenção (votantes T1)": 9.1,
+   "Outros→A": 51.3,
+   "Outros→B": 41.4,
+   "Outros→Branco/nulo": 0.2,
+   "Outros→Abstenção": 7.1,
+   "Abstenção T1→A": 9.3,
+   "Abstenção T1→B": 10.4
+  }
+ },
+ "2016|13897": {
+  "uf": "ce",
+  "secoes": 4492,
+  "A_validos": 53.57,
+  "theta": [
+   -6.8513,
+   -7.2497,
+   -4.1049,
+   1.5926,
+   1.8489,
+   -5.4035,
+   -1.7724,
+   -5.5871
+  ],
+  "legivel": {
+   "A→B": 0.0,
+   "B→A": 0.0,
+   "Abstenção (votantes T1)": 0.8,
+   "Outros→A": 40.1,
+   "Outros→B": 51.8,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 8.1,
+   "Abstenção T1→A": 4.4,
+   "Abstenção T1→B": 0.1
+  }
+ },
+ "2016|23817": {
+  "uf": "pe",
+  "secoes": 609,
+  "A_validos": 46.85,
+  "theta": [
+   -5.6383,
+   -4.3047,
+   -2.2817,
+   3.1891,
+   4.4295,
+   -3.6121,
+   1.6201,
+   -1.5023
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 0.4,
+   "Abstenção (votantes T1)": 4.6,
+   "Outros→A": 22.2,
+   "Outros→B": 76.8,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.9,
+   "Abstenção T1→A": 25.0,
+   "Abstenção T1→B": 5.5
+  }
+ },
+ "2016|24570": {
+  "uf": "pe",
+  "secoes": 1191,
+  "A_validos": 58.5,
+  "theta": [
+   -1.5448,
+   -5.5806,
+   -1.1516,
+   5.4788,
+   4.6192,
+   -2.8166,
+   0.2411,
+   -1.1893
+  ],
+  "legivel": {
+   "A→B": 5.3,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 12.0,
+   "Outros→A": 70.0,
+   "Outros→B": 29.6,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.3,
+   "Abstenção T1→A": 16.8,
+   "Abstenção T1→B": 7.0
+  }
+ },
+ "2016|24910": {
+  "uf": "pe",
+  "secoes": 864,
+  "A_validos": 42.96,
+  "theta": [
+   4.7605,
+   -2.0194,
+   -1.4818,
+   5.7123,
+   5.8549,
+   -2.4341,
+   3.6742,
+   3.5721
+  ],
+  "legivel": {
+   "A→B": 29.7,
+   "B→A": 3.5,
+   "Abstenção (votantes T1)": 9.3,
+   "Outros→A": 46.4,
+   "Outros→B": 53.5,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.2,
+   "Abstenção T1→A": 29.3,
+   "Abstenção T1→B": 29.2
+  }
+ },
+ "2016|25313": {
+  "uf": "pe",
+  "secoes": 3286,
+  "A_validos": 61.3,
+  "theta": [
+   0.6384,
+   -7.1546,
+   -3.4411,
+   1.7826,
+   0.3216,
+   -4.4971,
+   0.1508,
+   -5.3447
+  ],
+  "legivel": {
+   "A→B": 19.6,
+   "B→A": 0.0,
+   "Abstenção (votantes T1)": 1.6,
+   "Outros→A": 71.3,
+   "Outros→B": 16.5,
+   "Outros→Branco/nulo": 0.1,
+   "Outros→Abstenção": 12.0,
+   "Abstenção T1→A": 16.1,
+   "Abstenção T1→B": 0.1
+  }
+ },
+ "2016|27855": {
+  "uf": "al",
+  "secoes": 1530,
+  "A_validos": 60.27,
+  "theta": [
+   -6.1608,
+   -6.2001,
+   -4.6842,
+   0.9503,
+   1.0996,
+   -1.4731,
+   -4.2649,
+   -2.4966
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 0.5,
+   "Outros→A": 37.9,
+   "Outros→B": 44.0,
+   "Outros→Branco/nulo": 3.4,
+   "Outros→Abstenção": 14.7,
+   "Abstenção T1→A": 0.4,
+   "Abstenção T1→B": 2.3
+  }
+ },
+ "2016|31054": {
+  "uf": "se",
+  "secoes": 1118,
+  "A_validos": 52.11,
+  "theta": [
+   -5.4769,
+   0.9192,
+   -1.3154,
+   3.2063,
+   4.2759,
+   -3.4726,
+   0.6681,
+   0.0154
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 21.4,
+   "Abstenção (votantes T1)": 10.6,
+   "Outros→A": 25.3,
+   "Outros→B": 73.7,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 1.0,
+   "Abstenção T1→A": 19.8,
+   "Abstenção T1→B": 15.1
+  }
+ },
+ "2016|39659": {
+  "uf": "ba",
+  "secoes": 653,
+  "A_validos": 57.58,
+  "theta": [
+   -1.9568,
+   -5.2198,
+   -1.7895,
+   4.8231,
+   4.7832,
+   -2.7037,
+   -0.2618,
+   -3.3431
+  ],
+  "legivel": {
+   "A→B": 3.7,
+   "B→A": 0.2,
+   "Abstenção (votantes T1)": 7.2,
+   "Outros→A": 50.8,
+   "Outros→B": 48.8,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.4,
+   "Abstenção T1→A": 13.0,
+   "Abstenção T1→B": 1.0
+  }
+ },
+ "2016|41238": {
+  "uf": "mg",
+  "secoes": 4478,
+  "A_validos": 47.02,
+  "theta": [
+   -1.8977,
+   -6.9971,
+   -2.4661,
+   2.6562,
+   3.2924,
+   -3.8961,
+   -1.1059,
+   -5.8334
+  ],
+  "legivel": {
+   "A→B": 3.9,
+   "B→A": 0.0,
+   "Abstenção (votantes T1)": 3.9,
+   "Outros→A": 33.8,
+   "Outros→B": 63.8,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 2.4,
+   "Abstenção T1→A": 7.5,
+   "Abstenção T1→B": 0.1
+  }
+ },
+ "2016|43710": {
+  "uf": "mg",
+  "secoes": 1280,
+  "A_validos": 27.04,
+  "theta": [
+   0.5878,
+   -5.8534,
+   -0.21,
+   2.8366,
+   5.6207,
+   -3.1168,
+   2.8914,
+   1.5072
+  ],
+  "legivel": {
+   "A→B": 19.3,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 22.4,
+   "Outros→A": 5.8,
+   "Outros→B": 93.8,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.3,
+   "Abstenção T1→A": 28.4,
+   "Abstenção T1→B": 24.6
+  }
+ },
+ "2016|47333": {
+  "uf": "mg",
+  "secoes": 1167,
+  "A_validos": 57.87,
+  "theta": [
+   -5.309,
+   -4.3164,
+   -1.4011,
+   3.1199,
+   3.3487,
+   -3.04,
+   0.0872,
+   -4.843
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 0.4,
+   "Abstenção (votantes T1)": 9.9,
+   "Outros→A": 43.4,
+   "Outros→B": 54.6,
+   "Outros→Branco/nulo": 0.1,
+   "Outros→Abstenção": 1.9,
+   "Abstenção T1→A": 15.7,
+   "Abstenção T1→B": 0.2
+  }
+ },
+ "2016|48658": {
+  "uf": "mg",
+  "secoes": 815,
+  "A_validos": 65.31,
+  "theta": [
+   -5.4312,
+   -4.8777,
+   -1.7989,
+   5.5952,
+   4.4045,
+   -2.4608,
+   -1.8169,
+   -0.8463
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 0.2,
+   "Abstenção (votantes T1)": 7.1,
+   "Outros→A": 76.4,
+   "Outros→B": 23.2,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.3,
+   "Abstenção T1→A": 4.2,
+   "Abstenção T1→B": 9.0
+  }
+ },
+ "2016|56251": {
+  "uf": "es",
+  "secoes": 726,
+  "A_validos": 47.49,
+  "theta": [
+   -3.8386,
+   -5.3416,
+   -0.6054,
+   4.1363,
+   4.9189,
+   -2.6607,
+   0.701,
+   1.8796
+  ],
+  "legivel": {
+   "A→B": 0.6,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 17.7,
+   "Outros→A": 31.2,
+   "Outros→B": 68.3,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.5,
+   "Abstenção T1→A": 20.1,
+   "Abstenção T1→B": 26.0
+  }
+ },
+ "2016|56995": {
+  "uf": "es",
+  "secoes": 838,
+  "A_validos": 48.79,
+  "theta": [
+   -5.3726,
+   -4.7036,
+   -1.3044,
+   3.1378,
+   4.786,
+   -2.5994,
+   -0.7269,
+   -0.1266
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 0.3,
+   "Abstenção (votantes T1)": 10.7,
+   "Outros→A": 16.0,
+   "Outros→B": 83.2,
+   "Outros→Branco/nulo": 0.1,
+   "Outros→Abstenção": 0.7,
+   "Abstenção T1→A": 9.8,
+   "Abstenção T1→B": 14.1
+  }
+ },
+ "2016|57037": {
+  "uf": "es",
+  "secoes": 902,
+  "A_validos": 58.91,
+  "theta": [
+   -2.6948,
+   -4.748,
+   -2.0606,
+   2.0668,
+   1.2354,
+   -2.186,
+   -1.8038,
+   -2.8569
+  ],
+  "legivel": {
+   "A→B": 1.9,
+   "B→A": 0.3,
+   "Abstenção (votantes T1)": 5.6,
+   "Outros→A": 63.4,
+   "Outros→B": 27.6,
+   "Outros→Branco/nulo": 0.9,
+   "Outros→Abstenção": 8.0,
+   "Abstenção T1→A": 4.2,
+   "Abstenção T1→B": 1.6
+  }
+ },
+ "2016|57053": {
+  "uf": "es",
+  "secoes": 723,
+  "A_validos": 51.19,
+  "theta": [
+   -5.9595,
+   -6.7858,
+   -5.7509,
+   0.5821,
+   1.2551,
+   -5.5098,
+   -1.0683,
+   -3.3337
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 0.0,
+   "Abstenção (votantes T1)": 0.2,
+   "Outros→A": 28.4,
+   "Outros→B": 55.7,
+   "Outros→Branco/nulo": 0.1,
+   "Outros→Abstenção": 15.9,
+   "Abstenção T1→A": 7.7,
+   "Abstenção T1→B": 1.0
+  }
+ },
+ "2016|58041": {
+  "uf": "rj",
+  "secoes": 904,
+  "A_validos": 56.99,
+  "theta": [
+   -6.0971,
+   -5.0036,
+   -1.0603,
+   3.641,
+   4.0363,
+   -3.1367,
+   -0.4334,
+   -1.3682
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 0.2,
+   "Abstenção (votantes T1)": 12.9,
+   "Outros→A": 39.8,
+   "Outros→B": 59.1,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 1.0,
+   "Abstenção T1→A": 11.8,
+   "Abstenção T1→B": 6.1
+  }
+ },
+ "2016|58335": {
+  "uf": "rj",
+  "secoes": 1778,
+  "A_validos": 54.18,
+  "theta": [
+   -6.8345,
+   -5.9501,
+   -2.0906,
+   1.3024,
+   1.5616,
+   -5.6187,
+   -3.3762,
+   -1.3128
+  ],
+  "legivel": {
+   "A→B": 0.0,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 5.5,
+   "Outros→A": 38.9,
+   "Outros→B": 50.4,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 10.6,
+   "Abstenção T1→A": 1.0,
+   "Abstenção T1→B": 6.4
+  }
+ },
+ "2016|58653": {
+  "uf": "rj",
+  "secoes": 1242,
+  "A_validos": 58.59,
+  "theta": [
+   -2.0812,
+   -1.3413,
+   -1.3247,
+   1.0369,
+   1.0391,
+   -1.0047,
+   -0.093,
+   -0.2611
+  ],
+  "legivel": {
+   "A→B": 3.3,
+   "B→A": 6.2,
+   "Abstenção (votantes T1)": 10.5,
+   "Outros→A": 40.2,
+   "Outros→B": 40.3,
+   "Outros→Branco/nulo": 5.2,
+   "Outros→Abstenção": 14.3,
+   "Abstenção T1→A": 14.3,
+   "Abstenção T1→B": 13.1
+  }
+ },
+ "2016|58696": {
+  "uf": "rj",
+  "secoes": 1657,
+  "A_validos": 63.91,
+  "theta": [
+   -6.4342,
+   0.335,
+   -0.9024,
+   5.5311,
+   4.9169,
+   -2.6373,
+   0.0165,
+   -0.8173
+  ],
+  "legivel": {
+   "A→B": 0.0,
+   "B→A": 17.5,
+   "Abstenção (votantes T1)": 14.4,
+   "Outros→A": 64.7,
+   "Outros→B": 35.0,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.3,
+   "Abstenção T1→A": 15.1,
+   "Abstenção T1→B": 9.2
+  }
+ },
+ "2016|58777": {
+  "uf": "rj",
+  "secoes": 731,
+  "A_validos": 52.65,
+  "theta": [
+   -4.5858,
+   -0.7021,
+   -1.054,
+   3.6718,
+   3.8375,
+   -2.7861,
+   -1.3447,
+   0.4982
+  ],
+  "legivel": {
+   "A→B": 0.3,
+   "B→A": 9.9,
+   "Abstenção (votantes T1)": 12.9,
+   "Outros→A": 45.3,
+   "Outros→B": 53.5,
+   "Outros→Branco/nulo": 0.1,
+   "Outros→Abstenção": 1.2,
+   "Abstenção T1→A": 6.2,
+   "Abstenção T1→B": 18.7
+  }
+ },
+ "2016|58971": {
+  "uf": "rj",
+  "secoes": 1919,
+  "A_validos": 53.63,
+  "theta": [
+   -6.1999,
+   -6.4571,
+   -0.6921,
+   4.3446,
+   4.2393,
+   -3.9191,
+   -0.0064,
+   -2.174
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 0.0,
+   "Abstenção (votantes T1)": 16.7,
+   "Outros→A": 52.3,
+   "Outros→B": 47.0,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.7,
+   "Abstenção T1→A": 15.0,
+   "Abstenção T1→B": 3.1
+  }
+ },
+ "2016|59250": {
+  "uf": "rj",
+  "secoes": 650,
+  "A_validos": 45.4,
+  "theta": [
+   -5.7409,
+   -5.241,
+   -0.9467,
+   4.1601,
+   4.5729,
+   -3.3464,
+   -4.3253,
+   1.8782
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 0.2,
+   "Abstenção (votantes T1)": 14.0,
+   "Outros→A": 39.6,
+   "Outros→B": 59.8,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.6,
+   "Abstenção T1→A": 0.4,
+   "Abstenção T1→B": 26.0
+  }
+ },
+ "2016|60011": {
+  "uf": "rj",
+  "secoes": 11609,
+  "A_validos": 59.36,
+  "theta": [
+   -7.2164,
+   -7.5051,
+   -2.5381,
+   1.6452,
+   1.0763,
+   -0.5079,
+   -7.6326,
+   -0.628
+  ],
+  "legivel": {
+   "A→B": 0.0,
+   "B→A": 0.0,
+   "Abstenção (votantes T1)": 3.7,
+   "Outros→A": 53.3,
+   "Outros→B": 30.2,
+   "Outros→Branco/nulo": 6.2,
+   "Outros→Abstenção": 10.3,
+   "Abstenção T1→A": 0.0,
+   "Abstenção T1→B": 10.4
+  }
+ },
+ "2016|62197": {
+  "uf": "sp",
+  "secoes": 741,
+  "A_validos": 59.96,
+  "theta": [
+   -4.2666,
+   -4.613,
+   -1.2095,
+   5.6543,
+   4.6913,
+   -2.5286,
+   -1.3157,
+   0.2355
+  ],
+  "legivel": {
+   "A→B": 0.4,
+   "B→A": 0.3,
+   "Abstenção (votantes T1)": 11.5,
+   "Outros→A": 72.2,
+   "Outros→B": 27.6,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.3,
+   "Abstenção T1→A": 6.3,
+   "Abstenção T1→B": 16.8
+  }
+ },
+ "2016|63770": {
+  "uf": "sp",
+  "secoes": 880,
+  "A_validos": 57.67,
+  "theta": [
+   -5.2321,
+   -5.1332,
+   -0.751,
+   3.8557,
+   4.8622,
+   -2.5808,
+   2.1482,
+   -1.6178
+  ],
+  "legivel": {
+   "A→B": 0.2,
+   "B→A": 0.2,
+   "Abstenção (votantes T1)": 16.0,
+   "Outros→A": 26.6,
+   "Outros→B": 72.8,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.6,
+   "Abstenção T1→A": 26.9,
+   "Abstenção T1→B": 5.0
+  }
+ },
+ "2016|64254": {
+  "uf": "sp",
+  "secoes": 656,
+  "A_validos": 43.67,
+  "theta": [
+   -3.4353,
+   -5.3726,
+   -1.2165,
+   0.8686,
+   5.884,
+   -2.5065,
+   0.0655,
+   -2.3252
+  ],
+  "legivel": {
+   "A→B": 0.9,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 11.4,
+   "Outros→A": 0.7,
+   "Outros→B": 99.0,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.3,
+   "Abstenção T1→A": 15.5,
+   "Abstenção T1→B": 2.7
+  }
+ },
+ "2016|64750": {
+  "uf": "sp",
+  "secoes": 640,
+  "A_validos": 49.16,
+  "theta": [
+   -4.9975,
+   -4.9115,
+   -0.7476,
+   4.1391,
+   5.1078,
+   -2.9692,
+   -0.5555,
+   1.1443
+  ],
+  "legivel": {
+   "A→B": 0.2,
+   "B→A": 0.2,
+   "Abstenção (votantes T1)": 16.1,
+   "Outros→A": 27.4,
+   "Outros→B": 72.2,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.4,
+   "Abstenção T1→A": 10.9,
+   "Abstenção T1→B": 22.8
+  }
+ },
+ "2016|64777": {
+  "uf": "sp",
+  "secoes": 2496,
+  "A_validos": 83.5,
+  "theta": [
+   -7.1095,
+   5.4746,
+   -1.5096,
+   1.9904,
+   -0.8296,
+   -5.6583,
+   0.4118,
+   -5.7764
+  ],
+  "legivel": {
+   "A→B": 0.0,
+   "B→A": 29.9,
+   "Abstenção (votantes T1)": 9.0,
+   "Outros→A": 83.6,
+   "Outros→B": 5.0,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 11.4,
+   "Abstenção T1→A": 18.0,
+   "Abstenção T1→B": 0.1
+  }
+ },
+ "2016|66192": {
+  "uf": "sp",
+  "secoes": 865,
+  "A_validos": 58.58,
+  "theta": [
+   -0.7456,
+   -5.4733,
+   -1.5983,
+   2.9549,
+   2.4662,
+   -3.6466,
+   -0.4319,
+   -1.4259
+  ],
+  "legivel": {
+   "A→B": 9.7,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 8.4,
+   "Outros→A": 60.0,
+   "Outros→B": 36.8,
+   "Outros→Branco/nulo": 0.1,
+   "Outros→Abstenção": 3.1,
+   "Abstenção T1→A": 11.8,
+   "Abstenção T1→B": 5.8
+  }
+ },
+ "2016|66893": {
+  "uf": "sp",
+  "secoes": 859,
+  "A_validos": 64.47,
+  "theta": [
+   -5.6649,
+   -3.7992,
+   -1.4814,
+   1.8085,
+   1.7373,
+   -0.633,
+   0.1586,
+   -4.1047
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 0.7,
+   "Abstenção (votantes T1)": 9.3,
+   "Outros→A": 45.8,
+   "Outros→B": 42.7,
+   "Outros→Branco/nulo": 4.0,
+   "Outros→Abstenção": 7.5,
+   "Abstenção T1→A": 16.2,
+   "Abstenção T1→B": 0.5
+  }
+ },
+ "2016|67890": {
+  "uf": "sp",
+  "secoes": 1528,
+  "A_validos": 61.21,
+  "theta": [
+   -5.072,
+   3.1298,
+   -0.5291,
+   5.3079,
+   4.9434,
+   -2.7796,
+   -0.1903,
+   0.658
+  ],
+  "legivel": {
+   "A→B": 0.2,
+   "B→A": 28.7,
+   "Abstenção (votantes T1)": 18.5,
+   "Outros→A": 58.8,
+   "Outros→B": 40.9,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.3,
+   "Abstenção T1→A": 13.6,
+   "Abstenção T1→B": 19.8
+  }
+ },
+ "2016|69698": {
+  "uf": "sp",
+  "secoes": 1227,
+  "A_validos": 56.94,
+  "theta": [
+   -6.4537,
+   -6.4545,
+   -1.3227,
+   4.5147,
+   4.2476,
+   -3.0829,
+   -1.0383,
+   -0.9564
+  ],
+  "legivel": {
+   "A→B": 0.0,
+   "B→A": 0.0,
+   "Abstenção (votantes T1)": 10.5,
+   "Outros→A": 56.3,
+   "Outros→B": 43.1,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.6,
+   "Abstenção T1→A": 7.8,
+   "Abstenção T1→B": 8.3
+  }
+ },
+ "2016|70572": {
+  "uf": "sp",
+  "secoes": 1608,
+  "A_validos": 78.21,
+  "theta": [
+   -5.9576,
+   -5.1774,
+   -0.2941,
+   7.1431,
+   4.1367,
+   -2.3738,
+   2.9269,
+   -0.899
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 0.2,
+   "Abstenção (votantes T1)": 21.4,
+   "Outros→A": 95.2,
+   "Outros→B": 4.7,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.1,
+   "Abstenção T1→A": 28.5,
+   "Abstenção T1→B": 8.7
+  }
+ },
+ "2016|70750": {
+  "uf": "sp",
+  "secoes": 1740,
+  "A_validos": 59.94,
+  "theta": [
+   -6.7049,
+   2.6461,
+   -1.9357,
+   0.2737,
+   1.9096,
+   -1.9365,
+   -1.0042,
+   -5.8934
+  ],
+  "legivel": {
+   "A→B": 0.0,
+   "B→A": 28.0,
+   "Abstenção (votantes T1)": 6.3,
+   "Outros→A": 14.3,
+   "Outros→B": 73.3,
+   "Outros→Branco/nulo": 1.6,
+   "Outros→Abstenção": 10.9,
+   "Abstenção T1→A": 8.0,
+   "Abstenção T1→B": 0.1
+  }
+ },
+ "2016|71455": {
+  "uf": "sp",
+  "secoes": 1283,
+  "A_validos": 58.48,
+  "theta": [
+   -0.6043,
+   -0.8134,
+   -0.891,
+   5.5487,
+   5.5431,
+   -2.6242,
+   2.6095,
+   -0.6808
+  ],
+  "legivel": {
+   "A→B": 10.6,
+   "B→A": 9.2,
+   "Abstenção (votantes T1)": 14.5,
+   "Outros→A": 50.0,
+   "Outros→B": 49.8,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.2,
+   "Abstenção T1→A": 27.9,
+   "Abstenção T1→B": 10.1
+  }
+ },
+ "2016|71510": {
+  "uf": "sp",
+  "secoes": 616,
+  "A_validos": 59.61,
+  "theta": [
+   -5.3774,
+   -2.5395,
+   -0.6205,
+   4.7439,
+   4.0361,
+   -2.8087,
+   0.147,
+   -0.2942
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 2.2,
+   "Abstenção (votantes T1)": 17.5,
+   "Outros→A": 66.6,
+   "Outros→B": 32.8,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.6,
+   "Abstenção T1→A": 16.1,
+   "Abstenção T1→B": 12.8
+  }
+ },
+ "2016|75353": {
+  "uf": "pr",
+  "secoes": 3940,
+  "A_validos": 53.25,
+  "theta": [
+   1.8546,
+   4.6445,
+   -1.4574,
+   3.6457,
+   3.8571,
+   2.1776,
+   -0.5318,
+   -4.9747
+  ],
+  "legivel": {
+   "A→B": 25.9,
+   "B→A": 29.7,
+   "Abstenção (votantes T1)": 9.4,
+   "Outros→A": 40.1,
+   "Outros→B": 49.6,
+   "Outros→Branco/nulo": 9.2,
+   "Outros→Abstenção": 1.0,
+   "Abstenção T1→A": 11.1,
+   "Abstenção T1→B": 0.2
+  }
+ },
+ "2016|76910": {
+  "uf": "pr",
+  "secoes": 861,
+  "A_validos": 41.12,
+  "theta": [
+   -5.1049,
+   -1.1648,
+   -1.4034,
+   -0.1642,
+   6.8889,
+   -2.1767,
+   -0.3049,
+   0.0205
+  ],
+  "legivel": {
+   "A→B": 0.2,
+   "B→A": 7.1,
+   "Abstenção (votantes T1)": 9.9,
+   "Outros→A": 0.1,
+   "Outros→B": 99.8,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.1,
+   "Abstenção T1→A": 12.7,
+   "Abstenção T1→B": 15.2
+  }
+ },
+ "2016|77771": {
+  "uf": "pr",
+  "secoes": 701,
+  "A_validos": 55.38,
+  "theta": [
+   -5.0265,
+   -5.5509,
+   -1.8392,
+   4.297,
+   5.0612,
+   -2.8118,
+   0.819,
+   -1.3266
+  ],
+  "legivel": {
+   "A→B": 0.2,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 6.9,
+   "Outros→A": 31.6,
+   "Outros→B": 67.9,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.4,
+   "Abstenção T1→A": 20.8,
+   "Abstenção T1→B": 6.3
+  }
+ },
+ "2016|80470": {
+  "uf": "sc",
+  "secoes": 700,
+  "A_validos": 57.56,
+  "theta": [
+   -5.9803,
+   -0.9784,
+   -2.0815,
+   4.6548,
+   4.9129,
+   -2.6259,
+   0.8974,
+   -3.6734
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 8.2,
+   "Abstenção (votantes T1)": 5.5,
+   "Outros→A": 43.4,
+   "Outros→B": 56.2,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.4,
+   "Abstenção T1→A": 21.3,
+   "Abstenção T1→B": 0.7
+  }
+ },
+ "2016|81051": {
+  "uf": "sc",
+  "secoes": 981,
+  "A_validos": 50.26,
+  "theta": [
+   -5.6952,
+   -6.2098,
+   -5.1427,
+   -0.0038,
+   1.4309,
+   0.2326,
+   -4.5489,
+   -4.51
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 0.3,
+   "Outros→A": 13.4,
+   "Outros→B": 56.2,
+   "Outros→Branco/nulo": 17.0,
+   "Outros→Abstenção": 13.4,
+   "Abstenção T1→A": 0.3,
+   "Abstenção T1→B": 0.3
+  }
+ },
+ "2016|81795": {
+  "uf": "sc",
+  "secoes": 1129,
+  "A_validos": 55.6,
+  "theta": [
+   -6.9711,
+   -5.9514,
+   -3.7822,
+   1.4657,
+   2.0976,
+   -5.5082,
+   -0.4047,
+   -4.6905
+  ],
+  "legivel": {
+   "A→B": 0.0,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 1.1,
+   "Outros→A": 32.1,
+   "Outros→B": 60.4,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 7.4,
+   "Abstenção T1→A": 12.0,
+   "Abstenção T1→B": 0.3
+  }
+ },
+ "2016|85898": {
+  "uf": "rs",
+  "secoes": 749,
+  "A_validos": 48.75,
+  "theta": [
+   -5.0554,
+   -2.1821,
+   -0.5593,
+   3.7044,
+   5.4984,
+   -2.336,
+   4.271,
+   4.2018
+  ],
+  "legivel": {
+   "A→B": 0.2,
+   "B→A": 3.0,
+   "Abstenção (votantes T1)": 18.2,
+   "Outros→A": 14.2,
+   "Outros→B": 85.4,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.3,
+   "Abstenção T1→A": 29.6,
+   "Abstenção T1→B": 29.6
+  }
+ },
+ "2016|85995": {
+  "uf": "rs",
+  "secoes": 1013,
+  "A_validos": 37.21,
+  "theta": [
+   -0.3922,
+   -5.4463,
+   -1.7309,
+   -0.2168,
+   6.4927,
+   -2.2876,
+   0.0559,
+   1.7202
+  ],
+  "legivel": {
+   "A→B": 12.1,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 7.5,
+   "Outros→A": 0.1,
+   "Outros→B": 99.7,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.2,
+   "Abstenção T1→A": 15.4,
+   "Abstenção T1→B": 25.4
+  }
+ },
+ "2016|88013": {
+  "uf": "rs",
+  "secoes": 2961,
+  "A_validos": 60.5,
+  "theta": [
+   -4.7958,
+   3.091,
+   -1.1851,
+   4.0262,
+   3.7122,
+   2.5785,
+   -4.7319,
+   -0.1805
+  ],
+  "legivel": {
+   "A→B": 0.2,
+   "B→A": 28.7,
+   "Abstenção (votantes T1)": 11.7,
+   "Outros→A": 50.4,
+   "Outros→B": 36.8,
+   "Outros→Branco/nulo": 11.9,
+   "Outros→Abstenção": 0.9,
+   "Abstenção T1→A": 0.3,
+   "Abstenção T1→B": 13.7
+  }
+ },
+ "2016|88412": {
+  "uf": "rs",
+  "secoes": 600,
+  "A_validos": 49.92,
+  "theta": [
+   -5.8235,
+   -5.2053,
+   -4.2608,
+   1.3972,
+   1.2387,
+   -4.7802,
+   -5.2887,
+   -0.2894
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 0.2,
+   "Abstenção (votantes T1)": 0.7,
+   "Outros→A": 47.6,
+   "Outros→B": 40.6,
+   "Outros→Branco/nulo": 0.1,
+   "Outros→Abstenção": 11.8,
+   "Abstenção T1→A": 0.2,
+   "Abstenção T1→B": 12.8
+  }
+ },
+ "2016|90514": {
+  "uf": "ms",
+  "secoes": 1669,
+  "A_validos": 58.77,
+  "theta": [
+   -5.2744,
+   -2.483,
+   -2.1845,
+   2.4629,
+   1.9493,
+   -1.1896,
+   -4.1228,
+   -1.7301
+  ],
+  "legivel": {
+   "A→B": 0.2,
+   "B→A": 2.3,
+   "Abstenção (votantes T1)": 5.1,
+   "Outros→A": 58.5,
+   "Outros→B": 35.0,
+   "Outros→Branco/nulo": 1.5,
+   "Outros→Abstenção": 5.0,
+   "Abstenção T1→A": 0.5,
+   "Abstenção T1→B": 4.5
+  }
+ },
+ "2016|90670": {
+  "uf": "mt",
+  "secoes": 1168,
+  "A_validos": 60.41,
+  "theta": [
+   -3.2982,
+   -4.1879,
+   -1.7255,
+   2.2048,
+   1.2448,
+   0.07,
+   -3.1334,
+   -2.5573
+  ],
+  "legivel": {
+   "A→B": 1.1,
+   "B→A": 0.4,
+   "Abstenção (votantes T1)": 7.6,
+   "Outros→A": 62.1,
+   "Outros→B": 23.8,
+   "Outros→Branco/nulo": 7.3,
+   "Outros→Abstenção": 6.8,
+   "Abstenção T1→A": 1.3,
+   "Abstenção T1→B": 2.2
+  }
+ },
+ "2016|92215": {
+  "uf": "go",
+  "secoes": 739,
+  "A_validos": 48.77,
+  "theta": [
+   -4.9609,
+   -0.3027,
+   -1.3375,
+   3.1212,
+   3.8057,
+   -2.3746,
+   -1.9625,
+   -2.4097
+  ],
+  "legivel": {
+   "A→B": 0.2,
+   "B→A": 12.7,
+   "Abstenção (votantes T1)": 10.4,
+   "Outros→A": 33.0,
+   "Outros→B": 65.4,
+   "Outros→Branco/nulo": 0.1,
+   "Outros→Abstenção": 1.5,
+   "Abstenção T1→A": 3.7,
+   "Abstenção T1→B": 2.5
+  }
+ },
+ "2016|93734": {
+  "uf": "go",
+  "secoes": 2747,
+  "A_validos": 57.7,
+  "theta": [
+   -7.5357,
+   -1.0404,
+   -3.5525,
+   1.1883,
+   1.1665,
+   -3.8443,
+   -2.9581,
+   -5.9584
+  ],
+  "legivel": {
+   "A→B": 0.0,
+   "B→A": 7.8,
+   "Abstenção (votantes T1)": 1.4,
+   "Outros→A": 43.7,
+   "Outros→B": 42.7,
+   "Outros→Branco/nulo": 0.3,
+   "Outros→Abstenção": 13.3,
+   "Abstenção T1→A": 1.5,
+   "Abstenção T1→B": 0.1
+  }
+ },
+ "2020|35": {
+  "uf": "ro",
+  "secoes": 842,
+  "A_validos": 54.45,
+  "theta": [
+   -4.3668,
+   -1.502,
+   -0.9235,
+   2.4242,
+   2.8388,
+   -3.0642,
+   -4.8578,
+   -4.7494
+  ],
+  "legivel": {
+   "A→B": 0.4,
+   "B→A": 5.5,
+   "Abstenção (votantes T1)": 14.2,
+   "Outros→A": 38.4,
+   "Outros→B": 58.1,
+   "Outros→Branco/nulo": 0.2,
+   "Outros→Abstenção": 3.4,
+   "Abstenção T1→A": 0.2,
+   "Abstenção T1→B": 0.3
+  }
+ },
+ "2020|1392": {
+  "uf": "ac",
+  "secoes": 707,
+  "A_validos": 62.93,
+  "theta": [
+   -5.6706,
+   -5.1702,
+   -2.2499,
+   1.2383,
+   1.3494,
+   -4.366,
+   -4.5345,
+   -5.1045
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 0.2,
+   "Abstenção (votantes T1)": 4.8,
+   "Outros→A": 41.5,
+   "Outros→B": 46.3,
+   "Outros→Branco/nulo": 0.2,
+   "Outros→Abstenção": 12.0,
+   "Abstenção T1→A": 0.3,
+   "Abstenção T1→B": 0.2
+  }
+ },
+ "2020|2550": {
+  "uf": "am",
+  "secoes": 3371,
+  "A_validos": 48.73,
+  "theta": [
+   -4.8427,
+   -5.5499,
+   -2.1099,
+   2.2034,
+   2.3575,
+   -0.23,
+   -6.0776,
+   -6.374
+  ],
+  "legivel": {
+   "A→B": 0.2,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 5.4,
+   "Outros→A": 42.3,
+   "Outros→B": 49.3,
+   "Outros→Branco/nulo": 3.7,
+   "Outros→Abstenção": 4.7,
+   "Abstenção T1→A": 0.1,
+   "Abstenção T1→B": 0.1
+  }
+ },
+ "2020|3018": {
+  "uf": "rr",
+  "secoes": 657,
+  "A_validos": 85.36,
+  "theta": [
+   -4.248,
+   0.5938,
+   -2.0474,
+   1.3408,
+   -0.3793,
+   -0.6391,
+   -4.7323,
+   -5.0184
+  ],
+  "legivel": {
+   "A→B": 0.4,
+   "B→A": 19.3,
+   "Abstenção (votantes T1)": 5.7,
+   "Outros→A": 63.3,
+   "Outros→B": 11.3,
+   "Outros→Branco/nulo": 8.7,
+   "Outros→Abstenção": 16.6,
+   "Abstenção T1→A": 0.3,
+   "Abstenção T1→B": 0.2
+  }
+ },
+ "2020|4278": {
+  "uf": "pa",
+  "secoes": 2562,
+  "A_validos": 51.76,
+  "theta": [
+   -6.5173,
+   -5.6553,
+   -2.0485,
+   1.1883,
+   1.3817,
+   -7.2098,
+   -0.5251,
+   1.1922
+  ],
+  "legivel": {
+   "A→B": 0.0,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 5.7,
+   "Outros→A": 39.7,
+   "Outros→B": 48.2,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 12.1,
+   "Abstenção T1→A": 11.1,
+   "Abstenção T1→B": 23.0
+  }
+ },
+ "2020|5355": {
+  "uf": "pa",
+  "secoes": 754,
+  "A_validos": 59.22,
+  "theta": [
+   -5.3425,
+   -3.7719,
+   -1.3547,
+   3.3844,
+   2.5382,
+   -0.4506,
+   -0.8458,
+   -3.7119
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 0.7,
+   "Abstenção (votantes T1)": 10.3,
+   "Outros→A": 67.4,
+   "Outros→B": 28.9,
+   "Outros→Branco/nulo": 1.5,
+   "Outros→Abstenção": 2.3,
+   "Abstenção T1→A": 9.0,
+   "Abstenção T1→B": 0.7
+  }
+ },
+ "2020|6050": {
+  "uf": "ap",
+  "secoes": 703,
+  "A_validos": 44.33,
+  "theta": [
+   -4.8283,
+   -0.5669,
+   -1.1591,
+   0.7153,
+   1.8735,
+   -4.9911,
+   -4.0595,
+   -3.8565
+  ],
+  "legivel": {
+   "A→B": 0.2,
+   "B→A": 10.9,
+   "Abstenção (votantes T1)": 11.9,
+   "Outros→A": 21.4,
+   "Outros→B": 68.1,
+   "Outros→Branco/nulo": 0.1,
+   "Outros→Abstenção": 10.5,
+   "Abstenção T1→A": 0.5,
+   "Abstenção T1→B": 0.6
+  }
+ },
+ "2020|9210": {
+  "uf": "ma",
+  "secoes": 1826,
+  "A_validos": 55.53,
+  "theta": [
+   -1.7429,
+   -5.5805,
+   -1.1754,
+   0.7676,
+   1.1971,
+   -5.864,
+   1.9417,
+   -3.6722
+  ],
+  "legivel": {
+   "A→B": 4.5,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 11.8,
+   "Outros→A": 33.3,
+   "Outros→B": 51.2,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 15.5,
+   "Abstenção T1→A": 26.2,
+   "Abstenção T1→B": 0.7
+  }
+ },
+ "2020|12190": {
+  "uf": "pi",
+  "secoes": 1501,
+  "A_validos": 62.31,
+  "theta": [
+   -6.4944,
+   -1.2528,
+   -2.5343,
+   0.9055,
+   -0.4365,
+   -1.366,
+   -5.5409,
+   0.5144
+  ],
+  "legivel": {
+   "A→B": 0.0,
+   "B→A": 6.7,
+   "Abstenção (votantes T1)": 3.7,
+   "Outros→A": 56.5,
+   "Outros→B": 14.8,
+   "Outros→Branco/nulo": 5.8,
+   "Outros→Abstenção": 22.9,
+   "Abstenção T1→A": 0.1,
+   "Abstenção T1→B": 18.8
+  }
+ },
+ "2020|13730": {
+  "uf": "ce",
+  "secoes": 590,
+  "A_validos": 48.92,
+  "theta": [
+   -1.4189,
+   -5.1669,
+   -2.1893,
+   1.2026,
+   1.7292,
+   -3.9632,
+   -3.9857,
+   -0.3482
+  ],
+  "legivel": {
+   "A→B": 5.8,
+   "B→A": 0.2,
+   "Abstenção (votantes T1)": 5.0,
+   "Outros→A": 33.3,
+   "Outros→B": 56.5,
+   "Outros→Branco/nulo": 0.2,
+   "Outros→Abstenção": 10.0,
+   "Abstenção T1→A": 0.5,
+   "Abstenção T1→B": 12.4
+  }
+ },
+ "2020|13897": {
+  "uf": "ce",
+  "secoes": 4573,
+  "A_validos": 51.69,
+  "theta": [
+   -0.0616,
+   -6.5001,
+   -1.9187,
+   6.6635,
+   6.0908,
+   -3.1518,
+   -0.4859,
+   -2.7727
+  ],
+  "legivel": {
+   "A→B": 14.5,
+   "B→A": 0.0,
+   "Abstenção (votantes T1)": 6.4,
+   "Outros→A": 63.9,
+   "Outros→B": 36.0,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.1,
+   "Abstenção T1→A": 11.4,
+   "Abstenção T1→B": 1.8
+  }
+ },
+ "2020|20516": {
+  "uf": "pb",
+  "secoes": 1226,
+  "A_validos": 53.16,
+  "theta": [
+   1.6389,
+   -6.0021,
+   -5.4691,
+   2.0111,
+   1.6094,
+   -0.7911,
+   -1.5603,
+   -4.8305
+  ],
+  "legivel": {
+   "A→B": 25.1,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 0.2,
+   "Outros→A": 53.7,
+   "Outros→B": 35.9,
+   "Outros→Branco/nulo": 3.3,
+   "Outros→Abstenção": 7.2,
+   "Abstenção T1→A": 5.2,
+   "Abstenção T1→B": 0.2
+  }
+ },
+ "2020|25135": {
+  "uf": "pe",
+  "secoes": 546,
+  "A_validos": 57.52,
+  "theta": [
+   -4.6001,
+   -5.3383,
+   -1.5154,
+   1.7066,
+   1.6491,
+   -3.9622,
+   1.1954,
+   -3.704
+  ],
+  "legivel": {
+   "A→B": 0.3,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 9.0,
+   "Outros→A": 47.0,
+   "Outros→B": 44.3,
+   "Outros→Branco/nulo": 0.2,
+   "Outros→Abstenção": 8.5,
+   "Abstenção T1→A": 23.0,
+   "Abstenção T1→B": 0.7
+  }
+ },
+ "2020|25313": {
+  "uf": "pe",
+  "secoes": 2863,
+  "A_validos": 56.27,
+  "theta": [
+   0.4377,
+   -5.3886,
+   -2.7262,
+   2.3832,
+   1.2301,
+   -4.7337,
+   -1.1672,
+   -1.8983
+  ],
+  "legivel": {
+   "A→B": 18.2,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 3.1,
+   "Outros→A": 71.0,
+   "Outros→B": 22.4,
+   "Outros→Branco/nulo": 0.1,
+   "Outros→Abstenção": 6.5,
+   "Abstenção T1→A": 7.1,
+   "Abstenção T1→B": 3.9
+  }
+ },
+ "2020|27855": {
+  "uf": "al",
+  "secoes": 1418,
+  "A_validos": 41.36,
+  "theta": [
+   -3.7968,
+   -5.6542,
+   -0.8753,
+   4.2855,
+   5.2212,
+   -2.8619,
+   -0.5623,
+   -1.2081
+  ],
+  "legivel": {
+   "A→B": 0.7,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 14.7,
+   "Outros→A": 28.1,
+   "Outros→B": 71.5,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.4,
+   "Abstenção T1→A": 10.9,
+   "Abstenção T1→B": 6.9
+  }
+ },
+ "2020|31054": {
+  "uf": "se",
+  "secoes": 1041,
+  "A_validos": 57.86,
+  "theta": [
+   -0.8209,
+   -4.6012,
+   -1.2208,
+   4.5257,
+   4.6565,
+   -3.0249,
+   -0.283,
+   -2.8307
+  ],
+  "legivel": {
+   "A→B": 9.2,
+   "B→A": 0.3,
+   "Abstenção (votantes T1)": 11.4,
+   "Outros→A": 46.5,
+   "Outros→B": 53.0,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.5,
+   "Abstenção T1→A": 12.9,
+   "Abstenção T1→B": 1.7
+  }
+ },
+ "2020|35157": {
+  "uf": "ba",
+  "secoes": 881,
+  "A_validos": 45.58,
+  "theta": [
+   -4.5068,
+   -5.2889,
+   -1.1193,
+   3.9003,
+   5.3697,
+   -2.9797,
+   1.5181,
+   1.0518
+  ],
+  "legivel": {
+   "A→B": 0.3,
+   "B→A": 0.2,
+   "Abstenção (votantes T1)": 12.3,
+   "Outros→A": 18.6,
+   "Outros→B": 81.0,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.4,
+   "Abstenção T1→A": 24.6,
+   "Abstenção T1→B": 22.2
+  }
+ },
+ "2020|39659": {
+  "uf": "ba",
+  "secoes": 532,
+  "A_validos": 46.0,
+  "theta": [
+   -4.9797,
+   -5.4145,
+   -1.5502,
+   1.1306,
+   4.691,
+   -2.4394,
+   -0.1036,
+   2.6489
+  ],
+  "legivel": {
+   "A→B": 0.2,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 8.8,
+   "Outros→A": 2.7,
+   "Outros→B": 96.3,
+   "Outros→Branco/nulo": 0.1,
+   "Outros→Abstenção": 0.9,
+   "Abstenção T1→A": 14.2,
+   "Abstenção T1→B": 28.0
+  }
+ },
+ "2020|43710": {
+  "uf": "mg",
+  "secoes": 1204,
+  "A_validos": 51.35,
+  "theta": [
+   -6.2635,
+   -5.2254,
+   -0.9741,
+   1.7646,
+   2.9716,
+   -4.8498,
+   0.6034,
+   -0.7473
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 0.2,
+   "Abstenção (votantes T1)": 13.7,
+   "Outros→A": 22.1,
+   "Outros→B": 74.0,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 3.8,
+   "Abstenção T1→A": 19.4,
+   "Abstenção T1→B": 9.6
+  }
+ },
+ "2020|45535": {
+  "uf": "mg",
+  "secoes": 590,
+  "A_validos": 57.74,
+  "theta": [
+   -6.0966,
+   -4.5303,
+   -1.2753,
+   1.2478,
+   1.7197,
+   -4.7512,
+   -0.4213,
+   -5.5357
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 0.3,
+   "Abstenção (votantes T1)": 10.9,
+   "Outros→A": 34.6,
+   "Outros→B": 55.4,
+   "Outros→Branco/nulo": 0.1,
+   "Outros→Abstenção": 9.9,
+   "Abstenção T1→A": 11.9,
+   "Abstenção T1→B": 0.1
+  }
+ },
+ "2020|47333": {
+  "uf": "mg",
+  "secoes": 1096,
+  "A_validos": 54.98,
+  "theta": [
+   -5.4317,
+   -0.4027,
+   -1.3396,
+   5.0607,
+   5.2913,
+   -2.7707,
+   -4.6522,
+   -0.1174
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 12.0,
+   "Abstenção (votantes T1)": 10.4,
+   "Outros→A": 44.1,
+   "Outros→B": 55.6,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.3,
+   "Abstenção T1→A": 0.3,
+   "Abstenção T1→B": 14.1
+  }
+ },
+ "2020|54011": {
+  "uf": "mg",
+  "secoes": 656,
+  "A_validos": 57.36,
+  "theta": [
+   -5.4386,
+   -5.7141,
+   -2.6964,
+   2.127,
+   2.0316,
+   -4.7676,
+   -1.3537,
+   -4.1963
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 3.2,
+   "Outros→A": 49.3,
+   "Outros→B": 44.8,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 5.9,
+   "Abstenção T1→A": 6.2,
+   "Abstenção T1→B": 0.4
+  }
+ },
+ "2020|56251": {
+  "uf": "es",
+  "secoes": 660,
+  "A_validos": 58.69,
+  "theta": [
+   0.159,
+   -4.5162,
+   -0.3024,
+   2.4888,
+   2.0277,
+   -4.5975,
+   0.0879,
+   -2.0212
+  ],
+  "legivel": {
+   "A→B": 16.2,
+   "B→A": 0.3,
+   "Abstenção (votantes T1)": 21.2,
+   "Outros→A": 58.3,
+   "Outros→B": 36.8,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 4.8,
+   "Abstenção T1→A": 15.7,
+   "Abstenção T1→B": 3.5
+  }
+ },
+ "2020|56995": {
+  "uf": "es",
+  "secoes": 814,
+  "A_validos": 54.9,
+  "theta": [
+   -5.0336,
+   -5.5423,
+   -0.8879,
+   3.4905,
+   4.1475,
+   -3.5955,
+   -4.838,
+   -0.7104
+  ],
+  "legivel": {
+   "A→B": 0.2,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 14.6,
+   "Outros→A": 33.8,
+   "Outros→B": 65.2,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 1.0,
+   "Abstenção T1→A": 0.2,
+   "Abstenção T1→B": 9.9
+  }
+ },
+ "2020|57037": {
+  "uf": "es",
+  "secoes": 790,
+  "A_validos": 69.03,
+  "theta": [
+   -4.1622,
+   -1.9575,
+   -0.9905,
+   5.1166,
+   3.3778,
+   -3.04,
+   -2.7716,
+   -0.4485
+  ],
+  "legivel": {
+   "A→B": 0.5,
+   "B→A": 3.7,
+   "Abstenção (votantes T1)": 13.5,
+   "Outros→A": 84.6,
+   "Outros→B": 14.9,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.5,
+   "Abstenção T1→A": 1.8,
+   "Abstenção T1→B": 11.7
+  }
+ },
+ "2020|57053": {
+  "uf": "es",
+  "secoes": 638,
+  "A_validos": 58.5,
+  "theta": [
+   -0.9053,
+   -5.3111,
+   -1.1377,
+   4.1806,
+   3.7032,
+   -3.3722,
+   0.028,
+   -1.6476
+  ],
+  "legivel": {
+   "A→B": 8.6,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 12.1,
+   "Outros→A": 61.1,
+   "Outros→B": 37.9,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.9,
+   "Abstenção T1→A": 15.2,
+   "Abstenção T1→B": 4.8
+  }
+ },
+ "2020|58190": {
+  "uf": "rj",
+  "secoes": 1003,
+  "A_validos": 52.4,
+  "theta": [
+   -6.4546,
+   -0.5949,
+   -1.681,
+   0.8439,
+   2.2396,
+   -2.8775,
+   -2.8547,
+   -4.1801
+  ],
+  "legivel": {
+   "A→B": 0.0,
+   "B→A": 10.7,
+   "Abstenção (votantes T1)": 7.8,
+   "Outros→A": 18.2,
+   "Outros→B": 73.5,
+   "Outros→Branco/nulo": 0.4,
+   "Outros→Abstenção": 7.8,
+   "Abstenção T1→A": 1.6,
+   "Abstenção T1→B": 0.5
+  }
+ },
+ "2020|58777": {
+  "uf": "rj",
+  "secoes": 649,
+  "A_validos": 55.18,
+  "theta": [
+   -3.5264,
+   -4.587,
+   -1.8236,
+   0.8551,
+   0.7926,
+   0.1242,
+   -3.4173,
+   -1.5846
+  ],
+  "legivel": {
+   "A→B": 0.9,
+   "B→A": 0.3,
+   "Abstenção (votantes T1)": 7.0,
+   "Outros→A": 35.1,
+   "Outros→B": 33.0,
+   "Outros→Branco/nulo": 16.9,
+   "Outros→Abstenção": 14.9,
+   "Abstenção T1→A": 1.0,
+   "Abstenção T1→B": 5.1
+  }
+ },
+ "2020|58971": {
+  "uf": "rj",
+  "secoes": 1814,
+  "A_validos": 49.21,
+  "theta": [
+   -1.5908,
+   -6.5083,
+   -0.9021,
+   2.4749,
+   2.5685,
+   -5.2323,
+   -1.9827,
+   -0.7579
+  ],
+  "legivel": {
+   "A→B": 5.1,
+   "B→A": 0.0,
+   "Abstenção (votantes T1)": 14.4,
+   "Outros→A": 45.8,
+   "Outros→B": 50.3,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 3.9,
+   "Abstenção T1→A": 3.6,
+   "Abstenção T1→B": 9.6
+  }
+ },
+ "2020|59013": {
+  "uf": "rj",
+  "secoes": 986,
+  "A_validos": 56.83,
+  "theta": [
+   -5.7754,
+   0.1812,
+   -0.2225,
+   4.733,
+   4.9829,
+   -2.8318,
+   -0.5973,
+   -1.7368
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 16.4,
+   "Abstenção (votantes T1)": 22.2,
+   "Outros→A": 43.6,
+   "Outros→B": 56.0,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.4,
+   "Abstenção T1→A": 10.6,
+   "Abstenção T1→B": 4.5
+  }
+ },
+ "2020|60011": {
+  "uf": "rj",
+  "secoes": 11467,
+  "A_validos": 64.07,
+  "theta": [
+   -0.9366,
+   -8.3563,
+   -3.3379,
+   1.6316,
+   0.5431,
+   -5.9847,
+   -2.155,
+   -6.8426
+  ],
+  "legivel": {
+   "A→B": 8.4,
+   "B→A": 0.0,
+   "Abstenção (votantes T1)": 1.7,
+   "Outros→A": 65.2,
+   "Outros→B": 22.0,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 12.8,
+   "Abstenção T1→A": 3.1,
+   "Abstenção T1→B": 0.0
+  }
+ },
+ "2020|62197": {
+  "uf": "sp",
+  "secoes": 694,
+  "A_validos": 55.98,
+  "theta": [
+   -5.3792,
+   -5.2081,
+   -3.1412,
+   1.6949,
+   0.7904,
+   -3.9722,
+   -4.9407,
+   -1.3865
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 0.2,
+   "Abstenção (votantes T1)": 2.1,
+   "Outros→A": 62.8,
+   "Outros→B": 25.4,
+   "Outros→Branco/nulo": 0.2,
+   "Outros→Abstenção": 11.5,
+   "Abstenção T1→A": 0.2,
+   "Abstenção T1→B": 6.0
+  }
+ },
+ "2020|62910": {
+  "uf": "sp",
+  "secoes": 2199,
+  "A_validos": 57.07,
+  "theta": [
+   -0.4995,
+   -5.6391,
+   -1.9236,
+   1.3747,
+   0.6087,
+   0.6921,
+   -1.9694,
+   -3.1409
+  ],
+  "legivel": {
+   "A→B": 11.3,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 6.4,
+   "Outros→A": 45.0,
+   "Outros→B": 20.9,
+   "Outros→Branco/nulo": 22.7,
+   "Outros→Abstenção": 11.4,
+   "Abstenção T1→A": 3.7,
+   "Abstenção T1→B": 1.2
+  }
+ },
+ "2020|63770": {
+  "uf": "sp",
+  "secoes": 807,
+  "A_validos": 51.35,
+  "theta": [
+   -4.4021,
+   -5.5175,
+   -0.2304,
+   4.2143,
+   4.6926,
+   -3.1749,
+   -2.243,
+   4.2196
+  ],
+  "legivel": {
+   "A→B": 0.4,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 22.1,
+   "Outros→A": 38.0,
+   "Outros→B": 61.4,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.6,
+   "Abstenção T1→A": 2.9,
+   "Abstenção T1→B": 29.6
+  }
+ },
+ "2020|64254": {
+  "uf": "sp",
+  "secoes": 616,
+  "A_validos": 42.38,
+  "theta": [
+   -1.1182,
+   -5.1742,
+   -1.7265,
+   1.5073,
+   2.1797,
+   -0.1379,
+   -2.1414,
+   -2.8592
+  ],
+  "legivel": {
+   "A→B": 7.4,
+   "B→A": 0.2,
+   "Abstenção (votantes T1)": 7.6,
+   "Outros→A": 29.6,
+   "Outros→B": 58.1,
+   "Outros→Branco/nulo": 5.7,
+   "Outros→Abstenção": 6.6,
+   "Abstenção T1→A": 3.2,
+   "Abstenção T1→B": 1.6
+  }
+ },
+ "2020|64777": {
+  "uf": "sp",
+  "secoes": 2244,
+  "A_validos": 57.83,
+  "theta": [
+   -6.9848,
+   -7.1345,
+   -1.5633,
+   4.0182,
+   3.8114,
+   -4.0249,
+   -1.1188,
+   -2.0571
+  ],
+  "legivel": {
+   "A→B": 0.0,
+   "B→A": 0.0,
+   "Abstenção (votantes T1)": 8.7,
+   "Outros→A": 54.6,
+   "Outros→B": 44.4,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 1.0,
+   "Abstenção T1→A": 7.4,
+   "Abstenção T1→B": 3.4
+  }
+ },
+ "2020|66397": {
+  "uf": "sp",
+  "secoes": 576,
+  "A_validos": 54.88,
+  "theta": [
+   -5.7934,
+   -5.6927,
+   -5.6737,
+   0.8718,
+   1.0351,
+   -2.412,
+   -1.4202,
+   -4.9473
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 0.2,
+   "Outros→A": 38.0,
+   "Outros→B": 44.7,
+   "Outros→Branco/nulo": 1.4,
+   "Outros→Abstenção": 15.9,
+   "Abstenção T1→A": 5.8,
+   "Abstenção T1→B": 0.2
+  }
+ },
+ "2020|66893": {
+  "uf": "sp",
+  "secoes": 764,
+  "A_validos": 49.26,
+  "theta": [
+   -0.74,
+   -4.4521,
+   -1.4491,
+   1.4286,
+   1.9708,
+   -0.7997,
+   -1.5052,
+   -2.0683
+  ],
+  "legivel": {
+   "A→B": 9.7,
+   "B→A": 0.3,
+   "Abstenção (votantes T1)": 9.5,
+   "Outros→A": 32.6,
+   "Outros→B": 56.1,
+   "Outros→Branco/nulo": 3.5,
+   "Outros→Abstenção": 7.8,
+   "Abstenção T1→A": 5.4,
+   "Abstenção T1→B": 3.4
+  }
+ },
+ "2020|67130": {
+  "uf": "sp",
+  "secoes": 824,
+  "A_validos": 41.61,
+  "theta": [
+   -1.2759,
+   -1.2869,
+   -0.2572,
+   0.7504,
+   6.0918,
+   -2.2976,
+   0.5879,
+   -0.2665
+  ],
+  "legivel": {
+   "A→B": 6.5,
+   "B→A": 6.5,
+   "Abstenção (votantes T1)": 21.8,
+   "Outros→A": 0.5,
+   "Outros→B": 99.3,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.2,
+   "Abstenção T1→A": 19.3,
+   "Abstenção T1→B": 13.0
+  }
+ },
+ "2020|68756": {
+  "uf": "sp",
+  "secoes": 763,
+  "A_validos": 45.8,
+  "theta": [
+   0.3195,
+   0.607,
+   -0.9114,
+   2.8945,
+   3.7757,
+   0.7517,
+   -1.5419,
+   -2.3359
+  ],
+  "legivel": {
+   "A→B": 17.4,
+   "B→A": 19.4,
+   "Abstenção (votantes T1)": 14.3,
+   "Outros→A": 27.9,
+   "Outros→B": 67.3,
+   "Outros→Branco/nulo": 3.3,
+   "Outros→Abstenção": 1.5,
+   "Abstenção T1→A": 5.3,
+   "Abstenção T1→B": 2.6
+  }
+ },
+ "2020|69213": {
+  "uf": "sp",
+  "secoes": 587,
+  "A_validos": 53.52,
+  "theta": [
+   -4.3841,
+   -4.2908,
+   -1.106,
+   4.6438,
+   4.3969,
+   -3.0153,
+   -0.8965,
+   -1.2549
+  ],
+  "legivel": {
+   "A→B": 0.4,
+   "B→A": 0.4,
+   "Abstenção (votantes T1)": 12.4,
+   "Outros→A": 55.8,
+   "Outros→B": 43.6,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.5,
+   "Abstenção T1→A": 8.7,
+   "Abstenção T1→B": 6.7
+  }
+ },
+ "2020|69698": {
+  "uf": "sp",
+  "secoes": 1130,
+  "A_validos": 63.16,
+  "theta": [
+   -5.9514,
+   -4.2127,
+   -1.3344,
+   3.4093,
+   3.4527,
+   -2.5156,
+   -1.2874,
+   -4.145
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 0.4,
+   "Abstenção (votantes T1)": 10.4,
+   "Outros→A": 48.1,
+   "Outros→B": 50.2,
+   "Outros→Branco/nulo": 0.1,
+   "Outros→Abstenção": 1.6,
+   "Abstenção T1→A": 6.5,
+   "Abstenção T1→B": 0.5
+  }
+ },
+ "2020|71072": {
+  "uf": "sp",
+  "secoes": 22399,
+  "A_validos": 59.38,
+  "theta": [
+   -8.6454,
+   1.7553,
+   -1.7351,
+   1.0513,
+   1.6681,
+   -7.2423,
+   0.29,
+   -8.3566
+  ],
+  "legivel": {
+   "A→B": 0.0,
+   "B→A": 25.6,
+   "Abstenção (votantes T1)": 7.5,
+   "Outros→A": 31.2,
+   "Outros→B": 57.9,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 10.9,
+   "Abstenção T1→A": 17.2,
+   "Abstenção T1→B": 0.0
+  }
+ },
+ "2020|71218": {
+  "uf": "sp",
+  "secoes": 659,
+  "A_validos": 43.7,
+  "theta": [
+   -0.2782,
+   -5.4359,
+   -0.9989,
+   4.1709,
+   4.4045,
+   -3.117,
+   -2.7311,
+   -0.1256
+  ],
+  "legivel": {
+   "A→B": 12.9,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 13.5,
+   "Outros→A": 43.9,
+   "Outros→B": 55.4,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.7,
+   "Abstenção T1→A": 1.8,
+   "Abstenção T1→B": 14.1
+  }
+ },
+ "2020|71455": {
+  "uf": "sp",
+  "secoes": 1311,
+  "A_validos": 52.58,
+  "theta": [
+   -6.9303,
+   -2.165,
+   -2.6373,
+   0.4965,
+   1.8793,
+   -5.2013,
+   -0.6528,
+   -5.9011
+  ],
+  "legivel": {
+   "A→B": 0.0,
+   "B→A": 3.1,
+   "Abstenção (votantes T1)": 3.3,
+   "Outros→A": 17.9,
+   "Outros→B": 71.2,
+   "Outros→Branco/nulo": 0.1,
+   "Outros→Abstenção": 10.9,
+   "Abstenção T1→A": 10.3,
+   "Abstenção T1→B": 0.1
+  }
+ },
+ "2020|71579": {
+  "uf": "sp",
+  "secoes": 536,
+  "A_validos": 49.37,
+  "theta": [
+   -5.1677,
+   -4.3867,
+   -0.9169,
+   3.088,
+   3.2263,
+   -3.4842,
+   -1.2243,
+   -1.0524
+  ],
+  "legivel": {
+   "A→B": 0.2,
+   "B→A": 0.4,
+   "Abstenção (votantes T1)": 14.3,
+   "Outros→A": 45.6,
+   "Outros→B": 52.3,
+   "Outros→Branco/nulo": 0.1,
+   "Outros→Abstenção": 2.1,
+   "Abstenção T1→A": 6.8,
+   "Abstenção T1→B": 7.8
+  }
+ },
+ "2020|71838": {
+  "uf": "sp",
+  "secoes": 602,
+  "A_validos": 65.01,
+  "theta": [
+   -0.9998,
+   -4.6531,
+   -0.9105,
+   5.8306,
+   3.8611,
+   -2.4961,
+   -1.9453,
+   -0.7053
+  ],
+  "legivel": {
+   "A→B": 8.1,
+   "B→A": 0.3,
+   "Abstenção (votantes T1)": 14.3,
+   "Outros→A": 87.5,
+   "Outros→B": 12.2,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.3,
+   "Abstenção T1→A": 3.8,
+   "Abstenção T1→B": 9.9
+  }
+ },
+ "2020|77771": {
+  "uf": "pr",
+  "secoes": 610,
+  "A_validos": 47.62,
+  "theta": [
+   -5.7026,
+   -5.3907,
+   -1.5359,
+   4.0822,
+   4.6881,
+   -3.218,
+   -1.412,
+   -0.6976
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 8.9,
+   "Outros→A": 35.1,
+   "Outros→B": 64.3,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.6,
+   "Abstenção T1→A": 5.9,
+   "Abstenção T1→B": 10.0
+  }
+ },
+ "2020|80470": {
+  "uf": "sc",
+  "secoes": 604,
+  "A_validos": 72.1,
+  "theta": [
+   -5.3312,
+   -2.8428,
+   -3.2651,
+   1.599,
+   0.7628,
+   -2.2442,
+   -3.9289,
+   -4.4606
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 1.7,
+   "Abstenção (votantes T1)": 1.8,
+   "Outros→A": 60.4,
+   "Outros→B": 26.2,
+   "Outros→Branco/nulo": 1.3,
+   "Outros→Abstenção": 12.2,
+   "Abstenção T1→A": 0.6,
+   "Abstenção T1→B": 0.3
+  }
+ },
+ "2020|81795": {
+  "uf": "sc",
+  "secoes": 999,
+  "A_validos": 44.57,
+  "theta": [
+   -5.9936,
+   -6.0677,
+   -0.9928,
+   4.715,
+   5.3127,
+   -3.0514,
+   -0.985,
+   -2.2795
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 13.5,
+   "Outros→A": 35.4,
+   "Outros→B": 64.3,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.3,
+   "Abstenção T1→A": 8.2,
+   "Abstenção T1→B": 2.8
+  }
+ },
+ "2020|85898": {
+  "uf": "rs",
+  "secoes": 651,
+  "A_validos": 53.06,
+  "theta": [
+   -6.5207,
+   -3.8323,
+   -1.207,
+   0.1443,
+   1.8835,
+   -4.4385,
+   0.3684,
+   -5.5864
+  ],
+  "legivel": {
+   "A→B": 0.0,
+   "B→A": 0.6,
+   "Abstenção (votantes T1)": 11.5,
+   "Outros→A": 13.2,
+   "Outros→B": 75.2,
+   "Outros→Branco/nulo": 0.1,
+   "Outros→Abstenção": 11.4,
+   "Abstenção T1→A": 17.7,
+   "Abstenção T1→B": 0.1
+  }
+ },
+ "2020|85995": {
+  "uf": "rs",
+  "secoes": 875,
+  "A_validos": 40.43,
+  "theta": [
+   -6.208,
+   -4.0277,
+   -0.8265,
+   2.9331,
+   5.9817,
+   -3.0164,
+   1.6199,
+   -5.0655
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 0.5,
+   "Abstenção (votantes T1)": 15.2,
+   "Outros→A": 4.5,
+   "Outros→B": 95.2,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.2,
+   "Abstenção T1→A": 25.0,
+   "Abstenção T1→B": 0.2
+  }
+ },
+ "2020|87912": {
+  "uf": "rs",
+  "secoes": 628,
+  "A_validos": 68.7,
+  "theta": [
+   -5.453,
+   -4.7675,
+   -2.2524,
+   1.7746,
+   1.4424,
+   -4.088,
+   -4.8233,
+   -1.248
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 0.3,
+   "Abstenção (votantes T1)": 4.8,
+   "Outros→A": 52.9,
+   "Outros→B": 38.0,
+   "Outros→Branco/nulo": 0.2,
+   "Outros→Abstenção": 9.0,
+   "Abstenção T1→A": 0.2,
+   "Abstenção T1→B": 6.7
+  }
+ },
+ "2020|88013": {
+  "uf": "rs",
+  "secoes": 2629,
+  "A_validos": 54.63,
+  "theta": [
+   -5.9981,
+   -6.8563,
+   -1.0409,
+   5.6668,
+   4.938,
+   -3.4021,
+   -1.8367,
+   -0.0256
+  ],
+  "legivel": {
+   "A→B": 0.1,
+   "B→A": 0.0,
+   "Abstenção (votantes T1)": 13.0,
+   "Outros→A": 67.3,
+   "Outros→B": 32.5,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.2,
+   "Abstenção T1→A": 4.1,
+   "Abstenção T1→B": 14.8
+  }
+ },
+ "2020|88412": {
+  "uf": "rs",
+  "secoes": 541,
+  "A_validos": 42.71,
+  "theta": [
+   0.1885,
+   -5.2992,
+   -2.7035,
+   1.2402,
+   1.3731,
+   -0.9808,
+   -5.2159,
+   -0.9864
+  ],
+  "legivel": {
+   "A→B": 16.4,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 3.1,
+   "Outros→A": 39.4,
+   "Outros→B": 45.0,
+   "Outros→Branco/nulo": 4.3,
+   "Outros→Abstenção": 11.4,
+   "Abstenção T1→A": 0.2,
+   "Abstenção T1→B": 8.1
+  }
+ },
+ "2020|90670": {
+  "uf": "mt",
+  "secoes": 1109,
+  "A_validos": 48.85,
+  "theta": [
+   -4.4586,
+   -4.3723,
+   -1.055,
+   5.0171,
+   5.3926,
+   -2.8686,
+   -0.3493,
+   -1.185
+  ],
+  "legivel": {
+   "A→B": 0.3,
+   "B→A": 0.4,
+   "Abstenção (votantes T1)": 12.9,
+   "Outros→A": 40.6,
+   "Outros→B": 59.1,
+   "Outros→Branco/nulo": 0.0,
+   "Outros→Abstenção": 0.3,
+   "Abstenção T1→A": 12.4,
+   "Abstenção T1→B": 7.0
+  }
+ },
+ "2020|92215": {
+  "uf": "go",
+  "secoes": 743,
+  "A_validos": 61.28,
+  "theta": [
+   -3.2103,
+   -5.64,
+   -1.4295,
+   3.2949,
+   2.6868,
+   -2.8356,
+   -4.5661,
+   -2.6034
+  ],
+  "legivel": {
+   "A→B": 1.2,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 9.7,
+   "Outros→A": 63.1,
+   "Outros→B": 34.4,
+   "Outros→Branco/nulo": 0.1,
+   "Outros→Abstenção": 2.3,
+   "Abstenção T1→A": 0.3,
+   "Abstenção T1→B": 2.1
+  }
+ },
+ "2020|93734": {
+  "uf": "go",
+  "secoes": 2667,
+  "A_validos": 52.6,
+  "theta": [
+   -1.0834,
+   -6.2698,
+   -1.4593,
+   1.6598,
+   1.6749,
+   0.3395,
+   -4.6053,
+   -5.7327
+  ],
+  "legivel": {
+   "A→B": 7.6,
+   "B→A": 0.1,
+   "Abstenção (votantes T1)": 9.4,
+   "Outros→A": 40.4,
+   "Outros→B": 41.1,
+   "Outros→Branco/nulo": 10.8,
+   "Outros→Abstenção": 7.7,
+   "Abstenção T1→A": 0.3,
+   "Abstenção T1→B": 0.1
+  }
+ },
  "2024|35": {
   "uf": "ro",
   "secoes": 1181,
