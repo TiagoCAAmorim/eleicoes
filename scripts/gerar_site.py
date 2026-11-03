@@ -19,7 +19,7 @@ from urllib.parse import quote
 
 import _raiz  # noqa: F401
 from eleicoes.caminhos import RAIZ, RESULTADOS, SITE, resultados
-from eleicoes.site import testes, web
+from eleicoes.site import licenca, testes, web
 
 FUSO = dt.timezone(dt.timedelta(hours=-3))
 # contato do autor na página inicial (perfil no LinkedIn)
@@ -27,7 +27,7 @@ CONTATO_LINKEDIN = "https://www.linkedin.com/in/tiago-amorim-eng/"
 # botão "Me pague um café" no topo das páginas fixas: copia esta chave Pix
 CHAVE_PIX = "bcd8d244-8aeb-4003-99ca-d8ba4f5f5952"
 PAGINAS = ["index.html", "modelos.html", "analises.html", "aliancas.html", "presidente.html", "governador.html",
-           "prefeito.html", "estresse.html"]
+           "prefeito.html", "estresse.html", "licenca.html"]
 
 
 def _ler(nome):
@@ -221,7 +221,8 @@ def pagina(nome, extras, gerado_em):
     for k, v in extras.items():
         corpo = corpo.replace("{{" + k + "}}", v)
     subs = {"titulo": titulo, "descricao": descricao, "raiz": "./",
-            "gerado_em": gerado_em, "chave_pix": CHAVE_PIX}
+            "gerado_em": gerado_em, "chave_pix": CHAVE_PIX,
+            "aviso_licenca": licenca.aviso("./licenca.html")}
     for p in ["inicio", "modelos", "analises"]:
         subs[f"atual_{p}"] = ' aria-current="page"' if p == chave else ""
     doc = _ler("_cabecalho.html") + corpo + _ler("_rodape.html")

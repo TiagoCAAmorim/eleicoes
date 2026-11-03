@@ -89,3 +89,7 @@ Para incluir uma eleição no site: coloque as saídas em `resultados/<id>/` e a
 - [docs/base-historica.md](docs/base-historica.md): base de votos por município do TSE, 2006–2024 (`dados/historico/`)
 - [docs/roteiro.md](docs/roteiro.md): etapas da revisão do modelo e da expansão para outros cargos
 - [docs/historico/](docs/historico/): protocolo dos agentes usados durante a apuração de 2026
+
+## Licença
+
+Código sob [MIT](LICENSE); textos, gráficos e resultados sob CC BY 4.0 (cite Tiago Amorim). As previsões são estimativas estatísticas, sem garantia; a fonte oficial é o TSE. Detalhes em [LICENSE](LICENSE) e na página `licenca.html` do site. O aviso do rodapé de todas as páginas vem de `eleicoes/site/licenca.py` e `site/_rodape.html`.

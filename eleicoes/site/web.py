@@ -9,6 +9,7 @@ import os
 import shutil
 import subprocess
 
+from . import licenca
 from ..caminhos import COMUM, SITE, TEMPLATES as AQUI, dados as _dados
 
 # ícone do site (site/icone/): copiado ao lado de cada página, que o referencia pelo caminho relativo
@@ -101,8 +102,8 @@ window.__DADOS = {dados};
 """
 
 RODAPE = """
-</div></body></html>
-"""
+</div>
+""" + licenca.rodape_isolado() + "</body></html>\n"
 
 # botão de atualizar no canto superior direito: busca os dados novos como a atualização automática (sem recarregar,
 # então não soma acesso no contador)
@@ -335,6 +336,7 @@ def gerar_site(saida, pasta_site, titulo="Previsão do 2º turno presidencial 20
         with open(os.path.join(AQUI, pag), encoding="utf-8") as f:
             txt = f.read()
         txt = txt.replace("</head><body>", LINKS_ICONE + "</head><body>", 1)
+        txt = txt.replace("</body></html>", licenca.rodape_isolado() + "</body></html>", 1)
         if arquivo:
             txt = txt.replace("</head><body>", "</head><body>" + NAV.format(**arquivo), 1)
         with open(os.path.join(pasta_site, pag), "w", encoding="utf-8") as f:
