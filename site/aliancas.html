@@ -1,9 +1,9 @@
-<!-- página: analises | titulo: Alianças que não aconteceram | descricao: Simule coligações e federações nas eleições de deputado federal e estadual de 2006 a 2022 e veja quem entraria e quem sairia. -->
-<p class="meta"><a href="analises.html">Análises</a> · Deputados, 2006–2022</p>
+<!-- página: analises | titulo: Alianças que não aconteceram | descricao: Simule coligações e federações nas eleições de deputado federal e estadual de 2006 a 2026 e veja quem entraria e quem sairia. -->
+<p class="meta"><a href="analises.html">Análises</a> · Deputados, 2006–2026</p>
 <h1>Alianças que não aconteceram</h1>
 <p class="lead">Junte qualquer grupo de partidos numa só lista e veja quantas cadeiras de deputado cada um teria e quais
 candidatos entrariam ou sairiam.</p>
-<p>Até 2018 os partidos podiam se coligar na eleição de deputado; em 2022 só por federação, que vale no país inteiro.
+<p>Até 2018 os partidos podiam se coligar na eleição de deputado; desde 2022 só por federação, que vale no país inteiro.
 A divisão das cadeiras segue o quociente eleitoral e as sobras com a regra de cada ano. O cálculo reproduz os eleitos
 reais em todos os anos (veja a <a href="#metodo">conferência</a>).</p>
 <p class="aviso">Hipótese: cada eleitor vota como votou. Só muda quem está na mesma lista. Uma aliança de verdade
@@ -34,7 +34,7 @@ mudaria candidaturas e campanhas, então o resultado mostra o efeito <strong>ari
 <div id="resultado" aria-live="polite"></div>
 
 <h2>Alianças reais: quem ganhou e quem perdeu</h2>
-<p>Para cada coligação (2006–2018) ou federação (2022) de cada UF, refizemos a conta com ela desfeita e seus partidos
+<p>Para cada coligação (2006–2018) ou federação (2022 e 2026) de cada UF, refizemos a conta com ela desfeita e seus partidos
 sozinhos, mantendo as outras alianças como foram. O ganho de um partido é a diferença de cadeiras com e sem a aliança.</p>
 {{aliancas_efeito}}
 
@@ -50,7 +50,7 @@ tiveram:</p>
   <li>Cada lista elege tantos candidatos quanto o número de vezes que atinge o quociente, a partir de 2016 só entre os
   que têm ao menos 10% dele.</li>
   <li>As vagas que sobram vão às maiores médias (votos da lista ÷ cadeiras + 1). Até 2016 só disputa quem atingiu o
-  quociente; em 2018 todos; em 2022 quem tem 80% dele e candidato com 20%. Quando ninguém mais cumpre as exigências,
+  quociente; em 2018 todos; desde 2022 quem tem 80% dele e candidato com 20%. Quando ninguém mais cumpre as exigências,
   as vagas vão às maiores médias sem a exigência individual.</li>
 </ol>
 <p>Conferência com os eleitos oficiais (dados abertos do TSE):</p>
@@ -227,8 +227,8 @@ details summary { cursor: pointer; color: var(--accent); margin: 8px 0; }
   fetch("aliancas/dados/indice.json").then(function (r) { return r.json(); }).then(function (ind) {
     indice = ind;
     $("sel-eleicao").innerHTML = ind.map(function (e, i) { return '<option value="' + i + '">' + e.ano + " · " + esc(e.cargo_nome) + "</option>"; }).join("");
-    var h = lerHash(), i0 = ind.length - 2 >= 0 ? ind.length - 2 : 0;   // padrão: 2022, deputado federal
-    ind.forEach(function (e, i) { if (e.ano === 2022 && e.cargo === 6) i0 = i; });
+    var h = lerHash(), i0 = 0, maxAno = 0;   // padrão: a eleição mais recente, deputado federal
+    ind.forEach(function (e, i) { if (e.cargo === 6 && e.ano > maxAno) { maxAno = e.ano; i0 = i; } });
     $("sel-eleicao").value = h.e !== undefined && ind[+h.e] ? h.e : String(i0);
     if (h.b) $("sel-base").value = h.b;
     if (h.g) grupos = h.g.split(";").map(function (x) { return x.split(",").filter(Boolean); });
