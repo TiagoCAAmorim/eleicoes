@@ -14,7 +14,8 @@ A geografia da referência (onde o PT foi forte, onde houve mais abstenção) ca
 municípios que ainda não chegaram. A matriz é estimada nas unidades já apuradas, de forma hierárquica (Brasil ->
 região -> UF -> UF x porte), como no 2º turno.
 
-Sem referência (ex.: seções de uma cidade), x_u = [1] e a matriz vira um vetor de frações por grupo (zona eleitoral).
+Prefeito: a unidade é a seção, e a referência é o 2º turno presidencial de dois anos antes na mesma seção. Sem
+referência, x_u = [1] e a matriz vira um vetor de frações por grupo (zona eleitoral).
 
 A priori:
 - ponto de partida: as frações de cada destino na pesquisa da véspera (ou numa "pesquisa" informada), com um bônus

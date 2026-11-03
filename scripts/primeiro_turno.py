@@ -1,7 +1,8 @@
 """Rejogos do modelo do 1º turno (etapa 6 do roteiro, docs/primeiro-turno.md).
 
-Para cada eleição (presidente, governador, senador por UF), monta a base por município com a eleição de referência
-(1º turno presidencial de 4 anos antes), simula a apuração com a ordem sintética de scripts/calibrar_priori.py
+Para cada eleição (presidente, governador e senador por UF; prefeito por cidade com mais de 200 mil eleitores),
+monta a base por município (prefeito: por seção) com a eleição de referência (1º turno presidencial de 4 anos antes;
+prefeito: 2º turno presidencial de 2 anos antes, na mesma seção), simula a apuração com a ordem sintética de scripts/calibrar_priori.py
 (com viés nas primeiras seções de cada cidade, agora em vários candidatos) e mede, por % apurado:
 
 - erro, cobertura 50/90% e CRPS da votação (% dos válidos) de cada candidato nomeado;
@@ -37,10 +38,12 @@ PONTOS = [0, 1, 3, 5, 10, 20, 30, 50, 70, 90]
 ANOS = {"presidente": [2010, 2014, 2018, 2022, 2026], "governador": [2010, 2014, 2018, 2022],
         "senador": [2010, 2014, 2018, 2022], "prefeito": [2008, 2012, 2016, 2020, 2024]}
 ERRO_PESQUISA = {"presidente": 2.0, "governador": 3.0, "senador": 3.0, "prefeito": 3.0}
-# prefeito: a unidade é a seção, sem eleição de referência; grupos = zonas eleitorais; as seções chegam inteiras e
-# em blocos de zona, então o que falta pode estar todo de um lado da cidade (choque comum de 8% no log, como os 6% na
-# margem do 2º turno de prefeito)
-PREFEITO = {"niveis": ["zona"], "choque_nacional": 0.0, "choque_parcial": 0.0, "choque_uf": 0.08}
+# prefeito: a unidade é a seção; referência = 2º turno presidencial de dois anos antes na mesma seção; grupos = zonas
+# eleitorais. As seções chegam inteiras e em blocos de zona, então o que falta pode estar todo de um lado da cidade:
+# choque comum de 16% no log do que falta apurar (8% cobria só 46–69% com viés forte de ordem) e desvio extra de 0,2
+# por zona ainda não apurada (docs/primeiro-turno.md)
+PREFEITO = {"niveis": ["zona"], "choque_nacional": 0.0, "choque_parcial": 0.0, "choque_uf": 0.16,
+            "choque_grupo_inicio": 0.2}
 C = {"sd_celula": 0.5, "tau": 0.15}
 VARIANTES = {
     "base": {},
@@ -63,7 +66,8 @@ VARIANTES = {
     "adotada_t7": {"tau": 0.7},
     "g2": {"choque_grupo_inicio": 0.2},
     "pg2": {"choque_grupo_inicio": 0.2},
-    "pg2_c4": {"choque_grupo_inicio": 0.2, "choque_uf": 0.04},
+    "pg2_c16": {"choque_grupo_inicio": 0.2, "choque_uf": 0.16},
+    "pg2_c24": {"choque_grupo_inicio": 0.2, "choque_uf": 0.24},
     "g4": {"choque_grupo_inicio": 0.4},
     "g4_p8": {"choque_grupo_inicio": 0.4, "choque_parcial": 0.08},
     "g6_p8": {"choque_grupo_inicio": 0.6, "choque_parcial": 0.08},
@@ -144,6 +148,11 @@ def bases_prefeito(ano, k_max=5, min_validos=5.0, k_min=3):
         _, c4 = hist._votos_cargo(ano - 4, 11)
         c4 = c4.set_index("mun")
         ant = {m: ((r["brancos"] + r["nulos"]) / r["aptos"], r["abstencoes"] / r["aptos"]) for m, r in c4.iterrows()}
+    # referência por seção: o 2º turno presidencial de dois anos antes (mesma zona e seção; ~95% das seções batem)
+    ref = carregar_ref_secoes(ano - 2)
+    vm = hist._ler(ano, "votos_mun.csv.gz")
+    vm = vm[(vm["cargo"] == 11) & (vm["turno"] == 1)]
+    partido = vm.drop_duplicates(["mun", "numero"]).set_index(["mun", "numero"])["partido"]
     out = {}
     for mun, g in sec.groupby("mun"):
         g = g[g["E"] > 0]
@@ -164,16 +173,52 @@ def bases_prefeito(ano, k_max=5, min_validos=5.0, k_min=3):
         b["C"] = np.maximum(g["C"].astype(float), b[[f"d{i}" for i in range(k + 2)]].sum(axis=1))
         b["E"] = np.maximum(b["E"], b["C"])
         b = b.reset_index()
+        partidos_ref = []
+        if ref is not None:
+            b = juntar_ref_secoes(b, ref[ref["mun"] == mun])
+            partidos_ref = ["PT", "(adversário do PT)"]
         b["mun"] = b["zona"].astype(str) + "-" + b["secao"].astype(str)
         b["zona"] = b["zona"].astype(str)
         b["nome"], b["capital"], b["Ea"] = mun, False, b["E"]
         nm = meta.get(mun.lstrip("0"), {}).get("candidatos", {})
         info = {"ano": ano, "cargo": "prefeito", "uf": b["uf"].iloc[0], "mun": mun, "votos_por_eleitor": 1,
-                "partidos_ref": [], "w_n": ant.get(mun, (0.07, 0.2)),
-                "candidatos": [{"numero": n, "nome": nm.get(n, {}).get("nome", n), "partido": "", "validos": float(pct[n])}
+                "partidos_ref": partidos_ref, "w_n": ant.get(mun, (0.07, 0.2)),
+                "candidatos": [{"numero": n, "nome": nm.get(n, {}).get("nome", n),
+                                "partido": partido.get((mun, n), ""), "validos": float(pct[n])}
                                for n in nomeados], "demais_validos": float(pct.iloc[k:].sum())}
         out[mun] = (b, info)
     return out
+
+
+def carregar_ref_secoes(ano):
+    """2º turno presidencial por seção (A = PT, B = o adversário), ou None se não houver."""
+    arq = (os.path.join(DADOS, "2022", "presidente", "secoes_t2.csv.gz") if ano == 2022 else
+           os.path.join(DADOS, "historico", str(ano), "secoes_presidente_t2.csv.gz"))
+    if not os.path.exists(arq):
+        return None
+    r = pd.read_csv(arq, dtype={"mun": str}).rename(columns={"v13": "A", "v22": "B"})
+    r["W"] = r["brancos"] + r["nulos"]
+    return r[["mun", "zona", "secao", "aptos", "A", "B", "W"]]
+
+
+def juntar_ref_secoes(b, r):
+    """Colunas r0 (PT), r1 (adversário), r2 (demais = 0), r3 (branco/nulo) e rE. Seções sem referência (novas ou
+    sem o detalhe de aptos) recebem as frações médias da zona (ou da cidade)."""
+    m = b.merge(r.drop(columns="mun"), on=["zona", "secao"], how="left")
+    ok = (m["aptos"] > 0).values
+    fr = pd.DataFrame({c: m[c] / m["aptos"] for c in ["A", "B", "W"]})
+    fr["zona"] = m["zona"]
+    zona = fr[ok].groupby("zona")[["A", "B", "W"]].mean()
+    geral = fr.loc[ok, ["A", "B", "W"]].mean()
+    for c in ["A", "B", "W"]:
+        fr.loc[~ok, c] = fr.loc[~ok, "zona"].map(zona[c]).fillna(geral[c])
+    b = b.copy()
+    b["rE"] = np.where(ok, m["aptos"], b["E"]).astype(float)
+    b["r0"] = (fr["A"] * b["rE"]).values
+    b["r1"] = (fr["B"] * b["rE"]).values
+    b["r2"] = 0.0
+    b["r3"] = (fr["W"] * b["rE"]).values
+    return b
 
 
 def ordem_secoes(base, D, rng, vies_sd=0.3):

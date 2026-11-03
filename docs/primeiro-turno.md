@@ -15,7 +15,8 @@ Saídas em `resultados/primeiro-turno/<cargo>/`.
 
 O modelo do 2º turno leva os votos do 1º turno de cada município para o 2º por uma matriz de transferência. No 1º
 turno não há turno anterior na mesma eleição. A matriz passa a partir de uma **eleição de referência**: o 1º turno
-presidencial de quatro anos antes (para presidente, governador e senador).
+presidencial de quatro anos antes (para presidente, governador e senador). No prefeito, a unidade é a seção, e a
+referência é o 2º turno presidencial de dois anos antes na mesma seção (próxima seção).
 
 | | Linhas (referência, por município) | Colunas (agora) |
 |---|---|---|
@@ -180,7 +181,51 @@ Senador: em 2010 e 2018 são duas vagas; "eleito" é ficar entre os dois primeir
   em 99,6% das vezes; entre 40% e 60%, em 24%. Perto de 50% o modelo exagera a chance de vitória; nas pontas, a
   subestima.
 
-RESULTADOS_PREFEITO
+### Prefeito (cidades com mais de 200 mil eleitores, pesquisa sintética)
+
+`dados/historico/<ano>/prefeito_t1_*.csv.gz` traz o 1º turno por seção, com todos os candidatos, das cidades que
+podem ter 2º turno. São 77 cidades em 2008 e 103 em 2024, incluindo as decididas no 1º turno. Os totais conferem
+com o oficial (São Paulo 2024: Nunes 29,48%). Como no 2º turno de prefeito, a unidade é a seção, os grupos são as
+zonas eleitorais, e as seções chegam inteiras, zona a zona, com um viés de ordem sorteado. Desta vez o viés vai na
+direção de uma combinação sorteada dos candidatos: moderado (`--vies-secoes 0.1`) ou forte (`0.3`).
+
+**Sem referência, o modelo erra muito.** Na primeira versão a cidade não tinha eleição de referência: só a média de
+cada zona. Com viés forte, a faixa cobria 38–68% e houve dezenas de chamadas erradas
+(`resultados/primeiro-turno/prefeito-sem-referencia/`). As primeiras seções enganam, e nada no modelo sabe que elas
+são atípicas.
+
+**A referência é o 2º turno presidencial de dois anos antes, na mesma seção** (PT, adversário, branco/nulo,
+abstenção). A numeração das seções muda pouco: 85% a 98% das seções de cada ano batem com as do presidente de dois
+anos antes. As que não batem recebem a média da zona. A referência separa bairros ricos e pobres dentro da cidade.
+Mesmo assim, o choque comum do que falta apurar precisou dobrar (de 8% para 16% no log), porque o resto da cidade
+pode estar todo de um lado.
+
+2024 (103 cidades, 1 rejogo de cada viés; `resultados/primeiro-turno/variantes_prefeito.csv` tem 2016–2024 com o
+choque de 8%):
+
+| % apurado | Viés moderado: cobertura 90% | 50% | Largura 90% | CRPS | Viés forte: cobertura 90% | 50% | CRPS |
+|---|---|---|---|---|---|---|---|
+| 1 | 86% | 49% | 19,8 | 3,73 | 71% | 31% | 5,13 |
+| 5 | 95% | 58% | 17,8 | 2,62 | 77% | 37% | 3,71 |
+| 10 | 95% | 62% | 16,3 | 2,16 | 84% | 39% | 2,95 |
+| 30 | 95% | 62% | 11,2 | 1,50 | 88% | 41% | 1,91 |
+| 50 | 96% | 64% | 7,3 | 0,94 | 87% | 42% | 1,29 |
+| 70 | 95% | 64% | 3,9 | 0,53 | 83% | 40% | 0,79 |
+| 90 | 88% | 54% | 1,1 | 0,20 | 71% | 34% | 0,30 |
+
+| Choque comum | Viés moderado: cobertura 90% (1% → 90%) | Viés forte |
+|---|---|---|
+| 8% | 69–89% | 45–69% |
+| **16% (adotado)** | **86–96%** | **71–88%** |
+| 24% | 93–98% (o intervalo de 50% cobre 55–79%) | 83–96% |
+
+- **Adotei 16%.** Com viés moderado, a faixa cobre 86–96%. O de 24% só se justifica se o viés forte for o realista.
+  No 2º turno de prefeito escolhi o choque que cobria o viés forte. Aqui, isso deixaria a faixa larga demais no caso
+  moderado. Fica para decidir com um retrato parcial real (2028).
+- **Uma chamada errada persistente**: São João de Meriti 2024. Leo Vieira teve 49,8% e foi ao 2º turno, mas
+  num dos rejogos as seções fortes do 3º colocado ficaram por último, e o modelo deu mais de 99% de vitória no 1º
+  turno de 30% a 90% apurado.
+- O tempo de cada previsão vai de 0,1 s numa cidade pequena a ~15 s em São Paulo (26 mil seções).
 
 ## Como usar
 
@@ -193,7 +238,7 @@ base, info = hist.primeiro_turno(2022, "governador", "sp")       # base com a re
 python scripts/primeiro_turno.py --cargo presidente --rodadas 3 --variantes adotada    # ~30 min (4 núcleos: --anos)
 python scripts/primeiro_turno.py --cargo governador --rodadas 2 --variantes adotada    # ~15 min
 python scripts/primeiro_turno.py --cargo senador --rodadas 2 --variantes adotada
-python scripts/primeiro_turno.py --cargo prefeito --rodadas 1 --variantes adotada --vies-secoes 0.3
+python scripts/primeiro_turno.py --cargo prefeito --rodadas 1 --variantes adotada --vies-secoes 0.1   # ~2 h, 480 cidades
 python scripts/primeiro_turno.py --juntar pasta1 pasta2 --saida junto                   # junta rodadas separadas
 ```
 
