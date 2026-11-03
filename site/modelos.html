@@ -1,9 +1,13 @@
-<!-- página: modelos | titulo: Modelos | descricao: Como funciona o modelo de previsão da apuração do 2º turno, testes e limitações. -->
+<!-- página: modelos | titulo: Modelos | descricao: Como funciona o modelo de previsão da apuração do 2º turno (presidente, governador e prefeito), como foi testado e o que ainda falta. -->
 <h1>Modelos</h1>
-<p class="lead">Como a previsão da apuração do 2º turno é calculada, como ela se saiu nos testes e o que sabemos que precisa melhorar.</p>
+<p class="lead">Como a previsão da apuração do 2º turno é calculada, como ela foi testada em eleições de 2006 a 2026 e o que ainda não sabemos fazer.</p>
+<p class="meta">Esta página descreve o modelo revisado em novembro de 2026, depois da apuração de 25/10. O modelo usado ao vivo naquela noite está descrito em “<a href="#modelo-do-dia">O que mudou desde a noite da eleição</a>”.</p>
 
-<h2>Previsão da apuração do 2º turno</h2>
-<p>Em cada município, o 1º turno é descrito pela fração do eleitorado que votou em cada finalista (A e B), nos demais candidatos (Outros), em branco ou nulo, ou que se absteve. O 2º turno é previsto por uma matriz de transferência: que fração de cada grupo do 1º turno vai para A, para B, para branco/nulo ou para a abstenção.</p>
+<h2>A ideia</h2>
+<p>O 1º turno de cada município já é conhecido. O modelo estima <strong>para onde foi cada grupo de eleitores do 1º turno</strong> (quem votou em A, em B, nos outros candidatos, em branco ou nulo, ou não votou) a partir dos municípios já apurados. Depois aplica essa estimativa aos municípios que faltam e sorteia mil cenários para medir o quanto pode errar. A previsão é a média dos cenários, o intervalo de 90% vai do 5º ao 95º percentil, e a chance de vitória é a fração dos cenários em que o candidato passa de 50% dos votos válidos.</p>
+
+<h3>A matriz de transferência</h3>
+<p>Cada linha diz que fração de um grupo do 1º turno vai para cada destino no 2º:</p>
 <div class="tabela-rolagem">
 <table>
   <thead><tr><th>Origem (1º turno)</th><th>→ A</th><th>→ B</th><th>→ branco/nulo</th><th>→ abstenção</th></tr></thead>
@@ -16,19 +20,90 @@
   </tbody>
 </table>
 </div>
-<p>Os 8 parâmetros da matriz são estimados com os municípios já apurados, numa hierarquia Brasil → região → estado → estado × porte da cidade. Cada nível parte do nível de cima e só se afasta dele quando a apuração daquele grupo mostra diferença; um estado com pouco apurado herda quase tudo da região e do país.</p>
-<p>O ponto de partida, antes de qualquer voto apurado, são as transferências observadas em 2022, com a linha “Outros” tirada das pesquisas de 2º turno. A previsão do país é a soma das previsões de cada município, e a incerteza vem de 1.000 simulações que combinam a incerteza dos parâmetros, a variação entre municípios, um choque comum por estado (maior no começo), um choque nacional e a chance de as primeiras seções de cada município não representarem as que faltam. A chance de vitória é a fração das simulações em que o candidato passa de 50% dos votos válidos.</p>
+<p>São 8 parâmetros, estimados numa hierarquia Brasil → região → estado → estado × porte da cidade. Cada nível parte do nível de cima e só se afasta dele quando a apuração daquele grupo mostra diferença: um estado com pouco apurado herda quase tudo da região e do país. Num município parcialmente apurado, a previsão do que falta mistura o resultado parcial do próprio município com a previsão da matriz.</p>
 
-<h2>Teste com a apuração de 2022</h2>
-<p>O modelo foi testado simulando a apuração do 2º turno de 2022 seção a seção, em diferentes ordens, e comparando a previsão de cada momento com o resultado final.</p>
-{{backtest}}
+<h3>O ponto de partida (priori)</h3>
+<p>Antes de qualquer voto apurado, o modelo só tem a priori. Ela é a <strong>média das matrizes de todas as eleições anteriores</strong> (2006 a 2022, cada uma estimada com a apuração completa), grupo a grupo. A linha dos outros candidatos é a que mais muda de uma eleição para outra, porque os candidatos são outros. Por isso ela é ajustada para que a previsão de antes da apuração bata com a <strong>última pesquisa da véspera</strong> (Datafolha e Ibope). Quando os votos começam a chegar, os dados passam a dominar.</p>
 
-<h2>O que a apuração de 2026 mostrou</h2>
-<p>A previsão final ficou certa, mas o caminho até ela expôs três problemas, que são o foco da próxima versão do modelo:</p>
+<h3>A incerteza</h3>
+<p>Cada um dos mil cenários sorteia:</p>
 <ul class="lista-simples">
-  <li><strong>Ponto de partida estreito demais.</strong> Antes da apuração, a previsão era Lula 48,4%, com intervalo de 90% de 45,9% a 51,1%. O resultado, 51,8%, ficou fora até cerca de 5% das seções apuradas.</li>
-  <li><strong>Transição lenta.</strong> A curva que limitava a influência das primeiras seções atrasou a convergência: com 21% apurado, os dados sozinhos já davam 51,4%, mas a previsão publicada era 50,7%.</li>
-  <li><strong>Transferências sem leitura confiável.</strong> A matriz não permitia que brancos e nulos fossem para um candidato nem que eleitores de um lado faltassem mais que os do outro. O ganho de Lula acabou atribuído aos eleitores de “Outros” (62%), quando uma comparação simples entre municípios indica uma divisão próxima à das pesquisas (cerca de 32%).</li>
+  <li><strong>os parâmetros da matriz</strong>, dentro da incerteza da estimativa (metade da variação é comum ao país, metade própria de cada grupo);</li>
+  <li><strong>a variação de cada município</strong> em torno da matriz do seu grupo;</li>
+  <li><strong>um choque por estado</strong> na margem do que falta apurar: 4% antes de abrir as urnas; com a apuração em andamento, 6% num estado ainda sem votos, caindo até 2% conforme o estado apura;</li>
+  <li><strong>um choque nacional</strong> de 1%, para o caso de tudo o que falta ir no mesmo sentido;</li>
+  <li><strong>o viés da evidência parcial</strong> (1,5%): as primeiras seções de cada cidade podem não representar as que faltam, no mesmo sentido no país todo.</li>
 </ul>
-<p><strong>Primeira revisão (nov/2026).</strong> A curva de transição saiu: a previsão agora segue os votos apurados desde o começo, e a faixa de incerteza é que fica larga enquanto o apurado é parcial (choque nacional, choque por estado maior no início e a chance de as primeiras seções de cada município não representarem as que faltam). Rejogando 2026, o erro médio caiu de 1,0 para 0,1 ponto e o intervalo de 90% passou a conter o resultado em todos os momentos; em troca, a chance de vitória só passa de 99% com cerca de metade das seções apuradas.</p>
-<p>A próxima revisão vai testar uma matriz mais flexível, novas variáveis (votos para deputado, reeleição, coligações) e uma incerteza calibrada em eleições de presidente e governador de 2006 a 2024, com a meta de o intervalo de 90% conter o resultado em 90% dos casos em qualquer momento da apuração.</p>
+<p>O resultado é que a previsão segue os votos apurados desde o começo, e a faixa é que fica larga enquanto o apurado é parcial.</p>
+
+<h3>Governador e prefeito</h3>
+<p><strong>Governador.</strong> O mesmo modelo, com A sendo o mais votado no 1º turno. A priori é a média dos 2º turnos de governador dos anos anteriores, de qualquer estado, com a linha dos outros candidatos ajustada à pesquisa da véspera quando há uma. Como a eleição tem um estado só, o viés da evidência parcial não se dilui entre 27 estados, e por isso ele é o dobro do usado para presidente (3%).</p>
+<p><strong>Prefeito.</strong> Numa cidade não há municípios para comparar, então a unidade passa a ser a <strong>seção eleitoral</strong>: a matriz leva o 1º turno de cada seção para o 2º. Como as seções chegam inteiras e por zona, bairros inteiros podem chegar juntos. O modelo soma um choque comum de 6% na margem do que falta apurar, que não encolhe conforme a apuração avança.</p>
+
+<h3>O que foi testado e ficou de fora</h3>
+<ul class="lista-simples">
+  <li><strong>Matriz mais flexível</strong> (brancos e nulos podendo ir para um candidato e abstenção diferente entre eleitores de A e de B). Ajusta melhor os municípios e ganha por pouco nos rejogos, mas erra mais no começo da apuração no teste de estresse. A matriz de 8 parâmetros foi mantida.</li>
+  <li><strong>Covariáveis por município</strong> (votos para deputado federal no partido de cada candidato, prefeitos do partido, reeleição). Explicam menos de 4% do que a matriz não explica. Não foram adotadas.</li>
+  <li><strong>A curva de transição</strong> do modelo do dia, que segurava a previsão perto da priori até 25% apurado. Foi retirada (ver abaixo).</li>
+</ul>
+
+<h2 id="testes">Como o modelo foi testado</h2>
+<p>A meta é que o intervalo de 90% contenha o resultado final em cerca de 90% dos casos, em qualquer momento da apuração, e não acertar o vencedor o mais cedo possível. Só a noite de 2026 tem retratos reais da apuração ao longo da noite: o TSE não guarda retratos parciais das eleições anteriores. Por isso a maioria dos testes usa o <strong>resultado real</strong> de cada município ou seção, mas uma <strong>ordem de chegada sorteada</strong>. Cada gráfico indica qual é o caso:</p>
+<ul class="lista-simples">
+  <li><span class="selo">Resultados reais</span> ou <span class="selo">Apuração real</span>: só dados reais;</li>
+  <li><span class="selo planejado">Simulação da ordem</span>: resultados reais, ordem de apuração sintética;</li>
+  <li><span class="selo planejado">Simulação</span>: resultado e ordem sintéticos, sorteados em torno de uma eleição real.</li>
+</ul>
+
+<h3>Antes de abrir as urnas</h3>
+<figure>
+  <img src="img/modelos/antes_da_apuracao.png" alt="Previsão e intervalo de 90% antes da apuração para os 2º turnos presidenciais de 2010 a 2026, com a matriz da eleição anterior e com a priori calibrada, comparados com o resultado" loading="lazy">
+  <figcaption>Previsão sem nenhum voto apurado, só com o que se sabia na véspera de cada eleição.</figcaption>
+</figure>
+<p>Usar só a matriz da eleição anterior errava em média 4,4 pontos, com intervalo de 12 pontos. A priori calibrada erra 1,1 ponto, com intervalo de 6,7. O erro que sobra é praticamente o erro da pesquisa da véspera. Em 2026 a pesquisa errou 2,8 pontos, e o resultado fica fora do intervalo: é 1 erro em 5 eleições, compatível com um intervalo de 90%.</p>
+
+<h3>A noite real de 2026</h3>
+<figure>
+  <img src="img/modelos/noite_2026.png" alt="Previsão e intervalo de 90% ao longo da apuração de 25/10/2026, com o modelo do dia e com o modelo adotado em novembro" loading="lazy">
+  <figcaption>Os retratos da apuração gravados durante a noite, passados pelo modelo do dia (esquerda) e pelo adotado (direita).</figcaption>
+</figure>
+<p>O modelo do dia começou em 48,4%, perto da pesquisa, e só chegou ao resultado depois de 25% apurado. O resultado ficou fora do intervalo até cerca de 5% apurado e de novo por volta de 62%. O modelo adotado passa a 53% já com 1,6% apurado, desce até perto do resultado com 15% e contém o resultado em todos os momentos depois de abertas as urnas. Em troca, a chance de vitória só passa de 99% com 48% apurado (no modelo do dia, com 26%).</p>
+
+<h3>Presidente, 2010 a 2026</h3>
+<figure>
+  <img src="img/modelos/presidente_historico.png" alt="Previsão e intervalo de 90% ao longo de apurações simuladas dos 2º turnos presidenciais de 2010 a 2026" loading="lazy">
+  <figcaption>Cada município entra com o seu resultado real, numa ordem parecida com a de uma noite de apuração e com um viés sorteado nas primeiras seções.</figcaption>
+</figure>
+<p>Em duas apurações sorteadas por ano, o intervalo contém o resultado em 99% dos momentos, sem nenhuma chamada errada. Este teste é mais fácil que a realidade: aqui cada município apura de forma proporcional, e o que mais derruba o modelo é a ordem das seções dentro das cidades. É isso que o teste de estresse mede.</p>
+
+<h3>Teste de estresse</h3>
+<figure>
+  <img src="img/modelos/estresse.png" alt="Cobertura e largura do intervalo de 90% ao longo de apurações sintéticas de 2010, 2014, 2018 e 2022, comparando o modelo do dia e o modelo adotado" loading="lazy">
+  <figcaption>16 a 32 apurações sintéticas por ano, construídas a partir das seções reais de cada eleição.</figcaption>
+</figure>
+<p>Cada rodada sorteia um resultado plausível para cada cidade e uma ordem de chegada com dois vieses: cidades de um lado apurando mais rápido e, dentro de cada cidade, as seções mais favoráveis a um candidato chegando antes. O tamanho dos vieses foi medido na noite de 2026. O modelo do dia cobria o resultado em 66% dos momentos e errou o vencedor com mais de 99% de chance 7 vezes. O adotado cobre 88% a 96%, sem nenhuma chamada errada depois de abertas as urnas. A queda para 81% no fim vem sempre das mesmas 2 rodadas com viés extremo; com 48 rodadas de 2018, a cobertura com 70% apurado foi de 98%.</p>
+
+<h3>Governador e prefeito</h3>
+<figure>
+  <img src="img/modelos/governador_prefeito.png" alt="Cobertura do intervalo de 90% ao longo de apurações simuladas de 2º turno de governador e de prefeito" loading="lazy">
+  <figcaption>Duas apurações sorteadas por eleição. No prefeito, o viés forte faz as seções chegarem quase em ordem do voto, um caso pessimista.</figcaption>
+</figure>
+<p><strong>Governador</strong> (46 eleições de 2010 a 2022): com a configuração do presidente, a faixa ficava estreita demais da metade da apuração em diante (79% de cobertura). Com o viés da evidência parcial dobrado, cobre 93% a 99%. Antes da apuração, a pesquisa da véspera corta o erro de 6 para 3 pontos; durante a apuração ela já não ajuda. <strong>Prefeito</strong> (216 eleições de 2012 a 2024): sem o choque comum, a cobertura cai para 36% no fim com o viés forte. Com o choque de 6%, cobre pelo menos 93% em toda a apuração, ao preço de uma faixa larga (33 pontos antes de abrir, sem pesquisa).</p>
+
+<h2 id="modelo-do-dia">O que mudou desde a noite da eleição</h2>
+<p>A previsão final de 25/10/2026 ficou certa, mas o caminho até ela expôs três problemas:</p>
+<ul class="lista-simples">
+  <li><strong>Ponto de partida estreito demais.</strong> Antes da apuração, a previsão era Lula 48,4%, com intervalo de 45,9% a 51,1%. O resultado, 51,8%, ficou fora até cerca de 5% das seções apuradas. <em>Agora:</em> priori média de 2006 a 2022 com a pesquisa da véspera e faixa calibrada no erro histórico.</li>
+  <li><strong>Transição lenta.</strong> Uma curva limitava a influência das primeiras seções até 25% apurado: com 21% apurado, os dados sozinhos já davam 51,4%, mas a previsão publicada era 50,7%. <em>Agora:</em> a curva saiu, e o choque nacional e o viés da evidência parcial alargam a faixa no lugar de segurar a previsão.</li>
+  <li><strong>Transferências sem leitura confiável.</strong> O modelo atribuiu o ganho de Lula aos eleitores dos outros candidatos (62%), enquanto a pesquisa indicava cerca de 32%. <em>Agora:</em> a matriz mais flexível e as covariáveis foram testadas e não resolvem isso; com dados só por município, os números da matriz não devem ser lidos como a migração real de eleitores.</li>
+</ul>
+<p>O painel de 2026 tem as duas versões: a previsão como publicada na noite e a mesma noite rejogada com o modelo revisado.</p>
+
+<h2>O que ainda falta</h2>
+<ul class="lista-simples">
+  <li><strong>O começo da apuração.</strong> Com 1% a 3% apurado, o intervalo cobre um pouco menos que a meta no teste de estresse. É o ponto a vigiar.</li>
+  <li><strong>Viés de ordem em governador e prefeito.</strong> O tamanho foi suposto, não medido. Um retrato parcial real (por exemplo, de 2028) permite medir.</li>
+  <li><strong>Pesquisas</strong> de governador de 2014 e de prefeito ainda não foram registradas.</li>
+  <li><strong>Previsão do 1º turno</strong> e senador: o modelo de transferência precisa de um 1º turno como ponto de partida, então esses casos precisam de outro modelo.</li>
+</ul>
+<p class="meta">Detalhes, equações e todos os números estão na pasta <code>docs/</code> do repositório: <code>metodo-detalhado.md</code>, <code>calibracao-priori.md</code>, <code>estresse.md</code>, <code>matriz-v2.md</code>, <code>covariaveis.md</code>, <code>governador.md</code> e <code>prefeito.md</code>.</p>

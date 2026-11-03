@@ -25,18 +25,11 @@ CONTATO_LINKEDIN = "https://www.linkedin.com/in/tiago-amorim-eng/"
 # botão "Me pague um café" no topo das páginas fixas: copia esta chave Pix
 CHAVE_PIX = "bcd8d244-8aeb-4003-99ca-d8ba4f5f5952"
 PAGINAS = ["index.html", "modelos.html", "analises.html", "aliancas.html"]
-NOMES_ORDEM = {"2022": "Parecida com a real (Sul e Sudeste antes)", "aleatoria": "Aleatória por seção",
-               "zonas": "Parecida com a real, com zonas pró-Bolsonaro antes em cada município",
-               "adversa": "Adversa (seções pró-Bolsonaro primeiro)"}
 
 
 def _ler(nome):
     with open(os.path.join(SITE, nome), encoding="utf-8") as f:
         return f.read()
-
-
-def _num(x, casas=1):
-    return f"{x:.{casas}f}".replace(".", ",")
 
 
 def cartao_eleicao(e):
@@ -55,37 +48,16 @@ def cartao_eleicao(e):
   </section>"""
 
 
-def tabela_backtest(pasta_img):
-    """Tabela com o resumo do backtest de 2022 (resultados/backtest) e o gráfico, se existirem."""
-    arq = os.path.join(RESULTADOS, "backtest", "resumo.json")
-    if not os.path.exists(arq):
-        return "<p class=\"meta\">Resultados do teste ainda não gerados (python scripts/backtest.py).</p>"
-    with open(arq) as f:
-        resumo = json.load(f)
-    linhas = "\n".join(
-        f'    <tr><td>{html.escape(NOMES_ORDEM.get(r["ordem"], r["ordem"]))}</td>'
-        f'<td class="num">{_num(r["erro_medio_abs"], 2)} pt</td><td class="num">{_num(100 * r["cobertura90"], 0)}%</td></tr>'
-        for r in resumo)
-    out = f"""<div class="tabela-rolagem">
-<table>
-  <thead><tr><th>Ordem de apuração</th><th class="num">Erro médio</th><th class="num">Cobertura do intervalo de 90%</th></tr></thead>
-  <tbody>
-{linhas}
-  </tbody>
-</table>
-</div>
-<p class="meta">Erro médio absoluto da previsão de Lula (pontos percentuais dos votos válidos) e fração dos momentos da
-apuração (de 0,5% a 99%) em que o intervalo de 90% continha o resultado final.</p>"""
-    png = os.path.join(RESULTADOS, "backtest", "backtest_2022.png")
-    if os.path.exists(png):
-        os.makedirs(pasta_img, exist_ok=True)
-        shutil.copy(png, os.path.join(pasta_img, "backtest_2022.png"))
-        out += """
-<figure>
-  <img src="img/backtest_2022.png" alt="Previsão e intervalo de 90% ao longo da apuração simulada de 2022, comparados com o resultado final" loading="lazy">
-  <figcaption>Previsão ao longo da apuração simulada de 2022 em cada ordem de apuração.</figcaption>
-</figure>"""
-    return out
+def figuras_modelos(pasta_img):
+    """Copia os gráficos da página Modelos (gerados por scripts/graficos_modelos.py) para o site."""
+    origem = os.path.join(RESULTADOS, "modelos")
+    if not os.path.isdir(origem):
+        print("aviso: resultados/modelos/ não existe; rode python scripts/graficos_modelos.py")
+        return
+    os.makedirs(pasta_img, exist_ok=True)
+    for nome in sorted(os.listdir(origem)):
+        if nome.endswith(".png"):
+            shutil.copy(os.path.join(origem, nome), os.path.join(pasta_img, nome))
 
 
 ANOS_ALIANCAS = [2006, 2010, 2014, 2018, 2022]
@@ -216,16 +188,17 @@ def main():
         eleicoes = json.load(f)
     gerado_em = dt.datetime.now(FUSO).strftime("%d/%m/%Y")
     extras = {"eleicoes": "\n".join(cartao_eleicao(e) for e in eleicoes),
-              "backtest": tabela_backtest(os.path.join(saida, "img")), "contato": contato(),
-              **tabelas_aliancas()}
+              "contato": contato(), **tabelas_aliancas()}
     for nome in PAGINAS:
         with open(os.path.join(saida, nome), "w", encoding="utf-8") as f:
             f.write(pagina(nome, extras, gerado_em))
+    figuras_modelos(os.path.join(saida, "img", "modelos"))
     shutil.copy(os.path.join(SITE, "estilo.css"), os.path.join(saida, "estilo.css"))
     shutil.copy(os.path.join(SITE, "aliancas.js"), os.path.join(saida, "aliancas.js"))
     # dados do simulador de alianças (um JSON por eleição de deputados)
     import aliancas
     aliancas.exportar(ANOS_ALIANCAS, os.path.join(saida, "aliancas", "dados"))
+    web.copiar_icones(saida)
     for e in eleicoes:
         # uma eleição pode ter versões (ex.: modelo do dia e modelo revisado), cada uma numa subpasta
         versoes = e.get("versoes") or [{"sub": "", "resultados": e["resultados"]}]

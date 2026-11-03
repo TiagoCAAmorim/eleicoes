@@ -1,7 +1,9 @@
 # Metodologia: previsão da apuração do 2º turno
 
-Modelo usado ao vivo em 25/10/2026 (`eleicoes/modelos/transferencia.py`). Limitações conhecidas e a revisão planejada estão em [roteiro.md](roteiro.md). Explicação detalhada do modelo revisado, com equações e um exemplo numérico: [metodo-detalhado.md](metodo-detalhado.md).
-
+Resumo do modelo em uso desde novembro de 2026 (`eleicoes/modelos/transferencia.py` com a configuração
+`calibrado_cauteloso` de `eleicoes/modelos/priori.py`). O site tem a versão para o público, com os gráficos dos testes
+(página Modelos, gerada de `site/modelos.html`; gráficos por `scripts/graficos_modelos.py`). Equações e um exemplo
+numérico: [metodo-detalhado.md](metodo-detalhado.md). Histórico das decisões: [roteiro.md](roteiro.md).
 
 Para cada município, o 1º turno é descrito pela fração do eleitorado que votou em A
 (Lula), B (Flávio Bolsonaro), Outros (soma dos demais candidatos), branco/nulo ou que
@@ -22,25 +24,30 @@ então um grupo com poucos municípios apurados usa a informação dos vizinhos 
 próximos que já têm dados. Municípios parcialmente apurados combinam o próprio
 resultado parcial com a previsão do modelo para as seções que faltam.
 
-Ponto de partida (priori): as transferências estimadas na apuração completa de 2022 (`dados/priori/presidente_2022.json`,
-gerado por `scripts/priori_2022.py`), por Brasil, região, UF e porte. A linha "Outros" usa as pesquisas de 2º
-turno de 2026 (Quaest, 17–20/out: eleitores de Cury, Caiado, Renan Santos e demais, ponderados pelos votos de
-cada um), porque os candidatos de fora do 2º turno são outros. Conforme as seções são apuradas, os dados de 2026
-passam a dominar a estimativa (atualização bayesiana). Ao vivo em 2026 havia ainda uma curva de transição que
-segurava a previsão perto da priori até 25% apurado; a revisão da etapa 3 tirou a curva
+Ponto de partida (priori, [calibracao-priori.md](calibracao-priori.md)): a média, grupo a grupo e em escala logit,
+das matrizes de todas as eleições anteriores (2006–2022, cada uma estimada com a apuração completa,
+`dados/priori/presidente_<ano>.json`). A linha "Outros" é ajustada para que a previsão de antes da apuração bata com a
+pesquisa da véspera (`dados/pesquisas/presidente_t2.csv`), com desvio 0,3 em logit; a hierarquia usa `tau` 0,15.
+Conforme as seções são apuradas, os dados passam a dominar. Ao vivo em 2026 a priori era só a matriz de 2022 e havia
+uma curva de transição que segurava a previsão perto da priori até 25% apurado; a curva saiu na revisão
 ([revisao-t2.md](revisao-t2.md)).
 
 A incerteza é obtida por simulação de Monte Carlo (1000 cenários) que combina:
 - incerteza dos parâmetros (aproximação de Laplace) e variação entre municípios;
-- choque comum por UF (2% da margem do eleitorado restante), mais um extra de até 4% que diminui conforme a UF
-  é apurada;
+- choque comum por UF (2% da margem do eleitorado restante), mais um extra de 2% antes de abrir as urnas e de até
+  4% depois, que diminui conforme a UF é apurada;
 - choque nacional de 1%: o que falta apurar pode diferir todo no mesmo sentido;
 - viés da evidência parcial (1,5%): as seções que chegam primeiro em cada município podem não representar as
   que faltam, no mesmo sentido no país todo. Vale cheio no que falta dos municípios já começados e, nos não
   começados, proporcional a quão parcial é o que já foi apurado.
 
-A escala foi calibrada no rejogo de 2026 e no backtest de 2022 em quatro ordens de apuração. A chance de vitória é a fração dos cenários em que o candidato
+As escalas foram calibradas no rejogo de 2026, nos rejogos por município de 2010–2026 e no teste de estresse com
+2010, 2014, 2018 e 2022 ([estresse.md](estresse.md)). A chance de vitória é a fração dos cenários em que o candidato
 passa de 50% dos votos válidos.
+
+Testados e não adotados: matriz v2 ([matriz-v2.md](matriz-v2.md)) e covariáveis municipais
+([covariaveis.md](covariaveis.md)). Outros cargos: governador ([governador.md](governador.md), mesmo modelo com viés
+da evidência parcial de 3%) e prefeito ([prefeito.md](prefeito.md), seção como unidade e choque comum de 6%).
 
 Os resultados saem por Brasil, região, UF e porte da cidade (capitais, grandes
 > 200 mil eleitores, médias 50–200 mil, pequenas < 50 mil, exterior).
