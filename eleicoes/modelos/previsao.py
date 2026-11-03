@@ -3,6 +3,7 @@ import numpy as np
 
 from ..dados.geo import PORTES
 from ..site import exportar, mapa_mun
+from ..site.painel import curto
 from . import transferencia as modelo
 
 NIVEIS = [("Brasil", "brasil"), ("Região", "regiao"), ("Porte", "porte"), ("UF", "uf")]
@@ -66,7 +67,7 @@ def prever(df, nomes, cfg=None):
         "nomes": list(nomes),
         "grupos": grupos,
         "parcial_A": float(100 * va / max(va + vb, 1)) if va + vb else 50.0,
-        "transferencias": _transferencias(aj, cfg, [n.split()[0] for n in nomes]),  # nomes curtos nas tabelas
+        "transferencias": _transferencias(aj, cfg, [curto(n) for n in nomes]),  # nomes curtos nas tabelas
         "s0": aj.s0,
         "_municipios": mapa_mun.tabela(df, final),  # não vai para o JSON
         "_csv": {"dados_municipios": exportar.municipios(df, aj, final, nomes),

@@ -90,6 +90,7 @@ window.__DADOS = {dados};
     return 'erro';
   }}
   window.lxAtualizar = atualizar;
+  window.lxRedesenhar = run;
   if (location.protocol.startsWith('http')) {{
     setInterval(() => {{ if (!document.hidden) atualizar(); }}, 2 * 60 * 1000);
     document.addEventListener('visibilitychange', () => {{ if (!document.hidden && Date.now() - ultima > 2 * 60 * 1000) atualizar(); }});
@@ -155,6 +156,94 @@ min-height:32px;display:inline-flex;align-items:center}}
 """
 
 
+# apuração simulada (scripts/paineis_simulados.py): aviso fixo e seletor do momento da noite. Troca a previsão,
+# as transferências e os fluxos pelos do momento escolhido e corta a linha do tempo nele, depois redesenha o painel.
+SIMULACAO = """
+<p class="lx-sim-aviso"><b>{rotulo}</b> {aviso}</p>
+<section class="lx-sim" aria-label="Momento da noite">
+<div class="lx-sim-ctl">
+<button type="button" id="sim-play" aria-pressed="false">▶ Reproduzir a noite</button>
+<label for="sim-pos" class="lx-sim-rot">Momento: <b id="sim-txt">—</b></label>
+<input type="range" id="sim-pos" min="0" max="0" step="1" value="0">
+</div>
+<div class="lx-sim-atalhos" role="group" aria-label="Ir para % apurado" id="sim-atalhos"></div>
+</section>
+<style>.lx-sim-aviso{{box-sizing:border-box;max-width:1100px;margin:0 auto 12px;padding:12px 16px;border-left:3px solid var(--color-warn);
+background:var(--color-panel);border-radius:0 var(--cds-radius) var(--cds-radius) 0;font-size:var(--cds-font-size-body);line-height:1.5}}
+.lx-sim-aviso b{{color:var(--color-warn)}}
+.lx-sim{{box-sizing:border-box;max-width:1100px;margin:0 auto 20px;padding:10px 16px;border:1px solid var(--cds-border);
+border-radius:var(--cds-radius);background:var(--color-panel);font-size:var(--cds-font-size-body);
+position:sticky;top:0;z-index:4;box-shadow:var(--cds-shadow-popover)}}
+.lx-sim-ctl{{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}}
+.lx-sim-ctl input{{flex:1 1 260px;min-width:0;accent-color:var(--color-fg)}}
+.lx-sim-rot{{font-variant-numeric:tabular-nums;min-width:15em}}
+.lx-sim button{{font:inherit;font-size:14px;border:1px solid var(--cds-border);background:var(--color-bg);color:var(--color-fg);
+border-radius:999px;padding:4px 12px;min-height:32px;cursor:pointer}}
+.lx-sim button[aria-pressed=true]{{background:var(--color-fg);color:var(--color-bg);border-color:transparent}}
+.lx-sim-atalhos{{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px}}.lx-sim-atalhos button{{padding:2px 10px;min-height:28px}}
+@media (max-width:600px){{.lx-sim{{padding:8px 10px}}.lx-sim-rot{{min-width:0;flex-basis:100%;order:-1}}.lx-sim-ctl input{{flex-basis:120px}}.lx-sim-atalhos{{display:none}}}}
+@media print{{.lx-sim{{display:none}}}}</style>
+<script>(function () {{
+  const D = window.__DADOS, M = D.momentos || [], H = (D.historico || []).slice();
+  if (!M.length) return;
+  const pos = document.getElementById('sim-pos'), txt = document.getElementById('sim-txt');
+  const play = document.getElementById('sim-play'), at = document.getElementById('sim-atalhos');
+  const pct = (x) => (x > 0 && x < 0.1 ? '<0,1' : (+x).toFixed(x > 99.95 ? 0 : 1).replace(/\.0$/, '').replace('.', ',')) + '%';
+  pos.max = M.length - 1;
+  function ir(i, redesenhar = true) {{
+    i = Math.max(0, Math.min(M.length - 1, i));
+    const m = M[i];
+    D.previsao = m.previsao; D.transferencias = m.transferencias; D.fluxos = m.fluxos;
+    D.historico = H.filter((r) => r.pct_secoes <= m.pct + 1e-6);
+    pos.value = i;
+    txt.textContent = m.pct > 0 ? `${{pct(m.pct)}} das seções apuradas · ${{m.hora_txt.slice(-5)}}` : 'antes da apuração';
+    at.querySelectorAll('button').forEach((b) => b.setAttribute('aria-pressed', String(+b.dataset.i === i)));
+    try {{ history.replaceState(null, '', '#p=' + String(m.pct > 0 ? +m.pct.toFixed(1) : 0)); }} catch (e) {{}}
+    if (redesenhar && window.lxRedesenhar) window.lxRedesenhar();
+  }}
+  [0, 1, 5, 10, 25, 50, 100].forEach((p) => {{
+    let i = 0;
+    M.forEach((m, j) => {{ if (Math.abs(m.pct - p) < Math.abs(M[i].pct - p)) i = j; }});
+    const b = document.createElement('button');
+    b.type = 'button'; b.dataset.i = i; b.textContent = p ? p + '%' : 'antes';
+    b.addEventListener('click', () => {{ parar(); ir(i); }});
+    at.appendChild(b);
+  }});
+  pos.addEventListener('input', () => {{ parar(); ir(+pos.value); }});
+  let timer = null;
+  function parar() {{ if (timer) {{ clearInterval(timer); timer = null; }} play.setAttribute('aria-pressed', 'false'); play.textContent = '▶ Reproduzir a noite'; }}
+  play.addEventListener('click', () => {{
+    if (timer) {{ parar(); return; }}
+    if (+pos.value >= M.length - 1) ir(0);
+    play.setAttribute('aria-pressed', 'true'); play.textContent = '❚❚ Pausar';
+    timer = setInterval(() => {{ const i = +pos.value + 1; ir(i); if (i >= M.length - 1) parar(); }}, 1200);
+  }});
+  const h = /p=([0-9.]+)/.exec(location.hash);
+  let ini = M.length - 1;
+  if (h) {{ M.forEach((m, j) => {{ if (Math.abs(m.pct - +h[1]) < Math.abs(M[ini].pct - +h[1])) ini = j; }}); }}
+  ir(ini, false);
+}})();</script>
+"""
+
+
+def _corpo_simulado(corpo, sim):
+    """Troca no corpo do painel os textos que só valem para a apuração ao vivo de 2026."""
+    import re
+    corpo = corpo.replace("(horário de Brasília)", "(horário simulado)")
+    corpo = re.sub(r'\s*<section class="lx-card lx-sobre" id="atualizacoes">.*?</section>', "", corpo, flags=re.S)
+    corpo = re.sub(r"<h3>Avaliação com a eleição de 2022</h3>\s*<p>.*?</p>",
+                   f"<h3>Como esta apuração foi simulada</h3>\n    <p>{sim['metodo']}</p>", corpo, flags=re.S)
+    corpo = re.sub(r'<p class="lx-meta">Dados: TSE, resultados.tse.jus.br.*?</p>',
+                   '<p class="lx-meta">Dados: TSE (resultado final por seção, dadosabertos.tse.jus.br). A ordem de '
+                   'chegada das seções e o horário são simulados.</p>', corpo, flags=re.S)
+    corpo = re.sub(r'\s*<li><a href="indicadores.html">.*?</li>', "", corpo, flags=re.S)
+    corpo = corpo.replace("Versões estáticas, atualizadas a cada rodada, boas para mandar no WhatsApp.",
+                          "Versões estáticas do fim da apuração simulada.")
+    corpo = corpo.replace("Painéis complementares, atualizados a cada rodada.",
+                          "Painel complementar, com o fim da apuração simulada.")
+    return corpo
+
+
 def nav_versoes(versoes, atual, raiz_eleicao):
     """Seletor entre versões da mesma eleição (ex.: modelo do dia x revisado). `raiz_eleicao` = caminho relativo
     desta versão até a pasta da eleição."""
@@ -172,11 +261,15 @@ def copiar_icones(pasta):
         shutil.copy(os.path.join(SITE, "icone", nome), os.path.join(pasta, nome))
 
 
-def gerar_site(saida, pasta_site, titulo="Previsão do 2º turno presidencial 2026", artefato=False, arquivo=None):
+def gerar_site(saida, pasta_site, titulo="Previsão do 2º turno presidencial 2026", artefato=False, arquivo=None,
+               simulacao=None):
     """Monta index.html + imagens em `pasta_site` a partir de resultados/<ano>-<cargo>.
 
     `arquivo` = {"inicio": "../../", "rotulo": "2026 · Presidente", "versoes": "<html do seletor>"}: versão encerrada
-    para o site do projeto, com barra de navegação, sem atualização automática, sem botão de atualizar e sem contador."""
+    para o site do projeto, com barra de navegação, sem atualização automática, sem botão de atualizar e sem contador.
+    `simulacao` = {"rotulo": texto, "aviso": html, "metodo": html}: seletor do momento da noite a partir de
+    web/momentos.json, com um aviso no topo. Com "metodo" é uma apuração simulada (resultados/simulacoes/...): os
+    textos da apuração ao vivo são trocados; sem ele, é um rejogo da noite real (2026 revisado)."""
     if arquivo:
         arquivo = {"versoes": "", **arquivo}
     web = os.path.join(saida, "web")
@@ -188,8 +281,11 @@ def gerar_site(saida, pasta_site, titulo="Previsão do 2º turno presidencial 20
     if os.path.exists(geo):
         with open(geo) as f:
             dados["geo"] = [json.load(f)]
+    if simulacao:
+        with open(os.path.join(web, "momentos.json")) as f:
+            dados["momentos"] = json.load(f)
     att = _dados(2026, "presidente", "atualizacoes.json")
-    if os.path.exists(att):
+    if os.path.exists(att) and not (simulacao and simulacao.get("metodo")):
         with open(att) as f:
             dados["atualizacoes"] = json.load(f)
     if arquivo:
@@ -209,6 +305,8 @@ def gerar_site(saida, pasta_site, titulo="Previsão do 2º turno presidencial 20
               f"{n(br['pct_secoes'])}% apurado ({br['hora_txt']}). Estimativa, não é resultado oficial.")
     with open(os.path.join(AQUI, "painel_web.html"), encoding="utf-8") as f:
         corpo = f.read().replace("Previsão do 2º turno presidencial 2026", titulo)
+    if simulacao and simulacao.get("metodo"):
+        corpo = _corpo_simulado(corpo, simulacao)
     js = json.dumps(dados, ensure_ascii=False).replace("</", "<\\/")
     os.makedirs(pasta_site, exist_ok=True)
     with open(os.path.join(pasta_site, "index.html"), "w", encoding="utf-8") as f:
@@ -216,6 +314,13 @@ def gerar_site(saida, pasta_site, titulo="Previsão do 2º turno presidencial 20
         if arquivo:
             cab = cab.replace("if (location.protocol.startsWith('http'))", "if (false)")
             cab = cab.replace('<div id="dash-root">', NAV.format(**arquivo) + '<div id="dash-root">')
+        if simulacao and simulacao.get("metodo"):
+            cab = cab.replace("Previsão estatística da apuração do 2º turno presidencial de 2026 a partir dos resultados "
+                              "parciais do TSE.", "Apuração simulada: o que o modelo diria a cada momento da noite, "
+                              "com os votos reais de cada seção chegando numa ordem sorteada.")
+        if simulacao:
+            cab = cab.replace('<div id="dash-root">', SIMULACAO.format(rotulo=simulacao.get("rotulo", "Apuração simulada."),
+                                                                     aviso=simulacao["aviso"]) + '<div id="dash-root">')
         doc = (cab + corpo + ("" if artefato or arquivo else ATUALIZAR + CONTADOR) + RODAPE)  # o teste não conta acessos
         if artefato:  # página sem <html>/<head>/<body> próprios (a plataforma adiciona)
             for tag in ['<html lang="pt-BR"><head>', "</head><body>", "</body></html>"]:
@@ -226,7 +331,7 @@ def gerar_site(saida, pasta_site, titulo="Previsão do 2º turno presidencial 20
                 "resumo_grupos.csv"]:
         if os.path.exists(os.path.join(saida, img)):
             shutil.copy(os.path.join(saida, img), os.path.join(pasta_site, img))
-    for pag in ["analises.html", "indicadores.html"]:  # analises lê dados_municipios.csv
+    for pag in ["analises.html"] + ([] if simulacao and simulacao.get("metodo") else ["indicadores.html"]):  # analises lê dados_municipios.csv
         with open(os.path.join(AQUI, pag), encoding="utf-8") as f:
             txt = f.read()
         txt = txt.replace("</head><body>", LINKS_ICONE + "</head><body>", 1)

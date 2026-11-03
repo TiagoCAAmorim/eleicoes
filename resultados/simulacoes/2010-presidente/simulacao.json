@@ -1,0 +1,43 @@
+{
+ "ano": 2010,
+ "nomes": [
+  "Dilma Rousseff",
+  "José Serra"
+ ],
+ "real_A": 56.054739560604645,
+ "pesquisa_A": 55.5,
+ "prioris": [
+  2006
+ ],
+ "gama": 0.05,
+ "semente": 4036,
+ "pontos": [
+  0,
+  0.5,
+  1,
+  2,
+  3,
+  5,
+  7.5,
+  10,
+  15,
+  20,
+  25,
+  30,
+  40,
+  50,
+  60,
+  70,
+  80,
+  90,
+  95,
+  99,
+  100
+ ],
+ "modelo": {
+  "tau": 0.15,
+  "choque_uf_inicio": 0.04,
+  "choque_uf_inicio_antes": 0.02,
+  "sd_outros": 0.3
+ }
+}

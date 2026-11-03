@@ -30,12 +30,14 @@ scripts/                  linha de comando
   aliancas.py             alianças contrafactuais de deputados: validar, efeito, busca, exportar, simular
   rejogar_2026.py         rejoga a apuração real de 2026 com variantes do modelo
   rejogar_paginas_2026.py refaz as saídas da noite de 2026 com outro modelo (versão "revisado" do site)
+  paineis_simulados.py    apurações simuladas dos 2º turnos presidenciais de 2006 a 2022 (painéis do site)
   extrair_retratos_2026.py  extrai do histórico git os retratos da apuração de 2026
   gerar_site.py           gera o site completo em _site/
   prep_2022.py, priori_2022.py, baixar_ibge.py, importancia.py, verificar.py, probe_tse.py
 config/eleicoes.json      eleições publicadas no site (uma entrada por eleição e cargo)
 dados/                    entradas: comum/ (municípios, malhas), ibge/, priori/, <ano>/<cargo>/
-resultados/               saídas versionadas: 2026-presidente/ (inclui 49 retratos no histórico git), backtest/, importancia/
+resultados/               saídas versionadas: 2026-presidente/ (inclui 49 retratos no histórico git), backtest/, importancia/,
+                          simulacoes/ (apurações simuladas de 2006 a 2022)
 site/                     páginas fixas do site (início, modelos, análises, testes por cargo) e estilo comum
 docs/                     metodologia, roteiro e histórico da apuração de 2026
 tests/                    testes rápidos (pytest)
@@ -77,6 +79,7 @@ Para incluir uma eleição no site: coloque as saídas em `resultados/<id>/` e a
 - [docs/metodo-detalhado.md](docs/metodo-detalhado.md): o modelo revisado passo a passo, com equações e um exemplo fictício ao longo da apuração
 - [docs/metodologia.md](docs/metodologia.md): o modelo do 2º turno e o backtest de 2022
 - [docs/rejogo-2026.md](docs/rejogo-2026.md): variantes do modelo na apuração real de 2026 e em 2022
+- [docs/paineis-simulados.md](docs/paineis-simulados.md): apurações simuladas de 2006 a 2022 (painéis do site)
 - [docs/revisao-t2.md](docs/revisao-t2.md): revisão da incerteza do modelo do 2º turno (sem curva de transição)
 - [docs/estresse.md](docs/estresse.md): teste de estresse com apurações sintéticas (gerador calibrado em 2026, repetido com 2010, 2014 e 2018)
 - [docs/calibracao-priori.md](docs/calibracao-priori.md): priori calibrada com os 2º turnos de 2006 a 2026 e as pesquisas da véspera
