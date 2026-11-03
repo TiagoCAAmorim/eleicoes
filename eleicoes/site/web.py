@@ -9,7 +9,13 @@ import os
 import shutil
 import subprocess
 
-from ..caminhos import COMUM, TEMPLATES as AQUI, dados as _dados
+from ..caminhos import COMUM, SITE, TEMPLATES as AQUI, dados as _dados
+
+# ícone do site (site/icone/): copiado ao lado de cada página, que o referencia pelo caminho relativo
+ICONES = ["favicon.svg", "favicon.ico", "apple-touch-icon.png"]
+LINKS_ICONE = ('<link rel="icon" href="favicon.svg" type="image/svg+xml">\n'
+               '<link rel="icon" href="favicon.ico" sizes="any">\n'
+               '<link rel="apple-touch-icon" href="apple-touch-icon.png">\n')
 
 CABECALHO = """<!doctype html>
 <html lang="pt-BR"><head><meta charset="utf-8">
@@ -19,7 +25,7 @@ CABECALHO = """<!doctype html>
 <meta property="og:title" content="{titulo}">
 <meta property="og:description" content="{og}">
 <meta property="og:image" content="painel.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+{icones}<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Source+Sans+3:wght@400;500;600&display=swap">
 <style>
 :root {{
@@ -161,6 +167,11 @@ def nav_versoes(versoes, atual, raiz_eleicao):
             f'<p class="lx-versao-nota">{atual["nota"]}</p>')
 
 
+def copiar_icones(pasta):
+    for nome in ICONES:
+        shutil.copy(os.path.join(SITE, "icone", nome), os.path.join(pasta, nome))
+
+
 def gerar_site(saida, pasta_site, titulo="Previsão do 2º turno presidencial 2026", artefato=False, arquivo=None):
     """Monta index.html + imagens em `pasta_site` a partir de resultados/<ano>-<cargo>.
 
@@ -201,7 +212,7 @@ def gerar_site(saida, pasta_site, titulo="Previsão do 2º turno presidencial 20
     js = json.dumps(dados, ensure_ascii=False).replace("</", "<\\/")
     os.makedirs(pasta_site, exist_ok=True)
     with open(os.path.join(pasta_site, "index.html"), "w", encoding="utf-8") as f:
-        cab = CABECALHO.format(dados=js, og=og.replace('"', "'"), titulo=titulo)
+        cab = CABECALHO.format(icones="" if artefato else LINKS_ICONE, dados=js, og=og.replace('"', "'"), titulo=titulo)
         if arquivo:
             cab = cab.replace("if (location.protocol.startsWith('http'))", "if (false)")
             cab = cab.replace('<div id="dash-root">', NAV.format(**arquivo) + '<div id="dash-root">')
@@ -218,6 +229,7 @@ def gerar_site(saida, pasta_site, titulo="Previsão do 2º turno presidencial 20
     for pag in ["analises.html", "indicadores.html"]:  # analises lê dados_municipios.csv
         with open(os.path.join(AQUI, pag), encoding="utf-8") as f:
             txt = f.read()
+        txt = txt.replace("</head><body>", LINKS_ICONE + "</head><body>", 1)
         if arquivo:
             txt = txt.replace("</head><body>", "</head><body>" + NAV.format(**arquivo), 1)
         with open(os.path.join(pasta_site, pag), "w", encoding="utf-8") as f:
@@ -226,6 +238,7 @@ def gerar_site(saida, pasta_site, titulo="Previsão do 2º turno presidencial 20
     for nome in ["importancia.json", "indicadores_mun.json"]:
         if os.path.exists(os.path.join(imp, nome)):
             shutil.copy(os.path.join(imp, nome), os.path.join(pasta_site, nome))
+    copiar_icones(pasta_site)
     open(os.path.join(pasta_site, ".nojekyll"), "w").close()
 
 
