@@ -114,3 +114,27 @@ def test_matriz_v2_usa_priori_v2():
     assert len(mu) == modelo.NPAR + 3 and np.allclose(mu[modelo.NPAR:], extra)
     aj = modelo.ajustar(d, X, Y, modelo.Config(priori=pri, niveis=[]))
     assert len(aj.grupos[("brasil", "Brasil")][0]) == modelo.NPAR
+
+
+def test_primeiro_turno_recupera_matriz():
+    """Modelo do 1º turno: antes da apuração bate com a pesquisa; com tudo apurado, a previsão é o resultado."""
+    import pandas as pd
+    from eleicoes.modelos import primeiro_turno as m1
+    rng = np.random.default_rng(1)
+    U, R, D = 300, 3, 5                      # referência: 2 categorias + abstenção; destinos: A, B, demais, W, N
+    Mv = np.array([[0.6, 0.1, 0.05, 0.05, 0.2], [0.1, 0.55, 0.05, 0.05, 0.25], [0.1, 0.1, 0.02, 0.03, 0.75]])
+    xr = rng.dirichlet([3, 3, 2], U)
+    E = rng.integers(2000, 50000, U).astype(float)
+    y = (xr @ Mv) * E[:, None]
+    df = pd.DataFrame({"uf": rng.choice(["sp", "ba", "rs"], U), "mun": [str(i) for i in range(U)], "capital": False,
+                       "E": E, "rE": E, "r0": xr[:, 0] * E, "r1": xr[:, 1] * E, "Ea": E,
+                       "d0": y[:, 0], "d1": y[:, 1], "d2": y[:, 2], "d3": y[:, 3], "C": y[:, :4].sum(1)})
+    cfg = m1.Config(n_sims=200, niveis=["uf"])
+    d, X, Y = m1.preparar(df, R, D, cfg)
+    alvo = np.array([0.3, 0.3, 0.04, 0.05, 0.31])
+    th0, xbar = m1.priori(X, E, alvo, np.zeros((R, D), bool), cfg)
+    assert np.allclose(xbar @ m1.matriz(th0), alvo, atol=1e-4)
+    aj = m1.ajustar(d, X, Y, th0, xbar, alvo, cfg)
+    r = m1.resumo(m1.simular(d, X, Y, aj, cfg), ["A", "B"])
+    real = 100 * y[:, 0].sum() / y[:, :3].sum()
+    assert abs(r["candidatos"][0]["media"] - real) < 0.05

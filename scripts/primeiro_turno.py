@@ -48,7 +48,26 @@ VARIANTES = {
     "e1_r5": {**C, "rho_grupos": 0.5},
     "e02_r5": {**C, "rho_grupos": 0.5, "escala_pesquisa": 0.2},
     "e1_r5_t3": {**C, "rho_grupos": 0.5, "tau": 0.3},
-    "uf_unica": {"choque_nacional": 0.0, "choque_parcial": 0.04},
+    "t3_p4": {**C, "rho_grupos": 0.5, "tau": 0.3, "choque_parcial": 0.04},
+    "t3_p6": {**C, "rho_grupos": 0.5, "tau": 0.3, "choque_parcial": 0.06},
+    "t3_p4_i10": {**C, "rho_grupos": 0.5, "tau": 0.3, "choque_parcial": 0.04, "choque_uf_inicio": 0.10},
+    "t5_p4": {**C, "rho_grupos": 0.5, "tau": 0.5, "choque_parcial": 0.04},
+    "t5_p4_r0": {**C, "rho_grupos": 0.0, "tau": 0.5, "choque_parcial": 0.04, "sd_pesquisa": 4.5},
+    "t5_p4_r25": {**C, "rho_grupos": 0.25, "tau": 0.5, "choque_parcial": 0.04, "sd_pesquisa": 4.5},
+    "t7_p4": {**C, "rho_grupos": 0.5, "tau": 0.7, "choque_parcial": 0.04, "sd_pesquisa": 4.5},
+    "t5_p6_s45": {**C, "rho_grupos": 0.5, "tau": 0.5, "choque_parcial": 0.06, "sd_pesquisa": 4.5},
+    # adotada (padrão de eleicoes/modelos/primeiro_turno.Config, igual a t5_p4_r25)
+    "adotada": {},
+    "adotada_p8": {"choque_parcial": 0.08},
+    "g2": {"choque_grupo_inicio": 0.2},
+    "pg2": {"choque_grupo_inicio": 0.2},
+    "pg2_c4": {"choque_grupo_inicio": 0.2, "choque_uf": 0.04},
+    "g4": {"choque_grupo_inicio": 0.4},
+    "g4_p8": {"choque_grupo_inicio": 0.4, "choque_parcial": 0.08},
+    "g6_p8": {"choque_grupo_inicio": 0.6, "choque_parcial": 0.08},
+    # numa UF só não há choque nacional separado do da UF; um grupo grande ainda sem votos (a capital) pode votar bem
+    # diferente do interior já apurado (AM 2018: Wilson Lima): desvio extra de 0,2 por grupo não apurado (g2)
+    "uf_unica": {"choque_nacional": 0.0, "choque_grupo_inicio": 0.2},
 }
 
 
@@ -117,6 +136,12 @@ def bases_prefeito(ano, k_max=5, min_validos=5.0, k_min=3):
     sec = pd.read_csv(os.path.join(pasta, "prefeito_t1_secoes.csv.gz"), dtype={"mun": str})
     vot = pd.read_csv(os.path.join(pasta, "prefeito_t1_votos.csv.gz"), dtype={"mun": str, "numero": str})
     meta = json.load(open(os.path.join(pasta, "prefeito_t1_secoes.json"), encoding="utf-8"))["cidades"]
+    # branco/nulo e abstenção de partida: os da cidade na eleição de prefeito anterior (2008: médias típicas)
+    ant = {}
+    if ano - 4 in ANOS["prefeito"]:
+        _, c4 = hist._votos_cargo(ano - 4, 11)
+        c4 = c4.set_index("mun")
+        ant = {m: ((r["brancos"] + r["nulos"]) / r["aptos"], r["abstencoes"] / r["aptos"]) for m, r in c4.iterrows()}
     out = {}
     for mun, g in sec.groupby("mun"):
         g = g[g["E"] > 0]
@@ -142,7 +167,7 @@ def bases_prefeito(ano, k_max=5, min_validos=5.0, k_min=3):
         b["nome"], b["capital"], b["Ea"] = mun, False, b["E"]
         nm = meta.get(mun.lstrip("0"), {}).get("candidatos", {})
         info = {"ano": ano, "cargo": "prefeito", "uf": b["uf"].iloc[0], "mun": mun, "votos_por_eleitor": 1,
-                "partidos_ref": [],
+                "partidos_ref": [], "w_n": ant.get(mun, (0.07, 0.2)),
                 "candidatos": [{"numero": n, "nome": nm.get(n, {}).get("nome", n), "partido": "", "validos": float(pct[n])}
                                for n in nomeados], "demais_validos": float(pct.iloc[k:].sum())}
         out[mun] = (b, info)
@@ -197,11 +222,11 @@ def mesmo_partido(info):
     return mesmo
 
 
-def alvo_pesquisa(X, peso, pesquisa, demais):
-    """Frações do eleitorado em cada destino: branco/nulo e abstenção como na referência; os válidos divididos como na
-    pesquisa (% dos válidos de cada candidato nomeado; o resto vai para os demais)."""
+def alvo_pesquisa(X, peso, pesquisa, demais, w_n=None):
+    """Frações do eleitorado em cada destino: branco/nulo e abstenção como na referência (ou `w_n`); os válidos
+    divididos como na pesquisa (% dos válidos de cada candidato nomeado; o resto vai para os demais)."""
     xbar = (X * peso[:, None]).sum(0) / peso.sum()
-    w, n = xbar[-2], xbar[-1]
+    w, n = w_n if w_n is not None else (xbar[-2], xbar[-1])
     val = 1 - w - n
     p = np.append(np.asarray(pesquisa, float), max(demais, 0.5))
     p = p / p.sum()
@@ -239,7 +264,7 @@ def prever(s, info, pesquisa, cfg):
     D = K + 3
     df, X, Y = m1.preparar(s, R, D, cfg)
     peso = df["E"].values.astype(float)
-    alvo = alvo_pesquisa(X, peso, pesquisa, 100 - sum(pesquisa))
+    alvo = alvo_pesquisa(X, peso, pesquisa, 100 - sum(pesquisa), info.get("w_n"))
     mesmo = mesmo_partido(info) if R > 1 else np.zeros((1, D), bool)
     th0, xbar = m1.priori(X, peso, alvo, mesmo, cfg)
     aj = m1.ajustar(df, X, Y, th0, xbar, alvo, cfg)
@@ -277,8 +302,24 @@ def main():
     ap.add_argument("--saida", default=None)
     ap.add_argument("--vies-secoes", type=float, default=0.3, help="prefeito: viés da ordem das seções (0,1 a 0,3)")
     ap.add_argument("--pesquisa-sintetica", action="store_true", help="usa a pesquisa sintética mesmo quando há a real")
+    ap.add_argument("--juntar", nargs="*", help="só junta previsoes.csv destas saídas (pastas em resultados/primeiro-turno/) "
+                    "em --saida e refaz o resumo")
     a = ap.parse_args()
     out = os.path.join(OUT, a.saida or a.cargo)
+    if a.juntar:
+        os.makedirs(out, exist_ok=True)
+        res = pd.concat([pd.read_csv(os.path.join(OUT, j, "previsoes.csv")) for j in a.juntar], ignore_index=True)
+        res.to_csv(os.path.join(out, "previsoes.csv"), index=False)
+        infos = {}
+        for j in a.juntar:
+            infos.update(json.load(open(os.path.join(OUT, j, "eleicoes.json"), encoding="utf-8")))
+        with open(os.path.join(out, "eleicoes.json"), "w", encoding="utf-8") as f:
+            json.dump(infos, f, ensure_ascii=False, indent=1)
+        resumo = resumir(res)
+        resumo.round(4).to_csv(os.path.join(out, "resumo.csv"), index=False)
+        pd.set_option("display.width", 250)
+        print(resumo.round(3).to_string(index=False))
+        return
     os.makedirs(out, exist_ok=True)
     sd_p = a.erro_pesquisa if a.erro_pesquisa is not None else ERRO_PESQUISA[a.cargo]
     linhas, infos = [], {}

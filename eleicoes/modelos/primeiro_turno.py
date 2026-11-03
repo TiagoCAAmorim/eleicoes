@@ -36,15 +36,16 @@ from ..dados.geo import REGIAO, porte
 
 @dataclass
 class Config:
-    sd_celula: float = 1.0            # desvio da priori de cada célula da matriz (logit)
-    sd_pesquisa: float = 2.0          # desvio do total nacional de cada candidato (pontos dos válidos ~ erro da pesquisa)
+    sd_celula: float = 0.5            # desvio da priori de cada célula da matriz (logit)
+    sd_pesquisa: float = 4.5          # desvio do total nacional de cada candidato (pontos dos válidos): erro das
+                                      # pesquisas Datafolha da véspera do 1º turno presidencial 2010–2026
     # a pesquisa perde peso conforme a apuração avança: desvio = sd_pesquisa * (1 + % apurado / escala_pesquisa).
     # Sem isso, as células ainda sem dados (ex.: o Nordeste no começo) se ajustam para manter o total da pesquisa.
     escala_pesquisa: float = 1.0
     bonus_partido: float = 1.5        # logit extra para o candidato do mesmo partido de uma linha da referência
     bonus_branco: float = 1.5         # branco/nulo -> branco/nulo
     bonus_abstencao: float = 2.0      # abstenção -> abstenção
-    tau: float = 0.3                  # quanto cada nível da hierarquia pode se afastar do de cima
+    tau: float = 0.5                  # quanto cada nível da hierarquia pode se afastar do de cima
     s0_inicial: float = 0.02          # ruído entre unidades (fração do eleitorado)
     s_parcial: float = 0.08           # desvio extra de uma unidade parcialmente apurada
     k_parcial: float = 0.30           # peso do resultado parcial da própria unidade: f/(f+k)
@@ -52,10 +53,12 @@ class Config:
     # candidatos de ~50% equivale a ~2% de desvio na margem entre eles
     choque_uf: float = 0.03
     choque_nacional: float = 0.015
-    choque_parcial: float = 0.02
+    choque_parcial: float = 0.04
     choque_uf_inicio: float = 0.05
     choque_uf_inicio_antes: float = None
-    rho_grupos: float = 0.0          # correlação entre os desvios dos grupos no sorteio (grupos sem dados erram juntos)
+    choque_grupo_inicio: float = 0.0  # desvio extra por grupo folha (ex.: a capital) x fração do grupo ainda não
+                                      # apurada: um grupo grande sem nenhum dado pode votar bem diferente do resto
+    rho_grupos: float = 0.25         # correlação entre os desvios dos grupos no sorteio (grupos sem dados erram juntos)
     n_sims: int = 1000
     seed: int = 42
     niveis: list = field(default_factory=lambda: ["regiao", "uf", "uf_porte"])
@@ -221,8 +224,13 @@ def ajustar(df, X, Y, th0, xbar, alvo, cfg: Config):
         s0 = float(np.sqrt(max(exc, 0.004 ** 2)))
         mu, cov = _ajustar(X[ok], Y[ok], pesos(ok, s0, mu), th0, cfg.sd_celula, xbar, alvo, sd_nac)
     grupos = {("brasil", "Brasil"): (mu, cov)}
-    pais = {"regiao": "brasil", "uf": "regiao", "uf_porte": "uf"}
-    pais = {n: pais.get(n, "brasil") for n in cfg.niveis}
+    # pai de cada nível: o nível de cima da hierarquia regional que estiver em cfg.niveis (ou o Brasil)
+    pais = {}
+    for n in cfg.niveis:
+        p = {"regiao": "brasil", "uf": "regiao", "uf_porte": "uf"}.get(n, "brasil")
+        while p != "brasil" and p not in cfg.niveis:
+            p = {"uf": "regiao", "regiao": "brasil"}[p]
+        pais[n] = p
     for nivel in cfg.niveis:
         for nome, idx in df.groupby(nivel).indices.items():
             pn = df[pais[nivel]].iloc[idx[0]]
@@ -293,6 +301,12 @@ def simular(df, X, Y, aj: Ajuste, cfg: Config):
     z = (rng.standard_normal((S, len(ufs), nc)) * sd_uf[None, :, None])[:, uf_idx]      # (S, U, nc)
     if cfg.choque_nacional:
         z = z + rng.standard_normal((S, 1, nc)) * cfg.choque_nacional
+    if cfg.choque_grupo_inicio:
+        G = len(aj.folhas)
+        Ea_g = np.bincount(aj.folha, df["Ea"].values.astype(float), G)
+        E_g = np.bincount(aj.folha, df["E"].values.astype(float), G)
+        sd_g = cfg.choque_grupo_inicio * np.clip(1 - Ea_g / np.maximum(E_g, 1), 0, 1)
+        z = z + (rng.standard_normal((S, G, nc)) * sd_g[None, :, None])[:, aj.folha]
     if cfg.choque_parcial:
         fator = np.where((f > 0) & (f < 1) & temY, 1.0, _indice_parcial(df))
         z = z + rng.standard_normal((S, 1, nc)) * cfg.choque_parcial * fator[None, :, None]

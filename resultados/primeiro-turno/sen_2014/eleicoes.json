@@ -1,0 +1,922 @@
+{
+ "2014|ac": {
+  "ano": 2014,
+  "cargo": "senador",
+  "uf": "ac",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PSDB",
+   "PT",
+   "PV"
+  ],
+  "candidatos": [
+   {
+    "numero": "111",
+    "nome": "GLADSON CAMELI",
+    "partido": "PP",
+    "validos": 58.36403753338331
+   },
+   {
+    "numero": "654",
+    "nome": "PERPÉTUA ALMEIDA",
+    "partido": "PC do B",
+    "validos": 36.47312126313655
+   },
+   {
+    "numero": "333",
+    "nome": "DR. ROBERTO DUARTE",
+    "partido": "PMN",
+    "validos": 4.567344248998834
+   }
+  ],
+  "demais_validos": 0.5954969544813014,
+  "vagas": 1,
+  "maioria": false
+ },
+ "2014|al": {
+  "ano": 2014,
+  "cargo": "senador",
+  "uf": "al",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "PSDB",
+   "PV"
+  ],
+  "candidatos": [
+   {
+    "numero": "144",
+    "nome": "COLLOR",
+    "partido": "PTB",
+    "validos": 55.68570803027035
+   },
+   {
+    "numero": "500",
+    "nome": "HELOÍSA HELENA",
+    "partido": "PSOL",
+    "validos": 31.85617141670686
+   },
+   {
+    "numero": "255",
+    "nome": "OMAR",
+    "partido": "DEM",
+    "validos": 11.08735889039966
+   }
+  ],
+  "demais_validos": 1.3707616626231338,
+  "vagas": 1,
+  "maioria": false
+ },
+ "2014|am": {
+  "ano": 2014,
+  "cargo": "senador",
+  "uf": "am",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "PV",
+   "PSDB"
+  ],
+  "candidatos": [
+   {
+    "numero": "555",
+    "nome": "OMAR AZIZ",
+    "partido": "PSD",
+    "validos": 58.511337403250714
+   },
+   {
+    "numero": "131",
+    "nome": "PRACIANO",
+    "partido": "PT",
+    "validos": 34.439645046405204
+   },
+   {
+    "numero": "400",
+    "nome": "MARCELO SERAFIM",
+    "partido": "PSB",
+    "validos": 5.727620413903707
+   }
+  ],
+  "demais_validos": 1.3213971364403778,
+  "vagas": 1,
+  "maioria": false
+ },
+ "2014|ap": {
+  "ano": 2014,
+  "cargo": "senador",
+  "uf": "ap",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "PV",
+   "PSDB"
+  ],
+  "candidatos": [
+   {
+    "numero": "255",
+    "nome": "DAVI ALCOLUMBRE",
+    "partido": "DEM",
+    "validos": 36.25604290323646
+   },
+   {
+    "numero": "152",
+    "nome": "GILVAM",
+    "partido": "PMDB",
+    "validos": 34.2581682432358
+   },
+   {
+    "numero": "511",
+    "nome": "PROMOTOR MOISÉS",
+    "partido": "PEN",
+    "validos": 13.251990441476066
+   },
+   {
+    "numero": "131",
+    "nome": "DORA NASCIMENTO",
+    "partido": "PT",
+    "validos": 10.714521688378905
+   }
+  ],
+  "demais_validos": 5.519276723672764,
+  "vagas": 1,
+  "maioria": false
+ },
+ "2014|ba": {
+  "ano": 2014,
+  "cargo": "senador",
+  "uf": "ba",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "PSDB",
+   "PV"
+  ],
+  "candidatos": [
+   {
+    "numero": "555",
+    "nome": "OTTO ALENCAR",
+    "partido": "PSD",
+    "validos": 55.884186922966016
+   },
+   {
+    "numero": "150",
+    "nome": "GEDDEL VIEIRA LIMA",
+    "partido": "PMDB",
+    "validos": 34.53884281927945
+   },
+   {
+    "numero": "400",
+    "nome": "ELIANA CALMON",
+    "partido": "PSB",
+    "validos": 8.412088781484199
+   }
+  ],
+  "demais_validos": 1.164881476270332,
+  "vagas": 1,
+  "maioria": false
+ },
+ "2014|ce": {
+  "ano": 2014,
+  "cargo": "senador",
+  "uf": "ce",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "PSDB",
+   "PV"
+  ],
+  "candidatos": [
+   {
+    "numero": "456",
+    "nome": "TASSO JEREISSATI",
+    "partido": "PSDB",
+    "validos": 57.906265134504466
+   },
+   {
+    "numero": "900",
+    "nome": "MAURO FILHO",
+    "partido": "PROS",
+    "validos": 39.36802311851843
+   },
+   {
+    "numero": "400",
+    "nome": "GEOVANA CARTAXO",
+    "partido": "PSB",
+    "validos": 1.6734259114724046
+   }
+  ],
+  "demais_validos": 1.052285835504697,
+  "vagas": 1,
+  "maioria": false
+ },
+ "2014|es": {
+  "ano": 2014,
+  "cargo": "senador",
+  "uf": "es",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "PSDB",
+   "PV"
+  ],
+  "candidatos": [
+   {
+    "numero": "156",
+    "nome": "ROSE DE FREITAS",
+    "partido": "PMDB",
+    "validos": 46.22871306804321
+   },
+   {
+    "numero": "433",
+    "nome": "NEUCIMAR FRAGA",
+    "partido": "PV",
+    "validos": 31.112745325531943
+   },
+   {
+    "numero": "131",
+    "nome": "JOAO COSER",
+    "partido": "PT",
+    "validos": 20.158550531139518
+   }
+  ],
+  "demais_validos": 2.4999910752853234,
+  "vagas": 1,
+  "maioria": false
+ },
+ "2014|go": {
+  "ano": 2014,
+  "cargo": "senador",
+  "uf": "go",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "PSDB",
+   "PV"
+  ],
+  "candidatos": [
+   {
+    "numero": "251",
+    "nome": "RONALDO CAIADO",
+    "partido": "DEM",
+    "validos": 47.57117990638187
+   },
+   {
+    "numero": "551",
+    "nome": "VILMAR ROCHA",
+    "partido": "PSD",
+    "validos": 37.521962015395
+   },
+   {
+    "numero": "131",
+    "nome": "MARINA SANT ANNA",
+    "partido": "PT",
+    "validos": 11.06537222489252
+   }
+  ],
+  "demais_validos": 3.8414858533306107,
+  "vagas": 1,
+  "maioria": false
+ },
+ "2014|ma": {
+  "ano": 2014,
+  "cargo": "senador",
+  "uf": "ma",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "PSDB",
+   "PV"
+  ],
+  "candidatos": [
+   {
+    "numero": "400",
+    "nome": "ROBERTO ROCHA",
+    "partido": "PSB",
+    "validos": 51.41067445789281
+   },
+   {
+    "numero": "151",
+    "nome": "GASTÃO VIEIRA",
+    "partido": "PMDB",
+    "validos": 44.67316221738036
+   },
+   {
+    "numero": "500",
+    "nome": "HAROLDO SABOIA",
+    "partido": "PSOL",
+    "validos": 1.7941379911739508
+   }
+  ],
+  "demais_validos": 2.1220253335528763,
+  "vagas": 1,
+  "maioria": false
+ },
+ "2014|mg": {
+  "ano": 2014,
+  "cargo": "senador",
+  "uf": "mg",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "PSDB",
+   "PV"
+  ],
+  "candidatos": [
+   {
+    "numero": "456",
+    "nome": "ANTONIO ANASTASIA",
+    "partido": "PSDB",
+    "validos": 56.72702780187265
+   },
+   {
+    "numero": "150",
+    "nome": "JOSUÉ ALENCAR",
+    "partido": "PMDB",
+    "validos": 40.1828031182492
+   },
+   {
+    "numero": "400",
+    "nome": "MARGARIDA VIEIRA",
+    "partido": "PSB",
+    "validos": 2.1415702565973547
+   }
+  ],
+  "demais_validos": 0.9485988232807959,
+  "vagas": 1,
+  "maioria": false
+ },
+ "2014|ms": {
+  "ano": 2014,
+  "cargo": "senador",
+  "uf": "ms",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PSDB",
+   "PT",
+   "PV"
+  ],
+  "candidatos": [
+   {
+    "numero": "151",
+    "nome": "SIMONE TEBET",
+    "partido": "PMDB",
+    "validos": 52.61239587800986
+   },
+   {
+    "numero": "133",
+    "nome": "RICARDO AYACHE",
+    "partido": "PT",
+    "validos": 23.08981646265412
+   },
+   {
+    "numero": "111",
+    "nome": "ALCIDES BERNAL",
+    "partido": "PP",
+    "validos": 16.78292834829535
+   },
+   {
+    "numero": "555",
+    "nome": "ANTONIO JOÃO",
+    "partido": "PSD",
+    "validos": 7.145861987935078
+   }
+  ],
+  "demais_validos": 0.3689973231055919,
+  "vagas": 1,
+  "maioria": false
+ },
+ "2014|mt": {
+  "ano": 2014,
+  "cargo": "senador",
+  "uf": "mt",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PSDB",
+   "PT",
+   "PV"
+  ],
+  "candidatos": [
+   {
+    "numero": "222",
+    "nome": "WELLINGTON FAGUNDES",
+    "partido": "PR",
+    "validos": 48.18751817253282
+   },
+   {
+    "numero": "456",
+    "nome": "ROGÉRIO SALLES",
+    "partido": "PSDB",
+    "validos": 40.36031938925379
+   },
+   {
+    "numero": "555",
+    "nome": "RUI PRADO",
+    "partido": "PSD",
+    "validos": 10.242225883651058
+   }
+  ],
+  "demais_validos": 1.2099365545623308,
+  "vagas": 1,
+  "maioria": false
+ },
+ "2014|pa": {
+  "ano": 2014,
+  "cargo": "senador",
+  "uf": "pa",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "PSDB",
+   "PV"
+  ],
+  "candidatos": [
+   {
+    "numero": "131",
+    "nome": "PAULO ROCHA",
+    "partido": "PT",
+    "validos": 46.163073078147285
+   },
+   {
+    "numero": "111",
+    "nome": "JEFFERSON LIMA",
+    "partido": "PP",
+    "validos": 21.851149987621866
+   },
+   {
+    "numero": "456",
+    "nome": "MARIO COUTO",
+    "partido": "PSDB",
+    "validos": 18.402189161469813
+   },
+   {
+    "numero": "555",
+    "nome": "HELENILSON PONTES",
+    "partido": "PSD",
+    "validos": 9.240129911466868
+   }
+  ],
+  "demais_validos": 4.343457861294164,
+  "vagas": 1,
+  "maioria": false
+ },
+ "2014|pb": {
+  "ano": 2014,
+  "cargo": "senador",
+  "uf": "pb",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "PSDB",
+   "PV"
+  ],
+  "candidatos": [
+   {
+    "numero": "155",
+    "nome": "JOSE MARANHÃO",
+    "partido": "PMDB",
+    "validos": 37.11512051629772
+   },
+   {
+    "numero": "133",
+    "nome": "LUCÉLIO CARTAXO",
+    "partido": "PT",
+    "validos": 29.9284098500248
+   },
+   {
+    "numero": "145",
+    "nome": "WILSON SANTIAGO",
+    "partido": "PTB",
+    "validos": 29.01984282851335
+   }
+  ],
+  "demais_validos": 3.936626805164124,
+  "vagas": 1,
+  "maioria": false
+ },
+ "2014|pe": {
+  "ano": 2014,
+  "cargo": "senador",
+  "uf": "pe",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "PV",
+   "PSDB"
+  ],
+  "candidatos": [
+   {
+    "numero": "400",
+    "nome": "FERNANDO BEZERRA COELHO",
+    "partido": "PSB",
+    "validos": 64.33923403735773
+   },
+   {
+    "numero": "130",
+    "nome": "JOÃO PAULO",
+    "partido": "PT",
+    "validos": 34.80373703179907
+   },
+   {
+    "numero": "500",
+    "nome": "ALBANISE PIRES",
+    "partido": "PSOL",
+    "validos": 0.6618003663775666
+   }
+  ],
+  "demais_validos": 0.19522856446563963,
+  "vagas": 1,
+  "maioria": false
+ },
+ "2014|pi": {
+  "ano": 2014,
+  "cargo": "senador",
+  "uf": "pi",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "PSDB",
+   "PV"
+  ],
+  "candidatos": [
+   {
+    "numero": "141",
+    "nome": "ELMANO - O VEÍN TRABALHADOR",
+    "partido": "PTB",
+    "validos": 62.29036447918214
+   },
+   {
+    "numero": "400",
+    "nome": "WILSON MARTINS",
+    "partido": "PSB",
+    "validos": 35.7162808827133
+   },
+   {
+    "numero": "200",
+    "nome": "GUSTAVO HENRIQUE",
+    "partido": "PSC",
+    "validos": 1.2243260366396358
+   }
+  ],
+  "demais_validos": 0.7690286014649252,
+  "vagas": 1,
+  "maioria": false
+ },
+ "2014|pr": {
+  "ano": 2014,
+  "cargo": "senador",
+  "uf": "pr",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PSDB",
+   "PT",
+   "PV"
+  ],
+  "candidatos": [
+   {
+    "numero": "456",
+    "nome": "ALVARO DIAS",
+    "partido": "PSDB",
+    "validos": 77.00218737868234
+   },
+   {
+    "numero": "650",
+    "nome": "RICARDO GOMYDE",
+    "partido": "PC do B",
+    "validos": 12.510747290556425
+   },
+   {
+    "numero": "151",
+    "nome": "MARCELO ALMEIDA",
+    "partido": "PMDB",
+    "validos": 8.73417754786815
+   }
+  ],
+  "demais_validos": 1.7528877828930918,
+  "vagas": 1,
+  "maioria": false
+ },
+ "2014|rj": {
+  "ano": 2014,
+  "cargo": "senador",
+  "uf": "rj",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "PV",
+   "PSDB"
+  ],
+  "candidatos": [
+   {
+    "numero": "400",
+    "nome": "ROMÁRIO",
+    "partido": "PSB",
+    "validos": 63.426169540952856
+   },
+   {
+    "numero": "255",
+    "nome": "CESAR MAIA",
+    "partido": "DEM",
+    "validos": 20.51112092692852
+   },
+   {
+    "numero": "901",
+    "nome": "LILIAM SÁ",
+    "partido": "PROS",
+    "validos": 6.877162688326703
+   }
+  ],
+  "demais_validos": 9.185546843791919,
+  "vagas": 1,
+  "maioria": false
+ },
+ "2014|rn": {
+  "ano": 2014,
+  "cargo": "senador",
+  "uf": "rn",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "PSDB",
+   "PV"
+  ],
+  "candidatos": [
+   {
+    "numero": "131",
+    "nome": "FÁTIMA",
+    "partido": "PT",
+    "validos": 54.844071542208056
+   },
+   {
+    "numero": "400",
+    "nome": "VILMA MARIA DE FARIA",
+    "partido": "PSB",
+    "validos": 43.22721818310158
+   },
+   {
+    "numero": "500",
+    "nome": "PROFESSOR LAILSON",
+    "partido": "PSOL",
+    "validos": 1.0292065526060021
+   }
+  ],
+  "demais_validos": 0.8995037220843672,
+  "vagas": 1,
+  "maioria": false
+ },
+ "2014|ro": {
+  "ano": 2014,
+  "cargo": "senador",
+  "uf": "ro",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PSDB",
+   "PT",
+   "PV"
+  ],
+  "candidatos": [
+   {
+    "numero": "123",
+    "nome": "ACIR GURGACZ",
+    "partido": "PDT",
+    "validos": 41.982630229631745
+   },
+   {
+    "numero": "555",
+    "nome": "MOREIRA MENDES",
+    "partido": "PSD",
+    "validos": 25.943727530696577
+   },
+   {
+    "numero": "111",
+    "nome": "IVONE CASSOL",
+    "partido": "PP",
+    "validos": 21.616728912596507
+   },
+   {
+    "numero": "500",
+    "nome": "ALUIZIO VIDAL",
+    "partido": "PSOL",
+    "validos": 10.456913327075167
+   }
+  ],
+  "demais_validos": 0.0,
+  "vagas": 1,
+  "maioria": false
+ },
+ "2014|rr": {
+  "ano": 2014,
+  "cargo": "senador",
+  "uf": "rr",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PSDB",
+   "PT",
+   "PV"
+  ],
+  "candidatos": [
+   {
+    "numero": "123",
+    "nome": "TELMÁRIO MOTA",
+    "partido": "PDT",
+    "validos": 41.23823670870452
+   },
+   {
+    "numero": "223",
+    "nome": "LUCIANO CASTRO",
+    "partido": "PR",
+    "validos": 21.331619471625515
+   },
+   {
+    "numero": "456",
+    "nome": "ANCHIETA",
+    "partido": "PSDB",
+    "validos": 20.56165858683022
+   },
+   {
+    "numero": "144",
+    "nome": "MOZARILDO",
+    "partido": "PTB",
+    "validos": 10.893520666363052
+   }
+  ],
+  "demais_validos": 5.974964566476695,
+  "vagas": 1,
+  "maioria": false
+ },
+ "2014|rs": {
+  "ano": 2014,
+  "cargo": "senador",
+  "uf": "rs",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "PSDB",
+   "PV"
+  ],
+  "candidatos": [
+   {
+    "numero": "123",
+    "nome": "LASIER MARTINS",
+    "partido": "PDT",
+    "validos": 37.420266407696005
+   },
+   {
+    "numero": "131",
+    "nome": "OLÍVIO DUTRA",
+    "partido": "PT",
+    "validos": 35.30876949169333
+   },
+   {
+    "numero": "151",
+    "nome": "SIMON",
+    "partido": "PMDB",
+    "validos": 16.083511759374954
+   },
+   {
+    "numero": "111",
+    "nome": "SIMONE LEITE",
+    "partido": "PP",
+    "validos": 10.575257418372265
+   }
+  ],
+  "demais_validos": 0.6121949228634397,
+  "vagas": 1,
+  "maioria": false
+ },
+ "2014|sc": {
+  "ano": 2014,
+  "cargo": "senador",
+  "uf": "sc",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PSDB",
+   "PT",
+   "PV"
+  ],
+  "candidatos": [
+   {
+    "numero": "155",
+    "nome": "DÁRIO",
+    "partido": "PMDB",
+    "validos": 42.81659640843727
+   },
+   {
+    "numero": "401",
+    "nome": "PAULO BORNHAUSEN",
+    "partido": "PSB",
+    "validos": 38.380462464174194
+   },
+   {
+    "numero": "130",
+    "nome": "MILTON MENDES",
+    "partido": "PT",
+    "validos": 14.004745252702213
+   }
+  ],
+  "demais_validos": 4.798195874686325,
+  "vagas": 1,
+  "maioria": false
+ },
+ "2014|se": {
+  "ano": 2014,
+  "cargo": "senador",
+  "uf": "se",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "PSDB",
+   "PV"
+  ],
+  "candidatos": [
+   {
+    "numero": "251",
+    "nome": "MARIA DO CARMO",
+    "partido": "DEM",
+    "validos": 48.913878773589026
+   },
+   {
+    "numero": "131",
+    "nome": "ROGÉRIO",
+    "partido": "PT",
+    "validos": 45.517539493332634
+   },
+   {
+    "numero": "161",
+    "nome": "LEANDRO",
+    "partido": "PSTU",
+    "validos": 2.8716171963008565
+   }
+  ],
+  "demais_validos": 2.6969645367774837,
+  "vagas": 1,
+  "maioria": false
+ },
+ "2014|sp": {
+  "ano": 2014,
+  "cargo": "senador",
+  "uf": "sp",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PSDB",
+   "PT",
+   "PV"
+  ],
+  "candidatos": [
+   {
+    "numero": "456",
+    "nome": "JOSÉ SERRA",
+    "partido": "PSDB",
+    "validos": 57.91947807835531
+   },
+   {
+    "numero": "131",
+    "nome": "EDUARDO SUPLICY",
+    "partido": "PT",
+    "validos": 32.21174654344931
+   },
+   {
+    "numero": "555",
+    "nome": "GILBERTO KASSAB",
+    "partido": "PSD",
+    "validos": 5.885793446659524
+   }
+  ],
+  "demais_validos": 3.9829819315358552,
+  "vagas": 1,
+  "maioria": false
+ },
+ "2014|to": {
+  "ano": 2014,
+  "cargo": "senador",
+  "uf": "to",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "PSDB",
+   "PV"
+  ],
+  "candidatos": [
+   {
+    "numero": "155",
+    "nome": "KATIA ABREU",
+    "partido": "PMDB",
+    "validos": 41.644015219410214
+   },
+   {
+    "numero": "777",
+    "nome": "EDUARDO GOMES",
+    "partido": "SD",
+    "validos": 40.768175664003614
+   },
+   {
+    "numero": "900",
+    "nome": "SARGENTO ARAGÃO",
+    "partido": "PROS",
+    "validos": 15.931214407944568
+   }
+  ],
+  "demais_validos": 1.656594708641607,
+  "vagas": 1,
+  "maioria": false
+ }
+}

@@ -1,0 +1,156 @@
+{
+ "2010|None": {
+  "ano": 2010,
+  "cargo": "presidente",
+  "uf": null,
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "PSDB",
+   "PSOL"
+  ],
+  "candidatos": [
+   {
+    "numero": "13",
+    "nome": "DILMA",
+    "partido": "PT",
+    "validos": 46.90556377053591
+   },
+   {
+    "numero": "45",
+    "nome": "JOSÉ SERRA",
+    "partido": "PSDB",
+    "validos": 32.61367565811226
+   },
+   {
+    "numero": "43",
+    "nome": "MARINA SILVA",
+    "partido": "PV",
+    "validos": 19.32899835282264
+   }
+  ],
+  "demais_validos": 1.1517622185291916
+ },
+ "2014|None": {
+  "ano": 2014,
+  "cargo": "presidente",
+  "uf": null,
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "PSDB",
+   "PV"
+  ],
+  "candidatos": [
+   {
+    "numero": "13",
+    "nome": "DILMA",
+    "partido": "PT",
+    "validos": 41.594007494553985
+   },
+   {
+    "numero": "45",
+    "nome": "AÉCIO NEVES",
+    "partido": "PSDB",
+    "validos": 33.547332753709576
+   },
+   {
+    "numero": "40",
+    "nome": "MARINA SILVA",
+    "partido": "PSB",
+    "validos": 21.31879298162934
+   }
+  ],
+  "demais_validos": 3.5398667701070954
+ },
+ "2018|None": {
+  "ano": 2018,
+  "cargo": "presidente",
+  "uf": null,
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "PSDB",
+   "PSB"
+  ],
+  "candidatos": [
+   {
+    "numero": "17",
+    "nome": "JAIR BOLSONARO",
+    "partido": "PSL",
+    "validos": 46.03144813120364
+   },
+   {
+    "numero": "13",
+    "nome": "FERNANDO HADDAD",
+    "partido": "PT",
+    "validos": 29.277750312611076
+   },
+   {
+    "numero": "12",
+    "nome": "CIRO GOMES",
+    "partido": "PDT",
+    "validos": 12.46546252562885
+   }
+  ],
+  "demais_validos": 12.225339030556434
+ },
+ "2022|None": {
+  "ano": 2022,
+  "cargo": "presidente",
+  "uf": null,
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PSL",
+   "PT",
+   "PDT"
+  ],
+  "candidatos": [
+   {
+    "numero": "13",
+    "nome": "LULA",
+    "partido": "PT",
+    "validos": 48.43071985986874
+   },
+   {
+    "numero": "22",
+    "nome": "JAIR BOLSONARO",
+    "partido": "PL",
+    "validos": 43.19755255444699
+   },
+   {
+    "numero": "15",
+    "nome": "SIMONE TEBET",
+    "partido": "MDB",
+    "validos": 4.15751897371929
+   }
+  ],
+  "demais_validos": 4.214208611964984
+ },
+ "2026|None": {
+  "ano": 2026,
+  "cargo": "presidente",
+  "uf": null,
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "PL",
+   "MDB"
+  ],
+  "candidatos": [
+   {
+    "numero": "13",
+    "nome": "LULA",
+    "partido": "PT",
+    "validos": 45.16515210611138
+   },
+   {
+    "numero": "22",
+    "nome": "FLÁVIO BOLSONARO",
+    "partido": "PL",
+    "validos": 47.0251984986887
+   }
+  ],
+  "demais_validos": 7.809649395199917
+ }
+}

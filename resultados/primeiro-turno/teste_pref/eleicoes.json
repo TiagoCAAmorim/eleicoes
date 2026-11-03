@@ -1,0 +1,74 @@
+{
+ "2024|60011": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "rj",
+  "mun": "60011",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [],
+  "w_n": [
+   0.1292486820076395,
+   0.3278880979709544
+  ],
+  "candidatos": [
+   {
+    "numero": "55",
+    "nome": "EDUARDO PAES",
+    "partido": "",
+    "validos": 60.466144946155964
+   },
+   {
+    "numero": "22",
+    "nome": "ALEXANDRE RAMAGEM",
+    "partido": "",
+    "validos": 30.80799994543986
+   },
+   {
+    "numero": "50",
+    "nome": "TARCÍSIO MOTTA",
+    "partido": "",
+    "validos": 4.200611138517478
+   }
+  ],
+  "demais_validos": 4.5252439698867
+ },
+ "2024|71072": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "sp",
+  "mun": "71072",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [],
+  "w_n": [
+   0.11297978888104147,
+   0.2929429944539072
+  ],
+  "candidatos": [
+   {
+    "numero": "15",
+    "nome": "RICARDO NUNES",
+    "partido": "",
+    "validos": 29.48312266504241
+   },
+   {
+    "numero": "50",
+    "nome": "GUILHERME BOULOS",
+    "partido": "",
+    "validos": 29.073697371326578
+   },
+   {
+    "numero": "28",
+    "nome": "PABLO MARÇAL",
+    "partido": "",
+    "validos": 28.143061827442594
+   },
+   {
+    "numero": "40",
+    "nome": "TABATA AMARAL",
+    "partido": "",
+    "validos": 9.912374278754589
+   }
+  ],
+  "demais_validos": 3.387743857433831
+ }
+}
