@@ -77,9 +77,10 @@ A estimação é feita em cascata: Brasil → região → UF → UF × porte. A 
 de cima, mais o desvio que esse grupo tinha na eleição de referência:
 
 $$\mu_{\text{grupo}} = \hat\theta_{\text{pai}} + \Delta_{\text{grupo}}, \qquad
-\tau_{\text{grupo}}^2 = 0{,}5^2 + \operatorname{diag}(\Sigma_{\text{pai}})$$
+\tau_{\text{grupo}}^2 = \tau^2 + \operatorname{diag}(\Sigma_{\text{pai}})$$
 
-Assim, um grupo sem nenhum município apurado herda a estimativa da vizinhança, com incerteza maior. Uma UF que
+com $\tau = 0{,}15$ na priori calibrada (era 0,5 no exemplo e no modelo do dia; ver
+[calibracao-priori.md](calibracao-priori.md)). Assim, um grupo sem nenhum município apurado herda a estimativa da vizinhança, com incerteza maior. Uma UF que
 já está apurada usa os próprios dados.
 
 ### No exemplo
@@ -210,12 +211,15 @@ As escalas (2%, 4%, 1% e 1,5%) foram calibradas no rejogo da apuração real de 
 
 ## 8. Limites conhecidos
 
-- **A previsão de antes da apuração depende da priori.** Se a eleição anterior não representa bem a atual, o centro
-  erra, como aconteceu em 2026. A base histórica de 2006 a 2024 (etapa 2) serve para calibrar a priori e o tamanho
-  desse erro.
+> O exemplo acima usa a priori da eleição anterior. O modelo em uso parte da média das eleições de 2006–2022 com a
+> linha Outros ajustada à pesquisa da véspera, com $\tau = 0{,}15$ e choque inicial por UF de 2% antes de abrir as
+> urnas e 4% depois ([calibracao-priori.md](calibracao-priori.md)). A mecânica é a mesma.
+
+- **A previsão de antes da apuração depende da priori e da pesquisa.** Com a priori calibrada, o erro de 2010 a 2026
+  foi de 1,1 ponto, praticamente o erro da pesquisa da véspera (2,8 pontos em 2026).
 - **A matriz é simples.** Branco e nulo não vão para A nem para B, e a abstenção é igual entre eleitores de A e de B.
-  A versão `matriz_v2` relaxa isso, mas ainda não foi adotada.
+  A `matriz_v2` relaxa isso, mas perdeu no teste de estresse e não foi adotada ([matriz-v2.md](matriz-v2.md)).
 - **O modelo só vê totais por município.** Um viés forte na ordem das seções dentro das cidades, maior do que o
-  calibrado, não tem como ser separado de uma virada real (ver a ordem "adversa" em [revisao-t2.md](revisao-t2.md)).
-- **No meio da noite, as faixas das UFs são largas demais.** O intervalo de 50% cobre cerca de 80% das vezes. É um
-  ajuste fino pendente da etapa 4.
+  calibrado, não tem como ser separado de uma virada real (ver [estresse.md](estresse.md)).
+- **As faixas das UFs no meio da noite ainda são um pouco largas**: com a priori calibrada, o intervalo de 50% das
+  UFs cobre 73–78% na noite de 2026 (era 80%).

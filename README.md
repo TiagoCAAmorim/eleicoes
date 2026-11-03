@@ -27,6 +27,7 @@ scripts/                  linha de comando
   backtest.py             simula a apuração de 2022 e mede erro e cobertura (--variante para testar variantes)
   primeiro_turno.py       rejogos do 1º turno (--cargo presidente|governador|senador|prefeito)
   estresse.py             teste de estresse: muitas apurações sintéticas (--calibrar mede o viés de ordem de 2026)
+  aliancas.py             alianças contrafactuais de deputados: validar, efeito, busca, exportar, simular
   rejogar_2026.py         rejoga a apuração real de 2026 com variantes do modelo
   rejogar_paginas_2026.py refaz as saídas da noite de 2026 com outro modelo (versão "revisado" do site)
   extrair_retratos_2026.py  extrai do histórico git os retratos da apuração de 2026

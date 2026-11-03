@@ -1,0 +1,1996 @@
+ano,cargo,a,b,real_a,real_b,juntos_a,juntos_b,ganho
+2006,deputado federal,PC do B,PDT,13,24,14,18,-5
+2006,deputado federal,PC do B,PFL,13,65,10,58,-10
+2006,deputado federal,PC do B,PL,13,23,10,19,-7
+2006,deputado federal,PC do B,PMDB,13,89,14,81,-7
+2006,deputado federal,PC do B,PP,13,42,9,32,-14
+2006,deputado federal,PC do B,PPS,13,22,10,17,-8
+2006,deputado federal,PC do B,PSB,13,27,12,24,-4
+2006,deputado federal,PC do B,PSC,13,8,9,3,-9
+2006,deputado federal,PC do B,PSDB,13,66,10,65,-4
+2006,deputado federal,PC do B,PSOL,13,3,5,4,-7
+2006,deputado federal,PC do B,PT,13,83,11,75,-10
+2006,deputado federal,PC do B,PTB,13,22,11,16,-8
+2006,deputado federal,PC do B,PV,13,13,10,12,-4
+2006,deputado federal,PDT,PFL,24,65,19,68,-2
+2006,deputado federal,PDT,PL,24,23,17,27,-3
+2006,deputado federal,PDT,PMDB,24,89,21,91,-1
+2006,deputado federal,PDT,PP,24,42,25,36,-5
+2006,deputado federal,PDT,PPS,24,22,23,23,0
+2006,deputado federal,PDT,PSB,24,27,24,30,3
+2006,deputado federal,PDT,PSC,24,8,21,9,-2
+2006,deputado federal,PDT,PSDB,24,66,24,74,8
+2006,deputado federal,PDT,PSOL,24,3,23,3,-1
+2006,deputado federal,PDT,PT,24,83,20,84,-3
+2006,deputado federal,PDT,PTB,24,22,20,25,-1
+2006,deputado federal,PDT,PV,24,13,25,11,-1
+2006,deputado federal,PFL,PL,65,23,62,22,-4
+2006,deputado federal,PFL,PMDB,65,89,68,85,-1
+2006,deputado federal,PFL,PP,65,42,60,34,-13
+2006,deputado federal,PFL,PPS,65,22,63,17,-7
+2006,deputado federal,PFL,PSB,65,27,68,23,-1
+2006,deputado federal,PFL,PSC,65,8,59,5,-9
+2006,deputado federal,PFL,PSDB,65,66,63,67,-1
+2006,deputado federal,PFL,PSOL,65,3,57,2,-9
+2006,deputado federal,PFL,PT,65,83,71,74,-3
+2006,deputado federal,PFL,PTB,65,22,64,20,-3
+2006,deputado federal,PFL,PV,65,13,67,6,-5
+2006,deputado federal,PL,PMDB,23,89,26,86,0
+2006,deputado federal,PL,PP,23,42,22,35,-8
+2006,deputado federal,PL,PPS,23,22,22,15,-8
+2006,deputado federal,PL,PSB,23,27,27,27,4
+2006,deputado federal,PL,PSC,23,8,20,4,-7
+2006,deputado federal,PL,PSDB,23,66,21,69,1
+2006,deputado federal,PL,PSOL,23,3,19,2,-5
+2006,deputado federal,PL,PT,23,83,25,77,-4
+2006,deputado federal,PL,PTB,23,22,20,21,-4
+2006,deputado federal,PL,PV,23,13,25,7,-4
+2006,deputado federal,PMDB,PP,89,42,85,41,-5
+2006,deputado federal,PMDB,PPS,89,22,91,19,-1
+2006,deputado federal,PMDB,PSB,89,27,91,29,4
+2006,deputado federal,PMDB,PSC,89,8,86,7,-4
+2006,deputado federal,PMDB,PSDB,89,66,91,69,5
+2006,deputado federal,PMDB,PSOL,89,3,85,3,-4
+2006,deputado federal,PMDB,PT,89,83,92,80,0
+2006,deputado federal,PMDB,PTB,89,22,84,25,-2
+2006,deputado federal,PMDB,PV,89,13,92,9,-1
+2006,deputado federal,PP,PPS,42,22,34,19,-11
+2006,deputado federal,PP,PSB,42,27,39,26,-4
+2006,deputado federal,PP,PSC,42,8,32,6,-12
+2006,deputado federal,PP,PSDB,42,66,35,71,-2
+2006,deputado federal,PP,PSOL,42,3,31,4,-10
+2006,deputado federal,PP,PT,42,83,35,82,-8
+2006,deputado federal,PP,PTB,42,22,35,23,-6
+2006,deputado federal,PP,PV,42,13,34,13,-8
+2006,deputado federal,PPS,PSB,22,27,18,30,-1
+2006,deputado federal,PPS,PSC,22,8,18,6,-6
+2006,deputado federal,PPS,PSDB,22,66,21,66,-1
+2006,deputado federal,PPS,PSOL,22,3,16,3,-6
+2006,deputado federal,PPS,PT,22,83,19,78,-8
+2006,deputado federal,PPS,PTB,22,22,18,17,-9
+2006,deputado federal,PPS,PV,22,13,20,10,-5
+2006,deputado federal,PSB,PSC,27,8,28,6,-1
+2006,deputado federal,PSB,PSDB,27,66,25,76,8
+2006,deputado federal,PSB,PSOL,27,3,26,4,0
+2006,deputado federal,PSB,PT,27,83,25,87,2
+2006,deputado federal,PSB,PTB,27,22,25,24,0
+2006,deputado federal,PSB,PV,27,13,32,11,3
+2006,deputado federal,PSC,PSDB,8,66,5,69,0
+2006,deputado federal,PSC,PSOL,8,3,5,3,-3
+2006,deputado federal,PSC,PT,8,83,7,76,-8
+2006,deputado federal,PSC,PTB,8,22,5,20,-5
+2006,deputado federal,PSC,PV,8,13,7,12,-2
+2006,deputado federal,PSDB,PSOL,66,3,68,2,1
+2006,deputado federal,PSDB,PT,66,83,68,81,0
+2006,deputado federal,PSDB,PTB,66,22,69,22,3
+2006,deputado federal,PSDB,PV,66,13,73,7,1
+2006,deputado federal,PSOL,PT,3,83,3,73,-10
+2006,deputado federal,PSOL,PTB,3,22,3,16,-6
+2006,deputado federal,PSOL,PV,3,13,4,12,0
+2006,deputado federal,PT,PTB,83,22,76,22,-7
+2006,deputado federal,PT,PV,83,13,82,6,-8
+2006,deputado federal,PTB,PV,22,13,24,8,-3
+2006,deputado estadual,PC do B,PDT,12,66,11,70,3
+2006,deputado estadual,PC do B,PFL,12,116,9,114,-5
+2006,deputado estadual,PC do B,PHS,12,7,12,7,0
+2006,deputado estadual,PC do B,PL,12,34,10,37,1
+2006,deputado estadual,PC do B,PMDB,12,161,9,163,-1
+2006,deputado estadual,PC do B,PMN,12,31,10,31,-2
+2006,deputado estadual,PC do B,PP,12,52,9,54,-1
+2006,deputado estadual,PC do B,PPS,12,40,14,37,-1
+2006,deputado estadual,PC do B,PSB,12,59,14,61,4
+2006,deputado estadual,PC do B,PSC,12,27,12,23,-4
+2006,deputado estadual,PC do B,PSDB,12,152,9,160,5
+2006,deputado estadual,PC do B,PT,12,122,14,126,6
+2006,deputado estadual,PC do B,PT do B,12,17,10,11,-8
+2006,deputado estadual,PC do B,PTB,12,48,9,48,-3
+2006,deputado estadual,PC do B,PV,12,34,11,32,-3
+2006,deputado estadual,PDT,PFL,66,116,56,126,0
+2006,deputado estadual,PDT,PHS,66,7,69,7,3
+2006,deputado estadual,PDT,PL,66,34,66,39,5
+2006,deputado estadual,PDT,PMDB,66,161,59,170,2
+2006,deputado estadual,PDT,PMN,66,31,71,28,2
+2006,deputado estadual,PDT,PP,66,52,61,62,5
+2006,deputado estadual,PDT,PPS,66,40,74,41,9
+2006,deputado estadual,PDT,PSB,66,59,75,64,14
+2006,deputado estadual,PDT,PSC,66,27,71,26,4
+2006,deputado estadual,PDT,PSDB,66,152,69,159,10
+2006,deputado estadual,PDT,PT,66,122,71,128,11
+2006,deputado estadual,PDT,PT do B,66,17,68,13,-2
+2006,deputado estadual,PDT,PTB,66,48,68,52,6
+2006,deputado estadual,PDT,PV,66,34,72,33,5
+2006,deputado estadual,PFL,PHS,116,7,112,5,-6
+2006,deputado estadual,PFL,PL,116,34,117,33,0
+2006,deputado estadual,PFL,PMDB,116,161,119,151,-7
+2006,deputado estadual,PFL,PMN,116,31,112,28,-7
+2006,deputado estadual,PFL,PP,116,52,111,53,-4
+2006,deputado estadual,PFL,PPS,116,40,124,31,-1
+2006,deputado estadual,PFL,PSB,116,59,128,46,-1
+2006,deputado estadual,PFL,PSC,116,27,119,17,-7
+2006,deputado estadual,PFL,PSDB,116,152,120,149,1
+2006,deputado estadual,PFL,PT,116,122,135,102,-1
+2006,deputado estadual,PFL,PT do B,116,17,116,7,-10
+2006,deputado estadual,PFL,PTB,116,48,121,36,-7
+2006,deputado estadual,PFL,PV,116,34,119,23,-8
+2006,deputado estadual,PHS,PL,7,34,6,33,-2
+2006,deputado estadual,PHS,PMDB,7,161,2,166,0
+2006,deputado estadual,PHS,PMN,7,31,5,31,-2
+2006,deputado estadual,PHS,PP,7,52,5,48,-6
+2006,deputado estadual,PHS,PPS,7,40,6,41,0
+2006,deputado estadual,PHS,PSB,7,59,5,61,0
+2006,deputado estadual,PHS,PSC,7,27,6,25,-3
+2006,deputado estadual,PHS,PSDB,7,152,5,158,4
+2006,deputado estadual,PHS,PT,7,122,6,128,5
+2006,deputado estadual,PHS,PT do B,7,17,7,13,-4
+2006,deputado estadual,PHS,PTB,7,48,6,42,-7
+2006,deputado estadual,PHS,PV,7,34,6,33,-2
+2006,deputado estadual,PL,PMDB,34,161,36,157,-2
+2006,deputado estadual,PL,PMN,34,31,29,35,-1
+2006,deputado estadual,PL,PP,34,52,32,54,0
+2006,deputado estadual,PL,PPS,34,40,37,42,5
+2006,deputado estadual,PL,PSB,34,59,37,61,5
+2006,deputado estadual,PL,PSC,34,27,34,21,-6
+2006,deputado estadual,PL,PSDB,34,152,33,156,3
+2006,deputado estadual,PL,PT,34,122,41,122,7
+2006,deputado estadual,PL,PT do B,34,17,37,10,-4
+2006,deputado estadual,PL,PTB,34,48,34,48,0
+2006,deputado estadual,PL,PV,34,34,35,32,-1
+2006,deputado estadual,PMDB,PMN,161,31,161,26,-5
+2006,deputado estadual,PMDB,PP,161,52,156,54,-3
+2006,deputado estadual,PMDB,PPS,161,40,169,30,-2
+2006,deputado estadual,PMDB,PSB,161,59,169,54,3
+2006,deputado estadual,PMDB,PSC,161,27,167,16,-5
+2006,deputado estadual,PMDB,PSDB,161,152,160,154,1
+2006,deputado estadual,PMDB,PT,161,122,179,108,4
+2006,deputado estadual,PMDB,PT do B,161,17,163,10,-5
+2006,deputado estadual,PMDB,PTB,161,48,160,46,-3
+2006,deputado estadual,PMDB,PV,161,34,166,25,-4
+2006,deputado estadual,PMN,PP,31,52,28,51,-4
+2006,deputado estadual,PMN,PPS,31,40,32,39,0
+2006,deputado estadual,PMN,PSB,31,59,30,60,0
+2006,deputado estadual,PMN,PSC,31,27,28,23,-7
+2006,deputado estadual,PMN,PSDB,31,152,30,153,0
+2006,deputado estadual,PMN,PT,31,122,33,124,4
+2006,deputado estadual,PMN,PT do B,31,17,30,11,-7
+2006,deputado estadual,PMN,PTB,31,48,25,49,-5
+2006,deputado estadual,PMN,PV,31,34,29,30,-6
+2006,deputado estadual,PP,PPS,52,40,58,34,0
+2006,deputado estadual,PP,PSB,52,59,56,57,2
+2006,deputado estadual,PP,PSC,52,27,54,20,-5
+2006,deputado estadual,PP,PSDB,52,152,56,150,2
+2006,deputado estadual,PP,PT,52,122,63,116,5
+2006,deputado estadual,PP,PT do B,52,17,54,9,-6
+2006,deputado estadual,PP,PTB,52,48,53,44,-3
+2006,deputado estadual,PP,PV,52,34,57,27,-2
+2006,deputado estadual,PPS,PSB,40,59,41,65,7
+2006,deputado estadual,PPS,PSC,40,27,43,23,-1
+2006,deputado estadual,PPS,PSDB,40,152,33,166,7
+2006,deputado estadual,PPS,PT,40,122,45,126,9
+2006,deputado estadual,PPS,PT do B,40,17,42,12,-3
+2006,deputado estadual,PPS,PTB,40,48,37,52,1
+2006,deputado estadual,PPS,PV,40,34,47,25,-2
+2006,deputado estadual,PSB,PSC,59,27,62,24,0
+2006,deputado estadual,PSB,PSDB,59,152,60,161,10
+2006,deputado estadual,PSB,PT,59,122,65,124,8
+2006,deputado estadual,PSB,PT do B,59,17,59,15,-2
+2006,deputado estadual,PSB,PTB,59,48,57,53,3
+2006,deputado estadual,PSB,PV,59,34,64,31,2
+2006,deputado estadual,PSC,PSDB,27,152,22,157,0
+2006,deputado estadual,PSC,PT,27,122,30,123,4
+2006,deputado estadual,PSC,PT do B,27,17,27,10,-7
+2006,deputado estadual,PSC,PTB,27,48,23,47,-5
+2006,deputado estadual,PSC,PV,27,34,21,35,-5
+2006,deputado estadual,PSDB,PT,152,122,170,115,11
+2006,deputado estadual,PSDB,PT do B,152,17,157,11,-1
+2006,deputado estadual,PSDB,PTB,152,48,155,46,1
+2006,deputado estadual,PSDB,PV,152,34,164,25,3
+2006,deputado estadual,PT,PT do B,122,17,126,14,1
+2006,deputado estadual,PT,PTB,122,48,122,52,4
+2006,deputado estadual,PT,PV,122,34,131,30,5
+2006,deputado estadual,PT do B,PTB,17,48,10,48,-7
+2006,deputado estadual,PT do B,PV,17,34,10,33,-8
+2006,deputado estadual,PTB,PV,48,34,49,28,-5
+2010,deputado federal,DEM,PC do B,43,15,35,10,-13
+2010,deputado federal,DEM,PDT,43,27,40,19,-11
+2010,deputado federal,DEM,PMDB,43,78,39,78,-4
+2010,deputado federal,DEM,PMN,43,4,33,3,-11
+2010,deputado federal,DEM,PP,43,44,34,39,-14
+2010,deputado federal,DEM,PPS,43,12,33,11,-11
+2010,deputado federal,DEM,PR,43,41,41,32,-11
+2010,deputado federal,DEM,PRB,43,8,33,7,-11
+2010,deputado federal,DEM,PSB,43,35,44,27,-7
+2010,deputado federal,DEM,PSC,43,17,36,13,-11
+2010,deputado federal,DEM,PSDB,43,54,41,53,-3
+2010,deputado federal,DEM,PSOL,43,3,32,3,-11
+2010,deputado federal,DEM,PT,43,86,42,87,0
+2010,deputado federal,DEM,PTB,43,22,35,17,-13
+2010,deputado federal,DEM,PV,43,13,41,7,-8
+2010,deputado federal,PC do B,PDT,15,27,12,22,-8
+2010,deputado federal,PC do B,PMDB,15,78,13,77,-3
+2010,deputado federal,PC do B,PMN,15,4,12,1,-6
+2010,deputado federal,PC do B,PP,15,44,14,34,-11
+2010,deputado federal,PC do B,PPS,15,12,8,10,-9
+2010,deputado federal,PC do B,PR,15,41,14,28,-14
+2010,deputado federal,PC do B,PRB,15,8,11,5,-7
+2010,deputado federal,PC do B,PSB,15,35,14,27,-9
+2010,deputado federal,PC do B,PSC,15,17,11,11,-10
+2010,deputado federal,PC do B,PSDB,15,54,11,54,-4
+2010,deputado federal,PC do B,PSOL,15,3,9,5,-4
+2010,deputado federal,PC do B,PT,15,86,11,90,0
+2010,deputado federal,PC do B,PTB,15,22,10,18,-9
+2010,deputado federal,PC do B,PV,15,13,13,12,-3
+2010,deputado federal,PDT,PMDB,27,78,18,85,-2
+2010,deputado federal,PDT,PMN,27,4,21,3,-7
+2010,deputado federal,PDT,PP,27,44,21,38,-12
+2010,deputado federal,PDT,PPS,27,12,21,13,-5
+2010,deputado federal,PDT,PR,27,41,26,35,-7
+2010,deputado federal,PDT,PRB,27,8,22,8,-5
+2010,deputado federal,PDT,PSB,27,35,27,30,-5
+2010,deputado federal,PDT,PSC,27,17,18,17,-9
+2010,deputado federal,PDT,PSDB,27,54,19,60,-2
+2010,deputado federal,PDT,PSOL,27,3,20,4,-6
+2010,deputado federal,PDT,PT,27,86,22,92,1
+2010,deputado federal,PDT,PTB,27,22,22,20,-7
+2010,deputado federal,PDT,PV,27,13,22,13,-5
+2010,deputado federal,PMDB,PMN,78,4,76,3,-3
+2010,deputado federal,PMDB,PP,78,44,76,42,-4
+2010,deputado federal,PMDB,PPS,78,12,76,10,-4
+2010,deputado federal,PMDB,PR,78,41,81,33,-5
+2010,deputado federal,PMDB,PRB,78,8,76,7,-3
+2010,deputado federal,PMDB,PSB,78,35,80,32,-1
+2010,deputado federal,PMDB,PSC,78,17,77,12,-6
+2010,deputado federal,PMDB,PSDB,78,54,78,56,2
+2010,deputado federal,PMDB,PSOL,78,3,72,4,-5
+2010,deputado federal,PMDB,PT,78,86,82,88,6
+2010,deputado federal,PMDB,PTB,78,22,77,18,-5
+2010,deputado federal,PMDB,PV,78,13,78,9,-4
+2010,deputado federal,PMN,PP,4,44,1,35,-12
+2010,deputado federal,PMN,PPS,4,12,2,9,-5
+2010,deputado federal,PMN,PR,4,41,4,30,-11
+2010,deputado federal,PMN,PRB,4,8,1,4,-7
+2010,deputado federal,PMN,PSB,4,35,2,28,-9
+2010,deputado federal,PMN,PSC,4,17,1,11,-9
+2010,deputado federal,PMN,PSDB,4,54,4,52,-2
+2010,deputado federal,PMN,PSOL,4,3,2,2,-3
+2010,deputado federal,PMN,PT,4,86,4,87,1
+2010,deputado federal,PMN,PTB,4,22,2,15,-9
+2010,deputado federal,PMN,PV,4,13,3,12,-2
+2010,deputado federal,PP,PPS,44,12,33,11,-12
+2010,deputado federal,PP,PR,44,41,38,33,-14
+2010,deputado federal,PP,PRB,44,8,32,7,-13
+2010,deputado federal,PP,PSB,44,35,38,28,-13
+2010,deputado federal,PP,PSC,44,17,33,13,-15
+2010,deputado federal,PP,PSDB,44,54,38,54,-6
+2010,deputado federal,PP,PSOL,44,3,29,4,-14
+2010,deputado federal,PP,PT,44,86,39,88,-3
+2010,deputado federal,PP,PTB,44,22,35,19,-12
+2010,deputado federal,PP,PV,44,13,36,11,-10
+2010,deputado federal,PPS,PR,12,41,11,33,-9
+2010,deputado federal,PPS,PRB,12,8,8,6,-6
+2010,deputado federal,PPS,PSB,12,35,11,30,-6
+2010,deputado federal,PPS,PSC,12,17,10,10,-9
+2010,deputado federal,PPS,PSDB,12,54,10,54,-2
+2010,deputado federal,PPS,PSOL,12,3,9,3,-3
+2010,deputado federal,PPS,PT,12,86,12,88,2
+2010,deputado federal,PPS,PTB,12,22,10,17,-7
+2010,deputado federal,PPS,PV,12,13,14,8,-3
+2010,deputado federal,PR,PRB,41,8,34,6,-9
+2010,deputado federal,PR,PSB,41,35,36,33,-7
+2010,deputado federal,PR,PSC,41,17,28,17,-13
+2010,deputado federal,PR,PSDB,41,54,34,57,-4
+2010,deputado federal,PR,PSOL,41,3,30,4,-10
+2010,deputado federal,PR,PT,41,86,38,90,1
+2010,deputado federal,PR,PTB,41,22,30,22,-11
+2010,deputado federal,PR,PV,41,13,33,12,-9
+2010,deputado federal,PRB,PSB,8,35,11,26,-6
+2010,deputado federal,PRB,PSC,8,17,6,11,-8
+2010,deputado federal,PRB,PSDB,8,54,6,56,0
+2010,deputado federal,PRB,PSOL,8,3,4,4,-3
+2010,deputado federal,PRB,PT,8,86,8,86,0
+2010,deputado federal,PRB,PTB,8,22,6,17,-7
+2010,deputado federal,PRB,PV,8,13,8,11,-2
+2010,deputado federal,PSB,PSC,35,17,25,20,-7
+2010,deputado federal,PSB,PSDB,35,54,28,61,0
+2010,deputado federal,PSB,PSOL,35,3,29,4,-5
+2010,deputado federal,PSB,PT,35,86,31,91,1
+2010,deputado federal,PSB,PTB,35,22,27,23,-7
+2010,deputado federal,PSB,PV,35,13,34,11,-3
+2010,deputado federal,PSC,PSDB,17,54,9,58,-4
+2010,deputado federal,PSC,PSOL,17,3,11,3,-6
+2010,deputado federal,PSC,PT,17,86,14,88,-1
+2010,deputado federal,PSC,PTB,17,22,13,15,-11
+2010,deputado federal,PSC,PV,17,13,11,11,-8
+2010,deputado federal,PSDB,PSOL,54,3,53,4,0
+2010,deputado federal,PSDB,PT,54,86,56,92,8
+2010,deputado federal,PSDB,PTB,54,22,56,17,-3
+2010,deputado federal,PSDB,PV,54,13,62,7,2
+2010,deputado federal,PSOL,PT,3,86,4,85,0
+2010,deputado federal,PSOL,PTB,3,22,4,17,-4
+2010,deputado federal,PSOL,PV,3,13,3,12,-1
+2010,deputado federal,PT,PTB,86,22,88,21,1
+2010,deputado federal,PT,PV,86,13,91,11,3
+2010,deputado federal,PTB,PV,22,13,19,14,-2
+2010,deputado estadual,DEM,PC do B,73,18,74,13,-4
+2010,deputado estadual,DEM,PDT,73,76,76,67,-6
+2010,deputado estadual,DEM,PMDB,73,147,66,145,-9
+2010,deputado estadual,DEM,PMN,73,21,72,12,-10
+2010,deputado estadual,DEM,PP,73,49,76,47,1
+2010,deputado estadual,DEM,PPS,73,35,72,25,-11
+2010,deputado estadual,DEM,PR,73,54,70,47,-10
+2010,deputado estadual,DEM,PRB,73,17,70,12,-8
+2010,deputado estadual,DEM,PRP,73,13,68,10,-8
+2010,deputado estadual,DEM,PSB,73,71,72,65,-7
+2010,deputado estadual,DEM,PSC,73,33,72,22,-12
+2010,deputado estadual,DEM,PSDB,73,118,70,118,-3
+2010,deputado estadual,DEM,PSL,73,17,73,10,-7
+2010,deputado estadual,DEM,PSOL,73,4,64,5,-8
+2010,deputado estadual,DEM,PT,73,144,78,137,-2
+2010,deputado estadual,DEM,PT do B,73,16,68,12,-9
+2010,deputado estadual,DEM,PTB,73,48,69,45,-7
+2010,deputado estadual,DEM,PTC,73,7,69,2,-9
+2010,deputado estadual,DEM,PTN,73,13,66,7,-13
+2010,deputado estadual,DEM,PV,73,37,77,29,-4
+2010,deputado estadual,PC do B,PDT,18,76,17,80,3
+2010,deputado estadual,PC do B,PMDB,18,147,13,151,-1
+2010,deputado estadual,PC do B,PMN,18,21,17,19,-3
+2010,deputado estadual,PC do B,PP,18,49,15,61,9
+2010,deputado estadual,PC do B,PPS,18,35,18,32,-3
+2010,deputado estadual,PC do B,PR,18,54,16,57,1
+2010,deputado estadual,PC do B,PRB,18,17,19,17,1
+2010,deputado estadual,PC do B,PRP,18,13,17,16,2
+2010,deputado estadual,PC do B,PSB,18,71,18,74,3
+2010,deputado estadual,PC do B,PSC,18,33,15,37,1
+2010,deputado estadual,PC do B,PSDB,18,118,13,132,9
+2010,deputado estadual,PC do B,PSL,18,17,21,18,4
+2010,deputado estadual,PC do B,PSOL,18,4,19,6,3
+2010,deputado estadual,PC do B,PT,18,144,13,154,5
+2010,deputado estadual,PC do B,PT do B,18,16,17,16,-1
+2010,deputado estadual,PC do B,PTB,18,48,17,49,0
+2010,deputado estadual,PC do B,PTC,18,7,21,5,1
+2010,deputado estadual,PC do B,PTN,18,13,17,13,-1
+2010,deputado estadual,PC do B,PV,18,37,21,40,6
+2010,deputado estadual,PDT,PMDB,76,147,62,158,-3
+2010,deputado estadual,PDT,PMN,76,21,75,15,-7
+2010,deputado estadual,PDT,PP,76,49,74,58,7
+2010,deputado estadual,PDT,PPS,76,35,71,36,-4
+2010,deputado estadual,PDT,PR,76,54,73,55,-2
+2010,deputado estadual,PDT,PRB,76,17,74,18,-1
+2010,deputado estadual,PDT,PRP,76,13,77,12,0
+2010,deputado estadual,PDT,PSB,76,71,72,78,3
+2010,deputado estadual,PDT,PSC,76,33,73,31,-5
+2010,deputado estadual,PDT,PSDB,76,118,68,136,10
+2010,deputado estadual,PDT,PSL,76,17,78,13,-2
+2010,deputado estadual,PDT,PSOL,76,4,72,5,-3
+2010,deputado estadual,PDT,PT,76,144,75,148,3
+2010,deputado estadual,PDT,PT do B,76,16,73,13,-6
+2010,deputado estadual,PDT,PTB,76,48,71,53,0
+2010,deputado estadual,PDT,PTC,76,7,77,4,-2
+2010,deputado estadual,PDT,PTN,76,13,76,10,-3
+2010,deputado estadual,PDT,PV,76,37,82,34,3
+2010,deputado estadual,PMDB,PMN,147,21,146,10,-12
+2010,deputado estadual,PMDB,PP,147,49,151,48,3
+2010,deputado estadual,PMDB,PPS,147,35,149,22,-11
+2010,deputado estadual,PMDB,PR,147,54,155,43,-3
+2010,deputado estadual,PMDB,PRB,147,17,144,14,-6
+2010,deputado estadual,PMDB,PRP,147,13,145,9,-6
+2010,deputado estadual,PMDB,PSB,147,71,155,61,-2
+2010,deputado estadual,PMDB,PSC,147,33,148,26,-6
+2010,deputado estadual,PMDB,PSDB,147,118,152,117,4
+2010,deputado estadual,PMDB,PSL,147,17,149,10,-5
+2010,deputado estadual,PMDB,PSOL,147,4,139,3,-9
+2010,deputado estadual,PMDB,PT,147,144,161,125,-5
+2010,deputado estadual,PMDB,PT do B,147,16,143,10,-10
+2010,deputado estadual,PMDB,PTB,147,48,146,40,-9
+2010,deputado estadual,PMDB,PTC,147,7,146,2,-6
+2010,deputado estadual,PMDB,PTN,147,13,146,6,-8
+2010,deputado estadual,PMDB,PV,147,37,155,29,0
+2010,deputado estadual,PMN,PP,21,49,17,54,1
+2010,deputado estadual,PMN,PPS,21,35,17,29,-10
+2010,deputado estadual,PMN,PR,21,54,18,50,-7
+2010,deputado estadual,PMN,PRB,21,17,13,16,-9
+2010,deputado estadual,PMN,PRP,21,13,18,9,-7
+2010,deputado estadual,PMN,PSB,21,71,18,67,-7
+2010,deputado estadual,PMN,PSC,21,33,17,31,-6
+2010,deputado estadual,PMN,PSDB,21,118,14,131,6
+2010,deputado estadual,PMN,PSL,21,17,17,16,-5
+2010,deputado estadual,PMN,PSOL,21,4,14,5,-6
+2010,deputado estadual,PMN,PT,21,144,21,142,-2
+2010,deputado estadual,PMN,PT do B,21,16,14,13,-10
+2010,deputado estadual,PMN,PTB,21,48,16,45,-8
+2010,deputado estadual,PMN,PTC,21,7,16,8,-4
+2010,deputado estadual,PMN,PTN,21,13,15,9,-10
+2010,deputado estadual,PMN,PV,21,37,18,37,-3
+2010,deputado estadual,PP,PPS,49,35,53,34,3
+2010,deputado estadual,PP,PR,49,54,51,57,5
+2010,deputado estadual,PP,PRB,49,17,51,17,2
+2010,deputado estadual,PP,PRP,49,13,58,9,5
+2010,deputado estadual,PP,PSB,49,71,58,70,8
+2010,deputado estadual,PP,PSC,49,33,57,29,4
+2010,deputado estadual,PP,PSDB,49,118,53,126,12
+2010,deputado estadual,PP,PSL,49,17,59,16,9
+2010,deputado estadual,PP,PSOL,49,4,55,5,7
+2010,deputado estadual,PP,PT,49,144,53,150,10
+2010,deputado estadual,PP,PT do B,49,16,52,14,1
+2010,deputado estadual,PP,PTB,49,48,55,46,4
+2010,deputado estadual,PP,PTC,49,7,56,6,6
+2010,deputado estadual,PP,PTN,49,13,57,8,3
+2010,deputado estadual,PP,PV,49,37,58,37,9
+2010,deputado estadual,PPS,PR,35,54,33,51,-5
+2010,deputado estadual,PPS,PRB,35,17,27,17,-8
+2010,deputado estadual,PPS,PRP,35,13,29,11,-8
+2010,deputado estadual,PPS,PSB,35,71,33,68,-5
+2010,deputado estadual,PPS,PSC,35,33,30,29,-9
+2010,deputado estadual,PPS,PSDB,35,118,28,130,5
+2010,deputado estadual,PPS,PSL,35,17,32,15,-5
+2010,deputado estadual,PPS,PSOL,35,4,26,4,-9
+2010,deputado estadual,PPS,PT,35,144,35,144,0
+2010,deputado estadual,PPS,PT do B,35,16,29,11,-11
+2010,deputado estadual,PPS,PTB,35,48,28,47,-8
+2010,deputado estadual,PPS,PTC,35,7,28,6,-8
+2010,deputado estadual,PPS,PTN,35,13,27,10,-11
+2010,deputado estadual,PPS,PV,35,37,39,33,0
+2010,deputado estadual,PR,PRB,54,17,52,17,-2
+2010,deputado estadual,PR,PRP,54,13,54,10,-3
+2010,deputado estadual,PR,PSB,54,71,53,70,-2
+2010,deputado estadual,PR,PSC,54,33,55,27,-5
+2010,deputado estadual,PR,PSDB,54,118,55,125,8
+2010,deputado estadual,PR,PSL,54,17,54,15,-2
+2010,deputado estadual,PR,PSOL,54,4,47,4,-7
+2010,deputado estadual,PR,PT,54,144,55,144,1
+2010,deputado estadual,PR,PT do B,54,16,53,9,-8
+2010,deputado estadual,PR,PTB,54,48,47,49,-6
+2010,deputado estadual,PR,PTC,54,7,52,3,-6
+2010,deputado estadual,PR,PTN,54,13,53,6,-8
+2010,deputado estadual,PR,PV,54,37,58,33,0
+2010,deputado estadual,PRB,PRP,17,13,14,13,-3
+2010,deputado estadual,PRB,PSB,17,71,18,69,-1
+2010,deputado estadual,PRB,PSC,17,33,16,27,-7
+2010,deputado estadual,PRB,PSDB,17,118,16,125,6
+2010,deputado estadual,PRB,PSL,17,17,15,17,-2
+2010,deputado estadual,PRB,PSOL,17,4,16,3,-2
+2010,deputado estadual,PRB,PT,17,144,18,146,3
+2010,deputado estadual,PRB,PT do B,17,16,15,13,-5
+2010,deputado estadual,PRB,PTB,17,48,15,47,-3
+2010,deputado estadual,PRB,PTC,17,7,16,4,-4
+2010,deputado estadual,PRB,PTN,17,13,14,10,-6
+2010,deputado estadual,PRB,PV,17,37,18,37,1
+2010,deputado estadual,PRP,PSB,13,71,12,70,-2
+2010,deputado estadual,PRP,PSC,13,33,11,33,-2
+2010,deputado estadual,PRP,PSDB,13,118,8,129,6
+2010,deputado estadual,PRP,PSL,13,17,14,18,2
+2010,deputado estadual,PRP,PSOL,13,4,11,3,-3
+2010,deputado estadual,PRP,PT,13,144,10,150,3
+2010,deputado estadual,PRP,PT do B,13,16,11,13,-5
+2010,deputado estadual,PRP,PTB,13,48,9,47,-5
+2010,deputado estadual,PRP,PTC,13,7,14,7,1
+2010,deputado estadual,PRP,PTN,13,13,12,12,-2
+2010,deputado estadual,PRP,PV,13,37,14,35,-1
+2010,deputado estadual,PSB,PSC,71,33,67,33,-4
+2010,deputado estadual,PSB,PSDB,71,118,67,131,9
+2010,deputado estadual,PSB,PSL,71,17,72,16,0
+2010,deputado estadual,PSB,PSOL,71,4,66,5,-4
+2010,deputado estadual,PSB,PT,71,144,74,143,2
+2010,deputado estadual,PSB,PT do B,71,16,68,14,-5
+2010,deputado estadual,PSB,PTB,71,48,68,48,-3
+2010,deputado estadual,PSB,PTC,71,7,70,4,-4
+2010,deputado estadual,PSB,PTN,71,13,72,8,-4
+2010,deputado estadual,PSB,PV,71,37,81,31,4
+2010,deputado estadual,PSC,PSDB,33,118,30,127,6
+2010,deputado estadual,PSC,PSL,33,17,37,14,1
+2010,deputado estadual,PSC,PSOL,33,4,29,5,-3
+2010,deputado estadual,PSC,PT,33,144,35,145,3
+2010,deputado estadual,PSC,PT do B,33,16,30,14,-5
+2010,deputado estadual,PSC,PTB,33,48,28,48,-5
+2010,deputado estadual,PSC,PTC,33,7,32,5,-3
+2010,deputado estadual,PSC,PTN,33,13,32,9,-5
+2010,deputado estadual,PSC,PV,33,37,36,35,1
+2010,deputado estadual,PSDB,PSL,118,17,132,11,8
+2010,deputado estadual,PSDB,PSOL,118,4,124,3,5
+2010,deputado estadual,PSDB,PT,118,144,133,139,10
+2010,deputado estadual,PSDB,PT do B,118,16,125,12,3
+2010,deputado estadual,PSDB,PTB,118,48,121,51,6
+2010,deputado estadual,PSDB,PTC,118,7,129,2,6
+2010,deputado estadual,PSDB,PTN,118,13,128,9,6
+2010,deputado estadual,PSDB,PV,118,37,135,31,11
+2010,deputado estadual,PSL,PSOL,17,4,15,6,0
+2010,deputado estadual,PSL,PT,17,144,17,146,2
+2010,deputado estadual,PSL,PT do B,17,16,17,14,-2
+2010,deputado estadual,PSL,PTB,17,48,16,46,-3
+2010,deputado estadual,PSL,PTC,17,7,20,7,3
+2010,deputado estadual,PSL,PTN,17,13,17,12,-1
+2010,deputado estadual,PSL,PV,17,37,18,39,3
+2010,deputado estadual,PSOL,PT,4,144,5,146,3
+2010,deputado estadual,PSOL,PT do B,4,16,3,11,-6
+2010,deputado estadual,PSOL,PTB,4,48,4,44,-4
+2010,deputado estadual,PSOL,PTC,4,7,5,6,0
+2010,deputado estadual,PSOL,PTN,4,13,5,10,-2
+2010,deputado estadual,PSOL,PV,4,37,7,34,0
+2010,deputado estadual,PT,PT do B,144,16,148,13,1
+2010,deputado estadual,PT,PTB,144,48,138,52,-2
+2010,deputado estadual,PT,PTC,144,7,152,3,4
+2010,deputado estadual,PT,PTN,144,13,144,11,-2
+2010,deputado estadual,PT,PV,144,37,151,36,6
+2010,deputado estadual,PT do B,PTB,16,48,11,45,-8
+2010,deputado estadual,PT do B,PTC,16,7,14,7,-2
+2010,deputado estadual,PT do B,PTN,16,13,14,9,-6
+2010,deputado estadual,PT do B,PV,16,37,14,34,-5
+2010,deputado estadual,PTB,PTC,48,7,45,4,-6
+2010,deputado estadual,PTB,PTN,48,13,44,9,-8
+2010,deputado estadual,PTB,PV,48,37,53,32,0
+2010,deputado estadual,PTC,PTN,7,13,5,13,-2
+2010,deputado estadual,PTC,PV,7,37,5,41,2
+2010,deputado estadual,PTN,PV,13,37,12,35,-3
+2014,deputado federal,DEM,PC do B,21,10,14,8,-9
+2014,deputado federal,DEM,PDT,21,20,18,13,-10
+2014,deputado federal,DEM,PMDB,21,65,20,64,-2
+2014,deputado federal,DEM,PP,21,38,17,31,-11
+2014,deputado federal,DEM,PPS,21,10,13,8,-10
+2014,deputado federal,DEM,PR,21,34,17,26,-12
+2014,deputado federal,DEM,PRB,21,21,16,14,-12
+2014,deputado federal,DEM,PROS,21,11,11,10,-11
+2014,deputado federal,DEM,PSB,21,34,18,27,-10
+2014,deputado federal,DEM,PSC,21,13,15,9,-10
+2014,deputado federal,DEM,PSD,21,36,18,27,-12
+2014,deputado federal,DEM,PSDB,21,54,21,50,-4
+2014,deputado federal,DEM,PSOL,21,5,15,5,-6
+2014,deputado federal,DEM,PT,21,69,25,66,1
+2014,deputado federal,DEM,PTB,21,25,16,15,-15
+2014,deputado federal,DEM,PV,21,8,16,5,-8
+2014,deputado federal,DEM,SD,21,15,18,10,-8
+2014,deputado federal,PC do B,PDT,10,20,5,16,-9
+2014,deputado federal,PC do B,PMDB,10,65,10,60,-5
+2014,deputado federal,PC do B,PP,10,38,7,30,-11
+2014,deputado federal,PC do B,PPS,10,10,4,7,-9
+2014,deputado federal,PC do B,PR,10,34,6,23,-15
+2014,deputado federal,PC do B,PRB,10,21,8,14,-9
+2014,deputado federal,PC do B,PROS,10,11,7,4,-10
+2014,deputado federal,PC do B,PSB,10,34,9,25,-10
+2014,deputado federal,PC do B,PSC,10,13,6,8,-9
+2014,deputado federal,PC do B,PSD,10,36,6,29,-11
+2014,deputado federal,PC do B,PSDB,10,54,10,49,-5
+2014,deputado federal,PC do B,PSOL,10,5,7,5,-3
+2014,deputado federal,PC do B,PT,10,69,11,68,0
+2014,deputado federal,PC do B,PTB,10,25,7,16,-12
+2014,deputado federal,PC do B,PV,10,8,7,5,-6
+2014,deputado federal,PC do B,SD,10,15,8,8,-9
+2014,deputado federal,PDT,PMDB,20,65,16,66,-3
+2014,deputado federal,PDT,PP,20,38,18,34,-6
+2014,deputado federal,PDT,PPS,20,10,12,5,-13
+2014,deputado federal,PDT,PR,20,34,17,25,-12
+2014,deputado federal,PDT,PRB,20,21,17,17,-7
+2014,deputado federal,PDT,PROS,20,11,14,9,-8
+2014,deputado federal,PDT,PSB,20,34,15,28,-11
+2014,deputado federal,PDT,PSC,20,13,15,10,-8
+2014,deputado federal,PDT,PSD,20,36,14,32,-10
+2014,deputado federal,PDT,PSDB,20,54,19,53,-2
+2014,deputado federal,PDT,PSOL,20,5,11,6,-8
+2014,deputado federal,PDT,PT,20,69,17,75,3
+2014,deputado federal,PDT,PTB,20,25,16,20,-9
+2014,deputado federal,PDT,PV,20,8,14,7,-7
+2014,deputado federal,PDT,SD,20,15,17,10,-8
+2014,deputado federal,PMDB,PP,65,38,64,34,-5
+2014,deputado federal,PMDB,PPS,65,10,60,7,-8
+2014,deputado federal,PMDB,PR,65,34,64,29,-6
+2014,deputado federal,PMDB,PRB,65,21,68,15,-3
+2014,deputado federal,PMDB,PROS,65,11,61,12,-3
+2014,deputado federal,PMDB,PSB,65,34,67,32,0
+2014,deputado federal,PMDB,PSC,65,13,67,12,1
+2014,deputado federal,PMDB,PSD,65,36,58,36,-7
+2014,deputado federal,PMDB,PSDB,65,54,69,54,4
+2014,deputado federal,PMDB,PSOL,65,5,62,5,-3
+2014,deputado federal,PMDB,PT,65,69,68,73,7
+2014,deputado federal,PMDB,PTB,65,25,62,22,-6
+2014,deputado federal,PMDB,PV,65,8,60,7,-6
+2014,deputado federal,PMDB,SD,65,15,59,13,-8
+2014,deputado federal,PP,PPS,38,10,28,7,-13
+2014,deputado federal,PP,PR,38,34,34,26,-12
+2014,deputado federal,PP,PRB,38,21,28,19,-12
+2014,deputado federal,PP,PROS,38,11,30,7,-12
+2014,deputado federal,PP,PSB,38,34,32,30,-10
+2014,deputado federal,PP,PSC,38,13,31,9,-11
+2014,deputado federal,PP,PSD,38,36,30,28,-16
+2014,deputado federal,PP,PSDB,38,54,35,51,-6
+2014,deputado federal,PP,PSOL,38,5,28,7,-8
+2014,deputado federal,PP,PT,38,69,34,73,0
+2014,deputado federal,PP,PTB,38,25,32,20,-11
+2014,deputado federal,PP,PV,38,8,31,5,-10
+2014,deputado federal,PP,SD,38,15,30,11,-12
+2014,deputado federal,PPS,PR,10,34,6,23,-15
+2014,deputado federal,PPS,PRB,10,21,8,13,-10
+2014,deputado federal,PPS,PROS,10,11,6,4,-11
+2014,deputado federal,PPS,PSB,10,34,8,26,-10
+2014,deputado federal,PPS,PSC,10,13,6,7,-10
+2014,deputado federal,PPS,PSD,10,36,7,23,-16
+2014,deputado federal,PPS,PSDB,10,54,11,47,-6
+2014,deputado federal,PPS,PSOL,10,5,5,6,-4
+2014,deputado federal,PPS,PT,10,69,10,66,-3
+2014,deputado federal,PPS,PTB,10,25,7,14,-14
+2014,deputado federal,PPS,PV,10,8,7,5,-6
+2014,deputado federal,PPS,SD,10,15,6,8,-11
+2014,deputado federal,PR,PRB,34,21,27,15,-13
+2014,deputado federal,PR,PROS,34,11,23,9,-13
+2014,deputado federal,PR,PSB,34,34,25,29,-14
+2014,deputado federal,PR,PSC,34,13,24,8,-15
+2014,deputado federal,PR,PSD,34,36,25,28,-17
+2014,deputado federal,PR,PSDB,34,54,31,51,-6
+2014,deputado federal,PR,PSOL,34,5,22,5,-12
+2014,deputado federal,PR,PT,34,69,29,69,-5
+2014,deputado federal,PR,PTB,34,25,24,18,-17
+2014,deputado federal,PR,PV,34,8,18,7,-17
+2014,deputado federal,PR,SD,34,15,23,10,-16
+2014,deputado federal,PRB,PROS,21,11,14,8,-10
+2014,deputado federal,PRB,PSB,21,34,12,33,-10
+2014,deputado federal,PRB,PSC,21,13,14,13,-7
+2014,deputado federal,PRB,PSD,21,36,12,32,-13
+2014,deputado federal,PRB,PSDB,21,54,18,53,-4
+2014,deputado federal,PRB,PSOL,21,5,14,5,-7
+2014,deputado federal,PRB,PT,21,69,16,76,2
+2014,deputado federal,PRB,PTB,21,25,14,20,-12
+2014,deputado federal,PRB,PV,21,8,12,10,-7
+2014,deputado federal,PRB,SD,21,15,12,12,-12
+2014,deputado federal,PROS,PSB,11,34,7,28,-10
+2014,deputado federal,PROS,PSC,11,13,4,8,-12
+2014,deputado federal,PROS,PSD,11,36,8,27,-12
+2014,deputado federal,PROS,PSDB,11,54,11,50,-4
+2014,deputado federal,PROS,PSOL,11,5,7,6,-3
+2014,deputado federal,PROS,PT,11,69,13,70,3
+2014,deputado federal,PROS,PTB,11,25,5,18,-13
+2014,deputado federal,PROS,PV,11,8,6,5,-8
+2014,deputado federal,PROS,SD,11,15,8,8,-10
+2014,deputado federal,PSB,PSC,34,13,27,13,-7
+2014,deputado federal,PSB,PSD,34,36,23,36,-11
+2014,deputado federal,PSB,PSDB,34,54,33,52,-3
+2014,deputado federal,PSB,PSOL,34,5,29,5,-5
+2014,deputado federal,PSB,PT,34,69,32,75,4
+2014,deputado federal,PSB,PTB,34,25,27,18,-14
+2014,deputado federal,PSB,PV,34,8,29,5,-8
+2014,deputado federal,PSB,SD,34,15,28,11,-10
+2014,deputado federal,PSC,PSD,13,36,10,25,-14
+2014,deputado federal,PSC,PSDB,13,54,13,50,-4
+2014,deputado federal,PSC,PSOL,13,5,8,6,-4
+2014,deputado federal,PSC,PT,13,69,14,68,0
+2014,deputado federal,PSC,PTB,13,25,9,18,-11
+2014,deputado federal,PSC,PV,13,8,9,6,-6
+2014,deputado federal,PSC,SD,13,15,8,8,-12
+2014,deputado federal,PSD,PSDB,36,54,36,50,-4
+2014,deputado federal,PSD,PSOL,36,5,25,5,-11
+2014,deputado federal,PSD,PT,36,69,39,67,1
+2014,deputado federal,PSD,PTB,36,25,29,17,-15
+2014,deputado federal,PSD,PV,36,8,25,4,-15
+2014,deputado federal,PSD,SD,36,15,28,8,-15
+2014,deputado federal,PSDB,PSOL,54,5,51,6,-2
+2014,deputado federal,PSDB,PT,54,69,55,77,9
+2014,deputado federal,PSDB,PTB,54,25,51,21,-7
+2014,deputado federal,PSDB,PV,54,8,51,5,-6
+2014,deputado federal,PSDB,SD,54,15,51,11,-7
+2014,deputado federal,PSOL,PT,5,69,5,72,3
+2014,deputado federal,PSOL,PTB,5,25,5,17,-8
+2014,deputado federal,PSOL,PV,5,8,6,7,0
+2014,deputado federal,PSOL,SD,5,15,5,9,-6
+2014,deputado federal,PT,PTB,69,25,68,21,-5
+2014,deputado federal,PT,PV,69,8,73,4,0
+2014,deputado federal,PT,SD,69,15,71,13,0
+2014,deputado federal,PTB,PV,25,8,16,6,-11
+2014,deputado federal,PTB,SD,25,15,21,9,-10
+2014,deputado federal,PV,SD,8,15,6,9,-8
+2014,deputado estadual,DEM,PC do B,45,25,45,20,-5
+2014,deputado estadual,DEM,PDT,45,57,45,51,-6
+2014,deputado estadual,DEM,PEN,45,14,37,15,-7
+2014,deputado estadual,DEM,PHS,45,10,41,4,-10
+2014,deputado estadual,DEM,PMDB,45,139,41,127,-16
+2014,deputado estadual,DEM,PP,45,50,43,47,-5
+2014,deputado estadual,DEM,PPS,45,22,38,18,-11
+2014,deputado estadual,DEM,PR,45,45,44,37,-9
+2014,deputado estadual,DEM,PRB,45,32,36,29,-12
+2014,deputado estadual,DEM,PROS,45,30,37,22,-16
+2014,deputado estadual,DEM,PRP,45,12,42,7,-8
+2014,deputado estadual,DEM,PSB,45,63,45,63,0
+2014,deputado estadual,DEM,PSC,45,35,44,28,-8
+2014,deputado estadual,DEM,PSD,45,73,38,70,-10
+2014,deputado estadual,DEM,PSDB,45,96,47,94,0
+2014,deputado estadual,DEM,PSL,45,16,40,9,-12
+2014,deputado estadual,DEM,PSOL,45,12,39,11,-7
+2014,deputado estadual,DEM,PT,45,106,49,113,11
+2014,deputado estadual,DEM,PT do B,45,14,36,8,-15
+2014,deputado estadual,DEM,PTB,45,38,40,34,-9
+2014,deputado estadual,DEM,PTC,45,10,38,7,-10
+2014,deputado estadual,DEM,PTN,45,17,40,11,-11
+2014,deputado estadual,DEM,PV,45,25,41,21,-8
+2014,deputado estadual,DEM,SD,45,21,46,14,-6
+2014,deputado estadual,PC do B,PDT,25,57,23,62,3
+2014,deputado estadual,PC do B,PEN,25,14,21,16,-2
+2014,deputado estadual,PC do B,PHS,25,10,26,7,-2
+2014,deputado estadual,PC do B,PMDB,25,139,14,141,-9
+2014,deputado estadual,PC do B,PP,25,50,22,55,2
+2014,deputado estadual,PC do B,PPS,25,22,20,23,-4
+2014,deputado estadual,PC do B,PR,25,45,26,43,-1
+2014,deputado estadual,PC do B,PRB,25,32,22,32,-3
+2014,deputado estadual,PC do B,PROS,25,30,23,25,-7
+2014,deputado estadual,PC do B,PRP,25,12,25,13,1
+2014,deputado estadual,PC do B,PSB,25,63,25,69,6
+2014,deputado estadual,PC do B,PSC,25,35,22,34,-4
+2014,deputado estadual,PC do B,PSD,25,73,20,74,-4
+2014,deputado estadual,PC do B,PSDB,25,96,18,111,8
+2014,deputado estadual,PC do B,PSL,25,16,25,15,-1
+2014,deputado estadual,PC do B,PSOL,25,12,25,14,2
+2014,deputado estadual,PC do B,PT,25,106,19,127,15
+2014,deputado estadual,PC do B,PT do B,25,14,25,10,-4
+2014,deputado estadual,PC do B,PTB,25,38,22,37,-4
+2014,deputado estadual,PC do B,PTC,25,10,24,10,-1
+2014,deputado estadual,PC do B,PTN,25,17,21,17,-4
+2014,deputado estadual,PC do B,PV,25,25,21,26,-3
+2014,deputado estadual,PC do B,SD,25,21,22,22,-2
+2014,deputado estadual,PDT,PEN,57,14,51,19,-1
+2014,deputado estadual,PDT,PHS,57,10,61,5,-1
+2014,deputado estadual,PDT,PMDB,57,139,45,140,-11
+2014,deputado estadual,PDT,PP,57,50,57,53,3
+2014,deputado estadual,PDT,PPS,57,22,59,18,-2
+2014,deputado estadual,PDT,PR,57,45,57,43,-2
+2014,deputado estadual,PDT,PRB,57,32,54,31,-4
+2014,deputado estadual,PDT,PROS,57,30,55,26,-6
+2014,deputado estadual,PDT,PRP,57,12,60,11,2
+2014,deputado estadual,PDT,PSB,57,63,61,66,7
+2014,deputado estadual,PDT,PSC,57,35,59,32,-1
+2014,deputado estadual,PDT,PSD,57,73,49,77,-4
+2014,deputado estadual,PDT,PSDB,57,96,50,109,6
+2014,deputado estadual,PDT,PSL,57,16,57,14,-2
+2014,deputado estadual,PDT,PSOL,57,12,59,11,1
+2014,deputado estadual,PDT,PT,57,106,60,121,18
+2014,deputado estadual,PDT,PT do B,57,14,56,11,-4
+2014,deputado estadual,PDT,PTB,57,38,52,39,-4
+2014,deputado estadual,PDT,PTC,57,10,59,7,-1
+2014,deputado estadual,PDT,PTN,57,17,53,16,-5
+2014,deputado estadual,PDT,PV,57,25,61,22,1
+2014,deputado estadual,PDT,SD,57,21,55,22,-1
+2014,deputado estadual,PEN,PHS,14,10,13,6,-5
+2014,deputado estadual,PEN,PMDB,14,139,15,125,-13
+2014,deputado estadual,PEN,PP,14,50,16,46,-2
+2014,deputado estadual,PEN,PPS,14,22,15,15,-6
+2014,deputado estadual,PEN,PR,14,45,14,42,-3
+2014,deputado estadual,PEN,PRB,14,32,16,24,-6
+2014,deputado estadual,PEN,PROS,14,30,11,24,-9
+2014,deputado estadual,PEN,PRP,14,12,17,6,-3
+2014,deputado estadual,PEN,PSB,14,63,15,65,3
+2014,deputado estadual,PEN,PSC,14,35,13,30,-6
+2014,deputado estadual,PEN,PSD,14,73,14,64,-9
+2014,deputado estadual,PEN,PSDB,14,96,16,99,5
+2014,deputado estadual,PEN,PSL,14,16,14,11,-5
+2014,deputado estadual,PEN,PSOL,14,12,11,11,-4
+2014,deputado estadual,PEN,PT,14,106,16,117,13
+2014,deputado estadual,PEN,PT do B,14,14,16,6,-6
+2014,deputado estadual,PEN,PTB,14,38,14,32,-6
+2014,deputado estadual,PEN,PTC,14,10,12,9,-3
+2014,deputado estadual,PEN,PTN,14,17,12,15,-4
+2014,deputado estadual,PEN,PV,14,25,12,22,-5
+2014,deputado estadual,PEN,SD,14,21,16,16,-3
+2014,deputado estadual,PHS,PMDB,10,139,4,132,-13
+2014,deputado estadual,PHS,PP,10,50,7,51,-2
+2014,deputado estadual,PHS,PPS,10,22,7,17,-8
+2014,deputado estadual,PHS,PR,10,45,4,44,-7
+2014,deputado estadual,PHS,PRB,10,32,4,29,-9
+2014,deputado estadual,PHS,PROS,10,30,6,27,-7
+2014,deputado estadual,PHS,PRP,10,12,10,12,0
+2014,deputado estadual,PHS,PSB,10,63,5,72,4
+2014,deputado estadual,PHS,PSC,10,35,8,30,-7
+2014,deputado estadual,PHS,PSD,10,73,2,72,-9
+2014,deputado estadual,PHS,PSDB,10,96,5,104,3
+2014,deputado estadual,PHS,PSL,10,16,4,16,-6
+2014,deputado estadual,PHS,PSOL,10,12,6,13,-3
+2014,deputado estadual,PHS,PT,10,106,7,121,12
+2014,deputado estadual,PHS,PT do B,10,14,7,11,-6
+2014,deputado estadual,PHS,PTB,10,38,2,40,-6
+2014,deputado estadual,PHS,PTC,10,10,6,9,-5
+2014,deputado estadual,PHS,PTN,10,17,6,16,-5
+2014,deputado estadual,PHS,PV,10,25,7,22,-6
+2014,deputado estadual,PHS,SD,10,21,6,22,-3
+2014,deputado estadual,PMDB,PP,139,50,138,41,-10
+2014,deputado estadual,PMDB,PPS,139,22,131,14,-16
+2014,deputado estadual,PMDB,PR,139,45,133,31,-20
+2014,deputado estadual,PMDB,PRB,139,32,127,25,-19
+2014,deputado estadual,PMDB,PROS,139,30,131,25,-13
+2014,deputado estadual,PMDB,PRP,139,12,136,5,-10
+2014,deputado estadual,PMDB,PSB,139,63,140,57,-5
+2014,deputado estadual,PMDB,PSC,139,35,133,26,-15
+2014,deputado estadual,PMDB,PSD,139,73,124,73,-15
+2014,deputado estadual,PMDB,PSDB,139,96,128,101,-6
+2014,deputado estadual,PMDB,PSL,139,16,132,9,-14
+2014,deputado estadual,PMDB,PSOL,139,12,134,6,-11
+2014,deputado estadual,PMDB,PT,139,106,146,102,3
+2014,deputado estadual,PMDB,PT do B,139,14,130,6,-17
+2014,deputado estadual,PMDB,PTB,139,38,125,32,-20
+2014,deputado estadual,PMDB,PTC,139,10,133,4,-12
+2014,deputado estadual,PMDB,PTN,139,17,129,12,-15
+2014,deputado estadual,PMDB,PV,139,25,132,20,-12
+2014,deputado estadual,PMDB,SD,139,21,131,16,-13
+2014,deputado estadual,PP,PPS,50,22,49,21,-2
+2014,deputado estadual,PP,PR,50,45,51,42,-2
+2014,deputado estadual,PP,PRB,50,32,48,31,-3
+2014,deputado estadual,PP,PROS,50,30,51,28,-1
+2014,deputado estadual,PP,PRP,50,12,53,9,0
+2014,deputado estadual,PP,PSB,50,63,48,69,4
+2014,deputado estadual,PP,PSC,50,35,52,30,-3
+2014,deputado estadual,PP,PSD,50,73,44,73,-6
+2014,deputado estadual,PP,PSDB,50,96,46,106,6
+2014,deputado estadual,PP,PSL,50,16,49,16,-1
+2014,deputado estadual,PP,PSOL,50,12,52,10,0
+2014,deputado estadual,PP,PT,50,106,49,124,17
+2014,deputado estadual,PP,PT do B,50,14,50,9,-5
+2014,deputado estadual,PP,PTB,50,38,44,41,-3
+2014,deputado estadual,PP,PTC,50,10,52,7,-1
+2014,deputado estadual,PP,PTN,50,17,49,16,-2
+2014,deputado estadual,PP,PV,50,25,49,24,-2
+2014,deputado estadual,PP,SD,50,21,51,22,2
+2014,deputado estadual,PPS,PR,22,45,21,39,-7
+2014,deputado estadual,PPS,PRB,22,32,15,27,-12
+2014,deputado estadual,PPS,PROS,22,30,20,24,-8
+2014,deputado estadual,PPS,PRP,22,12,18,10,-6
+2014,deputado estadual,PPS,PSB,22,63,21,63,-1
+2014,deputado estadual,PPS,PSC,22,35,18,31,-8
+2014,deputado estadual,PPS,PSD,22,73,17,69,-9
+2014,deputado estadual,PPS,PSDB,22,96,18,102,2
+2014,deputado estadual,PPS,PSL,22,16,18,13,-7
+2014,deputado estadual,PPS,PSOL,22,12,20,11,-3
+2014,deputado estadual,PPS,PT,22,106,22,119,13
+2014,deputado estadual,PPS,PT do B,22,14,18,9,-9
+2014,deputado estadual,PPS,PTB,22,38,19,30,-11
+2014,deputado estadual,PPS,PTC,22,10,18,7,-7
+2014,deputado estadual,PPS,PTN,22,17,17,13,-9
+2014,deputado estadual,PPS,PV,22,25,18,20,-9
+2014,deputado estadual,PPS,SD,22,21,18,17,-8
+2014,deputado estadual,PR,PRB,45,32,36,32,-9
+2014,deputado estadual,PR,PROS,45,30,42,25,-8
+2014,deputado estadual,PR,PRP,45,12,39,12,-6
+2014,deputado estadual,PR,PSB,45,63,47,60,-1
+2014,deputado estadual,PR,PSC,45,35,43,32,-5
+2014,deputado estadual,PR,PSD,45,73,33,75,-10
+2014,deputado estadual,PR,PSDB,45,96,38,105,2
+2014,deputado estadual,PR,PSL,45,16,41,11,-9
+2014,deputado estadual,PR,PSOL,45,12,42,9,-6
+2014,deputado estadual,PR,PT,45,106,42,122,13
+2014,deputado estadual,PR,PT do B,45,14,38,11,-10
+2014,deputado estadual,PR,PTB,45,38,41,34,-8
+2014,deputado estadual,PR,PTC,45,10,39,8,-8
+2014,deputado estadual,PR,PTN,45,17,39,15,-8
+2014,deputado estadual,PR,PV,45,25,40,24,-6
+2014,deputado estadual,PR,SD,45,21,43,18,-5
+2014,deputado estadual,PRB,PROS,32,30,28,23,-11
+2014,deputado estadual,PRB,PRP,32,12,26,12,-6
+2014,deputado estadual,PRB,PSB,32,63,32,64,1
+2014,deputado estadual,PRB,PSC,32,35,30,29,-8
+2014,deputado estadual,PRB,PSD,32,73,28,69,-8
+2014,deputado estadual,PRB,PSDB,32,96,28,101,1
+2014,deputado estadual,PRB,PSL,32,16,28,12,-8
+2014,deputado estadual,PRB,PSOL,32,12,29,10,-5
+2014,deputado estadual,PRB,PT,32,106,33,116,11
+2014,deputado estadual,PRB,PT do B,32,14,27,12,-7
+2014,deputado estadual,PRB,PTB,32,38,26,34,-10
+2014,deputado estadual,PRB,PTC,32,10,27,9,-6
+2014,deputado estadual,PRB,PTN,32,17,24,16,-9
+2014,deputado estadual,PRB,PV,32,25,29,22,-6
+2014,deputado estadual,PRB,SD,32,21,28,18,-7
+2014,deputado estadual,PROS,PRP,30,12,28,10,-4
+2014,deputado estadual,PROS,PSB,30,63,26,64,-3
+2014,deputado estadual,PROS,PSC,30,35,26,29,-10
+2014,deputado estadual,PROS,PSD,30,73,24,70,-9
+2014,deputado estadual,PROS,PSDB,30,96,26,99,-1
+2014,deputado estadual,PROS,PSL,30,16,22,17,-7
+2014,deputado estadual,PROS,PSOL,30,12,24,11,-7
+2014,deputado estadual,PROS,PT,30,106,28,118,10
+2014,deputado estadual,PROS,PT do B,30,14,24,10,-10
+2014,deputado estadual,PROS,PTB,30,38,20,38,-10
+2014,deputado estadual,PROS,PTC,30,10,25,7,-8
+2014,deputado estadual,PROS,PTN,30,17,24,15,-8
+2014,deputado estadual,PROS,PV,30,25,26,22,-7
+2014,deputado estadual,PROS,SD,30,21,23,20,-8
+2014,deputado estadual,PRP,PSB,12,63,10,68,3
+2014,deputado estadual,PRP,PSC,12,35,14,29,-4
+2014,deputado estadual,PRP,PSD,12,73,9,72,-4
+2014,deputado estadual,PRP,PSDB,12,96,11,102,5
+2014,deputado estadual,PRP,PSL,12,16,11,17,0
+2014,deputado estadual,PRP,PSOL,12,12,11,13,0
+2014,deputado estadual,PRP,PT,12,106,8,124,14
+2014,deputado estadual,PRP,PT do B,12,14,11,12,-3
+2014,deputado estadual,PRP,PTB,12,38,9,32,-9
+2014,deputado estadual,PRP,PTC,12,10,13,9,0
+2014,deputado estadual,PRP,PTN,12,17,8,18,-3
+2014,deputado estadual,PRP,PV,12,25,11,25,-1
+2014,deputado estadual,PRP,SD,12,21,11,20,-2
+2014,deputado estadual,PSB,PSC,63,35,68,32,2
+2014,deputado estadual,PSB,PSD,63,73,58,77,-1
+2014,deputado estadual,PSB,PSDB,63,96,60,111,12
+2014,deputado estadual,PSB,PSL,63,16,65,15,1
+2014,deputado estadual,PSB,PSOL,63,12,67,12,4
+2014,deputado estadual,PSB,PT,63,106,65,125,21
+2014,deputado estadual,PSB,PT do B,63,14,69,8,0
+2014,deputado estadual,PSB,PTB,63,38,62,40,1
+2014,deputado estadual,PSB,PTC,63,10,65,9,1
+2014,deputado estadual,PSB,PTN,63,17,68,17,5
+2014,deputado estadual,PSB,PV,63,25,66,24,2
+2014,deputado estadual,PSB,SD,63,21,71,20,7
+2014,deputado estadual,PSC,PSD,35,73,25,74,-9
+2014,deputado estadual,PSC,PSDB,35,96,28,106,3
+2014,deputado estadual,PSC,PSL,35,16,31,12,-8
+2014,deputado estadual,PSC,PSOL,35,12,29,13,-5
+2014,deputado estadual,PSC,PT,35,106,30,123,12
+2014,deputado estadual,PSC,PT do B,35,14,32,10,-7
+2014,deputado estadual,PSC,PTB,35,38,29,35,-9
+2014,deputado estadual,PSC,PTC,35,10,31,6,-8
+2014,deputado estadual,PSC,PTN,35,17,31,14,-7
+2014,deputado estadual,PSC,PV,35,25,27,24,-9
+2014,deputado estadual,PSC,SD,35,21,31,19,-6
+2014,deputado estadual,PSD,PSDB,73,96,74,98,3
+2014,deputado estadual,PSD,PSL,73,16,72,10,-7
+2014,deputado estadual,PSD,PSOL,73,12,74,6,-5
+2014,deputado estadual,PSD,PT,73,106,84,104,9
+2014,deputado estadual,PSD,PT do B,73,14,71,8,-8
+2014,deputado estadual,PSD,PTB,73,38,69,32,-10
+2014,deputado estadual,PSD,PTC,73,10,69,4,-10
+2014,deputado estadual,PSD,PTN,73,17,70,12,-8
+2014,deputado estadual,PSD,PV,73,25,72,18,-8
+2014,deputado estadual,PSD,SD,73,21,75,18,-1
+2014,deputado estadual,PSDB,PSL,96,16,104,11,3
+2014,deputado estadual,PSDB,PSOL,96,12,106,8,6
+2014,deputado estadual,PSDB,PT,96,106,111,113,22
+2014,deputado estadual,PSDB,PT do B,96,14,107,5,2
+2014,deputado estadual,PSDB,PTB,96,38,102,32,0
+2014,deputado estadual,PSDB,PTC,96,10,104,8,6
+2014,deputado estadual,PSDB,PTN,96,17,103,11,1
+2014,deputado estadual,PSDB,PV,96,25,103,24,6
+2014,deputado estadual,PSDB,SD,96,21,106,17,6
+2014,deputado estadual,PSL,PSOL,16,12,18,9,-1
+2014,deputado estadual,PSL,PT,16,106,14,120,12
+2014,deputado estadual,PSL,PT do B,16,14,14,10,-6
+2014,deputado estadual,PSL,PTB,16,38,11,34,-9
+2014,deputado estadual,PSL,PTC,16,10,13,9,-4
+2014,deputado estadual,PSL,PTN,16,17,13,14,-6
+2014,deputado estadual,PSL,PV,16,25,14,23,-4
+2014,deputado estadual,PSL,SD,16,21,15,16,-6
+2014,deputado estadual,PSOL,PT,12,106,7,124,13
+2014,deputado estadual,PSOL,PT do B,12,14,12,11,-3
+2014,deputado estadual,PSOL,PTB,12,38,8,37,-5
+2014,deputado estadual,PSOL,PTC,12,10,11,8,-3
+2014,deputado estadual,PSOL,PTN,12,17,9,15,-5
+2014,deputado estadual,PSOL,PV,12,25,11,25,-1
+2014,deputado estadual,PSOL,SD,12,21,12,18,-3
+2014,deputado estadual,PT,PT do B,106,14,119,10,9
+2014,deputado estadual,PT,PTB,106,38,115,39,10
+2014,deputado estadual,PT,PTC,106,10,119,7,10
+2014,deputado estadual,PT,PTN,106,17,120,16,13
+2014,deputado estadual,PT,PV,106,25,117,28,14
+2014,deputado estadual,PT,SD,106,21,121,22,16
+2014,deputado estadual,PT do B,PTB,14,38,8,33,-11
+2014,deputado estadual,PT do B,PTC,14,10,10,9,-5
+2014,deputado estadual,PT do B,PTN,14,17,7,16,-8
+2014,deputado estadual,PT do B,PV,14,25,7,25,-7
+2014,deputado estadual,PT do B,SD,14,21,11,19,-5
+2014,deputado estadual,PTB,PTC,38,10,31,8,-9
+2014,deputado estadual,PTB,PTN,38,17,33,13,-9
+2014,deputado estadual,PTB,PV,38,25,34,20,-9
+2014,deputado estadual,PTB,SD,38,21,35,15,-9
+2014,deputado estadual,PTC,PTN,10,17,6,16,-5
+2014,deputado estadual,PTC,PV,10,25,7,23,-5
+2014,deputado estadual,PTC,SD,10,21,11,16,-4
+2014,deputado estadual,PTN,PV,17,25,14,22,-6
+2014,deputado estadual,PTN,SD,17,21,12,18,-8
+2014,deputado estadual,PV,SD,25,21,27,18,-1
+2018,deputado federal,AVANTE,DEM,7,29,4,27,-5
+2018,deputado federal,AVANTE,MDB,7,34,4,34,-3
+2018,deputado federal,AVANTE,NOVO,7,8,6,12,3
+2018,deputado federal,AVANTE,PATRI,7,5,4,8,0
+2018,deputado federal,AVANTE,PC do B,7,9,5,8,-3
+2018,deputado federal,AVANTE,PDT,7,28,7,23,-5
+2018,deputado federal,AVANTE,PHS,7,6,5,5,-3
+2018,deputado federal,AVANTE,PODE,7,11,5,8,-5
+2018,deputado federal,AVANTE,PP,7,37,2,32,-10
+2018,deputado federal,AVANTE,PPS,7,8,5,7,-3
+2018,deputado federal,AVANTE,PR,7,33,2,30,-8
+2018,deputado federal,AVANTE,PRB,7,29,4,28,-4
+2018,deputado federal,AVANTE,PROS,7,8,6,7,-2
+2018,deputado federal,AVANTE,PSB,7,32,7,28,-4
+2018,deputado federal,AVANTE,PSC,7,7,6,7,-1
+2018,deputado federal,AVANTE,PSD,7,35,3,34,-5
+2018,deputado federal,AVANTE,PSDB,7,30,3,32,-2
+2018,deputado federal,AVANTE,PSL,7,52,6,51,-2
+2018,deputado federal,AVANTE,PSOL,7,10,6,11,0
+2018,deputado federal,AVANTE,PT,7,56,4,63,4
+2018,deputado federal,AVANTE,PTB,7,10,8,8,-1
+2018,deputado federal,AVANTE,PV,7,4,6,7,2
+2018,deputado federal,AVANTE,SOLIDARIEDADE,7,13,7,7,-6
+2018,deputado federal,DEM,MDB,29,34,28,27,-8
+2018,deputado federal,DEM,NOVO,29,8,25,7,-5
+2018,deputado federal,DEM,PATRI,29,5,24,3,-7
+2018,deputado federal,DEM,PC do B,29,9,22,6,-10
+2018,deputado federal,DEM,PDT,29,28,27,22,-8
+2018,deputado federal,DEM,PHS,29,6,25,1,-9
+2018,deputado federal,DEM,PODE,29,11,25,8,-7
+2018,deputado federal,DEM,PP,29,37,24,34,-8
+2018,deputado federal,DEM,PPS,29,8,21,7,-9
+2018,deputado federal,DEM,PR,29,33,27,27,-8
+2018,deputado federal,DEM,PRB,29,29,22,27,-9
+2018,deputado federal,DEM,PROS,29,8,26,7,-4
+2018,deputado federal,DEM,PSB,29,32,25,28,-8
+2018,deputado federal,DEM,PSC,29,7,24,7,-5
+2018,deputado federal,DEM,PSD,29,35,24,32,-8
+2018,deputado federal,DEM,PSDB,29,30,25,32,-2
+2018,deputado federal,DEM,PSL,29,52,35,46,0
+2018,deputado federal,DEM,PSOL,29,10,26,8,-5
+2018,deputado federal,DEM,PT,29,56,28,53,-4
+2018,deputado federal,DEM,PTB,29,10,26,6,-7
+2018,deputado federal,DEM,PV,29,4,24,4,-5
+2018,deputado federal,DEM,SOLIDARIEDADE,29,13,25,8,-9
+2018,deputado federal,MDB,NOVO,34,8,33,6,-3
+2018,deputado federal,MDB,PATRI,34,5,29,4,-6
+2018,deputado federal,MDB,PC do B,34,9,27,6,-10
+2018,deputado federal,MDB,PDT,34,28,33,22,-7
+2018,deputado federal,MDB,PHS,34,6,32,3,-5
+2018,deputado federal,MDB,PODE,34,11,26,12,-7
+2018,deputado federal,MDB,PP,34,37,29,32,-10
+2018,deputado federal,MDB,PPS,34,8,26,7,-9
+2018,deputado federal,MDB,PR,34,33,25,30,-12
+2018,deputado federal,MDB,PRB,34,29,28,27,-8
+2018,deputado federal,MDB,PROS,34,8,32,7,-3
+2018,deputado federal,MDB,PSB,34,32,31,31,-4
+2018,deputado federal,MDB,PSC,34,7,25,9,-7
+2018,deputado federal,MDB,PSD,34,35,28,34,-7
+2018,deputado federal,MDB,PSDB,34,30,28,35,-1
+2018,deputado federal,MDB,PSL,34,52,38,49,1
+2018,deputado federal,MDB,PSOL,34,10,31,9,-4
+2018,deputado federal,MDB,PT,34,56,30,57,-3
+2018,deputado federal,MDB,PTB,34,10,30,9,-5
+2018,deputado federal,MDB,PV,34,4,29,3,-6
+2018,deputado federal,MDB,SOLIDARIEDADE,34,13,29,9,-9
+2018,deputado federal,NOVO,PATRI,8,5,8,6,1
+2018,deputado federal,NOVO,PC do B,8,9,8,7,-2
+2018,deputado federal,NOVO,PDT,8,28,10,23,-3
+2018,deputado federal,NOVO,PHS,8,6,11,4,1
+2018,deputado federal,NOVO,PODE,8,11,9,12,2
+2018,deputado federal,NOVO,PP,8,37,5,33,-7
+2018,deputado federal,NOVO,PPS,8,8,7,10,1
+2018,deputado federal,NOVO,PR,8,33,6,26,-9
+2018,deputado federal,NOVO,PRB,8,29,7,26,-4
+2018,deputado federal,NOVO,PROS,8,8,10,8,2
+2018,deputado federal,NOVO,PSB,8,32,7,30,-3
+2018,deputado federal,NOVO,PSC,8,7,8,8,1
+2018,deputado federal,NOVO,PSD,8,35,6,35,-2
+2018,deputado federal,NOVO,PSDB,8,30,4,35,1
+2018,deputado federal,NOVO,PSL,8,52,12,52,4
+2018,deputado federal,NOVO,PSOL,8,10,11,11,4
+2018,deputado federal,NOVO,PT,8,56,7,61,4
+2018,deputado federal,NOVO,PTB,8,10,10,5,-3
+2018,deputado federal,NOVO,PV,8,4,8,8,4
+2018,deputado federal,NOVO,SOLIDARIEDADE,8,13,7,9,-5
+2018,deputado federal,PATRI,PC do B,5,9,4,7,-3
+2018,deputado federal,PATRI,PDT,5,28,6,24,-3
+2018,deputado federal,PATRI,PHS,5,6,6,6,1
+2018,deputado federal,PATRI,PODE,5,11,5,9,-2
+2018,deputado federal,PATRI,PP,5,37,3,29,-10
+2018,deputado federal,PATRI,PPS,5,8,3,5,-5
+2018,deputado federal,PATRI,PR,5,33,5,23,-10
+2018,deputado federal,PATRI,PRB,5,29,3,27,-4
+2018,deputado federal,PATRI,PROS,5,8,5,7,-1
+2018,deputado federal,PATRI,PSB,5,32,5,27,-5
+2018,deputado federal,PATRI,PSC,5,7,5,5,-2
+2018,deputado federal,PATRI,PSD,5,35,2,33,-5
+2018,deputado federal,PATRI,PSDB,5,30,5,31,1
+2018,deputado federal,PATRI,PSL,5,52,6,50,-1
+2018,deputado federal,PATRI,PSOL,5,10,6,11,2
+2018,deputado federal,PATRI,PT,5,56,5,56,0
+2018,deputado federal,PATRI,PTB,5,10,4,7,-4
+2018,deputado federal,PATRI,PV,5,4,6,3,0
+2018,deputado federal,PATRI,SOLIDARIEDADE,5,13,4,8,-6
+2018,deputado federal,PC do B,PDT,9,28,8,20,-9
+2018,deputado federal,PC do B,PHS,9,6,6,3,-6
+2018,deputado federal,PC do B,PODE,9,11,5,6,-9
+2018,deputado federal,PC do B,PP,9,37,6,30,-10
+2018,deputado federal,PC do B,PPS,9,8,4,5,-8
+2018,deputado federal,PC do B,PR,9,33,5,26,-11
+2018,deputado federal,PC do B,PRB,9,29,6,22,-10
+2018,deputado federal,PC do B,PROS,9,8,6,6,-5
+2018,deputado federal,PC do B,PSB,9,32,6,27,-8
+2018,deputado federal,PC do B,PSC,9,7,5,5,-6
+2018,deputado federal,PC do B,PSD,9,35,5,32,-7
+2018,deputado federal,PC do B,PSDB,9,30,5,28,-6
+2018,deputado federal,PC do B,PSL,9,52,5,51,-5
+2018,deputado federal,PC do B,PSOL,9,10,5,10,-4
+2018,deputado federal,PC do B,PT,9,56,8,52,-5
+2018,deputado federal,PC do B,PTB,9,10,8,4,-7
+2018,deputado federal,PC do B,PV,9,4,6,3,-4
+2018,deputado federal,PC do B,SOLIDARIEDADE,9,13,5,7,-10
+2018,deputado federal,PDT,PHS,28,6,21,4,-9
+2018,deputado federal,PDT,PODE,28,11,24,10,-5
+2018,deputado federal,PDT,PP,28,37,18,33,-14
+2018,deputado federal,PDT,PPS,28,8,23,6,-7
+2018,deputado federal,PDT,PR,28,33,19,31,-11
+2018,deputado federal,PDT,PRB,28,29,21,32,-4
+2018,deputado federal,PDT,PROS,28,8,25,8,-3
+2018,deputado federal,PDT,PSB,28,32,27,28,-5
+2018,deputado federal,PDT,PSC,28,7,25,8,-2
+2018,deputado federal,PDT,PSD,28,35,19,36,-8
+2018,deputado federal,PDT,PSDB,28,30,21,32,-5
+2018,deputado federal,PDT,PSL,28,52,25,52,-3
+2018,deputado federal,PDT,PSOL,28,10,24,11,-3
+2018,deputado federal,PDT,PT,28,56,24,60,0
+2018,deputado federal,PDT,PTB,28,10,23,9,-6
+2018,deputado federal,PDT,PV,28,4,22,6,-4
+2018,deputado federal,PDT,SOLIDARIEDADE,28,13,19,11,-11
+2018,deputado federal,PHS,PODE,6,11,3,11,-3
+2018,deputado federal,PHS,PP,6,37,2,31,-10
+2018,deputado federal,PHS,PPS,6,8,3,6,-5
+2018,deputado federal,PHS,PR,6,33,2,28,-9
+2018,deputado federal,PHS,PRB,6,29,2,27,-6
+2018,deputado federal,PHS,PROS,6,8,3,10,-1
+2018,deputado federal,PHS,PSB,6,32,4,29,-5
+2018,deputado federal,PHS,PSC,6,7,5,7,-1
+2018,deputado federal,PHS,PSD,6,35,2,35,-4
+2018,deputado federal,PHS,PSDB,6,30,2,32,-2
+2018,deputado federal,PHS,PSL,6,52,5,52,-1
+2018,deputado federal,PHS,PSOL,6,10,6,11,1
+2018,deputado federal,PHS,PT,6,56,5,58,1
+2018,deputado federal,PHS,PTB,6,10,4,8,-4
+2018,deputado federal,PHS,PV,6,4,5,6,1
+2018,deputado federal,PHS,SOLIDARIEDADE,6,13,5,8,-6
+2018,deputado federal,PODE,PP,11,37,8,31,-9
+2018,deputado federal,PODE,PPS,11,8,7,7,-5
+2018,deputado federal,PODE,PR,11,33,9,27,-8
+2018,deputado federal,PODE,PRB,11,29,9,24,-7
+2018,deputado federal,PODE,PROS,11,8,13,5,-1
+2018,deputado federal,PODE,PSB,11,32,10,27,-6
+2018,deputado federal,PODE,PSC,11,7,10,7,-1
+2018,deputado federal,PODE,PSD,11,35,7,34,-5
+2018,deputado federal,PODE,PSDB,11,30,7,31,-3
+2018,deputado federal,PODE,PSL,11,52,15,49,1
+2018,deputado federal,PODE,PSOL,11,10,8,10,-3
+2018,deputado federal,PODE,PT,11,56,9,56,-2
+2018,deputado federal,PODE,PTB,11,10,12,6,-3
+2018,deputado federal,PODE,PV,11,4,9,4,-2
+2018,deputado federal,PODE,SOLIDARIEDADE,11,13,9,8,-7
+2018,deputado federal,PP,PPS,37,8,24,8,-13
+2018,deputado federal,PP,PR,37,33,32,29,-9
+2018,deputado federal,PP,PRB,37,29,33,24,-9
+2018,deputado federal,PP,PROS,37,8,33,6,-6
+2018,deputado federal,PP,PSB,37,32,36,27,-6
+2018,deputado federal,PP,PSC,37,7,27,7,-10
+2018,deputado federal,PP,PSD,37,35,31,31,-10
+2018,deputado federal,PP,PSDB,37,30,32,28,-7
+2018,deputado federal,PP,PSL,37,52,42,46,-1
+2018,deputado federal,PP,PSOL,37,10,30,9,-8
+2018,deputado federal,PP,PT,37,56,35,54,-4
+2018,deputado federal,PP,PTB,37,10,32,7,-8
+2018,deputado federal,PP,PV,37,4,33,4,-4
+2018,deputado federal,PP,SOLIDARIEDADE,37,13,32,8,-10
+2018,deputado federal,PPS,PR,8,33,8,23,-10
+2018,deputado federal,PPS,PRB,8,29,5,24,-8
+2018,deputado federal,PPS,PROS,8,8,8,5,-3
+2018,deputado federal,PPS,PSB,8,32,8,26,-6
+2018,deputado federal,PPS,PSC,8,7,6,4,-5
+2018,deputado federal,PPS,PSD,8,35,6,29,-8
+2018,deputado federal,PPS,PSDB,8,30,7,28,-3
+2018,deputado federal,PPS,PSL,8,52,11,47,-2
+2018,deputado federal,PPS,PSOL,8,10,6,10,-2
+2018,deputado federal,PPS,PT,8,56,7,53,-4
+2018,deputado federal,PPS,PTB,8,10,6,6,-6
+2018,deputado federal,PPS,PV,8,4,6,5,-1
+2018,deputado federal,PPS,SOLIDARIEDADE,8,13,5,6,-10
+2018,deputado federal,PR,PRB,33,29,26,25,-11
+2018,deputado federal,PR,PROS,33,8,29,7,-5
+2018,deputado federal,PR,PSB,33,32,30,27,-8
+2018,deputado federal,PR,PSC,33,7,25,7,-8
+2018,deputado federal,PR,PSD,33,35,30,31,-7
+2018,deputado federal,PR,PSDB,33,30,30,30,-3
+2018,deputado federal,PR,PSL,33,52,38,45,-2
+2018,deputado federal,PR,PSOL,33,10,27,9,-7
+2018,deputado federal,PR,PT,33,56,32,53,-4
+2018,deputado federal,PR,PTB,33,10,31,4,-8
+2018,deputado federal,PR,PV,33,4,27,5,-5
+2018,deputado federal,PR,SOLIDARIEDADE,33,13,29,9,-8
+2018,deputado federal,PRB,PROS,29,8,27,7,-3
+2018,deputado federal,PRB,PSB,29,32,28,25,-8
+2018,deputado federal,PRB,PSC,29,7,25,7,-4
+2018,deputado federal,PRB,PSD,29,35,24,33,-7
+2018,deputado federal,PRB,PSDB,29,30,29,26,-4
+2018,deputado federal,PRB,PSL,29,52,32,47,-2
+2018,deputado federal,PRB,PSOL,29,10,27,8,-4
+2018,deputado federal,PRB,PT,29,56,30,52,-3
+2018,deputado federal,PRB,PTB,29,10,27,8,-4
+2018,deputado federal,PRB,PV,29,4,25,3,-5
+2018,deputado federal,PRB,SOLIDARIEDADE,29,13,25,11,-6
+2018,deputado federal,PROS,PSB,8,32,8,27,-5
+2018,deputado federal,PROS,PSC,8,7,9,7,1
+2018,deputado federal,PROS,PSD,8,35,9,34,0
+2018,deputado federal,PROS,PSDB,8,30,8,29,-1
+2018,deputado federal,PROS,PSL,8,52,12,49,1
+2018,deputado federal,PROS,PSOL,8,10,8,11,1
+2018,deputado federal,PROS,PT,8,56,8,58,2
+2018,deputado federal,PROS,PTB,8,10,7,10,-1
+2018,deputado federal,PROS,PV,8,4,5,7,0
+2018,deputado federal,PROS,SOLIDARIEDADE,8,13,6,10,-5
+2018,deputado federal,PSB,PSC,32,7,30,9,0
+2018,deputado federal,PSB,PSD,32,35,24,37,-6
+2018,deputado federal,PSB,PSDB,32,30,28,34,0
+2018,deputado federal,PSB,PSL,32,52,40,50,6
+2018,deputado federal,PSB,PSOL,32,10,28,11,-3
+2018,deputado federal,PSB,PT,32,56,29,59,0
+2018,deputado federal,PSB,PTB,32,10,25,11,-6
+2018,deputado federal,PSB,PV,32,4,27,5,-4
+2018,deputado federal,PSB,SOLIDARIEDADE,32,13,26,13,-6
+2018,deputado federal,PSC,PSD,7,35,5,33,-4
+2018,deputado federal,PSC,PSDB,7,30,6,28,-3
+2018,deputado federal,PSC,PSL,7,52,9,51,1
+2018,deputado federal,PSC,PSOL,7,10,5,12,0
+2018,deputado federal,PSC,PT,7,56,7,58,2
+2018,deputado federal,PSC,PTB,7,10,6,8,-3
+2018,deputado federal,PSC,PV,7,4,7,3,-1
+2018,deputado federal,PSC,SOLIDARIEDADE,7,13,8,6,-6
+2018,deputado federal,PSD,PSDB,35,30,35,27,-3
+2018,deputado federal,PSD,PSL,35,52,43,48,4
+2018,deputado federal,PSD,PSOL,35,10,32,10,-3
+2018,deputado federal,PSD,PT,35,56,35,52,-4
+2018,deputado federal,PSD,PTB,35,10,32,7,-6
+2018,deputado federal,PSD,PV,35,4,32,3,-4
+2018,deputado federal,PSD,SOLIDARIEDADE,35,13,33,10,-5
+2018,deputado federal,PSDB,PSL,30,52,47,44,9
+2018,deputado federal,PSDB,PSOL,30,10,29,9,-2
+2018,deputado federal,PSDB,PT,30,56,32,57,3
+2018,deputado federal,PSDB,PTB,30,10,29,9,-2
+2018,deputado federal,PSDB,PV,30,4,31,4,1
+2018,deputado federal,PSDB,SOLIDARIEDADE,30,13,31,9,-3
+2018,deputado federal,PSL,PSOL,52,10,53,11,2
+2018,deputado federal,PSL,PT,52,56,50,68,10
+2018,deputado federal,PSL,PTB,52,10,48,15,1
+2018,deputado federal,PSL,PV,52,4,49,10,3
+2018,deputado federal,PSL,SOLIDARIEDADE,52,13,49,15,-1
+2018,deputado federal,PSOL,PT,10,56,9,59,2
+2018,deputado federal,PSOL,PTB,10,10,10,8,-2
+2018,deputado federal,PSOL,PV,10,4,11,4,1
+2018,deputado federal,PSOL,SOLIDARIEDADE,10,13,9,9,-5
+2018,deputado federal,PT,PTB,56,10,56,9,-1
+2018,deputado federal,PT,PV,56,4,57,3,0
+2018,deputado federal,PT,SOLIDARIEDADE,56,13,55,12,-2
+2018,deputado federal,PTB,PV,10,4,6,4,-4
+2018,deputado federal,PTB,SOLIDARIEDADE,10,13,8,7,-8
+2018,deputado federal,PV,SOLIDARIEDADE,4,13,3,8,-6
+2018,deputado estadual,AVANTE,DEM,13,53,8,48,-10
+2018,deputado estadual,AVANTE,MDB,13,92,9,89,-7
+2018,deputado estadual,AVANTE,NOVO,13,11,12,10,-2
+2018,deputado estadual,AVANTE,PATRI,13,16,10,19,0
+2018,deputado estadual,AVANTE,PC do B,13,21,14,21,1
+2018,deputado estadual,AVANTE,PDT,13,51,10,54,0
+2018,deputado estadual,AVANTE,PHS,13,14,16,13,2
+2018,deputado estadual,AVANTE,PODE,13,20,11,22,0
+2018,deputado estadual,AVANTE,PP,13,68,11,65,-5
+2018,deputado estadual,AVANTE,PPS,13,22,14,20,-1
+2018,deputado estadual,AVANTE,PR,13,43,11,39,-6
+2018,deputado estadual,AVANTE,PRB,13,41,14,35,-5
+2018,deputado estadual,AVANTE,PROS,13,18,14,13,-4
+2018,deputado estadual,AVANTE,PRP,13,12,12,10,-3
+2018,deputado estadual,AVANTE,PRTB,13,16,15,12,-2
+2018,deputado estadual,AVANTE,PSB,13,64,12,66,1
+2018,deputado estadual,AVANTE,PSC,13,29,14,24,-4
+2018,deputado estadual,AVANTE,PSD,13,60,9,61,-3
+2018,deputado estadual,AVANTE,PSDB,13,73,13,73,0
+2018,deputado estadual,AVANTE,PSL,13,72,19,69,3
+2018,deputado estadual,AVANTE,PSOL,13,16,13,17,1
+2018,deputado estadual,AVANTE,PT,13,84,13,89,5
+2018,deputado estadual,AVANTE,PTB,13,30,10,30,-3
+2018,deputado estadual,AVANTE,PV,13,28,12,18,-11
+2018,deputado estadual,AVANTE,SOLIDARIEDADE,13,29,14,29,1
+2018,deputado estadual,DEM,MDB,53,92,47,83,-15
+2018,deputado estadual,DEM,NOVO,53,11,44,5,-15
+2018,deputado estadual,DEM,PATRI,53,16,49,12,-8
+2018,deputado estadual,DEM,PC do B,53,21,47,22,-5
+2018,deputado estadual,DEM,PDT,53,51,51,47,-6
+2018,deputado estadual,DEM,PHS,53,14,49,8,-10
+2018,deputado estadual,DEM,PODE,53,20,49,19,-5
+2018,deputado estadual,DEM,PP,53,68,48,60,-13
+2018,deputado estadual,DEM,PPS,53,22,45,24,-6
+2018,deputado estadual,DEM,PR,53,43,51,35,-10
+2018,deputado estadual,DEM,PRB,53,41,47,38,-9
+2018,deputado estadual,DEM,PROS,53,18,49,9,-13
+2018,deputado estadual,DEM,PRP,53,12,46,9,-10
+2018,deputado estadual,DEM,PRTB,53,16,49,9,-11
+2018,deputado estadual,DEM,PSB,53,64,49,59,-9
+2018,deputado estadual,DEM,PSC,53,29,51,20,-11
+2018,deputado estadual,DEM,PSD,53,60,47,59,-7
+2018,deputado estadual,DEM,PSDB,53,73,47,74,-5
+2018,deputado estadual,DEM,PSL,53,72,61,63,-1
+2018,deputado estadual,DEM,PSOL,53,16,48,13,-8
+2018,deputado estadual,DEM,PT,53,84,52,83,-2
+2018,deputado estadual,DEM,PTB,53,30,47,26,-10
+2018,deputado estadual,DEM,PV,53,28,46,18,-17
+2018,deputado estadual,DEM,SOLIDARIEDADE,53,29,53,18,-11
+2018,deputado estadual,MDB,NOVO,92,11,89,4,-10
+2018,deputado estadual,MDB,PATRI,92,16,95,11,-2
+2018,deputado estadual,MDB,PC do B,92,21,94,20,1
+2018,deputado estadual,MDB,PDT,92,51,94,44,-5
+2018,deputado estadual,MDB,PHS,92,14,95,7,-4
+2018,deputado estadual,MDB,PODE,92,20,93,18,-1
+2018,deputado estadual,MDB,PP,92,68,96,57,-7
+2018,deputado estadual,MDB,PPS,92,22,94,16,-4
+2018,deputado estadual,MDB,PR,92,43,95,32,-8
+2018,deputado estadual,MDB,PRB,92,41,94,34,-5
+2018,deputado estadual,MDB,PROS,92,18,92,8,-10
+2018,deputado estadual,MDB,PRP,92,12,85,9,-10
+2018,deputado estadual,MDB,PRTB,92,16,93,9,-6
+2018,deputado estadual,MDB,PSB,92,64,94,58,-4
+2018,deputado estadual,MDB,PSC,92,29,91,23,-7
+2018,deputado estadual,MDB,PSD,92,60,89,55,-8
+2018,deputado estadual,MDB,PSDB,92,73,95,68,-2
+2018,deputado estadual,MDB,PSL,92,72,106,61,3
+2018,deputado estadual,MDB,PSOL,92,16,91,15,-2
+2018,deputado estadual,MDB,PT,92,84,96,80,0
+2018,deputado estadual,MDB,PTB,92,30,92,26,-4
+2018,deputado estadual,MDB,PV,92,28,92,15,-13
+2018,deputado estadual,MDB,SOLIDARIEDADE,92,29,96,21,-4
+2018,deputado estadual,NOVO,PATRI,11,16,9,17,-1
+2018,deputado estadual,NOVO,PC do B,11,21,8,23,-1
+2018,deputado estadual,NOVO,PDT,11,51,8,51,-3
+2018,deputado estadual,NOVO,PHS,11,14,11,13,-1
+2018,deputado estadual,NOVO,PODE,11,20,7,25,1
+2018,deputado estadual,NOVO,PP,11,68,5,65,-9
+2018,deputado estadual,NOVO,PPS,11,22,8,21,-4
+2018,deputado estadual,NOVO,PR,11,43,6,39,-9
+2018,deputado estadual,NOVO,PRB,11,41,12,33,-7
+2018,deputado estadual,NOVO,PROS,11,18,11,11,-7
+2018,deputado estadual,NOVO,PRP,11,12,11,7,-5
+2018,deputado estadual,NOVO,PRTB,11,16,12,14,-1
+2018,deputado estadual,NOVO,PSB,11,64,6,66,-3
+2018,deputado estadual,NOVO,PSC,11,29,13,25,-2
+2018,deputado estadual,NOVO,PSD,11,60,8,56,-7
+2018,deputado estadual,NOVO,PSDB,11,73,4,79,-1
+2018,deputado estadual,NOVO,PSL,11,72,16,70,3
+2018,deputado estadual,NOVO,PSOL,11,16,8,19,0
+2018,deputado estadual,NOVO,PT,11,84,5,92,2
+2018,deputado estadual,NOVO,PTB,11,30,6,31,-4
+2018,deputado estadual,NOVO,PV,11,28,6,21,-12
+2018,deputado estadual,NOVO,SOLIDARIEDADE,11,29,9,25,-6
+2018,deputado estadual,PATRI,PC do B,16,21,14,27,4
+2018,deputado estadual,PATRI,PDT,16,51,11,58,2
+2018,deputado estadual,PATRI,PHS,16,14,19,12,1
+2018,deputado estadual,PATRI,PODE,16,20,18,23,5
+2018,deputado estadual,PATRI,PP,16,68,13,67,-4
+2018,deputado estadual,PATRI,PPS,16,22,17,21,0
+2018,deputado estadual,PATRI,PR,16,43,14,40,-5
+2018,deputado estadual,PATRI,PRB,16,41,18,39,0
+2018,deputado estadual,PATRI,PROS,16,18,15,16,-3
+2018,deputado estadual,PATRI,PRP,16,12,16,11,-1
+2018,deputado estadual,PATRI,PRTB,16,16,18,11,-3
+2018,deputado estadual,PATRI,PSB,16,64,14,64,-2
+2018,deputado estadual,PATRI,PSC,16,29,18,25,-2
+2018,deputado estadual,PATRI,PSD,16,60,13,63,0
+2018,deputado estadual,PATRI,PSDB,16,73,15,76,2
+2018,deputado estadual,PATRI,PSL,16,72,22,71,5
+2018,deputado estadual,PATRI,PSOL,16,16,18,16,2
+2018,deputado estadual,PATRI,PT,16,84,15,92,7
+2018,deputado estadual,PATRI,PTB,16,30,14,30,-2
+2018,deputado estadual,PATRI,PV,16,28,14,24,-6
+2018,deputado estadual,PATRI,SOLIDARIEDADE,16,29,17,28,0
+2018,deputado estadual,PC do B,PDT,21,51,20,56,4
+2018,deputado estadual,PC do B,PHS,21,14,28,12,5
+2018,deputado estadual,PC do B,PODE,21,20,26,21,6
+2018,deputado estadual,PC do B,PP,21,68,21,68,0
+2018,deputado estadual,PC do B,PPS,21,22,27,21,5
+2018,deputado estadual,PC do B,PR,21,43,22,40,-2
+2018,deputado estadual,PC do B,PRB,21,41,24,40,2
+2018,deputado estadual,PC do B,PROS,21,18,24,14,-1
+2018,deputado estadual,PC do B,PRP,21,12,23,11,1
+2018,deputado estadual,PC do B,PRTB,21,16,24,12,-1
+2018,deputado estadual,PC do B,PSB,21,64,22,65,2
+2018,deputado estadual,PC do B,PSC,21,29,29,25,4
+2018,deputado estadual,PC do B,PSD,21,60,20,63,2
+2018,deputado estadual,PC do B,PSDB,21,73,21,77,4
+2018,deputado estadual,PC do B,PSL,21,72,31,70,8
+2018,deputado estadual,PC do B,PSOL,21,16,25,16,4
+2018,deputado estadual,PC do B,PT,21,84,23,90,8
+2018,deputado estadual,PC do B,PTB,21,30,21,32,2
+2018,deputado estadual,PC do B,PV,21,28,23,20,-6
+2018,deputado estadual,PC do B,SOLIDARIEDADE,21,29,25,28,3
+2018,deputado estadual,PDT,PHS,51,14,59,11,5
+2018,deputado estadual,PDT,PODE,51,20,55,22,6
+2018,deputado estadual,PDT,PP,51,68,53,64,-2
+2018,deputado estadual,PDT,PPS,51,22,54,19,0
+2018,deputado estadual,PDT,PR,51,43,51,41,-2
+2018,deputado estadual,PDT,PRB,51,41,54,41,3
+2018,deputado estadual,PDT,PROS,51,18,52,15,-2
+2018,deputado estadual,PDT,PRP,51,12,55,8,0
+2018,deputado estadual,PDT,PRTB,51,16,57,9,-1
+2018,deputado estadual,PDT,PSB,51,64,55,63,3
+2018,deputado estadual,PDT,PSC,51,29,56,26,2
+2018,deputado estadual,PDT,PSD,51,60,48,63,0
+2018,deputado estadual,PDT,PSDB,51,73,50,78,4
+2018,deputado estadual,PDT,PSL,51,72,65,63,5
+2018,deputado estadual,PDT,PSOL,51,16,57,15,5
+2018,deputado estadual,PDT,PT,51,84,52,88,5
+2018,deputado estadual,PDT,PTB,51,30,49,31,-1
+2018,deputado estadual,PDT,PV,51,28,50,23,-6
+2018,deputado estadual,PDT,SOLIDARIEDADE,51,29,57,25,2
+2018,deputado estadual,PHS,PODE,14,20,11,26,3
+2018,deputado estadual,PHS,PP,14,68,10,70,-2
+2018,deputado estadual,PHS,PPS,14,22,14,23,1
+2018,deputado estadual,PHS,PR,14,43,10,42,-5
+2018,deputado estadual,PHS,PRB,14,41,12,43,0
+2018,deputado estadual,PHS,PROS,14,18,13,17,-2
+2018,deputado estadual,PHS,PRP,14,12,15,13,2
+2018,deputado estadual,PHS,PRTB,14,16,14,16,0
+2018,deputado estadual,PHS,PSB,14,64,10,68,0
+2018,deputado estadual,PHS,PSC,14,29,16,28,1
+2018,deputado estadual,PHS,PSD,14,60,12,61,-1
+2018,deputado estadual,PHS,PSDB,14,73,7,85,5
+2018,deputado estadual,PHS,PSL,14,72,18,73,5
+2018,deputado estadual,PHS,PSOL,14,16,14,17,1
+2018,deputado estadual,PHS,PT,14,84,10,94,6
+2018,deputado estadual,PHS,PTB,14,30,8,34,-2
+2018,deputado estadual,PHS,PV,14,28,8,27,-7
+2018,deputado estadual,PHS,SOLIDARIEDADE,14,29,10,35,2
+2018,deputado estadual,PODE,PP,20,68,19,70,1
+2018,deputado estadual,PODE,PPS,20,22,25,22,5
+2018,deputado estadual,PODE,PR,20,43,23,40,0
+2018,deputado estadual,PODE,PRB,20,41,21,40,0
+2018,deputado estadual,PODE,PROS,20,18,21,16,-1
+2018,deputado estadual,PODE,PRP,20,12,19,12,-1
+2018,deputado estadual,PODE,PRTB,20,16,25,13,2
+2018,deputado estadual,PODE,PSB,20,64,19,69,4
+2018,deputado estadual,PODE,PSC,20,29,23,30,4
+2018,deputado estadual,PODE,PSD,20,60,21,65,6
+2018,deputado estadual,PODE,PSDB,20,73,18,81,6
+2018,deputado estadual,PODE,PSL,20,72,35,69,12
+2018,deputado estadual,PODE,PSOL,20,16,23,18,5
+2018,deputado estadual,PODE,PT,20,84,17,95,8
+2018,deputado estadual,PODE,PTB,20,30,23,29,2
+2018,deputado estadual,PODE,PV,20,28,22,23,-3
+2018,deputado estadual,PODE,SOLIDARIEDADE,20,29,26,25,2
+2018,deputado estadual,PP,PPS,68,22,68,22,0
+2018,deputado estadual,PP,PR,68,43,68,38,-5
+2018,deputado estadual,PP,PRB,68,41,63,42,-4
+2018,deputado estadual,PP,PROS,68,18,63,12,-11
+2018,deputado estadual,PP,PRP,68,12,65,10,-5
+2018,deputado estadual,PP,PRTB,68,16,67,11,-6
+2018,deputado estadual,PP,PSB,68,64,69,62,-1
+2018,deputado estadual,PP,PSC,68,29,70,27,0
+2018,deputado estadual,PP,PSD,68,60,61,67,0
+2018,deputado estadual,PP,PSDB,68,73,66,77,2
+2018,deputado estadual,PP,PSL,68,72,79,62,1
+2018,deputado estadual,PP,PSOL,68,16,65,16,-3
+2018,deputado estadual,PP,PT,68,84,70,84,2
+2018,deputado estadual,PP,PTB,68,30,57,34,-7
+2018,deputado estadual,PP,PV,68,28,64,22,-10
+2018,deputado estadual,PP,SOLIDARIEDADE,68,29,66,28,-3
+2018,deputado estadual,PPS,PR,22,43,23,38,-4
+2018,deputado estadual,PPS,PRB,22,41,18,44,-1
+2018,deputado estadual,PPS,PROS,22,18,26,11,-3
+2018,deputado estadual,PPS,PRP,22,12,22,12,0
+2018,deputado estadual,PPS,PRTB,22,16,23,15,0
+2018,deputado estadual,PPS,PSB,22,64,19,67,0
+2018,deputado estadual,PPS,PSC,22,29,23,30,2
+2018,deputado estadual,PPS,PSD,22,60,19,64,1
+2018,deputado estadual,PPS,PSDB,22,73,18,80,3
+2018,deputado estadual,PPS,PSL,22,72,25,74,5
+2018,deputado estadual,PPS,PSOL,22,16,22,17,1
+2018,deputado estadual,PPS,PT,22,84,22,89,5
+2018,deputado estadual,PPS,PTB,22,30,19,31,-2
+2018,deputado estadual,PPS,PV,22,28,22,22,-6
+2018,deputado estadual,PPS,SOLIDARIEDADE,22,29,22,30,1
+2018,deputado estadual,PR,PRB,43,41,40,41,-3
+2018,deputado estadual,PR,PROS,43,18,40,16,-5
+2018,deputado estadual,PR,PRP,43,12,35,12,-8
+2018,deputado estadual,PR,PRTB,43,16,41,13,-5
+2018,deputado estadual,PR,PSB,43,64,39,68,0
+2018,deputado estadual,PR,PSC,43,29,43,26,-3
+2018,deputado estadual,PR,PSD,43,60,34,63,-6
+2018,deputado estadual,PR,PSDB,43,73,35,82,1
+2018,deputado estadual,PR,PSL,43,72,55,65,5
+2018,deputado estadual,PR,PSOL,43,16,39,15,-5
+2018,deputado estadual,PR,PT,43,84,42,87,2
+2018,deputado estadual,PR,PTB,43,30,33,34,-6
+2018,deputado estadual,PR,PV,43,28,39,19,-13
+2018,deputado estadual,PR,SOLIDARIEDADE,43,29,44,28,0
+2018,deputado estadual,PRB,PROS,41,18,36,15,-8
+2018,deputado estadual,PRB,PRP,41,12,38,9,-6
+2018,deputado estadual,PRB,PRTB,41,16,38,14,-5
+2018,deputado estadual,PRB,PSB,41,64,41,64,0
+2018,deputado estadual,PRB,PSC,41,29,40,28,-2
+2018,deputado estadual,PRB,PSD,41,60,39,61,-1
+2018,deputado estadual,PRB,PSDB,41,73,40,78,4
+2018,deputado estadual,PRB,PSL,41,72,46,71,4
+2018,deputado estadual,PRB,PSOL,41,16,41,14,-2
+2018,deputado estadual,PRB,PT,41,84,41,86,2
+2018,deputado estadual,PRB,PTB,41,30,36,30,-5
+2018,deputado estadual,PRB,PV,41,28,42,20,-7
+2018,deputado estadual,PRB,SOLIDARIEDADE,41,29,39,30,-1
+2018,deputado estadual,PROS,PRP,18,12,13,9,-8
+2018,deputado estadual,PROS,PRTB,18,16,14,14,-6
+2018,deputado estadual,PROS,PSB,18,64,13,68,-1
+2018,deputado estadual,PROS,PSC,18,29,17,25,-5
+2018,deputado estadual,PROS,PSD,18,60,12,61,-5
+2018,deputado estadual,PROS,PSDB,18,73,12,77,-2
+2018,deputado estadual,PROS,PSL,18,72,19,69,-2
+2018,deputado estadual,PROS,PSOL,18,16,15,18,-1
+2018,deputado estadual,PROS,PT,18,84,14,90,2
+2018,deputado estadual,PROS,PTB,18,30,11,30,-7
+2018,deputado estadual,PROS,PV,18,28,11,23,-12
+2018,deputado estadual,PROS,SOLIDARIEDADE,18,29,14,28,-5
+2018,deputado estadual,PRP,PRTB,12,16,14,14,0
+2018,deputado estadual,PRP,PSB,12,64,10,65,-1
+2018,deputado estadual,PRP,PSC,12,29,15,25,-1
+2018,deputado estadual,PRP,PSD,12,60,10,60,-2
+2018,deputado estadual,PRP,PSDB,12,73,11,76,2
+2018,deputado estadual,PRP,PSL,12,72,14,73,3
+2018,deputado estadual,PRP,PSOL,12,16,11,18,1
+2018,deputado estadual,PRP,PT,12,84,10,91,5
+2018,deputado estadual,PRP,PTB,12,30,13,27,-2
+2018,deputado estadual,PRP,PV,12,28,11,21,-8
+2018,deputado estadual,PRP,SOLIDARIEDADE,12,29,12,27,-2
+2018,deputado estadual,PRTB,PSB,16,64,11,66,-3
+2018,deputado estadual,PRTB,PSC,16,29,15,29,-1
+2018,deputado estadual,PRTB,PSD,16,60,12,63,-1
+2018,deputado estadual,PRTB,PSDB,16,73,11,78,0
+2018,deputado estadual,PRTB,PSL,16,72,16,75,3
+2018,deputado estadual,PRTB,PSOL,16,16,13,16,-3
+2018,deputado estadual,PRTB,PT,16,84,14,91,5
+2018,deputado estadual,PRTB,PTB,16,30,10,33,-3
+2018,deputado estadual,PRTB,PV,16,28,12,20,-12
+2018,deputado estadual,PRTB,SOLIDARIEDADE,16,29,12,31,-2
+2018,deputado estadual,PSB,PSC,64,29,70,24,1
+2018,deputado estadual,PSB,PSD,64,60,59,63,-2
+2018,deputado estadual,PSB,PSDB,64,73,67,75,5
+2018,deputado estadual,PSB,PSL,64,72,82,60,6
+2018,deputado estadual,PSB,PSOL,64,16,65,17,2
+2018,deputado estadual,PSB,PT,64,84,64,91,7
+2018,deputado estadual,PSB,PTB,64,30,58,33,-3
+2018,deputado estadual,PSB,PV,64,28,67,18,-7
+2018,deputado estadual,PSB,SOLIDARIEDADE,64,29,65,29,1
+2018,deputado estadual,PSC,PSD,29,60,23,63,-3
+2018,deputado estadual,PSC,PSDB,29,73,25,79,2
+2018,deputado estadual,PSC,PSL,29,72,36,68,3
+2018,deputado estadual,PSC,PSOL,29,16,27,19,1
+2018,deputado estadual,PSC,PT,29,84,26,91,4
+2018,deputado estadual,PSC,PTB,29,30,21,34,-4
+2018,deputado estadual,PSC,PV,29,28,26,23,-8
+2018,deputado estadual,PSC,SOLIDARIEDADE,29,29,25,32,-1
+2018,deputado estadual,PSD,PSDB,60,73,64,75,6
+2018,deputado estadual,PSD,PSL,60,72,76,62,6
+2018,deputado estadual,PSD,PSOL,60,16,63,14,1
+2018,deputado estadual,PSD,PT,60,84,63,87,6
+2018,deputado estadual,PSD,PTB,60,30,64,24,-2
+2018,deputado estadual,PSD,PV,60,28,66,17,-5
+2018,deputado estadual,PSD,SOLIDARIEDADE,60,29,65,22,-2
+2018,deputado estadual,PSDB,PSL,73,72,100,54,9
+2018,deputado estadual,PSDB,PSOL,73,16,76,15,2
+2018,deputado estadual,PSDB,PT,73,84,81,84,8
+2018,deputado estadual,PSDB,PTB,73,30,77,27,1
+2018,deputado estadual,PSDB,PV,73,28,77,19,-5
+2018,deputado estadual,PSDB,SOLIDARIEDADE,73,29,80,24,2
+2018,deputado estadual,PSL,PSOL,72,16,72,23,7
+2018,deputado estadual,PSL,PT,72,84,60,107,11
+2018,deputado estadual,PSL,PTB,72,30,67,39,4
+2018,deputado estadual,PSL,PV,72,28,73,23,-4
+2018,deputado estadual,PSL,SOLIDARIEDADE,72,29,68,36,3
+2018,deputado estadual,PSOL,PT,16,84,13,91,4
+2018,deputado estadual,PSOL,PTB,16,30,18,28,0
+2018,deputado estadual,PSOL,PV,16,28,17,18,-9
+2018,deputado estadual,PSOL,SOLIDARIEDADE,16,29,19,27,1
+2018,deputado estadual,PT,PTB,84,30,84,32,2
+2018,deputado estadual,PT,PV,84,28,90,19,-3
+2018,deputado estadual,PT,SOLIDARIEDADE,84,29,95,22,4
+2018,deputado estadual,PTB,PV,30,28,29,21,-8
+2018,deputado estadual,PTB,SOLIDARIEDADE,30,29,31,24,-4
+2018,deputado estadual,PV,SOLIDARIEDADE,28,29,25,25,-7
+2022,deputado federal,AVANTE,CIDADANIA,7,5,9,5,2
+2022,deputado federal,AVANTE,MDB,7,41,7,45,4
+2022,deputado federal,AVANTE,NOVO,7,3,8,3,1
+2022,deputado federal,AVANTE,PATRIOTA,7,4,9,5,3
+2022,deputado federal,AVANTE,PC do B,7,7,7,5,-2
+2022,deputado federal,AVANTE,PDT,7,16,8,17,2
+2022,deputado federal,AVANTE,PL,7,98,8,100,3
+2022,deputado federal,AVANTE,PODE,7,14,8,16,3
+2022,deputado federal,AVANTE,PP,7,47,6,51,3
+2022,deputado federal,AVANTE,PSB,7,15,7,17,2
+2022,deputado federal,AVANTE,PSC,7,6,8,7,2
+2022,deputado federal,AVANTE,PSD,7,42,7,48,6
+2022,deputado federal,AVANTE,PSDB,7,13,7,14,1
+2022,deputado federal,AVANTE,PSOL,7,13,7,14,1
+2022,deputado federal,AVANTE,PT,7,69,6,73,3
+2022,deputado federal,AVANTE,PTB,7,1,7,3,2
+2022,deputado federal,AVANTE,REPUBLICANOS,7,40,7,47,7
+2022,deputado federal,AVANTE,SOLIDARIEDADE,7,4,8,5,2
+2022,deputado federal,AVANTE,UNIÃO,7,57,8,61,5
+2022,deputado federal,CIDADANIA,MDB,5,41,6,44,4
+2022,deputado federal,CIDADANIA,NOVO,5,3,5,3,0
+2022,deputado federal,CIDADANIA,PATRIOTA,5,4,4,4,-1
+2022,deputado federal,CIDADANIA,PC do B,5,7,5,3,-4
+2022,deputado federal,CIDADANIA,PDT,5,16,5,17,1
+2022,deputado federal,CIDADANIA,PL,5,98,8,99,4
+2022,deputado federal,CIDADANIA,PODE,5,14,7,14,2
+2022,deputado federal,CIDADANIA,PP,5,47,6,49,3
+2022,deputado federal,CIDADANIA,PSB,5,15,7,17,4
+2022,deputado federal,CIDADANIA,PSC,5,6,3,6,-2
+2022,deputado federal,CIDADANIA,PSD,5,42,5,45,3
+2022,deputado federal,CIDADANIA,PSDB,5,13,5,13,0
+2022,deputado federal,CIDADANIA,PSOL,5,13,6,12,0
+2022,deputado federal,CIDADANIA,PT,5,69,6,71,3
+2022,deputado federal,CIDADANIA,PTB,5,1,4,3,1
+2022,deputado federal,CIDADANIA,REPUBLICANOS,5,40,7,43,5
+2022,deputado federal,CIDADANIA,SOLIDARIEDADE,5,4,4,5,0
+2022,deputado federal,CIDADANIA,UNIÃO,5,57,7,59,4
+2022,deputado federal,MDB,NOVO,41,3,44,4,4
+2022,deputado federal,MDB,PATRIOTA,41,4,44,4,3
+2022,deputado federal,MDB,PC do B,41,7,45,6,3
+2022,deputado federal,MDB,PDT,41,16,51,14,8
+2022,deputado federal,MDB,PL,41,98,51,96,8
+2022,deputado federal,MDB,PODE,41,14,50,14,9
+2022,deputado federal,MDB,PP,41,47,48,53,13
+2022,deputado federal,MDB,PSB,41,15,48,20,12
+2022,deputado federal,MDB,PSC,41,6,46,8,7
+2022,deputado federal,MDB,PSD,41,42,50,45,12
+2022,deputado federal,MDB,PSDB,41,13,48,15,9
+2022,deputado federal,MDB,PSOL,41,13,46,14,6
+2022,deputado federal,MDB,PT,41,69,49,75,14
+2022,deputado federal,MDB,PTB,41,1,45,5,8
+2022,deputado federal,MDB,REPUBLICANOS,41,40,52,42,13
+2022,deputado federal,MDB,SOLIDARIEDADE,41,4,44,6,5
+2022,deputado federal,MDB,UNIÃO,41,57,52,58,12
+2022,deputado federal,NOVO,PATRIOTA,3,4,4,4,1
+2022,deputado federal,NOVO,PC do B,3,7,5,4,-1
+2022,deputado federal,NOVO,PDT,3,16,3,17,1
+2022,deputado federal,NOVO,PL,3,98,5,100,4
+2022,deputado federal,NOVO,PODE,3,14,5,16,4
+2022,deputado federal,NOVO,PP,3,47,4,52,6
+2022,deputado federal,NOVO,PSB,3,15,4,17,3
+2022,deputado federal,NOVO,PSC,3,6,5,6,2
+2022,deputado federal,NOVO,PSD,3,42,4,45,4
+2022,deputado federal,NOVO,PSDB,3,13,4,14,2
+2022,deputado federal,NOVO,PSOL,3,13,6,13,3
+2022,deputado federal,NOVO,PT,3,69,4,72,4
+2022,deputado federal,NOVO,PTB,3,1,4,3,3
+2022,deputado federal,NOVO,REPUBLICANOS,3,40,4,42,3
+2022,deputado federal,NOVO,SOLIDARIEDADE,3,4,3,5,1
+2022,deputado federal,NOVO,UNIÃO,3,57,4,59,3
+2022,deputado federal,PATRIOTA,PC do B,4,7,4,4,-3
+2022,deputado federal,PATRIOTA,PDT,4,16,4,19,3
+2022,deputado federal,PATRIOTA,PL,4,98,4,101,3
+2022,deputado federal,PATRIOTA,PODE,4,14,4,17,3
+2022,deputado federal,PATRIOTA,PP,4,47,4,50,3
+2022,deputado federal,PATRIOTA,PSB,4,15,5,16,2
+2022,deputado federal,PATRIOTA,PSC,4,6,4,8,2
+2022,deputado federal,PATRIOTA,PSD,4,42,4,49,7
+2022,deputado federal,PATRIOTA,PSDB,4,13,4,15,2
+2022,deputado federal,PATRIOTA,PSOL,4,13,4,13,0
+2022,deputado federal,PATRIOTA,PT,4,69,4,71,2
+2022,deputado federal,PATRIOTA,PTB,4,1,4,4,3
+2022,deputado federal,PATRIOTA,REPUBLICANOS,4,40,4,45,5
+2022,deputado federal,PATRIOTA,SOLIDARIEDADE,4,4,4,5,1
+2022,deputado federal,PATRIOTA,UNIÃO,4,57,4,61,4
+2022,deputado federal,PC do B,PDT,7,16,8,14,-1
+2022,deputado federal,PC do B,PL,7,98,8,98,1
+2022,deputado federal,PC do B,PODE,7,14,7,15,1
+2022,deputado federal,PC do B,PP,7,47,7,49,2
+2022,deputado federal,PC do B,PSB,7,15,7,14,-1
+2022,deputado federal,PC do B,PSC,7,6,6,5,-2
+2022,deputado federal,PC do B,PSD,7,42,6,43,0
+2022,deputado federal,PC do B,PSDB,7,13,7,12,-1
+2022,deputado federal,PC do B,PSOL,7,13,6,12,-2
+2022,deputado federal,PC do B,PT,7,69,7,69,0
+2022,deputado federal,PC do B,PTB,7,1,6,3,1
+2022,deputado federal,PC do B,REPUBLICANOS,7,40,8,43,4
+2022,deputado federal,PC do B,SOLIDARIEDADE,7,4,4,4,-3
+2022,deputado federal,PC do B,UNIÃO,7,57,6,59,1
+2022,deputado federal,PDT,PL,16,98,23,99,8
+2022,deputado federal,PDT,PODE,16,14,17,20,7
+2022,deputado federal,PDT,PP,16,47,17,56,10
+2022,deputado federal,PDT,PSB,16,15,18,20,7
+2022,deputado federal,PDT,PSC,16,6,19,8,5
+2022,deputado federal,PDT,PSD,16,42,15,49,6
+2022,deputado federal,PDT,PSDB,16,13,19,17,7
+2022,deputado federal,PDT,PSOL,16,13,18,14,3
+2022,deputado federal,PDT,PT,16,69,18,75,8
+2022,deputado federal,PDT,PTB,16,1,16,8,7
+2022,deputado federal,PDT,REPUBLICANOS,16,40,20,46,10
+2022,deputado federal,PDT,SOLIDARIEDADE,16,4,17,7,4
+2022,deputado federal,PDT,UNIÃO,16,57,20,61,8
+2022,deputado federal,PL,PODE,98,14,102,17,7
+2022,deputado federal,PL,PP,98,47,97,59,11
+2022,deputado federal,PL,PSB,98,15,97,20,4
+2022,deputado federal,PL,PSC,98,6,100,9,5
+2022,deputado federal,PL,PSD,98,42,95,52,7
+2022,deputado federal,PL,PSDB,98,13,94,22,5
+2022,deputado federal,PL,PSOL,98,13,99,15,3
+2022,deputado federal,PL,PT,98,69,97,79,9
+2022,deputado federal,PL,PTB,98,1,100,6,7
+2022,deputado federal,PL,REPUBLICANOS,98,40,97,49,8
+2022,deputado federal,PL,SOLIDARIEDADE,98,4,100,7,5
+2022,deputado federal,PL,UNIÃO,98,57,102,60,7
+2022,deputado federal,PODE,PP,14,47,16,56,11
+2022,deputado federal,PODE,PSB,14,15,19,15,5
+2022,deputado federal,PODE,PSC,14,6,20,7,7
+2022,deputado federal,PODE,PSD,14,42,15,50,9
+2022,deputado federal,PODE,PSDB,14,13,18,17,8
+2022,deputado federal,PODE,PSOL,14,13,17,14,4
+2022,deputado federal,PODE,PT,14,69,15,75,7
+2022,deputado federal,PODE,PTB,14,1,16,6,7
+2022,deputado federal,PODE,REPUBLICANOS,14,40,17,47,10
+2022,deputado federal,PODE,SOLIDARIEDADE,14,4,16,5,3
+2022,deputado federal,PODE,UNIÃO,14,57,16,62,7
+2022,deputado federal,PP,PSB,47,15,55,17,10
+2022,deputado federal,PP,PSC,47,6,51,9,7
+2022,deputado federal,PP,PSD,47,42,54,46,11
+2022,deputado federal,PP,PSDB,47,13,52,18,10
+2022,deputado federal,PP,PSOL,47,13,54,13,7
+2022,deputado federal,PP,PT,47,69,52,74,10
+2022,deputado federal,PP,PTB,47,1,52,6,10
+2022,deputado federal,PP,REPUBLICANOS,47,40,56,48,17
+2022,deputado federal,PP,SOLIDARIEDADE,47,4,50,9,8
+2022,deputado federal,PP,UNIÃO,47,57,55,59,10
+2022,deputado federal,PSB,PSC,15,6,20,7,6
+2022,deputado federal,PSB,PSD,15,42,21,49,13
+2022,deputado federal,PSB,PSDB,15,13,18,17,7
+2022,deputado federal,PSB,PSOL,15,13,19,13,4
+2022,deputado federal,PSB,PT,15,69,23,73,12
+2022,deputado federal,PSB,PTB,15,1,17,8,9
+2022,deputado federal,PSB,REPUBLICANOS,15,40,22,47,14
+2022,deputado federal,PSB,SOLIDARIEDADE,15,4,15,8,4
+2022,deputado federal,PSB,UNIÃO,15,57,21,61,10
+2022,deputado federal,PSC,PSD,6,42,7,48,7
+2022,deputado federal,PSC,PSDB,6,13,8,15,4
+2022,deputado federal,PSC,PSOL,6,13,7,13,1
+2022,deputado federal,PSC,PT,6,69,8,74,7
+2022,deputado federal,PSC,PTB,6,1,9,5,7
+2022,deputado federal,PSC,REPUBLICANOS,6,40,8,45,7
+2022,deputado federal,PSC,SOLIDARIEDADE,6,4,7,6,3
+2022,deputado federal,PSC,UNIÃO,6,57,10,59,6
+2022,deputado federal,PSD,PSDB,42,13,46,15,6
+2022,deputado federal,PSD,PSOL,42,13,46,12,3
+2022,deputado federal,PSD,PT,42,69,45,78,12
+2022,deputado federal,PSD,PTB,42,1,46,5,8
+2022,deputado federal,PSD,REPUBLICANOS,42,40,48,45,11
+2022,deputado federal,PSD,SOLIDARIEDADE,42,4,44,7,5
+2022,deputado federal,PSD,UNIÃO,42,57,53,57,11
+2022,deputado federal,PSDB,PSOL,13,13,18,12,4
+2022,deputado federal,PSDB,PT,13,69,17,72,7
+2022,deputado federal,PSDB,PTB,13,1,16,5,7
+2022,deputado federal,PSDB,REPUBLICANOS,13,40,17,45,9
+2022,deputado federal,PSDB,SOLIDARIEDADE,13,4,12,7,2
+2022,deputado federal,PSDB,UNIÃO,13,57,17,59,6
+2022,deputado federal,PSOL,PT,13,69,14,71,3
+2022,deputado federal,PSOL,PTB,13,1,12,6,4
+2022,deputado federal,PSOL,REPUBLICANOS,13,40,12,48,7
+2022,deputado federal,PSOL,SOLIDARIEDADE,13,4,13,5,1
+2022,deputado federal,PSOL,UNIÃO,13,57,13,61,4
+2022,deputado federal,PT,PTB,69,1,71,6,7
+2022,deputado federal,PT,REPUBLICANOS,69,40,76,45,12
+2022,deputado federal,PT,SOLIDARIEDADE,69,4,70,7,4
+2022,deputado federal,PT,UNIÃO,69,57,77,60,11
+2022,deputado federal,PTB,REPUBLICANOS,1,40,5,47,11
+2022,deputado federal,PTB,SOLIDARIEDADE,1,4,3,6,4
+2022,deputado federal,PTB,UNIÃO,1,57,5,59,6
+2022,deputado federal,REPUBLICANOS,SOLIDARIEDADE,40,4,42,9,7
+2022,deputado federal,REPUBLICANOS,UNIÃO,40,57,50,56,9
+2022,deputado federal,SOLIDARIEDADE,UNIÃO,4,57,8,59,6
+2022,deputado estadual,AVANTE,CIDADANIA,13,17,10,17,-3
+2022,deputado estadual,AVANTE,MDB,13,91,9,100,5
+2022,deputado estadual,AVANTE,NOVO,13,5,13,5,0
+2022,deputado estadual,AVANTE,PATRIOTA,13,17,13,18,1
+2022,deputado estadual,AVANTE,PC do B,13,18,12,16,-3
+2022,deputado estadual,AVANTE,PDT,13,44,13,50,6
+2022,deputado estadual,AVANTE,PL,13,122,13,125,3
+2022,deputado estadual,AVANTE,PODE,13,28,14,30,3
+2022,deputado estadual,AVANTE,PP,13,84,10,89,2
+2022,deputado estadual,AVANTE,PSB,13,54,13,59,5
+2022,deputado estadual,AVANTE,PSC,13,20,13,23,3
+2022,deputado estadual,AVANTE,PSD,13,77,12,82,4
+2022,deputado estadual,AVANTE,PSDB,13,56,12,59,2
+2022,deputado estadual,AVANTE,PSOL,13,20,12,22,1
+2022,deputado estadual,AVANTE,PT,13,114,12,124,9
+2022,deputado estadual,AVANTE,PTB,13,8,14,10,3
+2022,deputado estadual,AVANTE,PV,13,20,10,18,-5
+2022,deputado estadual,AVANTE,REPUBLICANOS,13,75,10,81,3
+2022,deputado estadual,AVANTE,SOLIDARIEDADE,13,21,15,20,1
+2022,deputado estadual,AVANTE,UNIÃO,13,98,10,106,5
+2022,deputado estadual,CIDADANIA,MDB,17,91,17,92,1
+2022,deputado estadual,CIDADANIA,NOVO,17,5,14,6,-2
+2022,deputado estadual,CIDADANIA,PATRIOTA,17,17,15,20,1
+2022,deputado estadual,CIDADANIA,PC do B,17,18,12,12,-11
+2022,deputado estadual,CIDADANIA,PDT,17,44,13,48,0
+2022,deputado estadual,CIDADANIA,PL,17,122,19,122,2
+2022,deputado estadual,CIDADANIA,PODE,17,28,18,26,-1
+2022,deputado estadual,CIDADANIA,PP,17,84,18,83,0
+2022,deputado estadual,CIDADANIA,PSB,17,54,21,55,5
+2022,deputado estadual,CIDADANIA,PSC,17,20,19,18,0
+2022,deputado estadual,CIDADANIA,PSD,17,77,15,80,1
+2022,deputado estadual,CIDADANIA,PSDB,17,56,17,56,0
+2022,deputado estadual,CIDADANIA,PSOL,17,20,14,19,-4
+2022,deputado estadual,CIDADANIA,PT,17,114,18,119,6
+2022,deputado estadual,CIDADANIA,PTB,17,8,16,5,-4
+2022,deputado estadual,CIDADANIA,PV,17,20,11,13,-13
+2022,deputado estadual,CIDADANIA,REPUBLICANOS,17,75,16,75,-1
+2022,deputado estadual,CIDADANIA,SOLIDARIEDADE,17,21,18,20,0
+2022,deputado estadual,CIDADANIA,UNIÃO,17,98,18,100,3
+2022,deputado estadual,MDB,NOVO,91,5,97,5,6
+2022,deputado estadual,MDB,PATRIOTA,91,17,97,18,7
+2022,deputado estadual,MDB,PC do B,91,18,94,17,2
+2022,deputado estadual,MDB,PDT,91,44,102,44,11
+2022,deputado estadual,MDB,PL,91,122,103,120,10
+2022,deputado estadual,MDB,PODE,91,28,99,28,8
+2022,deputado estadual,MDB,PP,91,84,95,88,8
+2022,deputado estadual,MDB,PSB,91,54,98,56,9
+2022,deputado estadual,MDB,PSC,91,20,102,17,8
+2022,deputado estadual,MDB,PSD,91,77,101,78,11
+2022,deputado estadual,MDB,PSDB,91,56,102,57,12
+2022,deputado estadual,MDB,PSOL,91,20,96,18,3
+2022,deputado estadual,MDB,PT,91,114,104,120,19
+2022,deputado estadual,MDB,PTB,91,8,99,7,7
+2022,deputado estadual,MDB,PV,91,20,96,16,1
+2022,deputado estadual,MDB,REPUBLICANOS,91,75,100,77,11
+2022,deputado estadual,MDB,SOLIDARIEDADE,91,21,98,21,7
+2022,deputado estadual,MDB,UNIÃO,91,98,99,101,11
+2022,deputado estadual,NOVO,PATRIOTA,5,17,5,21,4
+2022,deputado estadual,NOVO,PC do B,5,18,4,14,-5
+2022,deputado estadual,NOVO,PDT,5,44,7,48,6
+2022,deputado estadual,NOVO,PL,5,122,5,124,2
+2022,deputado estadual,NOVO,PODE,5,28,4,33,4
+2022,deputado estadual,NOVO,PP,5,84,5,87,3
+2022,deputado estadual,NOVO,PSB,5,54,6,56,3
+2022,deputado estadual,NOVO,PSC,5,20,6,21,2
+2022,deputado estadual,NOVO,PSD,5,77,5,81,4
+2022,deputado estadual,NOVO,PSDB,5,56,6,57,2
+2022,deputado estadual,NOVO,PSOL,5,20,6,21,2
+2022,deputado estadual,NOVO,PT,5,114,4,123,8
+2022,deputado estadual,NOVO,PTB,5,8,6,10,3
+2022,deputado estadual,NOVO,PV,5,20,7,12,-6
+2022,deputado estadual,NOVO,REPUBLICANOS,5,75,5,80,5
+2022,deputado estadual,NOVO,SOLIDARIEDADE,5,21,4,24,2
+2022,deputado estadual,NOVO,UNIÃO,5,98,5,102,4
+2022,deputado estadual,PATRIOTA,PC do B,17,18,19,14,-2
+2022,deputado estadual,PATRIOTA,PDT,17,44,20,46,5
+2022,deputado estadual,PATRIOTA,PL,17,122,19,128,8
+2022,deputado estadual,PATRIOTA,PODE,17,28,19,31,5
+2022,deputado estadual,PATRIOTA,PP,17,84,16,92,7
+2022,deputado estadual,PATRIOTA,PSB,17,54,17,61,7
+2022,deputado estadual,PATRIOTA,PSC,17,20,21,21,5
+2022,deputado estadual,PATRIOTA,PSD,17,77,18,82,6
+2022,deputado estadual,PATRIOTA,PSDB,17,56,17,63,7
+2022,deputado estadual,PATRIOTA,PSOL,17,20,18,21,2
+2022,deputado estadual,PATRIOTA,PT,17,114,21,121,11
+2022,deputado estadual,PATRIOTA,PTB,17,8,17,9,1
+2022,deputado estadual,PATRIOTA,PV,17,20,16,15,-6
+2022,deputado estadual,PATRIOTA,REPUBLICANOS,17,75,17,84,9
+2022,deputado estadual,PATRIOTA,SOLIDARIEDADE,17,21,19,25,6
+2022,deputado estadual,PATRIOTA,UNIÃO,17,98,18,107,10
+2022,deputado estadual,PC do B,PDT,18,44,17,43,-2
+2022,deputado estadual,PC do B,PL,18,122,18,120,-2
+2022,deputado estadual,PC do B,PODE,18,28,16,27,-3
+2022,deputado estadual,PC do B,PP,18,84,13,88,-1
+2022,deputado estadual,PC do B,PSB,18,54,11,62,1
+2022,deputado estadual,PC do B,PSC,18,20,16,20,-2
+2022,deputado estadual,PC do B,PSD,18,77,17,79,1
+2022,deputado estadual,PC do B,PSDB,18,56,15,56,-3
+2022,deputado estadual,PC do B,PSOL,18,20,17,17,-4
+2022,deputado estadual,PC do B,PT,18,114,19,118,5
+2022,deputado estadual,PC do B,PTB,18,8,14,8,-4
+2022,deputado estadual,PC do B,PV,18,20,11,14,-13
+2022,deputado estadual,PC do B,REPUBLICANOS,18,75,15,76,-2
+2022,deputado estadual,PC do B,SOLIDARIEDADE,18,21,18,20,-1
+2022,deputado estadual,PC do B,UNIÃO,18,98,14,103,1
+2022,deputado estadual,PDT,PL,44,122,54,122,10
+2022,deputado estadual,PDT,PODE,44,28,51,30,9
+2022,deputado estadual,PDT,PP,44,84,46,91,9
+2022,deputado estadual,PDT,PSB,44,54,48,58,8
+2022,deputado estadual,PDT,PSC,44,20,51,20,7
+2022,deputado estadual,PDT,PSD,44,77,51,80,10
+2022,deputado estadual,PDT,PSDB,44,56,46,64,10
+2022,deputado estadual,PDT,PSOL,44,20,47,21,4
+2022,deputado estadual,PDT,PT,44,114,51,121,14
+2022,deputado estadual,PDT,PTB,44,8,50,9,7
+2022,deputado estadual,PDT,PV,44,20,44,17,-3
+2022,deputado estadual,PDT,REPUBLICANOS,44,75,51,78,10
+2022,deputado estadual,PDT,SOLIDARIEDADE,44,21,51,22,8
+2022,deputado estadual,PDT,UNIÃO,44,98,50,102,10
+2022,deputado estadual,PL,PODE,122,28,129,31,10
+2022,deputado estadual,PL,PP,122,84,120,99,13
+2022,deputado estadual,PL,PSB,122,54,125,60,9
+2022,deputado estadual,PL,PSC,122,20,126,20,4
+2022,deputado estadual,PL,PSD,122,77,124,85,10
+2022,deputado estadual,PL,PSDB,122,56,118,71,11
+2022,deputado estadual,PL,PSOL,122,20,126,22,6
+2022,deputado estadual,PL,PT,122,114,127,126,17
+2022,deputado estadual,PL,PTB,122,8,122,11,3
+2022,deputado estadual,PL,PV,122,20,118,21,-3
+2022,deputado estadual,PL,REPUBLICANOS,122,75,120,87,10
+2022,deputado estadual,PL,SOLIDARIEDADE,122,21,128,23,8
+2022,deputado estadual,PL,UNIÃO,122,98,117,111,8
+2022,deputado estadual,PODE,PP,28,84,25,97,10
+2022,deputado estadual,PODE,PSB,28,54,31,60,9
+2022,deputado estadual,PODE,PSC,28,20,33,21,6
+2022,deputado estadual,PODE,PSD,28,77,28,83,6
+2022,deputado estadual,PODE,PSDB,28,56,26,64,6
+2022,deputado estadual,PODE,PSOL,28,20,31,20,3
+2022,deputado estadual,PODE,PT,28,114,31,124,13
+2022,deputado estadual,PODE,PTB,28,8,32,10,6
+2022,deputado estadual,PODE,PV,28,20,31,12,-5
+2022,deputado estadual,PODE,REPUBLICANOS,28,75,33,80,10
+2022,deputado estadual,PODE,SOLIDARIEDADE,28,21,31,23,5
+2022,deputado estadual,PODE,UNIÃO,28,98,24,109,7
+2022,deputado estadual,PP,PSB,84,54,92,56,10
+2022,deputado estadual,PP,PSC,84,20,95,15,6
+2022,deputado estadual,PP,PSD,84,77,87,85,11
+2022,deputado estadual,PP,PSDB,84,56,87,61,8
+2022,deputado estadual,PP,PSOL,84,20,92,17,5
+2022,deputado estadual,PP,PT,84,114,94,119,15
+2022,deputado estadual,PP,PTB,84,8,91,8,7
+2022,deputado estadual,PP,PV,84,20,86,17,-1
+2022,deputado estadual,PP,REPUBLICANOS,84,75,92,78,11
+2022,deputado estadual,PP,SOLIDARIEDADE,84,21,98,15,8
+2022,deputado estadual,PP,UNIÃO,84,98,88,105,11
+2022,deputado estadual,PSB,PSC,54,20,62,20,8
+2022,deputado estadual,PSB,PSD,54,77,56,86,11
+2022,deputado estadual,PSB,PSDB,54,56,57,63,10
+2022,deputado estadual,PSB,PSOL,54,20,61,19,6
+2022,deputado estadual,PSB,PT,54,114,64,119,15
+2022,deputado estadual,PSB,PTB,54,8,60,8,6
+2022,deputado estadual,PSB,PV,54,20,56,16,-2
+2022,deputado estadual,PSB,REPUBLICANOS,54,75,56,84,11
+2022,deputado estadual,PSB,SOLIDARIEDADE,54,21,61,23,9
+2022,deputado estadual,PSB,UNIÃO,54,98,54,111,13
+2022,deputado estadual,PSC,PSD,20,77,18,84,5
+2022,deputado estadual,PSC,PSDB,20,56,18,65,7
+2022,deputado estadual,PSC,PSOL,20,20,20,23,3
+2022,deputado estadual,PSC,PT,20,114,18,128,12
+2022,deputado estadual,PSC,PTB,20,8,23,9,4
+2022,deputado estadual,PSC,PV,20,20,18,15,-7
+2022,deputado estadual,PSC,REPUBLICANOS,20,75,16,86,7
+2022,deputado estadual,PSC,SOLIDARIEDADE,20,21,24,22,5
+2022,deputado estadual,PSC,UNIÃO,20,98,17,107,6
+2022,deputado estadual,PSD,PSDB,77,56,81,63,11
+2022,deputado estadual,PSD,PSOL,77,20,84,18,5
+2022,deputado estadual,PSD,PT,77,114,85,124,18
+2022,deputado estadual,PSD,PTB,77,8,84,9,8
+2022,deputado estadual,PSD,PV,77,20,78,17,-2
+2022,deputado estadual,PSD,REPUBLICANOS,77,75,82,82,12
+2022,deputado estadual,PSD,SOLIDARIEDADE,77,21,83,24,9
+2022,deputado estadual,PSD,UNIÃO,77,98,79,110,14
+2022,deputado estadual,PSDB,PSOL,56,20,61,19,4
+2022,deputado estadual,PSDB,PT,56,114,67,121,18
+2022,deputado estadual,PSDB,PTB,56,8,64,7,7
+2022,deputado estadual,PSDB,PV,56,20,58,14,-4
+2022,deputado estadual,PSDB,REPUBLICANOS,56,75,63,78,10
+2022,deputado estadual,PSDB,SOLIDARIEDADE,56,21,66,19,8
+2022,deputado estadual,PSDB,UNIÃO,56,98,60,104,10
+2022,deputado estadual,PSOL,PT,20,114,20,125,11
+2022,deputado estadual,PSOL,PTB,20,8,20,8,0
+2022,deputado estadual,PSOL,PV,20,20,17,16,-7
+2022,deputado estadual,PSOL,REPUBLICANOS,20,75,19,81,5
+2022,deputado estadual,PSOL,SOLIDARIEDADE,20,21,20,25,4
+2022,deputado estadual,PSOL,UNIÃO,20,98,18,106,6
+2022,deputado estadual,PT,PTB,114,8,126,8,12
+2022,deputado estadual,PT,PV,114,20,114,20,0
+2022,deputado estadual,PT,REPUBLICANOS,114,75,121,84,16
+2022,deputado estadual,PT,SOLIDARIEDADE,114,21,125,22,12
+2022,deputado estadual,PT,UNIÃO,114,98,118,111,17
+2022,deputado estadual,PTB,PV,8,20,9,16,-3
+2022,deputado estadual,PTB,REPUBLICANOS,8,75,10,80,7
+2022,deputado estadual,PTB,SOLIDARIEDADE,8,21,10,23,4
+2022,deputado estadual,PTB,UNIÃO,8,98,8,103,5
+2022,deputado estadual,PV,REPUBLICANOS,20,75,15,79,-1
+2022,deputado estadual,PV,SOLIDARIEDADE,20,21,17,20,-4
+2022,deputado estadual,PV,UNIÃO,20,98,16,103,1
+2022,deputado estadual,REPUBLICANOS,SOLIDARIEDADE,75,21,83,21,8
+2022,deputado estadual,REPUBLICANOS,UNIÃO,75,98,81,103,11
+2022,deputado estadual,SOLIDARIEDADE,UNIÃO,21,98,22,106,9
