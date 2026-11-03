@@ -12,6 +12,8 @@ import matplotlib.dates as mdates  # noqa: E402
 import matplotlib.pyplot as plt  # noqa: E402
 import pandas as pd  # noqa: E402
 
+from . import licenca  # noqa: E402
+
 COR_A = "#e34948"   # vermelho (Lula / PT)
 COR_B = "#2a78d6"   # azul (Flávio Bolsonaro / PL)
 TINTA = "#0b0b0b"
@@ -240,7 +242,7 @@ começando pelos mais próximos (mesma UF e porte de cidade) e recorrendo à UF,
 poucos dados. As seções ainda não apuradas de cada município seguem a matriz estimada, misturada com o
 resultado parcial do próprio município. A incerteza vem de milhares de simulações, que incluem a incerteza dos
 parâmetros, choques por estado e variação entre municípios.</p>
-</body></html>"""
+{licenca.rodape_isolado()}</body></html>"""
     with open(caminho, "w", encoding="utf-8") as f:
         f.write(doc)
 

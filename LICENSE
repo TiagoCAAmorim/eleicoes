@@ -1,0 +1,51 @@
+Eleições em dados — licenças
+Copyright (c) 2026 Tiago Amorim (https://www.linkedin.com/in/tiago-amorim-eng/)
+
+Este repositório usa duas licenças abertas, conhecidas e permissivas:
+
+  1. CÓDIGO (scripts/, eleicoes/, tests/, templates e demais arquivos de programa): licença MIT, abaixo.
+  2. CONTEÚDO (textos, gráficos, imagens, tabelas, previsões e demais resultados e análises publicados no site e
+     em resultados/ e docs/): Creative Commons Atribuição 4.0 Internacional (CC BY 4.0).
+     Texto legal completo: https://creativecommons.org/licenses/by/4.0/legalcode.pt
+     Resumo: https://creativecommons.org/licenses/by/4.0/deed.pt
+
+Atribuição pedida (CC BY 4.0, item 3): ao usar resultados, gráficos ou textos, cite
+  "Tiago Amorim, Eleições em dados (https://tiagocaamorim.github.io/eleicoes_2026/), CC BY 4.0"
+e, se possível, inclua o link para o perfil https://www.linkedin.com/in/tiago-amorim-eng/ . Indique se fez alterações.
+
+Fora das duas licenças: os dados brutos de origem (Tribunal Superior Eleitoral, IBGE e outras fontes públicas, além de
+pesquisas de institutos) pertencem às suas fontes e seguem os termos delas. As previsões são estimativas estatísticas,
+não resultados oficiais; a fonte oficial dos resultados é o TSE (https://resultados.tse.jus.br/).
+
+======================================================================
+MIT License (código)
+======================================================================
+
+Copyright (c) 2026 Tiago Amorim
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+======================================================================
+CC BY 4.0 (conteúdo): isenção de garantias
+======================================================================
+
+Salvo se acordado de outra forma, o licenciante oferece o conteúdo "como está" e "conforme disponível", sem
+declarações ou garantias de qualquer tipo, expressas ou implícitas, incluindo precisão, adequação a uma finalidade
+específica ou ausência de erros; e, na máxima extensão permitida em lei, não se responsabiliza por quaisquer danos
+decorrentes do uso do conteúdo (ver seção 5 do texto legal da CC BY 4.0).
