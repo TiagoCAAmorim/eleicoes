@@ -51,6 +51,9 @@ def candidatos(ano, brutos, log):
     d = th.ler_zip(th.baixar(url, brutos), campos, lambda x: th.ordinaria(x[x["cargo"].str.strip().isin(PROP)]), log)
     d = _limpa(d.drop(columns=["tipo", "tipo_nome"], errors="ignore"))
     d = th._int(d, ["v_brutos", "v_validos"])
+    # em 2010 o SG_UE dos deputados vem com o código do município; a circunscrição deles é a UF
+    est = d["cargo"].isin(["6", "7", "8"])
+    d.loc[est, "ue"] = d.loc[est, "uf"]
     info = [c for c in ["cargo", "uf", "ue", "sq", "numero", "nome", "partido", "nr_partido", "sit_cand",
                         "detalhe_cand", "destinacao", "situacao"] + GRUPO if c in d]
     soma = [c for c in ["v_brutos", "v_validos"] if c in d]
@@ -72,6 +75,8 @@ def partidos(ano, brutos, log):
     num = [c for c in ["v_brutos", "v_validos", "leg_validos", "leg_brutos", "leg_total", "convertidos",
                        "anul_subjud"] if c in d]
     d = th._int(d, num)
+    est = d["cargo"].isin(["6", "7", "8"])
+    d.loc[est, "ue"] = d.loc[est, "uf"]
     chave = ["cargo", "uf", "ue", "nr_partido", "partido"]
     out = d.groupby(chave, as_index=False)[num].sum()
     out = out.merge(d.drop_duplicates(chave)[chave + [c for c in GRUPO if c in d]], on=chave)
