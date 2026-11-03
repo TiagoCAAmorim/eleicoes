@@ -1,0 +1,7266 @@
+{
+ "cidades": {
+  "12190": {
+   "uf": "pi",
+   "secoes": 1501,
+   "candidatos": {
+    "15": {
+     "nome": "DR PESSOA",
+     "votos": 142769,
+     "validos": 34.53,
+     "oficial_mun": 142769
+    },
+    "45": {
+     "nome": "KLEBER MONTEZUMA",
+     "votos": 110395,
+     "validos": 26.7,
+     "oficial_mun": 110395
+    },
+    "20": {
+     "nome": "GESSY FONSECA",
+     "votos": 50221,
+     "validos": 12.14,
+     "oficial_mun": 50221
+    },
+    "13": {
+     "nome": "FABIO NOVO",
+     "votos": 47573,
+     "validos": 11.5,
+     "oficial_mun": 47573
+    },
+    "22": {
+     "nome": "FABIO ABREU",
+     "votos": 29037,
+     "validos": 7.02,
+     "oficial_mun": 29037
+    },
+    "51": {
+     "nome": "MAJOR DIEGO MELO",
+     "votos": 12871,
+     "validos": 3.11,
+     "oficial_mun": 12871
+    },
+    "55": {
+     "nome": "SIMONE PEREIRA",
+     "votos": 8787,
+     "validos": 2.12,
+     "oficial_mun": 8787
+    },
+    "50": {
+     "nome": "LUCINEIDE BARROS",
+     "votos": 8283,
+     "validos": 2.0,
+     "oficial_mun": 8283
+    },
+    "90": {
+     "nome": "FÁBIO SÉRVIO",
+     "votos": 1944,
+     "validos": 0.47,
+     "oficial_mun": 1944
+    },
+    "23": {
+     "nome": "MARIO ROGERIO",
+     "votos": 775,
+     "validos": 0.19,
+     "oficial_mun": 775
+    },
+    "80": {
+     "nome": "PEDRO LAURENTINO",
+     "votos": 457,
+     "validos": 0.11,
+     "oficial_mun": 457
+    },
+    "16": {
+     "nome": "GERVÁSIO SANTOS",
+     "votos": 254,
+     "validos": 0.06,
+     "oficial_mun": 254
+    },
+    "29": {
+     "nome": "",
+     "votos": 156,
+     "validos": 0.04,
+     "oficial_mun": 0
+    }
+   }
+  },
+  "13730": {
+   "uf": "ce",
+   "secoes": 590,
+   "candidatos": {
+    "55": {
+     "nome": "NAUMI AMORIM",
+     "votos": 69262,
+     "validos": 40.93,
+     "oficial_mun": 69262
+    },
+    "90": {
+     "nome": "VITOR VALIM",
+     "votos": 47171,
+     "validos": 27.87,
+     "oficial_mun": 47171
+    },
+    "45": {
+     "nome": "EMILIA PESSOA",
+     "votos": 32492,
+     "validos": 19.2,
+     "oficial_mun": 32492
+    },
+    "13": {
+     "nome": "ELMANO DE FREITAS",
+     "votos": 13018,
+     "validos": 7.69,
+     "oficial_mun": 13018
+    },
+    "35": {
+     "nome": "SEBASTIÃO CONRADO",
+     "votos": 3497,
+     "validos": 2.07,
+     "oficial_mun": 3497
+    },
+    "50": {
+     "nome": "RODRIGO SANTAELLA",
+     "votos": 2224,
+     "validos": 1.31,
+     "oficial_mun": 2224
+    },
+    "33": {
+     "nome": "JOAO ARY",
+     "votos": 1023,
+     "validos": 0.6,
+     "oficial_mun": 1023
+    },
+    "65": {
+     "nome": "PAULO SÉRGIO CORDEIRO",
+     "votos": 542,
+     "validos": 0.32,
+     "oficial_mun": 542
+    }
+   }
+  },
+  "13897": {
+   "uf": "ce",
+   "secoes": 4573,
+   "candidatos": {
+    "12": {
+     "nome": "SARTO",
+     "votos": 457622,
+     "validos": 35.72,
+     "oficial_mun": 457622
+    },
+    "90": {
+     "nome": "CAPITÃO WAGNER",
+     "votos": 426803,
+     "validos": 33.32,
+     "oficial_mun": 426803
+    },
+    "13": {
+     "nome": "LUIZIANNE LINS",
+     "votos": 227470,
+     "validos": 17.76,
+     "oficial_mun": 227470
+    },
+    "77": {
+     "nome": "HEITOR FÉRRER",
+     "votos": 63199,
+     "validos": 4.93,
+     "oficial_mun": 63199
+    },
+    "43": {
+     "nome": "CELIO STUDART",
+     "votos": 45369,
+     "validos": 3.54,
+     "oficial_mun": 45369
+    },
+    "50": {
+     "nome": "RENATO ROSENO",
+     "votos": 34346,
+     "validos": 2.68,
+     "oficial_mun": 34346
+    },
+    "17": {
+     "nome": "HEITOR FREIRE",
+     "votos": 21210,
+     "validos": 1.66,
+     "oficial_mun": 21210
+    },
+    "65": {
+     "nome": "ANIZIO",
+     "votos": 2264,
+     "validos": 0.18,
+     "oficial_mun": 2264
+    },
+    "51": {
+     "nome": "SAMUEL BRAGA",
+     "votos": 1749,
+     "validos": 0.14,
+     "oficial_mun": 1749
+    },
+    "80": {
+     "nome": "PAULA COLARES",
+     "votos": 893,
+     "validos": 0.07,
+     "oficial_mun": 893
+    },
+    "29": {
+     "nome": "",
+     "votos": 154,
+     "validos": 0.01,
+     "oficial_mun": 0
+    }
+   }
+  },
+  "1392": {
+   "uf": "ac",
+   "secoes": 707,
+   "candidatos": {
+    "11": {
+     "nome": "TIÃO BOCALOM",
+     "votos": 87987,
+     "validos": 49.58,
+     "oficial_mun": 87987
+    },
+    "40": {
+     "nome": "SOCORRO NERI",
+     "votos": 40250,
+     "validos": 22.68,
+     "oficial_mun": 40250
+    },
+    "45": {
+     "nome": "MINORU KINPARA",
+     "votos": 25939,
+     "validos": 14.62,
+     "oficial_mun": 25939
+    },
+    "15": {
+     "nome": "ROBERTO DUARTE",
+     "votos": 12362,
+     "validos": 6.97,
+     "oficial_mun": 12362
+    },
+    "13": {
+     "nome": "DANIEL ZEN",
+     "votos": 7121,
+     "validos": 4.01,
+     "oficial_mun": 7121
+    },
+    "70": {
+     "nome": "JARBAS SOSTER",
+     "votos": 2294,
+     "validos": 1.29,
+     "oficial_mun": 2294
+    },
+    "20": {
+     "nome": "JAMYL ASFURY",
+     "votos": 1509,
+     "validos": 0.85,
+     "oficial_mun": 1509
+    }
+   }
+  },
+  "17612": {
+   "uf": "rn",
+   "secoes": 1249,
+   "candidatos": {
+    "45": {
+     "nome": "ALVARO DIAS",
+     "votos": 194764,
+     "validos": 56.58,
+     "oficial_mun": 194764
+    },
+    "13": {
+     "nome": "SENADOR JEAN",
+     "votos": 49494,
+     "validos": 14.38,
+     "oficial_mun": 49494
+    },
+    "17": {
+     "nome": "DELEGADO LEOCÁDIO",
+     "votos": 35181,
+     "validos": 10.22,
+     "oficial_mun": 35181
+    },
+    "77": {
+     "nome": "KELPS LIMA",
+     "votos": 20190,
+     "validos": 5.87,
+     "oficial_mun": 20190
+    },
+    "40": {
+     "nome": "HERMANO MORAIS",
+     "votos": 11626,
+     "validos": 3.38,
+     "oficial_mun": 11626
+    },
+    "28": {
+     "nome": "CORONEL HELIO OLIVEIRA",
+     "votos": 9398,
+     "validos": 2.73,
+     "oficial_mun": 9398
+    },
+    "20": {
+     "nome": "CORONEL AZEVEDO",
+     "votos": 6530,
+     "validos": 1.9,
+     "oficial_mun": 6530
+    },
+    "19": {
+     "nome": "AFRÂNIO MIRANDA",
+     "votos": 5656,
+     "validos": 1.64,
+     "oficial_mun": 5656
+    },
+    "43": {
+     "nome": "CARLOS ALBERTO (BETO)",
+     "votos": 4743,
+     "validos": 1.38,
+     "oficial_mun": 4743
+    },
+    "50": {
+     "nome": "NEVINHA VALENTIM",
+     "votos": 3959,
+     "validos": 1.15,
+     "oficial_mun": 3959
+    },
+    "65": {
+     "nome": "FERNANDO FREITAS",
+     "votos": 1428,
+     "validos": 0.41,
+     "oficial_mun": 1428
+    },
+    "16": {
+     "nome": "ROSÁLIA FERNANDES",
+     "votos": 880,
+     "validos": 0.26,
+     "oficial_mun": 880
+    },
+    "27": {
+     "nome": "JAIDY OLIVER",
+     "votos": 373,
+     "validos": 0.11,
+     "oficial_mun": 373
+    }
+   }
+  },
+  "19810": {
+   "uf": "pb",
+   "secoes": 824,
+   "candidatos": {
+    "55": {
+     "nome": "BRUNO CUNHA LIMA",
+     "votos": 111526,
+     "validos": 54.55,
+     "oficial_mun": 111526
+    },
+    "19": {
+     "nome": "ANA CLÁUDIA",
+     "votos": 44313,
+     "validos": 21.67,
+     "oficial_mun": 44313
+    },
+    "65": {
+     "nome": "INÁCIO FALCÃO",
+     "votos": 33415,
+     "validos": 16.34,
+     "oficial_mun": 33415
+    },
+    "17": {
+     "nome": "ARTUR BOLINHA",
+     "votos": 9847,
+     "validos": 4.82,
+     "oficial_mun": 9847
+    },
+    "50": {
+     "nome": "OLÍMPIO ROCHA",
+     "votos": 5241,
+     "validos": 2.56,
+     "oficial_mun": 5241
+    },
+    "51": {
+     "nome": "",
+     "votos": 102,
+     "validos": 0.05,
+     "oficial_mun": 0
+    }
+   }
+  },
+  "20516": {
+   "uf": "pb",
+   "secoes": 1226,
+   "candidatos": {
+    "11": {
+     "nome": "CICERO LUCENA",
+     "votos": 75610,
+     "validos": 20.72,
+     "oficial_mun": 75610
+    },
+    "15": {
+     "nome": "NILVAN FERREIRA",
+     "votos": 60615,
+     "validos": 16.61,
+     "oficial_mun": 60615
+    },
+    "45": {
+     "nome": "RUY CARNEIRO",
+     "votos": 59730,
+     "validos": 16.37,
+     "oficial_mun": 59730
+    },
+    "51": {
+     "nome": "WALLBER VIRGOLINO",
+     "votos": 50801,
+     "validos": 13.92,
+     "oficial_mun": 50801
+    },
+    "43": {
+     "nome": "EDILMA FREIRE",
+     "votos": 47157,
+     "validos": 12.93,
+     "oficial_mun": 47157
+    },
+    "40": {
+     "nome": "RICARDO COUTINHO",
+     "votos": 38969,
+     "validos": 10.68,
+     "oficial_mun": 38969
+    },
+    "25": {
+     "nome": "RAONI",
+     "votos": 15582,
+     "validos": 4.27,
+     "oficial_mun": 15582
+    },
+    "77": {
+     "nome": "JOÃO ALMEIDA",
+     "votos": 6312,
+     "validos": 1.73,
+     "oficial_mun": 6312
+    },
+    "13": {
+     "nome": "ANÍSIO MAIA",
+     "votos": 5431,
+     "validos": 1.49,
+     "oficial_mun": 5431
+    },
+    "50": {
+     "nome": "ITALO GUEDES",
+     "votos": 2403,
+     "validos": 0.66,
+     "oficial_mun": 2403
+    },
+    "18": {
+     "nome": "CARLOS MONTEIRO",
+     "votos": 949,
+     "validos": 0.26,
+     "oficial_mun": 949
+    },
+    "80": {
+     "nome": "RAFAEL FREIRE",
+     "votos": 865,
+     "validos": 0.24,
+     "oficial_mun": 865
+    },
+    "16": {
+     "nome": "RAMA DANTAS",
+     "votos": 345,
+     "validos": 0.09,
+     "oficial_mun": 345
+    },
+    "29": {
+     "nome": "CAMILO DUARTE",
+     "votos": 82,
+     "validos": 0.02,
+     "oficial_mun": 82
+    }
+   }
+  },
+  "23817": {
+   "uf": "pe",
+   "secoes": 570,
+   "candidatos": {
+    "45": {
+     "nome": "RAQUEL LYRA",
+     "votos": 114466,
+     "validos": 66.86,
+     "oficial_mun": 114466
+    },
+    "11": {
+     "nome": "DELEGADO LESSA",
+     "votos": 32910,
+     "validos": 19.22,
+     "oficial_mun": 32910
+    },
+    "55": {
+     "nome": "RAFFIÊ DELLON",
+     "votos": 14986,
+     "validos": 8.75,
+     "oficial_mun": 14986
+    },
+    "13": {
+     "nome": "MARCELO RODRIGUES",
+     "votos": 4964,
+     "validos": 2.9,
+     "oficial_mun": 4964
+    },
+    "40": {
+     "nome": "MARCELO GOMES",
+     "votos": 3513,
+     "validos": 2.05,
+     "oficial_mun": 3513
+    },
+    "80": {
+     "nome": "RAFAEL WANDERLEY",
+     "votos": 374,
+     "validos": 0.22,
+     "oficial_mun": 374
+    }
+   }
+  },
+  "24570": {
+   "uf": "pe",
+   "secoes": 1116,
+   "candidatos": {
+    "22": {
+     "nome": "ANDERSON FERREIRA",
+     "votos": 144586,
+     "validos": 54.26,
+     "oficial_mun": 144586
+    },
+    "15": {
+     "nome": "DANIEL ALVES",
+     "votos": 81827,
+     "validos": 30.71,
+     "oficial_mun": 81827
+    },
+    "12": {
+     "nome": "MAIRA VILAR",
+     "votos": 19899,
+     "validos": 7.47,
+     "oficial_mun": 19899
+    },
+    "36": {
+     "nome": "DELEGADO EDUARDO PORTO",
+     "votos": 7217,
+     "validos": 2.71,
+     "oficial_mun": 7217
+    },
+    "65": {
+     "nome": "ARNALDO DELMONDES",
+     "votos": 5116,
+     "validos": 1.92,
+     "oficial_mun": 5116
+    },
+    "70": {
+     "nome": "BELARMINO SILVA",
+     "votos": 2560,
+     "validos": 0.96,
+     "oficial_mun": 2560
+    },
+    "27": {
+     "nome": "PASTOR SEVERINO",
+     "votos": 2110,
+     "validos": 0.79,
+     "oficial_mun": 2110
+    },
+    "28": {
+     "nome": "ADELSON VERAS",
+     "votos": 1311,
+     "validos": 0.49,
+     "oficial_mun": 1311
+    },
+    "80": {
+     "nome": "SERGINALDO SANTOS",
+     "votos": 893,
+     "validos": 0.34,
+     "oficial_mun": 893
+    },
+    "35": {
+     "nome": "JOAQUIM BARRETTO",
+     "votos": 872,
+     "validos": 0.33,
+     "oficial_mun": 872
+    },
+    "29": {
+     "nome": "",
+     "votos": 82,
+     "validos": 0.03,
+     "oficial_mun": 0
+    }
+   }
+  },
+  "24910": {
+   "uf": "pe",
+   "secoes": 695,
+   "candidatos": {
+    "77": {
+     "nome": "PROFESSOR LUPERCIO",
+     "votos": 123534,
+     "validos": 63.62,
+     "oficial_mun": 123534
+    },
+    "65": {
+     "nome": "JOÃO PAULO",
+     "votos": 45289,
+     "validos": 23.32,
+     "oficial_mun": 45289
+    },
+    "15": {
+     "nome": "CELSO MUNIZ",
+     "votos": 11694,
+     "validos": 6.02,
+     "oficial_mun": 11694
+    },
+    "17": {
+     "nome": "JORGE FEDERAL",
+     "votos": 5958,
+     "validos": 3.07,
+     "oficial_mun": 5958
+    },
+    "12": {
+     "nome": "GUTO SANTA CRUZ",
+     "votos": 2721,
+     "validos": 1.4,
+     "oficial_mun": 2721
+    },
+    "70": {
+     "nome": "ARMANDO SERGIO",
+     "votos": 1649,
+     "validos": 0.85,
+     "oficial_mun": 1649
+    },
+    "27": {
+     "nome": "ANDRÉ AZEVEDO",
+     "votos": 1477,
+     "validos": 0.76,
+     "oficial_mun": 1477
+    },
+    "33": {
+     "nome": "TOTA DO V-8 E V-9",
+     "votos": 1318,
+     "validos": 0.68,
+     "oficial_mun": 1318
+    },
+    "18": {
+     "nome": "MARCOS FREIRE JR",
+     "votos": 434,
+     "validos": 0.22,
+     "oficial_mun": 434
+    },
+    "29": {
+     "nome": "",
+     "votos": 112,
+     "validos": 0.06,
+     "oficial_mun": 0
+    }
+   }
+  },
+  "25135": {
+   "uf": "pe",
+   "secoes": 546,
+   "candidatos": {
+    "15": {
+     "nome": "YVES RIBEIRO",
+     "votos": 51351,
+     "validos": 34.98,
+     "oficial_mun": 51351
+    },
+    "40": {
+     "nome": "FRANCISCO PADILHA",
+     "votos": 38372,
+     "validos": 26.14,
+     "oficial_mun": 38372
+    },
+    "14": {
+     "nome": "RAMOS",
+     "votos": 29851,
+     "validos": 20.34,
+     "oficial_mun": 29851
+    },
+    "10": {
+     "nome": "ALEMÃO",
+     "votos": 8679,
+     "validos": 5.91,
+     "oficial_mun": 8679
+    },
+    "12": {
+     "nome": "FÁBIO BARROS",
+     "votos": 5535,
+     "validos": 3.77,
+     "oficial_mun": 5535
+    },
+    "28": {
+     "nome": "DELEGADO GILDERLEY",
+     "votos": 5321,
+     "validos": 3.63,
+     "oficial_mun": 5321
+    },
+    "55": {
+     "nome": "PROMOTORA MARIA APARECIDA",
+     "votos": 2700,
+     "validos": 1.84,
+     "oficial_mun": 2700
+    },
+    "11": {
+     "nome": "SERGIO LEITE",
+     "votos": 2671,
+     "validos": 1.82,
+     "oficial_mun": 2671
+    },
+    "45": {
+     "nome": "ANTONIO NENA CABRAL",
+     "votos": 1283,
+     "validos": 0.87,
+     "oficial_mun": 1283
+    },
+    "70": {
+     "nome": "GERALDO PINHO ALVES",
+     "votos": 1019,
+     "validos": 0.69,
+     "oficial_mun": 1019
+    }
+   }
+  },
+  "25216": {
+   "uf": "pe",
+   "secoes": 533,
+   "candidatos": {
+    "15": {
+     "nome": "MIGUEL COELHO",
+     "votos": 121300,
+     "validos": 76.19,
+     "oficial_mun": 121300
+    },
+    "55": {
+     "nome": "JULIO LOSSIO FILHO",
+     "votos": 15567,
+     "validos": 9.78,
+     "oficial_mun": 15567
+    },
+    "13": {
+     "nome": "ODACY AMORIM",
+     "votos": 15345,
+     "validos": 9.64,
+     "oficial_mun": 15345
+    },
+    "17": {
+     "nome": "GABRIEL MENEZES",
+     "votos": 5449,
+     "validos": 3.42,
+     "oficial_mun": 5449
+    },
+    "50": {
+     "nome": "DR. MARCOS",
+     "votos": 1316,
+     "validos": 0.83,
+     "oficial_mun": 1316
+    },
+    "43": {
+     "nome": "DEOMIRO SANTOS",
+     "votos": 231,
+     "validos": 0.15,
+     "oficial_mun": 231
+    }
+   }
+  },
+  "25313": {
+   "uf": "pe",
+   "secoes": 2863,
+   "candidatos": {
+    "40": {
+     "nome": "JOÃO CAMPOS",
+     "votos": 233028,
+     "validos": 29.13,
+     "oficial_mun": 233028
+    },
+    "13": {
+     "nome": "MARILIA ARRAES",
+     "votos": 223248,
+     "validos": 27.9,
+     "oficial_mun": 223248
+    },
+    "25": {
+     "nome": "MENDONÇA FILHO",
+     "votos": 200551,
+     "validos": 25.07,
+     "oficial_mun": 200551
+    },
+    "19": {
+     "nome": "DELEGADA PATRICIA",
+     "votos": 112296,
+     "validos": 14.04,
+     "oficial_mun": 112296
+    },
+    "17": {
+     "nome": "CARLOS",
+     "votos": 13938,
+     "validos": 1.74,
+     "oficial_mun": 13938
+    },
+    "20": {
+     "nome": "CORONEL FEITOSA",
+     "votos": 9441,
+     "validos": 1.18,
+     "oficial_mun": 9441
+    },
+    "30": {
+     "nome": "CHARBEL",
+     "votos": 3867,
+     "validos": 0.48,
+     "oficial_mun": 3867
+    },
+    "80": {
+     "nome": "THIAGO SANTOS",
+     "votos": 1232,
+     "validos": 0.15,
+     "oficial_mun": 1232
+    },
+    "16": {
+     "nome": "CLAUDIA RIBEIRO",
+     "votos": 1190,
+     "validos": 0.15,
+     "oficial_mun": 1190
+    },
+    "28": {
+     "nome": "",
+     "votos": 1170,
+     "validos": 0.15,
+     "oficial_mun": 0
+    },
+    "29": {
+     "nome": "",
+     "votos": 101,
+     "validos": 0.01,
+     "oficial_mun": 0
+    }
+   }
+  },
+  "2550": {
+   "uf": "am",
+   "secoes": 3371,
+   "candidatos": {
+    "19": {
+     "nome": "AMAZONINO MENDES",
+     "votos": 234088,
+     "validos": 23.91,
+     "oficial_mun": 234088
+    },
+    "70": {
+     "nome": "DAVID ALMEIDA",
+     "votos": 218929,
+     "validos": 22.36,
+     "oficial_mun": 218929
+    },
+    "13": {
+     "nome": "ZE RICARDO",
+     "votos": 139846,
+     "validos": 14.28,
+     "oficial_mun": 139846
+    },
+    "55": {
+     "nome": "RICARDO NICOLAU",
+     "votos": 118289,
+     "validos": 12.08,
+     "oficial_mun": 118289
+    },
+    "51": {
+     "nome": "CORONEL MENEZES",
+     "votos": 110805,
+     "validos": 11.32,
+     "oficial_mun": 110805
+    },
+    "10": {
+     "nome": "CAPITÃO ALBERTO NETO",
+     "votos": 76576,
+     "validos": 7.82,
+     "oficial_mun": 76576
+    },
+    "22": {
+     "nome": "ALFREDO NASCIMENTO",
+     "votos": 31676,
+     "validos": 3.24,
+     "oficial_mun": 31676
+    },
+    "30": {
+     "nome": "ROMERO REIS",
+     "votos": 29102,
+     "validos": 2.97,
+     "oficial_mun": 29102
+    },
+    "27": {
+     "nome": "",
+     "votos": 16141,
+     "validos": 1.65,
+     "oficial_mun": 0
+    },
+    "65": {
+     "nome": "MARCELO AMIL",
+     "votos": 2820,
+     "validos": 0.29,
+     "oficial_mun": 2820
+    },
+    "16": {
+     "nome": "GILBERTO VASCONCELOS",
+     "votos": 742,
+     "validos": 0.08,
+     "oficial_mun": 742
+    }
+   }
+  },
+  "27855": {
+   "uf": "al",
+   "secoes": 1418,
+   "candidatos": {
+    "15": {
+     "nome": "ALFREDO GASPAR DE MENDONÇA",
+     "votos": 110234,
+     "validos": 28.87,
+     "oficial_mun": 110234
+    },
+    "40": {
+     "nome": "JHC",
+     "votos": 109053,
+     "validos": 28.56,
+     "oficial_mun": 109053
+    },
+    "11": {
+     "nome": "DAVI DAVINO FILHO",
+     "votos": 97409,
+     "validos": 25.51,
+     "oficial_mun": 97409
+    },
+    "51": {
+     "nome": "JOSAN LEITE",
+     "votos": 23925,
+     "validos": 6.27,
+     "oficial_mun": 23925
+    },
+    "50": {
+     "nome": "VALERIA CORREIA",
+     "votos": 13568,
+     "validos": 3.55,
+     "oficial_mun": 13568
+    },
+    "27": {
+     "nome": "CÍCERO ALMEIDA",
+     "votos": 9905,
+     "validos": 2.59,
+     "oficial_mun": 9905
+    },
+    "13": {
+     "nome": "RICARDO BARBOSA",
+     "votos": 8905,
+     "validos": 2.33,
+     "oficial_mun": 8905
+    },
+    "80": {
+     "nome": "LENILDA LUNA",
+     "votos": 4875,
+     "validos": 1.28,
+     "oficial_mun": 4875
+    },
+    "65": {
+     "nome": "CICERO FILHO",
+     "votos": 3427,
+     "validos": 0.9,
+     "oficial_mun": 3427
+    },
+    "33": {
+     "nome": "CORINTHO CAMPELO",
+     "votos": 507,
+     "validos": 0.13,
+     "oficial_mun": 507
+    }
+   }
+  },
+  "3018": {
+   "uf": "rr",
+   "secoes": 657,
+   "candidatos": {
+    "15": {
+     "nome": "ARTHUR HENRIQUE",
+     "votos": 78425,
+     "validos": 49.64,
+     "oficial_mun": 78425
+    },
+    "77": {
+     "nome": "OTTACI",
+     "votos": 16735,
+     "validos": 10.59,
+     "oficial_mun": 16735
+    },
+    "18": {
+     "nome": "LINOBERG",
+     "votos": 15775,
+     "validos": 9.99,
+     "oficial_mun": 15775
+    },
+    "45": {
+     "nome": "SHÉRIDAN",
+     "votos": 14055,
+     "validos": 8.9,
+     "oficial_mun": 14055
+    },
+    "17": {
+     "nome": "NICOLETTI",
+     "votos": 13451,
+     "validos": 8.51,
+     "oficial_mun": 13451
+    },
+    "19": {
+     "nome": "PR ISAMAR",
+     "votos": 8303,
+     "validos": 5.26,
+     "oficial_mun": 8303
+    },
+    "11": {
+     "nome": "GERLANE",
+     "votos": 4966,
+     "validos": 3.14,
+     "oficial_mun": 4966
+    },
+    "22": {
+     "nome": "LUCIANO CASTRO",
+     "votos": 4498,
+     "validos": 2.85,
+     "oficial_mun": 4498
+    },
+    "50": {
+     "nome": "FABIO ALMEIDA",
+     "votos": 1130,
+     "validos": 0.72,
+     "oficial_mun": 1130
+    },
+    "33": {
+     "nome": "SHAOLYN GOMES",
+     "votos": 583,
+     "validos": 0.37,
+     "oficial_mun": 583
+    },
+    "29": {
+     "nome": "",
+     "votos": 64,
+     "validos": 0.04,
+     "oficial_mun": 0
+    }
+   }
+  },
+  "31054": {
+   "uf": "se",
+   "secoes": 1041,
+   "candidatos": {
+    "12": {
+     "nome": "EDVALDO",
+     "votos": 119681,
+     "validos": 45.57,
+     "oficial_mun": 119681
+    },
+    "23": {
+     "nome": "DELEGADA DANIELLE",
+     "votos": 55973,
+     "validos": 21.31,
+     "oficial_mun": 55973
+    },
+    "14": {
+     "nome": "RODRIGO VALADARES",
+     "votos": 28598,
+     "validos": 10.89,
+     "oficial_mun": 28598
+    },
+    "13": {
+     "nome": "MÁRCIO MACEDO",
+     "votos": 25070,
+     "validos": 9.55,
+     "oficial_mun": 25070
+    },
+    "70": {
+     "nome": "LÚCIO FLÁVIO",
+     "votos": 12448,
+     "validos": 4.74,
+     "oficial_mun": 12448
+    },
+    "25": {
+     "nome": "GEORLIZE",
+     "votos": 10458,
+     "validos": 3.98,
+     "oficial_mun": 10458
+    },
+    "50": {
+     "nome": "ALEXIS PEDRÃO",
+     "votos": 8352,
+     "validos": 3.18,
+     "oficial_mun": 8352
+    },
+    "27": {
+     "nome": "DELEGADO PAULO MARCIO",
+     "votos": 634,
+     "validos": 0.24,
+     "oficial_mun": 634
+    },
+    "28": {
+     "nome": "ALMEIDA LIMA",
+     "votos": 572,
+     "validos": 0.22,
+     "oficial_mun": 572
+    },
+    "16": {
+     "nome": "GILVANI SANTOS",
+     "votos": 568,
+     "validos": 0.22,
+     "oficial_mun": 568
+    },
+    "35": {
+     "nome": "JURACI NUNES",
+     "votos": 288,
+     "validos": 0.11,
+     "oficial_mun": 288
+    }
+   }
+  },
+  "35": {
+   "uf": "ro",
+   "secoes": 842,
+   "candidatos": {
+    "45": {
+     "nome": "HILDON CHAVES",
+     "votos": 74728,
+     "validos": 34.01,
+     "oficial_mun": 74728
+    },
+    "11": {
+     "nome": "CRISTIANE LOPES",
+     "votos": 31461,
+     "validos": 14.32,
+     "oficial_mun": 31461
+    },
+    "23": {
+     "nome": "VINICIUS MIGUEL",
+     "votos": 29369,
+     "validos": 13.36,
+     "oficial_mun": 29369
+    },
+    "70": {
+     "nome": "DR. BRENO MENDES",
+     "votos": 25270,
+     "validos": 11.5,
+     "oficial_mun": 25270
+    },
+    "77": {
+     "nome": "CORONEL RONALDO FLORES",
+     "votos": 16750,
+     "validos": 7.62,
+     "oficial_mun": 16750
+    },
+    "10": {
+     "nome": "LINDOMAR GARÇON",
+     "votos": 12061,
+     "validos": 5.49,
+     "oficial_mun": 12061
+    },
+    "15": {
+     "nome": "PIMENTEL",
+     "votos": 8195,
+     "validos": 3.73,
+     "oficial_mun": 8195
+    },
+    "13": {
+     "nome": "RAMON CUJUI",
+     "votos": 7069,
+     "validos": 3.22,
+     "oficial_mun": 7069
+    },
+    "17": {
+     "nome": "SARGENTO EYDER BRASIL",
+     "votos": 5620,
+     "validos": 2.56,
+     "oficial_mun": 5620
+    },
+    "20": {
+     "nome": "EDVALDO SOARES",
+     "votos": 4154,
+     "validos": 1.89,
+     "oficial_mun": 4154
+    },
+    "14": {
+     "nome": "LEONEL BERTOLIN",
+     "votos": 1624,
+     "validos": 0.74,
+     "oficial_mun": 1624
+    },
+    "65": {
+     "nome": "SAMUEL COSTA",
+     "votos": 1229,
+     "validos": 0.56,
+     "oficial_mun": 1229
+    },
+    "50": {
+     "nome": "PIMENTA DE RONDÔNIA",
+     "votos": 1180,
+     "validos": 0.54,
+     "oficial_mun": 1180
+    },
+    "28": {
+     "nome": "PASTOR LEONARDO LUZ",
+     "votos": 741,
+     "validos": 0.34,
+     "oficial_mun": 741
+    },
+    "16": {
+     "nome": "GENECI GONÇALVES",
+     "votos": 298,
+     "validos": 0.14,
+     "oficial_mun": 298
+    }
+   }
+  },
+  "35157": {
+   "uf": "ba",
+   "secoes": 881,
+   "candidatos": {
+    "13": {
+     "nome": "ZÉ NETO",
+     "votos": 119862,
+     "validos": 41.55,
+     "oficial_mun": 119862
+    },
+    "15": {
+     "nome": "COLBERT MARTINS",
+     "votos": 110146,
+     "validos": 38.18,
+     "oficial_mun": 110146
+    },
+    "10": {
+     "nome": "JOSÉ DE ARIMATEIA",
+     "votos": 14012,
+     "validos": 4.86,
+     "oficial_mun": 14012
+    },
+    "17": {
+     "nome": "PROFESSORA DAYANE PIMENTEL",
+     "votos": 13949,
+     "validos": 4.84,
+     "oficial_mun": 13949
+    },
+    "19": {
+     "nome": "CARLOS GEILSON",
+     "votos": 12689,
+     "validos": 4.4,
+     "oficial_mun": 12689
+    },
+    "30": {
+     "nome": "CARLOS MEDEIROS",
+     "votos": 7259,
+     "validos": 2.52,
+     "oficial_mun": 7259
+    },
+    "40": {
+     "nome": "BETO TOURINHO",
+     "votos": 5570,
+     "validos": 1.93,
+     "oficial_mun": 5570
+    },
+    "50": {
+     "nome": "MARCELA PREST",
+     "votos": 4785,
+     "validos": 1.66,
+     "oficial_mun": 4785
+    },
+    "29": {
+     "nome": "",
+     "votos": 195,
+     "validos": 0.07,
+     "oficial_mun": 0
+    },
+    "28": {
+     "nome": "",
+     "votos": 13,
+     "validos": 0.0,
+     "oficial_mun": 0
+    }
+   }
+  },
+  "38490": {
+   "uf": "ba",
+   "secoes": 4228,
+   "candidatos": {
+    "25": {
+     "nome": "BRUNO REIS",
+     "votos": 779408,
+     "validos": 64.2,
+     "oficial_mun": 779408
+    },
+    "13": {
+     "nome": "MAJOR DENICE",
+     "votos": 228942,
+     "validos": 18.86,
+     "oficial_mun": 228942
+    },
+    "70": {
+     "nome": "PASTOR SARGENTO ISIDÓRIO",
+     "votos": 64728,
+     "validos": 5.33,
+     "oficial_mun": 64728
+    },
+    "28": {
+     "nome": "CEZAR LEITE",
+     "votos": 56494,
+     "validos": 4.65,
+     "oficial_mun": 56494
+    },
+    "65": {
+     "nome": "OLIVIA",
+     "votos": 54496,
+     "validos": 4.49,
+     "oficial_mun": 54496
+    },
+    "50": {
+     "nome": "HILTON COELHO",
+     "votos": 16868,
+     "validos": 1.39,
+     "oficial_mun": 16868
+    },
+    "19": {
+     "nome": "BACELAR",
+     "votos": 11140,
+     "validos": 0.92,
+     "oficial_mun": 11140
+    },
+    "90": {
+     "nome": "CELSINHO COTRIM",
+     "votos": 1578,
+     "validos": 0.13,
+     "oficial_mun": 1578
+    },
+    "29": {
+     "nome": "RODRIGO PEREIRA",
+     "votos": 469,
+     "validos": 0.04,
+     "oficial_mun": 469
+    }
+   }
+  },
+  "39659": {
+   "uf": "ba",
+   "secoes": 532,
+   "candidatos": {
+    "13": {
+     "nome": "ZÉ RAIMUNDO",
+     "votos": 81721,
+     "validos": 47.63,
+     "oficial_mun": 81721
+    },
+    "15": {
+     "nome": "HERZEM GUSMÃO",
+     "votos": 78732,
+     "validos": 45.89,
+     "oficial_mun": 78732
+    },
+    "28": {
+     "nome": "DAVID SALOMÃO",
+     "votos": 5352,
+     "validos": 3.12,
+     "oficial_mun": 5352
+    },
+    "11": {
+     "nome": "ROMILSON FILHO",
+     "votos": 3022,
+     "validos": 1.76,
+     "oficial_mun": 3022
+    },
+    "17": {
+     "nome": "CABO HERLING",
+     "votos": 1145,
+     "validos": 0.67,
+     "oficial_mun": 1145
+    },
+    "18": {
+     "nome": "MARIS STELLA",
+     "votos": 973,
+     "validos": 0.57,
+     "oficial_mun": 973
+    },
+    "50": {
+     "nome": "PROFESSOR FERDINAND",
+     "votos": 630,
+     "validos": 0.37,
+     "oficial_mun": 630
+    }
+   }
+  },
+  "41238": {
+   "uf": "mg",
+   "secoes": 4586,
+   "candidatos": {
+    "55": {
+     "nome": "KALIL",
+     "votos": 784307,
+     "validos": 63.36,
+     "oficial_mun": 784307
+    },
+    "28": {
+     "nome": "BRUNO ENGLER",
+     "votos": 123215,
+     "validos": 9.95,
+     "oficial_mun": 123215
+    },
+    "23": {
+     "nome": "JOÃO VITOR XAVIER",
+     "votos": 114130,
+     "validos": 9.22,
+     "oficial_mun": 114130
+    },
+    "50": {
+     "nome": "ÁUREA CAROLINA",
+     "votos": 103115,
+     "validos": 8.33,
+     "oficial_mun": 103115
+    },
+    "30": {
+     "nome": "RODRIGO PAIVA",
+     "votos": 44977,
+     "validos": 3.63,
+     "oficial_mun": 44977
+    },
+    "13": {
+     "nome": "NILMÁRIO MIRANDA",
+     "votos": 23331,
+     "validos": 1.88,
+     "oficial_mun": 23331
+    },
+    "45": {
+     "nome": "LUISA BARRETO",
+     "votos": 17161,
+     "validos": 1.39,
+     "oficial_mun": 17161
+    },
+    "77": {
+     "nome": "PROFESSOR WENDEL MESQUITA",
+     "votos": 9266,
+     "validos": 0.75,
+     "oficial_mun": 9266
+    },
+    "10": {
+     "nome": "LAFAYETTE ANDRADA",
+     "votos": 7327,
+     "validos": 0.59,
+     "oficial_mun": 7327
+    },
+    "51": {
+     "nome": "MARCELO SOUZA E SILVA",
+     "votos": 4105,
+     "validos": 0.33,
+     "oficial_mun": 4105
+    },
+    "90": {
+     "nome": "FABIANO CAZECA",
+     "votos": 2517,
+     "validos": 0.2,
+     "oficial_mun": 2517
+    },
+    "65": {
+     "nome": "WADSON RIBEIRO",
+     "votos": 2211,
+     "validos": 0.18,
+     "oficial_mun": 2211
+    },
+    "16": {
+     "nome": "WANDERSON ROCHA",
+     "votos": 907,
+     "validos": 0.07,
+     "oficial_mun": 907
+    },
+    "35": {
+     "nome": "CABO XAVIER",
+     "votos": 865,
+     "validos": 0.07,
+     "oficial_mun": 865
+    },
+    "29": {
+     "nome": "MARILIA DOMINGUES",
+     "votos": 330,
+     "validos": 0.03,
+     "oficial_mun": 330
+    }
+   }
+  },
+  "41335": {
+   "uf": "mg",
+   "secoes": 797,
+   "candidatos": {
+    "55": {
+     "nome": "VITTORIO MEDIOLI",
+     "votos": 153144,
+     "validos": 76.34,
+     "oficial_mun": 153144
+    },
+    "13": {
+     "nome": "MARIA DO CARMO",
+     "votos": 28906,
+     "validos": 14.41,
+     "oficial_mun": 28906
+    },
+    "18": {
+     "nome": "DR VINÍCIUS",
+     "votos": 7136,
+     "validos": 3.56,
+     "oficial_mun": 7136
+    },
+    "77": {
+     "nome": "JUNIO ARAUJO",
+     "votos": 6158,
+     "validos": 3.07,
+     "oficial_mun": 6158
+    },
+    "15": {
+     "nome": "DR. XAROPINHO",
+     "votos": 1930,
+     "validos": 0.96,
+     "oficial_mun": 1930
+    },
+    "50": {
+     "nome": "GABRIELA CLEMENTE",
+     "votos": 1765,
+     "validos": 0.88,
+     "oficial_mun": 1765
+    },
+    "28": {
+     "nome": "FERNANDO MENDONÇA",
+     "votos": 1192,
+     "validos": 0.59,
+     "oficial_mun": 1192
+    },
+    "21": {
+     "nome": "ZULU",
+     "votos": 366,
+     "validos": 0.18,
+     "oficial_mun": 366
+    }
+   }
+  },
+  "4154": {
+   "uf": "pa",
+   "secoes": 877,
+   "candidatos": {
+    "15": {
+     "nome": "DR DANIEL",
+     "votos": 152352,
+     "validos": 67.7,
+     "oficial_mun": 152352
+    },
+    "50": {
+     "nome": "LÍVIA NORONHA",
+     "votos": 27098,
+     "validos": 12.04,
+     "oficial_mun": 27098
+    },
+    "55": {
+     "nome": "CARLITO BEGOT",
+     "votos": 19832,
+     "validos": 8.81,
+     "oficial_mun": 19832
+    },
+    "23": {
+     "nome": "ALLAN BITAR",
+     "votos": 18903,
+     "validos": 8.4,
+     "oficial_mun": 18903
+    },
+    "13": {
+     "nome": "PEDRO SOARES",
+     "votos": 4120,
+     "validos": 1.83,
+     "oficial_mun": 4120
+    },
+    "36": {
+     "nome": "JOÃO",
+     "votos": 1379,
+     "validos": 0.61,
+     "oficial_mun": 1379
+    },
+    "28": {
+     "nome": "JACKSON AZEVEDO",
+     "votos": 1372,
+     "validos": 0.61,
+     "oficial_mun": 1372
+    }
+   }
+  },
+  "4278": {
+   "uf": "pa",
+   "secoes": 2562,
+   "candidatos": {
+    "50": {
+     "nome": "EDMILSON RODRIGUES",
+     "votos": 248751,
+     "validos": 34.22,
+     "oficial_mun": 248751
+    },
+    "51": {
+     "nome": "DELEGADO FEDERAL EGUCHI",
+     "votos": 167599,
+     "validos": 23.06,
+     "oficial_mun": 167599
+    },
+    "15": {
+     "nome": "PRIANTE",
+     "votos": 123808,
+     "validos": 17.03,
+     "oficial_mun": 123808
+    },
+    "23": {
+     "nome": "THIAGO ARAUJO",
+     "votos": 58827,
+     "validos": 8.09,
+     "oficial_mun": 58827
+    },
+    "40": {
+     "nome": "CASSIO ANDRADE",
+     "votos": 49988,
+     "validos": 6.88,
+     "oficial_mun": 49988
+    },
+    "10": {
+     "nome": "VAVÁ MARTINS",
+     "votos": 49476,
+     "validos": 6.81,
+     "oficial_mun": 49476
+    },
+    "55": {
+     "nome": "GUSTAVO SEFER",
+     "votos": 22996,
+     "validos": 3.16,
+     "oficial_mun": 22996
+    },
+    "36": {
+     "nome": "GUILHERME LESSA",
+     "votos": 2417,
+     "validos": 0.33,
+     "oficial_mun": 2417
+    },
+    "28": {
+     "nome": "",
+     "votos": 1160,
+     "validos": 0.16,
+     "oficial_mun": 0
+    },
+    "16": {
+     "nome": "CLEBER RABELO",
+     "votos": 1026,
+     "validos": 0.14,
+     "oficial_mun": 1026
+    },
+    "35": {
+     "nome": "DR JERONIMO",
+     "votos": 759,
+     "validos": 0.1,
+     "oficial_mun": 759
+    },
+    "29": {
+     "nome": "",
+     "votos": 130,
+     "validos": 0.02,
+     "oficial_mun": 0
+    }
+   }
+  },
+  "43710": {
+   "uf": "mg",
+   "secoes": 1204,
+   "candidatos": {
+    "13": {
+     "nome": "MARÍLIA",
+     "votos": 118955,
+     "validos": 41.83,
+     "oficial_mun": 118955
+    },
+    "25": {
+     "nome": "FELIPE SALIBA",
+     "votos": 52371,
+     "validos": 18.42,
+     "oficial_mun": 52371
+    },
+    "10": {
+     "nome": "",
+     "votos": 40069,
+     "validos": 14.09,
+     "oficial_mun": 0
+    },
+    "12": {
+     "nome": "IVAYR SOALHEIRO",
+     "votos": 14162,
+     "validos": 4.98,
+     "oficial_mun": 14162
+    },
+    "30": {
+     "nome": "MÁRCIO BERNARDINO",
+     "votos": 13134,
+     "validos": 4.62,
+     "oficial_mun": 13134
+    },
+    "22": {
+     "nome": "WELLINGTON SILVEIRA",
+     "votos": 11458,
+     "validos": 4.03,
+     "oficial_mun": 11458
+    },
+    "17": {
+     "nome": "PROFESSOR IRINEU",
+     "votos": 11271,
+     "validos": 3.96,
+     "oficial_mun": 11271
+    },
+    "23": {
+     "nome": "CORONEL ALVEAR",
+     "votos": 7489,
+     "validos": 2.63,
+     "oficial_mun": 7489
+    },
+    "18": {
+     "nome": "KAKA MENEZES",
+     "votos": 5790,
+     "validos": 2.04,
+     "oficial_mun": 5790
+    },
+    "36": {
+     "nome": "CORONEL FIUZA",
+     "votos": 3157,
+     "validos": 1.11,
+     "oficial_mun": 3157
+    },
+    "43": {
+     "nome": "MARIA LUCIA GUEDES",
+     "votos": 2129,
+     "validos": 0.75,
+     "oficial_mun": 2129
+    },
+    "33": {
+     "nome": "LINDOMAR GOMES",
+     "votos": 2029,
+     "validos": 0.71,
+     "oficial_mun": 2029
+    },
+    "51": {
+     "nome": "ALFREDO",
+     "votos": 1657,
+     "validos": 0.58,
+     "oficial_mun": 1657
+    },
+    "35": {
+     "nome": "DULCE",
+     "votos": 640,
+     "validos": 0.23,
+     "oficial_mun": 640
+    },
+    "29": {
+     "nome": "",
+     "votos": 64,
+     "validos": 0.02,
+     "oficial_mun": 0
+    }
+   }
+  },
+  "45535": {
+   "uf": "mg",
+   "secoes": 590,
+   "candidatos": {
+    "45": {
+     "nome": "ANDRE MERLO",
+     "votos": 49183,
+     "validos": 38.27,
+     "oficial_mun": 49183
+    },
+    "20": {
+     "nome": "DR LUCIANO",
+     "votos": 24823,
+     "validos": 19.32,
+     "oficial_mun": 24823
+    },
+    "13": {
+     "nome": "LEONARDO MONTEIRO",
+     "votos": 18570,
+     "validos": 14.45,
+     "oficial_mun": 18570
+    },
+    "40": {
+     "nome": "ROSEMARY MAFRA",
+     "votos": 13842,
+     "validos": 10.77,
+     "oficial_mun": 13842
+    },
+    "17": {
+     "nome": "ELIO LACERDA",
+     "votos": 7921,
+     "validos": 6.16,
+     "oficial_mun": 7921
+    },
+    "55": {
+     "nome": "DELEGADO FEDERAL RUI SILVA",
+     "votos": 6389,
+     "validos": 4.97,
+     "oficial_mun": 6389
+    },
+    "28": {
+     "nome": "CORONEL MIRANDA",
+     "votos": 4866,
+     "validos": 3.79,
+     "oficial_mun": 4866
+    },
+    "33": {
+     "nome": "FABIO PERSI",
+     "votos": 1094,
+     "validos": 0.85,
+     "oficial_mun": 1094
+    },
+    "51": {
+     "nome": "URBANO SANTOS",
+     "votos": 1001,
+     "validos": 0.78,
+     "oficial_mun": 1001
+    },
+    "50": {
+     "nome": "XABIER",
+     "votos": 445,
+     "validos": 0.35,
+     "oficial_mun": 445
+    },
+    "77": {
+     "nome": "MOZART COELHO",
+     "votos": 372,
+     "validos": 0.29,
+     "oficial_mun": 372
+    }
+   }
+  },
+  "47333": {
+   "uf": "mg",
+   "secoes": 1096,
+   "candidatos": {
+    "13": {
+     "nome": "MARGARIDA SALOMÃO",
+     "votos": 102489,
+     "validos": 39.46,
+     "oficial_mun": 102489
+    },
+    "40": {
+     "nome": "WILSON REZATO",
+     "votos": 59633,
+     "validos": 22.96,
+     "oficial_mun": 59633
+    },
+    "10": {
+     "nome": "IONE",
+     "votos": 56699,
+     "validos": 21.83,
+     "oficial_mun": 56699
+    },
+    "17": {
+     "nome": "DELEGADA SHEILA",
+     "votos": 26068,
+     "validos": 10.04,
+     "oficial_mun": 26068
+    },
+    "27": {
+     "nome": "EDUARDO LUCAS",
+     "votos": 4048,
+     "validos": 1.56,
+     "oficial_mun": 4048
+    },
+    "36": {
+     "nome": "ALOIZIO PENIDO",
+     "votos": 2478,
+     "validos": 0.95,
+     "oficial_mun": 2478
+    },
+    "50": {
+     "nome": "LORENE FIGUEIREDO",
+     "votos": 2381,
+     "validos": 0.92,
+     "oficial_mun": 2381
+    },
+    "18": {
+     "nome": "MARCOS RIBEIRO",
+     "votos": 1952,
+     "validos": 0.75,
+     "oficial_mun": 1952
+    },
+    "28": {
+     "nome": "",
+     "votos": 1813,
+     "validos": 0.7,
+     "oficial_mun": 0
+    },
+    "65": {
+     "nome": "FERNANDO ELIOTERIO",
+     "votos": 1807,
+     "validos": 0.7,
+     "oficial_mun": 1807
+    },
+    "16": {
+     "nome": "VICTORIA MELLO VIC",
+     "votos": 353,
+     "validos": 0.14,
+     "oficial_mun": 353
+    }
+   }
+  },
+  "48658": {
+   "uf": "mg",
+   "secoes": 798,
+   "candidatos": {
+    "23": {
+     "nome": "HUMBERTO SOUTO",
+     "votos": 177592,
+     "validos": 85.24,
+     "oficial_mun": 177592
+    },
+    "11": {
+     "nome": "RUY MUNIZ",
+     "votos": 15184,
+     "validos": 7.29,
+     "oficial_mun": 15184
+    },
+    "13": {
+     "nome": "LENINHA",
+     "votos": 10685,
+     "validos": 5.13,
+     "oficial_mun": 10685
+    },
+    "43": {
+     "nome": "DR EMERSON",
+     "votos": 2214,
+     "validos": 1.06,
+     "oficial_mun": 2214
+    },
+    "19": {
+     "nome": "SILVANO QUERO PIZZA",
+     "votos": 1646,
+     "validos": 0.79,
+     "oficial_mun": 1646
+    },
+    "35": {
+     "nome": "FON FON",
+     "votos": 529,
+     "validos": 0.25,
+     "oficial_mun": 529
+    },
+    "50": {
+     "nome": "JANAELLE NERI",
+     "votos": 417,
+     "validos": 0.2,
+     "oficial_mun": 417
+    },
+    "36": {
+     "nome": "MARCELO VALMOR",
+     "votos": 71,
+     "validos": 0.03,
+     "oficial_mun": 71
+    }
+   }
+  },
+  "50911": {
+   "uf": "mg",
+   "secoes": 599,
+   "candidatos": {
+    "25": {
+     "nome": "JUNYNHO MARTINS",
+     "votos": 72679,
+     "validos": 54.23,
+     "oficial_mun": 72679
+    },
+    "10": {
+     "nome": "DELEI",
+     "votos": 35398,
+     "validos": 26.41,
+     "oficial_mun": 35398
+    },
+    "14": {
+     "nome": "WASHINGTON MODESTO FILHO",
+     "votos": 8512,
+     "validos": 6.35,
+     "oficial_mun": 8512
+    },
+    "65": {
+     "nome": "DR GETULIO",
+     "votos": 5992,
+     "validos": 4.47,
+     "oficial_mun": 5992
+    },
+    "70": {
+     "nome": "CORONEL BIANCHINI",
+     "votos": 4705,
+     "validos": 3.51,
+     "oficial_mun": 4705
+    },
+    "17": {
+     "nome": "ROBINHO DE NEVES",
+     "votos": 2440,
+     "validos": 1.82,
+     "oficial_mun": 2440
+    },
+    "77": {
+     "nome": "DEBORAH RUBIANA",
+     "votos": 2349,
+     "validos": 1.75,
+     "oficial_mun": 2349
+    },
+    "45": {
+     "nome": "JOEL LUCAS",
+     "votos": 973,
+     "validos": 0.73,
+     "oficial_mun": 973
+    },
+    "40": {
+     "nome": "PROF CARLOS EUGENIO",
+     "votos": 967,
+     "validos": 0.72,
+     "oficial_mun": 967
+    }
+   }
+  },
+  "5355": {
+   "uf": "pa",
+   "secoes": 754,
+   "candidatos": {
+    "25": {
+     "nome": "NÉLIO AGUIAR",
+     "votos": 71594,
+     "validos": 43.01,
+     "oficial_mun": 71594
+    },
+    "13": {
+     "nome": "MARIA",
+     "votos": 60051,
+     "validos": 36.08,
+     "oficial_mun": 60051
+    },
+    "20": {
+     "nome": "JOÃO PINGARILHO",
+     "votos": 13378,
+     "validos": 8.04,
+     "oficial_mun": 13378
+    },
+    "51": {
+     "nome": "CORONEL  TOMASO",
+     "votos": 7488,
+     "validos": 4.5,
+     "oficial_mun": 7488
+    },
+    "45": {
+     "nome": "NEY SANTANA",
+     "votos": 6672,
+     "validos": 4.01,
+     "oficial_mun": 6672
+    },
+    "43": {
+     "nome": "VALDIR MATIAS JR",
+     "votos": 2815,
+     "validos": 1.69,
+     "oficial_mun": 2815
+    },
+    "17": {
+     "nome": "PAULO BARRUDADA",
+     "votos": 2695,
+     "validos": 1.62,
+     "oficial_mun": 2695
+    },
+    "28": {
+     "nome": "JESSON SANTOS",
+     "votos": 1756,
+     "validos": 1.05,
+     "oficial_mun": 1756
+    }
+   }
+  },
+  "54011": {
+   "uf": "mg",
+   "secoes": 656,
+   "candidatos": {
+    "77": {
+     "nome": "ELISA ARAÚJO",
+     "votos": 54581,
+     "validos": 36.25,
+     "oficial_mun": 54581
+    },
+    "14": {
+     "nome": "TONY CARLOS",
+     "votos": 37625,
+     "validos": 24.99,
+     "oficial_mun": 37625
+    },
+    "17": {
+     "nome": "DELEGADO HELI GRILO",
+     "votos": 28740,
+     "validos": 19.09,
+     "oficial_mun": 28740
+    },
+    "20": {
+     "nome": "THIAGO MARISCAL",
+     "votos": 17705,
+     "validos": 11.76,
+     "oficial_mun": 17705
+    },
+    "13": {
+     "nome": "PATRICIA MELO",
+     "votos": 7454,
+     "validos": 4.95,
+     "oficial_mun": 7454
+    },
+    "12": {
+     "nome": "LERIN",
+     "votos": 2585,
+     "validos": 1.72,
+     "oficial_mun": 2585
+    },
+    "50": {
+     "nome": "MARIA SANDRA TAPAJÓS",
+     "votos": 687,
+     "validos": 0.46,
+     "oficial_mun": 687
+    },
+    "70": {
+     "nome": "CORONEL PERES",
+     "votos": 544,
+     "validos": 0.36,
+     "oficial_mun": 544
+    },
+    "28": {
+     "nome": "JOÃO CHOCOLATE",
+     "votos": 324,
+     "validos": 0.22,
+     "oficial_mun": 324
+    },
+    "16": {
+     "nome": "SIMEA FREITAS",
+     "votos": 183,
+     "validos": 0.12,
+     "oficial_mun": 183
+    },
+    "43": {
+     "nome": "MARCELO MARQUES",
+     "votos": 147,
+     "validos": 0.1,
+     "oficial_mun": 147
+    }
+   }
+  },
+  "54038": {
+   "uf": "mg",
+   "secoes": 1420,
+   "candidatos": {
+    "11": {
+     "nome": "ODELMO LEÃO",
+     "votos": 228390,
+     "validos": 70.47,
+     "oficial_mun": 228390
+    },
+    "12": {
+     "nome": "ADRIANO ZAGO",
+     "votos": 39584,
+     "validos": 12.21,
+     "oficial_mun": 39584
+    },
+    "17": {
+     "nome": "THIAGO FERNANDES",
+     "votos": 29727,
+     "validos": 9.17,
+     "oficial_mun": 29727
+    },
+    "13": {
+     "nome": "ARQUIMEDES",
+     "votos": 16861,
+     "validos": 5.2,
+     "oficial_mun": 16861
+    },
+    "14": {
+     "nome": "FELIPE ATTIÊ",
+     "votos": 4104,
+     "validos": 1.27,
+     "oficial_mun": 4104
+    },
+    "50": {
+     "nome": "WALLACE",
+     "votos": 2703,
+     "validos": 0.83,
+     "oficial_mun": 2703
+    },
+    "15": {
+     "nome": "PLACIDINO STÁBILE",
+     "votos": 1330,
+     "validos": 0.41,
+     "oficial_mun": 1330
+    },
+    "65": {
+     "nome": "PROFESSOR EDILSON",
+     "votos": 949,
+     "validos": 0.29,
+     "oficial_mun": 949
+    },
+    "16": {
+     "nome": "GILBERTO CUNHA",
+     "votos": 426,
+     "validos": 0.13,
+     "oficial_mun": 426
+    }
+   }
+  },
+  "56251": {
+   "uf": "es",
+   "secoes": 660,
+   "candidatos": {
+    "25": {
+     "nome": "EUCLERIO SAMPAIO",
+     "votos": 30934,
+     "validos": 18.81,
+     "oficial_mun": 30934
+    },
+    "13": {
+     "nome": "CELIA TAVARES",
+     "votos": 23087,
+     "validos": 14.04,
+     "oficial_mun": 23087
+    },
+    "14": {
+     "nome": "SUBTENENTE ASSIS",
+     "votos": 18884,
+     "validos": 11.48,
+     "oficial_mun": 18884
+    },
+    "90": {
+     "nome": "SANDRO LOCUTOR",
+     "votos": 17536,
+     "validos": 10.66,
+     "oficial_mun": 17536
+    },
+    "18": {
+     "nome": "MARCOS BRUNO",
+     "votos": 16031,
+     "validos": 9.75,
+     "oficial_mun": 16031
+    },
+    "11": {
+     "nome": "DR HELCIO",
+     "votos": 12173,
+     "validos": 7.4,
+     "oficial_mun": 12173
+    },
+    "17": {
+     "nome": "JOEL DA COSTA",
+     "votos": 11690,
+     "validos": 7.11,
+     "oficial_mun": 11690
+    },
+    "65": {
+     "nome": "DOUTOR HERALDO LEMOS",
+     "votos": 9037,
+     "validos": 5.5,
+     "oficial_mun": 9037
+    },
+    "27": {
+     "nome": "DR MOTTA",
+     "votos": 7481,
+     "validos": 4.55,
+     "oficial_mun": 7481
+    },
+    "40": {
+     "nome": "SAULO ANDREON",
+     "votos": 7325,
+     "validos": 4.45,
+     "oficial_mun": 7325
+    },
+    "20": {
+     "nome": "ADILSON AVELINA",
+     "votos": 4522,
+     "validos": 2.75,
+     "oficial_mun": 4522
+    },
+    "55": {
+     "nome": "CELSO ANDREON",
+     "votos": 3788,
+     "validos": 2.3,
+     "oficial_mun": 3788
+    },
+    "15": {
+     "nome": "IVAN BASTOS",
+     "votos": 1658,
+     "validos": 1.01,
+     "oficial_mun": 1658
+    },
+    "35": {
+     "nome": "BIA BIANCARDI",
+     "votos": 296,
+     "validos": 0.18,
+     "oficial_mun": 296
+    }
+   }
+  },
+  "56995": {
+   "uf": "es",
+   "secoes": 814,
+   "candidatos": {
+    "12": {
+     "nome": "SERGIO VIDIGAL",
+     "votos": 100837,
+     "validos": 47.46,
+     "oficial_mun": 100837
+    },
+    "18": {
+     "nome": "FABIO",
+     "votos": 41194,
+     "validos": 19.39,
+     "oficial_mun": 41194
+    },
+    "45": {
+     "nome": "VANDINHO LEITE",
+     "votos": 35838,
+     "validos": 16.87,
+     "oficial_mun": 35838
+    },
+    "22": {
+     "nome": "ALEXANDRE XAMBINHO",
+     "votos": 11931,
+     "validos": 5.62,
+     "oficial_mun": 11931
+    },
+    "40": {
+     "nome": "BRUNO LAMAS",
+     "votos": 10899,
+     "validos": 5.13,
+     "oficial_mun": 10899
+    },
+    "20": {
+     "nome": "GRACIMERI GAVIORNO",
+     "votos": 4343,
+     "validos": 2.04,
+     "oficial_mun": 4343
+    },
+    "11": {
+     "nome": "LUCIANA MALINI",
+     "votos": 3568,
+     "validos": 1.68,
+     "oficial_mun": 3568
+    },
+    "15": {
+     "nome": "",
+     "votos": 2506,
+     "validos": 1.18,
+     "oficial_mun": 0
+    },
+    "65": {
+     "nome": "EBINHO",
+     "votos": 1337,
+     "validos": 0.63,
+     "oficial_mun": 1337
+    }
+   }
+  },
+  "57037": {
+   "uf": "es",
+   "secoes": 790,
+   "candidatos": {
+    "19": {
+     "nome": "ARNALDINHO BORGO",
+     "votos": 73122,
+     "validos": 36.0,
+     "oficial_mun": 73122
+    },
+    "45": {
+     "nome": "MAX FILHO",
+     "votos": 46523,
+     "validos": 22.91,
+     "oficial_mun": 46523
+    },
+    "55": {
+     "nome": "NEUCIMAR FRAGA",
+     "votos": 39219,
+     "validos": 19.31,
+     "oficial_mun": 39219
+    },
+    "22": {
+     "nome": "CORONEL WAGNER",
+     "votos": 13661,
+     "validos": 6.73,
+     "oficial_mun": 13661
+    },
+    "17": {
+     "nome": "AMARILDO LOVATO",
+     "votos": 7606,
+     "validos": 3.75,
+     "oficial_mun": 7606
+    },
+    "10": {
+     "nome": "DOUTOR HUDSON",
+     "votos": 6499,
+     "validos": 3.2,
+     "oficial_mun": 6499
+    },
+    "18": {
+     "nome": "",
+     "votos": 5614,
+     "validos": 2.76,
+     "oficial_mun": 0
+    },
+    "50": {
+     "nome": "MÔNICA ALVES",
+     "votos": 4652,
+     "validos": 2.29,
+     "oficial_mun": 4652
+    },
+    "30": {
+     "nome": "DALTON MORAIS",
+     "votos": 4574,
+     "validos": 2.25,
+     "oficial_mun": 4574
+    },
+    "43": {
+     "nome": "FERNANDA MARTINS",
+     "votos": 1047,
+     "validos": 0.52,
+     "oficial_mun": 1047
+    },
+    "28": {
+     "nome": "CLAUDIA AUTISTA ",
+     "votos": 580,
+     "validos": 0.29,
+     "oficial_mun": 580
+    }
+   }
+  },
+  "57053": {
+   "uf": "es",
+   "secoes": 638,
+   "candidatos": {
+    "10": {
+     "nome": "DELEGADO PAZOLINI",
+     "votos": 53014,
+     "validos": 30.95,
+     "oficial_mun": 53014
+    },
+    "13": {
+     "nome": "JOAO COSER",
+     "votos": 37373,
+     "validos": 21.82,
+     "oficial_mun": 37373
+    },
+    "23": {
+     "nome": "GANDINI",
+     "votos": 36172,
+     "validos": 21.12,
+     "oficial_mun": 36172
+    },
+    "51": {
+     "nome": "CAPITÃO ASSUMÇÃO",
+     "votos": 12365,
+     "validos": 7.22,
+     "oficial_mun": 12365
+    },
+    "55": {
+     "nome": "MAZINHO",
+     "votos": 11397,
+     "validos": 6.65,
+     "oficial_mun": 11397
+    },
+    "45": {
+     "nome": "NEUZINHA",
+     "votos": 7897,
+     "validos": 4.61,
+     "oficial_mun": 7897
+    },
+    "40": {
+     "nome": "SERGIO SÁ",
+     "votos": 7110,
+     "validos": 4.15,
+     "oficial_mun": 7110
+    },
+    "30": {
+     "nome": "CORONEL NYLTON",
+     "votos": 2882,
+     "validos": 1.68,
+     "oficial_mun": 2882
+    },
+    "50": {
+     "nome": "GILBERTINHO CAMPOS",
+     "votos": 1408,
+     "validos": 0.82,
+     "oficial_mun": 1408
+    },
+    "22": {
+     "nome": "HALPHER LUIGGI",
+     "votos": 998,
+     "validos": 0.58,
+     "oficial_mun": 998
+    },
+    "65": {
+     "nome": "NAMY CHEQUER",
+     "votos": 440,
+     "validos": 0.26,
+     "oficial_mun": 440
+    },
+    "15": {
+     "nome": "",
+     "votos": 132,
+     "validos": 0.08,
+     "oficial_mun": 0
+    },
+    "16": {
+     "nome": "RAPHAEL FURTADO",
+     "votos": 69,
+     "validos": 0.04,
+     "oficial_mun": 69
+    },
+    "28": {
+     "nome": "ERON DOMINGOS",
+     "votos": 51,
+     "validos": 0.03,
+     "oficial_mun": 51
+    }
+   }
+  },
+  "58041": {
+   "uf": "rj",
+   "secoes": 865,
+   "candidatos": {
+    "15": {
+     "nome": "WAGUINHO",
+     "votos": 162720,
+     "validos": 79.74,
+     "oficial_mun": 162720
+    },
+    "22": {
+     "nome": "CRISTIANO SANTOS",
+     "votos": 25565,
+     "validos": 12.53,
+     "oficial_mun": 25565
+    },
+    "55": {
+     "nome": "JUNIOR CRUZ",
+     "votos": 8301,
+     "validos": 4.07,
+     "oficial_mun": 8301
+    },
+    "50": {
+     "nome": "NEUZINHA JORNALEIRA",
+     "votos": 3786,
+     "validos": 1.86,
+     "oficial_mun": 3786
+    },
+    "65": {
+     "nome": "ASSIS FREITAS",
+     "votos": 2021,
+     "validos": 0.99,
+     "oficial_mun": 2021
+    },
+    "40": {
+     "nome": "",
+     "votos": 1658,
+     "validos": 0.81,
+     "oficial_mun": 0
+    }
+   }
+  },
+  "58190": {
+   "uf": "rj",
+   "secoes": 1003,
+   "candidatos": {
+    "55": {
+     "nome": "WLADIMIR GAROTINHO",
+     "votos": 106526,
+     "validos": 42.94,
+     "oficial_mun": 106526
+    },
+    "12": {
+     "nome": "CAIO VIANNA",
+     "votos": 68732,
+     "validos": 27.71,
+     "oficial_mun": 68732
+    },
+    "77": {
+     "nome": "DR BRUNO CALIL",
+     "votos": 32673,
+     "validos": 13.17,
+     "oficial_mun": 32673
+    },
+    "23": {
+     "nome": "RAFAEL DINIZ",
+     "votos": 13530,
+     "validos": 5.45,
+     "oficial_mun": 13530
+    },
+    "50": {
+     "nome": "PROFESSORA NATÁLIA",
+     "votos": 11622,
+     "validos": 4.68,
+     "oficial_mun": 11622
+    },
+    "10": {
+     "nome": "TADEU TÔ CONTIGO",
+     "votos": 5378,
+     "validos": 2.17,
+     "oficial_mun": 5378
+    },
+    "13": {
+     "nome": "ODISSEIA ",
+     "votos": 4664,
+     "validos": 1.88,
+     "oficial_mun": 4664
+    },
+    "65": {
+     "nome": "ROBERTO HENRIQUES",
+     "votos": 1357,
+     "validos": 0.55,
+     "oficial_mun": 1357
+    },
+    "45": {
+     "nome": "DR. CARLA WALESKA",
+     "votos": 1269,
+     "validos": 0.51,
+     "oficial_mun": 1269
+    },
+    "35": {
+     "nome": "",
+     "votos": 1267,
+     "validos": 0.51,
+     "oficial_mun": 0
+    },
+    "33": {
+     "nome": "CLAUDIO RANGEL DA BOA VIAGEM",
+     "votos": 1057,
+     "validos": 0.43,
+     "oficial_mun": 1057
+    }
+   }
+  },
+  "58335": {
+   "uf": "rj",
+   "secoes": 1772,
+   "candidatos": {
+    "15": {
+     "nome": "WASHINGTON REIS",
+     "votos": 212354,
+     "validos": 52.55,
+     "oficial_mun": 212354
+    },
+    "17": {
+     "nome": "MARCELO DINO",
+     "votos": 71335,
+     "validos": 17.65,
+     "oficial_mun": 71335
+    },
+    "22": {
+     "nome": "DICA",
+     "votos": 40517,
+     "validos": 10.03,
+     "oficial_mun": 40517
+    },
+    "11": {
+     "nome": "ANDRÉIA ZITO",
+     "votos": 40261,
+     "validos": 9.96,
+     "oficial_mun": 40261
+    },
+    "50": {
+     "nome": "IVANETE SILVA",
+     "votos": 17251,
+     "validos": 4.27,
+     "oficial_mun": 17251
+    },
+    "13": {
+     "nome": "ALUIZIO JUNIOR",
+     "votos": 10854,
+     "validos": 2.69,
+     "oficial_mun": 10854
+    },
+    "40": {
+     "nome": "ZUMBA",
+     "votos": 8510,
+     "validos": 2.11,
+     "oficial_mun": 8510
+    },
+    "43": {
+     "nome": "PROFESSOR GUTEMBERG",
+     "votos": 2469,
+     "validos": 0.61,
+     "oficial_mun": 2469
+    },
+    "65": {
+     "nome": "SAMUEL MAIA",
+     "votos": 582,
+     "validos": 0.14,
+     "oficial_mun": 582
+    }
+   }
+  },
+  "58653": {
+   "uf": "rj",
+   "secoes": 1057,
+   "candidatos": {
+    "12": {
+     "nome": "AXEL GRAEL",
+     "votos": 151846,
+     "validos": 62.56,
+     "oficial_mun": 151846
+    },
+    "50": {
+     "nome": "FLAVIO SERAFINI",
+     "votos": 23846,
+     "validos": 9.82,
+     "oficial_mun": 23846
+    },
+    "36": {
+     "nome": "ALLAN LYRA",
+     "votos": 22834,
+     "validos": 9.41,
+     "oficial_mun": 22834
+    },
+    "55": {
+     "nome": "FELIPE PEIXOTO",
+     "votos": 17469,
+     "validos": 7.2,
+     "oficial_mun": 17469
+    },
+    "30": {
+     "nome": "JULIANA BENICIO",
+     "votos": 15857,
+     "validos": 6.53,
+     "oficial_mun": 15857
+    },
+    "17": {
+     "nome": "DEULER DA ROCHA",
+     "votos": 9129,
+     "validos": 3.76,
+     "oficial_mun": 9129
+    },
+    "35": {
+     "nome": "RENATA ESTEVES",
+     "votos": 800,
+     "validos": 0.33,
+     "oficial_mun": 800
+    },
+    "27": {
+     "nome": "",
+     "votos": 717,
+     "validos": 0.3,
+     "oficial_mun": 0
+    },
+    "16": {
+     "nome": "SÉRGIO PERDIGÃO ",
+     "votos": 214,
+     "validos": 0.09,
+     "oficial_mun": 214
+    }
+   }
+  },
+  "58696": {
+   "uf": "rj",
+   "secoes": 1597,
+   "candidatos": {
+    "11": {
+     "nome": "ROGERIO LISBOA",
+     "votos": 218396,
+     "validos": 62.1,
+     "oficial_mun": 218396
+    },
+    "45": {
+     "nome": "MAX LEMOS",
+     "votos": 48740,
+     "validos": 13.86,
+     "oficial_mun": 48740
+    },
+    "55": {
+     "nome": "DELEGADO CARLOS AUGUSTO",
+     "votos": 34312,
+     "validos": 9.76,
+     "oficial_mun": 34312
+    },
+    "10": {
+     "nome": "ROSANGELA GOMES",
+     "votos": 19791,
+     "validos": 5.63,
+     "oficial_mun": 19791
+    },
+    "28": {
+     "nome": "MARCELO LAJES",
+     "votos": 13461,
+     "validos": 3.83,
+     "oficial_mun": 13461
+    },
+    "13": {
+     "nome": "BERRIEL",
+     "votos": 4885,
+     "validos": 1.39,
+     "oficial_mun": 4885
+    },
+    "50": {
+     "nome": "PROFESSORA LECI",
+     "votos": 4475,
+     "validos": 1.27,
+     "oficial_mun": 4475
+    },
+    "40": {
+     "nome": "LUIZ NOVAES",
+     "votos": 4248,
+     "validos": 1.21,
+     "oficial_mun": 4248
+    },
+    "20": {
+     "nome": "DR. LETINHO",
+     "votos": 2769,
+     "validos": 0.79,
+     "oficial_mun": 2769
+    },
+    "18": {
+     "nome": "ROBSON PAZ",
+     "votos": 622,
+     "validos": 0.18,
+     "oficial_mun": 622
+    }
+   }
+  },
+  "58777": {
+   "uf": "rj",
+   "secoes": 649,
+   "candidatos": {
+    "40": {
+     "nome": "RUBENS BOMTEMPO",
+     "votos": 39093,
+     "validos": 27.37,
+     "oficial_mun": 39093
+    },
+    "22": {
+     "nome": "BERNARDO ROSSI",
+     "votos": 23923,
+     "validos": 16.75,
+     "oficial_mun": 23923
+    },
+    "55": {
+     "nome": "PROFESSOR LEANDRO AZEVEDO",
+     "votos": 23719,
+     "validos": 16.61,
+     "oficial_mun": 23719
+    },
+    "17": {
+     "nome": "ELIAS MONTES",
+     "votos": 16282,
+     "validos": 11.4,
+     "oficial_mun": 16282
+    },
+    "20": {
+     "nome": "JAMIL SABRÁ NETO",
+     "votos": 7213,
+     "validos": 5.05,
+     "oficial_mun": 7213
+    },
+    "23": {
+     "nome": "ALEXANDRE GURGEL",
+     "votos": 6642,
+     "validos": 4.65,
+     "oficial_mun": 6642
+    },
+    "28": {
+     "nome": "CORONEL VIEIRA NETO",
+     "votos": 5404,
+     "validos": 3.78,
+     "oficial_mun": 5404
+    },
+    "10": {
+     "nome": "MATHEUS QUINTAL",
+     "votos": 5404,
+     "validos": 3.78,
+     "oficial_mun": 5404
+    },
+    "65": {
+     "nome": "PROFESSORA LIVIA MIRANDA",
+     "votos": 4968,
+     "validos": 3.48,
+     "oficial_mun": 4968
+    },
+    "50": {
+     "nome": "PROFESSOR ZÉ LUIZ",
+     "votos": 3991,
+     "validos": 2.79,
+     "oficial_mun": 3991
+    },
+    "70": {
+     "nome": "RAMON MELLO",
+     "votos": 3314,
+     "validos": 2.32,
+     "oficial_mun": 3314
+    },
+    "19": {
+     "nome": "EDUARDO SILVERIO",
+     "votos": 1473,
+     "validos": 1.03,
+     "oficial_mun": 1473
+    },
+    "12": {
+     "nome": "MARCOS NOVAES",
+     "votos": 1388,
+     "validos": 0.97,
+     "oficial_mun": 1388
+    }
+   }
+  },
+  "58971": {
+   "uf": "rj",
+   "secoes": 1814,
+   "candidatos": {
+    "13": {
+     "nome": "DIMAS GADELHA",
+     "votos": 117346,
+     "validos": 31.36,
+     "oficial_mun": 117346
+    },
+    "70": {
+     "nome": "CAPITÃO NELSON",
+     "votos": 85399,
+     "validos": 22.82,
+     "oficial_mun": 85399
+    },
+    "10": {
+     "nome": "DEJORGE PATRICIO",
+     "votos": 84664,
+     "validos": 22.62,
+     "oficial_mun": 84664
+    },
+    "17": {
+     "nome": "RICARDO PERICAR",
+     "votos": 34536,
+     "validos": 9.23,
+     "oficial_mun": 34536
+    },
+    "23": {
+     "nome": "DR JOSÉ LUIZ NANCI",
+     "votos": 27100,
+     "validos": 7.24,
+     "oficial_mun": 27100
+    },
+    "55": {
+     "nome": "ROBERTO SALES",
+     "votos": 9359,
+     "validos": 2.5,
+     "oficial_mun": 9359
+    },
+    "65": {
+     "nome": "ISAAC RICALDE",
+     "votos": 8775,
+     "validos": 2.34,
+     "oficial_mun": 8775
+    },
+    "40": {
+     "nome": "RODRIGO PIRACIABA",
+     "votos": 3905,
+     "validos": 1.04,
+     "oficial_mun": 3905
+    },
+    "16": {
+     "nome": "DAYSE OLIVEIRA",
+     "votos": 3129,
+     "validos": 0.84,
+     "oficial_mun": 3129
+    }
+   }
+  },
+  "59013": {
+   "uf": "rj",
+   "secoes": 986,
+   "candidatos": {
+    "25": {
+     "nome": "DR JOÃO",
+     "votos": 71730,
+     "validos": 32.27,
+     "oficial_mun": 71730
+    },
+    "20": {
+     "nome": "LEO VIEIRA",
+     "votos": 43499,
+     "validos": 19.57,
+     "oficial_mun": 43499
+    },
+    "17": {
+     "nome": "PROF JOZIEL",
+     "votos": 31492,
+     "validos": 14.17,
+     "oficial_mun": 31492
+    },
+    "10": {
+     "nome": "CHARLLES BATISTA",
+     "votos": 28043,
+     "validos": 12.62,
+     "oficial_mun": 28043
+    },
+    "90": {
+     "nome": "GIOVANI RATINHO",
+     "votos": 27276,
+     "validos": 12.27,
+     "oficial_mun": 27276
+    },
+    "50": {
+     "nome": "VINICIUS BAIÃO",
+     "votos": 7745,
+     "validos": 3.48,
+     "oficial_mun": 7745
+    },
+    "19": {
+     "nome": "TITINHO",
+     "votos": 7306,
+     "validos": 3.29,
+     "oficial_mun": 7306
+    },
+    "13": {
+     "nome": "PAULINHO DO SINDICATO",
+     "votos": 5190,
+     "validos": 2.33,
+     "oficial_mun": 5190
+    }
+   }
+  },
+  "59250": {
+   "uf": "rj",
+   "secoes": 622,
+   "candidatos": {
+    "25": {
+     "nome": "NETO",
+     "votos": 85673,
+     "validos": 57.2,
+     "oficial_mun": 85673
+    },
+    "55": {
+     "nome": "BALTAZAR",
+     "votos": 18961,
+     "validos": 12.66,
+     "oficial_mun": 18961
+    },
+    "20": {
+     "nome": "SAMUCA SILVA",
+     "votos": 13889,
+     "validos": 9.27,
+     "oficial_mun": 13889
+    },
+    "77": {
+     "nome": "GRANATO",
+     "votos": 7999,
+     "validos": 5.34,
+     "oficial_mun": 7999
+    },
+    "10": {
+     "nome": "HERMITON",
+     "votos": 5886,
+     "validos": 3.93,
+     "oficial_mun": 5886
+    },
+    "50": {
+     "nome": "JULIANA CARVALHO",
+     "votos": 3588,
+     "validos": 2.4,
+     "oficial_mun": 3588
+    },
+    "40": {
+     "nome": "ALEX MARTINS",
+     "votos": 3570,
+     "validos": 2.38,
+     "oficial_mun": 3570
+    },
+    "13": {
+     "nome": "CIDA DIOGO",
+     "votos": 3459,
+     "validos": 2.31,
+     "oficial_mun": 3459
+    },
+    "90": {
+     "nome": "DAYSE PENNA",
+     "votos": 3197,
+     "validos": 2.13,
+     "oficial_mun": 3197
+    },
+    "65": {
+     "nome": "PROFESSOR HABIBE",
+     "votos": 1617,
+     "validos": 1.08,
+     "oficial_mun": 1617
+    },
+    "23": {
+     "nome": "EVANDRO GLÓRIA",
+     "votos": 1022,
+     "validos": 0.68,
+     "oficial_mun": 1022
+    },
+    "70": {
+     "nome": "BENEVENUTO",
+     "votos": 687,
+     "validos": 0.46,
+     "oficial_mun": 687
+    },
+    "16": {
+     "nome": "MÔNICA TEIXEIRA",
+     "votos": 182,
+     "validos": 0.12,
+     "oficial_mun": 182
+    },
+    "29": {
+     "nome": "",
+     "votos": 57,
+     "validos": 0.04,
+     "oficial_mun": 0
+    }
+   }
+  },
+  "60011": {
+   "uf": "rj",
+   "secoes": 11467,
+   "candidatos": {
+    "25": {
+     "nome": "EDUARDO PAES",
+     "votos": 974804,
+     "validos": 37.01,
+     "oficial_mun": 974804
+    },
+    "10": {
+     "nome": "CRIVELLA",
+     "votos": 576825,
+     "validos": 21.9,
+     "oficial_mun": 576825
+    },
+    "12": {
+     "nome": "DELEGADA MARTHA ROCHA",
+     "votos": 297751,
+     "validos": 11.3,
+     "oficial_mun": 297751
+    },
+    "13": {
+     "nome": "BENEDITA DA SILVA",
+     "votos": 296847,
+     "validos": 11.27,
+     "oficial_mun": 296847
+    },
+    "17": {
+     "nome": "LUIZ LIMA",
+     "votos": 180336,
+     "validos": 6.85,
+     "oficial_mun": 180336
+    },
+    "50": {
+     "nome": "RENATA SOUZA",
+     "votos": 85272,
+     "validos": 3.24,
+     "oficial_mun": 85272
+    },
+    "15": {
+     "nome": "PAULO MESSINA",
+     "votos": 77093,
+     "validos": 2.93,
+     "oficial_mun": 77093
+    },
+    "18": {
+     "nome": "BANDEIRA DE MELLO",
+     "votos": 65296,
+     "validos": 2.48,
+     "oficial_mun": 65296
+    },
+    "30": {
+     "nome": "FRED LUZ",
+     "votos": 46246,
+     "validos": 1.76,
+     "oficial_mun": 46246
+    },
+    "20": {
+     "nome": "GLÓRIA HELOIZA",
+     "votos": 13816,
+     "validos": 0.52,
+     "oficial_mun": 13816
+    },
+    "90": {
+     "nome": "CLARISSA GAROTINHO",
+     "votos": 12178,
+     "validos": 0.46,
+     "oficial_mun": 12178
+    },
+    "35": {
+     "nome": "SUÊD HAIDAR",
+     "votos": 3833,
+     "validos": 0.15,
+     "oficial_mun": 3833
+    },
+    "16": {
+     "nome": "CYRO GARCIA",
+     "votos": 3025,
+     "validos": 0.11,
+     "oficial_mun": 3025
+    },
+    "29": {
+     "nome": "",
+     "votos": 589,
+     "validos": 0.02,
+     "oficial_mun": 0
+    }
+   }
+  },
+  "6050": {
+   "uf": "ap",
+   "secoes": 703,
+   "candidatos": {
+    "25": {
+     "nome": "JOSIEL",
+     "votos": 59511,
+     "validos": 29.47,
+     "oficial_mun": 59511
+    },
+    "23": {
+     "nome": "DR FURLAN",
+     "votos": 32369,
+     "validos": 16.03,
+     "oficial_mun": 32369
+    },
+    "40": {
+     "nome": "CAPI",
+     "votos": 30160,
+     "validos": 14.94,
+     "oficial_mun": 30160
+    },
+    "28": {
+     "nome": "CIRILO FERNANDES",
+     "votos": 23588,
+     "validos": 11.68,
+     "oficial_mun": 23588
+    },
+    "19": {
+     "nome": "PATRÍCIA FERRAZ",
+     "votos": 22761,
+     "validos": 11.27,
+     "oficial_mun": 22761
+    },
+    "17": {
+     "nome": "",
+     "votos": 17182,
+     "validos": 8.51,
+     "oficial_mun": 0
+    },
+    "50": {
+     "nome": "PAULO LEMOS",
+     "votos": 7998,
+     "validos": 3.96,
+     "oficial_mun": 7998
+    },
+    "36": {
+     "nome": "HAROLDO IRAM",
+     "votos": 4022,
+     "validos": 1.99,
+     "oficial_mun": 4022
+    },
+    "13": {
+     "nome": "PROFESSOR MARCOS",
+     "votos": 3075,
+     "validos": 1.52,
+     "oficial_mun": 3075
+    },
+    "16": {
+     "nome": "GIANFRANCO",
+     "votos": 1243,
+     "validos": 0.62,
+     "oficial_mun": 1243
+    }
+   }
+  },
+  "62138": {
+   "uf": "sp",
+   "secoes": 644,
+   "candidatos": {
+    "45": {
+     "nome": "RUBENS FURLAN",
+     "votos": 145377,
+     "validos": 85.35,
+     "oficial_mun": 145377
+    },
+    "40": {
+     "nome": "MARI TAVELLI",
+     "votos": 9965,
+     "validos": 5.85,
+     "oficial_mun": 9965
+    },
+    "13": {
+     "nome": "BALTASAR ROSA",
+     "votos": 4076,
+     "validos": 2.39,
+     "oficial_mun": 4076
+    },
+    "33": {
+     "nome": "JULIO LEAL",
+     "votos": 3562,
+     "validos": 2.09,
+     "oficial_mun": 3562
+    },
+    "90": {
+     "nome": "REINALDO MONTEIRO",
+     "votos": 2772,
+     "validos": 1.63,
+     "oficial_mun": 2772
+    },
+    "19": {
+     "nome": "CAPITÃO ATALIBA",
+     "votos": 2546,
+     "validos": 1.49,
+     "oficial_mun": 2546
+    },
+    "50": {
+     "nome": "PROFESSOR BALDE",
+     "votos": 2028,
+     "validos": 1.19,
+     "oficial_mun": 2028
+    }
+   }
+  },
+  "62197": {
+   "uf": "sp",
+   "secoes": 694,
+   "candidatos": {
+    "51": {
+     "nome": "SUÉLLEN ROSIM",
+     "votos": 57844,
+     "validos": 35.6,
+     "oficial_mun": 57844
+    },
+    "25": {
+     "nome": "DR RAUL",
+     "votos": 53299,
+     "validos": 32.8,
+     "oficial_mun": 53299
+    },
+    "45": {
+     "nome": "GAZZETTA",
+     "votos": 14264,
+     "validos": 8.78,
+     "oficial_mun": 14264
+    },
+    "13": {
+     "nome": "JORGE MOURA",
+     "votos": 9644,
+     "validos": 5.94,
+     "oficial_mun": 9644
+    },
+    "40": {
+     "nome": "ROSANA POLATTO",
+     "votos": 7387,
+     "validos": 4.55,
+     "oficial_mun": 7387
+    },
+    "19": {
+     "nome": "VALLE",
+     "votos": 6799,
+     "validos": 4.18,
+     "oficial_mun": 6799
+    },
+    "10": {
+     "nome": "EDU AVALLONE",
+     "votos": 4758,
+     "validos": 2.93,
+     "oficial_mun": 4758
+    },
+    "55": {
+     "nome": "SANDRO BUSSOLA",
+     "votos": 3170,
+     "validos": 1.95,
+     "oficial_mun": 3170
+    },
+    "50": {
+     "nome": "",
+     "votos": 2342,
+     "validos": 1.44,
+     "oficial_mun": 0
+    },
+    "12": {
+     "nome": "",
+     "votos": 1563,
+     "validos": 0.96,
+     "oficial_mun": 0
+    },
+    "90": {
+     "nome": "KIM",
+     "votos": 737,
+     "validos": 0.45,
+     "oficial_mun": 737
+    },
+    "77": {
+     "nome": "SERGIO ALBA",
+     "votos": 614,
+     "validos": 0.38,
+     "oficial_mun": 614
+    },
+    "29": {
+     "nome": "",
+     "votos": 54,
+     "validos": 0.03,
+     "oficial_mun": 0
+    }
+   }
+  },
+  "62910": {
+   "uf": "sp",
+   "secoes": 2199,
+   "candidatos": {
+    "10": {
+     "nome": "DARIO SAADI",
+     "votos": 121932,
+     "validos": 25.78,
+     "oficial_mun": 121932
+    },
+    "22": {
+     "nome": "RAFA ZIMBALDI",
+     "votos": 103397,
+     "validos": 21.86,
+     "oficial_mun": 103397
+    },
+    "13": {
+     "nome": "PEDRO TOURINHO",
+     "votos": 96905,
+     "validos": 20.49,
+     "oficial_mun": 96905
+    },
+    "55": {
+     "nome": "ARTUR ORSI",
+     "votos": 79076,
+     "validos": 16.72,
+     "oficial_mun": 79076
+    },
+    "51": {
+     "nome": "WILSON MATOS",
+     "votos": 15138,
+     "validos": 3.2,
+     "oficial_mun": 15138
+    },
+    "14": {
+     "nome": "DELEGADA TERESINHA",
+     "votos": 15101,
+     "validos": 3.19,
+     "oficial_mun": 15101
+    },
+    "65": {
+     "nome": "ALESSANDRA RIBEIRO",
+     "votos": 12245,
+     "validos": 2.59,
+     "oficial_mun": 12245
+    },
+    "12": {
+     "nome": "",
+     "votos": 9021,
+     "validos": 1.91,
+     "oficial_mun": 0
+    },
+    "28": {
+     "nome": "ROGERIO PARADA",
+     "votos": 6778,
+     "validos": 1.43,
+     "oficial_mun": 6778
+    },
+    "23": {
+     "nome": "ANDRÉ VON ZUBEN",
+     "votos": 6667,
+     "validos": 1.41,
+     "oficial_mun": 6667
+    },
+    "43": {
+     "nome": "ROGERIO MENEZES",
+     "votos": 5490,
+     "validos": 1.16,
+     "oficial_mun": 5490
+    },
+    "33": {
+     "nome": "PROF AHMED TARIQUE AGIO",
+     "votos": 588,
+     "validos": 0.12,
+     "oficial_mun": 588
+    },
+    "16": {
+     "nome": "LAURA LEAL",
+     "votos": 498,
+     "validos": 0.11,
+     "oficial_mun": 498
+    },
+    "29": {
+     "nome": "",
+     "votos": 126,
+     "validos": 0.03,
+     "oficial_mun": 0
+    }
+   }
+  },
+  "63134": {
+   "uf": "sp",
+   "secoes": 710,
+   "candidatos": {
+    "45": {
+     "nome": "MARCOS NEVES",
+     "votos": 128773,
+     "validos": 72.64,
+     "oficial_mun": 128773
+    },
+    "55": {
+     "nome": "PROFESSORA SÔNIA",
+     "votos": 21085,
+     "validos": 11.89,
+     "oficial_mun": 21085
+    },
+    "13": {
+     "nome": "SERGIO RIBEIRO",
+     "votos": 12807,
+     "validos": 7.22,
+     "oficial_mun": 12807
+    },
+    "12": {
+     "nome": "NÉIA COSTA",
+     "votos": 5853,
+     "validos": 3.3,
+     "oficial_mun": 5853
+    },
+    "65": {
+     "nome": "DRA AMANDA HORATORIO",
+     "votos": 2771,
+     "validos": 1.56,
+     "oficial_mun": 2771
+    },
+    "17": {
+     "nome": "VASQUINHO GAMA",
+     "votos": 2320,
+     "validos": 1.31,
+     "oficial_mun": 2320
+    },
+    "50": {
+     "nome": "",
+     "votos": 2069,
+     "validos": 1.17,
+     "oficial_mun": 0
+    },
+    "14": {
+     "nome": "DR HENRIQUE APPARICIO",
+     "votos": 624,
+     "validos": 0.35,
+     "oficial_mun": 624
+    },
+    "16": {
+     "nome": "WILLIAM TEIXEIRA",
+     "votos": 487,
+     "validos": 0.27,
+     "oficial_mun": 487
+    },
+    "28": {
+     "nome": "EDIMAR SALEM",
+     "votos": 313,
+     "validos": 0.18,
+     "oficial_mun": 313
+    },
+    "35": {
+     "nome": "LUIZ TEIXEIRA",
+     "votos": 169,
+     "validos": 0.1,
+     "oficial_mun": 169
+    }
+   }
+  },
+  "63770": {
+   "uf": "sp",
+   "secoes": 807,
+   "candidatos": {
+    "13": {
+     "nome": "FILIPPI",
+     "votos": 92670,
+     "validos": 45.65,
+     "oficial_mun": 92670
+    },
+    "55": {
+     "nome": "TAKA YAMAUCHI",
+     "votos": 31301,
+     "validos": 15.42,
+     "oficial_mun": 31301
+    },
+    "45": {
+     "nome": "DR RICARDO YOSHIO",
+     "votos": 29726,
+     "validos": 14.64,
+     "oficial_mun": 29726
+    },
+    "25": {
+     "nome": "REVELINO ALMEIDA - PRETINHO",
+     "votos": 20524,
+     "validos": 10.11,
+     "oficial_mun": 20524
+    },
+    "12": {
+     "nome": "RONALDO LACERDA",
+     "votos": 10684,
+     "validos": 5.26,
+     "oficial_mun": 10684
+    },
+    "40": {
+     "nome": "MARCOS MICHELS",
+     "votos": 5588,
+     "validos": 2.75,
+     "oficial_mun": 5588
+    },
+    "10": {
+     "nome": "GESIEL DUARTE",
+     "votos": 5054,
+     "validos": 2.49,
+     "oficial_mun": 5054
+    },
+    "28": {
+     "nome": "DENISE VENTRICI",
+     "votos": 1882,
+     "validos": 0.93,
+     "oficial_mun": 1882
+    },
+    "50": {
+     "nome": "RAFAELA BOANI",
+     "votos": 1835,
+     "validos": 0.9,
+     "oficial_mun": 1835
+    },
+    "17": {
+     "nome": "JHONNY RICH",
+     "votos": 1532,
+     "validos": 0.75,
+     "oficial_mun": 1532
+    },
+    "20": {
+     "nome": "ARQUITETO DAVID",
+     "votos": 1378,
+     "validos": 0.68,
+     "oficial_mun": 1378
+    },
+    "35": {
+     "nome": "DR AIRTON",
+     "votos": 485,
+     "validos": 0.24,
+     "oficial_mun": 485
+    },
+    "16": {
+     "nome": "PROFESSOR IVANCI",
+     "votos": 360,
+     "validos": 0.18,
+     "oficial_mun": 360
+    }
+   }
+  },
+  "64254": {
+   "uf": "sp",
+   "secoes": 616,
+   "candidatos": {
+    "55": {
+     "nome": "FLÁVIA LANCHA",
+     "votos": 35338,
+     "validos": 24.61,
+     "oficial_mun": 35338
+    },
+    "15": {
+     "nome": "ALEXANDRE FERREIRA",
+     "votos": 27772,
+     "validos": 19.34,
+     "oficial_mun": 27772
+    },
+    "17": {
+     "nome": "JOÃO ROCHA",
+     "votos": 25860,
+     "validos": 18.01,
+     "oficial_mun": 25860
+    },
+    "45": {
+     "nome": "ADÉRMIS MARINI",
+     "votos": 22203,
+     "validos": 15.46,
+     "oficial_mun": 22203
+    },
+    "13": {
+     "nome": "BRUXELLAS",
+     "votos": 17375,
+     "validos": 12.1,
+     "oficial_mun": 17375
+    },
+    "25": {
+     "nome": "GILSON DE SOUZA",
+     "votos": 9664,
+     "validos": 6.73,
+     "oficial_mun": 9664
+    },
+    "50": {
+     "nome": "MARÍLIA MARTINS",
+     "votos": 3578,
+     "validos": 2.49,
+     "oficial_mun": 3578
+    },
+    "14": {
+     "nome": "ORIVALDO DONZELLI",
+     "votos": 1809,
+     "validos": 1.26,
+     "oficial_mun": 1809
+    }
+   }
+  },
+  "64750": {
+   "uf": "sp",
+   "secoes": 577,
+   "candidatos": {
+    "40": {
+     "nome": "DR. VÁLTER SUMAN",
+     "votos": 112672,
+     "validos": 75.68,
+     "oficial_mun": 112672
+    },
+    "28": {
+     "nome": "MIGUEL CALMON",
+     "votos": 12440,
+     "validos": 8.36,
+     "oficial_mun": 12440
+    },
+    "25": {
+     "nome": "DEDÉ DO ADÉLIA",
+     "votos": 6451,
+     "validos": 4.33,
+     "oficial_mun": 6451
+    },
+    "19": {
+     "nome": "MAGAIVER",
+     "votos": 6113,
+     "validos": 4.11,
+     "oficial_mun": 6113
+    },
+    "10": {
+     "nome": "RODRIGO BARBOZA",
+     "votos": 3535,
+     "validos": 2.37,
+     "oficial_mun": 3535
+    },
+    "45": {
+     "nome": "ANDRÉ GUERATO",
+     "votos": 2263,
+     "validos": 1.52,
+     "oficial_mun": 2263
+    },
+    "50": {
+     "nome": "PROF VALTER BATISTA",
+     "votos": 2111,
+     "validos": 1.42,
+     "oficial_mun": 2111
+    },
+    "51": {
+     "nome": "LUCIANA SALITURI",
+     "votos": 1912,
+     "validos": 1.28,
+     "oficial_mun": 1912
+    },
+    "27": {
+     "nome": "SERGIO ZAGARINO",
+     "votos": 1386,
+     "validos": 0.93,
+     "oficial_mun": 1386
+    }
+   }
+  },
+  "64777": {
+   "uf": "sp",
+   "secoes": 2244,
+   "candidatos": {
+    "55": {
+     "nome": "GUTI",
+     "votos": 261211,
+     "validos": 45.49,
+     "oficial_mun": 261211
+    },
+    "13": {
+     "nome": "ELÓI PIETÁ",
+     "votos": 184502,
+     "validos": 32.13,
+     "oficial_mun": 184502
+    },
+    "45": {
+     "nome": "FRAN CORREA",
+     "votos": 60048,
+     "validos": 10.46,
+     "oficial_mun": 60048
+    },
+    "28": {
+     "nome": "RODRIGO TAVARES",
+     "votos": 23426,
+     "validos": 4.08,
+     "oficial_mun": 23426
+    },
+    "22": {
+     "nome": "ADRIANA AFONSO",
+     "votos": 16110,
+     "validos": 2.81,
+     "oficial_mun": 16110
+    },
+    "50": {
+     "nome": "SIMONE CARLETO",
+     "votos": 9319,
+     "validos": 1.62,
+     "oficial_mun": 9319
+    },
+    "14": {
+     "nome": "",
+     "votos": 6797,
+     "validos": 1.18,
+     "oficial_mun": 0
+    },
+    "12": {
+     "nome": "PROFESSORA SANDRA SANTOS",
+     "votos": 6646,
+     "validos": 1.16,
+     "oficial_mun": 6646
+    },
+    "90": {
+     "nome": "",
+     "votos": 2426,
+     "validos": 0.42,
+     "oficial_mun": 0
+    },
+    "43": {
+     "nome": "",
+     "votos": 1987,
+     "validos": 0.35,
+     "oficial_mun": 0
+    },
+    "65": {
+     "nome": "",
+     "votos": 1736,
+     "validos": 0.3,
+     "oficial_mun": 0
+    }
+   }
+  },
+  "65633": {
+   "uf": "sp",
+   "secoes": 600,
+   "candidatos": {
+    "11": {
+     "nome": "DELEGADO EDUARDO BOIGUES",
+     "votos": 94604,
+     "validos": 62.1,
+     "oficial_mun": 94604
+    },
+    "22": {
+     "nome": "ADRIANA DO HOSPITAL",
+     "votos": 29165,
+     "validos": 19.14,
+     "oficial_mun": 29165
+    },
+    "70": {
+     "nome": "HEROILMA",
+     "votos": 19023,
+     "validos": 12.49,
+     "oficial_mun": 19023
+    },
+    "13": {
+     "nome": "FABIANO",
+     "votos": 7794,
+     "validos": 5.12,
+     "oficial_mun": 7794
+    },
+    "51": {
+     "nome": "MOACYR FERNANDES",
+     "votos": 1758,
+     "validos": 1.15,
+     "oficial_mun": 1758
+    }
+   }
+  },
+  "66192": {
+   "uf": "sp",
+   "secoes": 797,
+   "candidatos": {
+    "45": {
+     "nome": "LUIZ FERNANDO MACHADO",
+     "votos": 134793,
+     "validos": 69.64,
+     "oficial_mun": 134793
+    },
+    "18": {
+     "nome": "PEDRO BIGARDI",
+     "votos": 11026,
+     "validos": 5.7,
+     "oficial_mun": 11026
+    },
+    "30": {
+     "nome": "EDNEY DUARTE JR",
+     "votos": 7292,
+     "validos": 3.77,
+     "oficial_mun": 7292
+    },
+    "17": {
+     "nome": "MARCUS DANTAS",
+     "votos": 6754,
+     "validos": 3.49,
+     "oficial_mun": 6754
+    },
+    "13": {
+     "nome": "DANIELA",
+     "votos": 6444,
+     "validos": 3.33,
+     "oficial_mun": 6444
+    },
+    "19": {
+     "nome": "DR PACHECO",
+     "votos": 6310,
+     "validos": 3.26,
+     "oficial_mun": 6310
+    },
+    "40": {
+     "nome": "FÁBIO MARCUSSI",
+     "votos": 5960,
+     "validos": 3.08,
+     "oficial_mun": 5960
+    },
+    "28": {
+     "nome": "SILAS FEITOSA",
+     "votos": 5725,
+     "validos": 2.96,
+     "oficial_mun": 5725
+    },
+    "50": {
+     "nome": "CÍNTIA VANESSA",
+     "votos": 4091,
+     "validos": 2.11,
+     "oficial_mun": 4091
+    },
+    "27": {
+     "nome": "MARCIA PARÁ",
+     "votos": 2088,
+     "validos": 1.08,
+     "oficial_mun": 2088
+    },
+    "65": {
+     "nome": "PROFESSOR RAFAEL PURGATO",
+     "votos": 1661,
+     "validos": 0.86,
+     "oficial_mun": 1661
+    },
+    "12": {
+     "nome": "ALÊ NICOLA",
+     "votos": 1098,
+     "validos": 0.57,
+     "oficial_mun": 1098
+    },
+    "90": {
+     "nome": "EDIMARCO SILVA",
+     "votos": 312,
+     "validos": 0.16,
+     "oficial_mun": 312
+    }
+   }
+  },
+  "66397": {
+   "uf": "sp",
+   "secoes": 576,
+   "candidatos": {
+    "55": {
+     "nome": "MARIO BOTION",
+     "votos": 45248,
+     "validos": 32.32,
+     "oficial_mun": 45248
+    },
+    "19": {
+     "nome": "MURILO FELIX",
+     "votos": 31402,
+     "validos": 22.43,
+     "oficial_mun": 31402
+    },
+    "23": {
+     "nome": "DR. MAYRA",
+     "votos": 30843,
+     "validos": 22.03,
+     "oficial_mun": 30843
+    },
+    "15": {
+     "nome": "DR RAFAEL CAMARGO",
+     "votos": 7761,
+     "validos": 5.54,
+     "oficial_mun": 7761
+    },
+    "45": {
+     "nome": "ELISEU DANIEL",
+     "votos": 7312,
+     "validos": 5.22,
+     "oficial_mun": 7312
+    },
+    "11": {
+     "nome": "MÁRCIO PAIXÃO",
+     "votos": 6740,
+     "validos": 4.81,
+     "oficial_mun": 6740
+    },
+    "13": {
+     "nome": "WILSON CERQUEIRA",
+     "votos": 3198,
+     "validos": 2.28,
+     "oficial_mun": 3198
+    },
+    "51": {
+     "nome": "PROF PAULO MORAIS",
+     "votos": 2770,
+     "validos": 1.98,
+     "oficial_mun": 2770
+    },
+    "50": {
+     "nome": "LIVIA LAZANEO",
+     "votos": 1810,
+     "validos": 1.29,
+     "oficial_mun": 1810
+    },
+    "36": {
+     "nome": "CLAYTON SILVA",
+     "votos": 1475,
+     "validos": 1.05,
+     "oficial_mun": 1475
+    },
+    "14": {
+     "nome": "DE CARVALHO JOIAS",
+     "votos": 1429,
+     "validos": 1.02,
+     "oficial_mun": 1429
+    }
+   }
+  },
+  "66893": {
+   "uf": "sp",
+   "secoes": 764,
+   "candidatos": {
+    "40": {
+     "nome": "ATILA",
+     "votos": 70490,
+     "validos": 36.47,
+     "oficial_mun": 70490
+    },
+    "13": {
+     "nome": "MARCELO OLIVEIRA",
+     "votos": 38330,
+     "validos": 19.83,
+     "oficial_mun": 38330
+    },
+    "55": {
+     "nome": "JUIZ JOÃO",
+     "votos": 37675,
+     "validos": 19.49,
+     "oficial_mun": 37675
+    },
+    "45": {
+     "nome": "ZÉ LOURENCINI",
+     "votos": 18134,
+     "validos": 9.38,
+     "oficial_mun": 18134
+    },
+    "28": {
+     "nome": "POLICIAL FEDERAL MAURO ROMAN",
+     "votos": 7425,
+     "validos": 3.84,
+     "oficial_mun": 7425
+    },
+    "12": {
+     "nome": "DONISETE BRAGA",
+     "votos": 5174,
+     "validos": 2.68,
+     "oficial_mun": 5174
+    },
+    "80": {
+     "nome": "AMANDA BISPO",
+     "votos": 3950,
+     "validos": 2.04,
+     "oficial_mun": 3950
+    },
+    "11": {
+     "nome": "RONALDO PEDROSA",
+     "votos": 3898,
+     "validos": 2.02,
+     "oficial_mun": 3898
+    },
+    "15": {
+     "nome": "VANESSA DAMO",
+     "votos": 2948,
+     "validos": 1.53,
+     "oficial_mun": 2948
+    },
+    "50": {
+     "nome": "ANDRÉ SAPANOS",
+     "votos": 2426,
+     "validos": 1.26,
+     "oficial_mun": 2426
+    },
+    "17": {
+     "nome": "PROFESSOR BETINHO",
+     "votos": 1991,
+     "validos": 1.03,
+     "oficial_mun": 1991
+    },
+    "33": {
+     "nome": "DRA ROSENI",
+     "votos": 793,
+     "validos": 0.41,
+     "oficial_mun": 793
+    },
+    "29": {
+     "nome": "",
+     "votos": 40,
+     "validos": 0.02,
+     "oficial_mun": 0
+    }
+   }
+  },
+  "67130": {
+   "uf": "sp",
+   "secoes": 824,
+   "candidatos": {
+    "45": {
+     "nome": "MARCUS MELO",
+     "votos": 81555,
+     "validos": 42.29,
+     "oficial_mun": 81555
+    },
+    "19": {
+     "nome": "CAIO CUNHA",
+     "votos": 54591,
+     "validos": 28.31,
+     "oficial_mun": 54591
+    },
+    "13": {
+     "nome": "RODRIGO VALVERDE",
+     "votos": 33509,
+     "validos": 17.38,
+     "oficial_mun": 33509
+    },
+    "28": {
+     "nome": "FELIPE LINTZ",
+     "votos": 16971,
+     "validos": 8.8,
+     "oficial_mun": 16971
+    },
+    "90": {
+     "nome": "",
+     "votos": 2319,
+     "validos": 1.2,
+     "oficial_mun": 0
+    },
+    "36": {
+     "nome": "MICHAEL DELLA TORRE",
+     "votos": 2058,
+     "validos": 1.07,
+     "oficial_mun": 2058
+    },
+    "12": {
+     "nome": "FRED COSTA",
+     "votos": 1850,
+     "validos": 0.96,
+     "oficial_mun": 1850
+    }
+   }
+  },
+  "67890": {
+   "uf": "sp",
+   "secoes": 1400,
+   "candidatos": {
+    "19": {
+     "nome": "ROGÉRIO LINS",
+     "votos": 204207,
+     "validos": 60.94,
+     "oficial_mun": 204207
+    },
+    "10": {
+     "nome": "DR LINDOSO",
+     "votos": 66543,
+     "validos": 19.86,
+     "oficial_mun": 66543
+    },
+    "13": {
+     "nome": "EMIDIO DE SOUZA",
+     "votos": 44849,
+     "validos": 13.38,
+     "oficial_mun": 44849
+    },
+    "50": {
+     "nome": "SIMONY DOS ANJOS",
+     "votos": 15202,
+     "validos": 4.54,
+     "oficial_mun": 15202
+    },
+    "77": {
+     "nome": "",
+     "votos": 2244,
+     "validos": 0.67,
+     "oficial_mun": 0
+    },
+    "28": {
+     "nome": "",
+     "votos": 2029,
+     "validos": 0.61,
+     "oficial_mun": 0
+    }
+   }
+  },
+  "68756": {
+   "uf": "sp",
+   "secoes": 763,
+   "candidatos": {
+    "45": {
+     "nome": "",
+     "votos": 56760,
+     "validos": 34.33,
+     "oficial_mun": 0
+    },
+    "25": {
+     "nome": "LUCIANO ALMEIDA",
+     "votos": 25786,
+     "validos": 15.6,
+     "oficial_mun": 25786
+    },
+    "17": {
+     "nome": "CORONEL ADRIANA",
+     "votos": 22432,
+     "validos": 13.57,
+     "oficial_mun": 22432
+    },
+    "51": {
+     "nome": "ÉRICA GORGA",
+     "votos": 14470,
+     "validos": 8.75,
+     "oficial_mun": 14470
+    },
+    "13": {
+     "nome": "PROFESSOR ADELINO",
+     "votos": 12340,
+     "validos": 7.46,
+     "oficial_mun": 12340
+    },
+    "70": {
+     "nome": "EDVALDO BRITO",
+     "votos": 10543,
+     "validos": 6.38,
+     "oficial_mun": 10543
+    },
+    "43": {
+     "nome": "NANCY THAME",
+     "votos": 9251,
+     "validos": 5.6,
+     "oficial_mun": 9251
+    },
+    "22": {
+     "nome": "ZÉ PEDRO",
+     "votos": 6477,
+     "validos": 3.92,
+     "oficial_mun": 6477
+    },
+    "12": {
+     "nome": "CAROLINA ANGELELLI",
+     "votos": 3776,
+     "validos": 2.28,
+     "oficial_mun": 3776
+    },
+    "40": {
+     "nome": "MÁRIO NETO",
+     "votos": 2245,
+     "validos": 1.36,
+     "oficial_mun": 2245
+    },
+    "65": {
+     "nome": "FRANCYS ALMEIDA",
+     "votos": 1098,
+     "validos": 0.66,
+     "oficial_mun": 1098
+    },
+    "36": {
+     "nome": "CARLITO",
+     "votos": 135,
+     "validos": 0.08,
+     "oficial_mun": 135
+    }
+   }
+  },
+  "69213": {
+   "uf": "sp",
+   "secoes": 587,
+   "candidatos": {
+    "45": {
+     "nome": "RAQUEL CHINI",
+     "votos": 55204,
+     "validos": 39.05,
+     "oficial_mun": 55204
+    },
+    "17": {
+     "nome": "DANILO MORGADO",
+     "votos": 50317,
+     "validos": 35.6,
+     "oficial_mun": 50317
+    },
+    "10": {
+     "nome": "ALEXANDRE CUNHA",
+     "votos": 12001,
+     "validos": 8.49,
+     "oficial_mun": 12001
+    },
+    "22": {
+     "nome": "JANAINA BALLARIS",
+     "votos": 11545,
+     "validos": 8.17,
+     "oficial_mun": 11545
+    },
+    "19": {
+     "nome": "DELEGADO COMIN",
+     "votos": 9280,
+     "validos": 6.56,
+     "oficial_mun": 9280
+    },
+    "13": {
+     "nome": "PROFESSOR MAURÍCIO",
+     "votos": 1579,
+     "validos": 1.12,
+     "oficial_mun": 1579
+    },
+    "50": {
+     "nome": "JASPER SOL",
+     "votos": 904,
+     "validos": 0.64,
+     "oficial_mun": 904
+    },
+    "28": {
+     "nome": "ERIKA PEDROSA",
+     "votos": 526,
+     "validos": 0.37,
+     "oficial_mun": 526
+    }
+   }
+  },
+  "69698": {
+   "uf": "sp",
+   "secoes": 1130,
+   "candidatos": {
+    "45": {
+     "nome": "DUARTE NOGUEIRA",
+     "votos": 115724,
+     "validos": 45.87,
+     "oficial_mun": 115724
+    },
+    "40": {
+     "nome": "SUELY VILELA",
+     "votos": 52266,
+     "validos": 20.72,
+     "oficial_mun": 52266
+    },
+    "51": {
+     "nome": "CHIARELLI",
+     "votos": 27511,
+     "validos": 10.9,
+     "oficial_mun": 27511
+    },
+    "15": {
+     "nome": "CRIS BEZERRA",
+     "votos": 17800,
+     "validos": 7.06,
+     "oficial_mun": 17800
+    },
+    "28": {
+     "nome": "CORONEL USAI",
+     "votos": 17455,
+     "validos": 6.92,
+     "oficial_mun": 17455
+    },
+    "13": {
+     "nome": "MACHADO",
+     "votos": 17190,
+     "validos": 6.81,
+     "oficial_mun": 17190
+    },
+    "50": {
+     "nome": "MAURO INÁCIO",
+     "votos": 3115,
+     "validos": 1.23,
+     "oficial_mun": 3115
+    },
+    "65": {
+     "nome": "VANDERLEY CAIXE",
+     "votos": 669,
+     "validos": 0.27,
+     "oficial_mun": 669
+    },
+    "18": {
+     "nome": "EMILSON ROVERI",
+     "votos": 556,
+     "validos": 0.22,
+     "oficial_mun": 556
+    }
+   }
+  },
+  "70572": {
+   "uf": "sp",
+   "secoes": 1443,
+   "candidatos": {
+    "45": {
+     "nome": "PAULO SERRA",
+     "votos": 266591,
+     "validos": 76.88,
+     "oficial_mun": 266591
+    },
+    "13": {
+     "nome": "PROFESSORA BETE SIRAQUE",
+     "votos": 25493,
+     "validos": 7.35,
+     "oficial_mun": 25493
+    },
+    "50": {
+     "nome": "BRUNO DANIEL",
+     "votos": 25018,
+     "validos": 7.21,
+     "oficial_mun": 25018
+    },
+    "40": {
+     "nome": "AILTON LIMA",
+     "votos": 17636,
+     "validos": 5.09,
+     "oficial_mun": 17636
+    },
+    "51": {
+     "nome": "SARGENTO LOBO",
+     "votos": 6753,
+     "validos": 1.95,
+     "oficial_mun": 6753
+    },
+    "28": {
+     "nome": "POLICIAL FEDERAL DENNIS FERRAO",
+     "votos": 3529,
+     "validos": 1.02,
+     "oficial_mun": 3529
+    },
+    "77": {
+     "nome": "JOÃO AVAMILENO",
+     "votos": 961,
+     "validos": 0.28,
+     "oficial_mun": 961
+    },
+    "36": {
+     "nome": "ALEX ARRAIS",
+     "votos": 569,
+     "validos": 0.16,
+     "oficial_mun": 569
+    },
+    "29": {
+     "nome": "",
+     "votos": 226,
+     "validos": 0.07,
+     "oficial_mun": 0
+    }
+   }
+  },
+  "70718": {
+   "uf": "sp",
+   "secoes": 924,
+   "candidatos": {
+    "45": {
+     "nome": "ROGÉRIO SANTOS",
+     "votos": 101268,
+     "validos": 50.58,
+     "oficial_mun": 101268
+    },
+    "55": {
+     "nome": "IVAN SARTORI",
+     "votos": 37231,
+     "validos": 18.6,
+     "oficial_mun": 37231
+    },
+    "13": {
+     "nome": "DOUGLAS MARTINS",
+     "votos": 14221,
+     "validos": 7.1,
+     "oficial_mun": 14221
+    },
+    "90": {
+     "nome": "VICENTE CASCIONE",
+     "votos": 13999,
+     "validos": 6.99,
+     "oficial_mun": 13999
+    },
+    "50": {
+     "nome": "GUILHERME PRADO",
+     "votos": 8230,
+     "validos": 4.11,
+     "oficial_mun": 8230
+    },
+    "15": {
+     "nome": "BANHA",
+     "votos": 7757,
+     "validos": 3.87,
+     "oficial_mun": 7757
+    },
+    "30": {
+     "nome": "JOÃO VILLELA",
+     "votos": 7177,
+     "validos": 3.58,
+     "oficial_mun": 7177
+    },
+    "12": {
+     "nome": "DR MARCIO AURELIO",
+     "votos": 2736,
+     "validos": 1.37,
+     "oficial_mun": 2736
+    },
+    "14": {
+     "nome": "BAYARD",
+     "votos": 1832,
+     "validos": 0.92,
+     "oficial_mun": 1832
+    },
+    "65": {
+     "nome": "THIAGO ANDRADE",
+     "votos": 1367,
+     "validos": 0.68,
+     "oficial_mun": 1367
+    },
+    "43": {
+     "nome": "MOYSÉS FERNANDES",
+     "votos": 1102,
+     "validos": 0.55,
+     "oficial_mun": 1102
+    },
+    "28": {
+     "nome": "",
+     "votos": 1047,
+     "validos": 0.52,
+     "oficial_mun": 0
+    },
+    "27": {
+     "nome": "DELEGADO ROMANO",
+     "votos": 876,
+     "validos": 0.44,
+     "oficial_mun": 876
+    },
+    "23": {
+     "nome": "TANAH CORREA",
+     "votos": 669,
+     "validos": 0.33,
+     "oficial_mun": 669
+    },
+    "70": {
+     "nome": "CARLOS PAZ",
+     "votos": 473,
+     "validos": 0.24,
+     "oficial_mun": 473
+    },
+    "16": {
+     "nome": "LUIZ XAVIER",
+     "votos": 230,
+     "validos": 0.11,
+     "oficial_mun": 230
+    }
+   }
+  },
+  "70750": {
+   "uf": "sp",
+   "secoes": 1563,
+   "candidatos": {
+    "45": {
+     "nome": "ORLANDO MORANDO",
+     "votos": 261761,
+     "validos": 67.28,
+     "oficial_mun": 261761
+    },
+    "13": {
+     "nome": "LUIZ MARINHO",
+     "votos": 90803,
+     "validos": 23.34,
+     "oficial_mun": 90803
+    },
+    "17": {
+     "nome": "RAFAEL DEMARCHI",
+     "votos": 19859,
+     "validos": 5.1,
+     "oficial_mun": 19859
+    },
+    "40": {
+     "nome": "DR LEANDRO ALTRÃO",
+     "votos": 9839,
+     "validos": 2.53,
+     "oficial_mun": 9839
+    },
+    "50": {
+     "nome": "LOURDES DA CHAPA COLETIVA",
+     "votos": 6076,
+     "validos": 1.56,
+     "oficial_mun": 6076
+    },
+    "16": {
+     "nome": "CLAUDIO DONIZETE",
+     "votos": 743,
+     "validos": 0.19,
+     "oficial_mun": 743
+    }
+   }
+  },
+  "70971": {
+   "uf": "sp",
+   "secoes": 870,
+   "candidatos": {
+    "15": {
+     "nome": "EDINHO ARAÚJO",
+     "votos": 111525,
+     "validos": 54.84,
+     "oficial_mun": 111525
+    },
+    "10": {
+     "nome": "CORONEL HELENA",
+     "votos": 55234,
+     "validos": 27.16,
+     "oficial_mun": 55234
+    },
+    "17": {
+     "nome": "CASALE",
+     "votos": 9894,
+     "validos": 4.87,
+     "oficial_mun": 9894
+    },
+    "50": {
+     "nome": "MARCO RILLO",
+     "votos": 8299,
+     "validos": 4.08,
+     "oficial_mun": 8299
+    },
+    "28": {
+     "nome": "PAULO BASSAN",
+     "votos": 6291,
+     "validos": 3.09,
+     "oficial_mun": 6291
+    },
+    "30": {
+     "nome": "FILIPE MARCHESONI",
+     "votos": 4214,
+     "validos": 2.07,
+     "oficial_mun": 4214
+    },
+    "13": {
+     "nome": "CELI REGINA",
+     "votos": 3571,
+     "validos": 1.76,
+     "oficial_mun": 3571
+    },
+    "12": {
+     "nome": "CARLOS ARNALDO",
+     "votos": 2314,
+     "validos": 1.14,
+     "oficial_mun": 2314
+    },
+    "27": {
+     "nome": "ROGÉRIO VINÍCIUS",
+     "votos": 1487,
+     "validos": 0.73,
+     "oficial_mun": 1487
+    },
+    "65": {
+     "nome": "CARLOS ALEXANDRE",
+     "votos": 526,
+     "validos": 0.26,
+     "oficial_mun": 526
+    }
+   }
+  },
+  "70998": {
+   "uf": "sp",
+   "secoes": 1410,
+   "candidatos": {
+    "45": {
+     "nome": "FELICIO",
+     "votos": 204800,
+     "validos": 58.21,
+     "oficial_mun": 204800
+    },
+    "22": {
+     "nome": "CORONEL ELIANE NIKOLUK",
+     "votos": 56122,
+     "validos": 15.95,
+     "oficial_mun": 56122
+    },
+    "13": {
+     "nome": "WAGNER BALIEIRO",
+     "votos": 36063,
+     "validos": 10.25,
+     "oficial_mun": 36063
+    },
+    "55": {
+     "nome": "RENATA PAIVA",
+     "votos": 16528,
+     "validos": 4.7,
+     "oficial_mun": 16528
+    },
+    "17": {
+     "nome": "SENNA",
+     "votos": 15116,
+     "validos": 4.3,
+     "oficial_mun": 15116
+    },
+    "30": {
+     "nome": "PROFESSOR AGLIBERTO",
+     "votos": 9658,
+     "validos": 2.75,
+     "oficial_mun": 9658
+    },
+    "50": {
+     "nome": "MARINA DO PSOL",
+     "votos": 7670,
+     "validos": 2.18,
+     "oficial_mun": 7670
+    },
+    "40": {
+     "nome": "DR. CURY",
+     "votos": 2246,
+     "validos": 0.64,
+     "oficial_mun": 2246
+    },
+    "16": {
+     "nome": "RAQUEL DE PAULA",
+     "votos": 1661,
+     "validos": 0.47,
+     "oficial_mun": 1661
+    },
+    "65": {
+     "nome": "JOAO BOSCO",
+     "votos": 1208,
+     "validos": 0.34,
+     "oficial_mun": 1208
+    },
+    "36": {
+     "nome": "LUIZ CARLOS",
+     "votos": 734,
+     "validos": 0.21,
+     "oficial_mun": 734
+    }
+   }
+  },
+  "71072": {
+   "uf": "sp",
+   "secoes": 22399,
+   "candidatos": {
+    "45": {
+     "nome": "BRUNO COVAS",
+     "votos": 1754013,
+     "validos": 32.85,
+     "oficial_mun": 1754013
+    },
+    "50": {
+     "nome": "GUILHERME BOULOS",
+     "votos": 1080736,
+     "validos": 20.24,
+     "oficial_mun": 1080736
+    },
+    "40": {
+     "nome": "MÁRCIO FRANÇA",
+     "votos": 728441,
+     "validos": 13.64,
+     "oficial_mun": 728441
+    },
+    "10": {
+     "nome": "CELSO RUSSOMANNO",
+     "votos": 560666,
+     "validos": 10.5,
+     "oficial_mun": 560666
+    },
+    "51": {
+     "nome": "ARTHUR DO VAL MAMÃE FALEI",
+     "votos": 522210,
+     "validos": 9.78,
+     "oficial_mun": 522210
+    },
+    "13": {
+     "nome": "JILMAR TATTO",
+     "votos": 461666,
+     "validos": 8.65,
+     "oficial_mun": 461666
+    },
+    "17": {
+     "nome": "JOICE HASSELMANN",
+     "votos": 98342,
+     "validos": 1.84,
+     "oficial_mun": 98342
+    },
+    "55": {
+     "nome": "ANDREA MATARAZZO",
+     "votos": 82743,
+     "validos": 1.55,
+     "oficial_mun": 82743
+    },
+    "18": {
+     "nome": "MARINA HELOU",
+     "votos": 22073,
+     "validos": 0.41,
+     "oficial_mun": 22073
+    },
+    "65": {
+     "nome": "ORLANDO SILVA",
+     "votos": 12254,
+     "validos": 0.23,
+     "oficial_mun": 12254
+    },
+    "28": {
+     "nome": "LEVY FIDELIX",
+     "votos": 11960,
+     "validos": 0.22,
+     "oficial_mun": 11960
+    },
+    "16": {
+     "nome": "VERA",
+     "votos": 3052,
+     "validos": 0.06,
+     "oficial_mun": 3052
+    },
+    "29": {
+     "nome": "",
+     "votos": 630,
+     "validos": 0.01,
+     "oficial_mun": 0
+    }
+   }
+  },
+  "71218": {
+   "uf": "sp",
+   "secoes": 659,
+   "candidatos": {
+    "45": {
+     "nome": "SOLANGE FREITAS",
+     "votos": 67558,
+     "validos": 41.47,
+     "oficial_mun": 67558
+    },
+    "19": {
+     "nome": "KAYO AMADO",
+     "votos": 55307,
+     "validos": 33.95,
+     "oficial_mun": 55307
+    },
+    "15": {
+     "nome": "PEDRO GOUVÊA",
+     "votos": 30717,
+     "validos": 18.86,
+     "oficial_mun": 30717
+    },
+    "13": {
+     "nome": "ANALIA",
+     "votos": 3591,
+     "validos": 2.2,
+     "oficial_mun": 3591
+    },
+    "28": {
+     "nome": "MÔNICA BATALHA",
+     "votos": 1987,
+     "validos": 1.22,
+     "oficial_mun": 1987
+    },
+    "55": {
+     "nome": "LUIZ CARLOS GIANELLI",
+     "votos": 1897,
+     "validos": 1.16,
+     "oficial_mun": 1897
+    },
+    "77": {
+     "nome": "VALQUIRIO MARTINS",
+     "votos": 1837,
+     "validos": 1.13,
+     "oficial_mun": 1837
+    }
+   }
+  },
+  "71455": {
+   "uf": "sp",
+   "secoes": 1311,
+   "candidatos": {
+    "10": {
+     "nome": "RODRIGO MANGA",
+     "votos": 116020,
+     "validos": 39.42,
+     "oficial_mun": 116020
+    },
+    "17": {
+     "nome": "JAQUELINE COUTINHO",
+     "votos": 48955,
+     "validos": 16.63,
+     "oficial_mun": 48955
+    },
+    "50": {
+     "nome": "RAUL MARCELO",
+     "votos": 46699,
+     "validos": 15.87,
+     "oficial_mun": 46699
+    },
+    "45": {
+     "nome": "MARIA LUCIA",
+     "votos": 45549,
+     "validos": 15.47,
+     "oficial_mun": 45549
+    },
+    "25": {
+     "nome": "DR LEANDRO",
+     "votos": 13811,
+     "validos": 4.69,
+     "oficial_mun": 13811
+    },
+    "70": {
+     "nome": "PROF. FLAVIANO LIMA",
+     "votos": 11781,
+     "validos": 4.0,
+     "oficial_mun": 11781
+    },
+    "12": {
+     "nome": "RENAN",
+     "votos": 9962,
+     "validos": 3.38,
+     "oficial_mun": 9962
+    },
+    "77": {
+     "nome": "CARLOS PEPER",
+     "votos": 1568,
+     "validos": 0.53,
+     "oficial_mun": 1568
+    }
+   }
+  },
+  "71510": {
+   "uf": "sp",
+   "secoes": 561,
+   "candidatos": {
+    "22": {
+     "nome": "RODRIGO ASHIUCHI",
+     "votos": 110001,
+     "validos": 77.8,
+     "oficial_mun": 110001
+    },
+    "17": {
+     "nome": "ISRAEL LACERDA",
+     "votos": 8579,
+     "validos": 6.07,
+     "oficial_mun": 8579
+    },
+    "25": {
+     "nome": "JORGINHO ROMANOS",
+     "votos": 8565,
+     "validos": 6.06,
+     "oficial_mun": 8565
+    },
+    "70": {
+     "nome": "",
+     "votos": 8157,
+     "validos": 5.77,
+     "oficial_mun": 0
+    },
+    "13": {
+     "nome": "DERLI DOURADO",
+     "votos": 4784,
+     "validos": 3.38,
+     "oficial_mun": 4784
+    },
+    "65": {
+     "nome": "PROFESSOR RODRIGO ASSIS",
+     "votos": 1297,
+     "validos": 0.92,
+     "oficial_mun": 1297
+    }
+   }
+  },
+  "71579": {
+   "uf": "sp",
+   "secoes": 536,
+   "candidatos": {
+    "45": {
+     "nome": "ENGENHEIRO DANIEL",
+     "votos": 46350,
+     "validos": 33.42,
+     "oficial_mun": 46350
+    },
+    "19": {
+     "nome": "APRIGIO",
+     "votos": 44400,
+     "validos": 32.01,
+     "oficial_mun": 44400
+    },
+    "15": {
+     "nome": "DR EDUARDO NOBREGA",
+     "votos": 31765,
+     "validos": 22.9,
+     "oficial_mun": 31765
+    },
+    "50": {
+     "nome": "PROFESSORA NAJARA COSTA",
+     "votos": 8734,
+     "validos": 6.3,
+     "oficial_mun": 8734
+    },
+    "13": {
+     "nome": "",
+     "votos": 2924,
+     "validos": 2.11,
+     "oficial_mun": 0
+    },
+    "17": {
+     "nome": "VITOR MEDEIROS",
+     "votos": 1848,
+     "validos": 1.33,
+     "oficial_mun": 1848
+    },
+    "11": {
+     "nome": "DR RONALDO DIAS",
+     "votos": 1801,
+     "validos": 1.3,
+     "oficial_mun": 1801
+    },
+    "33": {
+     "nome": "DR. WALDEMAR LIMA",
+     "votos": 560,
+     "validos": 0.4,
+     "oficial_mun": 560
+    },
+    "77": {
+     "nome": "PLINIO DO PIRAJUSSARA",
+     "votos": 306,
+     "validos": 0.22,
+     "oficial_mun": 306
+    }
+   }
+  },
+  "71838": {
+   "uf": "sp",
+   "secoes": 602,
+   "candidatos": {
+    "15": {
+     "nome": "SAUD",
+     "votos": 41201,
+     "validos": 28.81,
+     "oficial_mun": 41201
+    },
+    "23": {
+     "nome": "LORENY",
+     "votos": 36333,
+     "validos": 25.4,
+     "oficial_mun": 36333
+    },
+    "45": {
+     "nome": "EDUARDO",
+     "votos": 33960,
+     "validos": 23.74,
+     "oficial_mun": 33960
+    },
+    "28": {
+     "nome": "CAPITÃO SOUZA",
+     "votos": 19095,
+     "validos": 13.35,
+     "oficial_mun": 19095
+    },
+    "13": {
+     "nome": "SALVADOR KHURIYEH",
+     "votos": 9268,
+     "validos": 6.48,
+     "oficial_mun": 9268
+    },
+    "19": {
+     "nome": "FABIANO VANONE",
+     "votos": 1261,
+     "validos": 0.88,
+     "oficial_mun": 1261
+    },
+    "50": {
+     "nome": "PROFESSOR RONALDO",
+     "votos": 836,
+     "validos": 0.58,
+     "oficial_mun": 836
+    },
+    "65": {
+     "nome": "PROFESSOR FERNANDO BORGES",
+     "votos": 449,
+     "validos": 0.31,
+     "oficial_mun": 449
+    },
+    "36": {
+     "nome": "DODÔ",
+     "votos": 421,
+     "validos": 0.29,
+     "oficial_mun": 421
+    },
+    "20": {
+     "nome": "CHICO OIRING",
+     "votos": 197,
+     "validos": 0.14,
+     "oficial_mun": 197
+    }
+   }
+  },
+  "74934": {
+   "uf": "pr",
+   "secoes": 569,
+   "candidatos": {
+    "20": {
+     "nome": "LEONALDO PARANHOS",
+     "votos": 112181,
+     "validos": 71.72,
+     "oficial_mun": 112181
+    },
+    "12": {
+     "nome": "MARCIO PACHECO",
+     "votos": 16072,
+     "validos": 10.28,
+     "oficial_mun": 16072
+    },
+    "13": {
+     "nome": "PAULO PORTO",
+     "votos": 11658,
+     "validos": 7.45,
+     "oficial_mun": 11658
+    },
+    "51": {
+     "nome": "ROMAN",
+     "votos": 10739,
+     "validos": 6.87,
+     "oficial_mun": 10739
+    },
+    "11": {
+     "nome": "INÊS DE PAULA",
+     "votos": 2573,
+     "validos": 1.65,
+     "oficial_mun": 2573
+    },
+    "25": {
+     "nome": "JUAREZ BERTE",
+     "votos": 1223,
+     "validos": 0.78,
+     "oficial_mun": 1223
+    },
+    "70": {
+     "nome": "CARLOS MORAES",
+     "votos": 1047,
+     "validos": 0.67,
+     "oficial_mun": 1047
+    },
+    "28": {
+     "nome": "MAJOR ARSÊNIO",
+     "votos": 919,
+     "validos": 0.59,
+     "oficial_mun": 919
+    }
+   }
+  },
+  "75353": {
+   "uf": "pr",
+   "secoes": 2892,
+   "candidatos": {
+    "25": {
+     "nome": "RAFAEL GRECA",
+     "votos": 499821,
+     "validos": 59.74,
+     "oficial_mun": 499821
+    },
+    "12": {
+     "nome": "GOURA",
+     "votos": 110977,
+     "validos": 13.26,
+     "oficial_mun": 110977
+    },
+    "17": {
+     "nome": "FERNANDO FRANCISCHINI",
+     "votos": 52340,
+     "validos": 6.26,
+     "oficial_mun": 52340
+    },
+    "30": {
+     "nome": "DR JOÃO GUILHERME DO NOVO",
+     "votos": 40505,
+     "validos": 4.84,
+     "oficial_mun": 40505
+    },
+    "22": {
+     "nome": "CHRISTIANE YARED",
+     "votos": 32677,
+     "validos": 3.91,
+     "oficial_mun": 32677
+    },
+    "19": {
+     "nome": "CAROL ARNS",
+     "votos": 22360,
+     "validos": 2.67,
+     "oficial_mun": 22360
+    },
+    "15": {
+     "nome": "JOÃO ARRUDA",
+     "votos": 21833,
+     "validos": 2.61,
+     "oficial_mun": 21833
+    },
+    "13": {
+     "nome": "PAULO OPUSZKA",
+     "votos": 20537,
+     "validos": 2.45,
+     "oficial_mun": 20537
+    },
+    "70": {
+     "nome": "MARISA LOBO",
+     "votos": 18547,
+     "validos": 2.22,
+     "oficial_mun": 18547
+    },
+    "43": {
+     "nome": "PROFESSOR MOCELLIN",
+     "votos": 6305,
+     "validos": 0.75,
+     "oficial_mun": 6305
+    },
+    "50": {
+     "nome": "LETÍCIA LANZ",
+     "votos": 3564,
+     "validos": 0.43,
+     "oficial_mun": 3564
+    },
+    "36": {
+     "nome": "ZÉ BONI",
+     "votos": 3509,
+     "validos": 0.42,
+     "oficial_mun": 3509
+    },
+    "65": {
+     "nome": "CAMILA LANES",
+     "votos": 1881,
+     "validos": 0.22,
+     "oficial_mun": 1881
+    },
+    "18": {
+     "nome": "ELOY CASAGRANDE",
+     "votos": 1021,
+     "validos": 0.12,
+     "oficial_mun": 1021
+    },
+    "16": {
+     "nome": "PROFESSORA SAMARA",
+     "votos": 632,
+     "validos": 0.08,
+     "oficial_mun": 632
+    },
+    "29": {
+     "nome": "",
+     "votos": 123,
+     "validos": 0.01,
+     "oficial_mun": 0
+    }
+   }
+  },
+  "76678": {
+   "uf": "pr",
+   "secoes": 983,
+   "candidatos": {
+    "11": {
+     "nome": "MARCELO BELINATI",
+     "votos": 175331,
+     "validos": 68.66,
+     "oficial_mun": 175331
+    },
+    "90": {
+     "nome": "",
+     "votos": 18558,
+     "validos": 7.27,
+     "oficial_mun": 0
+    },
+    "10": {
+     "nome": "JUNIOR SANTOS ROSA",
+     "votos": 16765,
+     "validos": 6.57,
+     "oficial_mun": 16765
+    },
+    "19": {
+     "nome": "MARCIO STAMM",
+     "votos": 13601,
+     "validos": 5.33,
+     "oficial_mun": 13601
+    },
+    "40": {
+     "nome": "TIAGO AMARAL",
+     "votos": 10808,
+     "validos": 4.23,
+     "oficial_mun": 10808
+    },
+    "12": {
+     "nome": "",
+     "votos": 6974,
+     "validos": 2.73,
+     "oficial_mun": 0
+    },
+    "13": {
+     "nome": "CARLOS SCALASSARA",
+     "votos": 6412,
+     "validos": 2.51,
+     "oficial_mun": 6412
+    },
+    "15": {
+     "nome": "DELEGADO ÁGUILA MISUTA",
+     "votos": 4940,
+     "validos": 1.93,
+     "oficial_mun": 4940
+    },
+    "65": {
+     "nome": "MARCIO SANCHES",
+     "votos": 1252,
+     "validos": 0.49,
+     "oficial_mun": 1252
+    },
+    "43": {
+     "nome": "ALVARO LOUREIRO JUNIOR",
+     "votos": 705,
+     "validos": 0.28,
+     "oficial_mun": 705
+    }
+   }
+  },
+  "76910": {
+   "uf": "pr",
+   "secoes": 717,
+   "candidatos": {
+    "55": {
+     "nome": "ULISSES MAIA",
+     "votos": 103010,
+     "validos": 56.85,
+     "oficial_mun": 103010
+    },
+    "90": {
+     "nome": "HOMERO MARCHESE",
+     "votos": 34152,
+     "validos": 18.85,
+     "oficial_mun": 34152
+    },
+    "11": {
+     "nome": "CORONEL AUDILENE",
+     "votos": 17399,
+     "validos": 9.6,
+     "oficial_mun": 17399
+    },
+    "25": {
+     "nome": "DR BATISTA",
+     "votos": 5443,
+     "validos": 3.0,
+     "oficial_mun": 5443
+    },
+    "22": {
+     "nome": "AKEMI NISHIMORI",
+     "votos": 4361,
+     "validos": 2.41,
+     "oficial_mun": 4361
+    },
+    "13": {
+     "nome": "CARLOS MARIUCCI",
+     "votos": 4191,
+     "validos": 2.31,
+     "oficial_mun": 4191
+    },
+    "19": {
+     "nome": "BOVO",
+     "votos": 3645,
+     "validos": 2.01,
+     "oficial_mun": 3645
+    },
+    "70": {
+     "nome": "ROGERIO CALAZANS",
+     "votos": 3065,
+     "validos": 1.69,
+     "oficial_mun": 3065
+    },
+    "45": {
+     "nome": "EVANDRO DE FREITAS OLIVEIRA",
+     "votos": 1780,
+     "validos": 0.98,
+     "oficial_mun": 1780
+    },
+    "50": {
+     "nome": "PROFESSOR EDMILSON",
+     "votos": 1455,
+     "validos": 0.8,
+     "oficial_mun": 1455
+    },
+    "51": {
+     "nome": "ELISEU FORTES",
+     "votos": 1153,
+     "validos": 0.64,
+     "oficial_mun": 1153
+    },
+    "36": {
+     "nome": "ANNIBAL BIANCHINI",
+     "votos": 1005,
+     "validos": 0.55,
+     "oficial_mun": 1005
+    },
+    "23": {
+     "nome": "VALDIR PIGNATA",
+     "votos": 537,
+     "validos": 0.3,
+     "oficial_mun": 537
+    }
+   }
+  },
+  "77771": {
+   "uf": "pr",
+   "secoes": 610,
+   "candidatos": {
+    "20": {
+     "nome": "MABEL CANTO",
+     "votos": 61702,
+     "validos": 37.27,
+     "oficial_mun": 61702
+    },
+    "55": {
+     "nome": "PROFESSORA ELIZABETH",
+     "votos": 51565,
+     "validos": 31.15,
+     "oficial_mun": 51565
+    },
+    "77": {
+     "nome": "MARCIO PAULIKI",
+     "votos": 44301,
+     "validos": 26.76,
+     "oficial_mun": 44301
+    },
+    "50": {
+     "nome": "PROFESSOR GADINI",
+     "votos": 5029,
+     "validos": 3.04,
+     "oficial_mun": 5029
+    },
+    "13": {
+     "nome": "PROFESSOR EDSON",
+     "votos": 2959,
+     "validos": 1.79,
+     "oficial_mun": 2959
+    }
+   }
+  },
+  "80470": {
+   "uf": "sc",
+   "secoes": 604,
+   "candidatos": {
+    "19": {
+     "nome": "MÁRIO HILDEBRANDT",
+     "votos": 68222,
+     "validos": 42.53,
+     "oficial_mun": 68222
+    },
+    "25": {
+     "nome": "JOÃO PAULO KLEINUBING",
+     "votos": 24957,
+     "validos": 15.56,
+     "oficial_mun": 24957
+    },
+    "30": {
+     "nome": "TRAMONTIN",
+     "votos": 22846,
+     "validos": 14.24,
+     "oficial_mun": 22846
+    },
+    "17": {
+     "nome": "ALBA",
+     "votos": 17487,
+     "validos": 10.9,
+     "oficial_mun": 17487
+    },
+    "13": {
+     "nome": "ANA PAULA LIMA",
+     "votos": 8359,
+     "validos": 5.21,
+     "oficial_mun": 8359
+    },
+    "22": {
+     "nome": "IVAN NAATZ",
+     "votos": 7227,
+     "validos": 4.51,
+     "oficial_mun": 7227
+    },
+    "12": {
+     "nome": "DR NATEL",
+     "votos": 4497,
+     "validos": 2.8,
+     "oficial_mun": 4497
+    },
+    "50": {
+     "nome": "GEORGIA FAUST",
+     "votos": 2960,
+     "validos": 1.85,
+     "oficial_mun": 2960
+    },
+    "23": {
+     "nome": "DEBORA ARENHART",
+     "votos": 1310,
+     "validos": 0.82,
+     "oficial_mun": 1310
+    },
+    "28": {
+     "nome": "JAIRO SANTOS",
+     "votos": 1206,
+     "validos": 0.75,
+     "oficial_mun": 1206
+    },
+    "65": {
+     "nome": "DR KATO",
+     "votos": 1071,
+     "validos": 0.67,
+     "oficial_mun": 1071
+    },
+    "70": {
+     "nome": "WANDERLEI LAURETH",
+     "votos": 264,
+     "validos": 0.16,
+     "oficial_mun": 264
+    }
+   }
+  },
+  "81051": {
+   "uf": "sc",
+   "secoes": 884,
+   "candidatos": {
+    "25": {
+     "nome": "GEAN",
+     "votos": 126144,
+     "validos": 53.46,
+     "oficial_mun": 126144
+    },
+    "50": {
+     "nome": "PROFESSOR ELSON",
+     "votos": 42778,
+     "validos": 18.13,
+     "oficial_mun": 42778
+    },
+    "22": {
+     "nome": "PEDRÃO",
+     "votos": 33529,
+     "validos": 14.21,
+     "oficial_mun": 33529
+    },
+    "11": {
+     "nome": "ANGELA AMIN",
+     "votos": 17515,
+     "validos": 7.42,
+     "oficial_mun": 17515
+    },
+    "28": {
+     "nome": "ALEXANDER BRASIL",
+     "votos": 6982,
+     "validos": 2.96,
+     "oficial_mun": 6982
+    },
+    "30": {
+     "nome": "ORLANDO",
+     "votos": 6195,
+     "validos": 2.63,
+     "oficial_mun": 6195
+    },
+    "77": {
+     "nome": "DR RICARDO",
+     "votos": 1201,
+     "validos": 0.51,
+     "oficial_mun": 1201
+    },
+    "51": {
+     "nome": "HELIO BAIRROS",
+     "votos": 1142,
+     "validos": 0.48,
+     "oficial_mun": 1142
+    },
+    "16": {
+     "nome": "GABRIELA SANTETTI",
+     "votos": 373,
+     "validos": 0.16,
+     "oficial_mun": 373
+    },
+    "29": {
+     "nome": "JAIR FERNANDES",
+     "votos": 98,
+     "validos": 0.04,
+     "oficial_mun": 98
+    }
+   }
+  },
+  "81795": {
+   "uf": "sc",
+   "secoes": 999,
+   "candidatos": {
+    "55": {
+     "nome": "DARCI DE MATOS",
+     "votos": 66838,
+     "validos": 25.3,
+     "oficial_mun": 66838
+    },
+    "30": {
+     "nome": "ADRIANO SILVA",
+     "votos": 60728,
+     "validos": 22.98,
+     "oficial_mun": 60728
+    },
+    "15": {
+     "nome": "FERNANDO KRELLING",
+     "votos": 48886,
+     "validos": 18.5,
+     "oficial_mun": 48886
+    },
+    "23": {
+     "nome": "TANIA EBERHARDT",
+     "votos": 17436,
+     "validos": 6.6,
+     "oficial_mun": 17436
+    },
+    "19": {
+     "nome": "IVANDRO DE SOUZA",
+     "votos": 15195,
+     "validos": 5.75,
+     "oficial_mun": 15195
+    },
+    "17": {
+     "nome": "DOUTOR DALMO",
+     "votos": 14113,
+     "validos": 5.34,
+     "oficial_mun": 14113
+    },
+    "13": {
+     "nome": "ASSIS",
+     "votos": 10495,
+     "validos": 3.97,
+     "oficial_mun": 10495
+    },
+    "70": {
+     "nome": "ANELISIO DA ASSESSORITEC",
+     "votos": 8085,
+     "validos": 3.06,
+     "oficial_mun": 8085
+    },
+    "36": {
+     "nome": "EDUARDO ZIMMERMANN",
+     "votos": 6843,
+     "validos": 2.59,
+     "oficial_mun": 6843
+    },
+    "51": {
+     "nome": "COMANDANTE NELSON COELHO",
+     "votos": 4378,
+     "validos": 1.66,
+     "oficial_mun": 4378
+    },
+    "12": {
+     "nome": "JAMES SCHROEDER",
+     "votos": 3718,
+     "validos": 1.41,
+     "oficial_mun": 3718
+    },
+    "10": {
+     "nome": "MARCUCCI",
+     "votos": 3089,
+     "validos": 1.17,
+     "oficial_mun": 3089
+    },
+    "50": {
+     "nome": "MAYARA COLZANI",
+     "votos": 3080,
+     "validos": 1.17,
+     "oficial_mun": 3080
+    },
+    "27": {
+     "nome": "LEVI",
+     "votos": 1101,
+     "validos": 0.42,
+     "oficial_mun": 1101
+    },
+    "16": {
+     "nome": "DRICO DO PSTU",
+     "votos": 244,
+     "validos": 0.09,
+     "oficial_mun": 244
+    }
+   }
+  },
+  "85898": {
+   "uf": "rs",
+   "secoes": 651,
+   "candidatos": {
+    "55": {
+     "nome": "JAIRO JORGE",
+     "votos": 71968,
+     "validos": 45.2,
+     "oficial_mun": 71968
+    },
+    "14": {
+     "nome": "LUIZ CARLOS BUSATO",
+     "votos": 54903,
+     "validos": 34.48,
+     "oficial_mun": 54903
+    },
+    "30": {
+     "nome": "CAMILO BORNIA",
+     "votos": 8643,
+     "validos": 5.43,
+     "oficial_mun": 8643
+    },
+    "13": {
+     "nome": "NELSINHO METALÚRGICO",
+     "votos": 7374,
+     "validos": 4.63,
+     "oficial_mun": 7374
+    },
+    "10": {
+     "nome": "CÉSAR AUGUSTO",
+     "votos": 5592,
+     "validos": 3.51,
+     "oficial_mun": 5592
+    },
+    "28": {
+     "nome": "SIMONE SABIN",
+     "votos": 5055,
+     "validos": 3.17,
+     "oficial_mun": 5055
+    },
+    "11": {
+     "nome": "ERNANI DANIEL",
+     "votos": 2965,
+     "validos": 1.86,
+     "oficial_mun": 2965
+    },
+    "50": {
+     "nome": "PROFESSOR PABLO",
+     "votos": 1917,
+     "validos": 1.2,
+     "oficial_mun": 1917
+    },
+    "20": {
+     "nome": "CAPITÃO NASCIMENTO",
+     "votos": 802,
+     "validos": 0.5,
+     "oficial_mun": 802
+    }
+   }
+  },
+  "85995": {
+   "uf": "rs",
+   "secoes": 875,
+   "candidatos": {
+    "13": {
+     "nome": "PEPE VARGAS",
+     "votos": 75619,
+     "validos": 34.17,
+     "oficial_mun": 75619
+    },
+    "45": {
+     "nome": "ADILÓ",
+     "votos": 34204,
+     "validos": 15.45,
+     "oficial_mun": 34204
+    },
+    "12": {
+     "nome": "EDSON NESPOLO",
+     "votos": 32074,
+     "validos": 14.49,
+     "oficial_mun": 32074
+    },
+    "15": {
+     "nome": "CARLOS BÚRIGO",
+     "votos": 21809,
+     "validos": 9.85,
+     "oficial_mun": 21809
+    },
+    "30": {
+     "nome": "SLAVIERO",
+     "votos": 18554,
+     "validos": 8.38,
+     "oficial_mun": 18554
+    },
+    "25": {
+     "nome": "VINICIUS RIBEIRO",
+     "votos": 12079,
+     "validos": 5.46,
+     "oficial_mun": 12079
+    },
+    "10": {
+     "nome": "JULIO FREITAS",
+     "votos": 11749,
+     "validos": 5.31,
+     "oficial_mun": 11749
+    },
+    "51": {
+     "nome": "NELSON D ARRIGO",
+     "votos": 10381,
+     "validos": 4.69,
+     "oficial_mun": 10381
+    },
+    "19": {
+     "nome": "TONINHO FELDMANN",
+     "votos": 1847,
+     "validos": 0.83,
+     "oficial_mun": 1847
+    },
+    "17": {
+     "nome": "RENATO TOIGO",
+     "votos": 1720,
+     "validos": 0.78,
+     "oficial_mun": 1720
+    },
+    "22": {
+     "nome": "RENATO NUNES",
+     "votos": 1291,
+     "validos": 0.58,
+     "oficial_mun": 1291
+    }
+   }
+  },
+  "87912": {
+   "uf": "rs",
+   "secoes": 628,
+   "candidatos": {
+    "45": {
+     "nome": "PAULA MASCARENHAS",
+     "votos": 78599,
+     "validos": 49.74,
+     "oficial_mun": 78599
+    },
+    "13": {
+     "nome": "IVAN DUARTE",
+     "votos": 22889,
+     "validos": 14.49,
+     "oficial_mun": 22889
+    },
+    "11": {
+     "nome": "FETTER",
+     "votos": 21532,
+     "validos": 13.63,
+     "oficial_mun": 21532
+    },
+    "40": {
+     "nome": "TONY SECHI",
+     "votos": 12814,
+     "validos": 8.11,
+     "oficial_mun": 12814
+    },
+    "50": {
+     "nome": "JULIO DOMINGUES",
+     "votos": 6691,
+     "validos": 4.23,
+     "oficial_mun": 6691
+    },
+    "28": {
+     "nome": "CORONEL NAPOLEÃO",
+     "votos": 4874,
+     "validos": 3.08,
+     "oficial_mun": 4874
+    },
+    "25": {
+     "nome": "MARCO MARCHAND",
+     "votos": 3593,
+     "validos": 2.27,
+     "oficial_mun": 3593
+    },
+    "12": {
+     "nome": "DAN BARBIER",
+     "votos": 3310,
+     "validos": 2.09,
+     "oficial_mun": 3310
+    },
+    "19": {
+     "nome": "MARCELO OXLEY",
+     "votos": 2503,
+     "validos": 1.58,
+     "oficial_mun": 2503
+    },
+    "15": {
+     "nome": "JOÃO CARLOS CABEDAL",
+     "votos": 1139,
+     "validos": 0.72,
+     "oficial_mun": 1139
+    },
+    "29": {
+     "nome": "EDUARDO LIGABUE",
+     "votos": 71,
+     "validos": 0.04,
+     "oficial_mun": 71
+    }
+   }
+  },
+  "88013": {
+   "uf": "rs",
+   "secoes": 2629,
+   "candidatos": {
+    "15": {
+     "nome": "SEBASTIÃO MELO",
+     "votos": 200280,
+     "validos": 30.75,
+     "oficial_mun": 200280
+    },
+    "65": {
+     "nome": "MANUELA",
+     "votos": 187262,
+     "validos": 28.75,
+     "oficial_mun": 187262
+    },
+    "45": {
+     "nome": "NELSON MARCHEZAN JÚNIOR",
+     "votos": 136063,
+     "validos": 20.89,
+     "oficial_mun": 136063
+    },
+    "12": {
+     "nome": "JULIANA BRIZOLA",
+     "votos": 41407,
+     "validos": 6.36,
+     "oficial_mun": 41407
+    },
+    "50": {
+     "nome": "FERNANDA MELCHIONNA",
+     "votos": 27994,
+     "validos": 4.3,
+     "oficial_mun": 27994
+    },
+    "55": {
+     "nome": "VALTER",
+     "votos": 20033,
+     "validos": 3.08,
+     "oficial_mun": 20033
+    },
+    "10": {
+     "nome": "JOÃO DERLY",
+     "votos": 19004,
+     "validos": 2.92,
+     "oficial_mun": 19004
+    },
+    "11": {
+     "nome": "GUSTAVO PAIM",
+     "votos": 7989,
+     "validos": 1.23,
+     "oficial_mun": 7989
+    },
+    "14": {
+     "nome": "",
+     "votos": 5585,
+     "validos": 0.86,
+     "oficial_mun": 0
+    },
+    "90": {
+     "nome": "RODRIGO MARONI",
+     "votos": 3314,
+     "validos": 0.51,
+     "oficial_mun": 3314
+    },
+    "43": {
+     "nome": "MONTSERRAT MARTINS",
+     "votos": 1415,
+     "validos": 0.22,
+     "oficial_mun": 1415
+    },
+    "16": {
+     "nome": "JULIO FLORES",
+     "votos": 852,
+     "validos": 0.13,
+     "oficial_mun": 852
+    },
+    "29": {
+     "nome": "",
+     "votos": 142,
+     "validos": 0.02,
+     "oficial_mun": 0
+    }
+   }
+  },
+  "88412": {
+   "uf": "rs",
+   "secoes": 541,
+   "candidatos": {
+    "11": {
+     "nome": "SERGIO CECCHIN",
+     "votos": 35218,
+     "validos": 26.49,
+     "oficial_mun": 35218
+    },
+    "45": {
+     "nome": "POZZOBOM",
+     "votos": 33080,
+     "validos": 24.89,
+     "oficial_mun": 33080
+    },
+    "13": {
+     "nome": "LUCIANO GUERRA",
+     "votos": 31843,
+     "validos": 23.96,
+     "oficial_mun": 31843
+    },
+    "10": {
+     "nome": "JADER MARETOLI",
+     "votos": 12901,
+     "validos": 9.71,
+     "oficial_mun": 12901
+    },
+    "12": {
+     "nome": "MARCELO BISOGNO",
+     "votos": 12515,
+     "validos": 9.42,
+     "oficial_mun": 12515
+    },
+    "23": {
+     "nome": "EVANDRO BEHR",
+     "votos": 7369,
+     "validos": 5.54,
+     "oficial_mun": 7369
+    }
+   }
+  },
+  "90514": {
+   "uf": "ms",
+   "secoes": 1911,
+   "candidatos": {
+    "55": {
+     "nome": "MARQUINHOS TRAD",
+     "votos": 218418,
+     "validos": 52.57,
+     "oficial_mun": 218418
+    },
+    "70": {
+     "nome": "",
+     "votos": 48094,
+     "validos": 11.58,
+     "oficial_mun": 0
+    },
+    "13": {
+     "nome": "PEDRO KEMP",
+     "votos": 34546,
+     "validos": 8.31,
+     "oficial_mun": 34546
+    },
+    "17": {
+     "nome": "VINICIUS SIQUEIRA",
+     "votos": 34066,
+     "validos": 8.2,
+     "oficial_mun": 34066
+    },
+    "19": {
+     "nome": "DELEGADA SIDNÉIA TOBIAS",
+     "votos": 19103,
+     "validos": 4.6,
+     "oficial_mun": 19103
+    },
+    "15": {
+     "nome": "MARCIO FERNANDES",
+     "votos": 12522,
+     "validos": 3.01,
+     "oficial_mun": 12522
+    },
+    "11": {
+     "nome": "ESACHEU NASCIMENTO",
+     "votos": 10170,
+     "validos": 2.45,
+     "oficial_mun": 10170
+    },
+    "22": {
+     "nome": "JOÃO HENRIQUE",
+     "votos": 10123,
+     "validos": 2.44,
+     "oficial_mun": 10123
+    },
+    "77": {
+     "nome": "MARCELO MIGLIOLI",
+     "votos": 7899,
+     "validos": 1.9,
+     "oficial_mun": 7899
+    },
+    "12": {
+     "nome": "DAGOBERTO",
+     "votos": 6507,
+     "validos": 1.57,
+     "oficial_mun": 6507
+    },
+    "30": {
+     "nome": "GUTO SCARPANTI",
+     "votos": 4811,
+     "validos": 1.16,
+     "oficial_mun": 4811
+    },
+    "50": {
+     "nome": "CRIS DUARTE",
+     "votos": 4621,
+     "validos": 1.11,
+     "oficial_mun": 4621
+    },
+    "43": {
+     "nome": "MARCELO BLUMA",
+     "votos": 2657,
+     "validos": 0.64,
+     "oficial_mun": 2657
+    },
+    "20": {
+     "nome": "PAULO MATOS",
+     "votos": 1884,
+     "validos": 0.45,
+     "oficial_mun": 1884
+    },
+    "29": {
+     "nome": "",
+     "votos": 50,
+     "validos": 0.01,
+     "oficial_mun": 0
+    }
+   }
+  },
+  "90670": {
+   "uf": "mt",
+   "secoes": 1109,
+   "candidatos": {
+    "19": {
+     "nome": "ABILIO",
+     "votos": 90631,
+     "validos": 33.72,
+     "oficial_mun": 90631
+    },
+    "15": {
+     "nome": "EMANUEL PINHEIRO",
+     "votos": 82367,
+     "validos": 30.64,
+     "oficial_mun": 82367
+    },
+    "90": {
+     "nome": "GISELA SIMONA",
+     "votos": 52191,
+     "validos": 19.42,
+     "oficial_mun": 52191
+    },
+    "51": {
+     "nome": "ROBERTO FRANÇA",
+     "votos": 25523,
+     "validos": 9.49,
+     "oficial_mun": 25523
+    },
+    "13": {
+     "nome": "JULIER",
+     "votos": 8409,
+     "validos": 3.13,
+     "oficial_mun": 8409
+    },
+    "17": {
+     "nome": "AÉCIO RODRIGUES",
+     "votos": 5659,
+     "validos": 2.11,
+     "oficial_mun": 5659
+    },
+    "30": {
+     "nome": "PAULO HENRIQUE GRANDO",
+     "votos": 2815,
+     "validos": 1.05,
+     "oficial_mun": 2815
+    },
+    "50": {
+     "nome": "GILBERTO LOPES FILHO",
+     "votos": 1216,
+     "validos": 0.45,
+     "oficial_mun": 1216
+    }
+   }
+  },
+  "9210": {
+   "uf": "ma",
+   "secoes": 1826,
+   "candidatos": {
+    "19": {
+     "nome": "EDUARDO BRAIDE",
+     "votos": 193578,
+     "validos": 37.81,
+     "oficial_mun": 193578
+    },
+    "10": {
+     "nome": "DUARTE",
+     "votos": 113430,
+     "validos": 22.15,
+     "oficial_mun": 113430
+    },
+    "25": {
+     "nome": "NETO EVANGELISTA",
+     "votos": 83138,
+     "validos": 16.24,
+     "oficial_mun": 83138
+    },
+    "65": {
+     "nome": "RUBENS JUNIOR",
+     "votos": 54155,
+     "validos": 10.58,
+     "oficial_mun": 54155
+    },
+    "40": {
+     "nome": "BIRA ",
+     "votos": 22024,
+     "validos": 4.3,
+     "oficial_mun": 22024
+    },
+    "28": {
+     "nome": "SILVIO ANTONIO",
+     "votos": 16070,
+     "validos": 3.14,
+     "oficial_mun": 16070
+    },
+    "18": {
+     "nome": "JEISAEL",
+     "votos": 14144,
+     "validos": 2.76,
+     "oficial_mun": 14144
+    },
+    "90": {
+     "nome": "YGLÉSIO MOYSES",
+     "votos": 9816,
+     "validos": 1.92,
+     "oficial_mun": 9816
+    },
+    "50": {
+     "nome": "PROFESSOR FRANKLIN",
+     "votos": 3502,
+     "validos": 0.68,
+     "oficial_mun": 3502
+    },
+    "16": {
+     "nome": "HERTZ DIAS",
+     "votos": 2173,
+     "validos": 0.42,
+     "oficial_mun": 2173
+    }
+   }
+  },
+  "92215": {
+   "uf": "go",
+   "secoes": 743,
+   "candidatos": {
+    "11": {
+     "nome": "ROBERTO NAVES",
+     "votos": 82139,
+     "validos": 46.47,
+     "oficial_mun": 82139
+    },
+    "13": {
+     "nome": "ANTONIO GOMIDE",
+     "votos": 50843,
+     "validos": 28.77,
+     "oficial_mun": 50843
+    },
+    "15": {
+     "nome": "MARCIO",
+     "votos": 29044,
+     "validos": 16.43,
+     "oficial_mun": 29044
+    },
+    "17": {
+     "nome": "VALERIANO",
+     "votos": 7237,
+     "validos": 4.09,
+     "oficial_mun": 7237
+    },
+    "51": {
+     "nome": "JOSE DE LIMA",
+     "votos": 3615,
+     "validos": 2.05,
+     "oficial_mun": 3615
+    },
+    "55": {
+     "nome": "DELEGADO FEDERAL HUMBERTO",
+     "votos": 1439,
+     "validos": 0.81,
+     "oficial_mun": 1439
+    },
+    "45": {
+     "nome": "JOÃO GOMES",
+     "votos": 1291,
+     "validos": 0.73,
+     "oficial_mun": 1291
+    },
+    "28": {
+     "nome": "",
+     "votos": 616,
+     "validos": 0.35,
+     "oficial_mun": 0
+    },
+    "50": {
+     "nome": "DOUGLAS",
+     "votos": 519,
+     "validos": 0.29,
+     "oficial_mun": 519
+    }
+   }
+  },
+  "92274": {
+   "uf": "go",
+   "secoes": 802,
+   "candidatos": {
+    "15": {
+     "nome": "GUSTAVO MENDANHA",
+     "votos": 197491,
+     "validos": 95.81,
+     "oficial_mun": 197491
+    },
+    "70": {
+     "nome": "",
+     "votos": 6235,
+     "validos": 3.02,
+     "oficial_mun": 0
+    },
+    "50": {
+     "nome": "BRUNO FELIPE",
+     "votos": 2395,
+     "validos": 1.16,
+     "oficial_mun": 2395
+    }
+   }
+  },
+  "93734": {
+   "uf": "go",
+   "secoes": 2667,
+   "candidatos": {
+    "15": {
+     "nome": "MAGUITO VILELA",
+     "votos": 217194,
+     "validos": 36.02,
+     "oficial_mun": 217194
+    },
+    "55": {
+     "nome": "VANDERLAN CARDOSO",
+     "votos": 148739,
+     "validos": 24.67,
+     "oficial_mun": 148739
+    },
+    "13": {
+     "nome": "DELEGADA ADRIANA ACCORSI",
+     "votos": 80715,
+     "validos": 13.39,
+     "oficial_mun": 80715
+    },
+    "27": {
+     "nome": "GUSTAVO GAYER",
+     "votos": 45928,
+     "validos": 7.62,
+     "oficial_mun": 45928
+    },
+    "40": {
+     "nome": "ELIAS VAZ",
+     "votos": 24626,
+     "validos": 4.08,
+     "oficial_mun": 24626
+    },
+    "17": {
+     "nome": "MAJOR ARAÚJO",
+     "votos": 20395,
+     "validos": 3.38,
+     "oficial_mun": 20395
+    },
+    "22": {
+     "nome": "",
+     "votos": 18280,
+     "validos": 3.03,
+     "oficial_mun": 0
+    },
+    "77": {
+     "nome": "ALYSSON LIMA",
+     "votos": 16644,
+     "validos": 2.76,
+     "oficial_mun": 16644
+    },
+    "23": {
+     "nome": "VIRMONDES CRUVINEL",
+     "votos": 9845,
+     "validos": 1.63,
+     "oficial_mun": 9845
+    },
+    "90": {
+     "nome": "SAMUEL ALMEIDA",
+     "votos": 7383,
+     "validos": 1.22,
+     "oficial_mun": 7383
+    },
+    "45": {
+     "nome": "TALLES BARRETO",
+     "votos": 5689,
+     "validos": 0.94,
+     "oficial_mun": 5689
+    },
+    "50": {
+     "nome": "MANU JACOB",
+     "votos": 4639,
+     "validos": 0.77,
+     "oficial_mun": 4639
+    },
+    "43": {
+     "nome": "CRISTIANO CUNHA",
+     "votos": 1364,
+     "validos": 0.23,
+     "oficial_mun": 1364
+    },
+    "80": {
+     "nome": "FÁBIO JUNIOR",
+     "votos": 1052,
+     "validos": 0.17,
+     "oficial_mun": 1052
+    },
+    "21": {
+     "nome": "PROFESSOR ANTÔNIO",
+     "votos": 344,
+     "validos": 0.06,
+     "oficial_mun": 344
+    },
+    "29": {
+     "nome": "",
+     "votos": 87,
+     "validos": 0.01,
+     "oficial_mun": 0
+    }
+   }
+  }
+ },
+ "secoes_sem_detalhe": 0,
+ "arquivos": {
+  "votacao_secao_2020_AC.zip": {
+   "lidos": [
+    "votacao_secao_2020_AC.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2020_AL.zip": {
+   "lidos": [
+    "votacao_secao_2020_AL.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2020_AM.zip": {
+   "lidos": [
+    "votacao_secao_2020_AM.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2020_AP.zip": {
+   "lidos": [
+    "votacao_secao_2020_AP.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2020_BA.zip": {
+   "lidos": [
+    "votacao_secao_2020_BA.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2020_CE.zip": {
+   "lidos": [
+    "votacao_secao_2020_CE.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2020_ES.zip": {
+   "lidos": [
+    "votacao_secao_2020_ES.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2020_GO.zip": {
+   "lidos": [
+    "votacao_secao_2020_GO.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2020_MA.zip": {
+   "lidos": [
+    "votacao_secao_2020_MA.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2020_MG.zip": {
+   "lidos": [
+    "votacao_secao_2020_MG.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2020_MS.zip": {
+   "lidos": [
+    "votacao_secao_2020_MS.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2020_MT.zip": {
+   "lidos": [
+    "votacao_secao_2020_MT.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2020_PA.zip": {
+   "lidos": [
+    "votacao_secao_2020_PA.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2020_PB.zip": {
+   "lidos": [
+    "votacao_secao_2020_PB.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2020_PE.zip": {
+   "lidos": [
+    "votacao_secao_2020_PE.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2020_PI.zip": {
+   "lidos": [
+    "votacao_secao_2020_PI.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2020_PR.zip": {
+   "lidos": [
+    "votacao_secao_2020_PR.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2020_RJ.zip": {
+   "lidos": [
+    "votacao_secao_2020_RJ.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2020_RN.zip": {
+   "lidos": [
+    "votacao_secao_2020_RN.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2020_RO.zip": {
+   "lidos": [
+    "votacao_secao_2020_RO.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2020_RR.zip": {
+   "lidos": [
+    "votacao_secao_2020_RR.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2020_RS.zip": {
+   "lidos": [
+    "votacao_secao_2020_RS.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2020_SC.zip": {
+   "lidos": [
+    "votacao_secao_2020_SC.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2020_SE.zip": {
+   "lidos": [
+    "votacao_secao_2020_SE.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2020_SP.zip": {
+   "lidos": [
+    "votacao_secao_2020_SP.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "detalhe_votacao_secao_2020.zip": {
+   "lidos": [
+    "detalhe_votacao_secao_2020_BRASIL.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "QT_APTOS",
+    "QT_COMPARECIMENTO",
+    "QT_ABSTENCOES",
+    "QT_VOTOS_NOMINAIS",
+    "QT_VOTOS_BRANCOS",
+    "QT_VOTOS_NULOS",
+    "QT_VOTOS_LEGENDA",
+    "QT_VOTOS_ANULADOS_APU_SEP",
+    "NR_LOCAL_VOTACAO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO",
+    "DT_RECEBIMENTO_BU_HOR_TSE",
+    "DT_PRIM_TOT_PARCIAL_HOR_TSE",
+    "DS_ORIGEM_VOTO",
+    "ST_SECAO_INSTALADA",
+    "ST_SECAO_ANULADA",
+    "CD_MODELO_URNA",
+    "DS_MODELO_URNA"
+   ]
+  }
+ }
+}
