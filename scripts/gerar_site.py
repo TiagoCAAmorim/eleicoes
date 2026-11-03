@@ -99,6 +99,7 @@ def main():
             f.write(pagina(nome, extras, gerado_em))
     figuras_modelos(os.path.join(saida, "img", "modelos"))
     shutil.copy(os.path.join(SITE, "estilo.css"), os.path.join(saida, "estilo.css"))
+    web.copiar_icones(saida)
     for e in eleicoes:
         # uma eleição pode ter versões (ex.: modelo do dia e modelo revisado), cada uma numa subpasta
         versoes = e.get("versoes") or [{"sub": "", "resultados": e["resultados"]}]
