@@ -3,8 +3,10 @@
     python scripts/gerar_site.py               # gera em _site/
     python scripts/gerar_site.py --saida pasta
 
-Páginas fixas em site/ (início, modelos, análises) recebem cabeçalho e rodapé comuns; cada eleição listada em
-config/eleicoes.json ganha sua pasta (ex.: _site/2026/presidente/) gerada a partir de resultados/<id>.
+Páginas fixas em site/ (início, modelos, análises, alianças e as de testes de presidente, governador, prefeito e
+estresse)
+recebem cabeçalho e rodapé comuns; cada eleição listada em config/eleicoes.json ganha sua pasta (ex.: _site/2026/presidente/) gerada a partir de resultados/<id>. Os dados das
+páginas de testes (_site/testes/*.json) saem dos rejogos em resultados/ (eleicoes/site/testes.py).
 """
 import argparse
 import datetime as dt
@@ -17,14 +19,15 @@ from urllib.parse import quote
 
 import _raiz  # noqa: F401
 from eleicoes.caminhos import RAIZ, RESULTADOS, SITE, resultados
-from eleicoes.site import web
+from eleicoes.site import testes, web
 
 FUSO = dt.timezone(dt.timedelta(hours=-3))
 # contato do autor na página inicial (perfil no LinkedIn)
 CONTATO_LINKEDIN = "https://www.linkedin.com/in/tiago-amorim-eng/"
 # botão "Me pague um café" no topo das páginas fixas: copia esta chave Pix
 CHAVE_PIX = "bcd8d244-8aeb-4003-99ca-d8ba4f5f5952"
-PAGINAS = ["index.html", "modelos.html", "analises.html", "aliancas.html"]
+PAGINAS = ["index.html", "modelos.html", "analises.html", "aliancas.html", "presidente.html", "governador.html",
+           "prefeito.html", "estresse.html"]
 
 
 def _ler(nome):
@@ -187,14 +190,17 @@ def main():
     with open(os.path.join(RAIZ, "config", "eleicoes.json"), encoding="utf-8") as f:
         eleicoes = json.load(f)
     gerado_em = dt.datetime.now(FUSO).strftime("%d/%m/%Y")
+    # dados e tabelas das páginas de testes (governador, prefeito, estresse), lidos dos rejogos em resultados/
+    extras_testes = testes.exportar(os.path.join(saida, "testes"))
     extras = {"eleicoes": "\n".join(cartao_eleicao(e) for e in eleicoes),
-              "contato": contato(), **tabelas_aliancas()}
+              "contato": contato(), **tabelas_aliancas(), **extras_testes}
     for nome in PAGINAS:
         with open(os.path.join(saida, nome), "w", encoding="utf-8") as f:
             f.write(pagina(nome, extras, gerado_em))
     figuras_modelos(os.path.join(saida, "img", "modelos"))
     shutil.copy(os.path.join(SITE, "estilo.css"), os.path.join(saida, "estilo.css"))
     shutil.copy(os.path.join(SITE, "aliancas.js"), os.path.join(saida, "aliancas.js"))
+    shutil.copy(os.path.join(SITE, "testes.js"), os.path.join(saida, "testes.js"))
     # dados do simulador de alianças (um JSON por eleição de deputados)
     import aliancas
     aliancas.exportar(ANOS_ALIANCAS, os.path.join(saida, "aliancas", "dados"))

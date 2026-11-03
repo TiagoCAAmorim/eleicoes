@@ -36,7 +36,7 @@ scripts/                  linha de comando
 config/eleicoes.json      eleições publicadas no site (uma entrada por eleição e cargo)
 dados/                    entradas: comum/ (municípios, malhas), ibge/, priori/, <ano>/<cargo>/
 resultados/               saídas versionadas: 2026-presidente/ (inclui 49 retratos no histórico git), backtest/, importancia/
-site/                     páginas fixas do site (início, modelos, análises) e estilo comum
+site/                     páginas fixas do site (início, modelos, análises, testes por cargo) e estilo comum
 docs/                     metodologia, roteiro e histórico da apuração de 2026
 tests/                    testes rápidos (pytest)
 .github/workflows/        site (Pages), testes, apuração ao vivo

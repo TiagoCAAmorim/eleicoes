@@ -1,0 +1,59 @@
+<!-- página: modelos | titulo: Governador e senador: testes do modelo | descricao: Como o modelo de previsão da apuração se saiu em todas as eleições de governador e senador de 2010 a 2022, no 1º e no 2º turno. -->
+<p class="meta trilha"><a href="modelos.html">Modelos</a> · Governador e senador, 2010–2022</p>
+<h1>Governador e senador</h1>
+<p class="lead">Como o modelo de previsão da apuração se sairia em cada eleição de governador e de senador de 2010 a 2022. Escolha uma eleição e veja o que ele diria a cada momento da noite.</p>
+<p>O TSE não guarda retratos parciais das apurações, então cada eleição foi <strong>rejogada</strong>: os votos de cada município são os reais, mas a ordem em que chegam é sorteada, parecida com a de uma noite de apuração, e as primeiras seções de cada cidade vêm com um viés sorteado. Cada eleição tem duas apurações sorteadas. O modelo é o mesmo descrito em <a href="modelos.html">Modelos</a>, com a configuração adotada para cada cargo.</p>
+<ul class="lista-simples">
+  <li><a href="#segundo-turno">2º turno de governador</a> ({{gov_t2_n}} eleições)</li>
+  <li><a href="#primeiro-turno">1º turno de governador</a> ({{gov_t1_n}} eleições)</li>
+  <li><a href="#senador">Senador</a> ({{sen_n}} eleições)</li>
+</ul>
+
+<section data-secao="t2">
+<h2 id="segundo-turno">2º turno de governador</h2>
+<div class="selos"><span class="selo">Resultados reais</span><span class="selo planejado">Simulação da ordem</span><span class="selo">Pesquisa real em {{gov_t2_n_pesquisa}} eleições</span></div>
+<p>A matriz de transferência leva o 1º turno de cada município para o 2º, como no presidente. <strong>A</strong> é o mais votado no 1º turno entre os dois que foram ao 2º. Antes de abrir as urnas, a previsão parte da média dos 2º turnos de governador dos anos anteriores e, quando há, da última pesquisa da véspera (Ibope em 2010 e 2018; Ipec ou Atlas em 2022). Sem pesquisa, a faixa de antes da apuração é larga, perto de 20 pontos.</p>
+<div class="explorador" data-dados="testes/governador.json" data-parte="t2" data-tipo="t2" data-inicial="2022-sp"><p class="meta">Carregando…</p></div>
+<h3>Todas as eleições juntas</h3>
+<p class="meta">Cobertura: em que fração das apurações sorteadas o intervalo continha o resultado (meta: 90% e 50%). Chamada errada: mais de 99% de chance para quem perdeu.</p>
+{{gov_t2_resumo}}
+<details><summary>Ver as {{gov_t2_n}} eleições</summary>
+<p class="meta">Erro antes de abrir: distância, em pontos, entre a previsão sem nenhum voto e o resultado. Cobertura: momentos com votos apurados, nas duas apurações sorteadas. Clique numa eleição para abri-la no gráfico.</p>
+{{gov_t2_indice}}
+</details>
+</section>
+
+<section data-secao="t1">
+<h2 id="primeiro-turno">1º turno de governador</h2>
+<div class="selos"><span class="selo">Resultados reais</span><span class="selo planejado">Simulação da ordem</span><span class="selo planejado">Pesquisa sintética</span></div>
+<p>No 1º turno não há turno anterior na mesma eleição. A matriz parte da <strong>eleição presidencial de quatro anos antes</strong> no mesmo município: onde um partido foi forte, os candidatos ligados a ele tendem a ser fortes, mesmo antes de chegar um voto dali. O modelo dá a votação de cada candidato, a chance de vencer no 1º turno (passar de 50% dos válidos) e a de ir ao 2º turno.</p>
+<p>Ainda não registrei as pesquisas de governador do 1º turno. Antes da apuração, o modelo parte de uma <strong>pesquisa sintética</strong>: o resultado real de cada candidato mais um erro sorteado de cerca de 3 pontos. Por isso a previsão de antes de abrir as urnas só mostra se a faixa é honesta para esse erro.</p>
+<div class="explorador" data-dados="testes/governador.json" data-parte="t1" data-tipo="t1" data-inicial="2018-am"><p class="meta">Carregando…</p></div>
+<h3>Todas as eleições juntas</h3>
+<p class="meta">Métricas da votação dos 3 primeiros colocados reais. Chamada errada: mais de 99% de chance para algo que não aconteceu (vencer no 1º turno, ir ao 2º turno, ser o 1º colocado), ou menos de 1% para algo que aconteceu.</p>
+{{gov_t1_resumo}}
+<details><summary>Ver as {{gov_t1_n}} eleições</summary>
+{{gov_t1_indice}}
+</details>
+</section>
+
+<section data-secao="senador">
+<h2 id="senador">Senador</h2>
+<div class="selos"><span class="selo">Resultados reais</span><span class="selo planejado">Simulação da ordem</span><span class="selo planejado">Pesquisa sintética</span></div>
+<p>Senador é eleito por maioria simples, em turno único, com o mesmo modelo do 1º turno. Em 2010 e 2018 eram duas vagas por estado: a chance mostrada é a de ficar entre os dois mais votados.</p>
+<div class="explorador" data-dados="testes/governador.json" data-parte="senador" data-tipo="t1" data-vagas="sim" data-inicial="2022-sp"><p class="meta">Carregando…</p></div>
+<h3>Todas as eleições juntas</h3>
+{{sen_resumo}}
+<details><summary>Ver as {{sen_n}} eleições</summary>
+{{sen_indice}}
+</details>
+</section>
+
+<h2>O que ainda falta</h2>
+<ul class="lista-simples">
+  <li><strong>O viés de ordem foi suposto, não medido.</strong> O tamanho do viés das primeiras seções veio da noite de 2026 do presidente. Não há retratos parciais de apurações de governador para conferir.</li>
+  <li><strong>Pesquisas.</strong> Faltam as do 2º turno de governador de 2014 e todas as do 1º turno de governador e de senador.</li>
+  <li><strong>A faixa do 1º turno é larga.</strong> O intervalo de 50% contém o resultado em 60% a 80% dos casos, quando deveria conter em 50%.</li>
+</ul>
+<p class="meta">Detalhes: <a href="https://github.com/TiagoCAAmorim/eleicoes/blob/main/docs/governador.md">docs/governador.md</a> e <a href="https://github.com/TiagoCAAmorim/eleicoes/blob/main/docs/primeiro-turno.md">docs/primeiro-turno.md</a>. Dados do gráfico: <a href="testes/governador.json">governador.json</a>.</p>
+<script src="testes.js"></script>
