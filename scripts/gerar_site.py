@@ -19,8 +19,8 @@ from eleicoes.caminhos import RAIZ, RESULTADOS, SITE, resultados
 from eleicoes.site import web
 
 FUSO = dt.timezone(dt.timedelta(hours=-3))
-# contato do autor na página inicial: troque pelo e-mail definitivo (vazio = "e-mail em breve")
-CONTATO_EMAIL = ""
+# contato do autor na página inicial (perfil no LinkedIn)
+CONTATO_LINKEDIN = "https://www.linkedin.com/in/tiago-amorim-eng/"
 # botão "Me pague um café" no topo das páginas fixas: copia esta chave Pix
 CHAVE_PIX = "bcd8d244-8aeb-4003-99ca-d8ba4f5f5952"
 PAGINAS = ["index.html", "modelos.html", "analises.html"]
@@ -88,10 +88,8 @@ apuração (de 0,5% a 99%) em que o intervalo de 90% continha o resultado final.
 
 
 def contato():
-    if not CONTATO_EMAIL:
-        return "Contato: e-mail em breve."
-    e = html.escape(CONTATO_EMAIL)
-    return f'Contato: <a href="mailto:{e}">{e}</a>.'
+    u = html.escape(CONTATO_LINKEDIN)
+    return f'Contato: <a href="{u}" rel="me noopener" target="_blank">meu perfil no LinkedIn</a>.'
 
 
 def pagina(nome, extras, gerado_em):
