@@ -19,11 +19,13 @@ eleicoes/                 pacote Python
   dados/geo.py            regiões, porte dos municípios
   modelos/transferencia.py  modelo de transferência de votos 1º → 2º turno
   modelos/previsao.py     roda o modelo sobre um retrato da apuração e resume por grupo
+  modelos/primeiro_turno.py  modelo do 1º turno (vários candidatos; presidente, governador, senador, prefeito)
   site/                   imagens (painel, mapa), exportação de CSV e página do painel
   site/templates/         HTML do painel, do detalhe por município e dos indicadores
 scripts/                  linha de comando
   apuracao.py             coleta + previsão + painel (uma rodada ou em loop)
   backtest.py             simula a apuração de 2022 e mede erro e cobertura (--variante para testar variantes)
+  primeiro_turno.py       rejogos do 1º turno (--cargo presidente|governador|senador|prefeito)
   estresse.py             teste de estresse: muitas apurações sintéticas (--calibrar mede o viés de ordem de 2026)
   rejogar_2026.py         rejoga a apuração real de 2026 com variantes do modelo
   rejogar_paginas_2026.py refaz as saídas da noite de 2026 com outro modelo (versão "revisado" do site)

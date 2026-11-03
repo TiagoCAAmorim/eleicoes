@@ -45,7 +45,7 @@ class Config:
     bonus_partido: float = 1.5        # logit extra para o candidato do mesmo partido de uma linha da referência
     bonus_branco: float = 1.5         # branco/nulo -> branco/nulo
     bonus_abstencao: float = 2.0      # abstenção -> abstenção
-    tau: float = 0.5                  # quanto cada nível da hierarquia pode se afastar do de cima
+    tau: float = 0.7                  # quanto cada nível da hierarquia pode se afastar do de cima
     s0_inicial: float = 0.02          # ruído entre unidades (fração do eleitorado)
     s_parcial: float = 0.08           # desvio extra de uma unidade parcialmente apurada
     k_parcial: float = 0.30           # peso do resultado parcial da própria unidade: f/(f+k)
@@ -275,10 +275,17 @@ def simular(df, X, Y, aj: Ajuste, cfg: Config):
         else:
             L = np.linalg.cholesky(cov + 1e-9 * np.eye(R * J))
             # o grupo herda o sorteio nacional e soma o próprio desvio (média do grupo - nacional)
-            z = np.sqrt(cfg.rho_grupos) * zg + np.sqrt(1 - cfg.rho_grupos) * rng.standard_normal((S, R * J))
+            # antes de abrir, a incerteza do total vem da pesquisa: os desvios dos grupos (a geografia) não se somam
+            rho = cfg.rho_grupos if df["Ea"].sum() > 0 else 0.0
+            z = np.sqrt(rho) * zg + np.sqrt(1 - rho) * rng.standard_normal((S, R * J))
             th = mu + zb + z @ L.T
         M = matriz(th.reshape(S, R, J))
-        pred[:, idx] = np.einsum("ur,srd->sud", X[idx], M)
+        sim = np.einsum("ur,srd->sud", X[idx], M)
+        # o sorteio em escala logit puxa as frações para perto da uniforme (desigualdade de Jensen): reescala para
+        # que a média dos sorteios de cada unidade seja a previsão com os parâmetros médios, sem mudar a dispersão
+        det = X[idx] @ matriz(mu.reshape(R, J))
+        sim = sim * (det / np.maximum(sim.mean(0), 1e-9))[None]
+        pred[:, idx] = sim / np.maximum(sim.sum(-1, keepdims=True), 1e-9)
     temY = np.isfinite(Y).all(1)
     f = df["f"].values
     rho = np.where(temY, f / (f + cfg.k_parcial), 0.0)

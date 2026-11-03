@@ -59,6 +59,8 @@ VARIANTES = {
     # adotada (padrão de eleicoes/modelos/primeiro_turno.Config, igual a t5_p4_r25)
     "adotada": {},
     "adotada_p8": {"choque_parcial": 0.08},
+    "adotada_p6": {"choque_parcial": 0.06},
+    "adotada_t7": {"tau": 0.7},
     "g2": {"choque_grupo_inicio": 0.2},
     "pg2": {"choque_grupo_inicio": 0.2},
     "pg2_c4": {"choque_grupo_inicio": 0.2, "choque_uf": 0.04},
