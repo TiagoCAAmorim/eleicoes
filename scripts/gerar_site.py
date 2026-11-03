@@ -148,7 +148,7 @@ coligação ou federação, contra a mesma eleição com só aquela aliança des
     arq = os.path.join(pasta, "validacao.csv")
     if os.path.exists(arq):
         v = pd.read_csv(arq)
-        linhas = [[str(r.ano), esc(r.cargo), str(r.vagas), str(r.eleitos_iguais), _num(r.pct, 1) + "%"]
+        linhas = [[str(r.ano), esc(r.cargo), str(r.vagas), str(r.eleitos_iguais), f"{r.pct:.1f}%".replace(".", ",")]
                   for r in v.itertuples()]
         out["aliancas_validacao"] = tabela(["Ano", "Cargo", "Vagas", "Eleitos iguais", "Acerto"], linhas, (2, 3, 4))
     return out
