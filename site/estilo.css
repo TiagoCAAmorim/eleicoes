@@ -30,6 +30,15 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .topo nav a { color: var(--fg-2); text-decoration: none; padding: 8px 10px; border-radius: 8px; font-weight: 500; }
 .topo nav a:hover { color: var(--fg); background: var(--bg); }
 .topo nav a[aria-current="page"] { color: var(--fg); background: var(--accent-bg); }
+.cafe { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.botao-cafe { font: 500 14px/1.2 var(--sans); color: var(--fg); background: var(--warn-bg); border: 1px solid var(--line);
+  border-radius: 999px; padding: 6px 12px; cursor: pointer; }
+.botao-cafe:hover { border-color: var(--warn); }
+.cafe-aviso { font-size: 13px; color: var(--fg-2); }
+.cafe-aviso:empty { display: none; }
+.sobre { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; max-width: 70ch; }
+.sobre p { margin: 0 0 8px; }
+.sobre p:last-child { margin-bottom: 0; }
 .caixa { max-width: 960px; margin: 0 auto; padding-left: 16px; padding-right: 16px; }
 main.caixa { padding-top: 32px; padding-bottom: 56px; }
 h1 { font: 600 clamp(28px, 5vw, 40px)/1.15 var(--serif); margin: 0 0 12px; letter-spacing: -0.01em; }
