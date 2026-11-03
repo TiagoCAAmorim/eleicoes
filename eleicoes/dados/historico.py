@@ -120,3 +120,81 @@ def segundo_turno_governador(ano, uf):
     info = v[v["turno"] == 2].drop_duplicates("numero").set_index("numero")
     return base, {"A": info.loc[num_a, "nome"], "B": info.loc[num_b, "nome"],
                   "partido_A": info.loc[num_a, "partido"], "partido_B": info.loc[num_b, "partido"]}
+
+
+CARGOS = {"presidente": 1, "governador": 3, "senador": 5, "prefeito": 11}
+
+
+def _votos_cargo(ano, cargo, uf=None, turno=1):
+    v = _ler(ano, "votos_mun.csv.gz")
+    v = v[(v["cargo"] == cargo) & (v["turno"] == turno) & (v["tipo_voto"] == "candidato")]
+    c = _ler(ano, "comparecimento_mun.csv.gz")
+    c = c[(c["cargo"] == cargo) & (c["turno"] == turno)]
+    if uf is not None:
+        v, c = v[v["uf"].str.lower() == uf], c[c["uf"].str.lower() == uf]
+    return v, c
+
+
+def primeiro_turno(ano, cargo, uf=None, ref=(None, "presidente"), k_max=5, min_validos=5.0, k_min=3, k_ref=3):
+    """Base do 1º turno de `cargo` ("presidente", "governador", "senador", "prefeito") para o modelo do 1º turno
+    (eleicoes/modelos/primeiro_turno.py), por município, com a apuração completa.
+
+    Destinos d0..d{K-1} = candidatos nomeados (os de pelo menos `min_validos`% dos válidos, no mínimo `k_min` e no
+    máximo `k_max`, em ordem de votos), dK = demais candidatos, d{K+1} = brancos + nulos; C = comparecimento.
+    Referência (`ref` = (ano, cargo); ano None = 4 anos antes): r0..r{k_ref-1} = os `k_ref` partidos mais votados no
+    1º turno da referência (na UF, se `uf`), r{k_ref} = demais, r{k_ref+1} = brancos + nulos, rE = eleitorado.
+    Municípios sem referência (criados depois) recebem a média da UF. `ref=None`: sem referência.
+    Devolve (base, info) com nomes, partidos e o resultado (% dos válidos) de cada candidato nomeado."""
+    v, c = _votos_cargo(ano, CARGOS[cargo], uf)
+    tot = v.groupby(["numero"])["votos"].sum().sort_values(ascending=False)
+    pct = 100 * tot / tot.sum()
+    k = int(min(k_max, max(k_min, (pct >= min_validos).sum()), len(tot)))
+    nomeados = list(tot.index[:k])
+    info_c = v.drop_duplicates("numero").set_index("numero")
+    c = c.set_index("mun")
+    base = c[["uf", "mun_nome"]].rename(columns={"mun_nome": "nome"}).copy()
+    base["uf"] = base["uf"].str.lower()
+    base["E"] = c["aptos"].astype(float)
+    pv = v.pivot_table(index="mun", columns="numero", values="votos", aggfunc="sum", fill_value=0)
+    for i, n in enumerate(nomeados):
+        base[f"d{i}"] = pv[n].reindex(base.index).fillna(0).astype(float)
+    base[f"d{k}"] = (pv.sum(1).reindex(base.index).fillna(0) - base[[f"d{i}" for i in range(k)]].sum(1)).clip(lower=0)
+    base[f"d{k + 1}"] = (c["brancos"] + c["nulos"]).astype(float)
+    base["C"] = c["comparecimento"].astype(float)
+    partidos_ref = []
+    if ref is not None:
+        ano_ref = ref[0] or ano - 4
+        rv, rc = _votos_cargo(ano_ref, CARGOS[ref[1]], uf)
+        rt = rv.groupby("partido")["votos"].sum().sort_values(ascending=False)
+        partidos_ref = list(rt.index[:k_ref])
+        rp = rv.pivot_table(index="mun", columns="partido", values="votos", aggfunc="sum", fill_value=0)
+        rc = rc.set_index("mun")
+        r = pd.DataFrame(index=base.index)
+        for i, p in enumerate(partidos_ref):
+            r[f"r{i}"] = rp[p].reindex(base.index)
+        r[f"r{k_ref}"] = rp.sum(1).reindex(base.index) - r[[f"r{i}" for i in range(k_ref)]].sum(1)
+        r[f"r{k_ref + 1}"] = (rc["brancos"] + rc["nulos"]).reindex(base.index)
+        r["rE"] = rc["aptos"].reindex(base.index)
+        r.loc[r["rE"].notna()] = r.loc[r["rE"].notna()].fillna(0)
+        vpe = 2 if r[[f"r{i}" for i in range(k_ref + 2)]].sum().sum() > 1.5 * rc["comparecimento"].sum() else 1
+        r[[f"r{i}" for i in range(k_ref + 2)]] /= vpe
+        falta = r["rE"].isna()
+        if falta.any():
+            fr = r.div(r["rE"], axis=0)
+            fr["uf"] = base["uf"]
+            media = fr[~falta].groupby("uf").mean()
+            geral = fr[~falta].drop(columns="uf").mean()
+            for col in [f"r{i}" for i in range(k_ref + 2)]:
+                r.loc[falta, col] = base.loc[falta, "uf"].map(media[col]).fillna(geral[col]) * base.loc[falta, "E"]
+            r.loc[falta, "rE"] = base.loc[falta, "E"]
+        base = base.join(r.astype(float))
+    base = base[base["uf"].isin(REGIAO)].reset_index()
+    mun = pd.read_csv(os.path.join(COMUM, "municipios.csv"), dtype={"mun": str})
+    base["capital"] = base["mun"].isin(set(mun.loc[mun["capital"], "mun"]))
+    base["Ea"] = base["E"]
+    vpe = 2 if tot.sum() + base[f"d{k + 1}"].sum() > 1.5 * base["C"].sum() else 1
+    info = {"ano": ano, "cargo": cargo, "uf": uf, "votos_por_eleitor": vpe, "partidos_ref": partidos_ref,
+            "candidatos": [{"numero": n, "nome": info_c.loc[n, "nome"], "partido": info_c.loc[n, "partido"],
+                            "validos": float(pct[n])} for n in nomeados],
+            "demais_validos": float(pct.iloc[k:].sum())}
+    return base, info

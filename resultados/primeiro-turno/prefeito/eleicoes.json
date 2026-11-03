@@ -1,0 +1,4040 @@
+{
+ "2024|00035": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "ro",
+  "mun": "00035",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.06435136668958745,
+   0.2758031534601884
+  ],
+  "candidatos": [
+   {
+    "numero": "44",
+    "nome": "MARIANA CARVALHO",
+    "partido": "UNIÃO",
+    "validos": 44.529284477207185
+   },
+   {
+    "numero": "20",
+    "nome": "LÉO",
+    "partido": "PODE",
+    "validos": 25.648666269353992
+   },
+   {
+    "numero": "12",
+    "nome": "CÉLIO LOPES",
+    "partido": "PDT",
+    "validos": 11.742589385351963
+   },
+   {
+    "numero": "15",
+    "nome": "JUÍZA EUMA TOURINHO",
+    "partido": "MDB",
+    "validos": 9.791890821677272
+   },
+   {
+    "numero": "77",
+    "nome": "DR BENEDITO ALVES",
+    "partido": "SOLIDARIEDADE",
+    "validos": 5.188530196429785
+   }
+  ],
+  "demais_validos": 3.0990388499798014
+ },
+ "2024|01392": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "ac",
+  "mun": "01392",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.036260144230207306,
+   0.2723465265142808
+  ],
+  "candidatos": [
+   {
+    "numero": "22",
+    "nome": "TIÃO BOCALOM",
+    "partido": "PL",
+    "validos": 54.82470531815543
+   },
+   {
+    "numero": "15",
+    "nome": "MARCUS ALEXANDRE",
+    "partido": "MDB",
+    "validos": 34.77321487165249
+   },
+   {
+    "numero": "30",
+    "nome": "JARUDE",
+    "partido": "NOVO",
+    "validos": 7.161210530301118
+   }
+  ],
+  "demais_validos": 3.2408692798909615
+ },
+ "2024|02550": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "am",
+  "mun": "02550",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.08246540098361911,
+   0.18232549547053084
+  ],
+  "candidatos": [
+   {
+    "numero": "70",
+    "nome": "DAVID ALMEIDA",
+    "partido": "AVANTE",
+    "validos": 32.15610669128429
+   },
+   {
+    "numero": "22",
+    "nome": "CAPITÃO ALBERTO NETO",
+    "partido": "PL",
+    "validos": 24.94375338363865
+   },
+   {
+    "numero": "23",
+    "nome": "AMOM MANDEL",
+    "partido": "CIDADANIA",
+    "validos": 19.10190408739015
+   },
+   {
+    "numero": "44",
+    "nome": "ROBERTO CIDADE",
+    "partido": "UNIÃO",
+    "validos": 17.009194428751112
+   },
+   {
+    "numero": "13",
+    "nome": "MARCELO RAMOS",
+    "partido": "PT",
+    "validos": 6.0330107106616015
+   }
+  ],
+  "demais_validos": 0.7560306982741969
+ },
+ "2024|03018": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "rr",
+  "mun": "03018",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.034224308777479916,
+   0.2393310556978439
+  ],
+  "candidatos": [
+   {
+    "numero": "15",
+    "nome": "ARTHUR HENRIQUE",
+    "partido": "MDB",
+    "validos": 75.17625608923159
+   },
+   {
+    "numero": "44",
+    "nome": "CATARINA GUERRA",
+    "partido": "UNIÃO",
+    "validos": 22.810275631219767
+   },
+   {
+    "numero": "43",
+    "nome": "MAURO NAKASHIMA",
+    "partido": "PV",
+    "validos": 1.1661972148997781
+   }
+  ],
+  "demais_validos": 0.8472710646488708
+ },
+ "2024|04154": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "pa",
+  "mun": "04154",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.11478906955462495,
+   0.2032519832491955
+  ],
+  "candidatos": [
+   {
+    "numero": "40",
+    "nome": "DR DANIEL",
+    "partido": "PSB",
+    "validos": 83.48067923130824
+   },
+   {
+    "numero": "15",
+    "nome": "ANTONIO DOIDO",
+    "partido": "MDB",
+    "validos": 8.38364878062949
+   },
+   {
+    "numero": "13",
+    "nome": "MIRO SANOVA",
+    "partido": "PT",
+    "validos": 4.278053509252838
+   }
+  ],
+  "demais_validos": 3.857618478809421
+ },
+ "2024|04278": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "pa",
+  "mun": "04278",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.07249752656895747,
+   0.20757112537893757
+  ],
+  "candidatos": [
+   {
+    "numero": "15",
+    "nome": "IGOR",
+    "partido": "MDB",
+    "validos": 44.885100906172596
+   },
+   {
+    "numero": "22",
+    "nome": "DELEGADO EDER MAURO",
+    "partido": "PL",
+    "validos": 31.484696333655094
+   },
+   {
+    "numero": "50",
+    "nome": "EDMILSON RODRIGUES",
+    "partido": "PSOL",
+    "validos": 9.777709600740303
+   },
+   {
+    "numero": "10",
+    "nome": "THIAGO ARAÚJO",
+    "partido": "REPUBLICANOS",
+    "validos": 7.766071281586962
+   }
+  ],
+  "demais_validos": 6.08642187784504
+ },
+ "2024|05355": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "pa",
+  "mun": "05355",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.0362151694750764,
+   0.21244758211946538
+  ],
+  "candidatos": [
+   {
+    "numero": "15",
+    "nome": "ZÉ MARIA TAPAJÓS",
+    "partido": "MDB",
+    "validos": 49.73214944795369
+   },
+   {
+    "numero": "22",
+    "nome": "JK DO POVÃO",
+    "partido": "PL",
+    "validos": 41.92072045471322
+   },
+   {
+    "numero": "45",
+    "nome": "HUGO DINIZ",
+    "partido": "PSDB",
+    "validos": 4.887745309979015
+   }
+  ],
+  "demais_validos": 3.4593847873540797
+ },
+ "2024|05835": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "pa",
+  "mun": "05835",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.05927351662474865,
+   0.2120170459786372
+  ],
+  "candidatos": [
+   {
+    "numero": "70",
+    "nome": "AURÉLIO GOIANO",
+    "partido": "AVANTE",
+    "validos": 58.52258642716855
+   },
+   {
+    "numero": "44",
+    "nome": "RAFAEL RIBEIRO",
+    "partido": "UNIÃO",
+    "validos": 28.514768415231774
+   },
+   {
+    "numero": "22",
+    "nome": "DR FELIPE",
+    "partido": "PL",
+    "validos": 8.373535711788673
+   }
+  ],
+  "demais_validos": 4.589109445811007
+ },
+ "2024|06050": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "ap",
+  "mun": "06050",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.05210475611339241,
+   0.25812215169548847
+  ],
+  "candidatos": [
+   {
+    "numero": "15",
+    "nome": "DR FURLAN",
+    "partido": "MDB",
+    "validos": 85.07977361036495
+   },
+   {
+    "numero": "50",
+    "nome": "PAULO 50",
+    "partido": "PSOL",
+    "validos": 9.783147382317786
+   },
+   {
+    "numero": "10",
+    "nome": "ALINE 10",
+    "partido": "REPUBLICANOS",
+    "validos": 3.705277010790573
+   }
+  ],
+  "demais_validos": 1.4318019965266935
+ },
+ "2024|08036": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "ma",
+  "mun": "08036",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.03634386616001938,
+   0.186234243604366
+  ],
+  "candidatos": [
+   {
+    "numero": "11",
+    "nome": "RILDO AMARAL",
+    "partido": "PP",
+    "validos": 35.57082043343653
+   },
+   {
+    "numero": "10",
+    "nome": "MARIANA CARVALHO",
+    "partido": "REPUBLICANOS",
+    "validos": 26.555727554179565
+   },
+   {
+    "numero": "55",
+    "nome": "JOSIVALDO JP",
+    "partido": "PSD",
+    "validos": 21.08423632610939
+   },
+   {
+    "numero": "30",
+    "nome": "NILSON TAKASHI",
+    "partido": "NOVO",
+    "validos": 10.367002063983488
+   },
+   {
+    "numero": "65",
+    "nome": "MARCO AURELIO",
+    "partido": "PC do B",
+    "validos": 5.843653250773994
+   }
+  ],
+  "demais_validos": 0.5785603715170279
+ },
+ "2024|09210": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "ma",
+  "mun": "09210",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.0592453218354349,
+   0.20923517831171762
+  ],
+  "candidatos": [
+   {
+    "numero": "55",
+    "nome": "EDUARDO BRAIDE",
+    "partido": "PSD",
+    "validos": 70.11745225627398
+   },
+   {
+    "numero": "40",
+    "nome": "DUARTE",
+    "partido": "PSB",
+    "validos": 22.557012161784538
+   },
+   {
+    "numero": "28",
+    "nome": "DR YGLÉSIO",
+    "partido": "PRTB",
+    "validos": 3.1845928744126955
+   }
+  ],
+  "demais_validos": 4.140942707528781
+ },
+ "2024|12190": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "pi",
+  "mun": "12190",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.05952805010552016,
+   0.20026993113891967
+  ],
+  "candidatos": [
+   {
+    "numero": "44",
+    "nome": "SILVIO MENDES",
+    "partido": "UNIÃO",
+    "validos": 52.19260832477412
+   },
+   {
+    "numero": "13",
+    "nome": "FABIO NOVO",
+    "partido": "PT",
+    "validos": 43.25896976132862
+   },
+   {
+    "numero": "25",
+    "nome": "DR PESSOA",
+    "partido": "PRD",
+    "validos": 2.2045767108263843
+   }
+  ],
+  "demais_validos": 2.3438452030708703
+ },
+ "2024|13730": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "ce",
+  "mun": "13730",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.08967352157314701,
+   0.1484729525318735
+  ],
+  "candidatos": [
+   {
+    "numero": "55",
+    "nome": "NAUMI AMORIM",
+    "partido": "PSD",
+    "validos": 38.41761658031088
+   },
+   {
+    "numero": "13",
+    "nome": "CATANHO",
+    "partido": "PT",
+    "validos": 24.672020725388602
+   },
+   {
+    "numero": "45",
+    "nome": "EMILIA PESSOA",
+    "partido": "PSDB",
+    "validos": 24.667875647668392
+   },
+   {
+    "numero": "22",
+    "nome": "CORONEL AGINALDO",
+    "partido": "PL",
+    "validos": 12.242487046632125
+   }
+  ],
+  "demais_validos": 0.0
+ },
+ "2024|13897": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "ce",
+  "mun": "13897",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.07825321651361439,
+   0.2183913094562261
+  ],
+  "candidatos": [
+   {
+    "numero": "22",
+    "nome": "ANDRÉ FERNANDES",
+    "partido": "PL",
+    "validos": 40.20108226671176
+   },
+   {
+    "numero": "13",
+    "nome": "EVANDRO LEITÃO",
+    "partido": "PT",
+    "validos": 34.3292598791333
+   },
+   {
+    "numero": "12",
+    "nome": "JOSÉ SARTO",
+    "partido": "PDT",
+    "validos": 11.753653847666206
+   },
+   {
+    "numero": "44",
+    "nome": "CAPITÃO WAGNER",
+    "partido": "UNIÃO",
+    "validos": 11.397902813335802
+   }
+  ],
+  "demais_validos": 2.3181011931529363
+ },
+ "2024|17612": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "rn",
+  "mun": "17612",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.1047102217927759,
+   0.281625660288557
+  ],
+  "candidatos": [
+   {
+    "numero": "44",
+    "nome": "PAULINHO FREIRE",
+    "partido": "UNIÃO",
+    "validos": 44.07730384304353
+   },
+   {
+    "numero": "13",
+    "nome": "NATÁLIA BONAVIDES",
+    "partido": "PT",
+    "validos": 28.45402615597781
+   },
+   {
+    "numero": "55",
+    "nome": "CARLOS EDUARDO",
+    "partido": "PSD",
+    "validos": 23.95476530186512
+   }
+  ],
+  "demais_validos": 3.51390469911354
+ },
+ "2024|19810": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "pb",
+  "mun": "19810",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.10812925408743246,
+   0.17457371412532455
+  ],
+  "candidatos": [
+   {
+    "numero": "44",
+    "nome": "BRUNO CUNHA LIMA",
+    "partido": "UNIÃO",
+    "validos": 48.21951548540669
+   },
+   {
+    "numero": "40",
+    "nome": "DR JHONY",
+    "partido": "PSB",
+    "validos": 34.583132068738934
+   },
+   {
+    "numero": "65",
+    "nome": "INÁCIO FALCÃO",
+    "partido": "PC do B",
+    "validos": 7.157621727002528
+   },
+   {
+    "numero": "30",
+    "nome": "ARTUR BOLINHA",
+    "partido": "NOVO",
+    "validos": 7.0853840563627895
+   }
+  ],
+  "demais_validos": 2.9543466624890664
+ },
+ "2024|20516": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "pb",
+  "mun": "20516",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.08864780410095181,
+   0.21276392050839701
+  ],
+  "candidatos": [
+   {
+    "numero": "11",
+    "nome": "CICERO LUCENA",
+    "partido": "PP",
+    "validos": 49.16234055709746
+   },
+   {
+    "numero": "22",
+    "nome": "MARCELO QUEIROGA",
+    "partido": "PL",
+    "validos": 21.77195530565582
+   },
+   {
+    "numero": "20",
+    "nome": "RUY CARNEIRO",
+    "partido": "PODE",
+    "validos": 16.70813020990619
+   },
+   {
+    "numero": "13",
+    "nome": "LUCIANO CARTAXO",
+    "partido": "PT",
+    "validos": 11.770373459497549
+   }
+  ],
+  "demais_validos": 0.587200467842985
+ },
+ "2024|23817": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "pe",
+  "mun": "23817",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.06848341653195004,
+   0.17112415839121706
+  ],
+  "candidatos": [
+   {
+    "numero": "45",
+    "nome": "RODRIGO PINHEIRO",
+    "partido": "PSDB",
+    "validos": 52.68236858790962
+   },
+   {
+    "numero": "12",
+    "nome": "ZÉ QUEIROZ",
+    "partido": "PDT",
+    "validos": 34.152967436297935
+   },
+   {
+    "numero": "22",
+    "nome": "FERNANDO RODOLFO",
+    "partido": "PL",
+    "validos": 8.931434256581559
+   }
+  ],
+  "demais_validos": 4.233229719210883
+ },
+ "2024|24570": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "pe",
+  "mun": "24570",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.17976545068859018,
+   0.2344701757471176
+  ],
+  "candidatos": [
+   {
+    "numero": "22",
+    "nome": "MANO MEDEIROS",
+    "partido": "PL",
+    "validos": 55.92949808526302
+   },
+   {
+    "numero": "11",
+    "nome": "CLARISSA TÉRCIO",
+    "partido": "PP",
+    "validos": 20.230015899431457
+   },
+   {
+    "numero": "13",
+    "nome": "ELIAS GOMES",
+    "partido": "PT",
+    "validos": 18.40745850372121
+   },
+   {
+    "numero": "70",
+    "nome": "DANIEL ALVES",
+    "partido": "AVANTE",
+    "validos": 5.433027511584314
+   }
+  ],
+  "demais_validos": 0.0
+ },
+ "2024|24910": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "pe",
+  "mun": "24910",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.13165837315162995,
+   0.18205561367299047
+  ],
+  "candidatos": [
+   {
+    "numero": "13",
+    "nome": "VINICIUS CASTELLO",
+    "partido": "PT",
+    "validos": 38.754602054781316
+   },
+   {
+    "numero": "55",
+    "nome": "MIRELLA",
+    "partido": "PSD",
+    "validos": 30.016480656913203
+   },
+   {
+    "numero": "22",
+    "nome": "IZABEL URQUIZA DE OLINDA",
+    "partido": "PL",
+    "validos": 24.829892634784787
+   }
+  ],
+  "demais_validos": 6.3990246535206925
+ },
+ "2024|25135": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "pe",
+  "mun": "25135",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.13640660521352585,
+   0.1867388487450371
+  ],
+  "candidatos": [
+   {
+    "numero": "45",
+    "nome": "RAMOS",
+    "partido": "PSDB",
+    "validos": 44.361419958208344
+   },
+   {
+    "numero": "40",
+    "nome": "JUNIOR MATUTO",
+    "partido": "PSB",
+    "validos": 30.662978463528102
+   },
+   {
+    "numero": "11",
+    "nome": "LÍVIA ÁLVARO",
+    "partido": "PP",
+    "validos": 9.450421808297259
+   },
+   {
+    "numero": "22",
+    "nome": "EDINHO FAZ",
+    "partido": "PL",
+    "validos": 9.177398978559326
+   }
+  ],
+  "demais_validos": 6.347780791406966
+ },
+ "2024|25216": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "pe",
+  "mun": "25216",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.054259622835248315,
+   0.18890087897356425
+  ],
+  "candidatos": [
+   {
+    "numero": "44",
+    "nome": "SIMÃO DURANDO",
+    "partido": "UNIÃO",
+    "validos": 59.16449888592534
+   },
+   {
+    "numero": "45",
+    "nome": "DR. JULIO",
+    "partido": "PSDB",
+    "validos": 28.66080542658632
+   },
+   {
+    "numero": "22",
+    "nome": "LARA CAVALCANTI",
+    "partido": "PL",
+    "validos": 5.903498084669674
+   },
+   {
+    "numero": "13",
+    "nome": "ODACY AMORIM",
+    "partido": "PT",
+    "validos": 5.692756868297716
+   }
+  ],
+  "demais_validos": 0.5784407345209479
+ },
+ "2024|25313": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "pe",
+  "mun": "25313",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.10982663454659197,
+   0.19886997936619305
+  ],
+  "candidatos": [
+   {
+    "numero": "40",
+    "nome": "JOÃO CAMPOS",
+    "partido": "PSB",
+    "validos": 78.10556699965775
+   },
+   {
+    "numero": "22",
+    "nome": "GILSON MACHADO",
+    "partido": "PL",
+    "validos": 13.898449557339257
+   },
+   {
+    "numero": "50",
+    "nome": "DANI PORTELA",
+    "partido": "PSOL",
+    "validos": 3.778706220927855
+   }
+  ],
+  "demais_validos": 4.217277222075135
+ },
+ "2024|27855": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "al",
+  "mun": "27855",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.10510341195297676,
+   0.2503730663011405
+  ],
+  "candidatos": [
+   {
+    "numero": "22",
+    "nome": "JHC",
+    "partido": "PL",
+    "validos": 83.24830342298395
+   },
+   {
+    "numero": "15",
+    "nome": "RAFAEL BRITO",
+    "partido": "MDB",
+    "validos": 12.740010265003795
+   },
+   {
+    "numero": "80",
+    "nome": "LENILDA LUNA",
+    "partido": "UP",
+    "validos": 2.051684732780895
+   }
+  ],
+  "demais_validos": 1.960001579231353
+ },
+ "2024|31054": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": NaN,
+  "mun": "31054",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.10065917347697338,
+   0.2506835004112116
+  ],
+  "candidatos": [
+   {
+    "numero": "22",
+    "nome": "",
+    "partido": "",
+    "validos": 41.6217889810048
+   },
+   {
+    "numero": "12",
+    "nome": "",
+    "partido": "",
+    "validos": 23.85582487656578
+   },
+   {
+    "numero": "44",
+    "nome": "",
+    "partido": "",
+    "validos": 14.47021274493335
+   },
+   {
+    "numero": "13",
+    "nome": "",
+    "partido": "",
+    "validos": 9.238709762420003
+   },
+   {
+    "numero": "15",
+    "nome": "",
+    "partido": "",
+    "validos": 5.52333145588153
+   }
+  ],
+  "demais_validos": 5.29013217919454
+ },
+ "2024|34134": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "ba",
+  "mun": "34134",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.09173430992709043,
+   0.18392081551533557
+  ],
+  "candidatos": [
+   {
+    "numero": "13",
+    "nome": "CAETANO",
+    "partido": "PT",
+    "validos": 49.52241746369673
+   },
+   {
+    "numero": "44",
+    "nome": "FLÁVIO",
+    "partido": "UNIÃO",
+    "validos": 49.16716977534873
+   },
+   {
+    "numero": "15",
+    "nome": "OSWALDINHO",
+    "partido": "MDB",
+    "validos": 0.7054113310666963
+   }
+  ],
+  "demais_validos": 0.6050014298878332
+ },
+ "2024|35157": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "ba",
+  "mun": "35157",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.08865332331375188,
+   0.1911351669833154
+  ],
+  "candidatos": [
+   {
+    "numero": "44",
+    "nome": "JOSE RONALDO",
+    "partido": "UNIÃO",
+    "validos": 50.31925150227084
+   },
+   {
+    "numero": "13",
+    "nome": "ZÉ NETO",
+    "partido": "PT",
+    "validos": 46.73472110213016
+   },
+   {
+    "numero": "30",
+    "nome": "CARLOS MEDEIROS",
+    "partido": "NOVO",
+    "validos": 2.9460273955989984
+   }
+  ],
+  "demais_validos": 0.0
+ },
+ "2024|38490": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "ba",
+  "mun": "38490",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.09539992135356212,
+   0.26461047347053235
+  ],
+  "candidatos": [
+   {
+    "numero": "44",
+    "nome": "BRUNO REIS",
+    "partido": "UNIÃO",
+    "validos": 78.6721086388173
+   },
+   {
+    "numero": "50",
+    "nome": "KLEBER ROSA",
+    "partido": "PSOL",
+    "validos": 10.428273176970677
+   },
+   {
+    "numero": "15",
+    "nome": "GERALDO JÚNIOR",
+    "partido": "MDB",
+    "validos": 10.329565331878797
+   }
+  ],
+  "demais_validos": 0.5700528523332142
+ },
+ "2024|39659": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "ba",
+  "mun": "39659",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.0691031941031941,
+   0.18871336124857252
+  ],
+  "candidatos": [
+   {
+    "numero": "44",
+    "nome": "SHEILA LEMOS",
+    "partido": "UNIÃO",
+    "validos": 58.83262036676953
+   },
+   {
+    "numero": "13",
+    "nome": "WALDENOR",
+    "partido": "PT",
+    "validos": 26.74104414668761
+   },
+   {
+    "numero": "15",
+    "nome": "LÚCIA ROCHA",
+    "partido": "MDB",
+    "validos": 11.137429987020136
+   }
+  ],
+  "demais_validos": 3.2889054995227247
+ },
+ "2024|41238": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "mg",
+  "mun": "41238",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.07965637839751666,
+   0.2833663718927286
+  ],
+  "candidatos": [
+   {
+    "numero": "22",
+    "nome": "BRUNO ENGLER",
+    "partido": "PL",
+    "validos": 34.378850191750395
+   },
+   {
+    "numero": "55",
+    "nome": "FUAD NOMAN",
+    "partido": "PSD",
+    "validos": 26.537592069374046
+   },
+   {
+    "numero": "10",
+    "nome": "MAURO TRAMONTE",
+    "partido": "REPUBLICANOS",
+    "validos": 15.22258347965048
+   },
+   {
+    "numero": "15",
+    "nome": "GABRIEL",
+    "partido": "MDB",
+    "validos": 10.54808588777041
+   },
+   {
+    "numero": "12",
+    "nome": "DUDA SALABERT",
+    "partido": "PDT",
+    "validos": 7.675931578789614
+   }
+  ],
+  "demais_validos": 5.636956792665053
+ },
+ "2024|41335": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "mg",
+  "mun": "41335",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.10600287065303714,
+   0.16323014039970565
+  ],
+  "candidatos": [
+   {
+    "numero": "44",
+    "nome": "HERON GUIMARAES",
+    "partido": "UNIÃO",
+    "validos": 52.45794695106335
+   },
+   {
+    "numero": "43",
+    "nome": "DR.VINICIUS",
+    "partido": "PV",
+    "validos": 38.2215220763406
+   },
+   {
+    "numero": "33",
+    "nome": "PEDRO BETINENSE",
+    "partido": "MOBILIZA",
+    "validos": 9.052821818779266
+   }
+  ],
+  "demais_validos": 0.26770915381678834
+ },
+ "2024|43710": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "mg",
+  "mun": "43710",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.13497748932935744,
+   0.19993451441267615
+  ],
+  "candidatos": [
+   {
+    "numero": "13",
+    "nome": "MARÍLIA",
+    "partido": "PT",
+    "validos": 60.67819230384872
+   },
+   {
+    "numero": "22",
+    "nome": "JUNIO AMARAL",
+    "partido": "PL",
+    "validos": 38.93400213405887
+   },
+   {
+    "numero": "16",
+    "nome": "GUSTAVO OLIMPIO",
+    "partido": "PSTU",
+    "validos": 0.20147836767061994
+   }
+  ],
+  "demais_validos": 0.1863271944217893
+ },
+ "2024|47333": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "mg",
+  "mun": "47333",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.08927983935234038,
+   0.2777776423883667
+  ],
+  "candidatos": [
+   {
+    "numero": "13",
+    "nome": "MARGARIDA SALOMÃO",
+    "partido": "PT",
+    "validos": 53.961973921908815
+   },
+   {
+    "numero": "22",
+    "nome": "CHARLLES EVANGELISTA",
+    "partido": "PL",
+    "validos": 27.527947199914145
+   },
+   {
+    "numero": "70",
+    "nome": "IONE",
+    "partido": "AVANTE",
+    "validos": 9.92040637464451
+   },
+   {
+    "numero": "15",
+    "nome": "JÚLIO DELGADO",
+    "partido": "MDB",
+    "validos": 6.157863671323043
+   }
+  ],
+  "demais_validos": 2.4318088322094833
+ },
+ "2024|48658": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "mg",
+  "mun": "48658",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.043498499681316555,
+   0.21050294692667415
+  ],
+  "candidatos": [
+   {
+    "numero": "44",
+    "nome": "GUILHERME GUIMARÃES",
+    "partido": "UNIÃO",
+    "validos": 71.78625504910268
+   },
+   {
+    "numero": "40",
+    "nome": "RUY MUNIZ",
+    "partido": "PSB",
+    "validos": 11.084530641111444
+   },
+   {
+    "numero": "13",
+    "nome": "PAULO GUEDES",
+    "partido": "PT",
+    "validos": 6.505570032418681
+   },
+   {
+    "numero": "12",
+    "nome": "DÉLIO PINHEIRO",
+    "partido": "PDT",
+    "validos": 5.318941907433513
+   }
+  ],
+  "demais_validos": 5.304702369933691
+ },
+ "2024|50911": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "mg",
+  "mun": "50911",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.14828364634969396,
+   0.22794107379738882
+  ],
+  "candidatos": [
+   {
+    "numero": "11",
+    "nome": "TÚLIO ",
+    "partido": "PP",
+    "validos": 81.60773779151785
+   },
+   {
+    "numero": "13",
+    "nome": "VICENTE MENDONCA",
+    "partido": "PT",
+    "validos": 13.06014947324189
+   },
+   {
+    "numero": "30",
+    "nome": "DIOGO FERNANDES",
+    "partido": "NOVO",
+    "validos": 5.332112735240267
+   }
+  ],
+  "demais_validos": 0.0
+ },
+ "2024|54011": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "mg",
+  "mun": "54011",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.0655998793320675,
+   0.2664010789132788
+  ],
+  "candidatos": [
+   {
+    "numero": "55",
+    "nome": "ELISA ARAÚJO",
+    "partido": "PSD",
+    "validos": 46.360746053126555
+   },
+   {
+    "numero": "15",
+    "nome": "TONY CARLOS",
+    "partido": "MDB",
+    "validos": 28.088633247175604
+   },
+   {
+    "numero": "43",
+    "nome": "ANDERSON",
+    "partido": "PV",
+    "validos": 12.896962636669215
+   },
+   {
+    "numero": "22",
+    "nome": "SAMIR CECÍLIO",
+    "partido": "PL",
+    "validos": 9.083572997439537
+   }
+  ],
+  "demais_validos": 3.570085065589088
+ },
+ "2024|54038": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "mg",
+  "mun": "54038",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.0747364094132155,
+   0.25919843798170794
+  ],
+  "candidatos": [
+   {
+    "numero": "11",
+    "nome": "PAULO SÉRGIO",
+    "partido": "PP",
+    "validos": 52.160794348082064
+   },
+   {
+    "numero": "13",
+    "nome": "DANDARA",
+    "partido": "PT",
+    "validos": 24.555896472080068
+   },
+   {
+    "numero": "45",
+    "nome": "LEONIDIO BOUÇAS",
+    "partido": "PSDB",
+    "validos": 22.77693492142566
+   }
+  ],
+  "demais_validos": 0.5063742584122095
+ },
+ "2024|56251": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "es",
+  "mun": "56251",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.11539399574717812,
+   0.2579549871576974
+  ],
+  "candidatos": [
+   {
+    "numero": "15",
+    "nome": "EUCLERIO SAMPAIO",
+    "partido": "MDB",
+    "validos": 88.41269841269842
+   },
+   {
+    "numero": "13",
+    "nome": "CÉLIA TAVARES",
+    "partido": "PT",
+    "validos": 9.07905076221908
+   },
+   {
+    "numero": "22",
+    "nome": "IVAN BASTOS",
+    "partido": "PL",
+    "validos": 2.5082508250825084
+   }
+  ],
+  "demais_validos": 0.0
+ },
+ "2024|56995": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "es",
+  "mun": "56995",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.08898586993011261,
+   0.26263924069948424
+  ],
+  "candidatos": [
+   {
+    "numero": "12",
+    "nome": "WEVERSON MEIRELES",
+    "partido": "PDT",
+    "validos": 39.663286733284856
+   },
+   {
+    "numero": "10",
+    "nome": "PABLO MURIBECA",
+    "partido": "REPUBLICANOS",
+    "validos": 25.20242832280679
+   },
+   {
+    "numero": "11",
+    "nome": "AUDIFAX BARCELOS",
+    "partido": "PP",
+    "validos": 23.957626910915195
+   },
+   {
+    "numero": "22",
+    "nome": "IGOR ELSON",
+    "partido": "PL",
+    "validos": 7.660410657820556
+   }
+  ],
+  "demais_validos": 3.5162473751726058
+ },
+ "2024|57037": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "es",
+  "mun": "57037",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.10390071821942491,
+   0.25180506560414184
+  ],
+  "candidatos": [
+   {
+    "numero": "20",
+    "nome": "ARNALDINHO BORGO",
+    "partido": "PODE",
+    "validos": 79.04444362724067
+   },
+   {
+    "numero": "22",
+    "nome": "CORONEL RAMALHO",
+    "partido": "PL",
+    "validos": 17.200505031932238
+   },
+   {
+    "numero": "13",
+    "nome": "JOÃO BATISTA BABÁ",
+    "partido": "PT",
+    "validos": 2.5913531668689247
+   }
+  ],
+  "demais_validos": 1.1636981739581673
+ },
+ "2024|57053": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "es",
+  "mun": "57053",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.06427162536188083,
+   0.254485731556008
+  ],
+  "candidatos": [
+   {
+    "numero": "10",
+    "nome": "LORENZO PAZOLINI",
+    "partido": "REPUBLICANOS",
+    "validos": 56.21752555366269
+   },
+   {
+    "numero": "13",
+    "nome": "JOÃO COSER",
+    "partido": "PT",
+    "validos": 15.61914395229983
+   },
+   {
+    "numero": "45",
+    "nome": "LUIZ PAULO VELLOZO LUCAS",
+    "partido": "PSDB",
+    "validos": 12.455813458262352
+   },
+   {
+    "numero": "22",
+    "nome": "ASSUMÇÃO",
+    "partido": "PL",
+    "validos": 9.553875638841568
+   },
+   {
+    "numero": "50",
+    "nome": "CAMILA VALADÃO",
+    "partido": "PSOL",
+    "validos": 5.735200170357751
+   }
+  ],
+  "demais_validos": 0.4184412265758092
+ },
+ "2024|58041": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "rj",
+  "mun": "58041",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.12910839912092228,
+   0.2445763606674115
+  ],
+  "candidatos": [
+   {
+    "numero": "44",
+    "nome": "MÁRCIO CANELLA",
+    "partido": "UNIÃO",
+    "validos": 62.88444710915219
+   },
+   {
+    "numero": "10",
+    "nome": "MATHEUS DO WAGUINHO",
+    "partido": "REPUBLICANOS",
+    "validos": 35.19858374384236
+   },
+   {
+    "numero": "50",
+    "nome": "VINICIUS CRANIO",
+    "partido": "PSOL",
+    "validos": 1.0897394347938814
+   }
+  ],
+  "demais_validos": 0.8272297122115634
+ },
+ "2024|58190": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "rj",
+  "mun": "58190",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.06288509425277157,
+   0.24921386699794246
+  ],
+  "candidatos": [
+   {
+    "numero": "11",
+    "nome": "WLADIMIR GAROTINHO",
+    "partido": "PP",
+    "validos": 69.11165678580032
+   },
+   {
+    "numero": "44",
+    "nome": "DELEGADA MADELEINE",
+    "partido": "UNIÃO",
+    "validos": 24.215253085598622
+   },
+   {
+    "numero": "13",
+    "nome": "PROFESSOR JEFFERSON",
+    "partido": "PT",
+    "validos": 4.7536015128690945
+   }
+  ],
+  "demais_validos": 1.919488615731969
+ },
+ "2024|58335": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "rj",
+  "mun": "58335",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.14956534954407294,
+   0.23625075987841945
+  ],
+  "candidatos": [
+   {
+    "numero": "15",
+    "nome": "NETINHO REIS",
+    "partido": "MDB",
+    "validos": 54.07712948794713
+   },
+   {
+    "numero": "43",
+    "nome": "ZITO",
+    "partido": "PV",
+    "validos": 28.252500388086844
+   },
+   {
+    "numero": "44",
+    "nome": "CELSO DO ALBA",
+    "partido": "UNIÃO",
+    "validos": 12.496839864280487
+   },
+   {
+    "numero": "40",
+    "nome": "WESLEY TEIXEIRA",
+    "partido": "PSB",
+    "validos": 5.173530259685538
+   }
+  ],
+  "demais_validos": 0.0
+ },
+ "2024|58491": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "rj",
+  "mun": "58491",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.082160994838783,
+   0.22306893505339456
+  ],
+  "candidatos": [
+   {
+    "numero": "11",
+    "nome": "RENATO COZZOLINO",
+    "partido": "PP",
+    "validos": 88.74024683352481
+   },
+   {
+    "numero": "22",
+    "nome": "RICARDO DA KAROL",
+    "partido": "PL",
+    "validos": 8.56093658591597
+   },
+   {
+    "numero": "18",
+    "nome": "DAVI SOUZA",
+    "partido": "REDE",
+    "validos": 2.1159173086546796
+   }
+  ],
+  "demais_validos": 0.582899271904537
+ },
+ "2024|58653": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "rj",
+  "mun": "58653",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.09936667450443175,
+   0.2803117045094411
+  ],
+  "candidatos": [
+   {
+    "numero": "12",
+    "nome": "RODRIGO NEVES",
+    "partido": "PDT",
+    "validos": 48.47068546634653
+   },
+   {
+    "numero": "22",
+    "nome": "CARLOS JORDY",
+    "partido": "PL",
+    "validos": 35.59494717042969
+   },
+   {
+    "numero": "50",
+    "nome": "TALIRIA PETRONE",
+    "partido": "PSOL",
+    "validos": 12.645610835227313
+   }
+  ],
+  "demais_validos": 3.2887565279964663
+ },
+ "2024|58696": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "rj",
+  "mun": "58696",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.1432711227714507,
+   0.2575670587834442
+  ],
+  "candidatos": [
+   {
+    "numero": "11",
+    "nome": "DUDU REINA",
+    "partido": "PP",
+    "validos": 74.77302884726011
+   },
+   {
+    "numero": "44",
+    "nome": "CLÉBIO LOPES JACARÉ",
+    "partido": "UNIÃO",
+    "validos": 14.378632113701618
+   },
+   {
+    "numero": "13",
+    "nome": "TUNINHO DA PADARIA",
+    "partido": "PT",
+    "validos": 6.022309775035858
+   }
+  ],
+  "demais_validos": 4.826029264002414
+ },
+ "2024|58777": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "rj",
+  "mun": "58777",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.10634514807288717,
+   0.29897315033811916
+  ],
+  "candidatos": [
+   {
+    "numero": "11",
+    "nome": "HINGO HAMMES",
+    "partido": "PP",
+    "validos": 49.96382835603051
+   },
+   {
+    "numero": "50",
+    "nome": "YURI",
+    "partido": "PSOL",
+    "validos": 17.769161452450152
+   },
+   {
+    "numero": "40",
+    "nome": "RUBENS BOMTEMPO",
+    "partido": "PSB",
+    "validos": 17.234201875848765
+   },
+   {
+    "numero": "10",
+    "nome": "EDUARDO BLOG",
+    "partido": "REPUBLICANOS",
+    "validos": 12.371971418055361
+   }
+  ],
+  "demais_validos": 2.66083689761521
+ },
+ "2024|58971": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "rj",
+  "mun": "58971",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.13845500299020988,
+   0.2978294239665699
+  ],
+  "candidatos": [
+   {
+    "numero": "22",
+    "nome": "CAPITÃO NELSON",
+    "partido": "PL",
+    "validos": 84.48598049422188
+   },
+   {
+    "numero": "13",
+    "nome": "DIMAS GADELHA",
+    "partido": "PT",
+    "validos": 10.55372365217164
+   },
+   {
+    "numero": "50",
+    "nome": "PROF JOSEMAR",
+    "partido": "PSOL",
+    "validos": 3.135603925548736
+   }
+  ],
+  "demais_validos": 1.824691928057742
+ },
+ "2024|59013": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "rj",
+  "mun": "59013",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.16070230165866908,
+   0.24967571998121962
+  ],
+  "candidatos": [
+   {
+    "numero": "10",
+    "nome": "LEO VIEIRA",
+    "partido": "REPUBLICANOS",
+    "validos": 49.82293176156439
+   },
+   {
+    "numero": "22",
+    "nome": "VALDECY DA SAÚDE",
+    "partido": "PL",
+    "validos": 33.01284660598857
+   },
+   {
+    "numero": "35",
+    "nome": "MARCOS MULLER",
+    "partido": "PMB",
+    "validos": 12.288535747431492
+   }
+  ],
+  "demais_validos": 4.875685885015549
+ },
+ "2024|59250": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "rj",
+  "mun": "59250",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.07333479826540085,
+   0.2549475090922952
+  ],
+  "candidatos": [
+   {
+    "numero": "11",
+    "nome": "NETO",
+    "partido": "PP",
+    "validos": 72.83931761284025
+   },
+   {
+    "numero": "30",
+    "nome": "MAURO CAMPOS",
+    "partido": "NOVO",
+    "validos": 13.53750937983518
+   },
+   {
+    "numero": "13",
+    "nome": "PROFESSOR HABIBE",
+    "partido": "PT",
+    "validos": 5.63985417261553
+   },
+   {
+    "numero": "40",
+    "nome": "ARIMATHÉA",
+    "partido": "PSB",
+    "validos": 5.045521253212386
+   }
+  ],
+  "demais_validos": 2.9377975814966564
+ },
+ "2024|60011": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "rj",
+  "mun": "60011",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.1292486820076395,
+   0.3278880979709544
+  ],
+  "candidatos": [
+   {
+    "numero": "55",
+    "nome": "EDUARDO PAES",
+    "partido": "PSD",
+    "validos": 60.466144946155964
+   },
+   {
+    "numero": "22",
+    "nome": "ALEXANDRE RAMAGEM",
+    "partido": "PL",
+    "validos": 30.80799994543986
+   },
+   {
+    "numero": "50",
+    "nome": "TARCÍSIO MOTTA",
+    "partido": "PSOL",
+    "validos": 4.200611138517478
+   }
+  ],
+  "demais_validos": 4.5252439698867
+ },
+ "2024|62138": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "sp",
+  "mun": "62138",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.09837890356044494,
+   0.2500994537692979
+  ],
+  "candidatos": [
+   {
+    "numero": "10",
+    "nome": "BETO PITERI",
+    "partido": "REPUBLICANOS",
+    "validos": 48.38706482444412
+   },
+   {
+    "numero": "44",
+    "nome": "GIL ARANTES",
+    "partido": "UNIÃO",
+    "validos": 39.82865349378498
+   },
+   {
+    "numero": "15",
+    "nome": "FABIÃO",
+    "partido": "MDB",
+    "validos": 8.889714257415935
+   }
+  ],
+  "demais_validos": 2.8945674243549746
+ },
+ "2024|62197": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "sp",
+  "mun": "62197",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.09529490413630337,
+   0.30461054334457377
+  ],
+  "candidatos": [
+   {
+    "numero": "55",
+    "nome": "SUÉLLEN ROSIM",
+    "partido": "PSD",
+    "validos": 53.72761918867957
+   },
+   {
+    "numero": "44",
+    "nome": "CHIARA RANIERI",
+    "partido": "UNIÃO",
+    "validos": 17.702417099139232
+   },
+   {
+    "numero": "20",
+    "nome": "DR RAUL",
+    "partido": "PODE",
+    "validos": 15.845301097749244
+   }
+  ],
+  "demais_validos": 12.724662614431956
+ },
+ "2024|62910": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "sp",
+  "mun": "62910",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.13080114247367602,
+   0.308440623025184
+  ],
+  "candidatos": [
+   {
+    "numero": "10",
+    "nome": "DÁRIO SAADI",
+    "partido": "REPUBLICANOS",
+    "validos": 66.77088279064007
+   },
+   {
+    "numero": "13",
+    "nome": "PEDRO TOURINHO",
+    "partido": "PT",
+    "validos": 23.17651496527276
+   },
+   {
+    "numero": "23",
+    "nome": "RAFA ZIMBALDI",
+    "partido": "CIDADANIA",
+    "validos": 7.986420626535327
+   }
+  ],
+  "demais_validos": 2.066181617551847
+ },
+ "2024|63134": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "sp",
+  "mun": "63134",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.10615240882330716,
+   0.2849576489499825
+  ],
+  "candidatos": [
+   {
+    "numero": "55",
+    "nome": "JOSÉ ROBERTO",
+    "partido": "PSD",
+    "validos": 80.29304112578717
+   },
+   {
+    "numero": "13",
+    "nome": "SERGIO RIBEIRO",
+    "partido": "PT",
+    "validos": 14.706617864369019
+   },
+   {
+    "numero": "50",
+    "nome": "PROFESSOR LUCENA",
+    "partido": "PSOL",
+    "validos": 1.8556619001068497
+   }
+  ],
+  "demais_validos": 3.144679109736968
+ },
+ "2024|63770": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "sp",
+  "mun": "63770",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.12378064896360857,
+   0.2594608881098274
+  ],
+  "candidatos": [
+   {
+    "numero": "15",
+    "nome": "TAKA YAMAUCHI",
+    "partido": "MDB",
+    "validos": 47.3911451635948
+   },
+   {
+    "numero": "13",
+    "nome": "FILIPPI",
+    "partido": "PT",
+    "validos": 45.08813759108444
+   },
+   {
+    "numero": "20",
+    "nome": "MARCIO DA FARMACIA",
+    "partido": "PODE",
+    "validos": 6.090602228889842
+   }
+  ],
+  "demais_validos": 1.4301150164309187
+ },
+ "2024|64017": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "sp",
+  "mun": "64017",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.11614515370676584,
+   0.21061974018564206
+  ],
+  "candidatos": [
+   {
+    "numero": "10",
+    "nome": "HUGO PRADO",
+    "partido": "REPUBLICANOS",
+    "validos": 61.786123612780585
+   },
+   {
+    "numero": "13",
+    "nome": "ROSÂNGELA SANTOS",
+    "partido": "PT",
+    "validos": 36.58695105246974
+   },
+   {
+    "numero": "25",
+    "nome": "ANTONIO CAVALCANTE",
+    "partido": "PRD",
+    "validos": 1.5067229474743522
+   }
+  ],
+  "demais_validos": 0.12020238727531937
+ },
+ "2024|64254": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "sp",
+  "mun": "64254",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.1037316692143589,
+   0.2932253783742924
+  ],
+  "candidatos": [
+   {
+    "numero": "15",
+    "nome": "ALEXANDRE FERREIRA",
+    "partido": "MDB",
+    "validos": 47.172088008010064
+   },
+   {
+    "numero": "22",
+    "nome": "JOÃO ROCHA",
+    "partido": "PL",
+    "validos": 28.590408461913686
+   },
+   {
+    "numero": "50",
+    "nome": "GUILHERME CORTEZ",
+    "partido": "PSOL",
+    "validos": 14.645323611717286
+   },
+   {
+    "numero": "13",
+    "nome": "MARIANA NEGRI",
+    "partido": "PT",
+    "validos": 5.019768426998023
+   }
+  ],
+  "demais_validos": 4.57241149136094
+ },
+ "2024|64750": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "sp",
+  "mun": "64750",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.09779867359965128,
+   0.23996637294890558
+  ],
+  "candidatos": [
+   {
+    "numero": "20",
+    "nome": "FARID MADI",
+    "partido": "PODE",
+    "validos": 42.53823769900438
+   },
+   {
+    "numero": "11",
+    "nome": "RAPHAEL VITIELLO",
+    "partido": "PP",
+    "validos": 25.490596892886344
+   },
+   {
+    "numero": "22",
+    "nome": "NICOLACI",
+    "partido": "PL",
+    "validos": 11.55728440190467
+   },
+   {
+    "numero": "40",
+    "nome": "PEPE DA CITY",
+    "partido": "PSB",
+    "validos": 6.903828579673897
+   },
+   {
+    "numero": "44",
+    "nome": "THAÍS MARGARIDO",
+    "partido": "UNIÃO",
+    "validos": 6.6128372853638595
+   }
+  ],
+  "demais_validos": 6.897215141166851
+ },
+ "2024|64777": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "sp",
+  "mun": "64777",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.144986710658968,
+   0.1971817431949409
+  ],
+  "candidatos": [
+   {
+    "numero": "22",
+    "nome": "LUCAS SANCHES",
+    "partido": "PL",
+    "validos": 33.245701847122035
+   },
+   {
+    "numero": "77",
+    "nome": "ELÓI PIETÁ",
+    "partido": "SOLIDARIEDADE",
+    "validos": 29.811545526272294
+   },
+   {
+    "numero": "10",
+    "nome": "JORGE WILSON XERIFE CONSUMIDOR",
+    "partido": "REPUBLICANOS",
+    "validos": 20.12343253467057
+   },
+   {
+    "numero": "13",
+    "nome": "ALENCAR",
+    "partido": "PT",
+    "validos": 9.672364272549515
+   },
+   {
+    "numero": "12",
+    "nome": "MÁRCIO NAKASHIMA",
+    "partido": "PDT",
+    "validos": 6.554273828123782
+   }
+  ],
+  "demais_validos": 0.5926819912617999
+ },
+ "2024|65633": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "sp",
+  "mun": "65633",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.12489027112437612,
+   0.2382893163786545
+  ],
+  "candidatos": [
+   {
+    "numero": "22",
+    "nome": "DELEGADO EDUARDO BOIGUES",
+    "partido": "PL",
+    "validos": 91.70396154483673
+   },
+   {
+    "numero": "13",
+    "nome": "FABIANO DO PT",
+    "partido": "PT",
+    "validos": 4.987568373943311
+   },
+   {
+    "numero": "12",
+    "nome": "ADRIANA DO HOSPITAL ",
+    "partido": "PDT",
+    "validos": 1.9967954030609425
+   }
+  ],
+  "demais_validos": 1.3116746781590143
+ },
+ "2024|66192": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "sp",
+  "mun": "66192",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.11103136165144899,
+   0.27426756649464074
+  ],
+  "candidatos": [
+   {
+    "numero": "22",
+    "nome": "PARIMOSCHI",
+    "partido": "PL",
+    "validos": 48.07080038021059
+   },
+   {
+    "numero": "44",
+    "nome": "GUSTAVO MARTINELLI",
+    "partido": "UNIÃO",
+    "validos": 43.33708622105739
+   },
+   {
+    "numero": "50",
+    "nome": "PROFESSOR HIGOR CODARIN",
+    "partido": "PSOL",
+    "validos": 4.926587979069961
+   }
+  ],
+  "demais_validos": 3.6655254196620555
+ },
+ "2024|66397": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "sp",
+  "mun": "66397",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.10283858498766696,
+   0.27945919947755565
+  ],
+  "candidatos": [
+   {
+    "numero": "15",
+    "nome": "BETINHO NEVES",
+    "partido": "MDB",
+    "validos": 38.80779709648973
+   },
+   {
+    "numero": "20",
+    "nome": "MURILO FÉLIX",
+    "partido": "PODE",
+    "validos": 32.29398370559512
+   },
+   {
+    "numero": "22",
+    "nome": "ERIKA TANK",
+    "partido": "PL",
+    "validos": 24.456085394264054
+   }
+  ],
+  "demais_validos": 4.442133803651105
+ },
+ "2024|66893": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "sp",
+  "mun": "66893",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.13449128599299226,
+   0.23496173144807156
+  ],
+  "candidatos": [
+   {
+    "numero": "13",
+    "nome": "MARCELO OLIVEIRA",
+    "partido": "PT",
+    "validos": 45.1339410871898
+   },
+   {
+    "numero": "44",
+    "nome": "ATILA",
+    "partido": "UNIÃO",
+    "validos": 35.555534072563105
+   },
+   {
+    "numero": "22",
+    "nome": "SARGENTO SIMÕES",
+    "partido": "PL",
+    "validos": 10.200500768554056
+   },
+   {
+    "numero": "45",
+    "nome": "ZÉ LOURENCINI",
+    "partido": "PSDB",
+    "validos": 6.782610376929844
+   }
+  ],
+  "demais_validos": 2.3274136947631985
+ },
+ "2024|67130": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "sp",
+  "mun": "67130",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.11918355605860687,
+   0.2778229412242907
+  ],
+  "candidatos": [
+   {
+    "numero": "22",
+    "nome": "MARA BERTAIOLLI",
+    "partido": "PL",
+    "validos": 51.08026570342411
+   },
+   {
+    "numero": "20",
+    "nome": "CAIO CUNHA",
+    "partido": "PODE",
+    "validos": 31.145293595068342
+   },
+   {
+    "numero": "13",
+    "nome": "RODRIGO VALVERDE",
+    "partido": "PT",
+    "validos": 16.600150619388412
+   }
+  ],
+  "demais_validos": 1.1742900821191335
+ },
+ "2024|67890": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "sp",
+  "mun": "67890",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.12709544716679505,
+   0.2823211324007114
+  ],
+  "candidatos": [
+   {
+    "numero": "20",
+    "nome": "GERSON PESSOA",
+    "partido": "PODE",
+    "validos": 75.28323541179691
+   },
+   {
+    "numero": "13",
+    "nome": "EMIDIO DE SOUZA",
+    "partido": "PT",
+    "validos": 15.06859772148167
+   },
+   {
+    "numero": "30",
+    "nome": "DR LINDOSO",
+    "partido": "NOVO",
+    "validos": 9.33781877145324
+   }
+  ],
+  "demais_validos": 0.31034809526817864
+ },
+ "2024|68756": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "sp",
+  "mun": "68756",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.12677063072598438,
+   0.3051395542237404
+  ],
+  "candidatos": [
+   {
+    "numero": "45",
+    "nome": "BARJAS NEGRI",
+    "partido": "PSDB",
+    "validos": 35.78231425759349
+   },
+   {
+    "numero": "55",
+    "nome": "HELINHO ZANATTA",
+    "partido": "PSD",
+    "validos": 26.587863148256055
+   },
+   {
+    "numero": "22",
+    "nome": "ALEX MADUREIRA",
+    "partido": "PL",
+    "validos": 23.66945612840991
+   },
+   {
+    "numero": "13",
+    "nome": "PROFESSORA BEBEL",
+    "partido": "PT",
+    "validos": 6.355369917883078
+   }
+  ],
+  "demais_validos": 7.604996547857469
+ },
+ "2024|69213": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "sp",
+  "mun": "69213",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.07440113144170424,
+   0.30084858127817554
+  ],
+  "candidatos": [
+   {
+    "numero": "15",
+    "nome": "MOURÃO",
+    "partido": "MDB",
+    "validos": 64.66156393214483
+   },
+   {
+    "numero": "44",
+    "nome": "DANILO MORGADO",
+    "partido": "UNIÃO",
+    "validos": 18.573793699162607
+   },
+   {
+    "numero": "22",
+    "nome": "DR LISSANDRO",
+    "partido": "PL",
+    "validos": 12.83141780838352
+   }
+  ],
+  "demais_validos": 3.9332245603090437
+ },
+ "2024|69698": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "sp",
+  "mun": "69698",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.10461134560762259,
+   0.32440561735450213
+  ],
+  "candidatos": [
+   {
+    "numero": "55",
+    "nome": "RICARDO SILVA",
+    "partido": "PSD",
+    "validos": 48.44318580333272
+   },
+   {
+    "numero": "30",
+    "nome": "MARCO AURELIO",
+    "partido": "NOVO",
+    "validos": 24.939194310472907
+   },
+   {
+    "numero": "13",
+    "nome": "ROQUE",
+    "partido": "PT",
+    "validos": 15.291358238840978
+   },
+   {
+    "numero": "44",
+    "nome": "ANDRÉ TRINDADE",
+    "partido": "UNIÃO",
+    "validos": 10.978962174147496
+   }
+  ],
+  "demais_validos": 0.3472994732059022
+ },
+ "2024|70572": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "sp",
+  "mun": "70572",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.10149975385048175,
+   0.28879492228708065
+  ],
+  "candidatos": [
+   {
+    "numero": "45",
+    "nome": "GILVAN",
+    "partido": "PSDB",
+    "validos": 60.98474623889296
+   },
+   {
+    "numero": "13",
+    "nome": "BETE SIRAQUE",
+    "partido": "PT",
+    "validos": 15.883137129604636
+   },
+   {
+    "numero": "22",
+    "nome": "LUIZ ZACARIAS",
+    "partido": "PL",
+    "validos": 11.354659586071646
+   },
+   {
+    "numero": "40",
+    "nome": "EDUARDO LEITE",
+    "partido": "PSB",
+    "validos": 9.698725823422153
+   }
+  ],
+  "demais_validos": 2.0787312220086047
+ },
+ "2024|70718": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "sp",
+  "mun": "70718",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.08421696156692515,
+   0.3301313083743093
+  ],
+  "candidatos": [
+   {
+    "numero": "10",
+    "nome": "ROGÉRIO SANTOS",
+    "partido": "REPUBLICANOS",
+    "validos": 43.28549800626906
+   },
+   {
+    "numero": "22",
+    "nome": "ROSANA VALLE",
+    "partido": "PL",
+    "validos": 42.64622470520502
+   },
+   {
+    "numero": "13",
+    "nome": "TELMA DE SOUZA",
+    "partido": "PT",
+    "validos": 13.400857197688552
+   }
+  ],
+  "demais_validos": 0.667420090837367
+ },
+ "2024|70750": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "sp",
+  "mun": "70750",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.10644150659243028,
+   0.26619164405230084
+  ],
+  "candidatos": [
+   {
+    "numero": "20",
+    "nome": "MARCELO LIMA",
+    "partido": "PODE",
+    "validos": 28.63865055209259
+   },
+   {
+    "numero": "23",
+    "nome": "ALEX MANENTE",
+    "partido": "CIDADANIA",
+    "validos": 26.530856599607752
+   },
+   {
+    "numero": "13",
+    "nome": "LUIZ FERNANDO",
+    "partido": "PT",
+    "validos": 23.09090430155678
+   },
+   {
+    "numero": "44",
+    "nome": "FLÁVIA MORANDO",
+    "partido": "UNIÃO",
+    "validos": 21.378710850038196
+   }
+  ],
+  "demais_validos": 0.36087769670468617
+ },
+ "2024|70971": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "sp",
+  "mun": "70971",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.07521801888494617,
+   0.3132615625187947
+  ],
+  "candidatos": [
+   {
+    "numero": "22",
+    "nome": "CORONEL FABIO CANDIDO",
+    "partido": "PL",
+    "validos": 40.458442806209106
+   },
+   {
+    "numero": "15",
+    "nome": "ITAMAR",
+    "partido": "MDB",
+    "validos": 25.68199514600684
+   },
+   {
+    "numero": "40",
+    "nome": "VALDOMIRO LOPES",
+    "partido": "PSB",
+    "validos": 21.862093774047985
+   },
+   {
+    "numero": "13",
+    "nome": "MARCO RILLO",
+    "partido": "PT",
+    "validos": 11.454695304922751
+   }
+  ],
+  "demais_validos": 0.5427729688133216
+ },
+ "2024|70998": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "sp",
+  "mun": "70998",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.0803809798686774,
+   0.26873030762200256
+  ],
+  "candidatos": [
+   {
+    "numero": "55",
+    "nome": "ANDERSON",
+    "partido": "PSD",
+    "validos": 39.65571444583257
+   },
+   {
+    "numero": "22",
+    "nome": "EDUARDO CURY",
+    "partido": "PL",
+    "validos": 25.955915921498303
+   },
+   {
+    "numero": "44",
+    "nome": "DR ELTON",
+    "partido": "UNIÃO",
+    "validos": 19.88649566294242
+   },
+   {
+    "numero": "13",
+    "nome": "WAGNER BALIEIRO",
+    "partido": "PT",
+    "validos": 11.667272642775718
+   }
+  ],
+  "demais_validos": 2.8346013269509927
+ },
+ "2024|71072": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "sp",
+  "mun": "71072",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.11297978888104147,
+   0.2929429944539072
+  ],
+  "candidatos": [
+   {
+    "numero": "15",
+    "nome": "RICARDO NUNES",
+    "partido": "MDB",
+    "validos": 29.48312266504241
+   },
+   {
+    "numero": "50",
+    "nome": "GUILHERME BOULOS",
+    "partido": "PSOL",
+    "validos": 29.073697371326578
+   },
+   {
+    "numero": "28",
+    "nome": "PABLO MARÇAL",
+    "partido": "PRTB",
+    "validos": 28.143061827442594
+   },
+   {
+    "numero": "40",
+    "nome": "TABATA AMARAL",
+    "partido": "PSB",
+    "validos": 9.912374278754589
+   }
+  ],
+  "demais_validos": 3.387743857433831
+ },
+ "2024|71218": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "sp",
+  "mun": "71218",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.07168862484433622,
+   0.28228090074797935
+  ],
+  "candidatos": [
+   {
+    "numero": "20",
+    "nome": "KAYO AMADO",
+    "partido": "PODE",
+    "validos": 87.43540913971796
+   },
+   {
+    "numero": "22",
+    "nome": "CORONEL MAGNO JULIÃO",
+    "partido": "PL",
+    "validos": 5.7623056341621135
+   },
+   {
+    "numero": "13",
+    "nome": "ROSANA CARUSO",
+    "partido": "PT",
+    "validos": 4.882505443133346
+   }
+  ],
+  "demais_validos": 1.9197797829865746
+ },
+ "2024|71455": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "sp",
+  "mun": "71455",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.12785361818413785,
+   0.2664508747597549
+  ],
+  "candidatos": [
+   {
+    "numero": "10",
+    "nome": "RODRIGO MANGA",
+    "partido": "REPUBLICANOS",
+    "validos": 73.74722813273564
+   },
+   {
+    "numero": "22",
+    "nome": "DANILO BALAS",
+    "partido": "PL",
+    "validos": 13.581098318236995
+   },
+   {
+    "numero": "13",
+    "nome": "PAULINHO DO TRANSPORTE",
+    "partido": "PT",
+    "validos": 12.460296768514391
+   }
+  ],
+  "demais_validos": 0.21137678051296716
+ },
+ "2024|71498": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "sp",
+  "mun": "71498",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.13603822395860832,
+   0.27606250989916054
+  ],
+  "candidatos": [
+   {
+    "numero": "10",
+    "nome": "HENRIQUE DO PARAÍSO",
+    "partido": "REPUBLICANOS",
+    "validos": 44.40672963400236
+   },
+   {
+    "numero": "13",
+    "nome": "WILLIAN SOUZA",
+    "partido": "PT",
+    "validos": 31.496613434412478
+   },
+   {
+    "numero": "23",
+    "nome": "EDER DALBEN",
+    "partido": "CIDADANIA",
+    "validos": 16.94758590691605
+   }
+  ],
+  "demais_validos": 7.149071024669111
+ },
+ "2024|71510": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "sp",
+  "mun": "71510",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.11273221110392322,
+   0.23859992016847206
+  ],
+  "candidatos": [
+   {
+    "numero": "22",
+    "nome": "PEDRO ISHI",
+    "partido": "PL",
+    "validos": 80.29000103295114
+   },
+   {
+    "numero": "20",
+    "nome": "GERICE LIONE",
+    "partido": "PODE",
+    "validos": 10.42441380022725
+   },
+   {
+    "numero": "50",
+    "nome": "CAIAN ZAMBOTTO",
+    "partido": "PSOL",
+    "validos": 5.73546121268464
+   }
+  ],
+  "demais_validos": 3.550123954136969
+ },
+ "2024|71579": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "sp",
+  "mun": "71579",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.1143098873914263,
+   0.24798256383374948
+  ],
+  "candidatos": [
+   {
+    "numero": "44",
+    "nome": "ENGENHEIRO DANIEL",
+    "partido": "UNIÃO",
+    "validos": 48.98371409334231
+   },
+   {
+    "numero": "20",
+    "nome": "APRIGIO",
+    "partido": "PODE",
+    "validos": 25.929456625357485
+   },
+   {
+    "numero": "45",
+    "nome": "FERNANDO FERNANDES",
+    "partido": "PSDB",
+    "validos": 19.927070070063397
+   }
+  ],
+  "demais_validos": 5.159759211236809
+ },
+ "2024|71838": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "sp",
+  "mun": "71838",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.08284031413612565,
+   0.29315881326352533
+  ],
+  "candidatos": [
+   {
+    "numero": "10",
+    "nome": "ORTIZ JUNIOR",
+    "partido": "REPUBLICANOS",
+    "validos": 36.20485792274117
+   },
+   {
+    "numero": "30",
+    "nome": "SERGIO VICTOR",
+    "partido": "NOVO",
+    "validos": 23.521679517981358
+   },
+   {
+    "numero": "22",
+    "nome": "MARCIA DO PL",
+    "partido": "PL",
+    "validos": 21.55813280670197
+   },
+   {
+    "numero": "77",
+    "nome": "LORENY",
+    "partido": "SOLIDARIEDADE",
+    "validos": 15.178178341865936
+   }
+  ],
+  "demais_validos": 3.5371514107095683
+ },
+ "2024|73440": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "to",
+  "mun": "73440",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.060590281624603934,
+   0.23261726972590901
+  ],
+  "candidatos": [
+   {
+    "numero": "22",
+    "nome": "JANAD VALCARI",
+    "partido": "PL",
+    "validos": 39.22417875204405
+   },
+   {
+    "numero": "20",
+    "nome": "EDUARDO SIQUEIRA CAMPOS",
+    "partido": "PODE",
+    "validos": 32.416801883993
+   },
+   {
+    "numero": "45",
+    "nome": "PROFESSOR JUNIOR GEO",
+    "partido": "PSDB",
+    "validos": 27.985882679765385
+   }
+  ],
+  "demais_validos": 0.37313668419756674
+ },
+ "2024|74934": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "pr",
+  "mun": "74934",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.055139181496257114,
+   0.24374467703617375
+  ],
+  "candidatos": [
+   {
+    "numero": "22",
+    "nome": "RENATO SILVA",
+    "partido": "PL",
+    "validos": 56.412901084179516
+   },
+   {
+    "numero": "11",
+    "nome": "MARCIO PACHECO",
+    "partido": "PP",
+    "validos": 18.88096550661237
+   },
+   {
+    "numero": "45",
+    "nome": "EDGAR BUENO",
+    "partido": "PSDB",
+    "validos": 15.586932939732897
+   },
+   {
+    "numero": "13",
+    "nome": "PROFESSORA LILIAM",
+    "partido": "PT",
+    "validos": 9.119200469475219
+   }
+  ],
+  "demais_validos": 0.0
+ },
+ "2024|75353": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "pr",
+  "mun": "75353",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.07840280082495733,
+   0.3018183730798407
+  ],
+  "candidatos": [
+   {
+    "numero": "55",
+    "nome": "EDUARDO PIMENTEL",
+    "partido": "PSD",
+    "validos": 33.506991784372666
+   },
+   {
+    "numero": "35",
+    "nome": "CRISTINA GRAEML",
+    "partido": "PMB",
+    "validos": 31.173295949716042
+   },
+   {
+    "numero": "40",
+    "nome": "LUCIANO DUCCI",
+    "partido": "PSB",
+    "validos": 19.43712847624333
+   },
+   {
+    "numero": "44",
+    "nome": "NEY LEPREVOST",
+    "partido": "UNIÃO",
+    "validos": 6.488132091632635
+   }
+  ],
+  "demais_validos": 9.39445169803533
+ },
+ "2024|75639": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "pr",
+  "mun": "75639",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.0526442124098502,
+   0.23064711466073123
+  ],
+  "candidatos": [
+   {
+    "numero": "22",
+    "nome": "GENERAL SILVA E LUNA",
+    "partido": "PL",
+    "validos": 50.144591460919386
+   },
+   {
+    "numero": "11",
+    "nome": "PAULO MAC DONALD",
+    "partido": "PP",
+    "validos": 32.58423134633747
+   },
+   {
+    "numero": "40",
+    "nome": "AIRTON JOSÉ",
+    "partido": "PSB",
+    "validos": 11.025780930296003
+   }
+  ],
+  "demais_validos": 6.245396262447143
+ },
+ "2024|76678": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "pr",
+  "mun": "76678",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.06232300643757994,
+   0.25869711465593115
+  ],
+  "candidatos": [
+   {
+    "numero": "55",
+    "nome": "TIAGO AMARAL",
+    "partido": "PSD",
+    "validos": 42.692249584529385
+   },
+   {
+    "numero": "11",
+    "nome": "PROFESSORA MARIA TEREZA",
+    "partido": "PP",
+    "validos": 23.640277987611423
+   },
+   {
+    "numero": "15",
+    "nome": "TERCILIO TURINI",
+    "partido": "MDB",
+    "validos": 9.40247771566702
+   },
+   {
+    "numero": "10",
+    "nome": "DIEGO GARCIA",
+    "partido": "REPUBLICANOS",
+    "validos": 8.593065417736819
+   },
+   {
+    "numero": "12",
+    "nome": "BARBOSA NETO",
+    "partido": "PDT",
+    "validos": 7.786674724278592
+   }
+  ],
+  "demais_validos": 7.885254570176764
+ },
+ "2024|76910": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "pr",
+  "mun": "76910",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.05146690518783542,
+   0.3002468694096601
+  ],
+  "candidatos": [
+   {
+    "numero": "11",
+    "nome": "SILVIO BARROS",
+    "partido": "PP",
+    "validos": 65.56691288020095
+   },
+   {
+    "numero": "55",
+    "nome": "EDSON SCABORA",
+    "partido": "PSD",
+    "validos": 21.887637096172497
+   },
+   {
+    "numero": "13",
+    "nome": "HUMBERTO HENRIQUE",
+    "partido": "PT",
+    "validos": 8.615484095600488
+   }
+  ],
+  "demais_validos": 3.929965928026064
+ },
+ "2024|77771": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "pr",
+  "mun": "77771",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.07891123529387215,
+   0.23015220503232323
+  ],
+  "candidatos": [
+   {
+    "numero": "45",
+    "nome": "MABEL CANTO",
+    "partido": "PSDB",
+    "validos": 27.867312984806457
+   },
+   {
+    "numero": "44",
+    "nome": "ELIZABETH SCHMIDT",
+    "partido": "UNIÃO",
+    "validos": 27.51230845225623
+   },
+   {
+    "numero": "55",
+    "nome": "MARCELO RANGEL",
+    "partido": "PSD",
+    "validos": 21.06957328889444
+   },
+   {
+    "numero": "43",
+    "nome": "ALIEL MACHADO",
+    "partido": "PV",
+    "validos": 19.51330724176677
+   }
+  ],
+  "demais_validos": 4.0374980322761
+ },
+ "2024|78859": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "pr",
+  "mun": "78859",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.09000629237202128,
+   0.25255754475703324
+  ],
+  "candidatos": [
+   {
+    "numero": "55",
+    "nome": "NINA SINGER",
+    "partido": "PSD",
+    "validos": 54.88933358403395
+   },
+   {
+    "numero": "44",
+    "nome": "GERALDO MENDES",
+    "partido": "UNIÃO",
+    "validos": 40.56313626473985
+   },
+   {
+    "numero": "13",
+    "nome": "WILSON CABELO",
+    "partido": "PT",
+    "validos": 4.547530151226194
+   }
+  ],
+  "demais_validos": 0.0
+ },
+ "2024|80470": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "sc",
+  "mun": "80470",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.07989425700567579,
+   0.27072554592047415
+  ],
+  "candidatos": [
+   {
+    "numero": "22",
+    "nome": "DELEGADO EGIDIO",
+    "partido": "PL",
+    "validos": 51.39550346781125
+   },
+   {
+    "numero": "30",
+    "nome": "ODAIR TRAMONTIN",
+    "partido": "NOVO",
+    "validos": 30.255099006957245
+   },
+   {
+    "numero": "13",
+    "nome": "ANA PAULA LIMA",
+    "partido": "PT",
+    "validos": 15.715158362479526
+   }
+  ],
+  "demais_validos": 2.6342391627519772
+ },
+ "2024|81051": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "sc",
+  "mun": "81051",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.05260062344384104,
+   0.2865461043162143
+  ],
+  "candidatos": [
+   {
+    "numero": "55",
+    "nome": "TOPÁZIO",
+    "partido": "PSD",
+    "validos": 58.4946850614263
+   },
+   {
+    "numero": "50",
+    "nome": "MARQUITO",
+    "partido": "PSOL",
+    "validos": 22.231659757186282
+   },
+   {
+    "numero": "11",
+    "nome": "PEDRÃO",
+    "partido": "PP",
+    "validos": 7.098632681902463
+   },
+   {
+    "numero": "45",
+    "nome": "DÁRIO",
+    "partido": "PSDB",
+    "validos": 6.054078280135756
+   },
+   {
+    "numero": "13",
+    "nome": "LELA",
+    "partido": "PT",
+    "validos": 5.783361585698641
+   }
+  ],
+  "demais_validos": 0.33758263365055496
+ },
+ "2024|81795": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "sc",
+  "mun": "81795",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.09389729534156412,
+   0.25130227048566883
+  ],
+  "candidatos": [
+   {
+    "numero": "30",
+    "nome": "ADRIANO SILVA",
+    "partido": "NOVO",
+    "validos": 78.68707266092748
+   },
+   {
+    "numero": "22",
+    "nome": "SARGENTO LIMA",
+    "partido": "PL",
+    "validos": 11.487067507898628
+   },
+   {
+    "numero": "13",
+    "nome": "CARLITO MERSS",
+    "partido": "PT",
+    "validos": 7.497012853586347
+   }
+  ],
+  "demais_validos": 2.328846977587545
+ },
+ "2024|85898": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "rs",
+  "mun": "85898",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.08270709681536792,
+   0.2822053098474695
+  ],
+  "candidatos": [
+   {
+    "numero": "22",
+    "nome": "AIRTON SOUZA",
+    "partido": "PL",
+    "validos": 35.25817544148069
+   },
+   {
+    "numero": "55",
+    "nome": "JAIRO JORGE",
+    "partido": "PSD",
+    "validos": 29.757647993643225
+   },
+   {
+    "numero": "30",
+    "nome": "CAMPIOL",
+    "partido": "NOVO",
+    "validos": 12.88753716109764
+   },
+   {
+    "numero": "10",
+    "nome": "BETH COLOMBO",
+    "partido": "REPUBLICANOS",
+    "validos": 10.489361993615827
+   },
+   {
+    "numero": "25",
+    "nome": "MARCIO FREITAS ",
+    "partido": "PRD",
+    "validos": 6.932856575288041
+   }
+  ],
+  "demais_validos": 4.674420834874577
+ },
+ "2024|85995": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "rs",
+  "mun": "85995",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.08883834388185655,
+   0.24790228231683928
+  ],
+  "candidatos": [
+   {
+    "numero": "22",
+    "nome": "SCALCO",
+    "partido": "PL",
+    "validos": 38.039147166241214
+   },
+   {
+    "numero": "45",
+    "nome": "ADILÓ",
+    "partido": "PSDB",
+    "validos": 27.503164246781417
+   },
+   {
+    "numero": "13",
+    "nome": "DENISE PESSÔA",
+    "partido": "PT",
+    "validos": 26.287326392588206
+   },
+   {
+    "numero": "15",
+    "nome": "FELIPE GREMELMAIER",
+    "partido": "MDB",
+    "validos": 8.170362194389162
+   }
+  ],
+  "demais_validos": 0.0
+ },
+ "2024|87912": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "rs",
+  "mun": "87912",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.07844431163570563,
+   0.26575028636884307
+  ],
+  "candidatos": [
+   {
+    "numero": "13",
+    "nome": "MARRONI",
+    "partido": "PT",
+    "validos": 39.59790563799936
+   },
+   {
+    "numero": "22",
+    "nome": "MARCIANO PERONDI",
+    "partido": "PL",
+    "validos": 31.667679134484654
+   },
+   {
+    "numero": "45",
+    "nome": "FERNANDO ESTIMA",
+    "partido": "PSDB",
+    "validos": 20.898492869333797
+   }
+  ],
+  "demais_validos": 7.835922358182186
+ },
+ "2024|88013": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "rs",
+  "mun": "88013",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.06757850093190705,
+   0.33084732425378166
+  ],
+  "candidatos": [
+   {
+    "numero": "15",
+    "nome": "SEBASTIÃO MELO",
+    "partido": "MDB",
+    "validos": 49.72325586416865
+   },
+   {
+    "numero": "13",
+    "nome": "MARIA DO ROSÁRIO",
+    "partido": "PT",
+    "validos": 26.278529117513692
+   },
+   {
+    "numero": "12",
+    "nome": "JULIANA BRIZOLA",
+    "partido": "PDT",
+    "validos": 19.68993140776035
+   }
+  ],
+  "demais_validos": 4.308283610557303
+ },
+ "2024|88412": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "rs",
+  "mun": "88412",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.061092019854906456,
+   0.288209435975759
+  ],
+  "candidatos": [
+   {
+    "numero": "13",
+    "nome": "VALDECI OLIVEIRA",
+    "partido": "PT",
+    "validos": 40.62638703950289
+   },
+   {
+    "numero": "45",
+    "nome": "RODRIGO DECIMO",
+    "partido": "PSDB",
+    "validos": 25.864819130048822
+   },
+   {
+    "numero": "22",
+    "nome": "ROBERTA LEITÃO",
+    "partido": "PL",
+    "validos": 18.612683089214382
+   },
+   {
+    "numero": "30",
+    "nome": "RIESGO",
+    "partido": "NOVO",
+    "validos": 10.477002885042166
+   }
+  ],
+  "demais_validos": 4.4191078561917445
+ },
+ "2024|90514": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "ms",
+  "mun": "90514",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.07022679665037788,
+   0.25143880604812835
+  ],
+  "candidatos": [
+   {
+    "numero": "11",
+    "nome": "ADRIANE LOPES",
+    "partido": "PP",
+    "validos": 31.663494617253104
+   },
+   {
+    "numero": "44",
+    "nome": "ROSE MODESTO",
+    "partido": "UNIÃO",
+    "validos": 29.553988131217235
+   },
+   {
+    "numero": "45",
+    "nome": "BETO PEREIRA",
+    "partido": "PSDB",
+    "validos": 25.9567268045291
+   },
+   {
+    "numero": "13",
+    "nome": "CAMILA JARA",
+    "partido": "PT",
+    "validos": 9.429862504578312
+   }
+  ],
+  "demais_validos": 3.3959279424222477
+ },
+ "2024|90670": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "mt",
+  "mun": "90670",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.06889766382700735,
+   0.2201445660769591
+  ],
+  "candidatos": [
+   {
+    "numero": "22",
+    "nome": "ABILIO",
+    "partido": "PL",
+    "validos": 39.614910515064985
+   },
+   {
+    "numero": "13",
+    "nome": "LÚDIO",
+    "partido": "PT",
+    "validos": 28.310318463386853
+   },
+   {
+    "numero": "44",
+    "nome": "EDUARDO BOTELHO",
+    "partido": "UNIÃO",
+    "validos": 27.76669943360015
+   }
+  ],
+  "demais_validos": 4.308071587948009
+ },
+ "2024|92215": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "go",
+  "mun": "92215",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.06742940242472807,
+   0.27688866135422696
+  ],
+  "candidatos": [
+   {
+    "numero": "22",
+    "nome": "MARCIO CORREA",
+    "partido": "PL",
+    "validos": 49.59475480877333
+   },
+   {
+    "numero": "13",
+    "nome": "ANTONIO GOMIDE",
+    "partido": "PT",
+    "validos": 35.450011242615645
+   },
+   {
+    "numero": "44",
+    "nome": "EERIZANIA FREITAS",
+    "partido": "UNIÃO",
+    "validos": 10.878252693117474
+   }
+  ],
+  "demais_validos": 4.076981255493551
+ },
+ "2024|92274": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "go",
+  "mun": "92274",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.07426096926629722,
+   0.25813848789793653
+  ],
+  "candidatos": [
+   {
+    "numero": "15",
+    "nome": "LEANDRO VILELA",
+    "partido": "MDB",
+    "validos": 48.01772133076173
+   },
+   {
+    "numero": "22",
+    "nome": "PROFESSOR ALCIDES",
+    "partido": "PL",
+    "validos": 43.04157865043232
+   },
+   {
+    "numero": "40",
+    "nome": "WILLIAN PANDA",
+    "partido": "PSB",
+    "validos": 8.940700018805954
+   }
+  ],
+  "demais_validos": 0.0
+ },
+ "2024|93734": {
+  "ano": 2024,
+  "cargo": "prefeito",
+  "uf": "go",
+  "mun": "93734",
+  "votos_por_eleitor": 1,
+  "partidos_ref": [
+   "PT",
+   "(adversário do PT)"
+  ],
+  "w_n": [
+   0.07200729803000552,
+   0.3072029949929007
+  ],
+  "candidatos": [
+   {
+    "numero": "22",
+    "nome": "FRED RODRIGUES",
+    "partido": "PL",
+    "validos": 31.14097178820075
+   },
+   {
+    "numero": "44",
+    "nome": "MABEL",
+    "partido": "UNIÃO",
+    "validos": 27.65628406563858
+   },
+   {
+    "numero": "13",
+    "nome": "ADRIANA ACCORSI",
+    "partido": "PT",
+    "validos": 24.439325009810904
+   },
+   {
+    "numero": "45",
+    "nome": "MATHEUS RIBEIRO",
+    "partido": "PSDB",
+    "validos": 6.813127716166917
+   },
+   {
+    "numero": "55",
+    "nome": "VANDERLAN CARDOSO",
+    "partido": "PSD",
+    "validos": 6.56763709829799
+   }
+  ],
+  "demais_validos": 3.382654321884856
+ }
+}
