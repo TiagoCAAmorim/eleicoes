@@ -76,10 +76,10 @@
   ]
  },
  "situacoes": {
-  "SUPLENTE": 13591,
-  "NÃO ELEITO": 2328,
-  "ELEITO": 1371,
-  "MÉDIA": 201
+  "SUPLENTE": 923617,
+  "ELEITO": 298709,
+  "NÃO ELEITO": 95005,
+  "MÉDIA": 33650
  },
  "destinacoes": {},
  "cargos": {
@@ -88,8 +88,8 @@
    "votos": 98389861,
    "nominais": 89367502,
    "legenda": 9022359,
-   "candidatos": 4887,
-   "eleitos": 446,
+   "candidatos": 558285,
+   "eleitos": 141830,
    "nominais_candidatos": 89367502
   },
   "deputado_estadual": {
@@ -97,8 +97,8 @@
    "votos": 97725078,
    "nominais": 86454148,
    "legenda": 11270930,
-   "candidatos": 11806,
-   "eleitos": 909,
+   "candidatos": 791898,
+   "eleitos": 190505,
    "nominais_candidatos": 86454148
   },
   "deputado_distrital": {
@@ -107,7 +107,7 @@
    "nominais": 1314488,
    "legenda": 114605,
    "candidatos": 798,
-   "eleitos": 16,
+   "eleitos": 24,
    "nominais_candidatos": 1314488
   }
  }
