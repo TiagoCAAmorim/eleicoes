@@ -35,7 +35,7 @@ Há duas fotos possíveis, e proponho mostrar as duas lado a lado:
   exige casar candidato com filiado pelo título de eleitor; fica como fase posterior.
 
 Em novembro de 2026 os ciclos estão desencontrados: prefeitos e vereadores são os de 2024; governadores,
-deputados e 1/3+... do Senado acabaram de ser eleitos em 2026 e tomam posse em 2027 (Senado: 54 cadeiras de 2026 +
+deputados e 2/3 do Senado acabaram de ser eleitos em 2026 e tomam posse em 2027 (Senado: 54 cadeiras de 2026 +
 27 de 2022). A página deve dizer a qual eleição cada número se refere.
 
 ### Fontes e o que já temos
