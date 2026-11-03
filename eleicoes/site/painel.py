@@ -33,9 +33,14 @@ plt.rcParams.update({
 })
 
 
+# nomes curtos que não são a primeira palavra (eleições de 2006 a 2022, painéis simulados)
+APELIDOS = {"Geraldo Alckmin": "Alckmin", "José Serra": "Serra", "Fernando Haddad": "Haddad",
+            "Jair Bolsonaro": "Bolsonaro"}
+
+
 def curto(nome):
     """Nome curto para tabelas e gráficos ("Flávio Bolsonaro" -> "Flávio"); títulos usam o nome completo."""
-    return nome.split()[0] if nome else nome
+    return APELIDOS.get(nome, nome.split()[0] if nome else nome)
 
 
 def _pct_ap(x):
@@ -262,9 +267,8 @@ def grafico_backtest(res, caminho):
     plt.close(fig)
 
 
-def dados_web(res, hist, pasta):
-    """JSONs de linhas para o painel interativo na web."""
-    os.makedirs(pasta, exist_ok=True)
+def linhas_web(res, hist):
+    """Linhas do painel interativo na web: {"historico", "previsao", "transferencias"}."""
     a, b = res["nomes"]
     num = lambda x: None if x is None or x != x else round(float(x), 3)  # noqa: E731
     h = [{"hora": r["hora"], **{k: num(r[k]) for k in ["pct_secoes", "parcial_A", "A_media", "A_p05", "A_p95",
@@ -284,6 +288,12 @@ def dados_web(res, hist, pasta):
                          **({"real": num(g["real"])} if "real" in g else {})})
     transf = [{"grupo": g, "transferencia": t, "media": num(v[0]), "p05": num(v[1]), "p95": num(v[2])}
               for g, d in res.get("transferencias", {}).items() for t, v in d.items()]
-    for nome, linhas in [("historico", h), ("previsao", prev), ("transferencias", transf)]:
+    return {"historico": h, "previsao": prev, "transferencias": transf}
+
+
+def dados_web(res, hist, pasta):
+    """JSONs de linhas para o painel interativo na web."""
+    os.makedirs(pasta, exist_ok=True)
+    for nome, linhas in linhas_web(res, hist).items():
         with open(os.path.join(pasta, f"{nome}.json"), "w") as f:
             json.dump(linhas, f, ensure_ascii=False)

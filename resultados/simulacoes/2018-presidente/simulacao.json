@@ -1,0 +1,45 @@
+{
+ "ano": 2018,
+ "nomes": [
+  "Fernando Haddad",
+  "Jair Bolsonaro"
+ ],
+ "real_A": 44.86976871996942,
+ "pesquisa_A": 45.5,
+ "prioris": [
+  2006,
+  2010,
+  2014
+ ],
+ "gama": 0.05,
+ "semente": 4044,
+ "pontos": [
+  0,
+  0.5,
+  1,
+  2,
+  3,
+  5,
+  7.5,
+  10,
+  15,
+  20,
+  25,
+  30,
+  40,
+  50,
+  60,
+  70,
+  80,
+  90,
+  95,
+  99,
+  100
+ ],
+ "modelo": {
+  "tau": 0.15,
+  "choque_uf_inicio": 0.04,
+  "choque_uf_inicio_antes": 0.02,
+  "sd_outros": 0.3
+ }
+}

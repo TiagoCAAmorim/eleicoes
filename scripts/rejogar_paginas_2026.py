@@ -9,6 +9,7 @@ que o loop ao vivo gerava, para montar uma segunda versão da página da eleiç�
 """
 import argparse
 import datetime as dt
+import json
 import os
 import shutil
 
@@ -17,6 +18,7 @@ import pandas as pd
 import _raiz  # noqa: F401
 from eleicoes.caminhos import resultados
 from eleicoes.modelos.previsao import prever
+from eleicoes.site import exportar, painel
 from apuracao import gerar_saidas
 from rejogar_2026 import VARIANTES, carregar, config_variante, retrato
 
@@ -39,7 +41,7 @@ def main():
     # arquivo nacional do TSE, que sai antes dos municipais, e três retratos repetidos não entraram no histórico
     dia = pd.read_csv(os.path.join(resultados("2026-presidente"), "historico.csv")).set_index("hora")
     horas = [h for h in sorted(pct.index) if h in dia.index]
-    linhas = []
+    linhas, momentos = [], []
     for i, h in enumerate(horas):
         res = prever(retrato(base, ret, h), NOMES, cfg)
         hora = dt.datetime.fromisoformat(h)
@@ -52,12 +54,20 @@ def main():
         br = res["grupos"]["Brasil"]["Brasil"]
         print(f"{res['hora_txt']} {res['pct_secoes']:6.2f}%  {br['A_media']:.2f} [{br['A_p05']:.2f}, {br['A_p95']:.2f}]"
               f" P={br['prob_A']:.3f}", flush=True)
+        linha = {"hora": res["hora"], "pct_secoes": res["pct_secoes"], "parcial_A": res["parcial_A"],
+                 **{k: br[k] for k in ["A_media", "A_p05", "A_p95", "A_p025", "A_p975", "prob_A"]}}
+        # previsão deste momento, para o seletor da página (web/momentos.json)
+        web = painel.linhas_web(res, pd.DataFrame([linha]))
+        momentos.append({"pct": round(res["pct_secoes"], 3), "hora_txt": res["hora_txt"], "previsao": web["previsao"],
+                         "transferencias": web["transferencias"],
+                         "fluxos": exportar.fluxos(res["_csv"]["dados_municipios"], *map(painel.curto, NOMES))})
         if i < len(horas) - 1:
-            linhas.append({"hora": res["hora"], "pct_secoes": res["pct_secoes"], "parcial_A": res["parcial_A"],
-                           **{k: br[k] for k in ["A_media", "A_p05", "A_p95", "A_p025", "A_p975", "prob_A"]}})
+            linhas.append(linha)
             continue
         pd.DataFrame(linhas).to_csv(os.path.join(saida, "historico.csv"), index=False)
         gerar_saidas(res, saida)   # último retrato: painel completo + histórico
+    with open(os.path.join(saida, "web", "momentos.json"), "w") as f:
+        json.dump(momentos, f, ensure_ascii=False, separators=(",", ":"))
 
 
 if __name__ == "__main__":

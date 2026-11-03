@@ -157,6 +157,57 @@ coligação ou federação, contra a mesma eleição com só aquela aliança des
     return out
 
 
+def _n(x, casas=1):
+    return f"{x:.{casas}f}".replace(".", ",")
+
+
+def textos_simulacao(sim):
+    """Aviso (topo) e método (seção Sobre) do painel de uma apuração simulada, a partir de simulacao.json."""
+    a, b = sim["nomes"]
+    ano = sim["ano"]
+    ra = sim["real_A"]
+    pri = sim["prioris"]
+    if max(pri) > ano:
+        txt_pri = (f"Como a base começa em {ano}, a matriz de partida é a média das eleições de "
+                   f"{min(pri)} a {max(pri)}, as únicas da base; a pesquisa da véspera é de {ano}.")
+    else:
+        txt_pri = (f"A matriz de partida é a média das eleições de {min(pri)} a {max(pri)}"
+                   if len(pri) > 1 else f"A matriz de partida é a da eleição de {pri[0]}") + ", anteriores a esta."
+    aviso = (f"O TSE só guarda o resultado final de cada seção, não os parciais da noite. Aqui as seções de {ano} "
+             "chegam numa ordem sorteada, parecida com a de 2026 (Sul e Sudeste primeiro; Nordeste, Norte e capitais "
+             "depois), e o horário é simulado. Os votos de cada seção são os reais e o modelo só usa o que se sabia "
+             f"antes da eleição. Resultado oficial: {html.escape(a)} {_n(ra, 2)}% × {html.escape(b)} {_n(100 - ra, 2)}% "
+             "(linha tracejada e losangos nos gráficos).")
+    metodo = (f"Cada seção do 2º turno de {ano} entra com os votos que teve de verdade, numa ordem sorteada pelo "
+              "mesmo gerador do <a href=\"../../estresse.html\">teste de estresse</a>: atraso por região e nas "
+              "capitais como em 2026, zonas eleitorais em blocos, nenhum viés entre cidades e as primeiras seções de "
+              "cada cidade um pouco mais para o candidato do PT que a própria cidade, como se mediu em 2026. "
+              "O modelo é o adotado na revisão de novembro de 2026 (o mesmo do painel revisado de 2026). "
+              f"{txt_pri} A linha dos outros candidatos é ajustada à pesquisa da véspera "
+              f"({html.escape(a.split()[0])} {_n(sim['pesquisa_A'], 1)}% dos válidos, média de Datafolha e Ibope). "
+              "Outra ordem sorteada daria outra noite; o <a href=\"../../estresse.html\">teste de estresse</a> mostra "
+              "a cobertura em muitas noites diferentes.")
+    return {"aviso": aviso, "metodo": metodo}
+
+
+def cartoes_simulacoes(sims):
+    if not sims:
+        return ""
+    itens = []
+    for s in sims:
+        a, b = s["nomes"]
+        ra = s["real_A"]
+        itens.append(f"""  <section class="cartao">
+    <div class="rotulo">{s["ano"]} · Presidente · 2º turno · simulação</div>
+    <h3>{html.escape(a)} × {html.escape(b)}</h3>
+    <p class="meta">Resultado: {_n(ra)}% × {_n(100 - ra)}%</p>
+    <ul>
+      <li><a href="{html.escape(s["caminho"])}"><strong>Painel da apuração simulada</strong><span>A previsão a cada momento da noite, com a ordem de chegada das seções sorteada</span></a></li>
+    </ul>
+  </section>""")
+    return "\n".join(itens)
+
+
 def contato():
     u = html.escape(CONTATO_LINKEDIN)
     return f'Contato: <a href="{u}" rel="me noopener" target="_blank">meu perfil no LinkedIn</a>.'
@@ -192,7 +243,16 @@ def main():
     gerado_em = dt.datetime.now(FUSO).strftime("%d/%m/%Y")
     # dados e tabelas das páginas de testes (governador, prefeito, estresse), lidos dos rejogos em resultados/
     extras_testes = testes.exportar(os.path.join(saida, "testes"))
-    extras = {"eleicoes": "\n".join(cartao_eleicao(e) for e in eleicoes),
+    # apurações simuladas de eleições passadas (scripts/paineis_simulados.py -> resultados/simulacoes/)
+    sims = []
+    pasta_sim = os.path.join(RESULTADOS, "simulacoes")
+    for nome in sorted(os.listdir(pasta_sim)) if os.path.isdir(pasta_sim) else []:
+        arq = os.path.join(pasta_sim, nome, "simulacao.json")
+        if os.path.exists(os.path.join(pasta_sim, nome, "web", "momentos.json")) and os.path.exists(arq):
+            with open(arq, encoding="utf-8") as f:
+                sims.append({**json.load(f), "pasta": os.path.join(pasta_sim, nome),
+                             "caminho": f"{nome.split('-')[0]}/presidente/"})
+    extras = {"eleicoes": "\n".join(cartao_eleicao(e) for e in eleicoes), "simulacoes": cartoes_simulacoes(sims),
               "contato": contato(), **tabelas_aliancas(), **extras_testes}
     for nome in PAGINAS:
         with open(os.path.join(saida, nome), "w", encoding="utf-8") as f:
@@ -213,11 +273,21 @@ def main():
             destino = os.path.join(saida, caminho)
             inicio = "../" * caminho.strip("/").count("/") + "../"
             raiz_eleicao = "../" * v["sub"].strip("/").count("/") + ("../" if v["sub"] else "./")
+            # versão com a previsão de cada retrato da noite (web/momentos.json): seletor do momento no topo
+            tem_momentos = os.path.exists(os.path.join(resultados(v["resultados"]), "web", "momentos.json"))
+            sim = {"rotulo": "Rejogo da noite.", "aviso": v["momentos"]} if v.get("momentos") and tem_momentos else None
             web.gerar_site(resultados(v["resultados"]), destino, titulo=e["titulo"],
                            arquivo={"inicio": inicio, "rotulo": f'{e["ano"]} · {e["cargo"]} · {e["turno"]}',
-                                    "versoes": web.nav_versoes(e.get("versoes"), v, raiz_eleicao)})
+                                    "versoes": web.nav_versoes(e.get("versoes"), v, raiz_eleicao)},
+                           simulacao=sim)
+    for sim in sims:
+        a, b = sim["nomes"]
+        web.gerar_site(sim["pasta"], os.path.join(saida, sim["caminho"]),
+                       titulo=f"Apuração simulada do 2º turno presidencial de {sim['ano']}",
+                       arquivo={"inicio": "../../", "rotulo": f"{sim['ano']} · Presidente · 2º turno · simulação"},
+                       simulacao=textos_simulacao(sim))
     open(os.path.join(saida, ".nojekyll"), "w").close()
-    print(f"site gerado em {saida}: {len(PAGINAS)} páginas + {len(eleicoes)} eleição(ões)")
+    print(f"site gerado em {saida}: {len(PAGINAS)} páginas + {len(eleicoes)} eleição(ões) + {len(sims)} simulação(ões)")
 
 
 if __name__ == "__main__":
