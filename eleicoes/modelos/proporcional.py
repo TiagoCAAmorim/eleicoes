@@ -44,9 +44,12 @@ REGRAS = {
     "2018": Regra("2018", True, False, 0.0, 0.1, 0.1, "todos"),
     # EC 97/2017: fim das coligações proporcionais
     "2020": Regra("2020", False, False, 0.0, 0.1, 0.1, "todos"),
-    # Lei 14.211/2021 e federações (Lei 14.208/2021): sobras só para quem tem 80% do QE e candidato com 20%
-    "2022": Regra("2022", False, True, 0.8, 0.1, 0.2, "barreira"),
-    # STF (fev/2024): todos disputam a 3ª fase das sobras
+    # Lei 14.211/2021 e federações (Lei 14.208/2021): sobras só para quem tem 80% do QE e candidato com 20%. Na 3ª
+    # fase das sobras o TSE deixou só quem tinha 80% do QE; o STF (ADIs 7228/7263/7325) abriu a todos, e a
+    # retotalização de 2022 trocou 7 deputados federais (AP, DF, RO, TO). Os dados do TSE já trazem os eleitos
+    # depois dela, por isso 2022 usa "todos"; a leitura original é REGRAS["2022_tse"].
+    "2022": Regra("2022", False, True, 0.8, 0.1, 0.2, "todos"),
+    "2022_tse": Regra("2022 (leitura original do TSE)", False, True, 0.8, 0.1, 0.2, "barreira"),
     "2024": Regra("2024", False, True, 0.8, 0.1, 0.2, "todos"),
 }
 
@@ -122,7 +125,8 @@ def distribuir(votos_agrem, candidatos, vagas, regra, desempate=None):
             if not aptos:
                 break       # não há mais candidatos
             minimo = 0
-        a = max(aptos, key=lambda x: (votos_agrem[x] / (cad[x] + 1), votos_agrem[x]))
+        # empate total: vence o primeiro em ordem alfabética (a página interativa faz igual)
+        a = max(sorted(aptos), key=lambda x: (votos_agrem[x] / (cad[x] + 1), votos_agrem[x]))
         eleger(a, proximo(a, minimo), fase)
     return eleitos, fases, qe
 
@@ -219,3 +223,53 @@ def sainte_lague(votos, n):
 
 __all__ = ["Regra", "REGRAS", "regra_do_ano", "quociente_eleitoral", "distribuir", "agremiacoes", "simular",
            "cadeiras", "gallagher", "sainte_lague", "replace"]
+
+
+# ---------------------------------------------------------------------------------------------------------------
+# Leitura da base (dados/historico/<ano>/proporcional_*.csv.gz, gerada por scripts/tse_proporcional.py)
+
+CARGOS = {6: "deputado_federal", 7: "deputado_estadual", 8: "deputado_distrital", 13: "vereador"}
+ELEITO = r"^(ELEITO|M[ÉE]DIA)"
+
+
+def carregar(ano, cargo):
+    """(partidos, candidatos, vagas) de um cargo. Vagas = número de eleitos em cada circunscrição."""
+    import os
+    from ..caminhos import DADOS
+    pasta = os.path.join(DADOS, "historico", str(ano))
+    c = pd.read_csv(os.path.join(pasta, "proporcional_candidatos.csv.gz"), dtype=str)
+    p = pd.read_csv(os.path.join(pasta, "proporcional_partidos.csv.gz"), dtype=str)
+    c, p = c[c["cargo"] == str(cargo)].copy(), p[p["cargo"] == str(cargo)].copy()
+    if cargo in (6, 7, 8):
+        c["ue"], p["ue"] = c["uf"], p["uf"]
+    p["votos"] = pd.to_numeric(p["votos"]).fillna(0).astype("int64")
+    c["votos"] = pd.to_numeric(c["v_validos"].fillna(c["v_brutos"])).fillna(0).astype("int64")
+    c["eleito"] = c["situacao"].fillna("").str.strip().str.upper().str.match(ELEITO)
+    vagas = c[c["eleito"]].groupby("ue").size().to_dict()
+    return p.reset_index(drop=True), c.reset_index(drop=True), vagas
+
+
+def com_grupos(regra, grupos=(), base="real", ufs=None):
+    """Função de aliança para `simular`: parte das listas reais do ano (base="real") ou de cada partido sozinho
+    (base="partido") e junta cada grupo de partidos numa lista só. Um partido de um grupo sai da coligação ou
+    federação em que estava; os outros membros dela continuam juntos. Um grupo de um partido só tira o partido da
+    sua aliança. `ufs`: aplica os grupos só nessas circunscrições."""
+    grupos = [tuple(g) for g in grupos]
+
+    def f(p):
+        a = agremiacoes(p, regra, None if base == "real" else "partido")["agrem"].copy()
+        onde = p["ue"].isin(ufs) if ufs is not None else pd.Series(True, index=p.index)
+        for g in grupos:
+            nome = "Aliança " + " / ".join(g) if len(g) > 1 else g[0]
+            a[p["partido"].isin(g) & onde] = nome
+        return a
+    return f
+
+
+def comparar(antes, depois, candidatos):
+    """Quem entra e quem sai entre duas simulações (DataFrames de `simular`)."""
+    a, d = set(zip(antes["ue"], antes["sq"])), set(zip(depois["ue"], depois["sq"]))
+    info = candidatos.set_index(["ue", "sq"])[["nome", "partido", "votos"]]
+    entra = info.reindex(sorted(d - a)).reset_index().assign(mudanca="entra")
+    sai = info.reindex(sorted(a - d)).reset_index().assign(mudanca="sai")
+    return pd.concat([entra, sai], ignore_index=True).sort_values(["mudanca", "ue", "votos"], ascending=[True, True, False])

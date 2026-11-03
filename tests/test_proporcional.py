@@ -60,3 +60,45 @@ def test_art111_ninguem_atinge_qe():
 
 def test_gallagher_zero_quando_proporcional():
     assert pr.gallagher({"a": 60, "b": 40}, {"a": 6, "b": 4}) < 1e-9
+
+
+def test_pagina_reproduz_o_motor(tmp_path):
+    """O motor da página (site/aliancas.js) dá os mesmos eleitos que o de Python, em vários cenários."""
+    import json
+    import shutil
+    import subprocess
+
+    import pytest
+    if not shutil.which("node"):
+        pytest.skip("sem node")
+    raiz = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    sys.path.insert(0, os.path.join(raiz, "scripts"))
+    import aliancas
+    aliancas.exportar([2018, 2022], str(tmp_path))
+    cenarios = [("real", [], None), ("partido", [], None), ("real", [["PT", "PSOL", "PSB", "PDT"]], None),
+                ("real", [["PL", "PP"], ["MDB"]], ["SP", "MG"])]
+    js = f"""
+const M = require({json.dumps(os.path.join(raiz, "site", "aliancas.js"))});
+const fs = require("fs"); const out = [];
+for (const arq of ["2018_6.json", "2022_6.json", "2022_7.json"]) {{
+  const d = JSON.parse(fs.readFileSync({json.dumps(str(tmp_path))} + "/" + arq));
+  for (const [b, g, u] of {json.dumps(cenarios)}) {{
+    const s = M.simular(d, {{base: b, grupos: g, ufs: u}});
+    const el = [];
+    for (const uf of Object.keys(s)) for (const i of s[uf].eleitos) el.push([uf, d.ufs[uf].c[i][0], d.ufs[uf].c[i][2]]);
+    out.push(el.sort());
+  }}
+}}
+console.log(JSON.stringify(out));
+"""
+    res = json.loads(subprocess.run(["node", "-e", js], capture_output=True, text=True, check=True).stdout)
+    k = 0
+    for ano, cargo in [(2018, 6), (2022, 6), (2022, 7)]:
+        regra = pr.regra_do_ano(ano)
+        p, c, v = pr.carregar(ano, cargo)
+        info = c.set_index(["ue", "sq"])
+        for base, grupos, ufs in cenarios:
+            e = pr.simular(p, c, v, regra, pr.com_grupos(regra, [tuple(g) for g in grupos], base, ufs))
+            py = sorted([u, info.loc[(u, s), "nome"], int(info.loc[(u, s), "votos"])] for u, s in zip(e["ue"], e["sq"]))
+            assert py == sorted(res[k]), (ano, cargo, base, grupos)
+            k += 1

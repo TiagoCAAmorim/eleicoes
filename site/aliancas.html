@@ -1,0 +1,239 @@
+<!-- página: analises | titulo: Alianças que não aconteceram | descricao: Simule coligações e federações nas eleições de deputado federal e estadual de 2006 a 2022 e veja quem entraria e quem sairia. -->
+<p class="meta"><a href="analises.html">Análises</a> · Deputados, 2006–2022</p>
+<h1>Alianças que não aconteceram</h1>
+<p class="lead">Junte qualquer grupo de partidos numa só lista e veja quantas cadeiras de deputado cada um teria e quais
+candidatos entrariam ou sairiam.</p>
+<p>Até 2018 os partidos podiam se coligar na eleição de deputado; em 2022 só por federação, que vale no país inteiro.
+A divisão das cadeiras segue o quociente eleitoral e as sobras com a regra de cada ano. O cálculo reproduz os eleitos
+reais em todos os anos (veja a <a href="#metodo">conferência</a>).</p>
+<p class="aviso">Hipótese: cada eleitor vota como votou. Só muda quem está na mesma lista. Uma aliança de verdade
+mudaria candidaturas e campanhas, então o resultado mostra o efeito <strong>aritmético</strong> da aliança.</p>
+
+<h2 id="simulador">Simulador</h2>
+<div class="painel-sim">
+  <div class="linha-campos">
+    <label>Eleição <select id="sel-eleicao"></select></label>
+    <label>Ponto de partida
+      <select id="sel-base">
+        <option value="real">Coligações e federações reais</option>
+        <option value="partido">Cada partido sozinho</option>
+      </select>
+    </label>
+    <label>Onde aplicar
+      <select id="sel-uf"><option value="">Todas as UFs</option></select>
+    </label>
+  </div>
+  <div id="grupos"></div>
+  <div class="linha-botoes">
+    <button type="button" id="bt-grupo" class="botao">+ Outra aliança</button>
+    <button type="button" id="bt-limpar" class="botao secundario">Limpar</button>
+  </div>
+  <p class="meta">Um partido escolhido sai da coligação ou federação em que estava; os outros membros dela continuam
+  juntos. Escolha um partido só para tirá-lo da sua aliança.</p>
+</div>
+<div id="resultado" aria-live="polite"></div>
+
+<h2>Alianças reais: quem ganhou e quem perdeu</h2>
+<p>Para cada coligação (2006–2018) ou federação (2022) de cada UF, refizemos a conta com ela desfeita e seus partidos
+sozinhos, mantendo as outras alianças como foram. O ganho de um partido é a diferença de cadeiras com e sem a aliança.</p>
+{{aliancas_efeito}}
+
+<h2>Parcerias que teriam rendido mais</h2>
+<p>Todos os pares de partidos com ao menos 1% dos votos do país, unidos numa lista em todas as UFs (uma federação; até
+2018, uma coligação que tira os dois das suas). Os pares em que os dois juntos teriam mais cadeiras do que de fato
+tiveram:</p>
+{{aliancas_busca}}
+
+<h2 id="metodo">Como é calculado</h2>
+<ol class="lista-simples">
+  <li>Quociente eleitoral: votos válidos (nominais e de legenda) divididos pelas vagas da UF.</li>
+  <li>Cada lista elege tantos candidatos quanto o número de vezes que atinge o quociente, a partir de 2016 só entre os
+  que têm ao menos 10% dele.</li>
+  <li>As vagas que sobram vão às maiores médias (votos da lista ÷ cadeiras + 1). Até 2016 só disputa quem atingiu o
+  quociente; em 2018 todos; em 2022 quem tem 80% dele e candidato com 20%. Quando ninguém mais cumpre as exigências,
+  as vagas vão às maiores médias sem a exigência individual.</li>
+</ol>
+<p>Conferência com os eleitos oficiais (dados abertos do TSE):</p>
+{{aliancas_validacao}}
+<p class="meta">Diferenças vêm de votos revistos depois da eleição (decisões judiciais), que mudam por poucos votos a
+disputa da última vaga. Código: <code>eleicoes/modelos/proporcional.py</code>; esta página faz a mesma conta no
+navegador (<code>aliancas.js</code>). Mais detalhes em <a href="https://github.com/TiagoCAAmorim/eleicoes/blob/main/docs/aliancas.md">docs/aliancas.md</a>.</p>
+
+<style>
+.aviso { background: var(--warn-bg); border-radius: var(--radius); padding: 10px 14px; }
+.painel-sim { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; }
+.linha-campos { display: flex; flex-wrap: wrap; gap: 12px 20px; margin-bottom: 12px; }
+.linha-campos label { display: flex; flex-direction: column; gap: 4px; font-size: 14px; color: var(--fg-2); font-weight: 600; }
+select { font: 16px var(--sans); padding: 6px 8px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); color: var(--fg); max-width: 100%; }
+.grupo { border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; margin-bottom: 10px; }
+.grupo-topo { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 6px; font-weight: 600; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { display: inline-flex; align-items: center; gap: 4px; border: 1px solid var(--line); border-radius: 999px; padding: 3px 10px; font-size: 14px; cursor: pointer; user-select: none; }
+.chip input { margin: 0; }
+.chip.marcado { background: var(--accent-bg); border-color: var(--accent); }
+.chip.ocupado { opacity: .45; }
+.linha-botoes { display: flex; gap: 8px; flex-wrap: wrap; margin: 4px 0 8px; }
+.botao { font: 500 15px var(--sans); padding: 7px 14px; border-radius: 8px; border: 1px solid var(--accent); background: var(--accent); color: #fff; cursor: pointer; }
+.botao.secundario, .botao.mini { background: transparent; color: var(--accent); }
+.botao.mini { padding: 2px 8px; font-size: 13px; border-color: var(--line); color: var(--fg-2); }
+#resultado { margin-top: 20px; }
+.resumo-grupos { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 12px; margin-bottom: 16px; }
+.resumo-grupos .cartao strong { font: 600 28px/1.1 var(--serif); }
+.pos { color: #1f7a3a; } .neg { color: #b3261e; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .pos { color: #6fcf8e; } :root:not([data-theme="light"]) .neg { color: #f2867d; } }
+.duas-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 16px; }
+details summary { cursor: pointer; color: var(--accent); margin: 8px 0; }
+</style>
+<script src="aliancas.js"></script>
+<script>
+(function () {
+  "use strict";
+  var cache = {}, indice = [], dados = null, grupos = [[]];
+  var $ = function (id) { return document.getElementById(id); };
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function fmt(n) { return n.toLocaleString("pt-BR"); }
+  function sinal(n) { return n > 0 ? '<span class="pos">+' + n + "</span>" : n < 0 ? '<span class="neg">' + n + "</span>" : "0"; }
+
+  function lerHash() {
+    var h = {};
+    location.hash.replace(/^#/, "").split("&").forEach(function (kv) {
+      var i = kv.indexOf("="); if (i > 0) h[kv.slice(0, i)] = decodeURIComponent(kv.slice(i + 1));
+    });
+    return h;
+  }
+  function gravarHash() {
+    var g = grupos.filter(function (x) { return x.length; }).map(function (x) { return x.join(","); }).join(";");
+    var h = "e=" + $("sel-eleicao").value + "&b=" + $("sel-base").value + ($("sel-uf").value ? "&uf=" + $("sel-uf").value : "") + (g ? "&g=" + encodeURIComponent(g) : "");
+    history.replaceState(null, "", "#" + h);
+  }
+
+  function carregar(arq) {
+    if (cache[arq]) return Promise.resolve(cache[arq]);
+    return fetch("aliancas/dados/" + arq).then(function (r) { return r.json(); }).then(function (d) { cache[arq] = d; return d; });
+  }
+
+  function desenharGrupos() {
+    var ocupado = {};
+    grupos.forEach(function (g, k) { g.forEach(function (s) { ocupado[s] = k; }); });
+    var html = grupos.map(function (g, k) {
+      var chips = dados.partidos.map(function (s) {
+        var m = g.indexOf(s) >= 0, o = !m && ocupado[s] !== undefined;
+        return '<label class="chip' + (m ? " marcado" : "") + (o ? " ocupado" : "") + '"><input type="checkbox" data-g="' + k + '" value="' + esc(s) + '"' + (m ? " checked" : "") + (o ? " disabled" : "") + ">" + esc(s) + "</label>";
+      }).join("");
+      return '<div class="grupo"><div class="grupo-topo"><span>Aliança ' + (k + 1) + (g.length ? ": " + esc(g.join(" + ")) : "") + "</span>" +
+        (grupos.length > 1 ? '<button type="button" class="botao mini" data-rm="' + k + '">remover</button>' : "") + '</div><div class="chips">' + chips + "</div></div>";
+    }).join("");
+    $("grupos").innerHTML = html;
+  }
+
+  function contar(sim, d, filtroUF) {
+    var por = {}, total = 0;
+    Object.keys(sim).forEach(function (uf) {
+      if (filtroUF && uf !== filtroUF) return;
+      sim[uf].eleitos.forEach(function (i) {
+        var s = d.partidos[d.ufs[uf].c[i][1]]; por[s] = (por[s] || 0) + 1; total++;
+      });
+    });
+    return por;
+  }
+
+  function calcular() {
+    if (!dados) return;
+    gravarHash();
+    var uf = $("sel-uf").value || null;
+    var gs = grupos.filter(function (g) { return g.length; });
+    var cen = { base: $("sel-base").value, grupos: gs, ufs: uf ? [uf] : null };
+    var real = dados._real || (dados._real = Motor.simular(dados, { base: "real", grupos: [] }));
+    var sim = Motor.simular(dados, cen);
+    var pr = contar(real, dados, uf), ps = contar(sim, dados, uf);
+    var entra = [], sai = [];
+    Object.keys(sim).forEach(function (u) {
+      if (uf && u !== uf) return;
+      var a = {}, b = {};
+      real[u].eleitos.forEach(function (i) { a[i] = 1; });
+      sim[u].eleitos.forEach(function (i) { b[i] = 1; });
+      var c = dados.ufs[u].c;
+      sim[u].eleitos.forEach(function (i) { if (!a[i]) entra.push([u, c[i]]); });
+      real[u].eleitos.forEach(function (i) { if (!b[i]) sai.push([u, c[i]]); });
+    });
+    var porVotos = function (x, y) { return y[1][2] - x[1][2]; };
+    entra.sort(porVotos); sai.sort(porVotos);
+
+    var out = "";
+    var onde = uf ? " em " + uf : "";
+    if (gs.length) {
+      out += '<div class="resumo-grupos">' + gs.map(function (g, k) {
+        var r = 0, s = 0; g.forEach(function (p) { r += pr[p] || 0; s += ps[p] || 0; });
+        return '<section class="cartao"><div class="rotulo">Aliança ' + (k + 1) + "</div><h3>" + esc(g.join(" + ")) + "</h3><p><strong>" + s + '</strong> cadeiras (real: ' + r + ", " + sinal(s - r) + ")" + onde + "</p></section>";
+      }).join("") + "</div>";
+    } else if (cen.base === "real") {
+      out += '<p class="meta">Escolha partidos para formar uma aliança. Sem nenhuma, o resultado é o real.</p>';
+    }
+    var linhas = Object.keys(Object.assign({}, pr, ps)).map(function (p) { return [p, pr[p] || 0, ps[p] || 0]; })
+      .filter(function (l) { return l[1] !== l[2]; }).sort(function (x, y) { return (y[2] - y[1]) - (x[2] - x[1]) || y[2] - x[2]; });
+    if (!linhas.length) {
+      out += "<p>Nenhuma cadeira muda de partido" + onde + ".</p>";
+    } else {
+      out += '<h3>Cadeiras que mudam de partido' + onde + "</h3>" +
+        '<div class="tabela-rolagem"><table><thead><tr><th>Partido</th><th class="num">Real</th><th class="num">Cenário</th><th class="num">Diferença</th></tr></thead><tbody>' +
+        linhas.map(function (l) { return "<tr><td>" + esc(l[0]) + '</td><td class="num">' + l[1] + '</td><td class="num">' + l[2] + '</td><td class="num">' + sinal(l[2] - l[1]) + "</td></tr>"; }).join("") +
+        "</tbody></table></div>";
+    }
+    function tabela(t, lst) {
+      if (!lst.length) return "<div><h3>" + t + "</h3><p class=\"meta\">Ninguém.</p></div>";
+      return "<div><h3>" + t + " (" + lst.length + ")</h3><div class=\"tabela-rolagem\"><table><thead><tr><th>UF</th><th>Candidato</th><th>Partido</th><th class=\"num\">Votos</th></tr></thead><tbody>" +
+        lst.map(function (x) { return "<tr><td>" + x[0] + "</td><td>" + esc(x[1][0]) + "</td><td>" + esc(dados.partidos[x[1][1]]) + '</td><td class="num">' + fmt(x[1][2]) + "</td></tr>"; }).join("") +
+        "</tbody></table></div></div>";
+    }
+    out += '<div class="duas-col">' + tabela("Entrariam", entra) + tabela("Sairiam", sai) + "</div>";
+    if (uf) {
+      var listasReais = {};
+      Object.keys(dados.ufs[uf].p).forEach(function (s) { var a = dados.ufs[uf].p[s][1]; (listasReais[a] = listasReais[a] || []).push(s); });
+      out += "<details><summary>Listas reais em " + uf + " (" + dados.ufs[uf].vagas + " vagas, quociente " + fmt(real[uf].qe) + " votos)</summary><ul class=\"lista-simples\">" +
+        Object.keys(listasReais).sort().map(function (a) { return "<li>" + esc(listasReais[a].join(", ")) + "</li>"; }).join("") + "</ul></details>";
+    }
+    $("resultado").innerHTML = out;
+  }
+
+  function trocarEleicao(manterGrupos) {
+    var e = indice[+$("sel-eleicao").value];
+    return carregar(e.arquivo).then(function (d) {
+      dados = d;
+      var uf = $("sel-uf").value;
+      $("sel-uf").innerHTML = '<option value="">Todas as UFs</option>' + Object.keys(d.ufs).sort().map(function (u) { return '<option value="' + u + '">' + u + "</option>"; }).join("");
+      if (d.ufs[uf]) $("sel-uf").value = uf;
+      if (!manterGrupos) grupos = [[]];
+      grupos = grupos.map(function (g) { return g.filter(function (s) { return d.partidos.indexOf(s) >= 0; }); });
+      desenharGrupos(); calcular();
+    });
+  }
+
+  $("grupos").addEventListener("change", function (ev) {
+    var t = ev.target; if (!t.dataset.g) return;
+    var g = grupos[+t.dataset.g], s = t.value;
+    if (t.checked) { if (g.indexOf(s) < 0) g.push(s); } else { g.splice(g.indexOf(s), 1); }
+    desenharGrupos(); calcular();
+  });
+  $("grupos").addEventListener("click", function (ev) {
+    var k = ev.target.dataset && ev.target.dataset.rm; if (k === undefined) return;
+    grupos.splice(+k, 1); desenharGrupos(); calcular();
+  });
+  $("bt-grupo").addEventListener("click", function () { grupos.push([]); desenharGrupos(); });
+  $("bt-limpar").addEventListener("click", function () { grupos = [[]]; $("sel-base").value = "real"; $("sel-uf").value = ""; desenharGrupos(); calcular(); });
+  $("sel-eleicao").addEventListener("change", function () { trocarEleicao(true); });
+  $("sel-base").addEventListener("change", calcular);
+  $("sel-uf").addEventListener("change", calcular);
+
+  fetch("aliancas/dados/indice.json").then(function (r) { return r.json(); }).then(function (ind) {
+    indice = ind;
+    $("sel-eleicao").innerHTML = ind.map(function (e, i) { return '<option value="' + i + '">' + e.ano + " · " + esc(e.cargo_nome) + "</option>"; }).join("");
+    var h = lerHash(), i0 = ind.length - 2 >= 0 ? ind.length - 2 : 0;   // padrão: 2022, deputado federal
+    ind.forEach(function (e, i) { if (e.ano === 2022 && e.cargo === 6) i0 = i; });
+    $("sel-eleicao").value = h.e !== undefined && ind[+h.e] ? h.e : String(i0);
+    if (h.b) $("sel-base").value = h.b;
+    if (h.g) grupos = h.g.split(";").map(function (x) { return x.split(",").filter(Boolean); });
+    if (h.uf) { $("sel-uf").innerHTML += '<option value="' + esc(h.uf) + '">' + esc(h.uf) + "</option>"; $("sel-uf").value = h.uf; }
+    return trocarEleicao(true);
+  }).catch(function () { $("resultado").innerHTML = '<p class="aviso">Não foi possível carregar os dados.</p>'; });
+})();
+</script>

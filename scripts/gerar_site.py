@@ -13,6 +13,7 @@ import json
 import os
 import re
 import shutil
+from urllib.parse import quote
 
 import _raiz  # noqa: F401
 from eleicoes.caminhos import RAIZ, RESULTADOS, SITE, resultados
@@ -23,7 +24,7 @@ FUSO = dt.timezone(dt.timedelta(hours=-3))
 CONTATO_LINKEDIN = "https://www.linkedin.com/in/tiago-amorim-eng/"
 # botão "Me pague um café" no topo das páginas fixas: copia esta chave Pix
 CHAVE_PIX = "bcd8d244-8aeb-4003-99ca-d8ba4f5f5952"
-PAGINAS = ["index.html", "modelos.html", "analises.html"]
+PAGINAS = ["index.html", "modelos.html", "analises.html", "aliancas.html"]
 NOMES_ORDEM = {"2022": "Parecida com a real (Sul e Sudeste antes)", "aleatoria": "Aleatória por seção",
                "zonas": "Parecida com a real, com zonas pró-Bolsonaro antes em cada município",
                "adversa": "Adversa (seções pró-Bolsonaro primeiro)"}
@@ -87,6 +88,100 @@ apuração (de 0,5% a 99%) em que o intervalo de 90% continha o resultado final.
     return out
 
 
+ANOS_ALIANCAS = [2006, 2010, 2014, 2018, 2022]
+
+
+def _link_sim(ano, cargo, grupos, uf=None):
+    """Âncora da página de alianças que abre o simulador com o cenário (índice = ordem de aliancas/dados/indice.json)."""
+    i = 2 * ANOS_ALIANCAS.index(int(ano)) + (0 if cargo == "deputado federal" else 1)
+    g = ";".join(",".join(x) for x in grupos)
+    return f'#e={i}&b=real' + (f"&uf={uf}" if uf else "") + "&g=" + quote(g)
+
+
+def tabelas_aliancas():
+    """Tabelas da página de alianças, a partir de resultados/aliancas (python scripts/aliancas.py efeito busca validar)."""
+    pasta = os.path.join(RESULTADOS, "aliancas")
+    vazio = '<p class="meta">Ainda não gerado (python scripts/aliancas.py {0}).</p>'
+    out = {"aliancas_efeito": vazio.format("efeito"), "aliancas_busca": vazio.format("busca"),
+           "aliancas_validacao": vazio.format("validar")}
+    try:
+        import pandas as pd
+    except ImportError:
+        return out
+    esc = html.escape
+
+    def tabela(cab, linhas, num=()):
+        th = "".join(f'<th class="num">{esc(c)}</th>' if i in num else f"<th>{esc(c)}</th>" for i, c in enumerate(cab))
+        tr = "\n".join("<tr>" + "".join(f'<td class="num">{v}</td>' if i in num else f"<td>{v}</td>"
+                                         for i, v in enumerate(l)) + "</tr>" for l in linhas)
+        return f'<div class="tabela-rolagem"><table><thead><tr>{th}</tr></thead><tbody>\n{tr}\n</tbody></table></div>'
+
+    def sinal(n):
+        n = int(n)
+        return f'<span class="pos">+{n}</span>' if n > 0 else (f'<span class="neg">{n}</span>' if n < 0 else "0")
+
+    arq = os.path.join(pasta, "efeito_aliancas.csv")
+    if os.path.exists(arq):
+        e = pd.read_csv(arq)
+        e = e[~e["fora"].astype(bool)]
+        partes = []
+        for cargo in ["deputado federal", "deputado estadual"]:
+            x = e[e["cargo"] == cargo]
+            m = x.groupby(["partido", "ano"])["ganho"].sum().unstack("ano").reindex(columns=ANOS_ALIANCAS).fillna(0)
+            m["Total"] = m.sum(axis=1)
+            m = m[m["Total"] != 0].sort_values("Total", ascending=False)
+            linhas = [[esc(pp)] + [sinal(v) if a != "Total" else f"<strong>{sinal(v)}</strong>" for a, v in r.items()]
+                      for pp, r in m.head(15).iterrows()]
+            t1 = tabela(["Partido"] + [str(a) for a in ANOS_ALIANCAS] + ["Total"], linhas, range(1, 7))
+            # membros que perderam cadeiras dentro da própria aliança
+            perdas = x[x["ganho"] < 0].sort_values(["ganho", "ano"]).head(12)
+            lp = []
+            for r in perdas.itertuples():
+                membros = sorted(e[(e["ano"] == r.ano) & (e["cargo"] == cargo) & (e["uf"] == r.uf) &
+                                   (e["alianca"] == r.alianca)]["partido"])
+                link = _link_sim(r.ano, cargo, [(mm,) for mm in membros], r.uf)
+                lp.append([str(r.ano), r.uf, esc(r.partido), esc(" / ".join(membros)), str(r.cadeiras_com),
+                           str(r.cadeiras_sem), sinal(r.ganho), f'<a href="{link}">simular</a>'])
+            t2 = tabela(["Ano", "UF", "Partido", "Aliança", "Com", "Sem", "Efeito", ""], lp, (4, 5, 6))
+            nome = "federais" if cargo == "deputado federal" else "estaduais"
+            partes.append(f"""<h3>Deputados {nome}: saldo de cada partido</h3>
+<p class="meta">Soma, em todas as UFs, das cadeiras que cada partido ganhou (+) ou perdeu (−) por estar na sua
+coligação ou federação, contra a mesma eleição com só aquela aliança desfeita. Os 15 maiores saldos.</p>
+{t1}
+<details><summary>Quem perdeu cadeira dentro da própria aliança (deputados {nome})</summary>
+<p class="meta">Partidos que teriam mais cadeiras sozinhos: os votos deles ajudaram a eleger candidatos dos parceiros.</p>
+{t2}
+</details>""")
+        out["aliancas_efeito"] = "\n".join(partes)
+
+    arq = os.path.join(pasta, "busca_pares.csv")
+    if os.path.exists(arq):
+        b = pd.read_csv(arq)
+        partes = []
+        for cargo in ["deputado federal", "deputado estadual"]:
+            linhas = []
+            for ano in ANOS_ALIANCAS:
+                g = b[(b["ano"] == ano) & (b["cargo"] == cargo) & (b["ganho"] > 0)]
+                for r in g.sort_values(["ganho", "juntos_a"], ascending=False).head(5).itertuples():
+                    link = _link_sim(ano, cargo, [(r.a, r.b)])
+                    linhas.append([str(ano), f"{esc(r.a)} + {esc(r.b)}", str(r.real_a + r.real_b),
+                                   str(r.juntos_a + r.juntos_b), sinal(r.ganho),
+                                   f"{esc(r.a)} {sinal(r.juntos_a - r.real_a)}, {esc(r.b)} {sinal(r.juntos_b - r.real_b)}",
+                                   f'<a href="{link}">simular</a>'])
+            t = tabela(["Ano", "Par", "Real", "Juntos", "Ganho", "Por partido", ""], linhas, (2, 3, 4))
+            nome = "federais" if cargo == "deputado federal" else "estaduais"
+            partes.append(f"<h3>Deputados {nome}: os 5 melhores pares de cada eleição</h3>\n{t}")
+        out["aliancas_busca"] = "\n".join(partes)
+
+    arq = os.path.join(pasta, "validacao.csv")
+    if os.path.exists(arq):
+        v = pd.read_csv(arq)
+        linhas = [[str(r.ano), esc(r.cargo), str(r.vagas), str(r.eleitos_iguais), _num(r.pct, 1) + "%"]
+                  for r in v.itertuples()]
+        out["aliancas_validacao"] = tabela(["Ano", "Cargo", "Vagas", "Eleitos iguais", "Acerto"], linhas, (2, 3, 4))
+    return out
+
+
 def contato():
     u = html.escape(CONTATO_LINKEDIN)
     return f'Contato: <a href="{u}" rel="me noopener" target="_blank">meu perfil no LinkedIn</a>.'
@@ -121,11 +216,16 @@ def main():
         eleicoes = json.load(f)
     gerado_em = dt.datetime.now(FUSO).strftime("%d/%m/%Y")
     extras = {"eleicoes": "\n".join(cartao_eleicao(e) for e in eleicoes),
-              "backtest": tabela_backtest(os.path.join(saida, "img")), "contato": contato()}
+              "backtest": tabela_backtest(os.path.join(saida, "img")), "contato": contato(),
+              **tabelas_aliancas()}
     for nome in PAGINAS:
         with open(os.path.join(saida, nome), "w", encoding="utf-8") as f:
             f.write(pagina(nome, extras, gerado_em))
     shutil.copy(os.path.join(SITE, "estilo.css"), os.path.join(saida, "estilo.css"))
+    shutil.copy(os.path.join(SITE, "aliancas.js"), os.path.join(saida, "aliancas.js"))
+    # dados do simulador de alianças (um JSON por eleição de deputados)
+    import aliancas
+    aliancas.exportar(ANOS_ALIANCAS, os.path.join(saida, "aliancas", "dados"))
     for e in eleicoes:
         # uma eleição pode ter versões (ex.: modelo do dia e modelo revisado), cada uma numa subpasta
         versoes = e.get("versoes") or [{"sub": "", "resultados": e["resultados"]}]
