@@ -1,0 +1,17 @@
+ano,instituto,data,numero,candidato,validos,fonte
+2010,Datafolha,2010-10-02,13,DILMA,50.5,https://en.wikipedia.org/wiki/Opinion_polling_for_the_2010_Brazilian_presidential_election
+2010,Datafolha,2010-10-02,45,JOSÉ SERRA,31.2,https://en.wikipedia.org/wiki/Opinion_polling_for_the_2010_Brazilian_presidential_election
+2010,Datafolha,2010-10-02,43,MARINA SILVA,17.2,https://en.wikipedia.org/wiki/Opinion_polling_for_the_2010_Brazilian_presidential_election
+2014,Datafolha,2014-10-04,13,DILMA,44,https://www.folhavitoria.com.br/politica/datafolha-dilma-tem-44-marina-24-e-aecio-26/
+2014,Datafolha,2014-10-04,45,AÉCIO NEVES,26,https://www.folhavitoria.com.br/politica/datafolha-dilma-tem-44-marina-24-e-aecio-26/
+2014,Datafolha,2014-10-04,40,MARINA SILVA,24,https://www.folhavitoria.com.br/politica/datafolha-dilma-tem-44-marina-24-e-aecio-26/
+2018,Datafolha,2018-10-06,17,JAIR BOLSONARO,40,https://www.infomoney.com.br/mercados/politica/noticia/7662189/datafolha-bolsonaro-vai-para-40-dos-votos-validos-e-haddad-mantem-25-ciro-tem-15
+2018,Datafolha,2018-10-06,13,FERNANDO HADDAD,25,https://www.infomoney.com.br/mercados/politica/noticia/7662189/datafolha-bolsonaro-vai-para-40-dos-votos-validos-e-haddad-mantem-25-ciro-tem-15
+2018,Datafolha,2018-10-06,12,CIRO GOMES,15,https://www.infomoney.com.br/mercados/politica/noticia/7662189/datafolha-bolsonaro-vai-para-40-dos-votos-validos-e-haddad-mantem-25-ciro-tem-15
+2018,Datafolha,2018-10-06,45,GERALDO ALCKMIN,8,https://www.infomoney.com.br/mercados/politica/noticia/7662189/datafolha-bolsonaro-vai-para-40-dos-votos-validos-e-haddad-mantem-25-ciro-tem-15
+2022,Datafolha,2022-10-01,13,LULA,50,https://www.poder360.com.br/eleicoes/datafolha-lula-tem-50-dos-votos-validos-bolsonaro-36/
+2022,Datafolha,2022-10-01,22,JAIR BOLSONARO,36,https://www.poder360.com.br/eleicoes/datafolha-lula-tem-50-dos-votos-validos-bolsonaro-36/
+2022,Datafolha,2022-10-01,12,CIRO GOMES,6,https://www.poder360.com.br/eleicoes/datafolha-lula-tem-50-dos-votos-validos-bolsonaro-36/
+2022,Datafolha,2022-10-01,15,SIMONE TEBET,5,https://www.poder360.com.br/eleicoes/datafolha-lula-tem-50-dos-votos-validos-bolsonaro-36/
+2026,Datafolha,2026-10-03,13,LULA,45,https://www.opovo.com.br/noticias/brasil/2026/10/04/datafolha-lula-tem-45-e-flavio-42-dos-votos-validos.html
+2026,Datafolha,2026-10-03,22,FLÁVIO BOLSONARO,42,https://www.opovo.com.br/noticias/brasil/2026/10/04/datafolha-lula-tem-45-e-flavio-42-dos-votos-validos.html
