@@ -239,3 +239,20 @@ verdade. Para as demais, mostrar só composição e contato.
 | 5 | Coleta da Câmara e do Senado pelo Actions | — (independente) |
 | 6 | Painéis de votações e por parlamentar | 3, 5 |
 | 7 | Levantamento das assembleias e painéis estaduais onde houver dados | 5–6 |
+
+---
+
+## Decisões do Tiago (03/11/2026)
+
+| # | Decisão |
+|---|---|
+| 1 | Foto "como saiu das urnas" primeiro; "como está hoje" depois |
+| 2 | Mapas de prefeito e governador com os dois pesos (por cargo e por eleitorado), com seletor |
+| 3 | Pesos por nível e meia-vida propostos aceitos como ponto de partida, com revisão depois de ver o resultado |
+| 4 | Arestas negativas (adversários) como variante, para medir o impacto |
+| 5 | Esquemas de cor como opções no painel (seletor); padrão a definir ao ver os mapas |
+| 6 | Painel do Legislativo com as duas casas (Câmara e Senado) |
+| 7 | Os dois espectros (alianças e votações) lado a lado |
+
+Assembleias estaduais e Câmara Legislativa do DF: por ora, só o levantamento de quais casas permitem o painel. O
+foco inicial é o nível federal.
