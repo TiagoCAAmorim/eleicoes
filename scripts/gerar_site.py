@@ -60,7 +60,7 @@ def figuras_modelos(pasta_img):
             shutil.copy(os.path.join(origem, nome), os.path.join(pasta_img, nome))
 
 
-ANOS_ALIANCAS = [2006, 2010, 2014, 2018, 2022]
+ANOS_ALIANCAS = [2006, 2010, 2014, 2018, 2022, 2026]
 
 
 def _link_sim(ano, cargo, grupos, uf=None):
@@ -104,7 +104,7 @@ def tabelas_aliancas():
             m = m[m["Total"] != 0].sort_values("Total", ascending=False)
             linhas = [[esc(pp)] + [sinal(v) if a != "Total" else f"<strong>{sinal(v)}</strong>" for a, v in r.items()]
                       for pp, r in m.head(15).iterrows()]
-            t1 = tabela(["Partido"] + [str(a) for a in ANOS_ALIANCAS] + ["Total"], linhas, range(1, 7))
+            t1 = tabela(["Partido"] + [str(a) for a in ANOS_ALIANCAS] + ["Total"], linhas, range(1, len(ANOS_ALIANCAS) + 2))
             # membros que perderam cadeiras dentro da própria aliança
             perdas = x[x["ganho"] < 0].sort_values(["ganho", "ano"]).head(12)
             lp = []

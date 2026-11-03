@@ -1,6 +1,6 @@
 # Alianças contrafactuais (deputados)
 
-Etapa 7 do [roteiro](roteiro.md). Pergunta: quanto as coligações (até 2018) e federações (2022) mudaram as
+Etapa 7 do [roteiro](roteiro.md). Pergunta: quanto as coligações (até 2018) e federações (2022 e 2026) mudaram as
 bancadas de deputado federal e estadual, e que alianças teriam rendido mais a um grupo de partidos. Por decisão de
 03/11/2026, a etapa não analisa o efeito das regras do quociente eleitoral em si, só as alianças.
 
@@ -20,7 +20,7 @@ mudaria candidaturas e campanhas, então os números são o efeito aritmético d
 | `proporcional_partidos.csv.gz` | votos de cada partido por circunscrição: nominais válidos, legenda (incluindo nominais convertidos em legenda) e a coligação ou federação |
 | `proporcional.json` | colunas lidas e totais, para conferência |
 
-Deputados (2006–2022) e vereadores (2008–2024). Cuidados com os arquivos do TSE:
+Deputados (2006–2026) e vereadores (2008–2024). Cuidados com os arquivos do TSE:
 - Até 2010 o `SQ_CANDIDATO` se repete entre cargos e UFs; a chave do candidato é cargo + circunscrição + sq + número.
 - Em 2010 o `SG_UE` dos deputados traz o código do município; a circunscrição deles é a UF.
 - Algumas cidades têm a mesma coligação registrada duas vezes (sq diferentes, mesmos partidos em outra ordem). A
@@ -37,7 +37,7 @@ Deputados (2006–2022) e vereadores (2008–2024). Cuidados com os arquivos do 
 | 2016 | partidos e coligações | quem atingiu o QE | 10% do QE | maiores médias entre os mesmos |
 | 2018 | partidos e coligações | todos | 10% | maiores médias |
 | 2020 | partidos | todos | 10% | maiores médias |
-| 2022, 2024 | partidos e federações | quem tem 80% do QE | 10% (QP), 20% (sobras) | maiores médias entre todos (STF) |
+| 2022, 2024, 2026 | partidos e federações | quem tem 80% do QE | 10% (QP), 20% (sobras) | maiores médias entre todos (STF) |
 
 Em 2022 o TSE deixou na 3ª fase das sobras só quem tinha 80% do QE; o STF abriu a todos e a retotalização trocou 7
 deputados federais (AP, DF, RO, TO). Os dados abertos já trazem os eleitos depois dela, e o motor usa a regra do STF
@@ -52,7 +52,7 @@ não está nos arquivos de votação). Isso explica quase todas as diferenças d
 |---|---|
 | Deputado federal 2006 | 512 de 513 (ES: duas coligações separadas por 73 votos na última vaga) |
 | Deputado estadual 2006 | 1032 de 1035 |
-| Deputados federais e estaduais 2010, 2014, 2018, 2022 | 100% |
+| Deputados federais e estaduais 2010, 2014, 2018, 2022, 2026 | 100% |
 | Vereadores 2008–2024 | 99,7% a 99,9% (empates de votos e cidades com eleição revista) |
 
 `python scripts/aliancas.py validar` refaz a tabela (`resultados/aliancas/validacao.csv`).
@@ -77,6 +77,10 @@ Principais achados (deputado federal):
   Cidadania +3 e PSDB +2, PSOL +2 e Rede +1.
 - **Parcerias que não aconteceram em 2022:** PP + Republicanos teriam 17 cadeiras a mais juntos (104 em vez de 87);
   MDB + PT, 14; PSB + Republicanos, 14; PSB + PSD, 13.
+- **2026:** as federações ajudaram quase todos os membros: PC do B +9 e PV +5 com o PT, que perdeu 3 (teria 73 sozinho
+  em vez de 70); PP +8 e União +4; PRD +3. Entre os pares que não se formaram, os maiores ganhos são PSD + PT (+13),
+  PT + Republicanos (+13) e PSB + PSD (+12). A busca é só aritmética e ignora afinidade: PL + PT aparece com +15.
+- Em 2026 o TSE grafa o PC do B como `PCDOB`; os nomes dos partidos seguem cada ano.
 
 ## Simulador
 

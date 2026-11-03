@@ -6167,3 +6167,589 @@ ano,cargo,uf,alianca,partido,votos,cadeiras_com,cadeiras_sem,ganho,fora
 2022,deputado estadual,TO,Fed. PT/PC do B/PV,PC do B,28760.0,1,1,0,False
 2022,deputado estadual,TO,Fed. PT/PC do B/PV,PT,41384.0,0,1,-1,False
 2022,deputado estadual,TO,Fed. PT/PC do B/PV,PV,13653.0,1,0,1,False
+2026,deputado federal,AC,Fed. PRD/SOLIDARIEDADE,PRD,484.0,0,0,0,False
+2026,deputado federal,AC,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,1551.0,0,0,0,False
+2026,deputado federal,AC,Fed. PSDB/CIDADANIA,CIDADANIA,870.0,0,0,0,False
+2026,deputado federal,AC,Fed. PSDB/CIDADANIA,PSDB,20749.0,0,0,0,False
+2026,deputado federal,AC,Fed. PSOL/REDE,PSOL,357.0,0,0,0,False
+2026,deputado federal,AC,Fed. PSOL/REDE,REDE,71.0,0,0,0,False
+2026,deputado federal,AC,Fed. PT/PC do B/PV,PCDOB,16441.0,1,0,1,False
+2026,deputado federal,AC,Fed. PT/PC do B/PV,PT,25006.0,0,0,0,False
+2026,deputado federal,AC,Fed. PT/PC do B/PV,PV,5063.0,0,0,0,False
+2026,deputado federal,AC,Fed. PT/PC do B/PV,MDB,,1,2,-1,True
+2026,deputado federal,AC,Fed. UNIÃO/PP,PP,92228.0,2,2,0,False
+2026,deputado federal,AC,Fed. UNIÃO/PP,UNIÃO,81682.0,2,1,1,False
+2026,deputado federal,AC,Fed. UNIÃO/PP,MDB,,1,2,-1,True
+2026,deputado federal,AL,Fed. PRD/SOLIDARIEDADE,PRD,1292.0,0,0,0,False
+2026,deputado federal,AL,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,2270.0,0,0,0,False
+2026,deputado federal,AL,Fed. PSDB/CIDADANIA,CIDADANIA,319.0,0,0,0,False
+2026,deputado federal,AL,Fed. PSDB/CIDADANIA,PSDB,187753.0,1,1,0,False
+2026,deputado federal,AL,Fed. PT/PC do B/PV,PCDOB,3100.0,0,0,0,False
+2026,deputado federal,AL,Fed. PT/PC do B/PV,PT,93105.0,0,0,0,False
+2026,deputado federal,AL,Fed. PT/PC do B/PV,PV,1699.0,0,0,0,False
+2026,deputado federal,AL,Fed. UNIÃO/PP,PP,514531.0,3,3,0,False
+2026,deputado federal,AL,Fed. UNIÃO/PP,UNIÃO,178288.0,1,1,0,False
+2026,deputado federal,AM,Fed. PRD/SOLIDARIEDADE,PRD,684.0,0,0,0,False
+2026,deputado federal,AM,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,9301.0,0,0,0,False
+2026,deputado federal,AM,Fed. PSOL/REDE,PSOL,10035.0,0,0,0,False
+2026,deputado federal,AM,Fed. PSOL/REDE,REDE,3307.0,0,0,0,False
+2026,deputado federal,AM,Fed. PT/PC do B/PV,PCDOB,7621.0,0,0,0,False
+2026,deputado federal,AM,Fed. PT/PC do B/PV,PT,87951.0,0,0,0,False
+2026,deputado federal,AM,Fed. PT/PC do B/PV,PV,118.0,0,0,0,False
+2026,deputado federal,AM,Fed. UNIÃO/PP,PP,70204.0,0,0,0,False
+2026,deputado federal,AM,Fed. UNIÃO/PP,UNIÃO,317193.0,2,1,1,False
+2026,deputado federal,AM,Fed. UNIÃO/PP,PSD,,1,2,-1,True
+2026,deputado federal,AP,Fed. PSOL/REDE,PSOL,1879.0,0,0,0,False
+2026,deputado federal,AP,Fed. PSOL/REDE,REDE,1065.0,0,0,0,False
+2026,deputado federal,AP,Fed. PT/PC do B/PV,PCDOB,21776.0,1,0,1,False
+2026,deputado federal,AP,Fed. PT/PC do B/PV,PT,24777.0,0,0,0,False
+2026,deputado federal,AP,Fed. PT/PC do B/PV,PV,23272.0,0,0,0,False
+2026,deputado federal,AP,Fed. PT/PC do B/PV,PODE,,1,2,-1,True
+2026,deputado federal,AP,Fed. UNIÃO/PP,PP,22099.0,0,0,0,False
+2026,deputado federal,AP,Fed. UNIÃO/PP,UNIÃO,103344.0,3,2,1,False
+2026,deputado federal,AP,Fed. UNIÃO/PP,PODE,,1,2,-1,True
+2026,deputado federal,BA,Fed. PRD/SOLIDARIEDADE,PRD,6286.0,0,0,0,False
+2026,deputado federal,BA,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,12231.0,0,0,0,False
+2026,deputado federal,BA,Fed. PSDB/CIDADANIA,CIDADANIA,5793.0,0,0,0,False
+2026,deputado federal,BA,Fed. PSDB/CIDADANIA,PSDB,487482.0,2,2,0,False
+2026,deputado federal,BA,Fed. PSOL/REDE,PSOL,76457.0,0,0,0,False
+2026,deputado federal,BA,Fed. PSOL/REDE,REDE,10714.0,0,0,0,False
+2026,deputado federal,BA,Fed. PT/PC do B/PV,PCDOB,362591.0,3,1,2,False
+2026,deputado federal,BA,Fed. PT/PC do B/PV,PT,1471523.0,7,8,-1,False
+2026,deputado federal,BA,Fed. PT/PC do B/PV,PV,126012.0,0,0,0,False
+2026,deputado federal,BA,Fed. PT/PC do B/PV,MDB,,1,2,-1,True
+2026,deputado federal,BA,Fed. UNIÃO/PP,PP,421442.0,2,2,0,False
+2026,deputado federal,BA,Fed. UNIÃO/PP,UNIÃO,1083182.0,6,5,1,False
+2026,deputado federal,BA,Fed. UNIÃO/PP,MDB,,1,2,-1,True
+2026,deputado federal,CE,Fed. PRD/SOLIDARIEDADE,PRD,292977.0,1,1,0,False
+2026,deputado federal,CE,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,131624.0,1,0,1,False
+2026,deputado federal,CE,Fed. PRD/SOLIDARIEDADE,PV,,0,1,-1,True
+2026,deputado federal,CE,Fed. PSDB/CIDADANIA,CIDADANIA,81912.0,0,0,0,False
+2026,deputado federal,CE,Fed. PSDB/CIDADANIA,PSDB,87509.0,0,0,0,False
+2026,deputado federal,CE,Fed. PSOL/REDE,PSOL,172748.0,0,0,0,False
+2026,deputado federal,CE,Fed. PSOL/REDE,REDE,18700.0,0,0,0,False
+2026,deputado federal,CE,Fed. PT/PC do B/PV,PCDOB,29977.0,0,0,0,False
+2026,deputado federal,CE,Fed. PT/PC do B/PV,PT,598429.0,3,3,0,False
+2026,deputado federal,CE,Fed. PT/PC do B/PV,PV,86860.0,0,0,0,False
+2026,deputado federal,CE,Fed. UNIÃO/PP,PP,236022.0,2,1,1,False
+2026,deputado federal,CE,Fed. UNIÃO/PP,UNIÃO,405479.0,1,2,-1,False
+2026,deputado federal,DF,Fed. PRD/SOLIDARIEDADE,PRD,6396.0,0,0,0,False
+2026,deputado federal,DF,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,3990.0,0,0,0,False
+2026,deputado federal,DF,Fed. PSDB/CIDADANIA,CIDADANIA,1602.0,0,0,0,False
+2026,deputado federal,DF,Fed. PSDB/CIDADANIA,PSDB,6963.0,0,0,0,False
+2026,deputado federal,DF,Fed. PSOL/REDE,PSOL,238157.0,1,1,0,False
+2026,deputado federal,DF,Fed. PSOL/REDE,REDE,1280.0,0,0,0,False
+2026,deputado federal,DF,Fed. PT/PC do B/PV,PCDOB,228.0,0,0,0,False
+2026,deputado federal,DF,Fed. PT/PC do B/PV,PT,192202.0,1,1,0,False
+2026,deputado federal,DF,Fed. PT/PC do B/PV,PV,44725.0,1,0,1,False
+2026,deputado federal,DF,Fed. PT/PC do B/PV,PL,,3,4,-1,True
+2026,deputado federal,DF,Fed. UNIÃO/PP,PP,39047.0,0,0,0,False
+2026,deputado federal,DF,Fed. UNIÃO/PP,UNIÃO,66732.0,0,0,0,False
+2026,deputado federal,ES,Fed. PRD/SOLIDARIEDADE,PRD,3126.0,0,0,0,False
+2026,deputado federal,ES,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,1371.0,0,0,0,False
+2026,deputado federal,ES,Fed. PSOL/REDE,PSOL,31286.0,0,0,0,False
+2026,deputado federal,ES,Fed. PSOL/REDE,REDE,553.0,0,0,0,False
+2026,deputado federal,ES,Fed. PT/PC do B/PV,PCDOB,16956.0,0,0,0,False
+2026,deputado federal,ES,Fed. PT/PC do B/PV,PT,298431.0,2,2,0,False
+2026,deputado federal,ES,Fed. PT/PC do B/PV,PV,552.0,0,0,0,False
+2026,deputado federal,ES,Fed. UNIÃO/PP,PP,182840.0,1,1,0,False
+2026,deputado federal,ES,Fed. UNIÃO/PP,UNIÃO,277535.0,2,1,1,False
+2026,deputado federal,ES,Fed. UNIÃO/PP,PSB,,1,2,-1,True
+2026,deputado federal,GO,Fed. PRD/SOLIDARIEDADE,PRD,147298.0,1,0,1,False
+2026,deputado federal,GO,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,111172.0,0,0,0,False
+2026,deputado federal,GO,Fed. PRD/SOLIDARIEDADE,PP,,1,2,-1,True
+2026,deputado federal,GO,Fed. PSDB/CIDADANIA,CIDADANIA,5297.0,0,0,0,False
+2026,deputado federal,GO,Fed. PSDB/CIDADANIA,PSDB,124889.0,0,0,0,False
+2026,deputado federal,GO,Fed. PSOL/REDE,PSOL,8345.0,0,0,0,False
+2026,deputado federal,GO,Fed. PSOL/REDE,REDE,1685.0,0,0,0,False
+2026,deputado federal,GO,Fed. PT/PC do B/PV,PCDOB,5596.0,0,0,0,False
+2026,deputado federal,GO,Fed. PT/PC do B/PV,PT,372815.0,2,2,0,False
+2026,deputado federal,GO,Fed. PT/PC do B/PV,PV,644.0,0,0,0,False
+2026,deputado federal,GO,Fed. UNIÃO/PP,PP,207958.0,1,1,0,False
+2026,deputado federal,GO,Fed. UNIÃO/PP,UNIÃO,483392.0,3,3,0,False
+2026,deputado federal,MA,Fed. PRD/SOLIDARIEDADE,PRD,172450.0,1,0,1,False
+2026,deputado federal,MA,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,79907.0,0,0,0,False
+2026,deputado federal,MA,Fed. PRD/SOLIDARIEDADE,MDB,,5,6,-1,True
+2026,deputado federal,MA,Fed. PSDB/CIDADANIA,CIDADANIA,14712.0,0,0,0,False
+2026,deputado federal,MA,Fed. PSDB/CIDADANIA,PSDB,172678.0,1,0,1,False
+2026,deputado federal,MA,Fed. PSDB/CIDADANIA,MDB,,5,6,-1,True
+2026,deputado federal,MA,Fed. PSOL/REDE,PSOL,8503.0,0,0,0,False
+2026,deputado federal,MA,Fed. PSOL/REDE,REDE,2168.0,0,0,0,False
+2026,deputado federal,MA,Fed. PT/PC do B/PV,PCDOB,57767.0,1,0,1,False
+2026,deputado federal,MA,Fed. PT/PC do B/PV,PT,244081.0,1,1,0,False
+2026,deputado federal,MA,Fed. PT/PC do B/PV,PV,1385.0,0,0,0,False
+2026,deputado federal,MA,Fed. PT/PC do B/PV,MDB,,5,6,-1,True
+2026,deputado federal,MA,Fed. UNIÃO/PP,PP,171711.0,1,0,1,False
+2026,deputado federal,MA,Fed. UNIÃO/PP,UNIÃO,343445.0,2,2,0,False
+2026,deputado federal,MA,Fed. UNIÃO/PP,MDB,,5,6,-1,True
+2026,deputado federal,MG,Fed. PRD/SOLIDARIEDADE,PRD,201519.0,1,1,0,False
+2026,deputado federal,MG,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,101703.0,0,0,0,False
+2026,deputado federal,MG,Fed. PSDB/CIDADANIA,CIDADANIA,7781.0,0,0,0,False
+2026,deputado federal,MG,Fed. PSDB/CIDADANIA,PSDB,211062.0,1,1,0,False
+2026,deputado federal,MG,Fed. PSOL/REDE,PSOL,311170.0,1,1,0,False
+2026,deputado federal,MG,Fed. PSOL/REDE,REDE,123531.0,1,0,1,False
+2026,deputado federal,MG,Fed. PSOL/REDE,PSD,,2,3,-1,True
+2026,deputado federal,MG,Fed. PT/PC do B/PV,PCDOB,25291.0,0,0,0,False
+2026,deputado federal,MG,Fed. PT/PC do B/PV,PT,2172877.0,12,12,0,False
+2026,deputado federal,MG,Fed. PT/PC do B/PV,PV,161149.0,1,0,1,False
+2026,deputado federal,MG,Fed. PT/PC do B/PV,PSD,,2,3,-1,True
+2026,deputado federal,MG,Fed. UNIÃO/PP,PP,479792.0,2,2,0,False
+2026,deputado federal,MG,Fed. UNIÃO/PP,UNIÃO,696244.0,4,3,1,False
+2026,deputado federal,MG,Fed. UNIÃO/PP,PSD,,2,3,-1,True
+2026,deputado federal,MS,Fed. PRD/SOLIDARIEDADE,PRD,3400.0,0,0,0,False
+2026,deputado federal,MS,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,191.0,0,0,0,False
+2026,deputado federal,MS,Fed. PSDB/CIDADANIA,CIDADANIA,506.0,0,0,0,False
+2026,deputado federal,MS,Fed. PSDB/CIDADANIA,PSDB,97997.0,0,0,0,False
+2026,deputado federal,MS,Fed. PSOL/REDE,PSOL,4039.0,0,0,0,False
+2026,deputado federal,MS,Fed. PSOL/REDE,REDE,980.0,0,0,0,False
+2026,deputado federal,MS,Fed. PT/PC do B/PV,PCDOB,2069.0,0,0,0,False
+2026,deputado federal,MS,Fed. PT/PC do B/PV,PT,214297.0,1,1,0,False
+2026,deputado federal,MS,Fed. PT/PC do B/PV,PV,33011.0,0,0,0,False
+2026,deputado federal,MS,Fed. UNIÃO/PP,PP,116331.0,1,0,1,False
+2026,deputado federal,MS,Fed. UNIÃO/PP,UNIÃO,179565.0,1,1,0,False
+2026,deputado federal,MS,Fed. UNIÃO/PP,PL,,3,4,-1,True
+2026,deputado federal,MT,Fed. PRD/SOLIDARIEDADE,PRD,8040.0,0,0,0,False
+2026,deputado federal,MT,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,2666.0,0,0,0,False
+2026,deputado federal,MT,Fed. PSDB/CIDADANIA,CIDADANIA,641.0,0,0,0,False
+2026,deputado federal,MT,Fed. PSDB/CIDADANIA,PSDB,17965.0,0,0,0,False
+2026,deputado federal,MT,Fed. PSOL/REDE,PSOL,2304.0,0,0,0,False
+2026,deputado federal,MT,Fed. PSOL/REDE,REDE,1231.0,0,0,0,False
+2026,deputado federal,MT,Fed. PT/PC do B/PV,PCDOB,13000.0,0,0,0,False
+2026,deputado federal,MT,Fed. PT/PC do B/PV,PT,190885.0,1,1,0,False
+2026,deputado federal,MT,Fed. PT/PC do B/PV,PV,31401.0,0,0,0,False
+2026,deputado federal,MT,Fed. UNIÃO/PP,PP,78691.0,0,0,0,False
+2026,deputado federal,MT,Fed. UNIÃO/PP,UNIÃO,285629.0,2,2,0,False
+2026,deputado federal,PA,Fed. PRD/SOLIDARIEDADE,PRD,2983.0,0,0,0,False
+2026,deputado federal,PA,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,30599.0,0,0,0,False
+2026,deputado federal,PA,Fed. PSDB/CIDADANIA,CIDADANIA,1895.0,0,0,0,False
+2026,deputado federal,PA,Fed. PSDB/CIDADANIA,PSDB,1832.0,0,0,0,False
+2026,deputado federal,PA,Fed. PSOL/REDE,PSOL,93944.0,0,0,0,False
+2026,deputado federal,PA,Fed. PSOL/REDE,REDE,1812.0,0,0,0,False
+2026,deputado federal,PA,Fed. PT/PC do B/PV,PCDOB,15456.0,0,0,0,False
+2026,deputado federal,PA,Fed. PT/PC do B/PV,PT,470696.0,2,2,0,False
+2026,deputado federal,PA,Fed. PT/PC do B/PV,PV,2757.0,0,0,0,False
+2026,deputado federal,PA,Fed. UNIÃO/PP,PP,171295.0,1,0,1,False
+2026,deputado federal,PA,Fed. UNIÃO/PP,UNIÃO,229447.0,0,1,-1,False
+2026,deputado federal,PB,Fed. PRD/SOLIDARIEDADE,PRD,2350.0,0,0,0,False
+2026,deputado federal,PB,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,3489.0,0,0,0,False
+2026,deputado federal,PB,Fed. PSOL/REDE,PSOL,7415.0,0,0,0,False
+2026,deputado federal,PB,Fed. PSOL/REDE,REDE,4246.0,0,0,0,False
+2026,deputado federal,PB,Fed. PT/PC do B/PV,PCDOB,102360.0,1,0,1,False
+2026,deputado federal,PB,Fed. PT/PC do B/PV,PT,274928.0,1,2,-1,False
+2026,deputado federal,PB,Fed. PT/PC do B/PV,PV,1744.0,0,0,0,False
+2026,deputado federal,PB,Fed. UNIÃO/PP,PP,342897.0,2,2,0,False
+2026,deputado federal,PB,Fed. UNIÃO/PP,UNIÃO,78418.0,1,0,1,False
+2026,deputado federal,PB,Fed. UNIÃO/PP,REPUBLICANOS,,3,4,-1,True
+2026,deputado federal,PE,Fed. PRD/SOLIDARIEDADE,PRD,18654.0,0,0,0,False
+2026,deputado federal,PE,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,18753.0,0,0,0,False
+2026,deputado federal,PE,Fed. PSDB/CIDADANIA,CIDADANIA,1805.0,0,0,0,False
+2026,deputado federal,PE,Fed. PSDB/CIDADANIA,PSDB,64570.0,0,0,0,False
+2026,deputado federal,PE,Fed. PSOL/REDE,PSOL,261095.0,1,1,0,False
+2026,deputado federal,PE,Fed. PSOL/REDE,REDE,3644.0,0,0,0,False
+2026,deputado federal,PE,Fed. PT/PC do B/PV,PCDOB,98568.0,0,0,0,False
+2026,deputado federal,PE,Fed. PT/PC do B/PV,PT,512371.0,3,2,1,False
+2026,deputado federal,PE,Fed. PT/PC do B/PV,PV,106114.0,1,0,1,False
+2026,deputado federal,PE,Fed. PT/PC do B/PV,PSB,,4,5,-1,True
+2026,deputado federal,PE,Fed. PT/PC do B/PV,UNIÃO,,2,3,-1,True
+2026,deputado federal,PE,Fed. UNIÃO/PP,PP,426506.0,2,2,0,False
+2026,deputado federal,PE,Fed. UNIÃO/PP,UNIÃO,438967.0,2,2,0,False
+2026,deputado federal,PI,Fed. PSDB/CIDADANIA,CIDADANIA,1196.0,0,0,0,False
+2026,deputado federal,PI,Fed. PSDB/CIDADANIA,PSDB,2894.0,0,0,0,False
+2026,deputado federal,PI,Fed. PSOL/REDE,PSOL,6798.0,0,0,0,False
+2026,deputado federal,PI,Fed. PSOL/REDE,REDE,733.0,0,0,0,False
+2026,deputado federal,PI,Fed. PT/PC do B/PV,PCDOB,1232.0,0,0,0,False
+2026,deputado federal,PI,Fed. PT/PC do B/PV,PT,590940.0,3,3,0,False
+2026,deputado federal,PI,Fed. PT/PC do B/PV,PV,195277.0,1,1,0,False
+2026,deputado federal,PI,Fed. UNIÃO/PP,PP,254545.0,1,1,0,False
+2026,deputado federal,PI,Fed. UNIÃO/PP,UNIÃO,59415.0,0,0,0,False
+2026,deputado federal,PR,Fed. PRD/SOLIDARIEDADE,PRD,4886.0,0,0,0,False
+2026,deputado federal,PR,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,13193.0,0,0,0,False
+2026,deputado federal,PR,Fed. PSDB/CIDADANIA,CIDADANIA,15298.0,0,0,0,False
+2026,deputado federal,PR,Fed. PSDB/CIDADANIA,PSDB,118387.0,0,0,0,False
+2026,deputado federal,PR,Fed. PSOL/REDE,PSOL,13089.0,0,0,0,False
+2026,deputado federal,PR,Fed. PSOL/REDE,REDE,2328.0,0,0,0,False
+2026,deputado federal,PR,Fed. PT/PC do B/PV,PCDOB,3790.0,0,0,0,False
+2026,deputado federal,PR,Fed. PT/PC do B/PV,PT,934562.0,5,5,0,False
+2026,deputado federal,PR,Fed. PT/PC do B/PV,PV,127030.0,1,0,1,False
+2026,deputado federal,PR,Fed. PT/PC do B/PV,PL,,5,6,-1,True
+2026,deputado federal,PR,Fed. UNIÃO/PP,PP,600986.0,4,3,1,False
+2026,deputado federal,PR,Fed. UNIÃO/PP,UNIÃO,473348.0,2,3,-1,False
+2026,deputado federal,RJ,Fed. PRD/SOLIDARIEDADE,PRD,66502.0,0,0,0,False
+2026,deputado federal,RJ,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,226778.0,1,1,0,False
+2026,deputado federal,RJ,Fed. PSDB/CIDADANIA,CIDADANIA,11347.0,0,0,0,False
+2026,deputado federal,RJ,Fed. PSDB/CIDADANIA,PSDB,722006.0,4,4,0,False
+2026,deputado federal,RJ,Fed. PSOL/REDE,PSOL,637110.0,4,4,0,False
+2026,deputado federal,RJ,Fed. PSOL/REDE,REDE,19208.0,0,0,0,False
+2026,deputado federal,RJ,Fed. PT/PC do B/PV,PCDOB,195821.0,2,1,1,False
+2026,deputado federal,RJ,Fed. PT/PC do B/PV,PT,1068309.0,6,6,0,False
+2026,deputado federal,RJ,Fed. PT/PC do B/PV,PV,96912.0,0,0,0,False
+2026,deputado federal,RJ,Fed. PT/PC do B/PV,MDB,,1,2,-1,True
+2026,deputado federal,RJ,Fed. UNIÃO/PP,PP,687160.0,5,4,1,False
+2026,deputado federal,RJ,Fed. UNIÃO/PP,UNIÃO,380456.0,1,2,-1,False
+2026,deputado federal,RN,Fed. PRD/SOLIDARIEDADE,PRD,2802.0,0,0,0,False
+2026,deputado federal,RN,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,5480.0,0,0,0,False
+2026,deputado federal,RN,Fed. PSDB/CIDADANIA,CIDADANIA,1810.0,0,0,0,False
+2026,deputado federal,RN,Fed. PSDB/CIDADANIA,PSDB,9945.0,0,0,0,False
+2026,deputado federal,RN,Fed. PSOL/REDE,PSOL,1258.0,0,0,0,False
+2026,deputado federal,RN,Fed. PSOL/REDE,REDE,387.0,0,0,0,False
+2026,deputado federal,RN,Fed. PT/PC do B/PV,PCDOB,8558.0,0,0,0,False
+2026,deputado federal,RN,Fed. PT/PC do B/PV,PT,398734.0,1,2,-1,False
+2026,deputado federal,RN,Fed. PT/PC do B/PV,PV,228498.0,2,1,1,False
+2026,deputado federal,RN,Fed. UNIÃO/PP,PP,263430.0,1,1,0,False
+2026,deputado federal,RN,Fed. UNIÃO/PP,UNIÃO,224457.0,1,1,0,False
+2026,deputado federal,RO,Fed. PRD/SOLIDARIEDADE,PRD,31283.0,0,0,0,False
+2026,deputado federal,RO,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,8720.0,0,0,0,False
+2026,deputado federal,RO,Fed. PSOL/REDE,PSOL,1677.0,0,0,0,False
+2026,deputado federal,RO,Fed. PSOL/REDE,REDE,92.0,0,0,0,False
+2026,deputado federal,RO,Fed. PT/PC do B/PV,PCDOB,56.0,0,0,0,False
+2026,deputado federal,RO,Fed. PT/PC do B/PV,PT,73329.0,0,0,0,False
+2026,deputado federal,RO,Fed. PT/PC do B/PV,PV,815.0,0,0,0,False
+2026,deputado federal,RO,Fed. UNIÃO/PP,PP,24469.0,0,0,0,False
+2026,deputado federal,RO,Fed. UNIÃO/PP,UNIÃO,120734.0,2,2,0,False
+2026,deputado federal,RR,Fed. PRD/SOLIDARIEDADE,PRD,138.0,0,0,0,False
+2026,deputado federal,RR,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,348.0,0,0,0,False
+2026,deputado federal,RR,Fed. PSDB/CIDADANIA,CIDADANIA,2185.0,0,0,0,False
+2026,deputado federal,RR,Fed. PSDB/CIDADANIA,PSDB,20707.0,0,0,0,False
+2026,deputado federal,RR,Fed. PSOL/REDE,PSOL,339.0,0,0,0,False
+2026,deputado federal,RR,Fed. PSOL/REDE,REDE,29.0,0,0,0,False
+2026,deputado federal,RR,Fed. PT/PC do B/PV,PCDOB,11.0,0,0,0,False
+2026,deputado federal,RR,Fed. PT/PC do B/PV,PT,16339.0,0,0,0,False
+2026,deputado federal,RR,Fed. PT/PC do B/PV,PV,270.0,0,0,0,False
+2026,deputado federal,RR,Fed. UNIÃO/PP,PP,660.0,0,0,0,False
+2026,deputado federal,RR,Fed. UNIÃO/PP,UNIÃO,69943.0,2,2,0,False
+2026,deputado federal,RS,Fed. PRD/SOLIDARIEDADE,PRD,2390.0,0,0,0,False
+2026,deputado federal,RS,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,3933.0,0,0,0,False
+2026,deputado federal,RS,Fed. PSDB/CIDADANIA,CIDADANIA,1604.0,0,0,0,False
+2026,deputado federal,RS,Fed. PSDB/CIDADANIA,PSDB,136556.0,0,0,0,False
+2026,deputado federal,RS,Fed. PSOL/REDE,PSOL,363031.0,1,1,0,False
+2026,deputado federal,RS,Fed. PSOL/REDE,REDE,5780.0,0,0,0,False
+2026,deputado federal,RS,Fed. PT/PC do B/PV,PCDOB,115943.0,1,0,1,False
+2026,deputado federal,RS,Fed. PT/PC do B/PV,PT,931259.0,5,6,-1,False
+2026,deputado federal,RS,Fed. PT/PC do B/PV,PV,16234.0,0,0,0,False
+2026,deputado federal,RS,Fed. UNIÃO/PP,PP,710116.0,4,4,0,False
+2026,deputado federal,RS,Fed. UNIÃO/PP,UNIÃO,64833.0,1,0,1,False
+2026,deputado federal,RS,Fed. UNIÃO/PP,PT,,5,6,-1,True
+2026,deputado federal,SC,Fed. PRD/SOLIDARIEDADE,PRD,11526.0,0,0,0,False
+2026,deputado federal,SC,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,808.0,0,0,0,False
+2026,deputado federal,SC,Fed. PSDB/CIDADANIA,CIDADANIA,3972.0,0,0,0,False
+2026,deputado federal,SC,Fed. PSDB/CIDADANIA,PSDB,2138.0,0,0,0,False
+2026,deputado federal,SC,Fed. PSOL/REDE,PSOL,41420.0,0,0,0,False
+2026,deputado federal,SC,Fed. PSOL/REDE,REDE,745.0,0,0,0,False
+2026,deputado federal,SC,Fed. PT/PC do B/PV,PCDOB,115825.0,1,0,1,False
+2026,deputado federal,SC,Fed. PT/PC do B/PV,PT,574630.0,2,2,0,False
+2026,deputado federal,SC,Fed. PT/PC do B/PV,PV,1503.0,0,0,0,False
+2026,deputado federal,SC,Fed. PT/PC do B/PV,PL,,7,8,-1,True
+2026,deputado federal,SC,Fed. UNIÃO/PP,PP,191874.0,1,0,1,False
+2026,deputado federal,SC,Fed. UNIÃO/PP,UNIÃO,134770.0,0,0,0,False
+2026,deputado federal,SC,Fed. UNIÃO/PP,PL,,7,8,-1,True
+2026,deputado federal,SE,Fed. PSDB/CIDADANIA,CIDADANIA,2058.0,0,0,0,False
+2026,deputado federal,SE,Fed. PSDB/CIDADANIA,PSDB,1527.0,0,0,0,False
+2026,deputado federal,SE,Fed. PSOL/REDE,PSOL,0.0,0,0,0,False
+2026,deputado federal,SE,Fed. PSOL/REDE,REDE,0.0,0,0,0,False
+2026,deputado federal,SE,Fed. PT/PC do B/PV,PCDOB,1097.0,0,0,0,False
+2026,deputado federal,SE,Fed. PT/PC do B/PV,PT,168203.0,1,1,0,False
+2026,deputado federal,SE,Fed. PT/PC do B/PV,PV,3871.0,0,0,0,False
+2026,deputado federal,SE,Fed. UNIÃO/PP,PP,114770.0,1,0,1,False
+2026,deputado federal,SE,Fed. UNIÃO/PP,UNIÃO,200322.0,2,2,0,False
+2026,deputado federal,SE,Fed. UNIÃO/PP,REPUBLICANOS,,1,2,-1,True
+2026,deputado federal,SP,Fed. PRD/SOLIDARIEDADE,PRD,201180.0,1,0,1,False
+2026,deputado federal,SP,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,159357.0,0,0,0,False
+2026,deputado federal,SP,Fed. PRD/SOLIDARIEDADE,MDB,,4,5,-1,True
+2026,deputado federal,SP,Fed. PSDB/CIDADANIA,CIDADANIA,128539.0,0,0,0,False
+2026,deputado federal,SP,Fed. PSDB/CIDADANIA,PSDB,250766.0,1,0,1,False
+2026,deputado federal,SP,Fed. PSDB/CIDADANIA,MDB,,4,5,-1,True
+2026,deputado federal,SP,Fed. PSOL/REDE,PSOL,3002094.0,6,6,0,False
+2026,deputado federal,SP,Fed. PSOL/REDE,REDE,58657.0,0,0,0,False
+2026,deputado federal,SP,Fed. PT/PC do B/PV,PCDOB,84860.0,0,0,0,False
+2026,deputado federal,SP,Fed. PT/PC do B/PV,PT,2732851.0,11,11,0,False
+2026,deputado federal,SP,Fed. PT/PC do B/PV,PV,25831.0,0,0,0,False
+2026,deputado federal,SP,Fed. UNIÃO/PP,PP,1082494.0,3,3,0,False
+2026,deputado federal,SP,Fed. UNIÃO/PP,UNIÃO,727517.0,2,2,0,False
+2026,deputado federal,TO,Fed. PRD/SOLIDARIEDADE,PRD,1185.0,0,0,0,False
+2026,deputado federal,TO,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,618.0,0,0,0,False
+2026,deputado federal,TO,Fed. PSDB/CIDADANIA,CIDADANIA,182.0,0,0,0,False
+2026,deputado federal,TO,Fed. PSDB/CIDADANIA,PSDB,93478.0,1,1,0,False
+2026,deputado federal,TO,Fed. PSOL/REDE,PSOL,1171.0,0,0,0,False
+2026,deputado federal,TO,Fed. PSOL/REDE,REDE,574.0,0,0,0,False
+2026,deputado federal,TO,Fed. PT/PC do B/PV,PCDOB,378.0,0,0,0,False
+2026,deputado federal,TO,Fed. PT/PC do B/PV,PT,54508.0,0,0,0,False
+2026,deputado federal,TO,Fed. PT/PC do B/PV,PV,2753.0,0,0,0,False
+2026,deputado federal,TO,Fed. UNIÃO/PP,PP,107824.0,1,1,0,False
+2026,deputado federal,TO,Fed. UNIÃO/PP,UNIÃO,153702.0,1,1,0,False
+2026,deputado estadual,AC,Fed. PRD/SOLIDARIEDADE,PRD,838.0,0,0,0,False
+2026,deputado estadual,AC,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,1642.0,0,0,0,False
+2026,deputado estadual,AC,Fed. PSDB/CIDADANIA,CIDADANIA,764.0,0,0,0,False
+2026,deputado estadual,AC,Fed. PSDB/CIDADANIA,PSDB,16629.0,1,1,0,False
+2026,deputado estadual,AC,Fed. PSOL/REDE,PSOL,196.0,0,0,0,False
+2026,deputado estadual,AC,Fed. PSOL/REDE,REDE,62.0,0,0,0,False
+2026,deputado estadual,AC,Fed. PT/PC do B/PV,PCDOB,9945.0,1,0,1,False
+2026,deputado estadual,AC,Fed. PT/PC do B/PV,PT,21681.0,0,1,-1,False
+2026,deputado estadual,AC,Fed. PT/PC do B/PV,PV,655.0,0,0,0,False
+2026,deputado estadual,AC,Fed. UNIÃO/PP,PP,84604.0,5,5,0,False
+2026,deputado estadual,AC,Fed. UNIÃO/PP,UNIÃO,77972.0,4,4,0,False
+2026,deputado estadual,AL,Fed. PRD/SOLIDARIEDADE,PRD,1000.0,0,0,0,False
+2026,deputado estadual,AL,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,1422.0,0,0,0,False
+2026,deputado estadual,AL,Fed. PSDB/CIDADANIA,CIDADANIA,321.0,0,0,0,False
+2026,deputado estadual,AL,Fed. PSDB/CIDADANIA,PSDB,180554.0,2,2,0,False
+2026,deputado estadual,AL,Fed. PT/PC do B/PV,PCDOB,1191.0,0,0,0,False
+2026,deputado estadual,AL,Fed. PT/PC do B/PV,PT,162226.0,3,2,1,False
+2026,deputado estadual,AL,Fed. PT/PC do B/PV,PV,41583.0,0,0,0,False
+2026,deputado estadual,AL,Fed. PT/PC do B/PV,PSDB,,2,3,-1,True
+2026,deputado estadual,AL,Fed. UNIÃO/PP,PP,229769.0,3,3,0,False
+2026,deputado estadual,AL,Fed. UNIÃO/PP,UNIÃO,93574.0,2,1,1,False
+2026,deputado estadual,AL,Fed. UNIÃO/PP,PSDB,,2,3,-1,True
+2026,deputado estadual,AM,Fed. PSOL/REDE,PSOL,3389.0,0,0,0,False
+2026,deputado estadual,AM,Fed. PSOL/REDE,REDE,2047.0,0,0,0,False
+2026,deputado estadual,AM,Fed. PT/PC do B/PV,PCDOB,2747.0,0,0,0,False
+2026,deputado estadual,AM,Fed. PT/PC do B/PV,PT,151821.0,2,2,0,False
+2026,deputado estadual,AM,Fed. PT/PC do B/PV,PV,163.0,0,0,0,False
+2026,deputado estadual,AM,Fed. UNIÃO/PP,PP,20178.0,0,0,0,False
+2026,deputado estadual,AM,Fed. UNIÃO/PP,UNIÃO,392078.0,5,5,0,False
+2026,deputado estadual,AP,Fed. PSOL/REDE,PSOL,90.0,0,0,0,False
+2026,deputado estadual,AP,Fed. PSOL/REDE,REDE,38407.0,2,2,0,False
+2026,deputado estadual,AP,Fed. PT/PC do B/PV,PCDOB,765.0,0,0,0,False
+2026,deputado estadual,AP,Fed. PT/PC do B/PV,PT,17413.0,1,1,0,False
+2026,deputado estadual,AP,Fed. PT/PC do B/PV,PV,5763.0,0,0,0,False
+2026,deputado estadual,AP,Fed. UNIÃO/PP,PP,8227.0,1,0,1,False
+2026,deputado estadual,AP,Fed. UNIÃO/PP,UNIÃO,91132.0,5,6,-1,False
+2026,deputado estadual,BA,Fed. PSDB/CIDADANIA,CIDADANIA,17516.0,0,0,0,False
+2026,deputado estadual,BA,Fed. PSDB/CIDADANIA,PSDB,278908.0,2,2,0,False
+2026,deputado estadual,BA,Fed. PSOL/REDE,PSOL,194337.0,1,1,0,False
+2026,deputado estadual,BA,Fed. PSOL/REDE,REDE,12721.0,0,0,0,False
+2026,deputado estadual,BA,Fed. PT/PC do B/PV,PCDOB,280327.0,3,2,1,False
+2026,deputado estadual,BA,Fed. PT/PC do B/PV,PT,1748098.0,14,15,-1,False
+2026,deputado estadual,BA,Fed. PT/PC do B/PV,PV,298674.0,3,2,1,False
+2026,deputado estadual,BA,Fed. PT/PC do B/PV,AVANTE,,5,6,-1,True
+2026,deputado estadual,BA,Fed. UNIÃO/PP,PP,322729.0,3,2,1,False
+2026,deputado estadual,BA,Fed. UNIÃO/PP,UNIÃO,722445.0,5,6,-1,False
+2026,deputado estadual,CE,Fed. PRD/SOLIDARIEDADE,PRD,51716.0,0,0,0,False
+2026,deputado estadual,CE,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,62627.0,1,0,1,False
+2026,deputado estadual,CE,Fed. PRD/SOLIDARIEDADE,PSDB,,3,4,-1,True
+2026,deputado estadual,CE,Fed. PSDB/CIDADANIA,CIDADANIA,2287.0,0,0,0,False
+2026,deputado estadual,CE,Fed. PSDB/CIDADANIA,PSDB,412249.0,3,3,0,False
+2026,deputado estadual,CE,Fed. PSOL/REDE,PSOL,225675.0,2,2,0,False
+2026,deputado estadual,CE,Fed. PSOL/REDE,REDE,51357.0,0,0,0,False
+2026,deputado estadual,CE,Fed. PT/PC do B/PV,PCDOB,8129.0,0,0,0,False
+2026,deputado estadual,CE,Fed. PT/PC do B/PV,PT,1224601.0,11,11,0,False
+2026,deputado estadual,CE,Fed. PT/PC do B/PV,PV,79918.0,1,0,1,False
+2026,deputado estadual,CE,Fed. PT/PC do B/PV,PSDB,,3,4,-1,True
+2026,deputado estadual,CE,Fed. UNIÃO/PP,PP,129389.0,1,1,0,False
+2026,deputado estadual,CE,Fed. UNIÃO/PP,UNIÃO,197824.0,2,1,1,False
+2026,deputado estadual,CE,Fed. UNIÃO/PP,PSDB,,3,4,-1,True
+2026,deputado estadual,ES,Fed. PRD/SOLIDARIEDADE,PRD,1752.0,0,0,0,False
+2026,deputado estadual,ES,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,3216.0,0,0,0,False
+2026,deputado estadual,ES,Fed. PSDB/CIDADANIA,CIDADANIA,657.0,0,0,0,False
+2026,deputado estadual,ES,Fed. PSDB/CIDADANIA,PSDB,55850.0,0,0,0,False
+2026,deputado estadual,ES,Fed. PSOL/REDE,PSOL,69949.0,1,1,0,False
+2026,deputado estadual,ES,Fed. PSOL/REDE,REDE,1529.0,0,0,0,False
+2026,deputado estadual,ES,Fed. PT/PC do B/PV,PCDOB,4323.0,0,0,0,False
+2026,deputado estadual,ES,Fed. PT/PC do B/PV,PT,195258.0,3,3,0,False
+2026,deputado estadual,ES,Fed. PT/PC do B/PV,PV,606.0,0,0,0,False
+2026,deputado estadual,ES,Fed. UNIÃO/PP,PP,207510.0,4,3,1,False
+2026,deputado estadual,ES,Fed. UNIÃO/PP,UNIÃO,82906.0,1,1,0,False
+2026,deputado estadual,ES,Fed. UNIÃO/PP,PL,,6,7,-1,True
+2026,deputado estadual,GO,Fed. PRD/SOLIDARIEDADE,PRD,187872.0,3,2,1,False
+2026,deputado estadual,GO,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,142003.0,1,1,0,False
+2026,deputado estadual,GO,Fed. PRD/SOLIDARIEDADE,PSDB,,2,3,-1,True
+2026,deputado estadual,GO,Fed. PSDB/CIDADANIA,CIDADANIA,58371.0,1,0,1,False
+2026,deputado estadual,GO,Fed. PSDB/CIDADANIA,PSDB,233239.0,2,3,-1,False
+2026,deputado estadual,GO,Fed. PSOL/REDE,PSOL,8681.0,0,0,0,False
+2026,deputado estadual,GO,Fed. PSOL/REDE,REDE,2613.0,0,0,0,False
+2026,deputado estadual,GO,Fed. PT/PC do B/PV,PCDOB,2489.0,0,0,0,False
+2026,deputado estadual,GO,Fed. PT/PC do B/PV,PT,331264.0,4,4,0,False
+2026,deputado estadual,GO,Fed. PT/PC do B/PV,PV,994.0,0,0,0,False
+2026,deputado estadual,GO,Fed. UNIÃO/PP,PP,70276.0,1,0,1,False
+2026,deputado estadual,GO,Fed. UNIÃO/PP,UNIÃO,333698.0,4,4,0,False
+2026,deputado estadual,GO,Fed. UNIÃO/PP,PSDB,,2,3,-1,True
+2026,deputado estadual,MA,Fed. PRD/SOLIDARIEDADE,PRD,106943.0,1,1,0,False
+2026,deputado estadual,MA,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,8760.0,0,0,0,False
+2026,deputado estadual,MA,Fed. PSOL/REDE,PSOL,9498.0,0,0,0,False
+2026,deputado estadual,MA,Fed. PSOL/REDE,REDE,1523.0,0,0,0,False
+2026,deputado estadual,MA,Fed. PT/PC do B/PV,PCDOB,22092.0,0,0,0,False
+2026,deputado estadual,MA,Fed. PT/PC do B/PV,PT,219803.0,2,2,0,False
+2026,deputado estadual,MA,Fed. PT/PC do B/PV,PV,314.0,0,0,0,False
+2026,deputado estadual,MA,Fed. UNIÃO/PP,PP,38645.0,0,0,0,False
+2026,deputado estadual,MA,Fed. UNIÃO/PP,UNIÃO,168630.0,2,2,0,False
+2026,deputado estadual,MG,Fed. PRD/SOLIDARIEDADE,PRD,372942.0,3,2,1,False
+2026,deputado estadual,MG,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,53915.0,0,0,0,False
+2026,deputado estadual,MG,Fed. PRD/SOLIDARIEDADE,PCDOB,,0,1,-1,True
+2026,deputado estadual,MG,Fed. PSDB/CIDADANIA,CIDADANIA,5718.0,0,0,0,False
+2026,deputado estadual,MG,Fed. PSDB/CIDADANIA,PSDB,417854.0,3,3,0,False
+2026,deputado estadual,MG,Fed. PSOL/REDE,PSOL,195583.0,1,1,0,False
+2026,deputado estadual,MG,Fed. PSOL/REDE,REDE,159534.0,1,1,0,False
+2026,deputado estadual,MG,Fed. PT/PC do B/PV,PCDOB,76544.0,0,0,0,False
+2026,deputado estadual,MG,Fed. PT/PC do B/PV,PT,2032979.0,15,15,0,False
+2026,deputado estadual,MG,Fed. PT/PC do B/PV,PV,302622.0,2,2,0,False
+2026,deputado estadual,MG,Fed. UNIÃO/PP,PP,610658.0,5,4,1,False
+2026,deputado estadual,MG,Fed. UNIÃO/PP,UNIÃO,538271.0,3,4,-1,False
+2026,deputado estadual,MS,Fed. PRD/SOLIDARIEDADE,PRD,3429.0,0,0,0,False
+2026,deputado estadual,MS,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,367.0,0,0,0,False
+2026,deputado estadual,MS,Fed. PSDB/CIDADANIA,CIDADANIA,2934.0,0,0,0,False
+2026,deputado estadual,MS,Fed. PSDB/CIDADANIA,PSDB,191917.0,3,3,0,False
+2026,deputado estadual,MS,Fed. PSOL/REDE,PSOL,2092.0,0,0,0,False
+2026,deputado estadual,MS,Fed. PSOL/REDE,REDE,416.0,0,0,0,False
+2026,deputado estadual,MS,Fed. PT/PC do B/PV,PCDOB,138.0,0,0,0,False
+2026,deputado estadual,MS,Fed. PT/PC do B/PV,PT,208685.0,4,4,0,False
+2026,deputado estadual,MS,Fed. PT/PC do B/PV,PV,1584.0,0,0,0,False
+2026,deputado estadual,MS,Fed. UNIÃO/PP,PP,166995.0,3,3,0,False
+2026,deputado estadual,MS,Fed. UNIÃO/PP,UNIÃO,66713.0,1,1,0,False
+2026,deputado estadual,MT,Fed. PSDB/CIDADANIA,CIDADANIA,989.0,0,0,0,False
+2026,deputado estadual,MT,Fed. PSDB/CIDADANIA,PSDB,144560.0,2,2,0,False
+2026,deputado estadual,MT,Fed. PSOL/REDE,PSOL,1518.0,0,0,0,False
+2026,deputado estadual,MT,Fed. PSOL/REDE,REDE,920.0,0,0,0,False
+2026,deputado estadual,MT,Fed. PT/PC do B/PV,PCDOB,2567.0,0,0,0,False
+2026,deputado estadual,MT,Fed. PT/PC do B/PV,PT,173737.0,2,2,0,False
+2026,deputado estadual,MT,Fed. PT/PC do B/PV,PV,17669.0,0,0,0,False
+2026,deputado estadual,MT,Fed. UNIÃO/PP,PP,3041.0,0,0,0,False
+2026,deputado estadual,MT,Fed. UNIÃO/PP,UNIÃO,142050.0,2,2,0,False
+2026,deputado estadual,PA,Fed. PRD/SOLIDARIEDADE,PRD,2135.0,0,0,0,False
+2026,deputado estadual,PA,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,6864.0,0,0,0,False
+2026,deputado estadual,PA,Fed. PSDB/CIDADANIA,CIDADANIA,1439.0,0,0,0,False
+2026,deputado estadual,PA,Fed. PSDB/CIDADANIA,PSDB,5531.0,0,0,0,False
+2026,deputado estadual,PA,Fed. PSOL/REDE,PSOL,109581.0,1,1,0,False
+2026,deputado estadual,PA,Fed. PSOL/REDE,REDE,3640.0,0,0,0,False
+2026,deputado estadual,PA,Fed. PT/PC do B/PV,PCDOB,13884.0,0,0,0,False
+2026,deputado estadual,PA,Fed. PT/PC do B/PV,PT,403508.0,3,3,0,False
+2026,deputado estadual,PA,Fed. PT/PC do B/PV,PV,79451.0,1,0,1,False
+2026,deputado estadual,PA,Fed. PT/PC do B/PV,AVANTE,,2,3,-1,True
+2026,deputado estadual,PA,Fed. UNIÃO/PP,PP,140671.0,2,1,1,False
+2026,deputado estadual,PA,Fed. UNIÃO/PP,UNIÃO,413460.0,3,3,0,False
+2026,deputado estadual,PA,Fed. UNIÃO/PP,AVANTE,,2,3,-1,True
+2026,deputado estadual,PB,Fed. PSOL/REDE,PSOL,1043.0,0,0,0,False
+2026,deputado estadual,PB,Fed. PSOL/REDE,REDE,6863.0,0,0,0,False
+2026,deputado estadual,PB,Fed. PT/PC do B/PV,PCDOB,90269.0,1,1,0,False
+2026,deputado estadual,PB,Fed. PT/PC do B/PV,PT,103762.0,2,1,1,False
+2026,deputado estadual,PB,Fed. PT/PC do B/PV,PV,112773.0,2,1,1,False
+2026,deputado estadual,PB,Fed. PT/PC do B/PV,MDB,,4,5,-1,True
+2026,deputado estadual,PB,Fed. PT/PC do B/PV,PP,,8,9,-1,True
+2026,deputado estadual,PB,Fed. UNIÃO/PP,PP,522246.0,8,8,0,False
+2026,deputado estadual,PB,Fed. UNIÃO/PP,UNIÃO,113587.0,2,1,1,False
+2026,deputado estadual,PB,Fed. UNIÃO/PP,MDB,,4,5,-1,True
+2026,deputado estadual,PE,Fed. PRD/SOLIDARIEDADE,PRD,2638.0,0,0,0,False
+2026,deputado estadual,PE,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,3601.0,0,0,0,False
+2026,deputado estadual,PE,Fed. PSOL/REDE,PSOL,68748.0,0,0,0,False
+2026,deputado estadual,PE,Fed. PSOL/REDE,REDE,5705.0,0,0,0,False
+2026,deputado estadual,PE,Fed. PT/PC do B/PV,PCDOB,77216.0,1,0,1,False
+2026,deputado estadual,PE,Fed. PT/PC do B/PV,PT,581264.0,5,6,-1,False
+2026,deputado estadual,PE,Fed. PT/PC do B/PV,PV,255139.0,3,2,1,False
+2026,deputado estadual,PE,Fed. PT/PC do B/PV,PL,,3,4,-1,True
+2026,deputado estadual,PE,Fed. UNIÃO/PP,PP,665923.0,7,6,1,False
+2026,deputado estadual,PE,Fed. UNIÃO/PP,UNIÃO,113854.0,1,1,0,False
+2026,deputado estadual,PE,Fed. UNIÃO/PP,PL,,3,4,-1,True
+2026,deputado estadual,PI,Fed. PSDB/CIDADANIA,CIDADANIA,443.0,0,0,0,False
+2026,deputado estadual,PI,Fed. PSDB/CIDADANIA,PSDB,6213.0,0,0,0,False
+2026,deputado estadual,PI,Fed. PSOL/REDE,PSOL,2354.0,0,0,0,False
+2026,deputado estadual,PI,Fed. PSOL/REDE,REDE,410.0,0,0,0,False
+2026,deputado estadual,PI,Fed. PT/PC do B/PV,PCDOB,45449.0,0,0,0,False
+2026,deputado estadual,PI,Fed. PT/PC do B/PV,PT,808113.0,13,12,1,False
+2026,deputado estadual,PI,Fed. PT/PC do B/PV,PV,83925.0,1,1,0,False
+2026,deputado estadual,PI,Fed. PT/PC do B/PV,MDB,,8,9,-1,True
+2026,deputado estadual,PI,Fed. UNIÃO/PP,PP,200502.0,3,3,0,False
+2026,deputado estadual,PI,Fed. UNIÃO/PP,UNIÃO,3326.0,0,0,0,False
+2026,deputado estadual,PR,Fed. PRD/SOLIDARIEDADE,PRD,3926.0,0,0,0,False
+2026,deputado estadual,PR,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,13403.0,0,0,0,False
+2026,deputado estadual,PR,Fed. PSDB/CIDADANIA,CIDADANIA,4407.0,0,0,0,False
+2026,deputado estadual,PR,Fed. PSDB/CIDADANIA,PSDB,44466.0,0,0,0,False
+2026,deputado estadual,PR,Fed. PSOL/REDE,PSOL,75111.0,0,0,0,False
+2026,deputado estadual,PR,Fed. PSOL/REDE,REDE,9535.0,0,0,0,False
+2026,deputado estadual,PR,Fed. PT/PC do B/PV,PCDOB,11022.0,0,0,0,False
+2026,deputado estadual,PR,Fed. PT/PC do B/PV,PT,785357.0,8,8,0,False
+2026,deputado estadual,PR,Fed. PT/PC do B/PV,PV,38359.0,0,0,0,False
+2026,deputado estadual,PR,Fed. UNIÃO/PP,PP,516420.0,6,5,1,False
+2026,deputado estadual,PR,Fed. UNIÃO/PP,UNIÃO,105512.0,0,1,-1,False
+2026,deputado estadual,RJ,Fed. PRD/SOLIDARIEDADE,PRD,98244.0,1,0,1,False
+2026,deputado estadual,RJ,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,225500.0,2,2,0,False
+2026,deputado estadual,RJ,Fed. PRD/SOLIDARIEDADE,PSD,,9,10,-1,True
+2026,deputado estadual,RJ,Fed. PSDB/CIDADANIA,CIDADANIA,4890.0,0,0,0,False
+2026,deputado estadual,RJ,Fed. PSDB/CIDADANIA,PSDB,216795.0,1,1,0,False
+2026,deputado estadual,RJ,Fed. PSOL/REDE,PSOL,559332.0,5,5,0,False
+2026,deputado estadual,RJ,Fed. PSOL/REDE,REDE,9076.0,0,0,0,False
+2026,deputado estadual,RJ,Fed. PT/PC do B/PV,PCDOB,209141.0,1,1,0,False
+2026,deputado estadual,RJ,Fed. PT/PC do B/PV,PT,839964.0,9,8,1,False
+2026,deputado estadual,RJ,Fed. PT/PC do B/PV,PV,36612.0,0,0,0,False
+2026,deputado estadual,RJ,Fed. PT/PC do B/PV,PSD,,9,10,-1,True
+2026,deputado estadual,RJ,Fed. UNIÃO/PP,PP,488908.0,5,4,1,False
+2026,deputado estadual,RJ,Fed. UNIÃO/PP,UNIÃO,496623.0,4,4,0,False
+2026,deputado estadual,RJ,Fed. UNIÃO/PP,PSD,,9,10,-1,True
+2026,deputado estadual,RN,Fed. PRD/SOLIDARIEDADE,PRD,3410.0,0,0,0,False
+2026,deputado estadual,RN,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,608.0,0,0,0,False
+2026,deputado estadual,RN,Fed. PSDB/CIDADANIA,CIDADANIA,1678.0,0,0,0,False
+2026,deputado estadual,RN,Fed. PSDB/CIDADANIA,PSDB,276097.0,3,3,0,False
+2026,deputado estadual,RN,Fed. PSOL/REDE,PSOL,18079.0,0,0,0,False
+2026,deputado estadual,RN,Fed. PSOL/REDE,REDE,2877.0,0,0,0,False
+2026,deputado estadual,RN,Fed. PT/PC do B/PV,PCDOB,4619.0,0,0,0,False
+2026,deputado estadual,RN,Fed. PT/PC do B/PV,PT,283493.0,4,4,0,False
+2026,deputado estadual,RN,Fed. PT/PC do B/PV,PV,214213.0,3,3,0,False
+2026,deputado estadual,RN,Fed. UNIÃO/PP,PP,255475.0,4,3,1,False
+2026,deputado estadual,RN,Fed. UNIÃO/PP,UNIÃO,190012.0,2,2,0,False
+2026,deputado estadual,RN,Fed. UNIÃO/PP,MDB,,1,2,-1,True
+2026,deputado estadual,RO,Fed. PRD/SOLIDARIEDADE,PRD,101741.0,3,3,0,False
+2026,deputado estadual,RO,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,9584.0,0,0,0,False
+2026,deputado estadual,RO,Fed. PSOL/REDE,PSOL,989.0,0,0,0,False
+2026,deputado estadual,RO,Fed. PSOL/REDE,REDE,69.0,0,0,0,False
+2026,deputado estadual,RO,Fed. PT/PC do B/PV,PCDOB,333.0,0,0,0,False
+2026,deputado estadual,RO,Fed. PT/PC do B/PV,PT,57446.0,2,1,1,False
+2026,deputado estadual,RO,Fed. PT/PC do B/PV,PV,1995.0,0,0,0,False
+2026,deputado estadual,RO,Fed. PT/PC do B/PV,REPUBLICANOS,,2,3,-1,True
+2026,deputado estadual,RO,Fed. UNIÃO/PP,PP,50989.0,2,1,1,False
+2026,deputado estadual,RO,Fed. UNIÃO/PP,UNIÃO,36181.0,0,1,-1,False
+2026,deputado estadual,RR,Fed. PSDB/CIDADANIA,CIDADANIA,60.0,0,0,0,False
+2026,deputado estadual,RR,Fed. PSDB/CIDADANIA,PSDB,9704.0,0,0,0,False
+2026,deputado estadual,RR,Fed. PT/PC do B/PV,PCDOB,11.0,0,0,0,False
+2026,deputado estadual,RR,Fed. PT/PC do B/PV,PT,7142.0,0,0,0,False
+2026,deputado estadual,RR,Fed. PT/PC do B/PV,PV,1043.0,0,0,0,False
+2026,deputado estadual,RR,Fed. UNIÃO/PP,PP,18040.0,1,1,0,False
+2026,deputado estadual,RR,Fed. UNIÃO/PP,UNIÃO,85217.0,8,7,1,False
+2026,deputado estadual,RR,Fed. UNIÃO/PP,REPUBLICANOS,,3,4,-1,True
+2026,deputado estadual,RS,Fed. PSDB/CIDADANIA,CIDADANIA,7048.0,0,0,0,False
+2026,deputado estadual,RS,Fed. PSDB/CIDADANIA,PSDB,111737.0,1,1,0,False
+2026,deputado estadual,RS,Fed. PSOL/REDE,PSOL,323998.0,3,3,0,False
+2026,deputado estadual,RS,Fed. PSOL/REDE,REDE,1272.0,0,0,0,False
+2026,deputado estadual,RS,Fed. PT/PC do B/PV,PCDOB,72392.0,1,0,1,False
+2026,deputado estadual,RS,Fed. PT/PC do B/PV,PT,918251.0,9,9,0,False
+2026,deputado estadual,RS,Fed. PT/PC do B/PV,PV,3081.0,0,0,0,False
+2026,deputado estadual,RS,Fed. PT/PC do B/PV,MDB,,5,6,-1,True
+2026,deputado estadual,RS,Fed. UNIÃO/PP,PP,710454.0,7,7,0,False
+2026,deputado estadual,RS,Fed. UNIÃO/PP,UNIÃO,167614.0,1,1,0,False
+2026,deputado estadual,SC,Fed. PRD/SOLIDARIEDADE,PRD,13371.0,0,0,0,False
+2026,deputado estadual,SC,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,935.0,0,0,0,False
+2026,deputado estadual,SC,Fed. PSDB/CIDADANIA,CIDADANIA,9427.0,0,0,0,False
+2026,deputado estadual,SC,Fed. PSDB/CIDADANIA,PSDB,64798.0,0,0,0,False
+2026,deputado estadual,SC,Fed. PSOL/REDE,PSOL,133027.0,1,1,0,False
+2026,deputado estadual,SC,Fed. PSOL/REDE,REDE,925.0,0,0,0,False
+2026,deputado estadual,SC,Fed. PT/PC do B/PV,PCDOB,25430.0,0,0,0,False
+2026,deputado estadual,SC,Fed. PT/PC do B/PV,PT,477829.0,5,5,0,False
+2026,deputado estadual,SC,Fed. PT/PC do B/PV,PV,290.0,0,0,0,False
+2026,deputado estadual,SC,Fed. UNIÃO/PP,PP,209130.0,2,2,0,False
+2026,deputado estadual,SC,Fed. UNIÃO/PP,UNIÃO,259409.0,2,2,0,False
+2026,deputado estadual,SE,Fed. PSOL/REDE,PSOL,0.0,0,0,0,False
+2026,deputado estadual,SE,Fed. PSOL/REDE,REDE,0.0,0,0,0,False
+2026,deputado estadual,SE,Fed. PT/PC do B/PV,PCDOB,1281.0,0,0,0,False
+2026,deputado estadual,SE,Fed. PT/PC do B/PV,PT,109016.0,1,2,-1,False
+2026,deputado estadual,SE,Fed. PT/PC do B/PV,PV,56053.0,2,1,1,False
+2026,deputado estadual,SE,Fed. UNIÃO/PP,PP,35752.0,0,0,0,False
+2026,deputado estadual,SE,Fed. UNIÃO/PP,UNIÃO,264399.0,6,6,0,False
+2026,deputado estadual,SP,Fed. PRD/SOLIDARIEDADE,PRD,169176.0,1,0,1,False
+2026,deputado estadual,SP,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,96050.0,0,0,0,False
+2026,deputado estadual,SP,Fed. PRD/SOLIDARIEDADE,REPUBLICANOS,,6,7,-1,True
+2026,deputado estadual,SP,Fed. PSDB/CIDADANIA,CIDADANIA,125094.0,0,0,0,False
+2026,deputado estadual,SP,Fed. PSDB/CIDADANIA,PSDB,342253.0,1,1,0,False
+2026,deputado estadual,SP,Fed. PSOL/REDE,PSOL,2089288.0,9,9,0,False
+2026,deputado estadual,SP,Fed. PSOL/REDE,REDE,171218.0,0,0,0,False
+2026,deputado estadual,SP,Fed. PT/PC do B/PV,PCDOB,144358.0,0,0,0,False
+2026,deputado estadual,SP,Fed. PT/PC do B/PV,PT,3483191.0,16,15,1,False
+2026,deputado estadual,SP,Fed. PT/PC do B/PV,PV,29012.0,0,0,0,False
+2026,deputado estadual,SP,Fed. PT/PC do B/PV,REPUBLICANOS,,6,7,-1,True
+2026,deputado estadual,SP,Fed. UNIÃO/PP,PP,1100340.0,5,4,1,False
+2026,deputado estadual,SP,Fed. UNIÃO/PP,UNIÃO,1005309.0,4,4,0,False
+2026,deputado estadual,SP,Fed. UNIÃO/PP,REPUBLICANOS,,6,7,-1,True
+2026,deputado estadual,TO,Fed. PRD/SOLIDARIEDADE,PRD,44206.0,1,1,0,False
+2026,deputado estadual,TO,Fed. PRD/SOLIDARIEDADE,SOLIDARIEDADE,18147.0,0,0,0,False
+2026,deputado estadual,TO,Fed. PSDB/CIDADANIA,CIDADANIA,248.0,0,0,0,False
+2026,deputado estadual,TO,Fed. PSDB/CIDADANIA,PSDB,75003.0,2,2,0,False
+2026,deputado estadual,TO,Fed. PT/PC do B/PV,PCDOB,16507.0,1,0,1,False
+2026,deputado estadual,TO,Fed. PT/PC do B/PV,PT,38562.0,0,1,-1,False
+2026,deputado estadual,TO,Fed. PT/PC do B/PV,PV,24330.0,1,0,1,False
+2026,deputado estadual,TO,Fed. PT/PC do B/PV,PRD,,1,2,-1,True
+2026,deputado estadual,TO,Fed. UNIÃO/PP,PP,4947.0,0,0,0,False
+2026,deputado estadual,TO,Fed. UNIÃO/PP,UNIÃO,110710.0,3,3,0,False

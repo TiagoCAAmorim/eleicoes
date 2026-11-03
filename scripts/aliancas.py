@@ -19,7 +19,7 @@ import _raiz  # noqa: F401
 from eleicoes.caminhos import resultados
 from eleicoes.modelos import proporcional as pr
 
-ANOS = [2006, 2010, 2014, 2018, 2022]
+ANOS = [2006, 2010, 2014, 2018, 2022, 2026]
 CARGOS = {6: "deputado federal", 7: "deputado estadual"}
 SAIDA = resultados("aliancas")
 
