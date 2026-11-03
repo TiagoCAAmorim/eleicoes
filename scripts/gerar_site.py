@@ -19,6 +19,10 @@ from eleicoes.caminhos import RAIZ, RESULTADOS, SITE, resultados
 from eleicoes.site import web
 
 FUSO = dt.timezone(dt.timedelta(hours=-3))
+# contato do autor na página inicial (perfil no LinkedIn)
+CONTATO_LINKEDIN = "https://www.linkedin.com/in/tiago-amorim-eng/"
+# botão "Me pague um café" no topo das páginas fixas: copia esta chave Pix
+CHAVE_PIX = "bcd8d244-8aeb-4003-99ca-d8ba4f5f5952"
 PAGINAS = ["index.html", "modelos.html", "analises.html"]
 NOMES_ORDEM = {"2022": "Parecida com a real (Sul e Sudeste antes)", "aleatoria": "Aleatória por seção",
                "zonas": "Parecida com a real, com zonas pró-Bolsonaro antes em cada município",
@@ -83,6 +87,11 @@ apuração (de 0,5% a 99%) em que o intervalo de 90% continha o resultado final.
     return out
 
 
+def contato():
+    u = html.escape(CONTATO_LINKEDIN)
+    return f'Contato: <a href="{u}" rel="me noopener" target="_blank">meu perfil no LinkedIn</a>.'
+
+
 def pagina(nome, extras, gerado_em):
     corpo = _ler(nome)
     m = re.match(r"<!-- página: (\w+) \| titulo: (.*?) \| descricao: (.*?) -->\n", corpo)
@@ -91,7 +100,7 @@ def pagina(nome, extras, gerado_em):
     for k, v in extras.items():
         corpo = corpo.replace("{{" + k + "}}", v)
     subs = {"titulo": titulo, "descricao": descricao, "raiz": "./",
-            "gerado_em": gerado_em}
+            "gerado_em": gerado_em, "chave_pix": CHAVE_PIX}
     for p in ["inicio", "modelos", "analises"]:
         subs[f"atual_{p}"] = ' aria-current="page"' if p == chave else ""
     doc = _ler("_cabecalho.html") + corpo + _ler("_rodape.html")
@@ -112,7 +121,7 @@ def main():
         eleicoes = json.load(f)
     gerado_em = dt.datetime.now(FUSO).strftime("%d/%m/%Y")
     extras = {"eleicoes": "\n".join(cartao_eleicao(e) for e in eleicoes),
-              "backtest": tabela_backtest(os.path.join(saida, "img"))}
+              "backtest": tabela_backtest(os.path.join(saida, "img")), "contato": contato()}
     for nome in PAGINAS:
         with open(os.path.join(saida, nome), "w", encoding="utf-8") as f:
             f.write(pagina(nome, extras, gerado_em))

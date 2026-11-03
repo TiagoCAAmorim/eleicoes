@@ -3,5 +3,27 @@
   <p>Projeto pessoal de análise de dados eleitorais, sem filiação partidária. As previsões são estimativas estatísticas, não resultados oficiais; os resultados oficiais são os do <a href="https://resultados.tse.jus.br/">TSE</a>.</p>
   <p>Código, dados processados e metodologia: <a href="https://github.com/TiagoCAAmorim/eleicoes">github.com/TiagoCAAmorim/eleicoes</a>. Página gerada em {{gerado_em}}.</p>
 </footer>
+<script>
+(function () {
+  var b = document.querySelector(".botao-cafe");
+  if (!b) return;
+  var aviso = document.querySelector(".cafe-aviso"), chave = b.getAttribute("data-pix"), t;
+  function avisar(msg) { aviso.textContent = msg; clearTimeout(t); t = setTimeout(function () { aviso.textContent = ""; }, 4000); }
+  function reserva() {
+    var c = document.createElement("textarea");
+    c.value = chave; c.setAttribute("readonly", ""); c.style.position = "absolute"; c.style.left = "-9999px";
+    document.body.appendChild(c); c.select();
+    var ok = false;
+    try { ok = document.execCommand("copy"); } catch (e) {}
+    document.body.removeChild(c);
+    avisar(ok ? "Chave Pix copiada. Obrigado!" : "Chave Pix: " + chave);
+  }
+  b.addEventListener("click", function () {
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(chave).then(function () { avisar("Chave Pix copiada. Obrigado!"); }, reserva);
+    } else { reserva(); }
+  });
+})();
+</script>
 </body>
 </html>
