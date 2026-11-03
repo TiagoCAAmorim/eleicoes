@@ -1,0 +1,1118 @@
+{
+ "cidades": {
+  "13730": {
+   "uf": "ce",
+   "A": "55",
+   "B": "13",
+   "secoes": 760,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 60.4
+  },
+  "13897": {
+   "uf": "ce",
+   "A": "22",
+   "B": "13",
+   "secoes": 5274,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 49.62
+  },
+  "17612": {
+   "uf": "rn",
+   "A": "44",
+   "B": "13",
+   "secoes": 1407,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 55.34
+  },
+  "19810": {
+   "uf": "pb",
+   "A": "44",
+   "B": "40",
+   "secoes": 931,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 57.94
+  },
+  "20516": {
+   "uf": "pb",
+   "A": "11",
+   "B": "22",
+   "secoes": 1625,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 63.91
+  },
+  "24910": {
+   "uf": "pe",
+   "A": "13",
+   "B": "55",
+   "secoes": 880,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 48.62
+  },
+  "25135": {
+   "uf": "pe",
+   "A": "45",
+   "B": "40",
+   "secoes": 648,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 73.36
+  },
+  "2550": {
+   "uf": "am",
+   "A": "70",
+   "B": "22",
+   "secoes": 3921,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 54.59
+  },
+  "31054": {
+   "uf": "se",
+   "A": "22",
+   "B": "12",
+   "secoes": 1313,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 57.46
+  },
+  "34134": {
+   "uf": "ba",
+   "A": "13",
+   "B": "44",
+   "secoes": 540,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 50.92
+  },
+  "35": {
+   "uf": "ro",
+   "A": "44",
+   "B": "20",
+   "secoes": 1181,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 43.82
+  },
+  "41238": {
+   "uf": "mg",
+   "A": "22",
+   "B": "55",
+   "secoes": 4764,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 46.27
+  },
+  "4278": {
+   "uf": "pa",
+   "A": "15",
+   "B": "22",
+   "secoes": 2823,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 56.36
+  },
+  "5355": {
+   "uf": "pa",
+   "A": "15",
+   "B": "22",
+   "secoes": 834,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 52.0
+  },
+  "54011": {
+   "uf": "mg",
+   "A": "55",
+   "B": "15",
+   "secoes": 778,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 55.6
+  },
+  "56995": {
+   "uf": "es",
+   "A": "12",
+   "B": "10",
+   "secoes": 1042,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 60.48
+  },
+  "58653": {
+   "uf": "rj",
+   "A": "12",
+   "B": "22",
+   "secoes": 1305,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 57.2
+  },
+  "58777": {
+   "uf": "rj",
+   "A": "11",
+   "B": "50",
+   "secoes": 801,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 74.74
+  },
+  "62138": {
+   "uf": "sp",
+   "A": "10",
+   "B": "44",
+   "secoes": 798,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 56.48
+  },
+  "63770": {
+   "uf": "sp",
+   "A": "15",
+   "B": "13",
+   "secoes": 934,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 52.59
+  },
+  "64254": {
+   "uf": "sp",
+   "A": "15",
+   "B": "22",
+   "secoes": 729,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 58.64
+  },
+  "64750": {
+   "uf": "sp",
+   "A": "20",
+   "B": "11",
+   "secoes": 690,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 55.38
+  },
+  "64777": {
+   "uf": "sp",
+   "A": "22",
+   "B": "77",
+   "secoes": 2831,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 58.55
+  },
+  "66192": {
+   "uf": "sp",
+   "A": "22",
+   "B": "44",
+   "secoes": 965,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 41.13
+  },
+  "66397": {
+   "uf": "sp",
+   "A": "15",
+   "B": "20",
+   "secoes": 727,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 48.12
+  },
+  "66893": {
+   "uf": "sp",
+   "A": "13",
+   "B": "44",
+   "secoes": 924,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 54.05
+  },
+  "68756": {
+   "uf": "sp",
+   "A": "45",
+   "B": "55",
+   "secoes": 890,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 46.39
+  },
+  "69698": {
+   "uf": "sp",
+   "A": "55",
+   "B": "30",
+   "secoes": 1421,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 50.13
+  },
+  "70718": {
+   "uf": "sp",
+   "A": "10",
+   "B": "22",
+   "secoes": 1040,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 53.37
+  },
+  "70750": {
+   "uf": "sp",
+   "A": "20",
+   "B": "23",
+   "secoes": 1996,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 55.74
+  },
+  "70971": {
+   "uf": "sp",
+   "A": "22",
+   "B": "15",
+   "secoes": 1023,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 59.97
+  },
+  "70998": {
+   "uf": "sp",
+   "A": "55",
+   "B": "22",
+   "secoes": 1552,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 58.26
+  },
+  "71072": {
+   "uf": "sp",
+   "A": "15",
+   "B": "50",
+   "secoes": 26513,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 59.35
+  },
+  "71498": {
+   "uf": "sp",
+   "A": "10",
+   "B": "13",
+   "secoes": 572,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 58.22
+  },
+  "71579": {
+   "uf": "sp",
+   "A": "44",
+   "B": "20",
+   "secoes": 593,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 66.27
+  },
+  "71838": {
+   "uf": "sp",
+   "A": "10",
+   "B": "30",
+   "secoes": 730,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 38.02
+  },
+  "73440": {
+   "uf": "to",
+   "A": "22",
+   "B": "20",
+   "secoes": 629,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 46.97
+  },
+  "75353": {
+   "uf": "pr",
+   "A": "55",
+   "B": "35",
+   "secoes": 4022,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 57.64
+  },
+  "76678": {
+   "uf": "pr",
+   "A": "55",
+   "B": "11",
+   "secoes": 1181,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 56.32
+  },
+  "77771": {
+   "uf": "pr",
+   "A": "45",
+   "B": "44",
+   "secoes": 772,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 46.28
+  },
+  "8036": {
+   "uf": "ma",
+   "A": "11",
+   "B": "10",
+   "secoes": 579,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 55.11
+  },
+  "85898": {
+   "uf": "rs",
+   "A": "22",
+   "B": "55",
+   "secoes": 754,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 52.12
+  },
+  "85995": {
+   "uf": "rs",
+   "A": "22",
+   "B": "45",
+   "secoes": 1096,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 48.62
+  },
+  "87912": {
+   "uf": "rs",
+   "A": "13",
+   "B": "22",
+   "secoes": 753,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 50.36
+  },
+  "88013": {
+   "uf": "rs",
+   "A": "15",
+   "B": "13",
+   "secoes": 3064,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 61.53
+  },
+  "88412": {
+   "uf": "rs",
+   "A": "13",
+   "B": "45",
+   "secoes": 630,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 45.5
+  },
+  "90514": {
+   "uf": "ms",
+   "A": "11",
+   "B": "44",
+   "secoes": 2168,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 51.45
+  },
+  "90670": {
+   "uf": "mt",
+   "A": "22",
+   "B": "13",
+   "secoes": 1274,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 53.8
+  },
+  "92215": {
+   "uf": "go",
+   "A": "22",
+   "B": "13",
+   "secoes": 833,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 58.56
+  },
+  "92274": {
+   "uf": "go",
+   "A": "15",
+   "B": "22",
+   "secoes": 916,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 63.6
+  },
+  "93734": {
+   "uf": "go",
+   "A": "22",
+   "B": "44",
+   "secoes": 2966,
+   "secoes_sem_detalhe": 0,
+   "A2_validos": 44.47
+  }
+ },
+ "arquivos": {
+  "votacao_secao_2024_AM.zip": {
+   "lidos": [
+    "votacao_secao_2024_AM.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2024_BA.zip": {
+   "lidos": [
+    "votacao_secao_2024_BA.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2024_CE.zip": {
+   "lidos": [
+    "votacao_secao_2024_CE.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2024_ES.zip": {
+   "lidos": [
+    "votacao_secao_2024_ES.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2024_GO.zip": {
+   "lidos": [
+    "votacao_secao_2024_GO.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2024_MA.zip": {
+   "lidos": [
+    "votacao_secao_2024_MA.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2024_MG.zip": {
+   "lidos": [
+    "votacao_secao_2024_MG.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2024_MS.zip": {
+   "lidos": [
+    "votacao_secao_2024_MS.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2024_MT.zip": {
+   "lidos": [
+    "votacao_secao_2024_MT.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2024_PA.zip": {
+   "lidos": [
+    "votacao_secao_2024_PA.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2024_PB.zip": {
+   "lidos": [
+    "votacao_secao_2024_PB.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2024_PE.zip": {
+   "lidos": [
+    "votacao_secao_2024_PE.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2024_PR.zip": {
+   "lidos": [
+    "votacao_secao_2024_PR.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2024_RJ.zip": {
+   "lidos": [
+    "votacao_secao_2024_RJ.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2024_RN.zip": {
+   "lidos": [
+    "votacao_secao_2024_RN.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2024_RO.zip": {
+   "lidos": [
+    "votacao_secao_2024_RO.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2024_RS.zip": {
+   "lidos": [
+    "votacao_secao_2024_RS.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2024_SE.zip": {
+   "lidos": [
+    "votacao_secao_2024_SE.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2024_SP.zip": {
+   "lidos": [
+    "votacao_secao_2024_SP.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "votacao_secao_2024_TO.zip": {
+   "lidos": [
+    "votacao_secao_2024_TO.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "NR_VOTAVEL",
+    "NM_VOTAVEL",
+    "QT_VOTOS",
+    "NR_LOCAL_VOTACAO",
+    "SQ_CANDIDATO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO"
+   ]
+  },
+  "detalhe_votacao_secao_2024.zip": {
+   "lidos": [
+    "detalhe_votacao_secao_2024_BRASIL.csv"
+   ],
+   "colunas": [
+    "DT_GERACAO",
+    "HH_GERACAO",
+    "ANO_ELEICAO",
+    "CD_TIPO_ELEICAO",
+    "NM_TIPO_ELEICAO",
+    "NR_TURNO",
+    "CD_ELEICAO",
+    "DS_ELEICAO",
+    "DT_ELEICAO",
+    "TP_ABRANGENCIA",
+    "SG_UF",
+    "SG_UE",
+    "NM_UE",
+    "CD_MUNICIPIO",
+    "NM_MUNICIPIO",
+    "NR_ZONA",
+    "NR_SECAO",
+    "CD_CARGO",
+    "DS_CARGO",
+    "QT_APTOS",
+    "QT_COMPARECIMENTO",
+    "QT_ABSTENCOES",
+    "QT_VOTOS_NOMINAIS",
+    "QT_VOTOS_BRANCOS",
+    "QT_VOTOS_NULOS",
+    "QT_VOTOS_LEGENDA",
+    "QT_VOTOS_ANULADOS_APU_SEP",
+    "NR_LOCAL_VOTACAO",
+    "NM_LOCAL_VOTACAO",
+    "DS_LOCAL_VOTACAO_ENDERECO",
+    "DT_RECEBIMENTO_BU_HOR_TSE",
+    "DT_PRIM_TOT_PARCIAL_HOR_TSE",
+    "DS_ORIGEM_VOTO",
+    "ST_SECAO_INSTALADA",
+    "ST_SECAO_ANULADA",
+    "CD_MODELO_URNA",
+    "DS_MODELO_URNA"
+   ]
+  }
+ }
+}

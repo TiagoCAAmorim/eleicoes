@@ -89,3 +89,21 @@ def config_governador(ano, base=None, pesquisa_a=None, **mudancas):
     if pesquisa_a is not None and pri is not None:
         extra = {**GOVERNADOR_PESQUISA, "theta_outros": outros_pela_pesquisa(base, pri, pesquisa_a)}
     return modelo.Config(priori=pri, **{**GOVERNADOR, **extra, **mudancas})
+
+
+# 2º turno de prefeito: a unidade é a seção, numa cidade só (scripts/prefeito.py, docs/prefeito.md). As seções chegam
+# inteiras e em blocos de zona, então o que falta apurar pode ficar todo de um lado da cidade: choque comum de 6% na
+# margem do que falta, que não encolhe com o % apurado.
+PREFEITO = {"tau": 0.15, "choque_nacional": 0.0, "sd_priori_informativa": 0.7, "choque_uf": 0.06, "niveis": []}
+
+
+def config_prefeito(ano, **mudancas):
+    """Config do 2º turno de prefeito de `ano`, com a média das matrizes dos 2º turnos de prefeito de anos
+    anteriores (dados/priori/prefeito.json, chave "ano|código TSE da cidade"). A base é por seção, com a coluna
+    `mun` identificando a seção (ver scripts/prefeito.py, carregar)."""
+    with open(os.path.join(PRIORI, "prefeito.json")) as f:
+        todas = json.load(f)
+    ant = [th for k, th in todas.items() if int(k.split("|")[0]) < ano]
+    pri = {"brasil|Brasil": [float(x) for x in np.mean(ant, axis=0)]} if ant else None
+    return modelo.Config(priori=pri, **{**PREFEITO, **mudancas})
+
